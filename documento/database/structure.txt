@@ -1,0 +1,130 @@
+CREATE (trial:PlainOfPayment {name: "Free", value: 0.0}),
+(gold:PlainOfPayment {name: "Gold", value: 5.0}),
+(master:PlainOfPayment {name: "Master", value: 10.0}), /* Create the plain of Payment */
+(mg:UF {abbreviation: "MG", name: "Minas Gerais"}),
+(sp:UF {abbreviation: "SP", name: "São Paulo"}),
+(rj:UF {abbreviation: "RJ", name: "Rio de Janeiro"}), /* Create the states */
+(pousoAlegre:City {name: "Pouso Alegre"}),
+(beloHorizonte:City {name: "Belo Horizonte"}),
+(varginha:City {name: "Varginha"}),
+(rioDeJaneiro:City {name: "Rio de Janeiro"}),
+(saoPaulo:City {name: "São Paulo"}), /* Create the cities */
+(univas:Company {name: "Universidade do Vale do Sapucaí"}),
+(baronesa:Company {name: "Baronesa"}),
+(icc:Company {name: "Inatel Competence Center"}), /* Create the companies */
+(edilsonJustiniano:PhisicPerson {name: "Edilson Justiniano", email: "edilsonjustiniano@gmail.com", password: "123456", district: "Faisqueira", address: "Rua A", gender: "M"}),
+(josyChaves:PhisicPerson {name: "Josy Chaves", email: "josyrosaly@gmail.com", password: "123456", district: "Centro", address: "Rua Comendador José Garcia", gender: "F"}),
+(joaoCarlos:PhisicPerson {name: "João Carlos Chavier", email: "jc.chavier@outlook.com", password: "654321", district: "Centro", address: "Avenida Paulista", gender: "M"}),
+(mariaAparecida:PhisicPerson {name: "Maria Aparecida Silva", email: "ma.silva@gmail.com", password: "654321", district: "Centro", address: "Rua Comendador José Garcia", gender: "F"}),
+(univasJuridicPerson:JuridicPerson {name: "UNIVAS", email: "contato@univas.edu.br", password: "univas", district: "Fátima 1", address: "Avenida Atony Toledo"}),  /* Create the users */
+(robertoCarlos:ServiceProvider {name: "Roberto Carlos", email: "robertocarlos@gmail.com", password: "univas", district: "Fátima 1", address: "Avenida Atony Toledo"}),
+(mariaRoberta:ServiceProvider {name: "Maria Roberta", email: "mariaroberta@gmail.com", password: "univas", district: "Faisqueira", address: "Rua B"}),
+(joaoRoberto:ServiceProvider {name: "João Roberto", email: "joaoroberto@gmail.com", password: "univas", district: "Faisqueira", address: "Rua A"}), /* Create the service providers */
+(painter:Services {name: "Pintor"}),
+(builder:Services {name: "Pedreiro"}),
+(babySister:Services {name: "Babá"}); /* Create the Services */
+
+
+/* Create the relationship from UF and City */
+MATCH (mg:UF {abbreviation: "MG"}),
+(pousoAlegre:City {name: "Pouso Alegre"})
+CREATE (pousoAlegre)-[:BELONGS_TO]->(mg);
+
+MATCH (mg:UF {abbreviation: "MG"}),
+(varginha:City {name: "Varginha"})
+CREATE (varginha)-[:BELONGS_TO]->(mg);
+
+MATCH (sp:UF {abbreviation: "SP"}),
+(saoPaulo:City {name: "São Paulo"})
+CREATE (saoPaulo)-[:BELONGS_TO]->(sp);
+
+
+/* Create the relationship from Company and City */
+MATCH (baronesa:Company {name: "Baronesa"}),
+(pousoAlegre:City {name: "Pouso Alegre"})
+CREATE (baronesa)-[:LOCATED_IN]->(pousoAlegre);
+
+
+MATCH (josyChaves:PhisicPerson {name: "Josy Chaves"}),
+(baronesa:Company {name: "Baronesa"})
+CREATE (josyChaves)-[:WORKS_IN]->(baronesa);
+
+MATCH (edilsonJustiniano:PhisicPerson {name: "Edilson Justiniano"}),
+(baronesa:Company {name: "Baronesa"})
+CREATE (edilsonJustiniano)-[:WORKS_IN]->(baronesa);
+
+
+MATCH (edilsonJustiniano:PhisicPerson {name: "Edilson Justiniano"}),
+(trial:PlainOfPayment {name: "Free"})
+CREATE (edilsonJustiniano)-[:BELONGS_TO]->(trial);
+
+MATCH (josyChaves:PhisicPerson {name: "Josy Chaves"}),
+(gold:PlainOfPayment {name: "Gold"})
+CREATE (josyChaves)-[:BELONGS_TO]->(gold);
+
+
+MATCH (robertoCarlos:ServiceProvider {name: "Roberto Carlos"}),
+(gold:PlainOfPayment {name: "Gold"})
+CREATE (robertoCarlos)-[:BELONGS_TO]->(gold);
+
+MATCH (mariaRoberta:ServiceProvider {name: "Maria Roberta"}),
+(master:PlainOfPayment {name: "Master"})
+CREATE (mariaRoberta)-[:BELONGS_TO]->(master);
+
+
+MATCH (mariaRoberta:ServiceProvider {name: "Maria Roberta"}),
+(babySister:Services {name: "Babá"})
+CREATE (mariaRoberta)-[:PROVIDE]->(babySister);
+
+MATCH (robertoCarlos:ServiceProvider {name: "Roberto Carlos"}),
+(painter:Services {name: "Pintor"})
+CREATE (robertoCarlos)-[:PROVIDE]->(painter);
+
+MATCH (robertoCarlos:ServiceProvider {name: "Roberto Carlos"}),
+(builder:Services {name: "Pedreiro"})
+CREATE (robertoCarlos)-[:PROVIDE]->(builder);
+
+MATCH (josyChaves:PhisicPerson {name: "Josy Chaves"}),
+(mariaRoberta:ServiceProvider {name: "Maria Roberta"})
+CREATE (mesage:Mesage {mesage: "Mensagem do contratante ao contratado", name: "Msg"}),
+(josyChaves)-[:MESAGE]->(mesage)-[:TO]->(mariaRoberta);
+
+
+MATCH (edilsonJustiniano:PhisicPerson {name: "Edilson Justiniano"}),
+(robertoCarlos:ServiceProvider {name: "Roberto Carlos"})
+CREATE (mesage:Mesage {mesage: "Mensagem do contratante ao contratado", name: "Msg"}),
+(edilsonJustiniano)-[:MESAGE]->(mesage)-[:TO]->(robertoCarlos);
+
+MATCH (josyChaves:PhisicPerson {name: "Josy Chaves"}),
+(edilsonJustiniano:PhisicPerson {name: "Edilson Justiniano"})
+CREATE (josyChaves)-[:PARTNER_OF {since: "2008-04-10"}]->(edilsonJustiniano)-[:PARTNER_OF {since: "2008-04-11"}]->(josyChaves);
+
+
+MATCH (robertoCarlos:ServiceProvider {name: "Roberto Carlos"}),
+(builder:Services {name: "Pedreiro"}),
+(edilsonJustiniano:PhisicPerson {name: "Edilson Justiniano"})
+CREATE (execute:ExecuteService {name: "Execute"}),
+(robertoCarlos)-[:EXECUTED_BY {in: "2015-04-22"}]->(execute)<-[:EXECUTED {in: "2015-04-22"}]-(builder), 
+(execute)-[:TO]->(edilsonJustiniano);
+
+MATCH (mariaRoberta:ServiceProvider {name: "Maria Roberta"}),
+(babySister:Services {name: "Babá"}),
+(josyChaves:PhisicPerson {name: "Josy Chaves"})
+CREATE (execute:ExecuteService {name: "Execute"}),
+(mariaRoberta)-[:EXECUTED_BY {in: "2015-04-22"}]->(execute)<-[:EXECUTED {in: "2015-04-22"}]-(babySister), 
+(execute)-[:TO]->(josyChaves);
+
+
+/* Tentar fazer uma consulta que retorne toda a estrutura do banco de dados que nós montamos */
+
+MATCH (pousoAlegre:City {name: "Pouso Alegre"}),
+(pousoAlegre)-[:BELONGS_TO]->(uf),
+(pousoAlegre)<-[:LOCATED_IN]-(company),
+(company)<-[:WORKS_IN]-(users),
+(users)-[:MESAGE]->(msg),
+(users)-[:BELONGS_TO]->(plainOfPayment),
+(msg)-[:TO]->(serviceProvider),
+(serviceProvider)-[:BELONGS_TO]-(plainOfPaymentServiceProvider),
+(serviceProvider)-[:PROVIDE]->(services),
+(services)-[:EXECUTED]-(exec)
+RETURN uf, pousoAlegre, company, users, msg, plainOfPayment, serviceProvider, services, plainOfPaymentServiceProvider, exec;

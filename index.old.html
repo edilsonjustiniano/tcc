@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html ng-app="TCCApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Login</title>
+	
+	<!-- Bootstrap -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+	
+	<!-- TCC Style -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-controller="LoginController">
+<div id="general">
+<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+	    	<a class="brand" href="index.jsp">InCloud<i class="icon-music"></i></a>
+
+	   	 	<form id="formLogin" class="navbar-form pull-right form-inline" method="post" action="Login">
+				<input id="loginUsername" type="text" name="username" class="span2" placeholder="Username" required="required" />
+				<input id="loginPassword" type="password" name="password" class="span2" placeholder="Password" required="required" />
+				<button id="btn-loginSubmit" type="submit" class="btn">Sign in</button>
+			</form>
+	   	 </div>
+	</div>
+
+	<div style="margin-top:50px;">
+		<input type="text" ng-model="name">
+	    <p>Olá, Tableless! Meu nome é: {{ name }}</p>
+		
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Id</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="cliente in clientes | orderBy: 'name' ">
+					<td>{{cliente.name | uppercase}}</td>
+					<td>{{cliente.id | lowercase}}</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>UF</th>
+					<th>Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="uf in states | orderBy: 'name' ">
+					<td>{{uf.id}}</td>
+					<td>{{uf.abbreviation | uppercase}}</td>
+					<td>{{uf.name | lowercase}}</td>
+				</tr>
+			</tbody>
+		</table>
+
+	    <ul class="list-group">
+	      <!-- diretiva ng-repeat -->
+	      <li class="list-group-item" ng-repeat="cliente in clientes | orderBy:'name' ">
+	      {{cliente.name | uppercase}} - {{cliente.id | lowercase}}
+	      </li>
+	    </ul>
+
+	    <button ng-click="Login()">GET UFs</button>
+	    <button ng-click="GetAllClients()">GET Clientes</button>
+
+
+	    <!-- diretiva ng-submit -->
+	    <section id="form-create-login">
+		    <form ng-submit="addState()">
+		    	<legend>Novo usuário</legend>
+		        <!-- diretiva ng-model -->
+		        <input type="text" ng-model="id" placeholder="Digite o id" />
+		        <input type="text" ng-model="name" placeholder="Digite o nome do Estado" />
+		        <input type="text" ng-model="abbreviation" placeholder="Digite a abreviação do Estado" />
+		        <input type="submit" value="Incluir" ng-disabled="false" />
+		    </form>
+	    </section>
+	</div>
+</div>
+    <!-- Angular JS Lib -->
+	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+
+	<!-- Controller -->
+	<script type="text/javascript" src="js/LoginController.js"></script>
+</body>
+</html>

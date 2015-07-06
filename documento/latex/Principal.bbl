@@ -1,0 +1,233 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.2 }
+
+\bibitem[Apache 2015]{apache_about_tomcat}
+\abntrefinfo{Apache}{APACHE}{2015}
+{APACHE. \emph{\textbf{Apache Tomcat}}. 2015. Disponível em:
+  \url{http://tomcat.apache.org/index.html}.
+Acesso em 15 de janeiro de 2015.}
+
+\bibitem[Barbosa 2011]{barbosa_why_people_use_social_network}
+\abntrefinfo{Barbosa}{BARBOSA}{2011}
+{BARBOSA, K. \emph{\textbf{Por que as pessoas usam as redes sociais?}} 2011.
+  Disponível em:
+  \url{http://super.abril.com.br/blogs/tendencias/por-que-as-pessoas-usam-as-redes-sociais/}.
+Acesso em 28 de dezembro de 2014.}
+
+\bibitem[Bashman, Sierra e Bates
+  2010]{basham_sierra_bates_use_cabeca_servlets_jsp}
+\abntrefinfo{Bashman, Sierra e Bates}{BASHMAN; SIERRA; BATES}{2010}
+{BASHMAN, B.; SIERRA, K.; BATES, B. \emph{\textbf{Use a Cabeça! Servlets e
+  JSP}}. [S.l.]: Alta Books, 2010.}
+
+\bibitem[Bergsten 2004]{bergsten_javaserver_faces}
+\abntrefinfo{Bergsten}{BERGSTEN}{2004}
+{BERGSTEN, H. \emph{\textbf{Javaserver Faces}}. [S.l.: s.n.], 2004.}
+
+\bibitem[Bondy e Murty 1976]{bondy_murty_graph_theory_with_applications}
+\abntrefinfo{Bondy e Murty}{BONDY; MURTY}{1976}
+{BONDY, J.~A.; MURTY, U. S.~R. \textbf{Graph Theory with applications}.
+1976.}
+
+\bibitem[Brittain e Darwin 2007]{brittain_darwin_apache_tomcat_2nd_edition}
+\abntrefinfo{Brittain e Darwin}{BRITTAIN; DARWIN}{2007}
+{BRITTAIN, J.; DARWIN, I.~F. \emph{\textbf{Tomcat The Definitive Guide}}. 2.
+  ed. [S.l.: s.n.], 2007.}
+
+\bibitem[Bruggen 2014]{bruggen_learning_neo4j}
+\abntrefinfo{Bruggen}{BRUGGEN}{2014}
+{BRUGGEN, R.~V. \emph{\textbf{Learning Neo4j}}. [S.l.]: Packt, 2014.}
+
+\bibitem[Cooper e Schindler
+  2003]{cooper_schindler_metodos_pesquisa_administracao}
+\abntrefinfo{Cooper e Schindler}{COOPER; SCHINDLER}{2003}
+{COOPER, D.~R.; SCHINDLER, P.~S. \emph{\textbf{Métodos de Pesquisa em
+  Administração}}. 7. ed. [S.l.]: Bookman, 2003.}
+
+\bibitem[Date 2003]{date_introducao_sistemas_bancos_dados}
+\abntrefinfo{Date}{DATE}{2003}
+{DATE, C.~J. \emph{\textbf{Introdução a sistemas de bancos de dados}}. 8. ed.
+  [S.l.]: Elsevier, 2003.}
+
+\bibitem[Elmasri e Navathe 2005]{elmasri_navathe_sistemas_banco_dados}
+\abntrefinfo{Elmasri e Navathe}{ELMASRI; NAVATHE}{2005}
+{ELMASRI, R.; NAVATHE, S.~B. \emph{\textbf{Sistemas de Banco de Dados}}. 1. ed.
+  [S.l.]: Pearson, 2005.}
+
+\bibitem[Faria
+  2008]{tcc_univas_faria_aspectj_programacao_orientada_aspecto_java}
+\abntrefinfo{Faria}{FARIA}{2008}
+{FARIA, M.~A. de. \emph{ASPECTJ: Programação orientada a aspecto em Java}.
+  [S.l.: s.n.], 2008.}
+
+\bibitem[Faria 2013]{faria_java_ee_7_jsf_primefaces_cdi}
+\abntrefinfo{Faria}{FARIA}{2013}
+{FARIA, T. \emph{\textbf{Java EE 7 com JSF, PrimeFaces e CDI}}. [S.l.: s.n.],
+  2013.}
+
+\bibitem[Gamma et al.
+  2009]{gamma_helm_johnson_vlissides_design_patterns_elements_reusable_object_oriented_software}
+\abntrefinfo{Gamma et al.}{GAMMA et al.}{2009}
+{GAMMA, E. et al. \emph{\textbf{Design Patterns: Elements of Reusable
+  Object-Oriented Software}}. [S.l.: s.n.], 2009.}
+
+\bibitem[Harju 2014]{harju_graph_theory}
+\abntrefinfo{Harju}{HARJU}{2014}
+{HARJU, T. Graph theory.
+2014.}
+
+\bibitem[Juneau 2014]{juneau_primefaces_enterprise}
+\abntrefinfo{Juneau}{JUNEAU}{2014}
+{JUNEAU, J. \emph{Primefaces in the Enterprise}. 2014.
+  \url{http://www.oracle.com/technetwork/articles/java/java-primefaces-2191907.html}.
+Acesso em: 15 de janeiro de 2015.}
+
+\bibitem[Junid et al.
+  2012]{junid_tahir_majid_idros_potential_graph_thory_for_dna_sequence_alignment}
+\abntrefinfo{Junid et al.}{JUNID et al.}{2012}
+{JUNID, S. A. M.~A. et al. Potential of graph theory algorithm approach for dna
+  sequence alignment and comparison.
+2012.}
+
+\bibitem[Keller 2015]{robert_keller_acylic_graph}
+\abntrefinfo{Keller}{KELLER}{2015}
+{KELLER, R.~M. \emph{Acylic Graph}. 2015.
+  \url{http://www.cs.hmc.edu/~keller/courses/cs60/s98/examples/acyclic/}.
+Acesso em: 20 de Abril de 2015.}
+
+\bibitem[Laurie e Laurie 2003]{laurie_laurie_apache_the_definitive_guide}
+\abntrefinfo{Laurie e Laurie}{LAURIE; LAURIE}{2003}
+{LAURIE, B.; LAURIE, P. \emph{\textbf{Apache: The Definitive Guide}}. [S.l.]:
+  RepKover, 2003.}
+
+\bibitem[Marconi e Lakatos
+  2009]{marconi_lakatos_metodologia_trabalho_cientifico}
+\abntrefinfo{Marconi e Lakatos}{MARCONI; LAKATOS}{2009}
+{MARCONI, M.~A.; LAKATOS, E.~M. \emph{\textbf{Metodologia do trabalho
+  científico}}. 7. ed. [S.l.]: Atlas, 2009.}
+
+\bibitem[Matthew e Stones
+  2005]{matthew_stones_beginning_databases_with_postgresql}
+\abntrefinfo{Matthew e Stones}{MATTHEW; STONES}{2005}
+{MATTHEW, N.; STONES, R. Beginnig databases with postgresql - from novice to
+  professional.
+2005.}
+
+\bibitem[Neo4j 2013]{neo4j_team_manual}
+\abntrefinfo{Neo4j}{NEO4J}{2013}
+{NEO4J. \emph{\textbf{The Neo4j Manual}}. [S.l.: s.n.], 2013.}
+
+\bibitem[Oracle 2010]{oracle_about_java_technology}
+\abntrefinfo{Oracle}{ORACLE}{2010}
+{ORACLE. \emph{\textbf{About the Java Technology}}. 2010. Disponível em:
+  \url{http://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html}.
+Acesso em 28 dez. 2014.}
+
+\bibitem[Oracle 2015]{oracle_javaserver_faces_technology_overview}
+\abntrefinfo{Oracle}{ORACLE}{2015}
+{ORACLE. \emph{JavaServer Faces Technology Overview}. 2015.
+  \url{http://www.oracle.com/technetwork/java/javaee/overview-140548.html}.
+Acesso em 15 de janeiro de 2015.}
+
+\bibitem[Paoletti 2006]{paoletti_seven_bridges_konigsberg}
+\abntrefinfo{Paoletti}{PAOLETTI}{2006}
+{PAOLETTI, T. \emph{Leonard Euler's Solution to the Konigsberg Bridge Problem}.
+  2006.
+  \url{http://www.maa.org/publications/periodicals/convergence/leonard-eulers-solution-to-the-konigsberg-bridge-problem}.
+Acesso em 26 de fevereiro de 2015.}
+
+\bibitem[Penha e Carvalho 2013]{tcc_univas_penha_carvalho_recomendacao_filmes}
+\abntrefinfo{Penha e Carvalho}{PENHA; CARVALHO}{2013}
+{PENHA, A.~L. da S.; CARVALHO, W. \emph{Sistema de recomendação de filmes
+  utilizando graph database}. [S.l.: s.n.], 2013.}
+
+\bibitem[Pádua 2007]{padua_metodologia_pesquisa}
+\abntrefinfo{Pádua}{PáDUA}{2007}
+{PáDUA, E. M.~M. de. \emph{\textbf{Metodologia da Pesquisa: Abordagem
+  Teorico-Pratica}}. 16. ed. [S.l.]: Papirus, 2007.}
+
+\bibitem[Robinson, Webber e Eifrem
+  2013]{robinson_webber_eifrem_graph_databases}
+\abntrefinfo{Robinson, Webber e Eifrem}{ROBINSON; WEBBER; EIFREM}{2013}
+{ROBINSON, I.; WEBBER, J.; EIFREM, E. \emph{\textbf{Graph Databases}}. [S.l.]:
+  O'Reilly, 2013.}
+
+\bibitem[Rocha
+  2013]{rocha_algoritmos_particionamento_banco_dados_orientado_grafos}
+\abntrefinfo{Rocha}{ROCHA}{2013}
+{ROCHA, R.~R. Algoritmos de particionamento e banco de dados orientado a
+  grafos.
+2013.}
+
+\bibitem[Rosenberg e Scott
+  1999]{rosenberg_scott_use_case_driven_object_modeling_with_uml}
+\abntrefinfo{Rosenberg e Scott}{ROSENBERG; SCOTT}{1999}
+{ROSENBERG, D.; SCOTT, K. \emph{\textbf{Use Case Driven Object Modeling With
+  UML A Pratical Approach}}. 1. ed. [S.l.: s.n.], 1999.}
+
+\bibitem[Rosenberg e Stephens
+  2007]{rosenberg_stephens_use_case_driven_object_modeling_with_uml}
+\abntrefinfo{Rosenberg e Stephens}{ROSENBERG; STEPHENS}{2007}
+{ROSENBERG, D.; STEPHENS, M. \emph{\textbf{Use Case Driven Object Modeling With
+  UML Theory and Practice}}. 1. ed. [S.l.: s.n.], 2007.}
+
+\bibitem[Rosenberg, Stephens e Collins-Cope 2005]{rosenberg_iconix_process}
+\abntrefinfo{Rosenberg, Stephens e Collins-Cope}{ROSENBERG; STEPHENS;
+  COLLINS-COPE}{2005}
+{ROSENBERG, D.; STEPHENS, M.; COLLINS-COPE, M. \textbf{Agile Development with
+  ICONIX Process: People, Process, and Pragmatism}.
+2005.}
+
+\bibitem[Ross e Borsoi 2012]{ross_borsoi_uso_primefaces}
+\abntrefinfo{Ross e Borsoi}{ROSS; BORSOI}{2012}
+{ROSS, C.~L.; BORSOI, B.~T. \textbf{Uso de Primefaces no desenvolvimento de
+  aplicações ricas para web}.
+2012.}
+
+\bibitem[Ruohonen 2013]{ruohonen_graph_theory}
+\abntrefinfo{Ruohonen}{RUOHONEN}{2013}
+{RUOHONEN, K. \textbf{Graph Theory}.
+2013.}
+
+\bibitem[Sadalage e Fowler 2013]{sadalage_fowler_nosql_distilled_brief_guide}
+\abntrefinfo{Sadalage e Fowler}{SADALAGE; FOWLER}{2013}
+{SADALAGE, P.~J.; FOWLER, M. \emph{\textbf{NoSQL Distilled - A Brief Guide to
+  the Emerging World of Polyglot Persistence}}. [S.l.: s.n.], 2013.}
+
+\bibitem[Schildt 2007]{schildt_java_complete_reference}
+\abntrefinfo{Schildt}{SCHILDT}{2007}
+{SCHILDT, H. \emph{\textbf{Java: The Complete Reference}}. 7. ed. [S.l.: s.n.],
+  2007.}
+
+\bibitem[Setzer e Silva
+  2005]{setzer_silva_banco_dados_aprenda_o_que_sao_melhore_conhecimento}
+\abntrefinfo{Setzer e Silva}{SETZER; SILVA}{2005}
+{SETZER, V.~W.; SILVA, F. S.~C. da. \emph{\textbf{Banco de dados: Aprenda o que
+  são, melhore seu conhecimento, construa os seus}}. [S.l.]: Edgard Blucher,
+  2005.}
+
+\bibitem[Silva e Videira 2001]{silva_videira_uml_metodologias_ferramentas_case}
+\abntrefinfo{Silva e Videira}{SILVA; VIDEIRA}{2001}
+{SILVA, A.; VIDEIRA, C. \emph{\textbf{UML, Metodologias e Ferramentas Case}}.
+  1. ed. [S.l.: s.n.], 2001.}
+
+\bibitem[Silva e Pires 2013]{tcc_univas_silva_pires_comparacao_banco_dados}
+\abntrefinfo{Silva e Pires}{SILVA; PIRES}{2013}
+{SILVA, A.~C. da; PIRES, J.~P. \emph{Banco de dados relacional versus banco de
+  dados orientado a grafos aplicados a redes sociais}. [S.l.: s.n.], 2013.}
+
+\bibitem[Silva e Menezes
+  2005]{silva_menezes_metodologia_pesquisa_elaboracao_dissertacao}
+\abntrefinfo{Silva e Menezes}{SILVA; MENEZES}{2005}
+{SILVA, E.~L. da; MENEZES, E.~M. \emph{\textbf{Metodologia da Pesquisa e
+  Elaboração de Dissertação}}. 4. ed. [S.l.]: UFSC, 2005.}
+
+\bibitem[Vukotic e Goodwill 2011]{vukotic_goodwill_apache_tomcat_7}
+\abntrefinfo{Vukotic e Goodwill}{VUKOTIC; GOODWILL}{2011}
+{VUKOTIC, A.; GOODWILL, J. \emph{Apache Tomcat 7}. [S.l.]: Apress, 2011.}
+
+\end{thebibliography}

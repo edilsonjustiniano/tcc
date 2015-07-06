@@ -1,0 +1,23 @@
+\subsection{Tomcat 7}
+
+\par O Tomcat é uma aplicação \textit{container}, capaz de hospedar aplicações \textit{web} baseadas em Java. A princípio ele foi criado para executar \textit{servlets}\footnotemark[14] e \textit{JavaServer Pages} - JSP\footnotemark[15] -. Inicialmente ele era parte de um sub projeto chamado \textit{Apache-Jakarta}, porém, devido ao seu sucesso ele passou a ser um projeto independente, e hoje, é responsabilidade de um grupo de voluntários da comunidade \textit{open source} do Java \cite{vukotic_goodwill_apache_tomcat_7}.
+
+\footnotetext[14]{\textit{Servlet} - Programa Java executado no servidor, semelhante a um \textit{applet}.}
+
+\footnotetext[15]{JSP: \textit{JavaServer Pages} - Tecnologia utilizada para desenvolver páginas interativas utilizando Java \textit{web}.}
+
+\par Segundo a \citeonline{apache_about_tomcat}, o Tomcat é um software que possui seu código fonte aberto e disponibilizado sob a \textit{Apache License Version 2}. Isto o fez se tornar uma das aplicações \textit{containers} mais utilizadas por desenvolvedores.
+
+\par \textit{Containers} são aplicações que são executadas em servidores e possuem a capacidade de hospedar aplicações desenvolvidas em Java \textit{web}. O servidor ao receber uma requisição do cliente, entrega esta ao \textit{container} no qual o \textit{} é distribuído, o \textit{container} por sua vez entrega ao \textit{servlet} as requisições e respostas HTTP\footnotemark[16] e iniciam os métodos necessários do \textit{servlet} de acordo com o tipo de requisição realizada pelo cliente \cite{basham_sierra_bates_use_cabeca_servlets_jsp}.
+
+\footnotetext[16]{HTTP: \textit{Hypertext Transfer Protocol} - Protocolo de transferência de dados mais utilizado na rede mundial de computadores.}
+
+%BANCA_QUALIFICACAO. Comentado este parágrafo, porém o mesmo retornará para a banca de qualificação
+\par \citeonline{brittain_darwin_apache_tomcat_2nd_edition} afirmam que o Tomcat foi desenvolvido utilizando a linguagem de programação Java, sendo necessário possuir uma versão do Java SE \textit{Runtime Environment} - JRE - instalado e atualizado para executá-lo.
+
+%BANCA_QUALIFICACAO. Comentado este parágrafo, porém o mesmo retornará para a banca de qualificação
+\par De acordo com  \citeonline{laurie_laurie_apache_the_definitive_guide}, o Tomcat é responsável por realizar a comunicação entre a aplicação e o servidor Apache por meio do uso de \textit{sockets}.
+
+\par Assim como outros \textit{containers}, \citeonline{basham_sierra_bates_use_cabeca_servlets_jsp} afirmam que o Tomcat oferece gerenciamento de conexões \textit{sockets}, suporta \textit{multithreads}, ou seja, ele cria uma nova \textit{thread} para cada requisição realizada pelo cliente e gerencia o acesso aos recursos do servidor, além de outras tarefas.
+
+\par O Tomcat, em especial, foi escolhido para ser utilizado neste trabalho, pois o objetivo é desenvolver uma aplicação \textit{web} e para hospedá-la em um servidor, uma aplicação \textit{container} se faz necessária. Por este motivo, e somado a sua facilidade de configuração, além das vantagens acima descritas tal decisão foi tomada.

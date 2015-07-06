@@ -11,82 +11,35 @@
 	<link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
 	
 	<!-- TCC Style -->
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="css/style.css">
 </head>
-<body ng-controller="LoginController">
+<body>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<a class="brand" href="index.html">App Mão de Obra</a>
+				<ul class="nav pull-right">
+			      <li><a href="create-account-personal-data.html">Criar conta</a></li>
+			    </ul>
+	   		</div>
+		</div>
 
-<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-	    	<a class="brand" href="index.jsp">InCloud<i class="icon-music"></i></a>
-	    	<ul class="nav">
-	      		<li><a href="manual/manualInCloud.pdf" target="_blank"><i class="icon-download-alt"></i> Manual</a></li>
-	      		<li><a href="addUser.jsp">Create Account</a></li>
-	      		<li><a href=""><i class="icon-backward icon-white"></i></a></li>
-	      		<li><a href=""><i class="icon-play icon-white"></i></a></li>
-	      		<li><a href=""><i class="icon-pause icon-white"></i></a></li>
-	      		<li><a href=""><i class="icon-forward icon-white"></i></a></li>
-	      		<li><a class="brand" href="#">Music Title</a></li>
-	      		<li><a href="" id="box-login"></a></li>
-	   	 	</ul>
-	   	 </div>
+	<div id="general">
+	
+
+		<!-- diretiva ng-submit -->
+	    <section id="form-login">
+		    <form ng-submit="login()">
+		    	<legend>Log in</legend>
+		        <!-- diretiva ng-model -->
+		        <input type="text" class="input-xlarge" ng-model="email" placeholder="E-mail" required="required" />
+		        <input type="password" class="input-xlarge" ng-model="password" placeholder="Senha" required="required" />
+		        <input type="submit" class="btn btn-large btn-primary" value="Log in" />
+		        <input type="reset" class="btn btn-large" value="Cancelar" />
+		    </form>
+	    </section>
+
 	</div>
 
-	<div style="margin-top:50px;">
-		<input type="text" ng-model="name">
-	    <p>Olá, Tableless! Meu nome é: {{ name }}</p>
-		
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>Nome</th>
-					<th>Id</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="cliente in clientes | orderBy: 'name' ">
-					<td>{{cliente.name | uppercase}}</td>
-					<td>{{cliente.id | lowercase}}</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>UF</th>
-					<th>Name</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="uf in states | orderBy: 'name' ">
-					<td>{{uf.id}}</td>
-					<td>{{uf.abbreviation | uppercase}}</td>
-					<td>{{uf.name | lowercase}}</td>
-				</tr>
-			</tbody>
-		</table>
-
-	    <ul class="list-group">
-	      <!-- diretiva ng-repeat -->
-	      <li class="list-group-item" ng-repeat="cliente in clientes | orderBy:'name' ">
-	      {{cliente.name | uppercase}} - {{cliente.id | lowercase}}
-	      </li>
-	    </ul>
-
-	    <button ng-click="Login()">GET UFs</button>
-	    <button ng-click="GetAllClients()">GET Clientes</button>
-
-
-	    <!-- diretiva ng-submit -->
-	    <form ng-submit="addState()">
-	        <!-- diretiva ng-model -->
-	        <input type="text" ng-model="id" placeholder="Digite o id" />
-	        <input type="text" ng-model="name" placeholder="Digite o nome do Estado" />
-	        <input type="text" ng-model="abbreviation" placeholder="Digite a abreviação do Estado" />
-	        <input type="submit" value="Incluir" ng-disabled="false" />
-	    </form>
-	</div>
     <!-- Angular JS Lib -->
 	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
 

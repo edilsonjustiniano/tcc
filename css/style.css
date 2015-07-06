@@ -1,0 +1,99 @@
+* {
+	margin: 0 0;
+	padding: 0 0;
+}
+
+/* Import Header index */
+object.header-import{
+	width: 100%;
+	height: 50px;
+}
+
+#general {
+	margin: 0 0;
+	min-height: 80%;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+/* Login Page */
+#form-login {
+	border-radius:  8px;
+	margin: 100px auto;
+	width: 300px;
+	background-color: #080CF8;
+	padding:  20px;
+	opacity: .8;
+}
+
+#form-login legend {
+	color: white;
+}
+
+#form-login input[type=text],
+#form-login input[type=password] {
+	display: block;
+}
+
+.navbar .brand {
+	margin-left: 0px !important;
+}
+
+.brand-create-account {
+	margin-right: 5px !important;
+}
+
+/* Create Account Page */
+#form-create-account {
+	border-radius:  8px;
+	margin: 100px auto;
+	width: 400px;
+	background-color: #F8F8FA;
+	padding:  20px;
+	opacity: 1;
+}
+
+label.subtitle {
+	display: block;
+	font-size: 18px;
+}
+
+/* Nav Bar Home */
+.user-profile-photo {
+	display: inline;
+	width: 20px;
+	height: 20px;
+}
+
+.icon-accept {
+	width: 
+}
+
+.partner-request-received {
+	padding: 5px 10px;
+	background-color: #EEEEEE;
+	opacity: .6;
+}
+
+.partner-request-received a {
+	font-size: 14px;
+	color: black;
+	text-decoration: none;
+}
+
+/* Add Service Page */
+#form-add-service-mesage {
+	margin: 100px auto;
+	width: 300px;
+	padding: 20px;
+}
+
+#form-add-service-mesage select {
+	display: block;
+	width: 260px;
+}
+
+#form-add-service-mesage textarea {
+	width: 250px;
+}

@@ -29,7 +29,7 @@ TCCApp.service('LoginService', function($http){
 		// })
 	};
 
-
+	/** COLOCAR O .gitignore antes de fazer os commits da parte escrita **/
 	this.addState = function(id, name, abbreviation) {
 		$http.post('http://localhost:8080/WebService/clientes/addUF', {id: id, name: name, abbreviation: abbreviation}).
 		  success(function(data, status, headers, config) {

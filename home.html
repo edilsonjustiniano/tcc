@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app="TCCApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Início</title>
+	<!-- Bootstrap -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+	
+	<!-- TCC Style -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+
+			<a class="brand" href="home.html">Início</a>
+
+			<ul class="nav">
+		    	<li>
+		    		<a href="add-service.html">Serviços</a>
+		    	</li>
+		    	<li><a href="#">Link</a></li>
+		    	<li><a href="#">Link</a></li>
+		    </ul>
+
+			<ul class="nav pull-right">
+				
+				<!-- Partners -->
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						Parcerias
+				        <b class="caret"></b>
+				    </a>
+					<ul class="dropdown-menu">
+						<li ng-repeat="partner in partners | orderBy: 'date' ">
+					    	<a href="#">{{partner.name}}</a>
+						</li>
+
+						<li>
+							<div class="partner-request-received">
+								<a href="#">Josy Chaves</a>
+								<span>
+									<a href="#">
+										<img src="image/icon/ok-icon.png" class="img-circle icon-accept" alt="Ok" />
+									</a>
+
+									<a href="#">
+										<img src="image/icon/error-icon.png" class="img-circle icon-accept" alt="Cancelar" />
+									</a>
+								</span>
+							</div>
+					    	
+					     	<a href="#">Mensagem 2</a>
+					     	<a href="#">Mensagem 3</a>
+						</li>
+					</ul>
+				</li>
+
+				<!-- Mesages -->
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						Mensagens
+				        <b class="caret"></b>
+				    </a>
+					<ul class="dropdown-menu">
+						<li ng-repeat="msg in mesages | orderBy: 'date' ">
+					    	<a href="#">{{msg.title}}</a>
+						</li>
+
+						<li>
+					    	<a href="#">Mensagem 1</a>
+					     	<a href="#">Mensagem 2</a>
+					     	<a href="#">Mensagem 3</a>
+						</li>
+					</ul>
+				</li>
+	
+				<!-- User Options -->
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<img class="img-circle user-profile-photo" src="image/user-profile.png" alt="Profile Photo" />
+						First name
+				        <b class="caret"></b>
+				    </a>
+					<ul class="dropdown-menu">
+						<li>
+					    	<a href="#">Configurações</a>
+					     	<a href="#">Alterar Senha</a>
+					     	<a href="#">Sair</a>
+						</li>
+					</ul>
+				</li>
+				
+			</ul>
+	   	</div>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+
+</body>
+</html>

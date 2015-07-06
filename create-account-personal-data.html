@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app="TCCApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Criar conta</title>
+	
+	<!-- Bootstrap -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+	
+	<!-- TCC Style -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<a class="brand" href="index.html">App Mão de Obra</a>
+				<ul class="nav pull-right">
+			      	<li>
+			      		<a href="index.html">Log in</a>
+			      	</li>
+			    </ul>
+	   		</div>
+		</div>
+		
+		<!-- <object  class="header-import" type="text/html" data="import/header/index-header.html"></object>
+ 		-->
+	<div id="general">
+	
+		<!-- diretiva ng-submit -->
+	    <section id="form-create-account" ng-controller="CreateAccountPersonalData">
+	    	<ul class="nav nav-pills">
+			  	<li class="active">
+			    	<a href="create-account-personal-data.html">Dados Pessoais</a>
+			 	</li>
+			  	<li>
+			  		<a href="create-account-work-data.html">Dados profissionais</a>
+			  	</li>
+			  	<li>
+			  		<a href="create-account-photo.html">Imagem</a>
+			  	</li>
+	  		</ul>
+
+		    <form ng-submit="login()">
+		    	<legend>Criar conta</legend>
+		        <!-- diretiva ng-model -->
+		        <input type="text" class="input-xlarge" ng-model="name" placeholder="Nome completo" required="required" />
+		        
+		        <input type="text" class="input-xlarge" ng-model="email" placeholder="E-mail" required="required" />
+		        
+		        <input type="password" class="input-xlarge" ng-model="password" placeholder="Senha" required="required" />
+				
+				<input type="password" class="input-xlarge" ng-model="confirmPassword" placeholder="Confirmar senha" required="required" />
+
+
+		        <label class="radio">
+		        	<label class="subtitle">Tipo de conta</label>
+				  	<input type="radio" name="typeOfAccount" ng-model="typeOfAccount" id="typeOfAccountServiceProvider" value="SERVICE_PROVIDER" checked>
+				  	Provedor de Serviço
+				</label>
+
+				<label class="radio">
+				  <input type="radio" name="typeOfAccount" ng-model="typeOfAccount" id="typeOfAccountContractor" value="CONTRACTOR">
+				  Contratante
+				</label>
+				
+
+				<label class="radio">
+					<label class="subtitle">Tipo de pessoa</label>
+					<input type="radio" name="typeOfPerson" ng-model="typeOfPerson" value="PHISIC" checked>
+				  	Pessoa Física
+				</label>
+				<label class="radio">
+				  	<input type="radio" name="typeOfPerson" ng-model="typeOfPerson" value="JURIDIC">
+				 	 Pessoa Jurídica
+				</label>
+
+				<input type="text" class="input-xlarge" ng-show="typeOfPerson == 'JURIDIC'" ng-model="cnpj" placeholder="CNPJ" required="required" />
+
+
+				<input type="text" class="input-xlarge" ng-show="typeOfPerson == 'PHISIC'" ng-model="cpf" placeholder="CPF" required="required" />
+		       
+				<label class="radio" ng-show="typeOfPerson == 'PHISIC'">
+					<label class="subtitle">Sexo</label>
+				  	<input type="radio" name="gender" ng-model="gender" value="F" checked>
+				  	Feminino
+				</label>
+				<label class="radio" ng-show="typeOfPerson == 'PHISIC'">
+				  	<input type="radio" name="gender" ng-model="gender" value="M">
+				 	 Masculino
+				</label>
+				
+				<p>
+				<input type="submit" class="btn btn-large btn-primary" value="Próximo" />
+		        <input type="reset" class="btn btn-large" value="Cancelar" />
+		    	</p>
+		    </form>
+	    </section>
+
+	</div>
+
+    <!-- Angular JS Lib -->
+	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+
+	<!-- Controller -->
+	<script type="text/javascript" src="js/controller/CreateAccountPersonalData.js"></script>
+</body>
+</html>

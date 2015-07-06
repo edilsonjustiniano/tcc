@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html ng-app="TCCApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Criar conta</title>
+	
+	<!-- Bootstrap -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+	
+	<!-- TCC Style -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<a class="brand" href="index.html">App Mão de Obra</a>
+				<ul class="nav pull-right">
+			      	<li>
+			      		<a href="index.html">Log in</a>
+			      	</li>
+			    </ul>
+	   		</div>
+		</div>
+		
+		<!-- <object  class="header-import" type="text/html" data="import/header/index-header.html"></object>
+ 		-->
+	<div id="general">
+	
+		<!-- diretiva ng-submit -->
+	    <section id="form-create-account" ng-controller="CreateAccountWorkData">
+	    	<ul class="nav nav-pills">
+			  	<li>
+			    	<a href="create-account-personal-data.html">Dados Pessoais</a>
+			 	</li>
+			  	<li class="active">
+			  		<a href="create-account-work-data.html">Dados profissionais</a>
+			  	</li>
+			  	<li>
+			  		<a href="create-account-photo.html">Imagem</a>
+			  	</li>
+	  		</ul>
+
+		    <form ng-submit="login()">
+		    	<legend>Criar conta</legend>
+		        <label>UF da empresa</label>
+				<select ng-model="uf">
+					<option value="null">Selecione um estado</option>
+					<option>1</option>
+					  	
+					<option ng-repeat="uf in states | orderBy: 'name' ">
+						{{uf.name | lowercase}}
+					</option>
+				  	<option>1</option>
+				  	<option>2</option>
+				  	<option>3</option>
+				  	<option>4</option>
+				  	<option>5</option>
+				</select>
+					
+				<label>Cidade da empresa</label>
+				<select ng-model="city">
+					<option value="null">Selecione uma cidade</option>
+					<option>1</option>
+				  	
+					<option ng-repeat="city in cities | orderBy: 'name' ">
+						{{city.name | lowercase}}
+					</option>
+				  	<option>1</option>
+				  	<option>2</option>
+				  	<option>3</option>
+				  	<option>4</option>
+				  	<option>5</option>
+				</select>
+
+				<input type="text" class="input-xlarge" ng-model="company" placeholder="Nome da empresa" required="required" />
+				
+				<hr />
+
+				<label>UF onde vive</label>
+				<select ng-model="uf">
+					<option value="null">Selecione um estado</option>
+					<option>1</option>
+					  	
+					<option ng-repeat="uf in states | orderBy: 'name' ">
+						{{uf.name | lowercase}}
+					</option>
+				  	<option>1</option>
+				  	<option>2</option>
+				  	<option>3</option>
+				  	<option>4</option>
+				  	<option>5</option>
+				</select>
+					
+				<label>Cidade onde vive</label>
+				<select ng-model="city">
+					<option value="null">Selecione uma cidade</option>
+					<option>1</option>
+				  	
+					<option ng-repeat="city in cities | orderBy: 'name' ">
+						{{city.name | lowercase}}
+					</option>
+				  	<option>1</option>
+				  	<option>2</option>
+				  	<option>3</option>
+				  	<option>4</option>
+				  	<option>5</option>
+				</select>
+				
+				<input type="text" class="input-xlarge" ng-model="district" placeholder="Bairro" required="required" />
+
+				<input type="text" class="input-xlarge" ng-model="address" placeholder="Endereço" required="required" />
+
+				<p>
+					<input type="submit" class="btn btn-large btn-primary" value="Próximo" />
+		        	<input type="reset" class="btn btn-large" value="Cancelar" />
+		    	</p>
+		    </form>
+	    </section>
+
+	</div>
+
+    <!-- Angular JS Lib -->
+	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+
+	<!-- Controller -->
+	<script type="text/javascript" src="js/controller/CreateAccountWorkData.js"></script>
+</body>
+</html>

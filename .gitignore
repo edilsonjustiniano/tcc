@@ -1,0 +1,13 @@
+documento/latex/out/*
+documento/latex/tmp/*
+documento/latex/tmp/fixos/*
+documento/latex/Principal.log
+documento/latex/Principal.aux
+documento/latex/Principal.bbl
+documento/latex/Principal.blg
+documento/latex/Principal.lof
+documento/latex/Principal.lol
+documento/latex/Principal.loq
+documento/latex/Principal.lot
+documento/latex/Principal.toc
+documento/latex/Principal.dvi
