@@ -92,9 +92,16 @@ TCCApp.service('CreateAccountService', function($http){
     	return true;
 	};
 
-	this.createAccount = function(data, person) {
+	this.createAccount = function(person, callback) {
 
-		$http.post('http://localhost:8080/WebService/person/createAccountPersonalData', JSON.stringify(person)).success(data);
+		$http.post('http://localhost:8080/WebService/person/createAccountPersonalData', JSON.stringify(person)).
+		success(callback);
+		// error(function(data, status, headers, config) {
+		//     // called asynchronously if an error occurs
+		//     // or server returns response with an error status.
+		//     console.log('error');
+		//     //return undefined;
+		// });
 	};
 
 });
@@ -102,7 +109,7 @@ TCCApp.service('CreateAccountService', function($http){
 TCCApp.controller('CreateAccountPersonalData', function($scope, CreateAccountService){
 	
 	//Create the attributes
-	$scope.nameField = '';
+	$scope.name = '';
 	$scope.email = '';
 	$scope.password = '';
 	$scope.confirmPassword = '';
@@ -174,10 +181,31 @@ TCCApp.controller('CreateAccountPersonalData', function($scope, CreateAccountSer
 		person.setTypeOfPerson($scope.typeOfPerson);
 
 	
-		CreateAccountService.createAccount(function(data, person){
-			console.log('sucesso');
+		var data = CreateAccountService.createAccount(person, function(callback) {
+			/*
+			$scope.name = '';
+			$scope.email = '';
+			$scope.password = '';
+			$scope.confirmPassword = '';
+			$scope.typeOfAccount = 'SERVICE_PROVIDER';
+			$scope.typeOfPerson = 'PHISIC';
+			$scope.cnpj = '';
+			$scope.cpf = '';
+			$scope.gender = 'F';
+			*/
+			/* Redirect to page create account work data */
+			if (!callback.data.success) {
+				$scope.msg.type = 'ERROR';
+				$scope.msg.msg = callback.data.mesage;
+			} else {
+				$scope.msg.type = 'SUCCESS';
+				$scope.msg.msg = callback.data.mesage;
+			}
+		}); 
+		
+
 			//return {"cliente":[{"id":"1","name":"Edilson"},{"id":"2","name":"Josy"}]}
 			//$scope.clientes = data.cliente; //cliente is the root element in JSON return
-		});
+		// });
 	};
 });
