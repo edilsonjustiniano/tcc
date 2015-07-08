@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Adcionar serviço</title>
+	<title>Buscar serviços</title>
 	<!-- Bootstrap -->
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
-			
+
 			<a class="brand" href="home.html">Início</a>
 
 			<ul class="nav pull-right">
@@ -85,7 +85,7 @@
 				<!-- User Options -->
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-						<img class="img-circle user-profile-photo" src="image/user-profile.png" alt="Profile Photo" />
+						<img class="img-circle user-profile-photo" src="image/user-profile.png" alt="Imagem de perfil" />
 						First name
 				        <b class="caret"></b>
 				    </a>
@@ -102,30 +102,32 @@
 	   	</div>
 	</div>
 
-	<div id="general">
-		
 
-		<section id="form-add-service">
-			<form ng-submit="addService()">
-				<legend>Adicionar Serviços</legend>
-				<label>Serviços</label>
-				<select ng-model="servicesSelected" multiple="multiple">
-					<option ng-repeat="service in services | orderBy: 'name' ">
-						{{service.name | lowercase}}
-					</option>
-				  	<option>1</option>
-				  	<option>2</option>
-				  	<option>3</option>
-				  	<option>4</option>
-				  	<option>5</option>
-				</select>
-				
-				<p>
-					<input type="submit" class="btn btn-large btn-primary" value="Salvar" />
-		       		<input type="reset" class="btn btn-large" value="Cancelar" />
-				</p>
-			</form>
-		</section>
+	<div id="search-users" ng-repeat="user in usersFound | orderBy: 'starts'">
+		
+		<div class="user-found">
+			<img class="img-circle user-found" src="image/user-profile.png" alt="Imagem de perfil">
+			<p>{{user.name}}</p>
+			<span class="stars">
+				{{user.stars}} <img src="image/icon/star-icon.png" alt="Estrela">
+			</span>
+		</div>
+
+		<div class="user-found">
+			<img class="img-circle user-found" src="image/user-profile.png" alt="Imagem de perfil">
+			<p>{{user.name}}</p>
+			<span class="stars">
+				{{user.stars}} <img src="image/icon/star-icon.png" alt="Estrela">
+			</span>
+		</div>
+
+		<div class="user-found">
+			<img class="img-circle user-found" src="image/user-profile.png" alt="Imagem de perfil">
+			<p>{{user.name}}</p>
+			<span class="stars">
+				{{user.stars}} <img src="image/icon/star-icon.png" alt="Estrela">
+			</span>
+		</div>
 	</div>
 	
 	<script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>

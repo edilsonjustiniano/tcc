@@ -44,12 +44,19 @@
 			  	</li>
 	  		</ul>
 
-		    <form ng-submit="login()">
+		    <form ng-submit="createAccount()">
 		    	<legend>Criar conta</legend>
+				
+				<!-- Msg error -->
+				<div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
+
+				<!-- Msg success -->
+				<div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
+
 		        <!-- diretiva ng-model -->
 		        <input type="text" class="input-xlarge" ng-model="name" placeholder="Nome completo" required="required" />
 		        
-		        <input type="text" class="input-xlarge" ng-model="email" placeholder="E-mail" required="required" />
+		        <input type="text" class="input-xlarge" ng-model="email" placeholder="E-mail" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
 		        
 		        <input type="password" class="input-xlarge" ng-model="password" placeholder="Senha" required="required" />
 				
@@ -78,10 +85,10 @@
 				 	 Pessoa Jurídica
 				</label>
 
-				<input type="text" class="input-xlarge" ng-show="typeOfPerson == 'JURIDIC'" ng-model="cnpj" placeholder="CNPJ" required="required" />
+				<input type="text" class="input-xlarge" ng-show="typeOfPerson == 'JURIDIC'" ng-model="cnpj" placeholder="CNPJ" />
 
 
-				<input type="text" class="input-xlarge" ng-show="typeOfPerson == 'PHISIC'" ng-model="cpf" placeholder="CPF" required="required" />
+				<input type="text" class="input-xlarge" ng-show="typeOfPerson == 'PHISIC'" ng-model="cpf" placeholder="CPF" />
 		       
 				<label class="radio" ng-show="typeOfPerson == 'PHISIC'">
 					<label class="subtitle">Sexo</label>
@@ -104,8 +111,11 @@
 
     <!-- Angular JS Lib -->
 	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+	
+	<!-- Model -->
+	<script type="text/javascript" src="js/models/Person.js"></script>
 
 	<!-- Controller -->
-	<script type="text/javascript" src="js/controller/CreateAccountPersonalData.js"></script>
+	<script type="text/javascript" src="js/controllers/CreateAccountPersonalData.js"></script>
 </body>
 </html>

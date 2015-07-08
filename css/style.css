@@ -97,3 +97,31 @@ label.subtitle {
 #form-add-service-mesage textarea {
 	width: 250px;
 }
+
+/* Search service page */
+#search-users {
+	padding-top: 80px;
+}
+
+.user-found {
+	margin-left: 50px;
+	width: 80px;
+	height: 100px;
+	float: left;
+}
+
+.user-found p {
+	margin-left: 50px;
+}
+
+.stars {
+	display: inline;
+	margin-left: 50px;
+}
+
+.stars img {
+	display: inline;
+	margin-left: 50px;
+	width: 20px;
+	height: 20px;
+}
