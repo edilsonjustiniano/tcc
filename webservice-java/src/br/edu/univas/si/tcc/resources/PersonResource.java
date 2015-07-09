@@ -8,6 +8,10 @@ import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
 import br.edu.univas.si.tcc.dao.PersonDAO;
+import br.edu.univas.si.tcc.model.Token;
+import br.edu.univas.si.tcc.util.Base64Util;
+
+import com.sun.jersey.core.util.Base64;
 
 @Path("/person")
 public class PersonResource {
@@ -40,19 +44,7 @@ public class PersonResource {
 			e2.printStackTrace();
 		}
 		
-//		String DATABASE_ENDPOINT = "http://localhost:7474/db/data";
-//
-//        String DATABASE_USERNAME = "neo4j";
-//
-//        String DATABASE_PASSWORD = "admin";
-//
-//        String cypherUrl = DATABASE_ENDPOINT + "/cypher";
-//        
-//        Client c = Client.create();
-//        c.addFilter(new HTTPBasicAuthFilter(DATABASE_USERNAME, DATABASE_PASSWORD));
-//        WebResource resource = c.resource(cypherUrl);
-		
-		String objectCreate = dao.createAccountPersonalData(jsonObj);
+		String objectCreate = dao.createAccountWorkData(jsonObj);
 		
 		JSONObject response = null;
 		try {
@@ -63,10 +55,49 @@ public class PersonResource {
 		try {
 			response.put("success", true);
 			response.put("mesage", "Sucesso ao cadastrar a nova conta!");
+			
+//			byte[] token = Base64.encode(jsonObj.getString("email") + "||" + jsonObj.getString("password"));
+			byte[] token = Base64Util.encodeToken(jsonObj.getString("email"), jsonObj.getString("password"));
+			System.out.println("encodedBytes " + new String(token));
+			
+//			byte[] decodedBytes = Base64.decode(token);
+			Token tokenDecoded = Base64Util.decodeToken(token);
+			System.out.println("decodedBytes " + tokenDecoded.getEmail() + Base64Util.BASE64_TOKEN_SEPARATOR + tokenDecoded.getPassword());
+			
+			response.put("token", new String(token));
+			
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
 		
 		return response.toString();
 	}
+	
+	
+	
+	@Path("/createAccountWorkData")
+	@POST
+	@Produces("application/json")
+	public String createAccountWorkData(String json) {
+		
+		System.out.println(json);
+		JSONObject jsonObj = null;
+		try {
+			jsonObj = new JSONObject(json);
+			
+		} catch (JSONException e1) {
+			e1.printStackTrace();
+		}
+		
+		
+		/* 1 -> Firstly, check if the session is valid, case the session is not valid, we do not need to do anything. Otherwise, continue.
+		 * 2 -> Check if there is a company in the same city with the same nome, before to cadastre a new company.
+		 * 3 -> And last, edit the user data on database
+		 * Check if there is a valid session, informed by user and get the node
+		 * regarding him
+		 */
+		
+		return null;
+	}
+	
 }

@@ -194,12 +194,14 @@ TCCApp.controller('CreateAccountPersonalData', function($scope, CreateAccountSer
 			$scope.gender = 'F';
 			*/
 			/* Redirect to page create account work data */
-			if (!callback.data.success) {
+			if (!callback.success) {
 				$scope.msg.type = 'ERROR';
-				$scope.msg.msg = callback.data.mesage;
+				$scope.msg.msg = callback.mesage;
 			} else {
 				$scope.msg.type = 'SUCCESS';
-				$scope.msg.msg = callback.data.mesage;
+				$scope.msg.msg = callback.mesage;
+				window.localStorage['token'] = callback.token;
+				window.location.href = 'create-account-work-data.html';
 			}
 		}); 
 		

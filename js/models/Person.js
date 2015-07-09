@@ -10,7 +10,12 @@ function Person () {
 	cnpj 			= '';
 	cpf 			= '';
 	gender 			= '';
+	livesIn  		= {};
+	worksIn 		= {};
+	district 		= '';
+	address 		= '';
 
+	token 			= ''; //session information
 }
 
 /* GET/SET */
@@ -63,9 +68,38 @@ Person.prototype.setCPF = function(cpf){
 	this.cpf = cpf;
 };
 
-Person.prototype.getGender = function(){
-	return this.gender;
+Person.prototype.getLivesIn = function(){
+	return this.livesIn;
 };
-Person.prototype.setGender = function(gender){
-	this.gender = gender;
+Person.prototype.setLivesIn = function(livesIn){
+	this.livesIn = livesIn;
+};
+
+Person.prototype.getWorksIn = function(){
+	return this.worksIn;
+};
+Person.prototype.setWorksIn = function(worksIn){
+	this.worksIn = worksIn;
+};
+
+Person.prototype.getDistrict = function(){
+	return this.district;
+};
+Person.prototype.setDistrict = function(district){
+	this.district = district;
+};
+
+Person.prototype.getAddress = function(){
+	return this.address;
+};
+Person.prototype.setAddress = function(address){
+	this.address = address;
+};
+
+/* Session token */
+Person.prototype.getToken = function(){
+	return this.token;
+};
+Person.prototype.setToken = function(token){
+	this.token = token;
 };

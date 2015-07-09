@@ -44,36 +44,27 @@
 			  	</li>
 	  		</ul>
 
-		    <form ng-submit="login()">
+		    <form ng-submit="createAccount()">
 		    	<legend>Criar conta</legend>
+
+		    	<!-- Msg error -->
+				<div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
+
+				<!-- Msg success -->
+				<div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
+				
 		        <label>UF da empresa</label>
-				<select ng-model="uf">
-					<option value="null">Selecione um estado</option>
-					<option>1</option>
-					  	
+				<select ng-model="ufCompany" ng-change="getAllCitiesByStateForCompany()" >
 					<option ng-repeat="uf in states | orderBy: 'name' ">
-						{{uf.name | lowercase}}
+						{{uf.name | uppercase}}
 					</option>
-				  	<option>1</option>
-				  	<option>2</option>
-				  	<option>3</option>
-				  	<option>4</option>
-				  	<option>5</option>
 				</select>
 					
 				<label>Cidade da empresa</label>
-				<select ng-model="city">
-					<option value="null">Selecione uma cidade</option>
-					<option>1</option>
-				  	
-					<option ng-repeat="city in cities | orderBy: 'name' ">
-						{{city.name | lowercase}}
+				<select ng-model="cityCompany">
+					<option ng-repeat="city in citiesCompany | orderBy: 'name' ">
+						{{city.name | uppercase}}
 					</option>
-				  	<option>1</option>
-				  	<option>2</option>
-				  	<option>3</option>
-				  	<option>4</option>
-				  	<option>5</option>
 				</select>
 
 				<input type="text" class="input-xlarge" ng-model="company" placeholder="Nome da empresa" required="required" />
@@ -81,33 +72,17 @@
 				<hr />
 
 				<label>UF onde vive</label>
-				<select ng-model="uf">
-					<option value="null">Selecione um estado</option>
-					<option>1</option>
-					  	
+				<select ng-model="ufLives" ng-change="getAllCitiesByStateForLives()">
 					<option ng-repeat="uf in states | orderBy: 'name' ">
-						{{uf.name | lowercase}}
+						{{uf.name | uppercase}}
 					</option>
-				  	<option>1</option>
-				  	<option>2</option>
-				  	<option>3</option>
-				  	<option>4</option>
-				  	<option>5</option>
 				</select>
 					
 				<label>Cidade onde vive</label>
-				<select ng-model="city">
-					<option value="null">Selecione uma cidade</option>
-					<option>1</option>
-				  	
-					<option ng-repeat="city in cities | orderBy: 'name' ">
-						{{city.name | lowercase}}
+				<select ng-model="cityLives">
+					<option ng-repeat="city in citiesLives | orderBy: 'name' ">
+						{{city.name | uppercase}}
 					</option>
-				  	<option>1</option>
-				  	<option>2</option>
-				  	<option>3</option>
-				  	<option>4</option>
-				  	<option>5</option>
 				</select>
 				
 				<input type="text" class="input-xlarge" ng-model="district" placeholder="Bairro" required="required" />
@@ -125,6 +100,11 @@
 
     <!-- Angular JS Lib -->
 	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+	
+	<!-- Model -->
+	<script type="text/javascript" src="js/models/City.js"></script>
+	<script type="text/javascript" src="js/models/Company.js"></script>
+	<script type="text/javascript" src="js/models/Person.js"></script>
 
 	<!-- Controller -->
 	<script type="text/javascript" src="js/controllers/CreateAccountWorkData.js"></script>

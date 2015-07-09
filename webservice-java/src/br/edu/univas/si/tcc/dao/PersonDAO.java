@@ -23,7 +23,7 @@ public class PersonDAO {
 		
 		String query = null;
 		query = "{\"query\":\" MATCH (person:Person {email: '" + email + "'})" +
-				" RETURN person.count as qtde; \"}";
+				" RETURN COUNT(person) as qtde; \"}";
 		System.out.println(query);
 		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
 		
@@ -39,9 +39,11 @@ public class PersonDAO {
 			e1.printStackTrace();
 		}
 		
-		int qtde = 0;;
+		int qtde = 0;
 		try {
-			qtde = response.getInt("qtde");
+			String qtdeStr = response.getString("data");
+			qtdeStr = qtdeStr.replaceAll("[^0-9]", "");
+			qtde = Integer.parseInt(qtdeStr);
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
@@ -87,6 +89,41 @@ public class PersonDAO {
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 	              					.type(MediaType.APPLICATION_JSON).entity(query)
 	              					.post(ClientResponse.class);
+		String objectCreate = responseCreate.getEntity(String.class);
+		
+		return objectCreate;
+	}
+
+
+	public String createAccountWorkData(JSONObject jsonObj) {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+		
+		String query = null;
+		try {
+			String password = MD5Util.generateMD5(jsonObj.getString("password"));
+			query = "{\"query\":\" CREATE (person:Person {name: '" + jsonObj.getString("name") + "'," +
+								" email: '" + jsonObj.getString("email") + "'," +
+								" password: '" + password + "'," +
+								" typeOfAccount: '" + jsonObj.getString("typeOfAccount") + "'," +
+								" typeOfPerson: '" + jsonObj.getString("typeOfPerson") + "',";
+			
+			if (jsonObj.getString("typeOfPerson").equals("PHISIC")) {
+				query += " cpf: '" + jsonObj.getString("cpf") + "', " +
+							 " gender: '" + jsonObj.getString("gender") + "'";
+			} else {
+				query += " cnpj: " + jsonObj.getString("cnpj") + "'";
+			}
+			
+			query += "}) RETURN person.name, person.email, person.password; \"}";
+			System.out.println(query);
+			
+		} catch (JSONException e1) {
+			e1.printStackTrace();
+		}
+		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+												.type(MediaType.APPLICATION_JSON).entity(query)
+												.post(ClientResponse.class);
 		String objectCreate = responseCreate.getEntity(String.class);
 		
 		return objectCreate;
