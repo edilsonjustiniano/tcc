@@ -70,15 +70,21 @@ TCCApp.controller('CreateAccountWorkData', function($scope, CreateAccountWorkDat
 	$scope.createAccount = function() {
 
 		var person = new Person();
+		var stateForCompany = new State();
+		var stateForLive = new State();
 		var livesIn = new City();
 		var worksIn = new Company();
 
-		livesIn.setName($scope.cityLives);
+		stateForLive.setName($scope.ufLives.trim());
+		livesIn.setName($scope.cityLives.trim());
+		livesIn.setState(stateForLive);
 		person.setLivesIn(livesIn);
 
 		worksIn.setName($scope.company);
 		var city = new City();
-		city.setName($scope.cityCompany);
+		city.setName($scope.cityCompany.trim());
+		stateForCompany.setName($scope.ufCompany.trim());
+		city.setState(stateForCompany);
 		worksIn.setLocatedIn(city);
 		person.setWorksIn(worksIn);
 		
@@ -96,6 +102,16 @@ TCCApp.controller('CreateAccountWorkData', function($scope, CreateAccountWorkDat
 
 		CreateAccountWorkDataService.createAccount(person, function(callback) {
 			 console.log('callback' + callback);
+			 if (!callback.success) {
+			 	$scope.msg.type = 'ERROR';
+				$scope.msg.msg = callback.mesage;	
+				return;		 
+			} else {
+				$scope.msg.type = 'SUCCESS';
+				$scope.msg.msg = callback.mesage;
+				window.location.href = 'create-account-photo.html';
+			}
+
 		});
 			
 	};

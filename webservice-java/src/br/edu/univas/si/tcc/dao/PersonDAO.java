@@ -5,6 +5,7 @@ import javax.ws.rs.core.MediaType;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
+import br.edu.univas.si.tcc.model.Person;
 import br.edu.univas.si.tcc.util.MD5Util;
 
 import com.sun.jersey.api.client.ClientResponse;
@@ -95,32 +96,26 @@ public class PersonDAO {
 	}
 
 
-	public String createAccountWorkData(JSONObject jsonObj) {
+	public String createAccountWorkData(Person person) {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		
 		String query = null;
-		try {
-			String password = MD5Util.generateMD5(jsonObj.getString("password"));
-			query = "{\"query\":\" CREATE (person:Person {name: '" + jsonObj.getString("name") + "'," +
-								" email: '" + jsonObj.getString("email") + "'," +
-								" password: '" + password + "'," +
-								" typeOfAccount: '" + jsonObj.getString("typeOfAccount") + "'," +
-								" typeOfPerson: '" + jsonObj.getString("typeOfPerson") + "',";
-			
-			if (jsonObj.getString("typeOfPerson").equals("PHISIC")) {
-				query += " cpf: '" + jsonObj.getString("cpf") + "', " +
-							 " gender: '" + jsonObj.getString("gender") + "'";
-			} else {
-				query += " cnpj: " + jsonObj.getString("cnpj") + "'";
-			}
-			
-			query += "}) RETURN person.name, person.email, person.password; \"}";
-			System.out.println(query);
-			
-		} catch (JSONException e1) {
-			e1.printStackTrace();
-		}
+		query = "{\"query\":\" MATCH (cityWorks:City {name: '" + person.getWorksIn().getLocatedIn().getName() + "'}), " +
+							"(cityLives:City {name: '" + person.getLivesIn().getName() + "'}), " +
+							"(ufWorks:UF {name: '" + person.getWorksIn().getLocatedIn().getUf().getName() + "'}), " +
+							"(ufLives:UF {name: '" + person.getWorksIn().getLocatedIn().getUf().getName() + "'}), " +
+							"(company:Company {name: '" + person.getWorksIn().getName() + "'}), " +
+							"(person:Person {email: '" + person.getEmail() + "'}), " +
+							"(company)-[:LOCATED_IN]->(cityWorks), " +
+							"(cityWorks)-[:BELONGS_TO]->(ufWorks), " +
+							"(cityLives)-[:BELONGS_TO]->(ufLives) " + 
+							"CREATE (person)-[:LIVES_IN]->(cityLives), " +
+							"(person)-[:WORKS_IN]->(company) " + 
+							"SET person += {district: '" + person.getDistrict() + "', " +
+							"address: '" + person.getAddress() + "'} " +
+							"RETURN person.name, person.email; \"}";
+		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);

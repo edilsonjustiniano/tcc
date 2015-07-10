@@ -68,6 +68,13 @@ Person.prototype.setCPF = function(cpf){
 	this.cpf = cpf;
 };
 
+Person.prototype.getGender = function(){
+	return this.gender;
+};
+Person.prototype.setGender = function(gender){
+	this.gender = gender;
+};
+
 Person.prototype.getLivesIn = function(){
 	return this.livesIn;
 };

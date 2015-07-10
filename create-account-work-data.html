@@ -56,14 +56,14 @@
 		        <label>UF da empresa</label>
 				<select ng-model="ufCompany" ng-change="getAllCitiesByStateForCompany()" >
 					<option ng-repeat="uf in states | orderBy: 'name' ">
-						{{uf.name | uppercase}}
+						{{uf.name}}
 					</option>
 				</select>
 					
 				<label>Cidade da empresa</label>
 				<select ng-model="cityCompany">
 					<option ng-repeat="city in citiesCompany | orderBy: 'name' ">
-						{{city.name | uppercase}}
+						{{city.name}}
 					</option>
 				</select>
 
@@ -74,14 +74,14 @@
 				<label>UF onde vive</label>
 				<select ng-model="ufLives" ng-change="getAllCitiesByStateForLives()">
 					<option ng-repeat="uf in states | orderBy: 'name' ">
-						{{uf.name | uppercase}}
+						{{uf.name}}
 					</option>
 				</select>
 					
 				<label>Cidade onde vive</label>
 				<select ng-model="cityLives">
 					<option ng-repeat="city in citiesLives | orderBy: 'name' ">
-						{{city.name | uppercase}}
+						{{city.name}}
 					</option>
 				</select>
 				
@@ -102,6 +102,7 @@
 	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
 	
 	<!-- Model -->
+	<script type="text/javascript" src="js/models/State.js"></script>
 	<script type="text/javascript" src="js/models/City.js"></script>
 	<script type="text/javascript" src="js/models/Company.js"></script>
 	<script type="text/javascript" src="js/models/Person.js"></script>

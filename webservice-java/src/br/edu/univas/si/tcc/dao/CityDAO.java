@@ -12,7 +12,7 @@ public class CityDAO {
 		WebResource resource = FactoryDAO.GetInstance();
 		
         String query = "MATCH (uf:UF), (city:City), (city)-[:BELONGS_TO]->(uf)" +
-        				" WHERE has(uf.name) AND UPPER(uf.name) = '" + state.toUpperCase() + "' RETURN city.name;";
+        				" WHERE has(uf.name) AND UPPER(uf.name) = '" + state.toUpperCase() + "' RETURN DISTINCT(city.name);";
         
         String request = "{\"query\":\"" + query + "\"}";
         ClientResponse response = resource.accept(MediaType.APPLICATION_JSON)
