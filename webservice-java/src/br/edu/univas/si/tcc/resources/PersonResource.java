@@ -7,6 +7,7 @@ import javax.ws.rs.Produces;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
+import br.edu.univas.si.tcc.controller.TokenController;
 import br.edu.univas.si.tcc.dao.CompanyDAO;
 import br.edu.univas.si.tcc.dao.PersonDAO;
 import br.edu.univas.si.tcc.dao.TokenDAO;
@@ -68,7 +69,7 @@ public class PersonResource {
 			
 //			byte[] decodedBytes = Base64.decode(token);
 			Token tokenDecoded = Base64Util.decodeToken(token);
-			System.out.println("decodedBytes " + tokenDecoded.getEmail() + Base64Util.BASE64_TOKEN_SEPARATOR + tokenDecoded.getPassword());
+			System.out.println("decodedBytes " + tokenDecoded.getEmail() + Base64Util.BASE64_TOKEN_SEPARATOR + tokenDecoded.getPassword() + Base64Util.BASE64_TOKEN_SEPARATOR + tokenDecoded.getLastAccessTime());
 			
 			response.put("token", new String(token));
 			
@@ -114,6 +115,23 @@ public class PersonResource {
 		} else { //token is filled
 			
 			tokenDecoded = Base64Util.decodeToken(token.getBytes());
+			
+			//Check if the session is expired
+			TokenController tokenController = new TokenController();
+			if (tokenController.isExpiredSession(tokenDecoded)) {
+				response = new JSONObject();
+				try {
+					response.put("success", false);
+					response.put("mesage", "Sessão expirada!");
+					response.put("sessionExpired", true);
+					
+					return response.toString();
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+			}
+			
+			
 			tokenDao = new TokenDAO();
 			
 			if (!tokenDao.isValidSession(tokenDecoded)) {
@@ -121,6 +139,7 @@ public class PersonResource {
 				try {
 					response.put("success", false);
 					response.put("mesage", "Sessão inválida!");
+					response.put("sessionExpired", false);
 					
 					return response.toString();
 				} catch (JSONException e) {
@@ -195,11 +214,13 @@ public class PersonResource {
 		
 		
 		String objCreated = dao.createAccountWorkData(person);
-		
+		byte[] tokenUpdated = Base64Util.encodeToken(tokenDecoded.getEmail(), tokenDecoded.getPassword());
+
 		try {
 			response = new JSONObject(objCreated);
 			response.put("success", true);
 			response.put("mesage", "Sucesso ao editar a nova conta!");
+			response.put("token", new String(tokenUpdated));
 		} catch (JSONException e1) {
 			e1.printStackTrace();
 		}

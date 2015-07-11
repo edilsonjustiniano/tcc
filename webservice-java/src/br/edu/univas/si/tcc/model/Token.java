@@ -6,6 +6,7 @@ public class Token {
 
 	private String email;
 	private String password;
+	private Long lastAccessTime;
 	
 	/**
 	 * GET/SET
@@ -22,9 +23,15 @@ public class Token {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public Long getLastAccessTime() {
+		return lastAccessTime;
+	}
+	public void setLastAccessTime(Long lastAccessTime) {
+		this.lastAccessTime = lastAccessTime;
+	}
 	
 	@Override
 	public String toString() {
-		return this.email + Base64Util.BASE64_TOKEN_SEPARATOR + this.password;
+		return this.email + Base64Util.BASE64_TOKEN_SEPARATOR + this.password + Base64Util.BASE64_TOKEN_SEPARATOR + this.lastAccessTime;
 	}
 }

@@ -44,10 +44,10 @@
 			  	</li>
 	  		</ul>
 
-		    <form ng-submit="login()">
+		    <form ng-submit="savePhoto()">
 		    	<legend>Criar conta</legend>
 		        <label>Foto de perfil</label>
-				<input type="file" id="file">
+				<input type="file" id="file" ng-model="photo">
 				<p>
 					<input type="submit" class="btn btn-large btn-primary" value="Salvar" />
 		        	<input type="reset" class="btn btn-large" value="Cancelar" />

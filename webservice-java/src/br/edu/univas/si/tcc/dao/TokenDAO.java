@@ -12,7 +12,6 @@ import com.sun.jersey.api.client.WebResource;
 
 public class TokenDAO {
 
-	
 	public boolean isValidSession(Token token) {
 		
 		WebResource resource = FactoryDAO.GetInstance();

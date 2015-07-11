@@ -104,11 +104,12 @@ TCCApp.controller('CreateAccountWorkData', function($scope, CreateAccountWorkDat
 			 console.log('callback' + callback);
 			 if (!callback.success) {
 			 	$scope.msg.type = 'ERROR';
-				$scope.msg.msg = callback.mesage;	
+				$scope.msg.msg = callback.mesage;
 				return;		 
 			} else {
 				$scope.msg.type = 'SUCCESS';
 				$scope.msg.msg = callback.mesage;
+				window.localStorage['token'] = callback.token;
 				window.location.href = 'create-account-photo.html';
 			}
 
