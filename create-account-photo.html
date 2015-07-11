@@ -44,15 +44,22 @@
 			  	</li>
 	  		</ul>
 
-		    <form ng-submit="savePhoto()">
+		    <form ng-submit="savePhoto()" enctype="multipart/form-data">
 		    	<legend>Criar conta</legend>
 		        <label>Foto de perfil</label>
-				<input type="file" id="file" ng-model="photo">
+				<input type="file" id="file" onchange="angular.element(this).scope().uploadFile(this.files)">
+
 				<p>
 					<input type="submit" class="btn btn-large btn-primary" value="Salvar" />
 		        	<input type="reset" class="btn btn-large" value="Cancelar" />
 		    	</p>
 		    </form>
+
+		    <div id="progress-bar">
+					<div class="progress progress-striped active">
+			    		<div class="bar" style="width: 0%;"></div>
+			   		</div>
+				</div>
 	    </section>
 
 	</div>

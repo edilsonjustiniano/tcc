@@ -44,6 +44,20 @@ object.header-import{
 	margin-right: 5px !important;
 }
 
+.loading-image {
+	margin-top: 10px;
+}
+
+.loading-image img {
+	display: block;
+	padding: 10px;
+	width: 40px;
+	height: 40px;
+	/*border-radius: 10px;
+	background-color: #CCCCCC;
+	opacity: .8;*/
+}
+
 /* Create Account Page */
 #form-create-account {
 	border-radius:  8px;

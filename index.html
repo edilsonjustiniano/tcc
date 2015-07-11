@@ -25,16 +25,27 @@
 
 	<div id="general">
 	
-
 		<!-- diretiva ng-submit -->
 	    <section id="form-login">
-		    <form ng-submit="login()">
-		    	<legend>Log in</legend>
+		    <form ng-submit="login()" ng-controller="LoginController">
+				
+				<legend>Log in</legend>
+
+				<!-- Msg error -->
+				<div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
+
+				<!-- Msg success -->
+				<div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
+
 		        <!-- diretiva ng-model -->
 		        <input type="text" class="input-xlarge" ng-model="email" placeholder="E-mail" required="required" />
 		        <input type="password" class="input-xlarge" ng-model="password" placeholder="Senha" required="required" />
 		        <input type="submit" class="btn btn-large btn-primary" value="Log in" />
 		        <input type="reset" class="btn btn-large" value="Cancelar" />
+				
+				<div class="loading-image">
+		        	<img src="image/icon/loading.gif" ng-hide="{{loading}}">
+		        </div>
 		    </form>
 	    </section>
 
@@ -42,7 +53,8 @@
 
     <!-- Angular JS Lib -->
 	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
-
+	
+	<script type="text/javascript" src="js/models/Person.js"></script>
 	<!-- Controller -->
 	<script type="text/javascript" src="js/controllers/LoginController.js"></script>
 </body>
