@@ -55,9 +55,8 @@ public class SessionDAO {
 		WebResource resource = FactoryDAO.GetInstance();
 		
 		String query = null;
-		query = "{\"query\":\" MATCH (person:Person {email: '" + person.getEmail() + "', " + 
-				"password: '" + person.getPassword() + "'})" +
-				" RETURN person.name, person.email; \"}";
+		query = "{\"query\":\" MATCH (person:Person {email: '" + person.getEmail() + "'})" +
+				" RETURN person.name, person.email, person.typeOfPerson, person.typeOfAccount; \"}";
 		System.out.println(query);
 		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
 		

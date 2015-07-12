@@ -13,7 +13,7 @@
 </head>
 <body>
 
-	<div class="navbar navbar-fixed-top">
+	<div class="navbar navbar-fixed-top" ng-controller="MenuBarController">
 		<div class="navbar-inner">
 
 			<a class="brand" href="home.html">Início</a>
@@ -86,14 +86,14 @@
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 						<img class="img-circle user-profile-photo" src="image/user-profile.png" alt="Profile Photo" />
-						First name
+						{{name}}
 				        <b class="caret"></b>
 				    </a>
 					<ul class="dropdown-menu">
 						<li>
 					    	<a href="#">Configurações</a>
 					     	<a href="#">Alterar Senha</a>
-					     	<a href="#">Sair</a>
+					     	<a href="#" ng-click="logout()">Sair</a>
 						</li>
 					</ul>
 				</li>
@@ -101,9 +101,35 @@
 			</ul>
 	   	</div>
 	</div>
+
+	<!-- Content-->
+
+	<!-- Últimas contratações (avaliações realizadas por ele à prestadores de serviços) para usuários do tipo "contratantes" -->
+	<div id="ultimas-contratacoes">
+		
+	</div>
+
+	<!-- Possíveis parceiros, estilo o que o facebook faz com os prováveis amigos que vc conheça para usuários do tipo "contratantes" -->
+	<div id="possiveis-parceiros">
+		
+	</div>
+
+
+	<!-- Para ambos os tipos de usuários -->
+	<div id="relatorios">
+		
+	</div>
+
 	
+	<!-- Libs JQuery and bootstrap for dorp down menu -->
 	<script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+	
+	<!-- Angular libs -->
+	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+	
+	<!-- Controller -->
+	<script type="text/javascript" src="js/controllers/MenuBarController.js"></script>
 
 </body>
 </html>

@@ -15,7 +15,7 @@ TCCApp.controller('LoginController', function($scope, LoginService) {
 	//UF Fields
 	$scope.email = '';
 	$scope.password = '';
-	$scope.loading = true;
+	$scope.loading = false;
 	$scope.msg = {}; /* Error or success mesage */
 	$scope.msg.type = '';
 	$scope.msg.msg = '';
@@ -23,7 +23,7 @@ TCCApp.controller('LoginController', function($scope, LoginService) {
 	$scope.login = function() {
 
 		/* show loading image But it is not Work. It seems it wait for the finish */
-		$scope.loading = $scope.hideLoadingImage(false);
+		$scope.loading = true;
 		
 		var person = new Person();
 		person.setEmail($scope.email);
@@ -33,7 +33,7 @@ TCCApp.controller('LoginController', function($scope, LoginService) {
 			if (!callback.success) {
 				$scope.msg.type = 'ERROR';
 				$scope.msg.msg = callback.mesage;
-				$scope.loading = $scope.hideLoadingImage(true);
+				$scope.loading = false;
 			} else {
 				$scope.msg.type = 'SUCCESS';
 				$scope.msg.type = callback.mesage;
@@ -41,10 +41,5 @@ TCCApp.controller('LoginController', function($scope, LoginService) {
 				window.location.href = 'home.html';
 			}
 		});	
-	};
-
-	$scope.hideLoadingImage = function(hide) {
-		$scope.loading = hide;
-		return;
 	};
 });
