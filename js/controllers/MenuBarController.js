@@ -1,7 +1,7 @@
 //App
-var TCCApp = angular.module('TCCApp', []);
+//var TCCApp = angular.module('TCCApp', []); //Usando Rotas, portanto não há mais a necessidade desta declaração
 
-TCCApp.service('MenuBarService', function($http){
+app.service('MenuBarService', function($http){
 	
 	this.getUserInfoFromSession = function(callback) {
 		var token = window.localStorage['token'];
@@ -11,7 +11,7 @@ TCCApp.service('MenuBarService', function($http){
 });
 
 
-TCCApp.controller('MenuBarController', function($scope, MenuBarService) {
+app.controller('MenuBarController', function($scope, MenuBarService) {
 
 	$scope.name = '';
 	$scope.typeOfAccount = '';
@@ -37,11 +37,13 @@ TCCApp.controller('MenuBarController', function($scope, MenuBarService) {
 				//$scope.email = callback.data[0][1]; //email (It works)
 				//$scope.typeOfPerson = callback.data[0][2]; //typeOfPerson (It works)
 				$scope.typeOfAccount = callback.data[0][3]; //typeOfAccount
+				window.sessionStorage.setItem('typeOfAccount', $scope.typeOfAccount);
 			}
 		});
 	};
 
 	$scope.logout = function() {
+		window.localStorage['typeOfAccount'] = null;
 		window.localStorage['token'] = null;
 		window.location.href = "index.html";	
 	};

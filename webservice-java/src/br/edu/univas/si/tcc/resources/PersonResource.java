@@ -1,13 +1,8 @@
 package br.edu.univas.si.tcc.resources;
 
-import java.io.InputStream;
-
-import javax.ws.rs.Consumes;
-import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
@@ -22,8 +17,6 @@ import br.edu.univas.si.tcc.model.Person;
 import br.edu.univas.si.tcc.model.Token;
 import br.edu.univas.si.tcc.model.UF;
 import br.edu.univas.si.tcc.util.Base64Util;
-
-import com.sun.jersey.core.header.FormDataContentDisposition;
 
 @Path("/person")
 public class PersonResource {
