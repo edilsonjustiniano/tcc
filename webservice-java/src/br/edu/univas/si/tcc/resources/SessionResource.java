@@ -15,6 +15,7 @@ import br.edu.univas.si.tcc.model.Token;
 import br.edu.univas.si.tcc.util.Base64Util;
 import br.edu.univas.si.tcc.util.MD5Util;
 
+//http:localhost:8080/WebService/session/login
 @Path("/session")
 public class SessionResource {
 
@@ -44,7 +45,7 @@ public class SessionResource {
 				response.put("success", false);
 				response.put("mesage", "Usuário e/ou senha inválido(s)!");
 				
-				return response.toString();
+				return response.toString(); //{success: false, mesage: 'Usuário e/ou senha inválido(s)'}
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}

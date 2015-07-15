@@ -45,7 +45,7 @@ public class PartnerResource {
 		/*
 		 * First we need define how it will be defined the order of precedency
 		 * e.g. First the person that works with you, in the same company,
-		 * second person whose lives in the same city of you, but ordered according 
+		 * second person who lives in the same city of you, but ordered according 
 		 * to the quantity of the common friends between you and her.
 		 * Third person whose its work is in the same city of you work according
 		 * to the quantity of the common partners between you and her.
