@@ -1,0 +1,16 @@
+<!-- Content-->
+
+	<!-- Últimas contratações (avaliações realizadas por ele à prestadores de serviços) para usuários do tipo "contratantes" -->
+
+	<div id="partner-request" ng-show="typeOfAccount == 'CONTRACTOR'">
+		<h1>Seus Parceiros</h1>
+		
+		<div ng-repeat="iter in possiblePartners | orderBy: 'name'">
+			<div class="user-found">
+				<img class="img-circle" src="image/user-profile.png" alt="Profile Photo" />
+				<p>{{iter.name}}</p>
+				<button class="btn btn-primary">+ parceiro</button>
+			</div>
+		</div>
+		
+	</div>

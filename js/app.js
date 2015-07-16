@@ -7,10 +7,10 @@ app.config(function($routeProvider) {
 		templateUrl: "views/home.html"
 	});
 
-	// $routeProvider.when("/addService", {
-	// 	controller : "AddServiceController",
-	// 	templateUrl: "views/addService.html"
-	// });
+	$routeProvider.when("/partner-network", {
+		controller : "PartnerNetworkController",
+		templateUrl: "views/partner-network.html"
+	});
 
 	$routeProvider.otherwise( {redirectTo: "/home"});
 

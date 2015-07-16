@@ -16,7 +16,7 @@
 	<div class="navbar navbar-fixed-top" ng-controller="MenuBarController">
 		<div class="navbar-inner">
 
-			<a class="brand" href="home.html">Início</a>
+			<a class="brand" href="#/home">Início</a>
 
 			<ul class="nav pull-right">
 				
@@ -31,11 +31,16 @@
 				<li ng-show="typeOfAccount == 'SERVICE_PROVIDER'">
 		    		<a href="add-service.html">Serviços</a>
 		    	</li>
+				
+				<!-- Partner network -->
+				<li ng-show="typeOfAccount == 'CONTRACTOR'">
+		    		<a href="#/partner-network">Rede de Parceiros</a>
+		    	</li>
 
 				<!-- Partners -->
 				<li class="dropdown" ng-show="typeOfAccount == 'CONTRACTOR'">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="">
-						Parcerias
+						Novas Parcerias
 				        <b class="caret"></b>
 				    </a>
 					<ul class="dropdown-menu">
@@ -138,6 +143,8 @@
 	<!-- Controllers -->	
 	<script type="text/javascript" src="js/controllers/MenuBarController.js"></script>
 	<script type="text/javascript" src="js/controllers/HomeController.js"></script> 
+	<script type="text/javascript" src="js/controllers/PartnerNetworkController.js"></script>
+	
 	<!-- 
 	<script type="text/javascript" src="js/controllers/AddServiceController.js"></script> -->
 </body>
