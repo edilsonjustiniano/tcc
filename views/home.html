@@ -3,13 +3,28 @@
 	<!-- Últimas contratações (avaliações realizadas por ele à prestadores de serviços) para usuários do tipo "contratantes" -->
 
 	<div id="ultimas-contratacoes" ng-show="typeOfAccount == 'CONTRACTOR'">
-		ultimas contratações
-		{{name}}
+		<h1>Últimas contratações</h1>
+
+		
 	</div>
 
 	<!-- Possíveis parceiros, estilo o que o facebook faz com os prováveis amigos que vc conheça para usuários do tipo "contratantes" -->
 	<div id="possiveis-parceiros" ng-show="typeOfAccount == 'CONTRACTOR'">
-		possíveis parceiros
+		<h1>Possíveis parceiros</h1>
+
+		<!-- Msg error -->
+		<div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
+
+		<!-- Msg success -->
+		<div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
+
+		<div ng-repeat="iter in possiblePartners | orderBy: 'name'">
+			<div class="user-found">
+				<img class="img-circle" src="image/user-profile.png" alt="Profile Photo" />
+				<p>{{iter.name}}</p>
+				<button class="btn btn-primary" ng-click="addPartner(iter)">+ parceiro</button>
+			</div>
+		</div>
 	</div>
 
 
