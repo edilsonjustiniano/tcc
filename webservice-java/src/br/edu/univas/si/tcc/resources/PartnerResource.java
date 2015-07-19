@@ -104,6 +104,9 @@ public class PartnerResource {
 		
 		return response.toString();
 	}
+	
+	
+	
 	@Path("/addPartner")
 	@POST
 	@Produces("application/json")

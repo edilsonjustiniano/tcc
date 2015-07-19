@@ -123,4 +123,29 @@ public class PersonDAO {
 		
 		return objectCreate;
 	}
+
+
+	/**
+	 * Used to get all data of person to show the profile data
+	 * @param partnerEmail
+	 * @return
+	 */
+	public String getPersonData(String partnerEmail) {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+		
+		String query = null;
+		query = "{\"query\":\" MATCH (partner:Person {email: '" + partnerEmail + "'}), (city:City), " +
+							"(company:Company), " +
+							"(partner)-[:LIVES_IN]->(city), " +
+							"(partner)-[:WORKS_IN]->(company) " +
+							"RETURN DISTINCT(partner.name), partner.email, city.name, company.name; \"}";
+		System.out.println(query);
+		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+												.type(MediaType.APPLICATION_JSON).entity(query)
+												.post(ClientResponse.class);
+		String objectCreate = responseCreate.getEntity(String.class);
+		
+		return objectCreate;
+	}
 }

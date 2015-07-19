@@ -126,7 +126,7 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 						if (callback.success) {
 							array = callback.data;
 							array.forEach(function(iter){
-								
+
 								if (!PartnerNetworkService.isDuplicatadedPartner(iter[0], iter[1], $scope.possibleNewPartners) ) {
 									$scope.possibleNewPartners.push({name: iter[0], email: iter[1]});
 								}
@@ -144,6 +144,7 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 			}
 		});
 	};
+	
 	/* Add partner */
 	$scope.addPartner = function (partner) {
 		if (partner == null) {
@@ -167,7 +168,26 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 				$scope.partners = [];
 				$scope.getAllPartners(); //Reload the list of yours partners
 			}
-		});
-		
+		});	
+	};
+
+	/* Open Partner Profile */
+	$scope.openPartnerProfile = function(partner) {
+		if (partner == null) {
+			return;
+		}
+
+		// Encode the String
+		var encodedString = btoa(partner.email + "|" + partner.name);
+		console.log(encodedString);
+
+		// Decode the String
+		var decodedString = atob(encodedString);
+		console.log(decodedString);
+
+
+		window.location.href = "home.html#/partner-profile/" + encodedString;
+		// $location.path("#/partner-profile/"+partner.email);
+
 	};
 });

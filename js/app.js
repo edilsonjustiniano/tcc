@@ -12,6 +12,11 @@ app.config(function($routeProvider) {
 		templateUrl: "views/partner-network.html"
 	});
 
+	$routeProvider.when("/partner-profile/:partner?", {
+		controller : "PartnerProfileController",
+		templateUrl: "views/partner-profile.html"
+	});
+
 	$routeProvider.otherwise( {redirectTo: "/home"});
 
 });

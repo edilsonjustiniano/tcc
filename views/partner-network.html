@@ -30,7 +30,7 @@
 			<input type="text" ng-model="filtro" placeholder="Filtrar pelo nome do paceiro(a)">
 			
 			<div ng-repeat="iter in partners | orderBy: 'name' | filter:filtro">
-				<div class="network-partner">
+				<div class="network-partner" ng-click="openPartnerProfile(iter)">
 					<img class="img-circle" src="image/user-profile.png" alt="Profile Photo" />
 					<p>{{iter.name}}</p>
 				</div>
