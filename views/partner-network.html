@@ -3,14 +3,37 @@
 	<!-- Últimas contratações (avaliações realizadas por ele à prestadores de serviços) para usuários do tipo "contratantes" -->
 
 	<div id="partner-request" ng-show="typeOfAccount == 'CONTRACTOR'">
-		<h1>Seus Parceiros</h1>
 		
-		<div ng-repeat="iter in possiblePartners | orderBy: 'name'">
-			<div class="user-found">
-				<img class="img-circle" src="image/user-profile.png" alt="Profile Photo" />
-				<p>{{iter.name}}</p>
-				<button class="btn btn-primary">+ parceiro</button>
+		<!-- Msg error -->
+		<div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
+
+		<!-- Msg success -->
+		<div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
+
+		<section id="add-partner">
+			<h1>Adicionar Parceiros</h1>
+			<input class="span6" type="text" ng-model="newPartner" ng-change="searchNewPartners()" placeholder="Informe o nome do(a) novo(a) paceiro(a)">
+
+			<div ng-repeat="iter in possibleNewPartners | orderBy: 'name' ">
+				<div class="user-found">
+					<img class="img-circle" src="image/user-profile.png" alt="Profile Photo" />
+					<p>{{iter.name}}</p>
+					<button class="btn btn-primary" ng-click="addPartner(iter)">+ parceiro</button>
+				</div>
 			</div>
-		</div>
-		
+		</section>
+
+
+		<section id="list-partners">
+			<h1>Seus Parceiros</h1>
+
+			<input type="text" ng-model="filtro" placeholder="Filtrar pelo nome do paceiro(a)">
+			
+			<div ng-repeat="iter in partners | orderBy: 'name' | filter:filtro">
+				<div class="network-partner">
+					<img class="img-circle" src="image/user-profile.png" alt="Profile Photo" />
+					<p>{{iter.name}}</p>
+				</div>
+			</div>
+		</section>
 	</div>

@@ -122,6 +122,7 @@ label.subtitle {
 }
 
 .user-found {
+	margin-top: 10px;
 	margin-left: 30px;
 	width: 130px;
 	height: 200px;
@@ -132,6 +133,7 @@ label.subtitle {
 
 .user-found:hover {
 	opacity: .4;
+	cursor: pointer;
 }
 
 .user-found img {
@@ -165,4 +167,45 @@ label.subtitle {
 	margin-left: 50px;
 	width: 20px;
 	height: 20px;
+}
+
+/* Network partner page */
+.network-partner {
+	margin-top: 10px;
+	margin-left: 30px;
+	width: 130px;
+	height: 160px;
+	float: left;
+	background-color: #CCCCCC;
+	border-radius: 8px;
+}
+
+.network-partner:hover {
+	opacity: .4;
+	cursor: pointer;
+}
+
+.network-partner img {
+	padding: 20px;
+	width: 90px;
+	height: 90px;
+	display: block;
+}
+
+.network-partner p {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: -10px;
+	text-align: center;
+	font-size: 15px;
+}
+
+#add-partner {
+	display: block;
+	height: auto;
+}
+
+#list-partners {
+	display: block;
+	height: auto;
 }

@@ -58,6 +58,8 @@ app.controller('HomeController', function ($scope, HomeService) {
 		}
 		HomeService.getPossiblePartners(function(callback) {
 			if (callback.success) { /* Ivalid session or expired session */
+				if (callback.data == undefined) 
+					return;
 				var array = callback.data;
 				array.forEach(function(iter){
 					$scope.possiblePartners.push({name: iter[0], email: iter[1]});

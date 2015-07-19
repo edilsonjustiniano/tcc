@@ -46,7 +46,7 @@
 					<ul class="dropdown-menu">
 						<li ng-repeat="partner in partnerRequests | orderBy: 'date' ">
 							<div class="partner-request-received">
-								<a href="#">{{partner.requestFromName}}</a>
+								<a href="">{{partner.requestFromName}}</a>
 								<span class="options-accept-or-not">
 									<a href="" ng-click="acceptPartnerRequest(partner)">
 										<img src="image/icon/ok-icon.png" class="img-circle icon-accept" alt="Ok" />
@@ -57,20 +57,19 @@
 									</a>
 								</span>
 							</div>
-					    	<a href="#">{{partner.name}}</a>
 						</li>
 					</ul>
 				</li>
 
 				<!-- Mesages -->
 				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="">
 						Mensagens
 				        <b class="caret"></b>
 				    </a>
 					<ul class="dropdown-menu">
 						<li ng-repeat="msg in mesages | orderBy: 'date' ">
-					    	<a href="#">{{msg.title}}</a>
+					    	<a href="">{{msg.title}}</a>
 						</li>
 
 						<li>
@@ -120,13 +119,6 @@
 		
 	</div>
  -->
-
- 	<div>
- 		<a href="#/home">Home</a>
- 		<a href="#/addService">Add Service</a>
- 		<a href="#/index">Index</a>
- 	</div>
-
  	<div ng-view=""></div>
 	
 	<!-- Libs JQuery and bootstrap for dorp down menu -->

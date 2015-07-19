@@ -30,10 +30,44 @@ public class PartnerDAO {
 							"address: '" + person.getAddress() + "'} " +
 							"RETURN person.name, person.email; \"}";
 		*/
-		query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), (users:Person), " +
-				"(users)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me) " +
-				"WHERE users <> me AND (NOT( (me-[:PARTNER_OF]->users) OR (users-[:PARTNER_OF]->me)))" + 
-				"RETURN DISTINCT(users.name), users.email, company.name, 1 as length; \"}";
+//		OLD QUERY, BUT WORKING TOO
+//		query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), (users:Person), " +
+//				"(users)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me) " +
+//				"WHERE users <> me AND (NOT( (me-[:PARTNER_OF]->users) OR (users-[:PARTNER_OF]->me))) " + 
+//				"RETURN DISTINCT(users.name), users.email, company.name, 1 as length; \"}";
+		
+		//NEW
+		query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
+							"(users:Person {typeOfAccount: 'CONTRACTOR'}), " +
+							"(users)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me) " +
+							"WHERE users <> me AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " + 
+							"OPTIONAL MATCH " +
+							"pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
+							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
+							"RETURN DISTINCT(users.name), users.email, 1 as length, " +
+							"count(DISTINCT pMutualFriends) AS mutualFriends " +
+							"ORDER BY length, mutualFriends DESC " +
+							"UNION ALL " +
+//							"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
+//							"(users:Person {typeOfAccount: 'CONTRACTOR'}), " +
+//							"(users)-[:LIVES_IN]-(city)<-[:LIVES_IN]-(me) " +
+//							"WHERE NOT((users)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
+//							"OPTIONAL MATCH " +
+//							"pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
+//							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
+//							"RETURN DISTINCT(users.name), users.email, 2 as length, " +
+//							"count(DISTINCT pMutualFriends) AS mutualFriends " +
+//							"ORDER BY length, mutualFriends DESC \"}";
+							"MATCH (me:Person {email: '" + person.getEmail() + "'}), " + 
+							"(users:Person {typeOfAccount: 'CONTRACTOR'}), " +
+							"(users)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me) " +
+							"WHERE NOT((users)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
+							"AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " +
+							"OPTIONAL MATCH pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
+							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users), " +
+							"RETURN DISTINCT(users.name), users.email, 2 as length, " +
+							"count(DISTINCT pMutualFriends) AS mutualFriends " +
+							"ORDER BY length, mutualFriends DESC \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
@@ -71,6 +105,23 @@ public class PartnerDAO {
 				"(partner:Person), " +
 				"(partner)-[:PARTNER_OF]->(me)" +
 				"WHERE partner <> me AND NOT((me)-[:PARTNER_OF]->(partner)) " +
+				"RETURN partner.name, partner.email; \"}";
+		System.out.println(query);
+		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+												.type(MediaType.APPLICATION_JSON).entity(query)
+												.post(ClientResponse.class);
+		String objectCreate = responseCreate.getEntity(String.class);
+		
+		return objectCreate;
+	}
+	
+	public String getAllPartners(int limit, int offset, Person person) {
+		WebResource resource = FactoryDAO.GetInstance();
+		
+		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
+				"(partner:Person), " +
+				"(partner)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partner)" +
+				"WHERE partner <> me " +
 				"RETURN partner.name, partner.email; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
@@ -120,4 +171,69 @@ public class PartnerDAO {
 		return objectCreate;
 
 	}
+
+
+
+	public String searchNewPartners(Person person, String partner) {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+		
+		String query = null;
+		
+		query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
+							"(users:Person {typeOfAccount: 'CONTRACTOR'}), " +
+							"(users)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me) " +
+							"WHERE users.name =~ '" + partner + ".*' AND users <> me AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " + 
+							"OPTIONAL MATCH " +
+							"pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
+							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
+							"RETURN DISTINCT(users.name), users.email, 1 as length, " +
+							"count(DISTINCT pMutualFriends) AS mutualFriends " +
+							"ORDER BY length, mutualFriends DESC " +
+							"UNION ALL " +
+							"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
+							"(users:Person {typeOfAccount: 'CONTRACTOR'}), " +
+							"(users)-[:LIVES_IN]-(city)<-[:LIVES_IN]-(me) " +
+							"WHERE users.name =~ '" + partner + ".*' AND NOT((users)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
+							"AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " +
+							"OPTIONAL MATCH " +
+							"pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
+							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
+							"RETURN DISTINCT(users.name), users.email, 2 as length, " +
+							"count(DISTINCT pMutualFriends) AS mutualFriends " +
+							"ORDER BY length, mutualFriends DESC \"}";
+		System.out.println(query);
+		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+												.type(MediaType.APPLICATION_JSON).entity(query)
+												.post(ClientResponse.class);
+		String objectCreate = responseCreate.getEntity(String.class);
+		
+		return objectCreate;
+	}
+
+
+
+	public String searchNewPartnersOnlyByName(Person person, String partner) {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+		
+		String query = null;
+		
+		query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
+							"(users:Person {typeOfAccount: 'CONTRACTOR'}), " +
+							"(users)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me) " +
+							"WHERE users.name =~ '" + partner + ".*' AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " + 
+							"AND users <> me " +
+							"RETURN DISTINCT(users.name), users.email, 3 as length " +
+							"ORDER BY users.name ASC; \"}";
+		System.out.println(query);
+		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+												.type(MediaType.APPLICATION_JSON).entity(query)
+												.post(ClientResponse.class);
+		String objectCreate = responseCreate.getEntity(String.class);
+		
+		return objectCreate;
+
+	}
+
 }
