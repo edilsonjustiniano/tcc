@@ -64,7 +64,7 @@ public class PartnerDAO {
 							"WHERE NOT((users)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
 							"AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " +
 							"OPTIONAL MATCH pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
-							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users), " +
+							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
 							"RETURN DISTINCT(users.name), users.email, 2 as length, " +
 							"count(DISTINCT pMutualFriends) AS mutualFriends " +
 							"ORDER BY length, mutualFriends DESC \"}";

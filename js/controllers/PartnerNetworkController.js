@@ -29,6 +29,15 @@ app.service('PartnerNetworkService', function($http){
 		$http.post('http://localhost:8080/WebService/partner/addPartner', {partner: partner.email, token: token}).
 		success(callback);
 	};
+
+	this.isDuplicatadedPartner = function (name, email, allPartners) {
+		for (var i = 0; i < allPartners.length; i++) {
+			if (allPartners[i].name == name && allPartners[i].email == email) {
+				return true;
+			}
+		};
+		return false;
+	};
 });
 
 app.controller('PartnerNetworkController', function ($scope, PartnerNetworkService) {
@@ -117,7 +126,11 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 						if (callback.success) {
 							array = callback.data;
 							array.forEach(function(iter){
-								$scope.possibleNewPartners.push({name: iter[0], email: iter[1]});
+								
+								if (!PartnerNetworkService.isDuplicatadedPartner(iter[0], iter[1], $scope.possibleNewPartners) ) {
+									$scope.possibleNewPartners.push({name: iter[0], email: iter[1]});
+								}
+								
 							});
 						}
 					});
