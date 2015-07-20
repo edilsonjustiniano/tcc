@@ -15,7 +15,7 @@
 			<input class="span6" type="text" ng-model="newPartner" ng-change="searchNewPartners()" placeholder="Informe o nome do(a) novo(a) paceiro(a)">
 
 			<div ng-repeat="iter in possibleNewPartners | orderBy: 'name' ">
-				<div class="user-found">
+				<div class="user-found" ng-click="openPartnerProfile(iter)">
 					<img class="img-circle" src="image/user-profile.png" alt="Profile Photo" />
 					<p>{{iter.name}}</p>
 					<button class="btn btn-primary" ng-click="addPartner(iter)">+ parceiro</button>

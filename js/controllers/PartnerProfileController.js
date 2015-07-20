@@ -5,6 +5,12 @@ app.service('PartnerProfileService', function($http){
 		$http.post('http://localhost:8080/WebService/person/getPersonData', {partner: partnerEmail, token: token}).
 		success(callback);
 	};
+
+	this.isMyPartner = function(partnerEmail, callback) {
+		var token = window.localStorage['token'];
+		$http.post('http://localhost:8080/WebService/partner/isMyPartner', {partner: partnerEmail, token: token}).
+		success(callback);
+	};
 });
 
 app.controller('PartnerProfileController', function($scope, $routeParams, PartnerProfileService) {
@@ -15,7 +21,10 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 	
 	var data = decodedPartnerData.split("|");
 
-	$scope.partner = data[0];
+	$scope.partner = {};
+	$scope.partner.email = data[0]; //email
+	$scope.partner.name = data[1]; //name
+	$scope.isMyPartner = false;
 
 	$scope.getPartnerData = function() {
 
@@ -28,8 +37,22 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 				
 			}
 		});
-
 	};
 
 	$scope.getPartnerData();
+
+	$scope.isMyPartner = function() {
+
+		PartnerProfileService.isMyPartner($scope.partner.email, function(callback){
+			if (!callback.success) { /* Invalid Session or Expired */
+				window.localStorage['token'] = null;
+				window.sessionStorage.setItem('typeOfAccount', null);
+				window.location.href = 'index.html';
+			} else {
+				$scope.isMyPartner = callback.isMyPartner;
+			}
+		});
+	};
+
+	$scope.isMyPartner();
 });

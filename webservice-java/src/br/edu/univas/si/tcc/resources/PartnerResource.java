@@ -490,5 +490,83 @@ public class PartnerResource {
 		
 		return response.toString();
 	}
+	
+	
+	
+	@Path("/isMyPartner")
+	@POST
+	@Produces("application/json")
+	public String isMyPartner(String json) {
+		
+		System.out.println(json);
+		JSONObject response = null;
+		JSONObject jsonObj = null;
+		Token tokenDecoded = null;
+		Person person = new Person();
+		String partner = null;
+		byte[] token = null;
+		
+		try {
+			jsonObj = new JSONObject(json);
+			token = jsonObj.getString("token").getBytes();
+			partner = jsonObj.getString("partner");
+		} catch (JSONException e1) {
+			e1.printStackTrace();
+		}
+		
+		tokenDecoded = Base64Util.decodeToken(token);
+		person.setEmail(tokenDecoded.getEmail());
+		person.setPassword(MD5Util.generateMD5(tokenDecoded.getPassword()));
+		
+		/* Check if session is valid */
+		TokenDAO tokenDao = new TokenDAO();
+		
+		if (!tokenDao.isValidSession(tokenDecoded)) {
+			response = new JSONObject();
+			try {
+				response.put("success", false);
+				response.put("mesage", "Sessão inválida!");
+				response.put("sessionExpired", false);
+				
+				return response.toString();
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		/* Check if token is expired */
+		TokenController controller = new TokenController();
+		if (controller.isExpiredSession(tokenDecoded)) {
+			try {
+				response = new JSONObject();
+				response.put("success", false);
+				response.put("mesage", "Sessão expirada, por favor realize o login novamente!");
+				response.put("sessionExpired", true);
+				return response.toString();
+			} catch (JSONException e1) {
+				e1.printStackTrace();
+			}
+		}
+
+		if (dao.isMyPartner(person, partner)) {
+			try {
+				response = new JSONObject();
+				response.put("success", true);
+				response.put("isMyPartner", true);
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+		} else {
+			try {
+				response = new JSONObject();
+				response.put("success", true);
+				response.put("isMyPartner", false);
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return response.toString();
+	}
 
 }

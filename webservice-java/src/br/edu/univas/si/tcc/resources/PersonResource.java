@@ -254,7 +254,8 @@ public class PersonResource {
 		try {
 			jsonObj = new JSONObject(json);
 			token = jsonObj.getString("token").getBytes();
-			partnerEmail = jsonObj.getString("partner");
+			JSONObject partner = new JSONObject(jsonObj.getString("partner"));
+			partnerEmail = partner.getString("email");
 		} catch (JSONException e1) {
 			e1.printStackTrace();
 		}

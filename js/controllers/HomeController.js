@@ -97,4 +97,24 @@ app.controller('HomeController', function ($scope, HomeService) {
 		});
 		
 	};
+
+	/* Open Partner Profile */
+	$scope.openPartnerProfile = function(partner) {
+		if (partner == null) {
+			return;
+		}
+
+		// Encode the String
+		var encodedString = btoa(partner.email + "|" + partner.name);
+		console.log(encodedString);
+
+		// Decode the String
+		var decodedString = atob(encodedString);
+		console.log(decodedString);
+
+
+		window.location.href = "home.html#/partner-profile/" + encodedString;
+		// $location.path("#/partner-profile/"+partner.email);
+
+	};
 });
