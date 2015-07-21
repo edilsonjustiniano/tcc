@@ -100,6 +100,36 @@ public class PartnerDAO {
 	}
 
 
+	
+	public String cancelPartner(Person me, String partnerEmail) {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+		
+		String query = "{\"query\":\" MATCH (me:Person {email: '" + me.getEmail() + "'}), " +
+				"(partner:Person {email: '" + partnerEmail +  "'}), " +
+				"(partner)-[rel:PARTNER_OF]->(me) " +
+				"DELETE rel " +
+				"RETURN me.name, me.email, partner.name, partner.email; \"}";
+		System.out.println(query);
+		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+												.type(MediaType.APPLICATION_JSON).entity(query)
+												.post(ClientResponse.class);
+		String objectCreate = responseCreate.getEntity(String.class);
+		
+		
+		query = "{\"query\":\" MATCH (me:Person {email: '" + me.getEmail() + "'}), " +
+				"(partner:Person {email: '" + partnerEmail +  "'}), " +
+				"(me)-[rel:PARTNER_OF]->(partner) " +
+				"DELETE rel " +
+				"RETURN me.name, me.email, partner.name, partner.email; \"}";
+		System.out.println(query);
+		responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+												.type(MediaType.APPLICATION_JSON).entity(query)
+												.post(ClientResponse.class);
+		objectCreate = responseCreate.getEntity(String.class);
+		return objectCreate;
+	}
+
 
 	public String getAllRequestPartner(Person person) {
 		WebResource resource = FactoryDAO.GetInstance();

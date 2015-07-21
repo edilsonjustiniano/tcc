@@ -185,8 +185,13 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 		var decodedString = atob(encodedString);
 		console.log(decodedString);
 
+		var slash = encodedString.indexOf("/");
+		
+		if (slash > -1) {
+			encodedString = encodedString.substr(0, slash) + '__' + encodedString.substr(slash + 1);
+		}
 
-		window.location.href = "home.html#/partner-profile/" + encodedString;
+		window.location.href = "#/partner-profile/" + encodedString;
 		// $location.path("#/partner-profile/"+partner.email);
 
 	};

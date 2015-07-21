@@ -179,6 +179,78 @@ public class PartnerResource {
 	}
 
 	
+	@Path("/cancelPartner")
+	@POST
+	@Produces("application/json")
+	public String cancelPartner(String json) {
+		
+		System.out.println(json);
+		JSONObject response = null;
+		JSONObject jsonObj = null;
+		Token tokenDecoded = null;
+		Person person = new Person();
+		String partnerEmail = null;
+		
+		byte[] token = null;
+		
+		try {
+			jsonObj = new JSONObject(json);
+			token = jsonObj.getString("token").getBytes();
+			partnerEmail = jsonObj.getString("partner");
+		} catch (JSONException e1) {
+			e1.printStackTrace();
+		}
+		
+		tokenDecoded = Base64Util.decodeToken(token);
+		person.setEmail(tokenDecoded.getEmail());
+		person.setPassword(MD5Util.generateMD5(tokenDecoded.getPassword()));
+		
+		/* Check if session is valid */
+		TokenDAO tokenDao = new TokenDAO();
+		
+		if (!tokenDao.isValidSession(tokenDecoded)) {
+			response = new JSONObject();
+			try {
+				response.put("success", false);
+				response.put("mesage", "Sessão inválida!");
+				response.put("sessionExpired", false);
+				
+				return response.toString();
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		/* Check if token is expired */
+		TokenController controller = new TokenController();
+		if (controller.isExpiredSession(tokenDecoded)) {
+			try {
+				response = new JSONObject();
+				response.put("success", false);
+				response.put("mesage", "Sessão expirada, por favor realize o login novamente!");
+				response.put("sessionExpired", true);
+				return response.toString();
+			} catch (JSONException e1) {
+				e1.printStackTrace();
+			}
+		}
+
+		String result = dao.cancelPartner(person, partnerEmail);
+		
+		try {
+			response = new JSONObject(result);
+			response.put("success", true);
+			response.put("mesage", "Parceria cancelada com sucesso!");
+			token = Base64Util.encodeToken(tokenDecoded.getEmail(), tokenDecoded.getPassword());
+			response.put("token", new String(token));
+		} catch (JSONException e1) {
+			e1.printStackTrace();
+		}
+		
+		return response.toString();
+	}
+
+	
 	@Path("/getAllPartnerRequest")
 	@POST
 	@Produces("application/json")

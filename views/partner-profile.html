@@ -7,7 +7,14 @@
 </div>
 
 <div id="profile-content">
-	<button class="btn" ng-show="{{isMyPartner}}" ng-click="addPartner(iter)">Adicionar Parceiro</button>
-	<button class="btn" ng-hide="{{isMyPartner}}" ng-click="cancelPartner(iter)">Cancelar Parceria</button>
+
+	<!-- Msg error -->
+	<div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
+
+	<!-- Msg success -->
+	<div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
+
+	<button class="btn" ng-hide="myPartner" ng-click="addPartner()">Adicionar Parceiro</button>
+	<button class="btn" ng-show="myPartner" ng-click="cancelPartner()">Cancelar Parceria</button>
 
 </div>
