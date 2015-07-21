@@ -11,15 +11,9 @@ app.service('HomeService', function($http){
 		$http.post('http://localhost:8080/WebService/partner/getPossiblePartners', {token: token}).
 		success(callback);
 	};
-
-	this.addPartner = function(partner, callback) {
-		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/addPartner', {partner: partner.email, token: token}).
-		success(callback);
-	}
 });
 
-app.controller('HomeController', function ($scope, HomeService) {
+app.controller('HomeController', function ($scope, HomeService, PartnerService) {
 
 	$scope.typeOfAccount = '';
 	$scope.possiblePartners = [];
@@ -77,7 +71,7 @@ app.controller('HomeController', function ($scope, HomeService) {
 			return;
 		}  
 
-		HomeService.addPartner(partner, function(callback) {
+		PartnerService.addPartner(partner, function(callback) {
 
 			if (!callback.success) { /* Invalid session or expired session */
 
@@ -105,18 +99,18 @@ app.controller('HomeController', function ($scope, HomeService) {
 		}
 
 		// Encode the String
-		var encodedString = btoa(partner.email + "|" + partner.name);
-		console.log(encodedString);
+		var encodedString = PartnerService.encodePartnerEmail(partner); //btoa(partner.email + "|" + partner.name);
+		// console.log(encodedString);
 
-		// Decode the String
-		var decodedString = atob(encodedString);
-		console.log(decodedString);
+		// // Decode the String
+		// var decodedString = atob(encodedString);
+		// console.log(decodedString);
 
-		var slash = encodedString.indexOf("/");
+		// var slash = encodedString.indexOf("/");
 		
-		if (slash > -1) {
-			encodedString = encodedString.substr(0, slash) + '__' + encodedString.substr(slash + 1);
-		}
+		// if (slash > -1) {
+		// 	encodedString = encodedString.substr(0, slash) + '__' + encodedString.substr(slash + 1);
+		// }
 
 		window.location.href = "home.html#/partner-profile/" + encodedString;
 		// $location.path("#/partner-profile/"+partner.email);

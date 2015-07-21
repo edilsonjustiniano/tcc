@@ -11,21 +11,9 @@ app.service('PartnerProfileService', function($http){
 		$http.post('http://localhost:8080/WebService/partner/isMyPartner', {partner: partnerEmail, token: token}).
 		success(callback);
 	};
-
-	this.addPartner = function(partner, callback) {
-		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/addPartner', {partner: partner.email, token: token}).
-		success(callback);
-	};
-
-	this.cancelPartner = function(partner, callback) {
-		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/cancelPartner', {partner: partner.email, token: token}).
-		success(callback);
-	};
 });
 
-app.controller('PartnerProfileController', function($scope, $routeParams, PartnerProfileService) {
+app.controller('PartnerProfileController', function($scope, $routeParams, PartnerProfileService, PartnerService) {
 
 	// Decode the String
 	var doubleUnderscore = $routeParams.partner.indexOf("__");
@@ -82,7 +70,7 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 	/* Add partner */
 	$scope.addPartner = function () {
 		
-		PartnerProfileService.addPartner($scope.partner, function(callback) {
+		PartnerService.addPartner($scope.partner, function(callback) {
 
 			if (!callback.success) { /* Invalid session or expired session */
 
@@ -105,7 +93,7 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 	/* Cancel partner */
 	$scope.cancelPartner = function () {
 		
-		PartnerProfileService.cancelPartner($scope.partner, function(callback) {
+		PartnerService.cancelPartner($scope.partner, function(callback) {
 
 			if (!callback.success) { /* Invalid session or expired session */
 
