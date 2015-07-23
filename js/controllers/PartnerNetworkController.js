@@ -1,35 +1,5 @@
 app.service('PartnerNetworkService', function($http){
 	
-	this.getTypeOfAccount = function(callback) {
-		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/session/getUserInfo', {token: token}).
-		success(callback);
-	};
-
-	this.getAllPartners = function(limit, offset, callback) {
-		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/getAllPartners', {limit: limit, offset: offset, token: token}).
-		success(callback);
-	};
-
-	this.searchNewPartners = function(limit, offset, partnerName, callback) {
-		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/searchNewPartners', {limit: limit, offset: offset, partner: partnerName, token: token}).
-		success(callback);	
-	};
-
-	this.searchNewPartnersOnlyByName = function(partnerName, callback) {
-		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/searchNewPartnersOnlyByName', {partner: partnerName, token: token}).
-		success(callback);
-	};
-	
-	this.addPartner = function(partner, callback) {
-		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/addPartner', {partner: partner.email, token: token}).
-		success(callback);
-	};
-
 	this.isDuplicatadedPartner = function (name, email, allPartners) {
 		for (var i = 0; i < allPartners.length; i++) {
 			if (allPartners[i].name == name && allPartners[i].email == email) {
@@ -40,7 +10,7 @@ app.service('PartnerNetworkService', function($http){
 	};
 });
 
-app.controller('PartnerNetworkController', function ($scope, PartnerNetworkService, PartnerService) {
+app.controller('PartnerNetworkController', function ($scope, PartnerNetworkService, PartnerService, SessionService) {
 
 	$scope.typeOfAccount = '';
 	$scope.partners = [];
@@ -58,7 +28,7 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 	$scope.msg.msg = '';
 
 	$scope.getTypeOfAccount = function() {
-		PartnerNetworkService.getTypeOfAccount(function(callback) {
+		SessionService.getTypeOfAccount(function(callback) {
 			if (!callback.success) { /* Ivalid session or expired session */
 				$scope.msg.type = 'ERROR';
 				$scope.msg.msg = callback.mesage;
@@ -85,7 +55,7 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 		if (window.sessionStorage.getItem('typeOfAccount') == 'SERVICE_PROVIDER') {
 			return;
 		}
-		PartnerNetworkService.getAllPartners($scope.limit, $scope.offset, function(callback) {
+		PartnerService.getAllPartners($scope.limit, $scope.offset, function(callback) {
 			if (callback.success) { /* Ivalid session or expired session */
 				var array = callback.data;
 				array.forEach(function(iter){
@@ -110,7 +80,7 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 		if (window.sessionStorage.getItem('typeOfAccount') == 'SERVICE_PROVIDER') {
 			return;
 		}
-		PartnerNetworkService.searchNewPartners($scope.limit, $scope.offset, $scope.newPartner, function(callback) {
+		PartnerService.searchNewPartners($scope.limit, $scope.offset, $scope.newPartner, function(callback) {
 			
 			if (callback.success) { 
 				$scope.possibleNewPartners = [];
@@ -121,7 +91,7 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 						$scope.possibleNewPartners.push({name: iter[0], email: iter[1]});
 					});
 
-					PartnerNetworkService.searchNewPartnersOnlyByName($scope.newPartner, function(callback) {
+					PartnerService.searchNewPartnersOnlyByName($scope.newPartner, function(callback) {
 
 						if (callback.success) {
 							array = callback.data;
@@ -145,32 +115,7 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 		});
 	};
 	
-	/* Add partner */
-	$scope.addPartner = function (partner) {
-		if (partner == null) {
-			return;
-		}  
-
-		PartnerNetworkService.addPartner(partner, function(callback) {
-
-			if (!callback.success) { /* Invalid session or expired session */
-
-				window.sessionStorage.setItem('typeOfAccount', null);
-				window.localStorage['token'] = null;
-				window.location.href = "index.html";
 	
-			} else {
-
-				$scope.msg.type = 'SUCCESS';
-				$scope.msg.msg = callback.mesage;
-				window.localStorage['token'] = callback.token;
-				$scope.possibleNewPartners = []; //reset the list of possible partners
-				$scope.partners = [];
-				$scope.getAllPartners(); //Reload the list of yours partners
-			}
-		});	
-	};
-
 	/* Open Partner Profile */
 	$scope.openPartnerProfile = function(partner) {
 		if (partner == null) {

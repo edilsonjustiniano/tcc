@@ -3,14 +3,6 @@
 
 app.service('MenuBarService', function($http){
 	
-
-	this.getUserInfoFromSession = function(callback) {
-		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/session/getUserInfo', {token: token}).
-		success(callback);
-	};
-
-
 	this.getAllPartnerRequest = function(callback) {
 		var token = window.localStorage['token'];
 		$http.post('http://localhost:8080/WebService/partner/getAllPartnerRequest', {token: token}).
@@ -31,7 +23,7 @@ app.service('MenuBarService', function($http){
 });
 
 
-app.controller('MenuBarController', function($scope, MenuBarService) {
+app.controller('MenuBarController', function($scope, MenuBarService, SessionService) {
 
 	$scope.name = '';
 	$scope.typeOfAccount = '';
@@ -43,7 +35,7 @@ app.controller('MenuBarController', function($scope, MenuBarService) {
 
 	$scope.getUserInfoFromSession = function() {
 		
-		MenuBarService.getUserInfoFromSession(function (callback) {
+		SessionService.getUserInfoFromSession(function (callback) {
 			if (!callback.success) { /* Ivalid session or expired session */
 				$scope.msg.type = 'ERROR';
 				$scope.msg.msg = callback.mesage;
@@ -64,7 +56,8 @@ app.controller('MenuBarController', function($scope, MenuBarService) {
 	};
 
 	$scope.logout = function() {
-		window.localStorage['typeOfAccount'] = null;
+		sessionStorage.setItem('typeOfAccount', null);
+		//window.localStorage['typeOfAccount'] = null;
 		window.localStorage['token'] = null;
 		window.location.href = "index.html";	
 	};
@@ -85,7 +78,7 @@ app.controller('MenuBarController', function($scope, MenuBarService) {
 
 			if (!callback.success) { /* Invalid session or expired session */
 
-				window.sessionStorage.setItem('typeOfAccount', null);
+				window.sessionStorage.setItem('typeOfAccount', undefined);
 				window.localStorage['token'] = null;
 				window.location.href = "index.html";
 	

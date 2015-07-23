@@ -1,11 +1,5 @@
 app.service('HomeService', function($http){
 	
-	this.getTypeOfAccount = function(callback) {
-		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/session/getUserInfo', {token: token}).
-		success(callback);
-	};
-
 	this.getPossiblePartners = function(callback) {
 		var token = window.localStorage['token'];
 		$http.post('http://localhost:8080/WebService/partner/getPossiblePartners', {token: token}).
@@ -13,7 +7,7 @@ app.service('HomeService', function($http){
 	};
 });
 
-app.controller('HomeController', function ($scope, HomeService, PartnerService) {
+app.controller('HomeController', function ($scope, HomeService, PartnerService, SessionService) {
 
 	$scope.typeOfAccount = '';
 	$scope.possiblePartners = [];
@@ -23,7 +17,7 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService) 
 	$scope.msg.msg = '';
 
 	$scope.getTypeOfAccount = function() {
-		HomeService.getTypeOfAccount(function(callback) {
+		SessionService.getTypeOfAccount(function(callback) {
 			if (!callback.success) { /* Ivalid session or expired session */
 				$scope.msg.type = 'ERROR';
 				$scope.msg.msg = callback.mesage;

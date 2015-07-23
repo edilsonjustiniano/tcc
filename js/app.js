@@ -16,7 +16,11 @@ app.config(function($routeProvider) {
 		controller : "PartnerProfileController",
 		templateUrl: "views/partner-profile.html"
 	});
-
+    
+//    $routeProvider.when("/upload", {
+//		controller : "UploadController",
+//		templateUrl: "views/upload.html"
+//	});
 	$routeProvider.otherwise( {redirectTo: "/home"});
 
 });

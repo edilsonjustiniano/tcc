@@ -19,10 +19,9 @@
 		<div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
 
 		<div ng-repeat="iter in possiblePartners | orderBy: 'name'">
-			<div class="user-found" ng-click="openPartnerProfile(iter)">
-				<img class="img-circle" src="image/user-profile.png" alt="Profile Photo" />
+			<div class="user-found">
+				<img class="img-circle" src="image/user-profile.png" alt="Profile Photo" ng-click="openPartnerProfile(iter)" />
 				<p>{{iter.name}}</p>
-				<button class="btn btn-primary" ng-click="addPartner(iter)">+ parceiro</button>
 			</div>
 		</div>
 	</div>

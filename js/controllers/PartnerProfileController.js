@@ -1,19 +1,4 @@
-app.service('PartnerProfileService', function($http){
-	
-	this.getPartnerData = function(partnerEmail, callback) {
-		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/person/getPersonData', {partner: partnerEmail, token: token}).
-		success(callback);
-	};
-
-	this.isMyPartner = function(partnerEmail, callback) {
-		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/isMyPartner', {partner: partnerEmail, token: token}).
-		success(callback);
-	};
-});
-
-app.controller('PartnerProfileController', function($scope, $routeParams, PartnerProfileService, PartnerService) {
+app.controller('PartnerProfileController', function($scope, $routeParams, PartnerService) {
 
 	// Decode the String
 	var doubleUnderscore = $routeParams.partner.indexOf("__");
@@ -30,7 +15,7 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 	$scope.partner = {};
 	$scope.partner.email = data[0]; //email
 	$scope.partner.name = data[1]; //name
-	$scope.myPartner = false;
+	$scope.myPartner = true;
 
 	$scope.msg = {}; /* Error or success mesage */
 	$scope.msg.type = '';
@@ -38,7 +23,7 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 
 	$scope.getPartnerData = function() {
 
-		PartnerProfileService.getPartnerData($scope.partner, function(callback){
+		PartnerService.getPartnerData($scope.partner, function(callback){
 			if (!callback.success) { /* Invalid Session or Expired */
 				window.localStorage['token'] = null;
 				window.sessionStorage.setItem('typeOfAccount', null);
@@ -53,7 +38,7 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 
 	$scope.isMyPartner = function() {
 
-		PartnerProfileService.isMyPartner($scope.partner.email, function(callback){
+		PartnerService.isMyPartner($scope.partner.email, function(callback){
 			if (!callback.success) { /* Invalid Session or Expired */
 				window.localStorage['token'] = null;
 				window.sessionStorage.setItem('typeOfAccount', null);

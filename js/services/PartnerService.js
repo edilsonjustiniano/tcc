@@ -1,5 +1,11 @@
 app.service('PartnerService', function($http){
 	
+	this.getAllPartners = function(limit, offset, callback) {
+		var token = window.localStorage['token'];
+		$http.post('http://localhost:8080/WebService/partner/getAllPartners', {limit: limit, offset: offset, token: token}).
+		success(callback);
+	};
+
 	this.addPartner = function(partner, callback) {
 		var token = window.localStorage['token'];
 		$http.post('http://localhost:8080/WebService/partner/addPartner', {partner: partner.email, token: token}).
@@ -29,5 +35,29 @@ app.service('PartnerService', function($http){
 		}
 
 		return encodedString;
-	}
+	};
+
+	this.isMyPartner = function(partnerEmail, callback) {
+		var token = window.localStorage['token'];
+		$http.post('http://localhost:8080/WebService/partner/isMyPartner', {partner: partnerEmail, token: token}).
+		success(callback);
+	};
+
+	this.getPartnerData = function(partnerEmail, callback) {
+		var token = window.localStorage['token'];
+		$http.post('http://localhost:8080/WebService/person/getPersonData', {partner: partnerEmail, token: token}).
+		success(callback);
+	};
+
+	this.searchNewPartners = function(limit, offset, partnerName, callback) {
+		var token = window.localStorage['token'];
+		$http.post('http://localhost:8080/WebService/partner/searchNewPartners', {limit: limit, offset: offset, partner: partnerName, token: token}).
+		success(callback);	
+	};
+
+	this.searchNewPartnersOnlyByName = function(partnerName, callback) {
+		var token = window.localStorage['token'];
+		$http.post('http://localhost:8080/WebService/partner/searchNewPartnersOnlyByName', {partner: partnerName, token: token}).
+		success(callback);
+	};
 });
