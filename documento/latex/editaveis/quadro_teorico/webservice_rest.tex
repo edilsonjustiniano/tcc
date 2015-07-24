@@ -1,0 +1,26 @@
+\subsection{\textit{Web service} REST}
+
+Segundo \citeonline{msdn_web_service}, um \textit{Web service} consiste em um programa que disponibiliza serviços e pode ser acessado através do protocolo HTTP, portanto, tais serviços podem ser acessados de diferentes lugares e diferentes dispositivos simultaneamente.
+
+O primeiro\textit{Web service} REST\footnotemark[17] foi criado por Roy Fielding no ano 2000 na universidade da California. Ele foi criado para suceder o tecnologia \textit{Simple Object Access Protocol} - SOAP\footnotemark[18] - a fim de facilitar o uso de tal tecnologia. \cite{ibm_web_service}.
+
+\footnotetext[17]{REST: \textit{Representational State Transfer} - Tecnologia utilizada por \textit{web services}}
+
+\footnotetext[18]{SOAP: \textit{Simple Object Access Protocol} - Tecnologia utilizada por \textit{web services} anteriores aos \textit{Web services} REST.}
+
+Segundo \citeonline{oracle_web_service}, na arquitetura do REST os dados e as funcionalidades são considerados recursos e ambos são acessados por meio de  URIs\footnotemark[19]. Ele funciona baseado no protocolo HTTP, portanto, já possui os mecanismos de segurança, cabeçalhos e respostas embutidos.
+
+\footnotetext[19]{URI: \textit{Uniform Resource Identifier} - \textit{Link} completo para acessar um determinado recurso.}
+
+Para \citeonline{ibm_web_service}, o \textit{Web service} REST segue 4 princípios básicos. São eles: 
+
+\begin{itemize}
+	\item Utilização dos métodos HTTP explicitamente;
+	\item Orientação à conexão;
+	\item Expõe a estrutura de diretório por meio das URIs;
+	\item Trabalha com XML, \textit{Javascript Object Notation} - JSON\footnotemark[20] - ou ambos.
+\end{itemize}
+
+\footnotetext[20]{JSON: \textit{Javascript Object Notation} - Notação de objetos via Javascript, porém seu uso não é restrito apenas ao Javascript.}
+
+Esta tecnologia foi selecionada para ser utilizada neste trabalho, pois a forma de acesso ao banco de dados Neo4j utiliza uma API REST fornecida pelo próprio banco de dados.

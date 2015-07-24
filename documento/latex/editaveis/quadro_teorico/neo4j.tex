@@ -19,14 +19,27 @@
 \par Com estas informações, é possível mensurar o quanto o Neo4j pode ser rápido e robusto, sendo possível, até mesmo distribuí-lo a fim de obter uma melhor configuração, organização e facilidade de manutenção.
 
 %BANCA_QUALIFICACAO. Comentado este parágrafo, porém o mesmo retornará para a banca de qualificação
-\par Segundo \citeonline{neo4j_team_manual}, o banco de dados Neo4j é composto por nós (vértices), relacionamentos (arestas) e propriedades. Os relacionamentos são responsáveis por organizar os nós. É possível realizar as buscas e/ou alterações no Neo4j de duas formas diferentes. Sendo a primeira através da API \textit{Cypher Query Language}, que é uma \textit{query language} para banco de dados orientado a grafos muito próxima da linguagem humana, cuja sua descrição completa será apresentada a seguir. A segunda é o \textit{framework\footnotemark[11] Traversal} que utiliza a API \textit{Cypher} internamente para navegar pelo grafo.
+\par Segundo \citeonline{neo4j_team_manual}, o banco de dados Neo4j é composto por nós (vértices), relacionamentos (arestas) e propriedades. Os relacionamentos são responsáveis por organizar os nós e ambos podem possuir seus atributos. É possível realizar as buscas e/ou alterações no Neo4j de duas formas diferentes. Sendo a primeira através da API \textit{Cypher Query Language}, que é uma \textit{query language} para banco de dados orientado a grafos muito próxima da linguagem humana, cuja sua descrição completa será apresentada a seguir. A segunda é o \textit{framework\footnotemark[11] Traversal} que utiliza a API \textit{Cypher} internamente para navegar pelo grafo.
 
 \footnotetext[11]{\textit{Framework} - Abstração que une códigos comuns entre vários projetos de software, a fim de obter uma funcionalidade genérica.}
 
+
+\citeonline{rocha_algoritmos_particionamento_banco_dados_orientado_grafos}, afirma que o Neo4j permite criar mais de um relacionamento entre o mesmo par de vértices, desde que estes sejam de tipos distintos. Isto possibilita navegar pelos vértices do grafo de forma mais rápida devido a estes diferentes tipos de arestas, podendo assim, implementar o algoritmo de busca desejado. Veja na figura 8 o exmeplo de um simples grafo utilizando um banco de dados Neo4j.
+
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.8]{./imagens/simple_graph_neo4j.png}}
+	\caption[Exemplo simples de um grafo no Neo4j]
+	{Exemplo simples de um grafo no Neo4j. \textbf{Fonte:} \citeonline{neo4j_team_manual}}
+	\label{fig:exemplo1}
+\end{figure}
+
 %BANCA_QUALIFICACAO. Comentado este parágrafo, porém o mesmo retornará para a banca de qualificação
-\par Há duas formas de executar o Neo4j, segundo \citeonline{robinson_webber_eifrem_graph_databases}. A primeira é conhecida como \textit{Server} e a segunda \textit{Embedded}. O modo \textit{Server} é utilizado principalmente em \textit{web-service} em conjunto com a API REST. Já no modo \textit{Server} o banco de dados é executado embarcado à aplicação Java, que será utilizado por este trabalho.
+\par Há duas formas de executar o Neo4j, segundo \citeonline{robinson_webber_eifrem_graph_databases}. A primeira é conhecida como \textit{Server} e a segunda \textit{Embedded}. O modo \textit{Server} é utilizado principalmente em \textit{web-service} em conjunto com a API REST, este será aplicado neste trabalho. Já no modo \textit{Embedded} o banco de dados é executado embarcado à aplicação Java.
 
 %BANCA_QUALIFICACAO. Comentado este parágrafo, porém o mesmo retornará para a banca de qualificação
 \par Conforme \citeonline{neo4j_team_manual}, o Neo4j possui suporte as transações ACID (com atomicidade, consistência, isolamento e durabilidade).
+
+O Neo4j é distribuído em duas versões sendo elas a \textit{Entreprise} e a \textit{Community}. A primeira possui um tempo de avaliação de 30 dias e após este tempo, é necessário comprar uma licença para continuar a utilizá-lo. Como diferencial esta versão possui ferramentas para o gerenciamento do banco de dados, incluindo melhorias relacionadas à escalabilidade. A segunda versão é disponibilizada gratuitamente sem data limite de expiração, contudo, ela possui menos recursos como citado, mas é muito utilizada para fins didáticos e para pequenos projetos, aplicando-se perfeitamente a este projeto \cite{neo4j_team_manual}
 
 \par Por ser um banco de dados orientado a grafo bastante robusto, seguro e possuir uma documentação de fácil entendimento, além, é claro, de possuir um baixo custo de implantação devido a sua licença \textit{open source}, este banco de dados foi escolhido para ser utilizado neste trabalho.

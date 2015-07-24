@@ -17,11 +17,6 @@ Acesso em 15 de janeiro de 2015.}
   \url{http://oengenheirodesoftware.blogspot.com.br/2010/11/quantas-fases-tem-o-iconix.html}.
 Acesso em: 22/07/2015.}
 
-\bibitem[B. 1996]{grafos_teoria_modelos_algoritimo_neto}
-\abntrefinfo{B.}{B.}{1996}
-{B., N. P.~O. Grafos: teoria, modelos, algoritmo.
-Blucher, 1996.}
-
 \bibitem[Barbosa 2011]{barbosa_why_people_use_social_network}
 \abntrefinfo{Barbosa}{BARBOSA}{2011}
 {BARBOSA, K. \emph{\textbf{Por que as pessoas usam as redes sociais?}} 2011.
@@ -85,6 +80,12 @@ Acesso em 28 de dezembro de 2014.}
 \abntrefinfo{Gamma et al.}{GAMMA et al.}{2009}
 {GAMMA, E. et al. \emph{\textbf{Design Patterns: Elements of Reusable
   Object-Oriented Software}}. [S.l.: s.n.], 2009.}
+
+\bibitem[Haddad 2015]{msdn_web_service}
+\abntrefinfo{Haddad}{HADDAD}{2015}
+{HADDAD, R. \emph{Web Services}. 2015.
+  \url{https://msdn.microsoft.com/pt-br/library/Cc564893.aspx}.
+Acesso em 23/07/2015.}
 
 \bibitem[Harju 2014]{harju_graph_theory}
 \abntrefinfo{Harju}{HARJU}{2014}
@@ -150,6 +151,12 @@ Acesso em 15 de janeiro de 2015.}
   \url{https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html}.
 Acesso em: 22/07/2015.}
 
+\bibitem[Oracle 2015]{oracle_web_service}
+\abntrefinfo{Oracle}{ORACLE}{2015c}
+{ORACLE. \emph{What are RESTful Web Services?} 2015.
+  \url{https://docs.oracle.com/javaee/6/tutorial/doc/gijqy.html}.
+Acesso em 23/07/2015.}
+
 \bibitem[Paoletti 2006]{paoletti_seven_bridges_konigsberg}
 \abntrefinfo{Paoletti}{PAOLETTI}{2006}
 {PAOLETTI, T. \emph{Leonard Euler's Solution to the Konigsberg Bridge Problem}.
@@ -179,6 +186,12 @@ Acesso em 26 de fevereiro de 2015.}
 {ROCHA, R.~R. Algoritmos de particionamento e banco de dados orientado a
   grafos.
 2013.}
+
+\bibitem[Rodriguez 2008]{ibm_web_service}
+\abntrefinfo{Rodriguez}{RODRIGUEZ}{2008}
+{RODRIGUEZ, A. \emph{RESTful Web services: The basics}. 2008.
+  \url{http://www.ibm.com/developerworks/library/ws-restful/}.
+Acesso em 23/07/2015.}
 
 \bibitem[Rosenberg e Scott
   1999]{rosenberg_scott_use_case_driven_object_modeling_with_uml}

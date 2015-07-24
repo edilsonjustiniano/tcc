@@ -13,11 +13,14 @@
 
 %%BANCA_QUALIFICACAO. Comentado estes itens, porém os mesmos retornarão para a banca de qualificação
 \begin{itemize}
-	\item \textit{START}: Define um nó inicial para a busca.
-	\item \textit{MATCH}: Define o padrão de correspondência entre os nós.
-	\item \textit{CREATE}: Cria nós e relacionanemtnos.
+	\item \textit{START}: Define um ponto inicial para a busca, este ponto pode ser um relacionamento ou um nó.
+	\item \textit{MATCH}: Define o padrão de correspondência entre os nós. Para identificar um nó é necessário incluí-lo entre um par de parenteses, e os relacionamentos são identificados um hífen e um sinal de maior ou menor.
+	\item \textit{CREATE}: Utilizado para criar nós e relacionamentos no grafo.
 	\item \textit{WHERE}: Define um critério de busca.
-	\item \textit{RETURN}: Define quais nós e/ou atributos devem ser retornados da \textit{query} realizada. 
+	\item \textit{RETURN}: Define quais nós, relacionamentos e propriedades de ambos devem ser retornados da \textit{query} realizada. 
+	\item \textit{SET}: Utilizado para editar as propriedades de um nó ou de um relacionamento.
+	\item \textit{UNION}: Possibilita juntar o resultado de duas ou mais consultas.
+	\item \textit{FOREACH}: Realiza uma ação de atualização para cada elemento na lista.
 \end{itemize} 
 
 \par Outras \textit{Query Languages} existem, inclusive com suporte ao Neo4j, porém devido as vantagens apresentadas acima, somada ao fato que ele possui uma curva de aprendizagem menor e é excelente para lhe oferecer uma base a respeito de grafos,  este \textit{framework} será utilizado para realizar as tarefas de manipulação dos dados no banco de dados.

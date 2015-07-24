@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  23 JUL 2015 12:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  24 JUL 2015 00:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1246,110 +1246,111 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [9
 
 ] [10 <./imagens/visao_geral_iconix.png>])
-(./editaveis/quadro_teorico/teoria_grafos.tex [11] [12]
-<./imagens/Konigsberg_7_bridges.jpg, id=199, 501.875pt x 401.5pt>
+(./editaveis/quadro_teorico/teoria_grafos.tex [11]
+<./imagens/Konigsberg_7_bridges.jpg, id=194, 501.875pt x 401.5pt>
 File: ./imagens/Konigsberg_7_bridges.jpg Graphic file (type jpg)
 
 <use ./imagens/Konigsberg_7_bridges.jpg>
 Package pdftex.def Info: ./imagens/Konigsberg_7_bridges.jpg used on input line 
-10.
+9.
 (pdftex.def)             Requested size: 364.2138pt x 182.72566pt.
- [13 <./imagens/Konigsberg_7_bridges.jpg>] <./imagens/simple_graph.png, id=222,
+ [12 <./imagens/Konigsberg_7_bridges.jpg>] <./imagens/simple_graph.png, id=218,
  400.49625pt x 194.7275pt>
 File: ./imagens/simple_graph.png Graphic file (type png)
 
 <use ./imagens/simple_graph.png>
-Package pdftex.def Info: ./imagens/simple_graph.png used on input line 35.
+Package pdftex.def Info: ./imagens/simple_graph.png used on input line 34.
 (pdftex.def)             Requested size: 308.38306pt x 149.94061pt.
 
-<./imagens/multigraph_example.png, id=229, 246.9225pt x 178.6675pt>
+<./imagens/multigraph_example.png, id=225, 246.9225pt x 178.6675pt>
 File: ./imagens/multigraph_example.png Graphic file (type png)
 
 <use ./imagens/multigraph_example.png>
-Package pdftex.def Info: ./imagens/multigraph_example.png used on input line 48
+Package pdftex.def Info: ./imagens/multigraph_example.png used on input line 47
 .
 (pdftex.def)             Requested size: 222.22818pt x 160.79926pt.
-
-<./imagens/simple_digraph_graph.png, id=238, 256.96pt x 256.96pt>
+ [13 <./imagens/simple_graph.png> <./imagens/multigraph_example.png>]
+<./imagens/simple_digraph_graph.png, id=242, 256.96pt x 256.96pt>
 File: ./imagens/simple_digraph_graph.png Graphic file (type png)
 
 <use ./imagens/simple_digraph_graph.png>
 Package pdftex.def Info: ./imagens/simple_digraph_graph.png used on input line 
-59.
+58.
 (pdftex.def)             Requested size: 154.17719pt x 154.17719pt.
 
+<./imagens/grafos_isomorficos.png, id=251, 264.99pt x 107.40125pt>
+File: ./imagens/grafos_isomorficos.png Graphic file (type png)
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<use ./imagens/grafos_isomorficos.png>
+Package pdftex.def Info: ./imagens/grafos_isomorficos.png used on input line 76
+.
+(pdftex.def)             Requested size: 264.98935pt x 107.40097pt.
+ [14 <./imagens/simple_digraph_graph.png> <./imagens/grafos_isomorficos.png>]
+<./imagens/matriz_adjacencia.png, id=264, 230.8625pt x 168.63pt>
+File: ./imagens/matriz_adjacencia.png Graphic file (type png)
 
-[14 <./imagens/simple_graph.png> <./imagens/multigraph_example.png>])
-(./editaveis/quadro_teorico/banco_dados.tex [15 <./imagens/simple_digraph_graph
-.png>]) (./editaveis/quadro_teorico/tipos_banco_dados.tex)
+<use ./imagens/matriz_adjacencia.png>
+Package pdftex.def Info: ./imagens/matriz_adjacencia.png used on input line 95.
+
+(pdftex.def)             Requested size: 161.60263pt x 118.04018pt.
+)
+(./editaveis/quadro_teorico/banco_dados.tex [15 <./imagens/matriz_adjacencia.pn
+g>]) (./editaveis/quadro_teorico/tipos_banco_dados.tex)
 (./editaveis/quadro_teorico/banco_dados_relacionais.tex [16])
 (./editaveis/quadro_teorico/banco_dados_nosql.tex [17])
-(./editaveis/quadro_teorico/neo4j.tex [18])
-(./editaveis/quadro_teorico/cypher.tex [19])
-(./editaveis/quadro_teorico/java.tex [20]
+(./editaveis/quadro_teorico/neo4j.tex [18]
+<./imagens/simple_graph_neo4j.png, id=328, 374.39874pt x 187.70125pt>
+File: ./imagens/simple_graph_neo4j.png Graphic file (type png)
+
+<use ./imagens/simple_graph_neo4j.png>
+Package pdftex.def Info: ./imagens/simple_graph_neo4j.png used on input line 31
+.
+(pdftex.def)             Requested size: 299.5194pt x 150.1612pt.
+ [19 <./imagens/simple_graph_neo4j.png>]) (./editaveis/quadro_teorico/cypher.te
+x [20])
+(./editaveis/quadro_teorico/java.tex [21]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 21.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [21]
-<./imagens/processo_compilacao_java.png, id=354, 297.7524pt x 81.4242pt>
+)
+<./imagens/processo_compilacao_java.png, id=377, 297.7524pt x 81.4242pt>
 File: ./imagens/processo_compilacao_java.png Graphic file (type png)
 
 <use ./imagens/processo_compilacao_java.png>
 Package pdftex.def Info: ./imagens/processo_compilacao_java.png used on input l
 ine 25.
 (pdftex.def)             Requested size: 297.75166pt x 81.424pt.
-)
-(./editaveis/quadro_teorico/rest.tex [22 <./imagens/processo_compilacao_java.pn
-g>]
-File: ./imagens/processo_compilacao_java.png Graphic file (type png)
- <use ./imagens/processo_compilacao_java.png>
-Package pdftex.def Info: ./imagens/processo_compilacao_java.png used on input l
-ine 22.
-(pdftex.def)             Requested size: 297.75166pt x 81.424pt.
-)
-(./editaveis/quadro_teorico/tomcat.tex [23])
-(./editaveis/quadro_teorico/javascript.tex [24]
-File: ./imagens/processo_compilacao_java.png Graphic file (type png)
-
-<use ./imagens/processo_compilacao_java.png>
-Package pdftex.def Info: ./imagens/processo_compilacao_java.png used on input l
-ine 22.
-(pdftex.def)             Requested size: 297.75166pt x 81.424pt.
-)
-(./editaveis/quadro_teorico/angularjs.tex [25]
-File: ./imagens/processo_compilacao_java.png Graphic file (type png)
-
-<use ./imagens/processo_compilacao_java.png>
-Package pdftex.def Info: ./imagens/processo_compilacao_java.png used on input l
-ine 22.
-(pdftex.def)             Requested size: 297.75166pt x 81.424pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./editaveis/quadro_teorico/jsf.tex [26]
-<./imagens/jsf_using_mvc.jpg, id=450, 521.95pt x 250.9375pt>
+) [22] (./editaveis/quadro_teorico/tomcat.tex [23 <./imagens/processo_compilaca
+o_java.png>]) (./editaveis/quadro_teorico/webservice_rest.tex)
+(./editaveis/quadro_teorico/javascript.tex [24])
+(./editaveis/quadro_teorico/angularjs.tex) (./editaveis/quadro_teorico/jsf.tex
+<./imagens/jsf_using_mvc.jpg, id=436, 521.95pt x 250.9375pt>
 File: ./imagens/jsf_using_mvc.jpg Graphic file (type jpg)
 
 <use ./imagens/jsf_using_mvc.jpg>
 Package pdftex.def Info: ./imagens/jsf_using_mvc.jpg used on input line 18.
 (pdftex.def)             Requested size: 260.97435pt x 125.46843pt.
- [27])
-(./editaveis/quadro_teorico/primefaces.tex))
-(./editaveis/12_QuadroMetodologico.tex [28 <./imagens/jsf_using_mvc.jpg>]
-[29] (./editaveis/quadro_metodologico/tipo_pesquisa.tex)
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[25]) (./editaveis/quadro_teorico/primefaces.tex))
+(./editaveis/12_QuadroMetodologico.tex [26 <./imagens/jsf_using_mvc.jpg>]
+(./editaveis/quadro_metodologico/tipo_pesquisa.tex)
 (./editaveis/quadro_metodologico/contexto_pesquisa.tex)
-(./editaveis/quadro_metodologico/participantes.tex [30
+(./editaveis/quadro_metodologico/participantes.tex [27
 
 ])
-(./editaveis/quadro_metodologico/instrumentos.tex [31])
+(./editaveis/quadro_metodologico/instrumentos.tex [28])
 (./editaveis/quadro_metodologico/questionarios.tex)
 (./editaveis/quadro_metodologico/analise_documental.tex)
-(./editaveis/quadro_metodologico/procedimentos.tex [32])
-(./editaveis/quadro_metodologico/cronograma.tex [33]
+(./editaveis/quadro_metodologico/procedimentos.tex [29])
+(./editaveis/quadro_metodologico/cronograma.tex [30]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 9.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
@@ -1430,18 +1431,18 @@ Overfull \hbox (0.5013pt too wide) in paragraph at lines 22--22
 [][] 
  []
 
-) (./editaveis/quadro_metodologico/orcamento.tex [34])) (./Principal.bbl
-[35]
+) (./editaveis/quadro_metodologico/orcamento.tex [31])) (./Principal.bbl
+[32]
 bibitemlist
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 10.
-[36
+[33
 
-] [37])
+] [34])
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[38]
+[35]
 
 Package caption Warning: Unused \captionsetup[Quadro] on input line 302.
 See the caption package documentation for explanation.
@@ -1468,13 +1469,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
  ) 
 Here is how much of TeX's memory you used:
- 15271 strings out of 493117
- 235181 string characters out of 6135433
- 391803 words of memory out of 5000000
- 18241 multiletter control sequences out of 15000+600000
+ 15295 strings out of 493117
+ 235873 string characters out of 6135433
+ 392087 words of memory out of 5000000
+ 18263 multiletter control sequences out of 15000+600000
  68728 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,16n,43p,964b,611s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,16n,43p,964b,608s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 14/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2014/texmf-dist/f
@@ -1484,10 +1485,10 @@ ublic/lm/lmtl10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/u
 tmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/loc
 al/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (39 pages, 449254 bytes).
+Output written on Principal.pdf (36 pages, 466216 bytes).
 PDF statistics:
- 731 PDF objects out of 1000 (max. 8388607)
- 647 compressed objects within 7 object streams
- 139 named destinations out of 1000 (max. 500000)
- 364 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 715 PDF objects out of 1000 (max. 8388607)
+ 628 compressed objects within 7 object streams
+ 138 named destinations out of 1000 (max. 500000)
+ 379 words of extra memory for PDF output out of 10000 (max. 10000000)
 

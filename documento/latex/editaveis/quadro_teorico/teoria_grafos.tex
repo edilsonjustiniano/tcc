@@ -4,7 +4,6 @@
 
 \par \textit{Königsberg}, atualmente conhecida como \textit{Kaliningrad}, era uma antiga cidade medieval cortada pelo rio \textit{Pregel} dividindo-a em 4 partes interligadas por 7 pontes. Ela era localizada na antiga Prússia, hoje, território Russo. O problema mencionado anteriormente consistia basicamente em atravessar toda a cidade, visitando todas as partes e utilizar todas as pontes desde que não repetisse uma das quatro partes ou uma das 7 pontes. A figura 2 ilustra o problema mencionado.
 
-\newpage
 % Imagem do problema das 7 pontes da teoria dos grafos
 \begin{figure}[h!]
 	\centerline{\includegraphics[height=0.26\textheight,width=0.8\textwidth]{./imagens/Konigsberg_7_bridges.jpg}}
@@ -62,19 +61,44 @@
 	\label{fig:exemplo1}
 \end{figure}
 
-\newpage %pular uma folha para que imagem fique na posição correta de acordo com a Joelma
-
-Abaixo serão descritos alguns tipos de grafos existentes, de acordo com \citeonline{grafos_teoria_modelos_algoritimo_neto}.
+Abaixo serão apresentados outros tipos de grafos, segundo \citeonline{harju_graph_theory}.
 
 \begin{itemize}
 	\item \textbf{grafo simples:} são aqueles grafos que não possuem \textit{loops}, ou arestas paralelas;
 	
 	\item \textbf{grafo completo:} são aqueles cujo qualquer par de vértices são adjacentes;
 	
-	\item \textbf{caminho (travessia):} é uma sequência de vértices {v1, v2,...,vn} conectados por meio de arestas {e1 = {v1, v2}, {v1, v3}...,{vn, vm}};
+	\item \textbf{subgrafos:} um grafo é constituído de uma série de subgrafos. Estes subgrafos são pequenas partes do grafos.
 	
+	\item \textbf{grafos isomórficos:} dois grafos são isomórficos se ambos possuírem a mesma estrutura de nós, e relacionamentos, exceto pelos identificadores de cada nó que podem ser diferentes, veja na figura 6 um exemplo de dois grafos isomórficos \cite{harju_graph_theory}.
+	
+	\begin{figure}[h!]
+		\centerline{\includegraphics[scale=1]{./imagens/grafos_isomorficos.png}}
+		\caption[Imagem de um grafo isomórfico]
+		{Imagem de um grafo isomórfico. \textbf{Fonte:} \citeonline{harju_graph_theory}}
+		\label{fig:exemplo1}
+	\end{figure}
+	
+	\item \textbf{caminho (travessia):} é uma sequência de vértices \{v1, v2,...,vn\} conectados por meio de arestas \{e1 = \{v1, v2\}, \{v1, v3\}..., \{vn, vm\}\};
+
 	\item \textbf{grafo conexo:} são aqueles que, para qualquer par vértices {u,v}, há um caminho que os ligam;
 	
-\end{itemize} 
+	\item \textbf{grau do vértice:} é definido pela quantidade de arestas que se conectam ao vértice.
+	
+\end{itemize}
+
+Para \citeonline{rocha_algoritmos_particionamento_banco_dados_orientado_grafos} existem várias formas de se representar um grafo computacionalmente utilizando diferentes estruturas de dados. Entretanto, a mais utilizada e simples é a matriz adjacência.
+
+Uma matriz adjacência consiste de uma matriz contendo o mesmo número de linhas e colunas (\textit{n x n}). Veja na figura 7 um exemplo de representação de um grafo utilizando esta estrutura.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.7]{./imagens/matriz_adjacencia.png}}
+	\caption[Grafo representado por meio de uma matriz adjacência]
+	{Grafo representado por meio de uma matriz adjacência. \textbf{Fonte:} \citeonline{rocha_algoritmos_particionamento_banco_dados_orientado_grafos}}
+	\label{fig:exemplo1}
+\end{figure}
+
+Na figura acima, as posições da matriz cujo o valor é igual a 1, definem que há uma aresta conectando os vértices, os tornando assim, adjacentes. Caso o valor seja 0, os vértices não estão conectados entre si no grafo e, portanto, não são vértices adjacentes.
+
 \par Este conteúdo teórico foi escolhido para ser utilizado neste trabalho pois,
 este, visa equacionar o problema relacionado à busca por mão de obra, através do modelo utilizado pelas redes sociais. Isto é possível pois, como mencionado anteriormente por meio desta teoria é possível descrever várias situações do mundo real, e como ela é muito bem aplicada à redes sociais, inclusive grandes empresas desta área já a utilizam. Devido a estes motivos, esta teoria será  utilizada para auxiliar no desenvolvimento deste projeto.
