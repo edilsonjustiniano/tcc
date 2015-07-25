@@ -30,10 +30,6 @@ Acesso em 28 de dezembro de 2014.}
 {BASHMAN, B.; SIERRA, K.; BATES, B. \emph{\textbf{Use a Cabeça! Servlets e
   JSP}}. [S.l.]: Alta Books, 2010.}
 
-\bibitem[Bergsten 2004]{bergsten_javaserver_faces}
-\abntrefinfo{Bergsten}{BERGSTEN}{2004}
-{BERGSTEN, H. \emph{\textbf{Javaserver Faces}}. [S.l.: s.n.], 2004.}
-
 \bibitem[Bondy e Murty 1976]{bondy_murty_graph_theory_with_applications}
 \abntrefinfo{Bondy e Murty}{BONDY; MURTY}{1976}
 {BONDY, J.~A.; MURTY, U. S.~R. \textbf{Graph Theory with applications}.
@@ -64,39 +60,37 @@ Acesso em 28 de dezembro de 2014.}
 {ELMASRI, R.; NAVATHE, S.~B. \emph{\textbf{Sistemas de Banco de Dados}}. 1. ed.
   [S.l.]: Pearson, 2005.}
 
+\bibitem[Erl et al. 2012]{erl_soa_with_rest}
+\abntrefinfo{Erl et al.}{ERL et al.}{2012}
+{ERL, T. et al. \emph{\textbf{SOA with REST: principles, patterns \&
+  constraints for building enterprise solutions with REST}}. [S.l.]: Novatec,
+  2012.}
+
 \bibitem[Faria
   2008]{tcc_univas_faria_aspectj_programacao_orientada_aspecto_java}
 \abntrefinfo{Faria}{FARIA}{2008}
 {FARIA, M.~A. de. \emph{ASPECTJ: Programação orientada a aspecto em Java}.
   [S.l.: s.n.], 2008.}
 
-\bibitem[Faria 2013]{faria_java_ee_7_jsf_primefaces_cdi}
-\abntrefinfo{Faria}{FARIA}{2013}
-{FARIA, T. \emph{\textbf{Java EE 7 com JSF, PrimeFaces e CDI}}. [S.l.: s.n.],
-  2013.}
+\bibitem[Flanagan 2011]{flanagan_javascript_definitive_guide}
+\abntrefinfo{Flanagan}{FLANAGAN}{2011}
+{FLANAGAN, D. \emph{\textbf{Javascript: The Definitive Guide}}. 6. ed. [S.l.]:
+  O' Reilly, 2011.}
 
-\bibitem[Gamma et al.
-  2009]{gamma_helm_johnson_vlissides_design_patterns_elements_reusable_object_oriented_software}
-\abntrefinfo{Gamma et al.}{GAMMA et al.}{2009}
-{GAMMA, E. et al. \emph{\textbf{Design Patterns: Elements of Reusable
-  Object-Oriented Software}}. [S.l.: s.n.], 2009.}
+\bibitem[Frank e Seibt 2002]{javascript_diego_leonard}
+\abntrefinfo{Frank e Seibt}{FRANK; SEIBT}{2002}
+{FRANK, D.~R.; SEIBT, L. Javascript.
+2002.}
 
-\bibitem[Haddad 2015]{msdn_web_service}
-\abntrefinfo{Haddad}{HADDAD}{2015}
-{HADDAD, R. \emph{Web Services}. 2015.
-  \url{https://msdn.microsoft.com/pt-br/library/Cc564893.aspx}.
-Acesso em 23/07/2015.}
+\bibitem[Green e Seshadri 2013]{green_seshadri_angularjs}
+\abntrefinfo{Green e Seshadri}{GREEN; SESHADRI}{2013}
+{GREEN, B.; SESHADRI, S. \emph{\textbf{Javascript: The Definitive Guide}}.
+  [S.l.]: O' Reilly, 2013.}
 
 \bibitem[Harju 2014]{harju_graph_theory}
 \abntrefinfo{Harju}{HARJU}{2014}
 {HARJU, T. Graph theory.
 2014.}
-
-\bibitem[Juneau 2014]{juneau_primefaces_enterprise}
-\abntrefinfo{Juneau}{JUNEAU}{2014}
-{JUNEAU, J. \emph{Primefaces in the Enterprise}. 2014.
-  \url{http://www.oracle.com/technetwork/articles/java/java-primefaces-2191907.html}.
-Acesso em: 15 de janeiro de 2015.}
 
 \bibitem[Junid et al.
   2012]{junid_tahir_majid_idros_potential_graph_thory_for_dna_sequence_alignment}
@@ -111,6 +105,12 @@ Acesso em: 15 de janeiro de 2015.}
   \url{http://www.cs.hmc.edu/~keller/courses/cs60/s98/examples/acyclic/}.
 Acesso em: 20 de Abril de 2015.}
 
+\bibitem[Kozlowski e Darwin
+  2013]{kozlowski_darwin_mastering_web_application_angular_js}
+\abntrefinfo{Kozlowski e Darwin}{KOZLOWSKI; DARWIN}{2013}
+{KOZLOWSKI, P.; DARWIN, P.~B. \emph{\textbf{Mastering Web Application
+  Development with AngularJS}}. [S.l.]: Packt Publishing, 2013.}
+
 \bibitem[Laurie e Laurie 2003]{laurie_laurie_apache_the_definitive_guide}
 \abntrefinfo{Laurie e Laurie}{LAURIE; LAURIE}{2003}
 {LAURIE, B.; LAURIE, P. \emph{\textbf{Apache: The Definitive Guide}}. [S.l.]:
@@ -121,6 +121,11 @@ Acesso em: 20 de Abril de 2015.}
 \abntrefinfo{Marconi e Lakatos}{MARCONI; LAKATOS}{2009}
 {MARCONI, M.~A.; LAKATOS, E.~M. \emph{\textbf{Metodologia do trabalho
   científico}}. 7. ed. [S.l.]: Atlas, 2009.}
+
+\bibitem[Marzullo 2013]{marzulo_soa_na_pratica}
+\abntrefinfo{Marzullo}{MARZULLO}{2013}
+{MARZULLO, F.~P. \emph{\textbf{SOA na prática: inovando seu negócio por meio
+  de soluções orientadas a serviços}}. [S.l.]: ServiceTech Press, 2013.}
 
 \bibitem[Matthew e Stones
   2005]{matthew_stones_beginning_databases_with_postgresql}
@@ -139,20 +144,14 @@ Acesso em: 20 de Abril de 2015.}
   \url{http://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html}.
 Acesso em 28 dez. 2014.}
 
-\bibitem[Oracle 2015]{oracle_javaserver_faces_technology_overview}
-\abntrefinfo{Oracle}{ORACLE}{2015a}
-{ORACLE. \emph{JavaServer Faces Technology Overview}. 2015.
-  \url{http://www.oracle.com/technetwork/java/javaee/overview-140548.html}.
-Acesso em 15 de janeiro de 2015.}
-
 \bibitem[Oracle 2015]{polymorphism_oracle}
-\abntrefinfo{Oracle}{ORACLE}{2015b}
+\abntrefinfo{Oracle}{ORACLE}{2015a}
 {ORACLE. \emph{Polymorphism}. 2015.
   \url{https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html}.
 Acesso em: 22/07/2015.}
 
 \bibitem[Oracle 2015]{oracle_web_service}
-\abntrefinfo{Oracle}{ORACLE}{2015c}
+\abntrefinfo{Oracle}{ORACLE}{2015b}
 {ORACLE. \emph{What are RESTful Web Services?} 2015.
   \url{https://docs.oracle.com/javaee/6/tutorial/doc/gijqy.html}.
 Acesso em 23/07/2015.}
@@ -212,12 +211,6 @@ Acesso em 23/07/2015.}
   ICONIX Process: People, Process, and Pragmatism}.
 2005.}
 
-\bibitem[Ross e Borsoi 2012]{ross_borsoi_uso_primefaces}
-\abntrefinfo{Ross e Borsoi}{ROSS; BORSOI}{2012}
-{ROSS, C.~L.; BORSOI, B.~T. \textbf{Uso de Primefaces no desenvolvimento de
-  aplicações ricas para web}.
-2012.}
-
 \bibitem[Ruohonen 2013]{ruohonen_graph_theory}
 \abntrefinfo{Ruohonen}{RUOHONEN}{2013}
 {RUOHONEN, K. \textbf{Graph Theory}.
@@ -256,8 +249,29 @@ Acesso em 23/07/2015.}
 {SILVA, E.~L. da; MENEZES, E.~M. \emph{\textbf{Metodologia da Pesquisa e
   Elaboração de Dissertação}}. 4. ed. [S.l.]: UFSC, 2005.}
 
+\bibitem[Silva 2011]{silva_css_3}
+\abntrefinfo{Silva}{SILVA}{2011a}
+{SILVA, M.~S. \emph{\textbf{CSS 3: desenvolva aplicações web profissionais
+  com o uso dos poderosos recursos de estilização das CSS 3}}. [S.l.]:
+  Novatec, 2011.}
+
+\bibitem[Silva 2011]{silva_html5}
+\abntrefinfo{Silva}{SILVA}{2011b}
+{SILVA, M.~S. \emph{\textbf{HTML 5}}. [S.l.: s.n.], 2011.}
+
 \bibitem[Vukotic e Goodwill 2011]{vukotic_goodwill_apache_tomcat_7}
 \abntrefinfo{Vukotic e Goodwill}{VUKOTIC; GOODWILL}{2011}
 {VUKOTIC, A.; GOODWILL, J. \emph{Apache Tomcat 7}. [S.l.]: Apress, 2011.}
+
+\bibitem[W3C 2015]{w3c_html_fundamentals}
+\abntrefinfo{W3C}{W3C}{2015a}
+{W3C. \emph{The Basics of HTML}. 2015.
+  \url{https://docs.webplatform.org/wiki/guides/the_basics_of_html}.
+Acesso em 24/07/2015.}
+
+\bibitem[W3C 2015]{w3c_css_definition}
+\abntrefinfo{W3C}{W3C}{2015b}
+{W3C. \emph{What is CSS?} 2015. \url{http://www.w3.org/Style/CSS/}.
+Acesso em 24/07/2015.}
 
 \end{thebibliography}

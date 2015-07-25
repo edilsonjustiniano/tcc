@@ -23,6 +23,11 @@ I was expecting a `,' or a `}'---line 262 of file biblio.bib
  :  coverage = {New Jersey: EUA},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 399 of file biblio.bib
+ :  
+ :  publisher = {Novatec}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "ABNT-final"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
@@ -33,45 +38,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex2.googlecode.com                           |
 +---------------------------------------------------------+
-You've used 46 entries,
+You've used 49 entries,
             6711 wiz_defined-function locations,
-            1382 strings with 15666 characters,
-and the built_in function-call counts, 32127 in all, are:
-= -- 2470
-> -- 1135
-< -- 11
-+ -- 456
-- -- 354
-* -- 2115
-:= -- 4470
-add.period$ -- 170
-call.type$ -- 46
-change.case$ -- 422
-chr.to.int$ -- 77
-cite$ -- 45
-duplicate$ -- 1611
-empty$ -- 2605
-format.name$ -- 1660
-if$ -- 7621
-int.to.chr$ -- 2
+            1392 strings with 15798 characters,
+and the built_in function-call counts, 34364 in all, are:
+= -- 2637
+> -- 1215
+< -- 12
++ -- 487
+- -- 379
+* -- 2268
+:= -- 4770
+add.period$ -- 178
+call.type$ -- 49
+change.case$ -- 447
+chr.to.int$ -- 82
+cite$ -- 48
+duplicate$ -- 1734
+empty$ -- 2802
+format.name$ -- 1777
+if$ -- 8163
+int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 865
-newline$ -- 208
-num.names$ -- 225
-pop$ -- 1188
+missing$ -- 926
+newline$ -- 219
+num.names$ -- 240
+pop$ -- 1272
 preamble$ -- 1
-purify$ -- 165
+purify$ -- 176
 quote$ -- 0
-skip$ -- 1762
+skip$ -- 1876
 stack$ -- 1
-substring$ -- 873
-swap$ -- 644
+substring$ -- 922
+swap$ -- 695
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 272
+while$ -- 290
 width$ -- 0
-write$ -- 653
-(There were 2 error messages)
+write$ -- 695
+(There were 3 error messages)
