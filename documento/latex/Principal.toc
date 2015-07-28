@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {4.1.4}Implementa\IeC {\c c}\IeC {\~a}o}{11}{subsection.4.1.4}
 \contentsline {section}{\numberline {4.2}Teoria dos Grafos}{11}{section.4.2}
 \contentsline {section}{\numberline {4.3}Tecnologias}{15}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Banco de dados}{16}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}Banco de dados}{15}{subsection.4.3.1}
 \contentsline {subsubsection}{\numberline {4.3.1.1}Tipos de bancos de dados}{16}{subsubsection.4.3.1.1}
 \contentsline {subsection}{\numberline {4.3.2}Banco de dados relacionais}{16}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}Banco de dados NoSQL}{17}{subsection.4.3.3}
@@ -26,7 +26,7 @@
 \contentsline {subsection}{\numberline {4.3.9}HTML 5}{25}{subsection.4.3.9}
 \contentsline {subsection}{\numberline {4.3.10}CSS 3}{26}{subsection.4.3.10}
 \contentsline {subsection}{\numberline {4.3.11}Javascript}{28}{subsection.4.3.11}
-\contentsline {subsection}{\numberline {4.3.12}Angular JS}{30}{subsection.4.3.12}
+\contentsline {subsection}{\numberline {4.3.12}Angular JS}{29}{subsection.4.3.12}
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {QUADRO METODOL\IeC {\'O}GICO}}{31}{chapter.5}
 \contentsline {section}{\numberline {5.1}Tipo de pesquisa}{31}{section.5.1}
 \contentsline {section}{\numberline {5.2}Contexto de pesquisa}{31}{section.5.2}

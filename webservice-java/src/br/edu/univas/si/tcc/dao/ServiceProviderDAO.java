@@ -11,7 +11,7 @@ public String setServiceProvider(JSONObject jsonObj) {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		
-        String query = "{\"query\":\" CREATE (service:Service {name: '" + jsonObj.getString("name")"',";
+        //String query = "{\"query\":\" CREATE (service:Service {name: '" + jsonObj.getString("name")"',";
         
         String request = "{\"query\":\"" + query + "\"}";
         ClientResponse response = resource.accept(MediaType.APPLICATION_JSON)
