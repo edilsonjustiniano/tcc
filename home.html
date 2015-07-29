@@ -23,8 +23,15 @@
 				<!-- Find people or services -->
 				<li ng-show="typeOfAccount == 'CONTRACTOR'">
 		    		<form class="navbar-search">
-				  		<input type="text" class="search-query" placeholder="Buscar serviços">
+				  		<input type="text" class="search-query" placeholder="Buscar serviços" ng-model="service" ng-change="getServicesProvidersByService()">
+                        <div class="options-services" ng-repeat="iter in servicesProviders | orderBy: name" ng-show="service != ''" ng-click="selectService(iter)">
+                            {{iter.name}}
+                            
+                        </div>
+                        
 					</form>
+                    
+                    
 				</li>
 
 				<!-- Services -->
@@ -135,12 +142,14 @@
 	<!-- Services -->
 	<script type="text/javascript" src="js/services/SessionService.js"></script>
 	<script type="text/javascript" src="js/services/PartnerService.js"></script>
+    <script type="text/javascript" src="js/services/ServiceProviderService.js"></script>
 
 	<!-- Controllers -->	
 	<script type="text/javascript" src="js/controllers/MenuBarController.js"></script>
 	<script type="text/javascript" src="js/controllers/HomeController.js"></script> 
 	<script type="text/javascript" src="js/controllers/PartnerNetworkController.js"></script>
 	<script type="text/javascript" src="js/controllers/PartnerProfileController.js"></script>
+    <script type="text/javascript" src="js/controllers/ServiceProviderProfileController.js"></script>
 	<!-- 
 	<script type="text/javascript" src="js/controllers/AddServiceController.js"></script> -->
 </body>

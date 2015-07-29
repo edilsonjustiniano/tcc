@@ -239,3 +239,13 @@ label.subtitle {
 	background-color: #CCA;
 	float: right;
 }
+
+/* select options service provider */
+.options-services {
+    display: block;
+    width: 220px;
+    border-radius: 5px;
+    padding: 10px 0px 10px 20px;
+    background-color: #CCC;
+    cursor: pointer;
+}
