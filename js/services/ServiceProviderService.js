@@ -24,4 +24,11 @@ app.service('ServiceProviderService', function($http){
 		$http.post('http://localhost:8080/WebService/serviceProvider/getServiceProviderData', {provider: serviceProvider.email, service: serviceProvider.service, token: token}).
 		success(callback);
 	};
+    
+    
+    this.saveEvaluate = function(serviceProvider, note, comments, callback) {
+        var token = window.localStorage['token'];
+		$http.post('http://localhost:8080/WebService/serviceProvider/saveEvaluate', {provider: serviceProvider.email, service: serviceProvider.service, note: note, comments: comments, token: token}).
+		success(callback);
+    };
 });

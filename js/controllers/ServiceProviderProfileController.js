@@ -15,11 +15,8 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     $scope.serviceProvider = {};
     $scope.serviceProvider.email = data[0]; //email
     $scope.serviceProvider.service = data[1]; //service
-    $scope.notes = [];
-    
-    for (var i = 0; i < 5; i++) {
-        $scope.notes[i] = {note: (i+1), img : ''};
-    }
+    $scope.evaluateNote = '';
+    $scope.comments = '';
 
     $scope.msg = {}; /* Error or success mesage */
     $scope.msg.type = '';
@@ -35,7 +32,7 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
             } else {
                 var array = callback.data;
                 if (array.length > 0) {
-                    array.forEach(function(iter) {
+                    array.forEach(function (iter) {
                         $scope.serviceProvider.name = iter[0]; //name
                     });
                 }
@@ -44,4 +41,25 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     };
 
     $scope.getServiceProviderData();
+
+
+    /* save evaluate */
+    $scope.saveEvaluate = function () {
+        ServiceProviderService.saveEvaluate($scope.serviceProvider, $scope.evaluateNote, $scope.comments, function (callback) {
+            if (!callback.success) { /* Invalid Session or Expired */
+                window.localStorage['token'] = null;
+                window.sessionStorage.setItem('typeOfAccount', null);
+                window.location.href = 'index.html';
+            } else {
+                if (!callback.isNewEvaluate) {
+                    $scope.msg.type = 'ERROR';
+                    $scope.msg.msg = callback.mesage;
+                } else {
+                    $scope.msg.type = 'SUCCESS';
+                    $scope.msg.msg = callback.mesage;
+                }
+                window.localStorage['token'] = callback.token;
+            }
+        });
+    };
 });

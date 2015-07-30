@@ -182,7 +182,8 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
                 window.localStorage['token'] = callback.token;
                 $scope.servicesProviders = [];
                 var array = callback.data;
-                if (array.length > 0) {
+                
+                if (array != null && array.length > 0) {
                     array.forEach(function (iter) {
                         $scope.servicesProviders.push({
                             name: iter[0],
@@ -209,5 +210,6 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
         console.log('Encoded Data: ' + encodedData);
         
 		window.location.href = "#/service-provider-profile/" + encodedData;
+        $scope.servicesProviders = [];
     };
 });

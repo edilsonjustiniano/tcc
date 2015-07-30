@@ -12,7 +12,7 @@
     <button class="btn" ng-click="cancelPartner()">Avaliar Serviço</button>
 
 
-    <form ng-submit="evaluate()">
+    <form ng-submit="saveEvaluate()">
         <legend>Avaliar serviço</legend>
 
         <!-- Msg error -->
@@ -22,12 +22,29 @@
         <div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
 
         <label class="radio">Nota</label>
+
+        <label class="radio inline">
+            <input type="radio" value="1" ng-model="evaluateNote" name="note" required>1
+        </label>
+
+        <label class="radio inline">
+            <input type="radio" value="2" ng-model="evaluateNote" name="note" required>2
+        </label>
+
+        <label class="radio inline">
+            <input type="radio" value="3" ng-model="evaluateNote" name="note" required>3
+        </label>
+
+        <label class="radio inline">
+            <input type="radio" value="4" ng-model="evaluateNote" name="note" required>4
+        </label>
+
+        <label class="radio inline">
+            <input type="radio" value="5" ng-model="evaluateNote" name="note" required>5
+        </label>
         
-            <input type="radio" aria-label="..." value="1" ng-model="evaluateNote" ng-repeat="note in notes">{{note.note}}
-            
-        
-        <textarea rows="3" ng-model="evaluateMsg" placeholder="Insira sua mensagem..."></textarea>
-        
+        <textarea rows="5" ng-model="comments" placeholder="Insira seu comentário..." required></textarea>
+
         <p>
             <input type="submit" class="btn btn-large btn-primary" value="Salvar" />
             <input type="reset" class="btn btn-large" value="Cancelar" />
