@@ -22,6 +22,9 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     $scope.msg.type = '';
     $scope.msg.msg = '';
 
+    $scope.showAddEvaluate = false;
+    $scope.showAddMesage = false;
+    
     $scope.getServiceProviderData = function () {
 
         ServiceProviderService.getServiceProviderData($scope.serviceProvider, function (callback) {
@@ -61,5 +64,17 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
                 window.localStorage['token'] = callback.token;
             }
         });
+    };
+    
+    /* open evaluate form */
+    $scope.evaluateButtonClick = function() {
+        $scope.showAddEvaluate = true;
+        $scope.showAddMesage = false;
+    };
+    
+    /* open mesage form */
+    $scope.mesageButtonClick = function() {
+        $scope.showAddEvaluate = false;
+        $scope.showAddMesage = true;
     };
 });

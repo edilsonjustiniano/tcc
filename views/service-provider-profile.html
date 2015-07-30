@@ -8,11 +8,11 @@
 
 <div id="profile-content">
 
-    <button class="btn" ng-click="addPartner()">Enviar Mensagem</button>
-    <button class="btn" ng-click="cancelPartner()">Avaliar Serviço</button>
+    <button class="btn" ng-click="mesageButtonClick()">Enviar Mensagem</button>
+    <button class="btn" ng-click="evaluateButtonClick()">Avaliar Serviço</button>
 
 
-    <form ng-submit="saveEvaluate()">
+    <form ng-submit="saveEvaluate()" id="evaluate-form" ng-show="showAddEvaluate">
         <legend>Avaliar serviço</legend>
 
         <!-- Msg error -->
@@ -22,7 +22,11 @@
         <div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
 
         <label class="radio">Nota</label>
-
+        
+        <label class="radio inline">
+            <input type="radio" value="1" ng-model="evaluateNote" name="note" required>0
+        </label>
+        
         <label class="radio inline">
             <input type="radio" value="1" ng-model="evaluateNote" name="note" required>1
         </label>
@@ -43,12 +47,18 @@
             <input type="radio" value="5" ng-model="evaluateNote" name="note" required>5
         </label>
         
+        <label>Mensagem</label>
         <textarea rows="5" ng-model="comments" placeholder="Insira seu comentário..." required></textarea>
 
         <p>
             <input type="submit" class="btn btn-large btn-primary" value="Salvar" />
             <input type="reset" class="btn btn-large" value="Cancelar" />
         </p>
+    </form>
+    
+    
+    <form ng-submit="saveMesage()" id="evaluate-form" ng-show="showAddMesage">
+        <legend>Enviar Mensagem</legend>
     </form>
 
 </div>

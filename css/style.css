@@ -249,3 +249,8 @@ label.subtitle {
     background-color: #CCC;
     cursor: pointer;
 }
+
+/* Evaluate page */
+#evaluate-form input[type=radio] {
+    background-image : url("../image/star_disabled.png") !important;   
+}
