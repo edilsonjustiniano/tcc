@@ -21,7 +21,12 @@ app.config(function($routeProvider) {
 		controller : "ServiceProviderProfileController",
 		templateUrl: "views/service-provider-profile.html"
 	});
-
+    
+    $routeProvider.when("/search-service-providers", {
+		controller : "SearchServiceProviderController",
+		templateUrl: "views/search-service-providers.html"
+	});
+    
 	$routeProvider.otherwise( {redirectTo: "/home"});
 
 });

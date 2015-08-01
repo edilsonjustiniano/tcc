@@ -1,60 +1,68 @@
 <!DOCTYPE html>
 <html ng-app="TCCApp">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Início</title>
-	<!-- Bootstrap -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Início</title>
+    <!-- Bootstrap -->
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
-	
-	<!-- TCC Style -->
-	<link rel="stylesheet" href="css/style.css">
+    <link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <!-- TCC Style -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-	<div class="navbar navbar-fixed-top" ng-controller="MenuBarController">
-		<div class="navbar-inner">
+    <div class="navbar navbar-fixed-top" ng-controller="MenuBarController">
+        <div class="navbar-inner">
 
-			<a class="brand" href="#/home">Início</a>
+            <a class="brand" href="#/home">Início</a>
 
-			<ul class="nav pull-right">
-				
-				<!-- Find people or services -->
-				<li ng-show="typeOfAccount == 'CONTRACTOR'">
-		    		<form class="navbar-search">
-				  		<input type="text" class="search-query" placeholder="Buscar serviços" ng-model="service" ng-change="getServicesProvidersByService()">
-                        <div class="options-services" ng-repeat="iter in servicesProviders | orderBy: name" ng-show="service != ''" ng-click="selectService(iter)">
-                            {{iter.name}}
-                            
-                        </div>
+            <ul class="nav pull-right">
+                
+                <!-- Search service providers -->
+                <li ng-show="typeOfAccount == 'CONTRACTOR'">
+                    <a href="#/search-service-providers">Busca</a>
+                </li>
+                
+                <!-- Find people or services -->
+                <!--
+                <li ng-show="typeOfAccount == 'CONTRACTOR'">
+                    <form class="navbar-search">
+                        <input type="text" class="search-query" placeholder="Buscar serviços" ng-model="service" ng-change="getServicesByService()">
+                        <ul class="options-services" ng-repeat="iter in services | orderBy: name" ng-show="service != ''" ng-click="selectService(iter)" ng-disabled="serviceProviders.length > 0">{{iter.name}}
+                            <li class="options-service-providers" ng-repeat="provider in serviceProviders | orderBy: name" ng-show="serviceProviders.length > 0 && iter.name == provider.service" ng-click="selectServiceProvider(provider)">
+                                {{provider.name}}
+                            </li>
+                        </ul>
                         
-					</form>
-                    
-                    
-				</li>
+                    </form>
+                </li>
+                -->
+                
+        <!-- Services -->
+        <li ng-show="typeOfAccount == 'SERVICE_PROVIDER'">
+            <a href="add-service.html">Serviços</a>
+        </li>
 
-				<!-- Services -->
-				<li ng-show="typeOfAccount == 'SERVICE_PROVIDER'">
-		    		<a href="add-service.html">Serviços</a>
-		    	</li>
-				
-				<!-- Partner network -->
-				<li ng-show="typeOfAccount == 'CONTRACTOR'">
-		    		<a href="#/partner-network">Rede de Parceiros</a>
-		    	</li>
+        <!-- Partner network -->
+        <li ng-show="typeOfAccount == 'CONTRACTOR'">
+            <a href="#/partner-network">Rede de Parceiros</a>
+        </li>
 
-				<!-- Partners -->
-				<li class="dropdown" ng-show="typeOfAccount == 'CONTRACTOR'">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="">
+        <!-- Partners -->
+        <li class="dropdown" ng-show="typeOfAccount == 'CONTRACTOR'">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="">
 						Novas Parcerias
 				        <b class="caret"></b>
 				    </a>
-					<ul class="dropdown-menu">
-						<li ng-repeat="partner in partnerRequests | orderBy: 'date' ">
-							<div class="partner-request-received">
-								<a href="">{{partner.requestFromName}}</a>
-								<span class="options-accept-or-not">
+            <ul class="dropdown-menu">
+                <li ng-repeat="partner in partnerRequests | orderBy: 'date' ">
+                    <div class="partner-request-received">
+                        <a href="">{{partner.requestFromName}}</a>
+                        <span class="options-accept-or-not">
 									<a href="" ng-click="acceptPartnerRequest(partner)">
 										<img src="image/icon/ok-icon.png" class="img-circle icon-accept" alt="Ok" />
 									</a>
@@ -63,94 +71,95 @@
 										<img src="image/icon/error-icon.png" class="img-circle icon-accept" alt="Cancelar" />
 									</a>
 								</span>
-							</div>
-						</li>
-					</ul>
-				</li>
+                    </div>
+                </li>
+            </ul>
+        </li>
 
-				<!-- Mesages -->
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="">
+        <!-- Mesages -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="">
 						Mensagens
 				        <b class="caret"></b>
 				    </a>
-					<ul class="dropdown-menu">
-						<li ng-repeat="msg in mesages | orderBy: 'date' ">
-					    	<a href="">{{msg.title}}</a>
-						</li>
+            <ul class="dropdown-menu">
+                <li ng-repeat="msg in mesages | orderBy: 'date' ">
+                    <a href="">{{msg.title}}</a>
+                </li>
 
-						<li>
-					    	<a href="#">Mensagem 1</a>
-					     	<a href="#">Mensagem 2</a>
-					     	<a href="#">Mensagem 3</a>
-						</li>
-					</ul>
-				</li>
-	
-				<!-- User Options -->
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="">
-						<img class="img-circle user-profile-photo" src="image/user-profile.png" alt="Profile Photo" />
-						{{name}}
-				        <b class="caret"></b>
-				    </a>
-					<ul class="dropdown-menu">
-						<li>
-					    	<a href="#">Configurações</a>
-					     	<a href="#">Alterar Senha</a>
-					     	<a href="#" ng-click="logout()">Sair</a>
-						</li>
-					</ul>
-				</li>
-				
-			</ul>
-	   	</div>
-	</div>
+                <li>
+                    <a href="#">Mensagem 1</a>
+                    <a href="#">Mensagem 2</a>
+                    <a href="#">Mensagem 3</a>
+                </li>
+            </ul>
+        </li>
 
-	<!-- Content-->
+        <!-- User Options -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                <img class="img-circle user-profile-photo" src="image/user-profile.png" alt="Profile Photo" /> {{name}}
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#">Configurações</a>
+                    <a href="#">Alterar Senha</a>
+                    <a href="#" ng-click="logout()">Sair</a>
+                </li>
+            </ul>
+        </li>
 
-	<!-- Últimas contratações (avaliações realizadas por ele à prestadores de serviços) para usuários do tipo "contratantes" -->
+        </ul>
+    </div>
+    </div>
 
-	<!-- <div id="ultimas-contratacoes">
+    <!-- Content-->
+
+    <!-- Últimas contratações (avaliações realizadas por ele à prestadores de serviços) para usuários do tipo "contratantes" -->
+
+    <!-- <div id="ultimas-contratacoes">
 		
 	</div>
  -->
-	<!-- Possíveis parceiros, estilo o que o facebook faz com os prováveis amigos que vc conheça para usuários do tipo "contratantes" -->
-	<!-- <div id="possiveis-parceiros">
+    <!-- Possíveis parceiros, estilo o que o facebook faz com os prováveis amigos que vc conheça para usuários do tipo "contratantes" -->
+    <!-- <div id="possiveis-parceiros">
 		
 	</div>
  -->
 
-	<!-- Para ambos os tipos de usuários -->
-	<!-- <div id="relatorios">
+    <!-- Para ambos os tipos de usuários -->
+    <!-- <div id="relatorios">
 		
 	</div>
  -->
- 	<div ng-view=""></div>
-	
-	<!-- Libs JQuery and bootstrap for dorp down menu -->
-	<script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
-	
-	<!-- Angular libs -->
-	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
-	<script type="text/javascript" src="js/angularjs/angular-route.min.js"></script>
-    
-	<!-- App -->
-	<script type="text/javascript" src="js/app.js"></script>
-	
-	<!-- Services -->
-	<script type="text/javascript" src="js/services/SessionService.js"></script>
-	<script type="text/javascript" src="js/services/PartnerService.js"></script>
+    <div ng-view=""></div>
+
+    <!-- Libs JQuery and bootstrap for dorp down menu -->
+    <script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+
+    <!-- Angular libs -->
+    <script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+    <script type="text/javascript" src="js/angularjs/angular-route.min.js"></script>
+
+    <!-- App -->
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <!-- Services -->
+    <script type="text/javascript" src="js/services/SessionService.js"></script>
+    <script type="text/javascript" src="js/services/PartnerService.js"></script>
     <script type="text/javascript" src="js/services/ServiceProviderService.js"></script>
 
-	<!-- Controllers -->	
-	<script type="text/javascript" src="js/controllers/MenuBarController.js"></script>
-	<script type="text/javascript" src="js/controllers/HomeController.js"></script> 
-	<script type="text/javascript" src="js/controllers/PartnerNetworkController.js"></script>
-	<script type="text/javascript" src="js/controllers/PartnerProfileController.js"></script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="js/controllers/MenuBarController.js"></script>
+    <script type="text/javascript" src="js/controllers/HomeController.js"></script>
+    <script type="text/javascript" src="js/controllers/PartnerNetworkController.js"></script>
+    <script type="text/javascript" src="js/controllers/PartnerProfileController.js"></script>
     <script type="text/javascript" src="js/controllers/ServiceProviderProfileController.js"></script>
-	<!-- 
+    <script type="text/javascript" src="js/controllers/SearchServiceProviderController.js"></script>
+    <!-- 
 	<script type="text/javascript" src="js/controllers/AddServiceController.js"></script> -->
 </body>
+
 </html>

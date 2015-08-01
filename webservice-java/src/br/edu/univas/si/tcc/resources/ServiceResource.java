@@ -1,5 +1,6 @@
 package br.edu.univas.si.tcc.resources;
 
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -33,6 +34,24 @@ public class ServiceResource {
 			response.put("success", true);
 		} catch (JSONException e) {
 			e.printStackTrace();
+		}
+		return response.toString();
+	}
+	
+	
+	@Path("/getServicesByName/{service}")
+	@GET
+	@Produces("application/json")
+	public String getServicesByName(@PathParam("service") String service) {
+
+		String responseService = dao.getServiceByName(service);
+
+		JSONObject response = null;
+		try {
+			response = new JSONObject(responseService);
+			response.put("success", true);
+		} catch (JSONException e1) {
+			e1.printStackTrace();
 		}
 		return response.toString();
 	}

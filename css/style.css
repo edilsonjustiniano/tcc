@@ -245,12 +245,52 @@ label.subtitle {
     display: block;
     width: 220px;
     border-radius: 5px;
+    margin-left: 0px;
     padding: 10px 0px 10px 20px;
-    background-color: #CCC;
+    background-color: #EBE3E3;
+    outline-style: inherit;
+}
+
+.options-services:hover {
     cursor: pointer;
+    color: black;
+}
+
+.options-service-providers {
+    display: block;
+    color: lightslategray;
+    width: 100%;
+    margin-left: -20px;
+    border-radius: 2px;
+    padding: 10px 0px 10px 20px;
+    background-color: #FCF5F5;
+    margin-bottom: 1px;
+} 
+
+.options-service-providers:hover {
+    cursor: pointer;
+    color: #3636E1;
+    opacity: .8;
 }
 
 /* Evaluate page */
 #evaluate-form input[type=radio] {
     background-image : url("../image/star_disabled.png") !important;   
+}
+
+#search-field {
+    position: relative;
+    margin-top: 60px;
+    height: auto;
+    width: 300px;
+    border: 2px solid transparent; /* Não tirar a borda se não ela não respeita o espaço */
+}
+
+#content {
+    position: relative;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    border: 1px solid transparent; /* Não tirar a borda se não ela não respeita o espaço */
 }

@@ -28,15 +28,6 @@ app.service('MenuBarService', function ($http) {
         }).
         success(callback);
     };
-
-    this.getServicesProvidersByService = function (service, callback) {
-        var token = window.localStorage['token'];
-        $http.post('http://localhost:8080/WebService/serviceProvider/getServiceProvidersByService', {
-            service: service,
-            token: token
-        }).
-        success(callback);
-    };
 });
 
 
@@ -55,8 +46,9 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
     //    $scope.services.push({name: "Pintor"});
     //    $scope.services.push({name: "Babá"});
     //    $scope.services.push({name: "Doméstica"});
-    $scope.servicesProviders = [];
+    $scope.services = [];
     $scope.service = '';
+    $scope.serviceProviders = [];
 
 
     $scope.getUserInfoFromSession = function () {
@@ -168,27 +160,28 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
     };
 
 
-    $scope.getServicesProvidersByService = function () {
+    $scope.getServicesByService = function () {
         if ($scope.service.length < 3) {
+            $scope.services = [];
+            $scope.serviceProviders = [];
             return;
         }
 
-        MenuBarService.getServicesProvidersByService($scope.service, function (callback) {
+//        MenuBarService.getServicesProvidersByService($scope.service, function (callback) {
+        ServiceProviderService.getServicesByName($scope.service, function(callback) {
+            
             if (!callback.success) {
                 window.sessionStorage.setItem('typeOfAccount', null);
                 window.localStorage['token'] = null;
                 window.location.href = "index.html";
             } else {
-                window.localStorage['token'] = callback.token;
-                $scope.servicesProviders = [];
+                $scope.services = [];
                 var array = callback.data;
                 
                 if (array != null && array.length > 0) {
                     array.forEach(function (iter) {
-                        $scope.servicesProviders.push({
-                            name: iter[0],
-                            email: iter[1],
-                            service: iter[2]
+                        $scope.services.push({
+                            name: iter[0]
                         });
                     });
                 }
@@ -198,18 +191,74 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
 
     };
 
-    /* Load all options */
-    $scope.selectService = function (person) {
+    $scope.selectService = function (service) {
         
-        if (person == null) {
+        if (service == null) {
 			return;
 		}
         
-        var encodedData = ServiceProviderService.encodeEmail(person);
-        console.log('Service : ' + person.email + "|" + person.service);
+        ServiceProviderService.getServicesProvidersByService(service.name, function (callback) {
+            if (!callback.success) {
+                window.sessionStorage.setItem('typeOfAccount', null);
+                window.localStorage['token'] = null;
+                window.location.href = "index.html";
+            } else {
+                window.localStorage['token'] = callback.token;
+                $scope.serviceProviders = [];
+                var array = callback.data;
+                
+                if (array != null && array.length > 0) {
+                    array.forEach(function (iter) {
+                        $scope.serviceProviders.push({
+                            name: iter[0],
+                            email: iter[1],
+                            service: iter[2]
+                        });
+                    });
+                }
+            }
+            
+            console.log($scope.serviceProviders.length);
+        });
+        
+        
+//        var encodedData = ServiceProviderService.encodeEmail(person);
+//        console.log('Service : ' + person.email + "|" + person.service);
+//        console.log('Encoded Data: ' + encodedData);
+//        
+//		window.location.href = "#/service-provider-profile/" + encodedData;
+//        $scope.services = [];
+    };
+    
+    
+    $scope.selectServiceProvider = function(provider) {
+        console.log("Service Provider Selected: " + provider.name + " | " + provider.service); 
+        
+        var encodedData = ServiceProviderService.encodeEmail(provider);
+        console.log('Service : ' + provider.email + "|" + provider.service);
         console.log('Encoded Data: ' + encodedData);
         
 		window.location.href = "#/service-provider-profile/" + encodedData;
-        $scope.servicesProviders = [];
+        /* Reset fields and options */
+        $scope.service = '';
+        $scope.services = [];
+        $scope.serviceProviders = [];
     };
+    
+    
+    
+    /* Load all options */
+//    $scope.selectService = function (person) {
+//        
+//        if (person == null) {
+//			return;
+//		}
+//        
+//        var encodedData = ServiceProviderService.encodeEmail(person);
+//        console.log('Service : ' + person.email + "|" + person.service);
+//        console.log('Encoded Data: ' + encodedData);
+//        
+//		window.location.href = "#/service-provider-profile/" + encodedData;
+//        $scope.services = [];
+//    };
 });
