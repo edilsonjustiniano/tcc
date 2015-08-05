@@ -38,7 +38,7 @@ TCCApp.controller('LoginController', function($scope, LoginService) {
 				$scope.msg.type = 'SUCCESS';
 				$scope.msg.type = callback.mesage;
 				window.localStorage['token'] = callback.token;
-				window.location.href = 'home.html';
+				window.location.href = 'home.html#/home';
 			}
 		});	
 	};

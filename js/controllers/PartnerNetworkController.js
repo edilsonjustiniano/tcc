@@ -59,7 +59,7 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 			if (callback.success) { /* Ivalid session or expired session */
 				var array = callback.data;
 				array.forEach(function(iter){
-					$scope.partners.push({name: iter[0], email: iter[1]});
+					$scope.partners.push({name: iter[0], email: iter[1], photo: iter[2]});
 				});
 			}
 		});
@@ -88,7 +88,7 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 				
 				if (array == undefined || array.length <= 2) { /* Make another request, but in this time, get the possible partners filtering only by name */
 					array.forEach(function(iter){
-						$scope.possibleNewPartners.push({name: iter[0], email: iter[1]});
+						$scope.possibleNewPartners.push({name: iter[0], email: iter[1], photo: iter[3]});
 					});
 
 					PartnerService.searchNewPartnersOnlyByName($scope.newPartner, function(callback) {
@@ -98,7 +98,7 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 							array.forEach(function(iter){
 
 								if (!PartnerNetworkService.isDuplicatadedPartner(iter[0], iter[1], $scope.possibleNewPartners) ) {
-									$scope.possibleNewPartners.push({name: iter[0], email: iter[1]});
+									$scope.possibleNewPartners.push({name: iter[0], email: iter[1], photo: iter[3]});
 								}
 								
 							});

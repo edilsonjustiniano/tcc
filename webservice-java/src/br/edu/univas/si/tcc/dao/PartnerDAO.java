@@ -47,7 +47,7 @@ public class PartnerDAO {
 							"OPTIONAL MATCH " +
 							"pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
 							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
-							"RETURN DISTINCT(users.name), users.email, 1 as length, " +
+							"RETURN DISTINCT(users.name), users.email, 1 as length, users.photo, " +
 							"count(DISTINCT pMutualFriends) AS mutualFriends " +
 							"ORDER BY length, mutualFriends DESC " +
 							"UNION ALL " +
@@ -68,7 +68,7 @@ public class PartnerDAO {
 							"AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " +
 							"OPTIONAL MATCH pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
 							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
-							"RETURN DISTINCT(users.name), users.email, 2 as length, " +
+							"RETURN DISTINCT(users.name), users.email, 2 as length, users.photo, " +
 							"count(DISTINCT pMutualFriends) AS mutualFriends " +
 							"ORDER BY length, mutualFriends DESC \"}";
 		System.out.println(query);
@@ -155,7 +155,7 @@ public class PartnerDAO {
 				"(partner:Person), " +
 				"(partner)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partner)" +
 				"WHERE partner <> me " +
-				"RETURN partner.name, partner.email; \"}";
+				"RETURN partner.name, partner.email, partner.photo; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
@@ -220,7 +220,7 @@ public class PartnerDAO {
 							"OPTIONAL MATCH " +
 							"pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
 							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
-							"RETURN DISTINCT(users.name), users.email, 1 as length, " +
+							"RETURN DISTINCT(users.name), users.email, 1 as length, users.photo, " +
 							"count(DISTINCT pMutualFriends) AS mutualFriends " +
 							"ORDER BY length, mutualFriends DESC " +
 							"UNION ALL " +
@@ -232,7 +232,7 @@ public class PartnerDAO {
 							"OPTIONAL MATCH " +
 							"pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
 							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
-							"RETURN DISTINCT(users.name), users.email, 2 as length, " +
+							"RETURN DISTINCT(users.name), users.email, 2 as length, users.photo, " +
 							"count(DISTINCT pMutualFriends) AS mutualFriends " +
 							"ORDER BY length, mutualFriends DESC \"}";
 		System.out.println(query);
@@ -257,7 +257,7 @@ public class PartnerDAO {
 							"(users)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me) " +
 							"WHERE users.name =~ '" + partner + ".*' AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " + 
 							"AND users <> me " +
-							"RETURN DISTINCT(users.name), users.email, 3 as length " +
+							"RETURN DISTINCT(users.name), users.email, 3 as length, users.photo " +
 							"ORDER BY users.name ASC; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)

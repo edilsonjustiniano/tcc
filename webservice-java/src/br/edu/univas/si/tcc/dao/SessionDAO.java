@@ -56,7 +56,7 @@ public class SessionDAO {
 		
 		String query = null;
 		query = "{\"query\":\" MATCH (person:Person {email: '" + person.getEmail() + "'})" +
-				" RETURN person.name, person.email, person.typeOfPerson, person.typeOfAccount; \"}";
+				" RETURN person.name, person.email, person.typeOfPerson, person.typeOfAccount, person.photo; \"}";
 		System.out.println(query);
 		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
 		

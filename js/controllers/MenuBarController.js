@@ -36,6 +36,7 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
     $scope.name = '';
     $scope.typeOfAccount = '';
     $scope.partnerRequests = [];
+    $scope.user = {};
     $scope.msg = {}; /* Error or success mesage */
     $scope.msg.type = '';
     $scope.msg.msg = '';
@@ -62,13 +63,18 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
             } else {
                 //get data from return and fill the components according to type of account
                 window.localStorage['token'] = callback.token;
-                $scope.name = callback.data[0][0]; //name
-                var arrayNames = $scope.name.split(" "); //Show only the first name
-                $scope.name = arrayNames[0];
+                $scope.user.name = callback.data[0][0]; //name
+                var arrayNames = $scope.user.name.split(" "); //Show only the first name
+                $scope.user.name = arrayNames[0];
+                $scope.user.typeOfAccount = callback.data[0][3];
+                $scope.user.photo = callback.data[0][4];
+//                $scope.name = callback.data[0][0]; //name
+//                var arrayNames = $scope.name.split(" "); //Show only the first name
+//                $scope.name = arrayNames[0];
                 //$scope.email = callback.data[0][1]; //email (It works)
                 //$scope.typeOfPerson = callback.data[0][2]; //typeOfPerson (It works)
-                $scope.typeOfAccount = callback.data[0][3]; //typeOfAccount
-                window.sessionStorage.setItem('typeOfAccount', $scope.typeOfAccount);
+//                $scope.user.typeOfAccount = callback.data[0][3]; //typeOfAccount
+                window.sessionStorage.setItem('typeOfAccount', $scope.user.typeOfAccount);
             }
         });
     };

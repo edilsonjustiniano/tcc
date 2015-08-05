@@ -13,6 +13,8 @@ import com.sun.jersey.api.client.WebResource;
 
 public class PersonDAO {
 
+	private static final String UPLOAD_DIR = "upload/";
+	
 	/**
 	 * Method to check if the email informed by user is a free email or not
 	 * @param email
@@ -139,7 +141,7 @@ public class PersonDAO {
 							"(company:Company), " +
 							"(partner)-[:LIVES_IN]->(city), " +
 							"(partner)-[:WORKS_IN]->(company) " +
-							"RETURN DISTINCT(partner.name), partner.email, city.name, company.name; \"}";
+							"RETURN DISTINCT(partner.name), partner.email, partner.photo, city.name, company.name; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
@@ -147,5 +149,25 @@ public class PersonDAO {
 		String objectCreate = responseCreate.getEntity(String.class);
 		
 		return objectCreate;
+	}
+
+
+	
+	public String setPhoto(String email, String photoName) {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+		
+		String query = null;
+		query = "{\"query\":\" MATCH (me:Person {email: '" + email + "'}) " +
+							"SET me += {photo: '" + UPLOAD_DIR + photoName + "'} " +
+							"RETURN me.name, me.email; \"}";
+		System.out.println(query);
+		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+												.type(MediaType.APPLICATION_JSON).entity(query)
+												.post(ClientResponse.class);
+		String objectCreate = responseCreate.getEntity(String.class);
+		
+		return objectCreate;
+
 	}
 }

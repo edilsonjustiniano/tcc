@@ -27,6 +27,11 @@ app.config(function($routeProvider) {
 		templateUrl: "views/search-service-providers.html"
 	});
     
-	$routeProvider.otherwise( {redirectTo: "/home"});
+    $routeProvider.when("/upload-photo/:photo?", {
+		controller : "UploadController",
+		templateUrl: "views/upload.html"
+	});
+    
+	//$routeProvider.otherwise( {redirectTo: "/home"});
 
 });

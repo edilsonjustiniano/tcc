@@ -32,6 +32,7 @@
 	
 		<!-- diretiva ng-submit -->
 	    <section id="form-create-account" ng-controller="CreateAccountPhoto">
+	    
 	    	<ul class="nav nav-pills">
 			  	<li>
 			    	<a href="create-account-personal-data.html">Dados Pessoais</a>
@@ -43,8 +44,18 @@
 			  		<a href="create-account-photo.html">Imagem</a>
 			  	</li>
 	  		</ul>
-
-		    <form ng-submit="savePhoto()" enctype="multipart/form-data">
+           
+           <form method='post' action="upload.php" enctype='multipart/form-data'>
+           <br> 
+               <input type='file' name='foto' value='Cadastrar foto'> 
+               <input type='submit' name='submit'> 
+            </form> 
+            
+<!--
+                <input type="file" file-model="myFile"/>
+                <button ng-click="uploadFile()">upload me</button>
+-->
+            <!--<form ng-submit="savePhoto()" enctype="multipart/form-data">
 		    	<legend>Criar conta</legend>
 		        <label>Foto de perfil</label>
 				<input type="file" id="file" onchange="angular.element(this).scope().uploadFile(this.files)">
@@ -54,7 +65,7 @@
 		        	<input type="reset" class="btn btn-large" value="Cancelar" />
 		    	</p>
 		    </form>
-
+            -->
 		    <div id="progress-bar">
 					<div class="progress progress-striped active">
 			    		<div class="bar" style="width: 0%;"></div>

@@ -50,7 +50,7 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
 					return;
 				var array = callback.data;
 				array.forEach(function(iter){
-					$scope.possiblePartners.push({name: iter[0], email: iter[1]});
+					$scope.possiblePartners.push({name: iter[0], email: iter[1], photo: iter[3]});
 				});
 			}
 		});

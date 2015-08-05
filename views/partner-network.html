@@ -16,7 +16,7 @@
 
 			<div ng-repeat="iter in possibleNewPartners | orderBy: 'name' ">
 				<div class="user-found">
-					<img class="img-circle" src="image/user-profile.png" alt="Profile Photo" ng-click="openPartnerProfile(iter)" />
+					<img class="img-circle" src="{{iter.photo}}" alt="Profile Photo" ng-click="openPartnerProfile(iter)" />
 					<p>{{iter.name}}</p>
 				</div>
 			</div>
@@ -30,7 +30,7 @@
 			
 			<div ng-repeat="iter in partners | orderBy: 'name' | filter:filtro">
 				<div class="network-partner">
-					<img class="img-circle" src="image/user-profile.png" alt="Profile Photo" ng-click="openPartnerProfile(iter)" />
+					<img class="img-circle" src="{{iter.photo}}" alt="Profile Photo" ng-click="openPartnerProfile(iter)" />
 					<p>{{iter.name}}</p>
 				</div>
 			</div>

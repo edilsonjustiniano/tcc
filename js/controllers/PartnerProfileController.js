@@ -29,7 +29,7 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 				window.sessionStorage.setItem('typeOfAccount', null);
 				window.location.href = 'index.html';
 			} else {
-				
+				$scope.partner.photo = callback.data[0][2]; //get photo
 			}
 		});
 	};
