@@ -44,4 +44,7 @@ app.service('ServiceProviderService', function($http){
         }).
         success(callback);
     };
+    
+    this.getQuantityOfPartnersEvaluateIt = function(service, callback) {
+    };
 });

@@ -112,11 +112,12 @@ public class PersonDAO {
 							"(company)-[:LOCATED_IN]->(cityWorks), " +
 							"(cityWorks)-[:BELONGS_TO]->(ufWorks), " +
 							"(cityLives)-[:BELONGS_TO]->(ufLives) " + 
+							"WITH DISTINCT(person), cityLives, company " +
 							"CREATE (person)-[:LIVES_IN]->(cityLives), " +
 							"(person)-[:WORKS_IN]->(company) " + 
 							"SET person += {district: '" + person.getDistrict() + "', " +
 							"address: '" + person.getAddress() + "'} " +
-							"RETURN person.name, person.email; \"}";
+							"RETURN DISTINCT(person.name), person.email; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)

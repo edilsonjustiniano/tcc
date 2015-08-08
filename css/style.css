@@ -9,6 +9,10 @@ object.header-import{
 	height: 50px;
 }
 
+.navbar {
+    background-color: #000099!important;
+}
+
 #general {
 	margin: 0 0;
 	min-height: 80%;

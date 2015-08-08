@@ -55,8 +55,8 @@ app.controller('SearchServiceProviderController', function ($scope, ServiceProvi
                             name: iter[0],
                             email: iter[1],
                             service: iter[2],
-                            average: iter[3],
-                            howManyPeopleEvaluate: iter[4]
+                            howManyPeopleEvaluate: iter[3],
+                            average: iter[4]
                         });
                     });
                 }

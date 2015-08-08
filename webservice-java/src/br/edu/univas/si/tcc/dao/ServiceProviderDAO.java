@@ -34,6 +34,53 @@ public class ServiceProviderDAO {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		
+		/*
+		 * /* Na minha rede de parceiros */
+MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: 'edilsonjustiniano@gmail.com'}),  
+(sp:Person {typeOfAccount: 'SERVICE_PROVIDER'}), 
+(service:Service), 
+(executed:Execute), 
+(partners:Person {typeOfAccount: 'CONTRACTOR'}), 
+(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners), 
+(partners)-[:PARTNER_OF]->(user)-[:PARTNER_OF]->(partners), 
+(sp)-[:PROVIDE]->(service), 
+(service)-[:EXECUTE]->(executed), 
+(sp)-[:EXECUTE]->(executed) 
+WHERE UPPER(service.name) = UPPER('doméstica') 
+AND ((executed)-[:TO]->(user) OR (executed)-[:TO]->(partners)) 
+RETURN sp.name, sp.email, service.name, count(executed) as total, avg(executed.note) as media ORDER BY media DESC;
+
+
+/* Avaliação de Pessoas da minha cidade */
+MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: 'edilsonjustiniano@gmail.com'}),  
+(sp:Person {typeOfAccount: 'SERVICE_PROVIDER'}),  //remover o email para pegar todos os provedores de serviços 
+(service:Service {name: 'Doméstica'}), 
+(executed:Execute), 
+(partners:Person {typeOfAccount: 'CONTRACTOR'}),
+(partners)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me),
+(sp)-[:PROVIDE]->(service), 
+(service)-[:EXECUTE]->(executed), 
+(sp)-[:EXECUTE]->(executed),
+(executed)-[:TO]->(partners)
+RETURN partners.name, sp.name, sp.email, service.name, count(executed) as total, avg(executed.note) as media ORDER BY media DESC;
+
+
+
+/* Avaliação de Pessoas da minha empresa */
+MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: 'edilsonjustiniano@gmail.com'}),  
+(sp:Person {typeOfAccount: 'SERVICE_PROVIDER'}), //remover o email para pegar todos os provedores de serviços 
+(service:Service {name: 'Doméstica'}), 
+(executed:Execute), 
+(partners:Person {typeOfAccount: 'CONTRACTOR'}),
+(partners)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me),
+(sp)-[:PROVIDE]->(service), 
+(service)-[:EXECUTE]->(executed), 
+(sp)-[:EXECUTE]->(executed),
+(executed)-[:TO]->(partners)
+RETURN partners.name, sp.name, sp.email, service.name, count(executed) as total, avg(executed.note) as media ORDER BY media DESC;
+
+		 */
+		
 //		MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: 'joao1@gmail.com'}), 
 //		(sp:Person {typeOfAccount: 'SERVICE_PROVIDER'}),
 //		(service:Service),
@@ -65,7 +112,7 @@ public class ServiceProviderDAO {
 						"(sp)-[:EXECUTE]->(executed) " +
 						"WHERE UPPER(service.name) = UPPER('" + service + "') " + 
 						"AND ((executed)-[:TO]->(user) OR (executed)-[:TO]->(partners)) " + 
-						"RETURN sp.name, sp.email, service.name, avg(executed.note) as media ORDER BY media DESC; \"}";
+						"RETURN sp.name, sp.email, service.name, count(executed) as totalPersonEvaluate, avg(executed.note) as media ORDER BY media DESC; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
