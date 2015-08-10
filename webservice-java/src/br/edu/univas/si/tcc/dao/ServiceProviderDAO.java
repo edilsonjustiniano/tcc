@@ -118,7 +118,17 @@ public class ServiceProviderDAO {
 				"(executed)-[:TO]->(partners) " +
 				"WHERE NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
 				"AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
-				"RETURN DISTINCT(sp.name), sp.email, service.name, count(executed) as total, avg(executed.note) as media, 3 as order ORDER BY order, media DESC; \"}";
+				"RETURN DISTINCT(sp.name), sp.email, service.name, count(executed) as total, avg(executed.note) as media, 3 as order ORDER BY order, media DESC " + 
+				"UNION ALL " +
+				"MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: '" + person.getEmail() + "'}), " +  
+				"(sp:Person {typeOfAccount: 'SERVICE_PROVIDER'}), " +
+				"(service:Service {name: '" + service + "'}), " +
+				"(partners:Person {typeOfAccount: 'CONTRACTOR'}), " +
+				"(partners)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me), " +
+				"(sp)-[:PROVIDE]->(service) " +
+				"WHERE NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
+				"AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
+				"RETURN DISTINCT(sp.name), sp.email, service.name, 0 as total, 0 as media, 4 as order ORDER BY order, media DESC; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
