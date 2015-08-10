@@ -9,9 +9,11 @@
 
 <div id="content">
     <div class="options-service-providers" ng-repeat="provider in serviceProviders | orderBy: name" ng-show="serviceProviders.length > 0" ng-click="selectServiceProvider(provider)">
-        <span>Name: {{provider.name}} |</span>
-        <span>E-mail: {{provider.email}} |</span>
+        <img class="img-circle" src="upload/user-profile.png" title="{{provider.name}}">
+        <span>{{provider.name}}</span>
+<!--        <span>E-mail: {{provider.email}} |</span>-->
         <span>Média: {{provider.average}}</span>
-        <span>Avaliado por: {{provider.howManyPeopleEvaluate}} de seu(s) parceiros</span>
+        <span>Avaliado(a) por: {{provider.howManyPersonsEvaluate}} pessoa(s)</span>
     </div>
+    
 </div>

@@ -45,6 +45,65 @@ app.service('ServiceProviderService', function($http){
         success(callback);
     };
     
-    this.getQuantityOfPartnersEvaluateIt = function(service, callback) {
+    /* Rating in my partner network */
+    this.getServiceProviderRatingInMyNetworkPartners = function(serviceProvider, callback) {
+        var token = window.localStorage['token'];
+        $http.post('http://localhost:8080/WebService/serviceProvider/getServiceProviderRatingInMyNetworkPartners', {
+            serviceProvider: serviceProvider.email,
+            service: serviceProvider.service,
+            token: token
+        }).
+        success(callback);
+    };
+    
+    /* Rating in my company */
+    this.getServiceProviderRatingInMyCompany = function(serviceProvider, callback) {
+        var token = window.localStorage['token'];
+        $http.post('http://localhost:8080/WebService/serviceProvider/getServiceProviderRatingInMyCompany', {
+            serviceProvider: serviceProvider.email,
+            service: serviceProvider.service,
+            token: token
+        }).
+        success(callback);
+    };
+    
+    
+    /* Rating in my company */
+    this.getServiceProviderRatingInMyCity = function(serviceProvider, callback) {
+        var token = window.localStorage['token'];
+        $http.post('http://localhost:8080/WebService/serviceProvider/getServiceProviderRatingInMyCity', {
+            serviceProvider: serviceProvider.email,
+            service: serviceProvider.service,
+            token: token
+        }).
+        success(callback);
+    };
+    
+    /* Calculate the average to show to user in profile page */
+    this.calculateAverage = function(array) {
+        var total = 0;
+        if (array.length == 0) {
+            return total.toFixed(2);
+        }
+        array.forEach(function(iter) {
+            total += iter.note;
+        });
+        
+        total = total / array.length;
+        return total.toFixed(2);
+    };
+    
+    this.calculatePercentage = function(average) {
+        // 5 = 100%
+        // 4 = x
+        //5x = 400
+        //x = 400/5
+        //x = 80
+        
+        if (average == 0) {
+           return 0; 
+        }
+        var percent = (average * 100) / 5;
+        return percent.toFixed(2);
     };
 });

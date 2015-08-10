@@ -214,16 +214,22 @@ label.subtitle {
 	height: auto;
 }
 
+
 /* Profile page */
+#container {
+    margin-top: 60px;
+    padding: 10px;
+}
+
 #profile-data {
 	padding: 20px;
 	display: block;
 	height: auto;
-	min-width: 100px;
 	width: 20%;
 	border-radius: 5px;
-	background-color: #CCC;
+	background-color: aliceblue;
 	float: left;
+    height: auto;
 }
 
 #profile-data .name-partner {
@@ -235,16 +241,14 @@ label.subtitle {
 }
 
 #profile-content {
-	display: block;
-	width: 70%;
-	margin-left: 10px;
-	margin-right: 10px;
-	border-radius: 5px;
-	background-color: #CCA;
-	float: right;
+    position: relative;
+    margin-top: 0px;
+    max-width: 70%;
+    float: left;
+    margin-left: 20px;
 }
 
-/* select options service provider */
+/* select options service provider (search services page) */
 .options-services {
     display: block;
     width: 220px;
@@ -263,23 +267,36 @@ label.subtitle {
 .options-service-providers {
     display: block;
     color: lightslategray;
-    width: 100%;
+    width: 170px;
     margin-left: -20px;
     border-radius: 2px;
     padding: 10px 0px 10px 20px;
     background-color: #FCF5F5;
-    margin-bottom: 1px;
+    margin: 1px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 5px;
+} 
+
+.options-service-providers > img {
+    display: block;
+    width: 150px;
+    margin-left: 0px;
+    margin-right: 10px;
+    margin-top: 10px;
+} 
+
+.options-service-providers > span {
+    display: block;
+    width: 150px;
+    text-align: center;
+    margin-top: 5px;
 } 
 
 .options-service-providers:hover {
     cursor: pointer;
-    color: #3636E1;
+    color: cornflowerblue;
     opacity: .8;
-}
-
-/* Evaluate page */
-#evaluate-form input[type=radio] {
-    background-image : url("../image/star_disabled.png") !important;   
 }
 
 #search-field {
@@ -290,11 +307,44 @@ label.subtitle {
     border: 2px solid transparent; /* Não tirar a borda se não ela não respeita o espaço */
 }
 
-#content {
-    position: relative;
-    padding: 10px 20px 10px 20px;
-    width: 100%;
+
+
+/* Service Provider profile page */
+#evaluate-form input[type=radio] {
+    background-image : url("../image/star_disabled.png") !important;   
+}
+
+.service-provider-evaluates {
+    display: block;
+    border-radius: 10px;
+    background-color: aliceblue;
+    margin-left: 20px;
+    padding: 20px 10px 20px 10px;
+    width: 70%;
     height: auto;
-    margin-top: 60px;
-    border: 1px solid transparent; /* Não tirar a borda se não ela não respeita o espaço */
+    margin-top: 50px;
+    float: left;
+}
+
+.comments {
+    display: block;
+    width: 95%;
+    border-radius: 5px;
+    background-color: ghostwhite;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.comments > .name {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    color: dimgray;
+}
+
+.comments > .comment {
+    display: block;
+    font-size: 13px;
+    color: darkgray;
+    margin-top: 5px;
 }

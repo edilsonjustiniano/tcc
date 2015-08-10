@@ -15,9 +15,29 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     $scope.serviceProvider = {};
     $scope.serviceProvider.email = data[0]; //email
     $scope.serviceProvider.service = data[1]; //service
-    $scope.evaluateNote = '';
-    $scope.comments = '';
-
+    
+    /* Rating data in my network */
+    $scope.ratingInMyNetwork = [];
+    $scope.averageInMyNetwork = 0;
+    $scope.percentInMyNetwork = 0;
+    $scope.personsWhoseRateitInMyNetwork = '\n';
+    $scope.showCommentsFromMyNetwork = false;
+    
+    /* Rating data in my company */
+    $scope.ratingInMyCompany = [];
+    $scope.averageInMyCompany = 0;
+    $scope.percentInMyCompany = 0;
+    $scope.personsWhoseRateitInMyCompany = '\n';
+    $scope.showCommentsFromMyCompany = false;
+    
+    /* Rating data in my city */
+    $scope.ratingInMyCity = [];
+    $scope.averageInMyCity = 0;
+    $scope.percentInMyCity = 0;
+    $scope.personsWhoseRateitInMyCity = '\n';
+    $scope.showCommentsFromMyCity = false;
+    
+    
     $scope.msg = {}; /* Error or success mesage */
     $scope.msg.type = '';
     $scope.msg.msg = '';
@@ -46,6 +66,126 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     $scope.getServiceProviderData();
 
 
+    /* Get evaluate rating for my network partners */
+    $scope.getServiceProviderRatingInMyNetworkPartners = function() {
+        if ($scope.serviceProvider != null && $scope.serviceProvider != undefined) {
+            ServiceProviderService.getServiceProviderRatingInMyNetworkPartners($scope.serviceProvider, function(callback) {
+                if (!callback.success) {
+                    window.localStorage['token'] = null;
+                    window.sessionStorage.setItem('typeOfAccount', null);
+                    window.location.href = 'index.html';
+                } else {
+                    var array = callback.data;
+                    array.forEach(function(iter) {
+                        $scope.ratingInMyNetwork.push({
+                            partner : iter[0], //partner name
+                            note    : iter[1], //note
+                            comments: iter[2] //comments
+                        });
+                        $scope.personsWhoseRateitInMyNetwork += iter[0] + '\n';
+                    });
+                    window.localStorage['token'] = callback.token;
+                    
+                    $scope.averageInMyNetwork = ServiceProviderService.calculateAverage($scope.ratingInMyNetwork);
+                    $scope.percentInMyNetwork = ServiceProviderService.calculatePercentage($scope.averageInMyNetwork);
+                }
+            });
+        }
+    };
+    
+    $scope.getServiceProviderRatingInMyNetworkPartners();
+    
+    
+    $scope.enableCommentsFromMyNetwork = function() {
+        if ($scope.showCommentsFromMyNetwork) {
+            $scope.showCommentsFromMyNetwork = false;
+        } else {
+            $scope.showCommentsFromMyNetwork = true;
+        }
+    }
+    
+    
+    
+    /* Get evaluate rating for my company */
+    $scope.getServiceProviderRatingInMyCompany = function() {
+        if ($scope.serviceProvider != null && $scope.serviceProvider != undefined) {
+            ServiceProviderService.getServiceProviderRatingInMyCompany($scope.serviceProvider, function(callback) {
+                if (!callback.success) {
+                    window.localStorage['token'] = null;
+                    window.sessionStorage.setItem('typeOfAccount', null);
+                    window.location.href = 'index.html';
+                } else {
+                    var array = callback.data;
+                    array.forEach(function(iter) {
+                        $scope.ratingInMyCompany.push({
+                            partner : iter[0], //partner name
+                            note    : iter[1], //note
+                            comments: iter[2] //comments
+                        });
+                        $scope.personsWhoseRateitInMyCompany += iter[0] + '\n';
+                    });
+                    window.localStorage['token'] = callback.token;
+                    
+                    $scope.averageInMyCompany = ServiceProviderService.calculateAverage($scope.ratingInMyCompany);
+                    $scope.percentInMyCompany = ServiceProviderService.calculatePercentage($scope.averageInMyCompany);
+                }
+            });
+        }
+    };
+    
+    $scope.getServiceProviderRatingInMyCompany();
+    
+    $scope.enableCommentsFromMyCompany = function() {
+        if ($scope.showCommentsFromMyCompany) {
+            $scope.showCommentsFromMyCompany = false;
+        } else {
+            $scope.showCommentsFromMyCompany = true;
+        }
+    }
+
+    
+    
+    
+    /* Get evaluate rating for my city */
+    $scope.getServiceProviderRatingInMyCity = function() {
+        if ($scope.serviceProvider != null && $scope.serviceProvider != undefined) {
+            ServiceProviderService.getServiceProviderRatingInMyCity($scope.serviceProvider, function(callback) {
+                if (!callback.success) {
+                    window.localStorage['token'] = null;
+                    window.sessionStorage.setItem('typeOfAccount', null);
+                    window.location.href = 'index.html';
+                } else {
+                    var array = callback.data;
+                    array.forEach(function(iter) {
+                        $scope.ratingInMyCity.push({
+                            partner : iter[0], //partner name
+                            note    : iter[1], //note
+                            comments: iter[2] //comments
+                        });
+                        $scope.personsWhoseRateitInMyCity += iter[0] + '\n';
+                    });
+                    window.localStorage['token'] = callback.token;
+                    
+                    $scope.averageInMyCity = ServiceProviderService.calculateAverage($scope.ratingInMyCity);
+                    $scope.percentInMyCity = ServiceProviderService.calculatePercentage($scope.averageInMyCity);
+                }
+            });
+        }
+    };
+    
+    $scope.getServiceProviderRatingInMyCity();
+    
+    $scope.enableCommentsFromMyCity = function() {
+        if ($scope.showCommentsFromMyCity) {
+            $scope.showCommentsFromMyCity = false;
+        } else {
+            $scope.showCommentsFromMyCity = true;
+        }
+    }
+    
+    
+    
+    
     /* save evaluate */
     $scope.saveEvaluate = function () {
         ServiceProviderService.saveEvaluate($scope.serviceProvider, $scope.evaluateNote, $scope.comments, function (callback) {

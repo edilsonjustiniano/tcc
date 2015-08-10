@@ -1,64 +1,107 @@
 <!-- Content-->
-<div id="profile-data">
-    <img class="img-circle" src="image/user-profile.png" alt="Profile Photo" />
-    <span class="name-partner">
+<div id="container">
+
+    <div id="profile-data">
+        <img class="img-circle" src="image/user-profile.png" alt="Profile Photo" />
+        <span class="name-partner">
 		{{serviceProvider.name}}
 	</span>
-</div>
+    </div>
 
-<div id="profile-content">
+    <div id="profile-content">
 
-    <button class="btn" ng-click="mesageButtonClick()">Enviar Mensagem</button>
-    <button class="btn" ng-click="evaluateButtonClick()">Avaliar Serviço</button>
+        <button class="btn" ng-click="mesageButtonClick()">Enviar Mensagem</button>
+        <button class="btn" ng-click="evaluateButtonClick()">Avaliar Serviço</button>
 
 
-    <form ng-submit="saveEvaluate()" id="evaluate-form" ng-show="showAddEvaluate">
-        <legend>Avaliar serviço</legend>
+        <form ng-submit="saveEvaluate()" id="evaluate-form" ng-show="showAddEvaluate">
+            <legend>Avaliar serviço</legend>
 
-        <!-- Msg error -->
-        <div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
+            <!-- Msg error -->
+            <div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
 
-        <!-- Msg success -->
-        <div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
+            <!-- Msg success -->
+            <div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
 
-        <label class="radio">Nota</label>
+            <label class="radio">Nota</label>
+
+            <label class="radio inline">
+                <input type="radio" value="1" ng-model="evaluateNote" name="note" required>0
+            </label>
+
+            <label class="radio inline">
+                <input type="radio" value="1" ng-model="evaluateNote" name="note" required>1
+            </label>
+
+            <label class="radio inline">
+                <input type="radio" value="2" ng-model="evaluateNote" name="note" required>2
+            </label>
+
+            <label class="radio inline">
+                <input type="radio" value="3" ng-model="evaluateNote" name="note" required>3
+            </label>
+
+            <label class="radio inline">
+                <input type="radio" value="4" ng-model="evaluateNote" name="note" required>4
+            </label>
+
+            <label class="radio inline">
+                <input type="radio" value="5" ng-model="evaluateNote" name="note" required>5
+            </label>
+
+            <label>Mensagem</label>
+            <textarea rows="5" ng-model="comments" placeholder="Insira seu comentário..." required></textarea>
+
+            <p>
+                <input type="submit" class="btn btn-large btn-primary" value="Salvar" />
+                <input type="reset" class="btn btn-large" value="Cancelar" />
+            </p>
+        </form>
+
+
+        <form ng-submit="saveMesage()" id="evaluate-form" ng-show="showAddMesage">
+            <legend>Enviar Mensagem</legend>
+        </form>
+
+    </div>
+
+
+    <div class="service-provider-evaluates">
+        <h3>Em minha rede de parceiros</h3>
+        <span class="note-rating">Avaliado por: {{ratingInMyNetwork.length}} parceiro(s) Média: {{averageInMyNetwork}}</span>
+        <div class="progress progress-info progress-striped">
+            <div class="bar" style="width: {{percentInMyNetwork}}%" title="Avaliado por: {{personsWhoseRateitInMyNetwork}}"></div>
+        </div>
+        <button class="btn" ng-click="enableCommentsFromMyNetwork()" ng-show="ratingInMyNetwork.length > 0">Comentários</button>
+        <div class="comments" ng-repeat="iter in ratingInMyNetwork" ng-show="showCommentsFromMyNetwork">
+            <span class="name">{{iter.partner}}</span>
+            <span class="comment">{{iter.comments}}</span>
+        </div>
         
-        <label class="radio inline">
-            <input type="radio" value="1" ng-model="evaluateNote" name="note" required>0
-        </label>
         
-        <label class="radio inline">
-            <input type="radio" value="1" ng-model="evaluateNote" name="note" required>1
-        </label>
-
-        <label class="radio inline">
-            <input type="radio" value="2" ng-model="evaluateNote" name="note" required>2
-        </label>
-
-        <label class="radio inline">
-            <input type="radio" value="3" ng-model="evaluateNote" name="note" required>3
-        </label>
-
-        <label class="radio inline">
-            <input type="radio" value="4" ng-model="evaluateNote" name="note" required>4
-        </label>
-
-        <label class="radio inline">
-            <input type="radio" value="5" ng-model="evaluateNote" name="note" required>5
-        </label>
+        <h3>Na empresa onde trabalho</h3>
+        <span class="note-rating">Avaliado por: {{ratingInMyCompany.length}} pessoa(s) Média: {{averageInMyCompany}}</span>
+        <div class="progress progress-success progress-striped">
+            <div class="bar" style="width: {{percentInMyCompany}}%" title="Avaliado por: {{personsWhoseRateitInMyCompany}}"></div>
+        </div>
+        <button class="btn" ng-click="enableCommentsFromMyCompany()" ng-show="ratingInMyCompany.length > 0">Comentários</button>
+        <div class="comments" ng-repeat="iter in ratingInMyCompany" ng-show="showCommentsFromMyCompany">
+            <span class="name">{{iter.partner}}</span>
+            <span class="comment">{{iter.comments}}</span>
+        </div>
         
-        <label>Mensagem</label>
-        <textarea rows="5" ng-model="comments" placeholder="Insira seu comentário..." required></textarea>
-
-        <p>
-            <input type="submit" class="btn btn-large btn-primary" value="Salvar" />
-            <input type="reset" class="btn btn-large" value="Cancelar" />
-        </p>
-    </form>
-    
-    
-    <form ng-submit="saveMesage()" id="evaluate-form" ng-show="showAddMesage">
-        <legend>Enviar Mensagem</legend>
-    </form>
+        
+        <h3>Em minha cidade</h3>
+        <span class="note-rating">Avaliado por: {{ratingInMyCity.length}} pessoa(s) Média: {{averageInMyCity}}</span>
+        <div class="progress progress-warning progress-striped">
+            <div class="bar" style="width: {{percentInMyCity}}%" title="Avaliado por: {{personsWhoseRateitInMyCity}}"></div>
+        </div>
+        <button class="btn" ng-click="enableCommentsFromMyCity()" ng-show="ratingInMyCity.length > 0">Comentários</button>
+        <div class="comments" ng-repeat="iter in ratingInMyCity" ng-show="showCommentsFromMyCity">
+            <span class="name">{{iter.partner}}</span>
+            <span class="comment">{{iter.comments}}</span>
+        </div>
+        
+    </div>
 
 </div>
