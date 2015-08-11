@@ -92,6 +92,7 @@ public class ServiceProviderDAO {
 				"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 				"AND UPPER(service.name) = UPPER('" + service + "') " +
 				"AND (executed)-[:TO]->(partners) " +
+				"AND me <> sp " +
 				"RETURN DISTINCT(sp.name), sp.email, service.name, count(executed) as total, avg(executed.note) as media, 1 as order ORDER BY order, media DESC " +
 				"UNION ALL " +
 				"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +  
@@ -106,6 +107,7 @@ public class ServiceProviderDAO {
 				"(executed)-[:TO]->(partners) " +
 				"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 				"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
+				"AND me <> sp " +
 				"RETURN DISTINCT(sp.name), sp.email, service.name, count(executed) as total, avg(executed.note) as media, 2 as order ORDER BY order, media DESC " +
 				"UNION ALL " +
 				"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +  
@@ -121,6 +123,7 @@ public class ServiceProviderDAO {
 				"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 				"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
 				"AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
+				"AND me <> sp " +
 				"RETURN DISTINCT(sp.name), sp.email, service.name, count(executed) as total, avg(executed.note) as media, 3 as order ORDER BY order, media DESC " + 
 				"UNION ALL " +
 				"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +  
@@ -132,6 +135,7 @@ public class ServiceProviderDAO {
 				"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 				"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
 				"AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
+				"AND me <> sp " +
 				"RETURN DISTINCT(sp.name), sp.email, service.name, 0 as total, 0 as media, 4 as order ORDER BY order, media DESC; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
@@ -220,10 +224,10 @@ public class ServiceProviderDAO {
 		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
 					"(sp:Person {email: '" + providerEmail + "'}), " + 
 					"(service:Service {name: '" + providerService + "'}) " +
+					"WHERE sp.typeOfAccount <> 'CONTRACTOR' " +
 					"CREATE (executed:Execute {note: " + note + ", comments: '" + comments + "'}), " +
 					"(service)-[:EXECUTE]->(executed), " +
 					"(sp)-[:EXECUTE]->(executed)-[:TO]->(me) " +
-					"WHERE sp.typeOfAccount <> 'CONTRACTOR' " +
 					"RETURN service.name, me.name, sp.name, COUNT(executed) as qtde; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
