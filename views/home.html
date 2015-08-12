@@ -1,15 +1,15 @@
 <!-- Content-->
-
+<div id="container">
 	<!-- Últimas contratações (avaliações realizadas por ele à prestadores de serviços) para usuários do tipo "contratantes" -->
 
-	<div id="ultimas-contratacoes" ng-show="typeOfAccount == 'CONTRACTOR'">
+	<div id="ultimas-contratacoes" ng-show="typeOfAccount <> 'SERVICE_PROVIDER'">
 		<h1>Últimas contratações</h1>
 
 		
 	</div>
 
 	<!-- Possíveis parceiros, estilo o que o facebook faz com os prováveis amigos que vc conheça para usuários do tipo "contratantes" -->
-	<div id="possiveis-parceiros" ng-show="typeOfAccount == 'CONTRACTOR'">
+	<div id="possiveis-parceiros" ng-show="typeOfAccount <> 'SERVICE_PROVIDER'">
 		<h1>Possíveis parceiros</h1>
 
 		<!-- Msg error -->
@@ -28,6 +28,11 @@
 
 
 	<!-- Para ambos os tipos de usuários -->
-	<div id="relatorios">
-		<h1>Relatórios</h1>
+	<div id="relatorios" ng-show="typeOfAccount <> 'SERVICE_PROVIDER'">
+		<h1>Relatórios da sua rede de parceiros</h1>
 	</div>
+	<p></p>
+	<div id="relatorios" ng-hide="typeOfAccount == 'CONTRACTOR'">
+		<h1>Relatórios de avaliação de serviços prestados por você</h1>
+	</div>
+</div>

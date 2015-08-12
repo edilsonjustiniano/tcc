@@ -80,54 +80,62 @@ public class ServiceProviderDAO {
 //		AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me))
 //		RETURN DISTINCT(sp.name), sp.email, /*partners.name,*/ service.name, count(executed) as total, avg(executed.note) as media, 3 as order ORDER BY order, media DESC
 		
-		String query = "{\"query\":\" MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: '" + person.getEmail() + "'}), "+
-				"(sp:Person {typeOfAccount: 'SERVICE_PROVIDER'}), " +
+		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), "+
+				"(sp:Person), " +
 				"(service:Service), " + 
 				"(executed:Execute), " + 
-				"(partners:Person {typeOfAccount: 'CONTRACTOR'}), " + 
+				"(partners:Person), " + 
 				"(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners), " +
 				"(sp)-[:PROVIDE]->(service), " +
 				"(service)-[:EXECUTE]->(executed), " +
 				"(sp)-[:EXECUTE]->(executed) " +
-				"WHERE UPPER(service.name) = UPPER('" + service + "') " +
+				"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
+				"AND UPPER(service.name) = UPPER('" + service + "') " +
 				"AND (executed)-[:TO]->(partners) " +
+				"AND me <> sp " +
 				"RETURN DISTINCT(sp.name), sp.email, service.name, count(executed) as total, avg(executed.note) as media, 1 as order ORDER BY order, media DESC " +
 				"UNION ALL " +
-				"MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: 'edilsonjustiniano@gmail.com'}), " +  
-				"(sp:Person {typeOfAccount: 'SERVICE_PROVIDER'}), " +
+				"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +  
+				"(sp:Person), " +
 				"(service:Service {name: '" + service + "'}), " + 
 				"(executed:Execute), " +
-				"(partners:Person {typeOfAccount: 'CONTRACTOR'}), " +
+				"(partners:Person), " +
 				"(partners)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me), " +
 				"(sp)-[:PROVIDE]->(service), " + 
 				"(service)-[:EXECUTE]->(executed), " + 
 				"(sp)-[:EXECUTE]->(executed), " +
 				"(executed)-[:TO]->(partners) " +
-				"WHERE NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
+				"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
+				"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
+				"AND me <> sp " +
 				"RETURN DISTINCT(sp.name), sp.email, service.name, count(executed) as total, avg(executed.note) as media, 2 as order ORDER BY order, media DESC " +
 				"UNION ALL " +
-				"MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: '" + person.getEmail() + "'}), " +  
-				"(sp:Person {typeOfAccount: 'SERVICE_PROVIDER'}), " +
+				"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +  
+				"(sp:Person), " +
 				"(service:Service {name: '" + service + "'}), " + 
 				"(executed:Execute), " + 
-				"(partners:Person {typeOfAccount: 'CONTRACTOR'}), " +
+				"(partners:Person), " +
 				"(partners)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me), " +
 				"(sp)-[:PROVIDE]->(service), " + 
 				"(service)-[:EXECUTE]->(executed), " + 
 				"(sp)-[:EXECUTE]->(executed), " +
 				"(executed)-[:TO]->(partners) " +
-				"WHERE NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
+				"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
+				"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
 				"AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
+				"AND me <> sp " +
 				"RETURN DISTINCT(sp.name), sp.email, service.name, count(executed) as total, avg(executed.note) as media, 3 as order ORDER BY order, media DESC " + 
 				"UNION ALL " +
-				"MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: '" + person.getEmail() + "'}), " +  
-				"(sp:Person {typeOfAccount: 'SERVICE_PROVIDER'}), " +
+				"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +  
+				"(sp:Person), " +
 				"(service:Service {name: '" + service + "'}), " +
-				"(partners:Person {typeOfAccount: 'CONTRACTOR'}), " +
+				"(partners:Person), " +
 				"(partners)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me), " +
 				"(sp)-[:PROVIDE]->(service) " +
-				"WHERE NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
+				"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
+				"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
 				"AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
+				"AND me <> sp " +
 				"RETURN DISTINCT(sp.name), sp.email, service.name, 0 as total, 0 as media, 4 as order ORDER BY order, media DESC; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
@@ -145,9 +153,10 @@ public class ServiceProviderDAO {
 		WebResource resource = FactoryDAO.GetInstance();
 		
 		String query = null;
-		query = "{\"query\":\" MATCH (sp:Person {typeOfAccount: 'SERVICE_PROVIDER', email: '" + providerEmail + "'}), " + 
+		query = "{\"query\":\" MATCH (sp:Person {email: '" + providerEmail + "'}), " + 
 							"(service:Service {name: '" + providerService + "'}), " +
 							"(sp)-[:PROVIDE]->(service) " +
+							"WHERE sp.typeOfAccount <> 'CONTRACTOR' " + 
 							"RETURN DISTINCT(sp.name), sp.email, sp.gender, service.name \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
@@ -171,11 +180,12 @@ public class ServiceProviderDAO {
 //		(sp)-[:EXECUTE]->(executed)-[:TO]->(me)
 //		RETURN service.name, me.name, sp.name, COUNT(executed) as qtde;
 		
-		String query = "{\"query\":\" MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: '" + person.getEmail() + "'}), " +
-					"(sp:Person {typeOfAccount: 'SERVICE_PROVIDER', email: '" + providerEmail + "'}), " + 
+		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
+					"(sp:Person {email: '" + providerEmail + "'}), " + 
 					"(service:Service {name: '" + providerService + "'}), " +
 					"(service)-[:EXECUTE]->(executed), " +
-					"(sp)-[:EXECUTE]->(executed)-[:TO]->(me) " + 
+					"(sp)-[:EXECUTE]->(executed)-[:TO]->(me) " +
+					"WHERE sp.typeOfAccount <> 'CONTRACTOR' " +
 					"RETURN COUNT(executed) as qtde; \"}";
 		System.out.println(query);
 		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
@@ -211,12 +221,13 @@ public class ServiceProviderDAO {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 
-		String query = "{\"query\":\" MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: '" + person.getEmail() + "'}), " +
-					"(sp:Person {typeOfAccount: 'SERVICE_PROVIDER', email: '" + providerEmail + "'}), " + 
+		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
+					"(sp:Person {email: '" + providerEmail + "'}), " + 
 					"(service:Service {name: '" + providerService + "'}) " +
+					"WHERE sp.typeOfAccount <> 'CONTRACTOR' " +
 					"CREATE (executed:Execute {note: " + note + ", comments: '" + comments + "'}), " +
 					"(service)-[:EXECUTE]->(executed), " +
-					"(sp)-[:EXECUTE]->(executed)-[:TO]->(me) " + 
+					"(sp)-[:EXECUTE]->(executed)-[:TO]->(me) " +
 					"RETURN service.name, me.name, sp.name, COUNT(executed) as qtde; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
@@ -248,17 +259,18 @@ public class ServiceProviderDAO {
 //		AND (executed)-[:TO]->(partners)
 //		RETURN DISTINCT(sp.name), sp.email, /*partners.name,*/ service.name, count(executed) as total, avg(executed.note) as media, 1 as order ORDER BY order, media DESC
 		
-		String query = "{\"query\":\" MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: '" + person.getEmail() + "'}), " +
-						"(sp:Person {typeOfAccount: 'SERVICE_PROVIDER', email: '" + serviceProvider +  "'}), " + 
+		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
+						"(sp:Person {email: '" + serviceProvider +  "'}), " + 
 						"(service:Service {name: '" + service + "'}), " +
 						"(executed:Execute), " +
-						"(partners:Person {typeOfAccount: 'CONTRACTOR'}), " +
+						"(partners:Person), " +
 						"(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners), " + 
 						"(sp)-[:PROVIDE]->(service), " + 
 						"(service)-[:EXECUTE]->(executed), " +
 						"(sp)-[:EXECUTE]->(executed), " +
 						"(executed)-[:TO]->(partners) " +
-						"WHERE UPPER(service.name) = UPPER('" + service + "') " +
+						"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
+						"AND UPPER(service.name) = UPPER('" + service + "') " +
 						"RETURN partners.name, executed.note, executed.comments ORDER BY executed.note DESC; \"}";
 
 		System.out.println(query);
@@ -291,17 +303,18 @@ public class ServiceProviderDAO {
 //		WHERE NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners))
 //		RETURN DISTINCT(sp.name), sp.email, /*partners.name,*/ service.name, count(executed) as total, avg(executed.note) as media, 2 as order ORDER BY order, media DESC
 		
-		String query = "{\"query\":\" MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: '" + person.getEmail() + "'}), " +
-						"(sp:Person {typeOfAccount: 'SERVICE_PROVIDER', email: '" + serviceProvider +  "'}), " + 
+		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
+						"(sp:Person {email: '" + serviceProvider +  "'}), " + 
 						"(service:Service {name: '" + service + "'}), " +
 						"(executed:Execute), " +
-						"(partners:Person {typeOfAccount: 'CONTRACTOR'}), " +
+						"(partners:Person), " +
 						"(partners)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me), " + 
 						"(sp)-[:PROVIDE]->(service), " + 
 						"(service)-[:EXECUTE]->(executed), " +
 						"(sp)-[:EXECUTE]->(executed), " +
 						"(executed)-[:TO]->(partners) " +
-						"WHERE NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
+						"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
+						"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
 						"RETURN partners.name, executed.note, executed.comments ORDER BY executed.note DESC; \"}";
 
 		System.out.println(query);
@@ -334,17 +347,18 @@ public class ServiceProviderDAO {
 //		AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me))
 //		RETURN DISTINCT(sp.name), sp.email, /*partners.name,*/ service.name, count(executed) as total, avg(executed.note) as media, 3 as order ORDER BY order, media DESC
 		
-		String query = "{\"query\":\" MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: '" + person.getEmail() + "'}), " +
-						"(sp:Person {typeOfAccount: 'SERVICE_PROVIDER', email: '" + serviceProvider +  "'}), " + 
+		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
+						"(sp:Person {email: '" + serviceProvider +  "'}), " + 
 						"(service:Service {name: '" + service + "'}), " +
 						"(executed:Execute), " +
-						"(partners:Person {typeOfAccount: 'CONTRACTOR'}), " +
+						"(partners:Person), " +
 						"(partners)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me), " + 
 						"(sp)-[:PROVIDE]->(service), " + 
 						"(service)-[:EXECUTE]->(executed), " +
 						"(sp)-[:EXECUTE]->(executed), " +
 						"(executed)-[:TO]->(partners) " +
-						"WHERE NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
+						"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
+						"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
 						"AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
 						"RETURN partners.name, executed.note, executed.comments ORDER BY executed.note DESC; \"}";
 

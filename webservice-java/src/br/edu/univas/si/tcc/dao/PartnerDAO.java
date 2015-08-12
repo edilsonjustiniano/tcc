@@ -41,9 +41,10 @@ public class PartnerDAO {
 		
 		//NEW
 		query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
-							"(users:Person {typeOfAccount: 'CONTRACTOR'}), " +
+							"(users:Person), " +
 							"(users)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me) " +
-							"WHERE users <> me AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " + 
+							"WHERE users <> me AND users.typeOfAccount <> 'SERVICE_PROVIDER' " +
+							"AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " + 
 							"OPTIONAL MATCH " +
 							"pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
 							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
@@ -62,9 +63,10 @@ public class PartnerDAO {
 //							"count(DISTINCT pMutualFriends) AS mutualFriends " +
 //							"ORDER BY length, mutualFriends DESC \"}";
 							"MATCH (me:Person {email: '" + person.getEmail() + "'}), " + 
-							"(users:Person {typeOfAccount: 'CONTRACTOR'}), " +
+							"(users:Person), " +
 							"(users)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me) " +
 							"WHERE NOT((users)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
+							"AND users.typeOfAccount <> 'SERVICE_PROVIDER' " +
 							"AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " +
 							"OPTIONAL MATCH pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
 							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
@@ -214,9 +216,11 @@ public class PartnerDAO {
 		String query = null;
 		
 		query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
-							"(users:Person {typeOfAccount: 'CONTRACTOR'}), " +
+							"(users:Person), " +
 							"(users)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me) " +
-							"WHERE users.name =~ '" + partner + ".*' AND users <> me AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " + 
+							"WHERE users.name =~ '" + partner + ".*' " +
+							"AND users.typeOfAccount <> 'SERVICE_PROVIDER' " +
+							"AND users <> me AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " + 
 							"OPTIONAL MATCH " +
 							"pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
 							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
@@ -225,9 +229,11 @@ public class PartnerDAO {
 							"ORDER BY length, mutualFriends DESC " +
 							"UNION ALL " +
 							"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
-							"(users:Person {typeOfAccount: 'CONTRACTOR'}), " +
+							"(users:Person), " +
 							"(users)-[:LIVES_IN]-(city)<-[:LIVES_IN]-(me) " +
-							"WHERE users.name =~ '" + partner + ".*' AND NOT((users)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
+							"WHERE users.name =~ '" + partner + ".*' " +
+							"AND users.typeOfAccount <> 'SERVICE_PROVIDER' " +
+							"AND NOT((users)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
 							"AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " +
 							"OPTIONAL MATCH " +
 							"pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
@@ -253,9 +259,11 @@ public class PartnerDAO {
 		String query = null;
 		
 		query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
-							"(users:Person {typeOfAccount: 'CONTRACTOR'}), " +
+							"(users:Person), " +
 							"(users)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me) " +
-							"WHERE users.name =~ '" + partner + ".*' AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " + 
+							"WHERE users.name =~ '" + partner + ".*' " +
+							"AND users.typeOfAccount <> 'SERVICE_PROVIDER' " +
+							"AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " + 
 							"AND users <> me " +
 							"RETURN DISTINCT(users.name), users.email, 3 as length, users.photo " +
 							"ORDER BY users.name ASC; \"}";

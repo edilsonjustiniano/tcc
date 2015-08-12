@@ -2,7 +2,7 @@
 
 	<!-- Últimas contratações (avaliações realizadas por ele à prestadores de serviços) para usuários do tipo "contratantes" -->
 
-	<div id="partner-request" ng-show="typeOfAccount == 'CONTRACTOR'">
+	<div id="partner-request" ng-hide="typeOfAccount == 'SERVICE_PROVIDER'">
 		
 		<!-- Msg error -->
 		<div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
