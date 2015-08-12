@@ -1,5 +1,8 @@
 package br.edu.univas.si.tcc.dao;
 
+import java.sql.Timestamp;
+import java.util.Date;
+
 import javax.ws.rs.core.MediaType;
 
 import org.codehaus.jettison.json.JSONException;
@@ -220,12 +223,13 @@ public class ServiceProviderDAO {
 	public String saveEvaluate(String providerEmail, String providerService, int note, String comments, Person person) {
 		
 		WebResource resource = FactoryDAO.GetInstance();
-
+		Date currentTime = new Timestamp(new Date().getTime());
+		
 		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
 					"(sp:Person {email: '" + providerEmail + "'}), " + 
 					"(service:Service {name: '" + providerService + "'}) " +
 					"WHERE sp.typeOfAccount <> 'CONTRACTOR' " +
-					"CREATE (executed:Execute {note: " + note + ", comments: '" + comments + "'}), " +
+					"CREATE (executed:Execute {note: " + note + ", comments: '" + comments + "', date: '" + currentTime + "'}), " +
 					"(service)-[:EXECUTE]->(executed), " +
 					"(sp)-[:EXECUTE]->(executed)-[:TO]->(me) " +
 					"RETURN service.name, me.name, sp.name, COUNT(executed) as qtde; \"}";
@@ -271,7 +275,7 @@ public class ServiceProviderDAO {
 						"(executed)-[:TO]->(partners) " +
 						"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 						"AND UPPER(service.name) = UPPER('" + service + "') " +
-						"RETURN partners.name, executed.note, executed.comments ORDER BY executed.note DESC; \"}";
+						"RETURN partners.name, executed.note, executed.comments, executed.date ORDER BY executed.note DESC; \"}";
 
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
@@ -315,7 +319,7 @@ public class ServiceProviderDAO {
 						"(executed)-[:TO]->(partners) " +
 						"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 						"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
-						"RETURN partners.name, executed.note, executed.comments ORDER BY executed.note DESC; \"}";
+						"RETURN partners.name, executed.note, executed.comments, executed.date ORDER BY executed.note DESC; \"}";
 
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
@@ -360,7 +364,7 @@ public class ServiceProviderDAO {
 						"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 						"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
 						"AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
-						"RETURN partners.name, executed.note, executed.comments ORDER BY executed.note DESC; \"}";
+						"RETURN partners.name, executed.note, executed.comments, executed.date ORDER BY executed.note DESC; \"}";
 
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)

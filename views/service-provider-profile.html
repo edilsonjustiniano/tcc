@@ -75,6 +75,7 @@
         <button class="btn" ng-click="enableCommentsFromMyNetwork()" ng-show="ratingInMyNetwork.length > 0">Comentários</button>
         <div class="comments" ng-repeat="iter in ratingInMyNetwork" ng-show="showCommentsFromMyNetwork">
             <span class="name">{{iter.partner}}</span>
+            <span class="date">{{iter.date}}</span>
             <span class="comment">{{iter.comments}}</span>
         </div>
         
@@ -87,6 +88,7 @@
         <button class="btn" ng-click="enableCommentsFromMyCompany()" ng-show="ratingInMyCompany.length > 0">Comentários</button>
         <div class="comments" ng-repeat="iter in ratingInMyCompany" ng-show="showCommentsFromMyCompany">
             <span class="name">{{iter.partner}}</span>
+            <span class="date">{{iter.date}}</span>
             <span class="comment">{{iter.comments}}</span>
         </div>
         
@@ -99,6 +101,7 @@
         <button class="btn" ng-click="enableCommentsFromMyCity()" ng-show="ratingInMyCity.length > 0">Comentários</button>
         <div class="comments" ng-repeat="iter in ratingInMyCity" ng-show="showCommentsFromMyCity">
             <span class="name">{{iter.partner}}</span>
+            <span class="date">{{iter.date}}</span>
             <span class="comment">{{iter.comments}}</span>
         </div>
         

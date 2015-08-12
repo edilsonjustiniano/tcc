@@ -23,7 +23,7 @@
             <ul class="nav pull-right">
                 
                 <!-- Search service providers -->
-                <li ng-show="user.typeOfAccount == 'CONTRACTOR'">
+                <li ng-hide="user.typeOfAccount == 'SERVICE_PROVIDER'">
                     <a href="#/search-service-providers">Busca</a>
                 </li>
                 
@@ -43,17 +43,17 @@
                 -->
                 
         <!-- Services -->
-        <li ng-show="user.typeOfAccount == 'SERVICE_PROVIDER'">
-            <a href="#/service">Serviços</a>
+        <li ng-hide="user.typeOfAccount == 'CONTRACTOR'">
+            <a href="add-service.html">Serviços</a>
         </li>
 
         <!-- Partner network -->
-        <li ng-show="user.typeOfAccount == 'CONTRACTOR'">
+        <li ng-hide="user.typeOfAccount == 'SERVICE_PROVIDER'">
             <a href="#/partner-network">Rede de Parceiros</a>
         </li>
 
         <!-- Partners -->
-        <li class="dropdown" ng-show="user.typeOfAccount == 'CONTRACTOR'">
+        <li class="dropdown" ng-hide="user.typeOfAccount == 'SERVICE_PROVIDER'">
             <a class="dropdown-toggle" data-toggle="dropdown" href="">
 						Novas Parcerias
 				        <b class="caret"></b>

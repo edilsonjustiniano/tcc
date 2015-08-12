@@ -80,7 +80,8 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
                         $scope.ratingInMyNetwork.push({
                             partner : iter[0], //partner name
                             note    : iter[1], //note
-                            comments: iter[2] //comments
+                            comments: iter[2], //comments
+                            date    : new Date(iter[3]).toLocaleDateString() //date
                         });
                         $scope.personsWhoseRateitInMyNetwork += iter[0] + '\n';
                     });
@@ -120,7 +121,8 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
                         $scope.ratingInMyCompany.push({
                             partner : iter[0], //partner name
                             note    : iter[1], //note
-                            comments: iter[2] //comments
+                            comments: iter[2], //comments
+                            date    : new Date(iter[3]).toLocaleDateString()  //date
                         });
                         $scope.personsWhoseRateitInMyCompany += iter[0] + '\n';
                     });
@@ -160,7 +162,8 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
                         $scope.ratingInMyCity.push({
                             partner : iter[0], //partner name
                             note    : iter[1], //note
-                            comments: iter[2] //comments
+                            comments: iter[2], //comments
+                            date    : new Date(iter[3]).toLocaleDateString()  //date
                         });
                         $scope.personsWhoseRateitInMyCity += iter[0] + '\n';
                     });
