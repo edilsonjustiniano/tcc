@@ -31,4 +31,12 @@ app.controller('ServiceController', function ($scope, ServiceProviderService) {
             }
         });
     };
+  
+    $scope.selectService = function(iter){
+        console.log(iter);
+        $scope.service = iter.name;
+
+    };
+
+
 });
