@@ -1,0 +1,4 @@
+<form class="navbar-search">
+	<input type="text" class="search-query" placeholder="Buscar serviços" ng-model="service" ng-change="getServicesByService()">
+    <div class="options-services" ng-repeat="iter in services | orderBy: name" ng-show="service != ''" ng-click="selectService(iter)">{{iter.name}}</div>
+</form>

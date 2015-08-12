@@ -31,6 +31,11 @@ app.config(function($routeProvider) {
 		controller : "UploadController",
 		templateUrl: "views/upload.html"
 	});
+
+	$routeProvider.when("/service", {
+		controller : "ServiceController",
+		templateUrl: "views/service.html"
+	});
     
 	//$routeProvider.otherwise( {redirectTo: "/home"});
 
