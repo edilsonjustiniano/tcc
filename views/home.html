@@ -4,8 +4,10 @@
 
 	<div id="ultimas-contratacoes" ng-show="typeOfAccount <> 'SERVICE_PROVIDER'">
 		<h1>Últimas contratações</h1>
+		<div id="lastest-ratings" ng-repeat="iter in lastestRatings" >
+			{{iter.name}}
+		</div>
 
-		
 	</div>
 
 	<!-- Possíveis parceiros, estilo o que o facebook faz com os prováveis amigos que vc conheça para usuários do tipo "contratantes" -->
@@ -26,10 +28,10 @@
 		</div>
 	</div>
 
-
+    Aba apenas para relatórios
 	<!-- Para ambos os tipos de usuários -->
 	<div id="relatorios" ng-hide="typeOfAccount == 'SERVICE_PROVIDER'">
-		<h1>Relatórios da sua rede de parceiros</h1>
+		<h1>Últimas atualizações</h1>
 	</div>
 	<p></p>
 	<div id="relatorios" ng-hide="typeOfAccount == 'CONTRACTOR'">

@@ -1,5 +1,8 @@
 package br.edu.univas.si.tcc.dao;
 
+import java.sql.Timestamp;
+import java.util.Date;
+
 import javax.ws.rs.core.MediaType;
 
 import org.codehaus.jettison.json.JSONException;
@@ -87,10 +90,11 @@ public class PartnerDAO {
 	public String addPartner(Person me, String partnerEmail) {
 		
 		WebResource resource = FactoryDAO.GetInstance();
+		Long currentTime = new Timestamp(new Date().getTime()).getTime();
 		
 		String query = "{\"query\":\" MATCH (me:Person {email: '" + me.getEmail() + "'}), " +
 				"(partner:Person {email: '" + partnerEmail +  "'}) " +
-				"CREATE (me)-[:PARTNER_OF]->(partner) " +
+				"CREATE (me)-[:PARTNER_OF {since: " + currentTime + "}]->(partner) " +
 				"RETURN me.name, me.email, partner.name, partner.email; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
@@ -170,12 +174,14 @@ public class PartnerDAO {
 
 
 	public String acceptPartnerRequest(Person person, String partnerEmail) {
+		
 		WebResource resource = FactoryDAO.GetInstance();
+		Long currentTime = new Timestamp(new Date().getTime()).getTime();
 		
 		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
 				"(partner:Person {email: '" + partnerEmail +  "'}), " +
 				"(partner)-[:PARTNER_OF]->(me) " +
-				"CREATE (me)-[:PARTNER_OF]->(partner) " +
+				"CREATE (me)-[:PARTNER_OF {since: " + currentTime + "}]->(partner) " +
 				"RETURN me.name, me.email, partner.name, partner.email; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)

@@ -77,11 +77,19 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
                 } else {
                     var array = callback.data;
                     array.forEach(function(iter) {
+                        var dateSplit = iter[3].split(' ');
+                        dateSplit = dateSplit[0];
+                        dateSplit = dateSplit.split('-'); //[2015] [08] [11]
+                        var year = dateSplit[0];
+                        var month = Number.parseInt(dateSplit[1]);
+                        var day = dateSplit[2];
+                        
+                        
                         $scope.ratingInMyNetwork.push({
                             partner : iter[0], //partner name
                             note    : iter[1], //note
                             comments: iter[2], //comments
-                            date    : new Date(iter[3]).toLocaleDateString() //date
+                            date    : day + '/' + month + '/' + year //date
                         });
                         $scope.personsWhoseRateitInMyNetwork += iter[0] + '\n';
                     });
@@ -118,11 +126,18 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
                 } else {
                     var array = callback.data;
                     array.forEach(function(iter) {
+                        var dateSplit = iter[3].split(' ');
+                        dateSplit = dateSplit[0];
+                        dateSplit = dateSplit.split('-'); //[2015] [08] [11]
+                        var year = dateSplit[0];
+                        var month = Number.parseInt(dateSplit[1]);
+                        var day = dateSplit[2];
+                        
                         $scope.ratingInMyCompany.push({
                             partner : iter[0], //partner name
                             note    : iter[1], //note
                             comments: iter[2], //comments
-                            date    : new Date(iter[3]).toLocaleDateString()  //date
+                            date    : day + '/' + month + '/' + year  //date
                         });
                         $scope.personsWhoseRateitInMyCompany += iter[0] + '\n';
                     });
@@ -159,11 +174,18 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
                 } else {
                     var array = callback.data;
                     array.forEach(function(iter) {
+                        var dateSplit = iter[3].split(' ');
+                        dateSplit = dateSplit[0];
+                        dateSplit = dateSplit.split('-'); //[2015] [08] [11]
+                        var year = dateSplit[0];
+                        var month = Number.parseInt(dateSplit[1]);
+                        var day = dateSplit[2];
+                        
                         $scope.ratingInMyCity.push({
                             partner : iter[0], //partner name
                             note    : iter[1], //note
                             comments: iter[2], //comments
-                            date    : new Date(iter[3]).toLocaleDateString()  //date
+                            date    : day + '/' + month + '/' + year  //date
                         });
                         $scope.personsWhoseRateitInMyCity += iter[0] + '\n';
                     });

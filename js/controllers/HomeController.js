@@ -1,8 +1,14 @@
 app.service('HomeService', function($http){
-	
+
 	this.getPossiblePartners = function(callback) {
 		var token = window.localStorage['token'];
 		$http.post('http://localhost:8080/WebService/partner/getPossiblePartners', {token: token}).
+		success(callback);
+	};
+
+	this.getLastestRatings = function(callback) {
+		var token = window.localStorage['token'];
+		$http.post('http://localhost:8080/WebService/rating/lastestRatings', {token: token}).
 		success(callback);
 	};
 });
@@ -11,7 +17,8 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
 
 	$scope.typeOfAccount = '';
 	$scope.possiblePartners = [];
-	$lastEvaluation = [];
+	$lastestRatings = [];
+
 	$scope.msg = {}; /* Error or success mesage */
 	$scope.msg.type = '';
 	$scope.msg.msg = '';
@@ -46,7 +53,7 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
 		}
 		HomeService.getPossiblePartners(function(callback) {
 			if (callback.success) { /* Ivalid session or expired session */
-				if (callback.data == undefined) 
+				if (callback.data == undefined)
 					return;
 				var array = callback.data;
 				array.forEach(function(iter){
@@ -63,7 +70,7 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
 	$scope.addPartner = function (partner) {
 		if (partner == null) {
 			return;
-		}  
+		}
 
 		PartnerService.addPartner(partner, function(callback) {
 
@@ -72,7 +79,7 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
 				window.sessionStorage.setItem('typeOfAccount', null);
 				window.localStorage['token'] = null;
 				window.location.href = "index.html";
-	
+
 			} else {
 
 				$scope.msg.type = 'SUCCESS';
@@ -83,7 +90,7 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
 				$scope.getPossiblePartners();
 			}
 		});
-		
+
 	};
 
 	/* Open Partner Profile */
@@ -101,7 +108,7 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
 		// console.log(decodedString);
 
 		// var slash = encodedString.indexOf("/");
-		
+
 		// if (slash > -1) {
 		// 	encodedString = encodedString.substr(0, slash) + '__' + encodedString.substr(slash + 1);
 		// }
@@ -109,5 +116,27 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
 		window.location.href = "home.html#/partner-profile/" + encodedString;
 		// $location.path("#/partner-profile/"+partner.email);
 
+	};
+
+
+	/* Get the lastest ratings */
+	$scope.getLastestRatings = function() {
+		HomeService.getLastestRatings(function(callback) {
+			if (!callback.success) {
+				window.sessionStorage.setItem('typeOfAccount', null);
+				window.localStorage['token'] = null;
+				window.location.href = "index.html";
+			} else {
+				var array = callback.data;
+				if (array != null && array.length > 0) {
+					array.forEach(function(iter) {
+						$scope.lastestRatings.push({
+							note
+						});
+					});
+				}
+
+			}
+		});
 	};
 });
