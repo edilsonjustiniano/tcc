@@ -106,4 +106,14 @@ app.service('ServiceProviderService', function($http){
         var percent = (average * 100) / 5;
         return percent.toFixed(2);
     };
+
+    this.addService = function(service, callback) {
+        var token = window.localStorage['token'];
+        $http.post('http://localhost:8080/WebService/serviceProvider/addService', {
+            service: service,
+            token: token
+        }).
+        success(callback);
+
+    };
 });

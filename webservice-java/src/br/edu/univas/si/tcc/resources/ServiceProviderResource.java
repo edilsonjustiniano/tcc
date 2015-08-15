@@ -515,5 +515,117 @@ public class ServiceProviderResource {
 	}
 
 
+	@Path("/addService")
+	@POST
+	@Produces("application/json")
+	public String addService(String json) {
+		
+		System.out.println(json);
+		JSONObject response = null;
+		JSONObject jsonObj = null;
+		Token tokenDecoded = null;
+		Person person = new Person();
+		String service = null;
+		
+		
+		byte[] token = null;
+		
+		try {
+			jsonObj = new JSONObject(json);
+			token = jsonObj.getString("token").getBytes();
+			service = jsonObj.getString("service");
+		} catch (JSONException e1) {
+			e1.printStackTrace();
+		}
+		
+		tokenDecoded = Base64Util.decodeToken(token);
+		person.setEmail(tokenDecoded.getEmail());
+		person.setPassword(MD5Util.generateMD5(tokenDecoded.getPassword()));
+		
+		/* Check if session is valid */
+		TokenDAO tokenDao = new TokenDAO();
+		
+		if (!tokenDao.isValidSession(tokenDecoded)) {
+			response = new JSONObject();
+			try {
+				response.put("success", false);
+				response.put("mesage", "Sessão inválida!");
+				response.put("sessionExpired", false);
+				
+				return response.toString();
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		/* Check if token is expired */
+		TokenController controller = new TokenController();
+		if (controller.isExpiredSession(tokenDecoded)) {
+			try {
+				response = new JSONObject();
+				response.put("success", false);
+				response.put("mesage", "Sessão expirada, por favor realize o login novamente!");
+				response.put("sessionExpired", true);
+				return response.toString();
+			} catch (JSONException e1) {
+				e1.printStackTrace();
+			}
+		}
+		
+		/*
+		 * First we need to check if there is an other evaluate from the same guy to the same service provider
+		 * in the same service stored on database before. If so, the user cannot store another evaluate
+		 */
+		
+		//Verificando se é um novo serviço
+		boolean isNewService = dao.isNewService(service);
+		if (!isNewService) {
+			boolean isAlreadyStored = dao.isAlreadyStored(service, person);
+		    if (isAlreadyStored) {
+		    	try {
+		    		response = new JSONObject();
+					response.put("success", true);
+					response.put("mesage", "Serviço anteriormente registrado à você!");
+					response.put("isAlreadyStored", true);
+					token = Base64Util.encodeToken(tokenDecoded.getEmail(), tokenDecoded.getPassword());
+					response.put("token", new String(token));
+					return response.toString();
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+		    	
+		    } else {
+		    	
+				String result = dao.addService(service, person);
+				try {
+					response = new JSONObject(result);
+					response.put("success", true);
+					response.put("mesage", "Sucesso ao adicionar serviço!");
+					token = Base64Util.encodeToken(tokenDecoded.getEmail(), tokenDecoded.getPassword());
+					response.put("token", new String(token));
+					return response.toString();
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+		    }
+		}
+		
+	    dao.createService(service);
+	    String result = dao.addService(service, person);
+		
+		try {
+			response = new JSONObject(result);
+			response.put("success", true);
+			response.put("mesage", "Sucesso ao adicionar serviço!");
+			response.put("isAlreadyStored", false);
+			token = Base64Util.encodeToken(tokenDecoded.getEmail(), tokenDecoded.getPassword());
+			response.put("token", new String(token));
+		} catch (JSONException e1) {
+			e1.printStackTrace();
+		}
+		
+		return response.toString();
+	}
+
 
 }

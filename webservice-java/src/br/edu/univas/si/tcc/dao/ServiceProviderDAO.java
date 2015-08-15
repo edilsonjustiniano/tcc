@@ -219,7 +219,8 @@ public class ServiceProviderDAO {
 		return true;
 	}
 
-
+	
+	
 	public String saveEvaluate(String providerEmail, String providerService, int note, String comments, Person person) {
 		
 		WebResource resource = FactoryDAO.GetInstance();
@@ -375,7 +376,118 @@ public class ServiceProviderDAO {
 		return objectCreate;
 	
 	}
+
+
+
+	public boolean isNewService(String service) {
+		WebResource resource = FactoryDAO.GetInstance();
+		
+		String query = "{\"query\":\" MATCH (service:Service) " +
+					"WHERE UPPER(service.name)= UPPER('"+ service +"') " +
+					"RETURN COUNT(service) as qtde; \"}";
+		System.out.println(query);
+		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
+		
+		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+									.type(MediaType.APPLICATION_JSON).entity(query)
+									.post(ClientResponse.class);
+		String objectCreate = responseCreate.getEntity(String.class);
+			
+		JSONObject response = null;
+		try {
+			response = new JSONObject(objectCreate);
+		} catch (JSONException e1) {
+			e1.printStackTrace();
+		}
+		
+		int qtde = 0;
+		try {
+			String qtdeStr = response.getString("data");
+			qtdeStr = qtdeStr.replaceAll("[^0-9]", "");
+			qtde = Integer.parseInt(qtdeStr);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		if (qtde > 0) {
+			return false;
+		}
+		return true;
+	}
+
+	
+	//checar se o servico jao foi atribuido ao provedor de servicos antes
+	public boolean isAlreadyStored(String service, Person person) {
+
+		WebResource resource = FactoryDAO.GetInstance();
+		
+		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
+					"(service:Service), " +
+					"(me)-[:PROVIDE]->(service) " +
+					"WHERE UPPER(service.name) = UPPER('" + service + "') " +
+					"RETURN COUNT(service) as qtde; \"}";
+		System.out.println(query);
+		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
+		
+		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+									.type(MediaType.APPLICATION_JSON).entity(query)
+									.post(ClientResponse.class);
+		String objectCreate = responseCreate.getEntity(String.class);
+			
+		JSONObject response = null;
+		try {
+			response = new JSONObject(objectCreate);
+		} catch (JSONException e1) {
+			e1.printStackTrace();
+		}
+		
+		int qtde = 0;
+		try {
+			String qtdeStr = response.getString("data");
+			qtdeStr = qtdeStr.replaceAll("[^0-9]", "");
+			qtde = Integer.parseInt(qtdeStr);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		if (qtde > 0) {
+			return true;
+		}
+		return false;
+	
+	}
+
+
+    // Criando um novo serviço (nó)
+	public void createService(String service) {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+		String query = "{\"query\":\" CREATE (s:Service {name: '"+ service +"'})" +
+					"RETURN s.name; \"}";
+		System.out.println(query);
+		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+												.type(MediaType.APPLICATION_JSON).entity(query)
+												.post(ClientResponse.class);
+		responseCreate.getEntity(String.class);				
+	}
 	
 	
+	
+	
+	// Atribuindo o serviço a uma pessoa
+	public String addService(String service, Person person) {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+		String query = "{\"query\":\" MATCH (n:Person {email: '"+ person.getEmail() +"'}), "
+				+ "(service:Service {name: '"+ service +"'}) " 
+				+ "WITH DISTINCT (n), service "
+				+ "CREATE (n)-[:PROVIDE]->(service) "
+				+ "RETURN n.email, service.name; \"}";
+		
+		System.out.println(query);
+		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+												.type(MediaType.APPLICATION_JSON).entity(query)
+												.post(ClientResponse.class);
+		String result = responseCreate.getEntity(String.class);	
+		return result;
+	}
 
 }
