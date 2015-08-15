@@ -63,6 +63,8 @@ app.controller('ServiceController', function ($scope, ServiceProviderService) {
                     }
 
                     $scope.msg.msg = callback.mesage;
+                    $scope.myServices = [];
+                    $scope.getMyServices();
                 }
             });
         }
@@ -90,5 +92,26 @@ app.controller('ServiceController', function ($scope, ServiceProviderService) {
     };
 
     $scope.getMyServices();
+    
+    
+    $scope.removeService = function(iter) {
+        if (iter != null) {
+             ServiceProviderService.removeService(iter.name, function (callback) {
+
+                if (!callback.success) {
+                    window.sessionStorage.setItem('typeOfAccount', null);
+                    window.localStorage['token'] = null;
+                    window.location.href = "index.html";
+                } else {
+                    window.localStorage['token'] = callback.token;
+                    $scope.msg.type = 'SUCCESS'; 
+                    
+                    $scope.msg.msg = callback.mesage;
+                    $scope.myServices = [];
+                    $scope.getMyServices();
+                }
+        });
+        }  
+    };
 
 });

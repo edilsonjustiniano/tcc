@@ -20,10 +20,11 @@ public class RatingDAO {
 							"(executed:Execute), " +
 							"(sp)-[:PROVIDE]->(service), " +
 							"(service)-[:EXECUTE]->(executed), " +
+							"(sp)-[:EXECUTE]->(executed), " +
 							"(executed)-[:TO]->(me) " +
 							"WHERE me.typeOfAccount <> 'SERVICE_PROVIDER' " +
 							"AND sp.typeOfAccount <> 'CONTRACTOR' " +
-							"RETURN executed.note, executed.comments, executed.date, me.name " +
+							"RETURN sp.name, service.name, executed.note, executed.comments, executed.date " +
 							"ORDER BY executed.date ASC " +
 							"LIMIT 4; \"}";
 		System.out.println(query);

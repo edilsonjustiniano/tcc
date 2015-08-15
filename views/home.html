@@ -2,10 +2,10 @@
 <div id="container">
 	<!-- Últimas contratações (avaliações realizadas por ele à prestadores de serviços) para usuários do tipo "contratantes" -->
 
-	<div id="ultimas-contratacoes" ng-show="typeOfAccount <> 'SERVICE_PROVIDER'">
+	<div id="ultimas-contratacoes" ng-show="typeOfAccount != 'SERVICE_PROVIDER'">
 		<h1>Últimas contratações</h1>
 		<div id="lastest-ratings" ng-repeat="iter in lastestRatings" >
-			{{iter.name}}
+			{{iter.serviceProvider}} - {{iter.service}}
 		</div>
 
 	</div>
@@ -30,8 +30,12 @@
 
     Aba apenas para relatórios
 	<!-- Para ambos os tipos de usuários -->
-	<div id="relatorios" ng-hide="typeOfAccount == 'SERVICE_PROVIDER'">
+	<div id="feed" ng-hide="typeOfAccount == 'SERVICE_PROVIDER'">
 		<h1>Últimas atualizações</h1>
+        <div class="feeds" ng-repeat="iter in feeds">
+            {{iter.partner}}
+        </div>
+        
 	</div>
 	<p></p>
 	<div id="relatorios" ng-hide="typeOfAccount == 'CONTRACTOR'">

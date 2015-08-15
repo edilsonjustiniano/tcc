@@ -125,4 +125,14 @@ app.service('ServiceProviderService', function($http){
         success(callback);
 
     };
+    
+    this.removeService = function(service, callback) {
+        var token = window.localStorage['token'];
+        $http.post('http://localhost:8080/WebService/serviceProvider/removeService', {
+            service: service,
+            token: token
+        }).
+        success(callback);
+
+    };
 });

@@ -15,6 +15,7 @@ MATCH (me:Person {email: 'robertorocha@gmail.com'}),
 (executed:Execute),
 (sp)-[:PROVIDE]->(service),
 (service)-[:EXECUTE]->(executed),
+(sp)-[:EXECUTE]->(executed),
 (executed)-[:TO]->(partners),
 (partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)/*,
 (partners)-[partnerA:PARTNER_OF]->(user)-[partnerB:PARTNER_OF]->(partners)*/

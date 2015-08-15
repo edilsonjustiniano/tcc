@@ -11,13 +11,20 @@ app.service('HomeService', function($http){
 		$http.post('http://localhost:8080/WebService/rating/lastestRatings', {token: token}).
 		success(callback);
 	};
+    
+    this.getFeedLastPartnership = function(callback) {
+        var token = window.localStorage['token'];
+		$http.post('http://localhost:8080/WebService/feed/lastPartnership', {token: token}).
+		success(callback);
+    };
 });
 
 app.controller('HomeController', function ($scope, HomeService, PartnerService, SessionService) {
 
 	$scope.typeOfAccount = '';
 	$scope.possiblePartners = [];
-	$lastestRatings = [];
+	$scope.lastestRatings = [];
+    $scope.feeds = [];
 
 	$scope.msg = {}; /* Error or success mesage */
 	$scope.msg.type = '';
@@ -131,7 +138,11 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
 				if (array != null && array.length > 0) {
 					array.forEach(function(iter) {
 						$scope.lastestRatings.push({
-							note
+							serviceProvider: iter[0],
+                            service: iter[1],
+                            note: iter[2],
+                            comments: iter[3],
+                            date: iter[4]
 						});
 					});
 				}
@@ -139,4 +150,32 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
 			}
 		});
 	};
+    
+    $scope.getLastestRatings();
+    
+    
+    $scope.getFeedLastPartnership = function() {
+        HomeService.getFeedLastPartnership(function(callback) {
+            if (!callback.success) {
+                window.sessionStorage.setItem('typeOfAccount', null);
+				window.localStorage['token'] = null;
+				window.location.href = "index.html";
+            } else {
+                var array = callback.data;
+				if (array != null && array.length > 0) {
+					array.forEach(function(iter) {
+						$scope.feeds.push({
+							partner: iter[0],
+                            user: iter[1],
+                            receivedIn: iter[2],
+                            answeredIn: iter[3]
+						});
+					});
+				}
+
+            }
+        });
+    };
+    
+    $scope.getFeedLastPartnership();
 });

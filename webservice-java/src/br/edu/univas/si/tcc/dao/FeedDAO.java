@@ -19,7 +19,7 @@ public class FeedDAO {
 							"(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners), " +
 							"(partners)-[partnerA:PARTNER_OF]->(user)-[partnerB:PARTNER_OF]->(partners) " +
 							"WHERE partners <> me " +
-							"RETURN DISTINCT(partners), partners.name, user, user.name, partnerA.since, partnerB.since " +
+							"RETURN DISTINCT(partners.name), user.name, partnerA.since, partnerB.since " +
 							"ORDER BY partnerA.since, partnerB.since DESC \"}";
 		System.out.println(query);
 		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
@@ -46,10 +46,11 @@ public class FeedDAO {
 							"(executed:Execute), " +
 							"(sp)-[:PROVIDE]->(service), " +
 							"(service)-[:EXECUTE]->(executed), " +
+							"(sp)-[:EXECUTE]->(executed), " +
 							"(executed)-[:TO]->(partners), " +
-							"(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partnerst <> 'CONTRACTOR) " +
-							"WHERE partners <> me AND sp.typeOfAccoun' " +
-							"RETURN DISTINCT(executed), executed.note, partners.name, executed.comments, executed.date " +
+							"(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners) " +
+							"WHERE partners <> me AND sp.typeOfAccount <> 'CONTRACTOR' " +
+							"RETURN DISTINCT(sp.name), service.name, executed.note, partners.name, executed.comments, executed.date " +
 							"ORDER BY executed.date DESC; \"}";
 		System.out.println(query);
 		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
