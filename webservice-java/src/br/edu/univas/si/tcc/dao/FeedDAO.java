@@ -19,7 +19,7 @@ public class FeedDAO {
 							"(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners), " +
 							"(partners)-[partnerA:PARTNER_OF]->(user)-[partnerB:PARTNER_OF]->(partners) " +
 							"WHERE partners <> me " +
-							"RETURN DISTINCT(partners.name), user.name, partnerA.since, partnerB.since, 0 as null1, 0 as null2, false as rating " +
+							"RETURN DISTINCT(partners.name), partners.email, user.name, user.email, partnerA.since, partnerB.since, 0 as null1, 0 as null2, false as rating " +
 							"ORDER BY partnerA.since, partnerB.since DESC \"}";
 		System.out.println(query);
 		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
@@ -50,7 +50,7 @@ public class FeedDAO {
 							"(executed)-[:TO]->(partners), " +
 							"(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners) " +
 							"WHERE partners <> me AND sp.typeOfAccount <> 'CONTRACTOR' " +
-							"RETURN DISTINCT(sp.name), service.name, executed.note, executed.comments, executed.date, partners.name, true as rating " +
+							"RETURN DISTINCT(sp.name), sp.email, service.name, executed.note, executed.comments, executed.date, partners.name, partners.email, true as rating " +
 							"ORDER BY executed.date DESC; \"}";
 		System.out.println(query);
 		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 

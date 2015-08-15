@@ -1,26 +1,4 @@
-app.service('HomeService', function($http){
-    /*
-	this.getPossiblePartners = function(callback) {
-		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/getPossiblePartners', {token: token}).
-		success(callback);
-	};
-    */
-    
-    this.getFeedLastPartnership = function(callback) {
-        var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/feed/lastPartnership', {token: token}).
-		success(callback);
-    };
-    
-    this.getFeedLastestRatings = function(callback) {
-        var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/feed/lastestRatings', {token: token}).
-		success(callback);
-    };
-});
-
-app.controller('HomeController', function ($scope, HomeService, PartnerService, SessionService) {
+app.controller('HomeController', function ($scope, PartnerService, SessionService, ServiceProviderService, FeedsService) {
 
 	$scope.typeOfAccount = '';
     $scope.feeds = []; //mix of the both feeds partnership and ratings
@@ -46,60 +24,36 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
 
 	$scope.typeOfAccount = $scope.getTypeOfAccount();
 
-
-	/* Get the possible partners for you */
-	/*
-    $scope.getPossiblePartners = function() {
-		// Only contractor user can perform this query
-		if (window.sessionStorage.getItem('typeOfAccount') == 'SERVICE_PROVIDER') {
-			return;
-		}
-		HomeService.getPossiblePartners(function(callback) {
-			if (callback.success) { // Ivalid session or expired session 
-				if (callback.data == undefined)
-					return;
-				var array = callback.data;
-				array.forEach(function(iter){
-					$scope.possiblePartners.push({name: iter[0], email: iter[1], photo: iter[3]});
-				});
-			}
-		});
-	};
-
-	$scope.getPossiblePartners();
-    */
-
 	
 	/* Open Partner Profile */
-    /*
-	$scope.openPartnerProfile = function(partner) {
-		if (partner == null) {
-			return;
-		}
-
+    $scope.openPartnerProfile = function(email, name) {
+        var partner = {};
+        partner.email = email;
+        partner.name = name;
+        
 		// Encode the String
 		var encodedString = PartnerService.encodePartnerEmail(partner); //btoa(partner.email + "|" + partner.name);
-		// console.log(encodedString);
-
-		// // Decode the String
-		// var decodedString = atob(encodedString);
-		// console.log(decodedString);
-
-		// var slash = encodedString.indexOf("/");
-
-		// if (slash > -1) {
-		// 	encodedString = encodedString.substr(0, slash) + '__' + encodedString.substr(slash + 1);
-		// }
 
 		window.location.href = "home.html#/partner-profile/" + encodedString;
-		// $location.path("#/partner-profile/"+partner.email);
-
 	};
-    */
+    
+    //var encodedString = btoa(person.email + "|" + person.service);
+    /* Open service Provider profile */
+    $scope.openServiceProviderProfile = function(email, service) {
+        var serviceProvider = {};
+        serviceProvider.email = email;
+        serviceProvider.service = service;
+        
+        var encodedData = ServiceProviderService.encodeEmail(serviceProvider);
+        console.log('Service : ' + serviceProvider.email + "|" + serviceProvider.service);
+        console.log('Encoded Data: ' + encodedData);
+
+        window.location.href = "#/service-provider-profile/" + encodedData;
+    };
 
 	
     $scope.getFeedLastPartnership = function() {
-        HomeService.getFeedLastPartnership(function(callback) {
+        FeedsService.getFeedLastPartnership(function(callback) {
             if (!callback.success) {
                 window.sessionStorage.setItem('typeOfAccount', null);
 				window.localStorage['token'] = null;
@@ -110,10 +64,12 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
 					array.forEach(function(iter) {
 						$scope.feeds.push({
 							partner: iter[0],
-                            user: iter[1],
-                            receivedIn: iter[2],
-                            answeredIn: iter[3],
-                            isRating: iter[6]
+                            partnerEmail: iter[1],
+                            user: iter[2],
+                            userEmail: iter[3],
+                            receivedIn: iter[4],
+                            answeredIn: iter[5],
+                            isRating: iter[8]
 						});
 					});
 				}
@@ -126,7 +82,7 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
     
     
     $scope.getFeedLastestRatings = function() {
-        HomeService.getFeedLastestRatings(function(callback) {
+        FeedsService.getFeedLastestRatings(function(callback) {
             if (!callback.success) {
                 window.sessionStorage.setItem('typeOfAccount', null);
 				window.localStorage['token'] = null;
@@ -136,7 +92,7 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
 				if (array != null && array.length > 0) {
 					array.forEach(function(iter) {
                         
-                        var dateSplit = iter[4].split(' ');
+                        var dateSplit = iter[5].split(' ');
                         dateSplit = dateSplit[0];
                         dateSplit = dateSplit.split('-'); //[2015] [08] [11]
                         var year = dateSplit[0];
@@ -145,12 +101,14 @@ app.controller('HomeController', function ($scope, HomeService, PartnerService, 
                         
                         $scope.feeds.push({
 							serviceProvider: iter[0],
-                            service: iter[1],
-                            note: iter[2],
-                            comments: iter[3],
+                            serviceProviderEmail: iter[1],
+                            service: iter[2],
+                            note: iter[3],
+                            comments: iter[4],
                             date: day + '/' + month + '/' + year, //date
-                            to: iter[5],
-                            isRating: iter[6]
+                            user: iter[6],
+                            userEmail: iter[7],
+                            isRating: iter[8]
 						});
 					});
 				}

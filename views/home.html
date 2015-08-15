@@ -1,35 +1,26 @@
 <!-- Content-->
 <div id="container">
-<div id="feed-content" ng-hide="typeOfAccount == 'SERVICE_PROVIDER'">
-    
-    <h1>Últimas atualizações</h1>
-    
-    <div class="feeds" ng-repeat="iter in feeds">
-        <!-- Últimas parcerias criadas -->
-        <div class="feed" ng-hide="iter.isRating">
-            <span class="name">{{iter.partner}}</span> e <span class="name">{{iter.user}}</span> se tornaram parceiro(a)s.
-        </div>
+    <div id="feed-content" ng-hide="typeOfAccount == 'SERVICE_PROVIDER'">
 
-        <!-- Últimas avaliações realizadas -->
+        <h1>Últimas atualizações</h1>
 
-        <div class="feed" ng-show="iter.isRating">
-            <span class="name">{{iter.serviceProvider}}</span> com o serviço <span class="service">{{iter.service}}</span> para o usuário(a) <span class="name">{{iter.to}}</span>
+        <div class="feeds" ng-repeat="iter in feeds">
+            <!-- Últimas parcerias criadas -->
+            <div class="feed" ng-hide="iter.isRating">
+                <span class="name" ng-click="openPartnerProfile(iter.partnerEmail, iter.partner)">{{iter.partner}}</span>
+                 e <span class="name" ng-click="openPartnerProfile(iter.userEmail, iter.user)">{{iter.user}}</span> 
+                 se tornaram parceiro(a)s.
+            </div>
+
+            <!-- Últimas avaliações realizadas -->
+
+            <div class="feed" ng-show="iter.isRating">
+                <span class="name" ng-click="openPartnerProfile(iter.userEmail, iter.user)">{{iter.user}}</span> 
+                avaliou o(a) <span class="name" ng-click="openServiceProviderProfile(iter.serviceProviderEmail, iter.service)">{{iter.serviceProvider}}</span> 
+                pelo trabalho prestado como <span class="service">{{iter.service}}</span>.
+            </div>
+
         </div>
 
     </div>
-
-</div>
-
-<p></p>
-<div id="relatorios" ng-hide="typeOfAccount == 'CONTRACTOR'">
-    <h1>Relatórios de avaliação de serviços prestados por você</h1>
-</div>
-
-
-<h1>Relatórios de avaliação de serviços prestados por você</h1>
-<h1>Relatórios de avaliação de serviços prestados por você</h1><h1>Relatórios de avaliação de serviços prestados por você</h1><h1>Relatórios de avaliação de serviços prestados por você</h1>
-<h1>Relatórios de avaliação de serviços prestados por você</h1>
-<h1>Relatórios de avaliação de serviços prestados por você</h1>
-<h1>Relatórios de avaliação de serviços prestados por você</h1>
-<h1>Relatórios de avaliação de serviços prestados por você</h1>
 </div>

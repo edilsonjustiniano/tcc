@@ -30,6 +30,7 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 				window.location.href = 'index.html';
 			} else {
 				$scope.partner.photo = callback.data[0][2]; //get photo
+                $scope.partner.photo == null ? $scope.partner.photo = 'image/user-profile.png' : $scope.partner.photo = $scope.partner.photo;
 			}
 		});
 	};

@@ -78,7 +78,7 @@ app.controller('LeftBarController',
     
     
     /* Open service Provider profile */
-    $scope.openServiceProviderProfileByService = function(serviceProvider) {
+    $scope.openServiceProviderProfile = function(serviceProvider) {
         console.log("Service Provider Selected: " + serviceProvider.name + " | " + serviceProvider.service);
         var encodedData = ServiceProviderService.encodeEmail(serviceProvider);
         console.log('Service : ' + serviceProvider.email + "|" + serviceProvider.service);

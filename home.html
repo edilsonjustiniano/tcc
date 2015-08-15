@@ -114,8 +114,8 @@
         <div id="last-ratings" ng-show="typeOfAccount != 'SERVICE_PROVIDER'">
             <h1>Suas últimas avaliações</h1>
             <div class="ratings" ng-repeat="iter in lastestRatings" >
-                <img class="img-circle" src="{{iter.photo}}" title="{{iter.name}}" ng-click="openServiceProviderProfileByService(iter)" />
-                <span class="name" ng-click="openServiceProviderProfileByService(iter)">{{iter.name}}</span>
+                <img class="img-circle" src="{{iter.photo}}" title="{{iter.name}}" ng-click="openServiceProviderProfile(iter)" />
+                <span class="name" ng-click="openServiceProviderProfile(iter)">{{iter.name}}</span>
                 <span class="service">{{iter.service}}</span>
                 <span class="caret-ratings" ng-click="showComments(iter)"></span>
                 <div class="comments-span" ng-show="iter.showComments">
@@ -163,6 +163,7 @@
     <script type="text/javascript" src="js/services/ServiceProviderService.js"></script>
     <script type="text/javascript" src="js/services/UploadService.js"></script>
     <script type="text/javascript" src="js/services/RatingService.js"></script>
+    <script type="text/javascript" src="js/services/FeedsService.js"></script>
     
 
     <!-- Controllers -->

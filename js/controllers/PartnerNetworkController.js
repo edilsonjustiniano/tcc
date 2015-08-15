@@ -21,11 +21,6 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 	$scope.filtro = '';
 	$scope.limit = 20;
 	$scope.offset = 0;
-	// $scope.possiblePartners = [];
-	// $lastEvaluation = [];
-	$scope.msg = {}; /* Error or success mesage */
-	$scope.msg.type = '';
-	$scope.msg.msg = '';
 
 	$scope.getTypeOfAccount = function() {
 		SessionService.getTypeOfAccount(function(callback) {
@@ -59,7 +54,11 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 			if (callback.success) { /* Ivalid session or expired session */
 				var array = callback.data;
 				array.forEach(function(iter){
-					$scope.partners.push({name: iter[0], email: iter[1], photo: iter[2]});
+					$scope.partners.push({
+                        name: iter[0], 
+                        email: iter[1], 
+                        photo: iter[2] == null ? iter[2] = 'image/user-profile.png' : iter[2] = iter[2]
+                    });
 				});
 			}
 		});
@@ -98,7 +97,11 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 							array.forEach(function(iter){
 
 								if (!PartnerNetworkService.isDuplicatadedPartner(iter[0], iter[1], $scope.possibleNewPartners) ) {
-									$scope.possibleNewPartners.push({name: iter[0], email: iter[1], photo: iter[3]});
+									$scope.possibleNewPartners.push({
+                                        name: iter[0], 
+                                        email: iter[1], 
+                                        photo: iter[3] == null ? iter[3] = 'image/user-profile.png' : iter[3] = iter[3]
+                                    });
 								}
 								
 							});
@@ -124,20 +127,7 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 
 		// Encode the String
 		var encodedString = PartnerService.encodePartnerEmail(partner);//btoa(partner.email + "|" + partner.name);
-		// console.log(encodedString);
-
-		// // Decode the String
-		// var decodedString = atob(encodedString);
-		// console.log(decodedString);
-
-		// var slash = encodedString.indexOf("/");
-		
-		// if (slash > -1) {
-		// 	encodedString = encodedString.substr(0, slash) + '__' + encodedString.substr(slash + 1);
-		// }
 
 		window.location.href = "#/partner-profile/" + encodedString;
-		// $location.path("#/partner-profile/"+partner.email);
-
 	};
 });
