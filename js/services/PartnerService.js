@@ -60,4 +60,10 @@ app.service('PartnerService', function($http){
 		$http.post('http://localhost:8080/WebService/partner/searchNewPartnersOnlyByName', {partner: partnerName, token: token}).
 		success(callback);
 	};
+    
+    this.getPossiblePartners = function(callback) {
+        var token = window.localStorage['token'];
+		$http.post('http://localhost:8080/WebService/partner/getPossiblePartners', {token: token}).
+		success(callback);
+    };
 });

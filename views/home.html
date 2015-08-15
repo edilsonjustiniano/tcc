@@ -1,44 +1,35 @@
 <!-- Content-->
 <div id="container">
-	<!-- Últimas contratações (avaliações realizadas por ele à prestadores de serviços) para usuários do tipo "contratantes" -->
-
-	<div id="ultimas-contratacoes" ng-show="typeOfAccount != 'SERVICE_PROVIDER'">
-		<h1>Últimas contratações</h1>
-		<div id="lastest-ratings" ng-repeat="iter in lastestRatings" >
-			{{iter.serviceProvider}} - {{iter.service}}
-		</div>
-
-	</div>
-
-	<!-- Possíveis parceiros, estilo o que o facebook faz com os prováveis amigos que vc conheça para usuários do tipo "contratantes" -->
-	<div id="possiveis-parceiros" ng-hide="typeOfAccount == 'SERVICE_PROVIDER'">
-		<h1>Possíveis parceiros</h1>
-
-		<!-- Msg error -->
-		<div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
-
-		<!-- Msg success -->
-		<div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
-
-		<div ng-repeat="iter in possiblePartners | orderBy: 'name'">
-			<div class="user-found">
-				<img class="img-circle" src="{{iter.photo}}" alt="Profile Photo" ng-click="openPartnerProfile(iter)" />
-				<p>{{iter.name}}</p>
-			</div>
-		</div>
-	</div>
-
-    Aba apenas para relatórios
-	<!-- Para ambos os tipos de usuários -->
-	<div id="feed" ng-hide="typeOfAccount == 'SERVICE_PROVIDER'">
-		<h1>Últimas atualizações</h1>
-        <div class="feeds" ng-repeat="iter in feeds">
-            {{iter.partner}}
+<div id="feed-content" ng-hide="typeOfAccount == 'SERVICE_PROVIDER'">
+    
+    <h1>Últimas atualizações</h1>
+    
+    <div class="feeds" ng-repeat="iter in feeds">
+        <!-- Últimas parcerias criadas -->
+        <div class="feed" ng-hide="iter.isRating">
+            <span class="name">{{iter.partner}}</span> e <span class="name">{{iter.user}}</span> se tornaram parceiro(a)s.
         </div>
-        
-	</div>
-	<p></p>
-	<div id="relatorios" ng-hide="typeOfAccount == 'CONTRACTOR'">
-		<h1>Relatórios de avaliação de serviços prestados por você</h1>
-	</div>
+
+        <!-- Últimas avaliações realizadas -->
+
+        <div class="feed" ng-show="iter.isRating">
+            <span class="name">{{iter.serviceProvider}}</span> com o serviço <span class="service">{{iter.service}}</span> para o usuário(a) <span class="name">{{iter.to}}</span>
+        </div>
+
+    </div>
+
+</div>
+
+<p></p>
+<div id="relatorios" ng-hide="typeOfAccount == 'CONTRACTOR'">
+    <h1>Relatórios de avaliação de serviços prestados por você</h1>
+</div>
+
+
+<h1>Relatórios de avaliação de serviços prestados por você</h1>
+<h1>Relatórios de avaliação de serviços prestados por você</h1><h1>Relatórios de avaliação de serviços prestados por você</h1><h1>Relatórios de avaliação de serviços prestados por você</h1>
+<h1>Relatórios de avaliação de serviços prestados por você</h1>
+<h1>Relatórios de avaliação de serviços prestados por você</h1>
+<h1>Relatórios de avaliação de serviços prestados por você</h1>
+<h1>Relatórios de avaliação de serviços prestados por você</h1>
 </div>

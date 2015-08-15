@@ -18,10 +18,10 @@ public class RatingResource {
 
 	private RatingDAO dao = new RatingDAO();
 	
-	@Path("/lastestRatings")
+	@Path("/myLastestRatings")
 	@POST
 	@Produces("application/json")
-	public String lastestRatings(String json) {
+	public String myLastestRatings(String json) {
 		
 		System.out.println(json);
 		JSONObject response = null;
@@ -42,7 +42,7 @@ public class RatingResource {
 		person.setEmail(tokenDecoded.getEmail());
 		person.setPassword(MD5Util.generateMD5(tokenDecoded.getPassword()));
 		
-		String result = dao.getLastestRatings(person);
+		String result = dao.getMyLastestRatings(person);
 		
 		try {
 			response = new JSONObject(result);

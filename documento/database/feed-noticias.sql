@@ -1,4 +1,4 @@
-MATCH (me:Person {email: 'robertorocha@gmail.com'}),
+MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}),
 (partners:Person), 
 (partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners),
 (partners)-[partnerA:PARTNER_OF]->(user)-[partnerB:PARTNER_OF]->(partners)
@@ -17,8 +17,7 @@ MATCH (me:Person {email: 'robertorocha@gmail.com'}),
 (service)-[:EXECUTE]->(executed),
 (sp)-[:EXECUTE]->(executed),
 (executed)-[:TO]->(partners),
-(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)/*,
-(partners)-[partnerA:PARTNER_OF]->(user)-[partnerB:PARTNER_OF]->(partners)*/
+(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)
 WHERE partners <> me AND sp.typeOfAccount <> 'CONTRACTOR'
-RETURN DISTINCT(executed), executed.note, partners.name, executed.comments, executed.date
+RETURN DISTINCT(sp.name), service.name, executed.note, partners.name, executed.comments, executed.date
 ORDER BY executed.date DESC;

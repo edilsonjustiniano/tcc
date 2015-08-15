@@ -9,7 +9,7 @@ import br.edu.univas.si.tcc.model.Person;
 
 public class RatingDAO {
 
-	public String getLastestRatings(Person person) {
+	public String getMyLastestRatings(Person person) {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		
@@ -24,7 +24,7 @@ public class RatingDAO {
 							"(executed)-[:TO]->(me) " +
 							"WHERE me.typeOfAccount <> 'SERVICE_PROVIDER' " +
 							"AND sp.typeOfAccount <> 'CONTRACTOR' " +
-							"RETURN sp.name, service.name, executed.note, executed.comments, executed.date " +
+							"RETURN sp.name, sp.email, sp.photo, service.name, executed.note, executed.comments, executed.date " +
 							"ORDER BY executed.date ASC " +
 							"LIMIT 4; \"}";
 		System.out.println(query);
