@@ -5,6 +5,7 @@ app.controller('ServiceController', function ($scope, ServiceProviderService) {
     $scope.msg = {}; /* Error or success mesage */
     $scope.msg.type = '';
     $scope.msg.msg = '';
+    $scope.myServices = [];
 
     $scope.getServicesByService = function () {
         if ($scope.service.length < 3) {
@@ -66,4 +67,28 @@ app.controller('ServiceController', function ($scope, ServiceProviderService) {
             });
         }
     };
+
+    $scope.getMyServices = function () {
+
+        ServiceProviderService.getMyServices(function (callback) {
+
+                if (!callback.success) {
+                    window.sessionStorage.setItem('typeOfAccount', null);
+                    window.localStorage['token'] = null;
+                    window.location.href = "index.html";
+                } else {
+                    var array = callback.data;
+                    if (array.length > 0){
+                        array.forEach(function(iter){
+                            $scope.myServices.push({
+                                name: iter[0]
+                            });
+                        });
+                    }
+                }
+        });
+    };
+
+    $scope.getMyServices();
+
 });

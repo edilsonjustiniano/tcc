@@ -490,4 +490,23 @@ public class ServiceProviderDAO {
 		return result;
 	}
 
+
+
+	public String getMyServices(Person person) {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+		String query = "{\"query\":\" MATCH (me:Person {email: '"+ person.getEmail() +"'}), "
+				+ "(service:Service), " 
+				+ "(me)-[:PROVIDE]->(service)"
+				+ "WHERE me.typeOfAccount <> 'CONTRACTOR' "
+				+ "RETURN DISTINCT(service.name); \"}";
+		
+		System.out.println(query);
+		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+												.type(MediaType.APPLICATION_JSON).entity(query)
+												.post(ClientResponse.class);
+		String result = responseCreate.getEntity(String.class);	
+		return result;
+	}
+
 }

@@ -116,4 +116,13 @@ app.service('ServiceProviderService', function($http){
         success(callback);
 
     };
+
+    this.getMyServices = function(callback) {
+        var token = window.localStorage['token'];
+        $http.post('http://localhost:8080/WebService/serviceProvider/getMyServices', {
+            token: token
+        }).
+        success(callback);
+
+    };
 });

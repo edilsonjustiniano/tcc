@@ -9,4 +9,10 @@
     <div class="options-services" ng-repeat="iter in services | orderBy: name" ng-show="service != ''" ng-click="selectService(iter)">{{iter.name}}</div>
     <input type="submit" value="Salvar">
 
+    <div class="" ng-repeat="iter in myServices | orderBY: name" >
+    	<span class="service-name">{{iter.name}}</span>
+    	<span class="remove">Excluir</span>
+
+    </div>
+
 </form>
