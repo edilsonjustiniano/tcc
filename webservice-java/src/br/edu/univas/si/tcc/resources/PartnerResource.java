@@ -641,4 +641,54 @@ public class PartnerResource {
 		return response.toString();
 	}
 
+	
+	
+	
+	@Path("/getCommonsPartners")
+	@POST
+	@Produces("application/json")
+	public String getCommonsPartners(String json) {
+		
+		System.out.println(json);
+		JSONObject response = null;
+		JSONObject jsonObj = null;
+		Token tokenDecoded = null;
+		Person person = new Person();
+		String partnerEmail = null;
+		
+		byte[] token = null;
+		
+		try {
+			jsonObj = new JSONObject(json);
+			token = jsonObj.getString("token").getBytes();
+			partnerEmail = jsonObj.getString("partner");
+		} catch (JSONException e1) {
+			e1.printStackTrace();
+		}
+		
+		tokenDecoded = Base64Util.decodeToken(token);
+		person.setEmail(tokenDecoded.getEmail());
+		person.setPassword(MD5Util.generateMD5(tokenDecoded.getPassword()));
+		
+		/*
+		 * First we need define how it will be defined the order of precedency
+		 * e.g. First the person that works with you, in the same company,
+		 * second person who lives in the same city of you, but ordered according 
+		 * to the quantity of the common friends between you and her.
+		 * Third person whose its work is in the same city of you work according
+		 * to the quantity of the common partners between you and her.
+		 * fourth person who contracted a person whose it was contracted by you too
+		 */
+		String result = dao.getCommonsPartners(person, partnerEmail);
+		
+		try {
+			response = new JSONObject(result);
+			response.put("success", true);
+		} catch (JSONException e1) {
+			e1.printStackTrace();
+		}
+		
+		return response.toString();
+	}
+
 }

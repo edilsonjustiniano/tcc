@@ -124,7 +124,6 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 		if (partner == null) {
 			return;
 		}
-
 		// Encode the String
 		var encodedString = PartnerService.encodePartnerEmail(partner);//btoa(partner.email + "|" + partner.name);
 

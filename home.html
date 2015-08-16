@@ -111,7 +111,7 @@
             <span class="personal-data-name">{{user.name}}</span>   
         </div>
         
-        <div id="last-ratings" ng-show="typeOfAccount != 'SERVICE_PROVIDER'">
+        <div id="last-ratings" ng-hide="user.typeOfAccount == 'SERVICE_PROVIDER'">
             <h1>Suas últimas avaliações</h1>
             <div class="ratings" ng-repeat="iter in lastestRatings" >
                 <img class="img-circle" src="{{iter.photo}}" title="{{iter.name}}" ng-click="openServiceProviderProfile(iter)" />
@@ -130,7 +130,7 @@
 	    
 	    
 	    <!-- Possible partners -->
-	    <div id="possible-partners" ng-show="typeOfAccount != 'SERVICE_PROVIDER'">
+	    <div id="possible-partners" ng-hide="user.typeOfAccount == 'SERVICE_PROVIDER'">
 	        <h1>Possíveis parceiros</h1>
 	        <div class="partners" ng-repeat="iter in possiblePartners">
                 <img class="img-circle" src="{{iter.photo}}" title="{{iter.name}}" ng-click="openPartnerProfile(iter)" />

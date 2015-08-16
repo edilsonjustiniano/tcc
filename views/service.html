@@ -1,20 +1,32 @@
 <div id="container">
-<form class="navbar-search" ng-submit="addService()">
-	<!-- Msg error -->
-	<div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
 
-	<!-- Msg success -->
-	<div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
-	
-	<input type="text" class="search-query" placeholder="Buscar serviços" ng-model="service" ng-change="getServicesByService()">
-    <div class="options-services" ng-repeat="iter in services | orderBy: name" ng-show="service != ''" ng-click="selectService(iter)">{{iter.name}}</div>
-    <input type="submit" value="Salvar" ng-show="service != ''">
+    <div id="search-services">
 
-    <div class="" ng-repeat="iter in myServices | orderBy: name" >
-    	<span class="service-name">{{iter.name}}</span>
-    	<span class="remove" ng-click="removeService(iter)">Excluir</span>
+        <h1>Adicionar serviço</h1>
 
+        <form class="navbar-search" ng-submit="addService()">
+            <!-- Msg error -->
+            <div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
+
+            <!-- Msg success -->
+            <div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
+
+            <input type="text" class="search-query" placeholder="Buscar serviços" ng-model="service" ng-change="getServicesByService()">
+            <div class="options-services" ng-repeat="iter in services | orderBy: name" ng-show="service != ''" ng-click="selectService(iter)">{{iter.name}}</div>
+            <p class="submit-buttons">
+                <input class="btn btn-primary add-service" type="submit" value="Adicionar" ng-show="service != ''">
+            </p>
+        </form>
     </div>
 
-</form>
+    <div id="list-my-services">
+
+        <h1>Meus serviços</h1>
+
+        <div class="services" ng-repeat="iter in myServices | orderBy: name">
+            <span class="service-name">{{iter.name}}</span>
+            <div class="remove" ng-click="removeService(iter)"></div>
+        </div>
+
+    </div>
 </div>

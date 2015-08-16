@@ -1,22 +1,34 @@
 <!-- Content-->
 <div id="container">
-    <div id="profile-data">
+    <div id="user-profile-data">
         <img class="img-circle" src="{{partner.photo}}" alt="Profile Photo" />
-        <span class="name-partner">
-		{{partner.name}}
-	</span>
+        <span class="name">{{partner.name}}</span>
+        <span class="other-infos">Idade</span>
+        <span class="other-infos">Sexo</span>
+        <span class="other-infos">Cidade</span>
+        <span class="other-infos">Trabalha em</span>
+
+        <div id="user-options">
+            <!-- Msg error -->
+            <div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
+
+            <!-- Msg success -->
+            <div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
+
+            <button class="btn btn-primary" ng-hide="myPartner" ng-click="addPartner()">Adicionar Parceiro</button>
+            <button class="btn btn-danger" ng-show="myPartner" ng-click="cancelPartner()">Cancelar Parceria</button>
+        </div>
     </div>
 
-    <div id="profile-content">
-
-        <!-- Msg error -->
-        <div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
-
-        <!-- Msg success -->
-        <div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
-
-        <button class="btn" ng-hide="myPartner" ng-click="addPartner()">Adicionar Parceiro</button>
-        <button class="btn" ng-show="myPartner" ng-click="cancelPartner()">Cancelar Parceria</button>
-
+    <!-- Commons Friends -->
+    <div id="commons-partners">
+        <h1>Parceiros em comum: {{commonsPartners.length}}</h1>
+        <div class="partner" ng-repeat="iter in commonsPartners | limitTo: limitCommonsPartner" ng-click="openPartnerProfile(iter)">
+            <span class="name">{{iter.name}}</span>
+        </div>
+        
+        <div class="partner" ng-show="commonsPartners.length > limitCommonsPartner">
+            <span class="name" title="{{otherCommonsPartner}}">Entre outros...</span>
+        </div>
     </div>
 </div>

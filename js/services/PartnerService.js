@@ -66,4 +66,10 @@ app.service('PartnerService', function($http){
 		$http.post('http://localhost:8080/WebService/partner/getPossiblePartners', {token: token}).
 		success(callback);
     };
+    
+    this.getCommonsPartners = function(partner, callback) {
+        var token = window.localStorage['token'];
+		$http.post('http://localhost:8080/WebService/partner/getCommonsPartners', {token: token, partner: partner.email}).
+		success(callback);
+    };
 });

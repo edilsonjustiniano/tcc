@@ -323,4 +323,29 @@ public class PartnerDAO {
 		return false;
 	}
 
+
+
+	public String getCommonsPartners(Person person, String partnerEmail) {
+
+		WebResource resource = FactoryDAO.GetInstance();
+		
+		String query = null;
+		
+		query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
+							"(partner:Person {email: '" + partnerEmail + "'}), " + 
+							"(commons:Person), " +
+							"(me)-[:PARTNER_OF]->(commons)-[:PARTNER_OF]->(me), " +
+							"(partner)-[:PARTNER_OF]->(commons)-[:PARTNER_OF]->(partner) " +
+							"WHERE me <> partner and me <> commons and partner <> commons " +
+							"RETURN commons.name, commons.email " +
+							"ORDER BY commons.name ASC; \"}";
+		System.out.println(query);
+		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
+												.type(MediaType.APPLICATION_JSON).entity(query)
+												.post(ClientResponse.class);
+		String objectCreate = responseCreate.getEntity(String.class);
+		
+		return objectCreate;
+	}
+
 }

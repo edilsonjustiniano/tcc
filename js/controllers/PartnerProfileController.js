@@ -16,6 +16,11 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 	$scope.partner.email = data[0]; //email
 	$scope.partner.name = data[1]; //name
 	$scope.myPartner = true;
+    
+    //commons partners
+    $scope.commonsPartners = [];
+    $scope.limitCommonsPartner = 3;
+    $scope.otherCommonsPartner = '';
 
 	$scope.msg = {}; /* Error or success mesage */
 	$scope.msg.type = '';
@@ -95,6 +100,51 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 				$scope.isMyPartner();
 			}
 		});
-		
+	};
+    
+    
+    /* Get commons partners between me and this guy */
+    $scope.getCommonsPartners = function() {
+        
+        PartnerService.getCommonsPartners($scope.partner, function(callback) {
+            if (!callback.success) {
+                window.sessionStorage.setItem('typeOfAccount', null);
+				window.localStorage['token'] = null;
+				window.location.href = "index.html";
+            } else {
+                var array = callback.data;
+                if (array!= null && array.length > 0){
+                    array.forEach(function(iter) {
+                        $scope.commonsPartners.push({
+                            name : iter[0],
+                            email: iter[1]
+                        });
+                    });
+                }
+                
+                if ($scope.commonsPartners.length > $scope.limitCommonsPartner) {
+                 
+                    for (var i = $scope.commonsPartners.length; i > $scope.limitCommonsPartner; i--) {
+                        $scope.otherCommonsPartner = $scope.commonsPartners[i - 1].name + '\n' + $scope.otherCommonsPartner;
+                    }
+                }
+                
+            }
+        });
+    };
+    
+    $scope.getCommonsPartners();
+    
+    /* Open Partner Profile */
+	$scope.openPartnerProfile = function(partner) {
+		if (partner == null) {
+			return;
+		}
+
+		// Encode the String
+		var encodedString = PartnerService.encodePartnerEmail(partner); //btoa(partner.email + "|" + partner.name);
+		window.location.href = "home.html#/partner-profile/" + encodedString;
+		// $location.path("#/partner-profile/"+partner.email);
+
 	};
 });

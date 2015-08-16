@@ -514,11 +514,10 @@ public class ServiceProviderDAO {
 	public String removeService(String service, Person person) {
 		WebResource resource = FactoryDAO.GetInstance();
 		String query = "{\"query\":\" MATCH (me:Person {email: '"+ person.getEmail() +"'}), "
-				+ "(service:Service), (ex:Execute), " 
-				+ "(me)-[relProvide:PROVIDE]->(service), "
-				+ "(me)-[relExecute:EXECUTE]->(ex)"
+				+ "(service:Service), " 
+				+ "(me)-[relProvide:PROVIDE]->(service) "
 				+ "WHERE me.typeOfAccount <> 'CONTRACTOR' AND service.name = '" + service + "' "
-				+ "DELETE relProvide, relExecute "
+				+ "DELETE relProvide "
 				+ "RETURN DISTINCT(service.name); \"}";
 		
 		System.out.println(query);
