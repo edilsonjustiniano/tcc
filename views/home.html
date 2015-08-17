@@ -23,4 +23,20 @@
         </div>
 
     </div>
+    
+    
+    <div id="feed-content" ng-hide="typeOfAccount == 'CONTRACTOR'">
+        
+        <h1>Dicas</h1>
+        Notamos que você realiza o(s) seguinte(s) serviço(s):
+        <span class="services" ng-repeat="iter in myServices">{{iter.name}}, </span>
+        
+        <div class="feeds" ng-repeat="iter in dicas">
+            <!-- Últimas parcerias criadas -->
+            <div class="feed">
+                {{iter.dica}}
+            </div>
+        </div>
+        
+    </div>
 </div>

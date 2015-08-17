@@ -19,6 +19,7 @@ app.controller('LeftBarController',
 				$scope.user.typeOfAccount = callback.data[0][3]; //typeOfAccount
 				window.sessionStorage.setItem('typeOfAccount', $scope.user.typeOfAccount);
                 $scope.user.photo = callback.data[0][4]; //photo
+                $scope.user.photo == null ? $scope.user.photo = 'image/user-profile.png' : $scope.user.photo = $scope.user.photo;
 			}
 		});
 	};

@@ -57,6 +57,7 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
                 if (array.length > 0) {
                     array.forEach(function (iter) {
                         $scope.serviceProvider.name = iter[0]; //name
+                        $scope.serviceProvider.photo = iter[3] == null ? iter[3] = 'image/user-profile.png' : iter[3] = iter[3];
                     });
                 }
             }
@@ -213,6 +214,13 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     
     /* save evaluate */
     $scope.saveEvaluate = function () {
+        
+        if ($scope.evaluateNote == undefined || $scope.evaluateNote == null) {
+            $scope.msg.type = 'ERROR';
+            $scope.msg.msg = 'Selecione uma nota para prosseguir';
+            return;
+        }
+        
         ServiceProviderService.saveEvaluate($scope.serviceProvider, $scope.evaluateNote, $scope.comments, function (callback) {
             if (!callback.success) { /* Invalid Session or Expired */
                 window.localStorage['token'] = null;

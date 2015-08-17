@@ -68,6 +68,7 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
                 $scope.user.name = arrayNames[0];
                 $scope.user.typeOfAccount = callback.data[0][3];
                 $scope.user.photo = callback.data[0][4];
+                $scope.user.photo == null ? $scope.user.photo = 'image/user-profile.png' : $scope.user.photo = $scope.user.photo;
 //                $scope.name = callback.data[0][0]; //name
 //                var arrayNames = $scope.name.split(" "); //Show only the first name
 //                $scope.name = arrayNames[0];

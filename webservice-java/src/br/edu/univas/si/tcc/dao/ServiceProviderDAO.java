@@ -160,7 +160,7 @@ public class ServiceProviderDAO {
 							"(service:Service {name: '" + providerService + "'}), " +
 							"(sp)-[:PROVIDE]->(service) " +
 							"WHERE sp.typeOfAccount <> 'CONTRACTOR' " + 
-							"RETURN DISTINCT(sp.name), sp.email, sp.gender, service.name \"}";
+							"RETURN DISTINCT(sp.name), sp.email, sp.gender, sp.photo, service.name \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)

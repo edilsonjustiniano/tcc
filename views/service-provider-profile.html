@@ -1,19 +1,20 @@
 <!-- Content-->
 <div id="container">
 
-    <div id="profile-data">
-        <img class="img-circle" src="image/user-profile.png" alt="Profile Photo" />
-        <span class="name-partner">
-		{{serviceProvider.name}}
-	</span>
+   <div id="user-profile-data">
+        <img class="img-circle" src="{{serviceProvider.photo}}" alt="Profile Photo" />
+        <span class="name">{{serviceProvider.name}}</span>
+        <span class="other-infos">Idade</span>
+        <span class="other-infos">Sexo</span>
+        <span class="other-infos">Cidade</span>
+        <span class="other-infos">Trabalha em</span>
     </div>
-
-    <div id="profile-content">
+    
+    <div id="service-provider-options">
 
         <button class="btn" ng-click="mesageButtonClick()">Enviar Mensagem</button>
         <button class="btn" ng-click="evaluateButtonClick()">Avaliar Serviço</button>
-
-
+       
         <form ng-submit="saveEvaluate()" id="evaluate-form" ng-show="showAddEvaluate">
             <legend>Avaliar serviço</legend>
 
@@ -23,32 +24,15 @@
             <!-- Msg success -->
             <div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
 
-            <label class="radio">Nota</label>
-
-            <label class="radio inline">
-                <input type="radio" value="1" ng-model="evaluateNote" name="note" required>0
-            </label>
-
-            <label class="radio inline">
-                <input type="radio" value="1" ng-model="evaluateNote" name="note" required>1
-            </label>
-
-            <label class="radio inline">
-                <input type="radio" value="2" ng-model="evaluateNote" name="note" required>2
-            </label>
-
-            <label class="radio inline">
-                <input type="radio" value="3" ng-model="evaluateNote" name="note" required>3
-            </label>
-
-            <label class="radio inline">
-                <input type="radio" value="4" ng-model="evaluateNote" name="note" required>4
-            </label>
-
-            <label class="radio inline">
-                <input type="radio" value="5" ng-model="evaluateNote" name="note" required>5
-            </label>
-
+            <label>Nota</label>
+            <select ng-model="evaluateNote" name="note" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            
             <label>Mensagem</label>
             <textarea rows="5" ng-model="comments" placeholder="Insira seu comentário..." required></textarea>
 
@@ -62,7 +46,6 @@
         <form ng-submit="saveMesage()" id="evaluate-form" ng-show="showAddMesage">
             <legend>Enviar Mensagem</legend>
         </form>
-
     </div>
 
 
