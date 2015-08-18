@@ -6,31 +6,31 @@ A definição computacional de serviço é um programa que disponibiliza sua fun
 
 \citeonline{marzulo_soa_na_pratica}, afirma que, a implementação de um \textit{Web Service} é relativamente simples, uma vez que, há inúmeras ferramentas que facilitam a implementação do mesmo. Outro fator que permite a um \textit{Web Service} ser mais dinâmico, é possuir uma estrutura interna fracamente acoplada, permitindo assim, mudanças em suas estruturas sem afetar a utilização pelo cliente.
 
-\citeonline{erl_soa_with_rest}, afirma que, o REST\footnotemark[17] é uma das várias implementações utilizadas para criar serviços. Outras implementações também muito conhecidas são: a WSDL\footnotemark[18] e a SOAP\footnotemark[19].
+\citeonline{erl_soa_with_rest}, afirma que, o REST\footnotemark[20] é uma das várias implementações utilizadas para criar serviços. Outras implementações também muito conhecidas são: a WSDL\footnotemark[21] e a SOAP\footnotemark[22].
 
-\footnotetext[17]{REST: \textit{Representational State Transfer} - Tecnologia utilizada por \textit{web services}}
+\footnotetext[20]{REST: \textit{Representational State Transfer} - Tecnologia utilizada por \textit{web services}}
 
-\footnotetext[18]{WSDL: \textit{Web Service Description Language} - Padrão de mercado utilizado para descrever \textit{Web Services}.}
+\footnotetext[21]{WSDL: \textit{Web Service Description Language} - Padrão de mercado utilizado para descrever \textit{Web Services}.}
 
-\footnotetext[19]{SOAP: \textit{Simple Object Access Protocol} - Tecnologia utilizada por \textit{web services} anteriores aos \textit{Web services} REST.}
+\footnotetext[22]{SOAP: \textit{Simple Object Access Protocol} - Tecnologia utilizada por \textit{web services} anteriores aos \textit{Web services} REST.}
 
 O primeiro\textit{Web Service} REST foi criado por Roy Fielding no ano 2000 na universidade da California. Ele foi criado para suceder o tecnologia SOAP, a fim dex facilitar o uso de tal tecnologia. \cite{ibm_web_service}.
 
-Segundo \citeonline{oracle_web_service}, na arquitetura do REST os dados e as funcionalidades são considerados recursos e ambos são acessados por meio de  URIs\footnotemark[20]. Ele funciona baseado no protocolo HTTP, portanto, já possui os mecanismos de segurança, cabeçalhos e respostas embutidos.
+Segundo \citeonline{oracle_web_service}, na arquitetura do REST os dados e as funcionalidades são considerados recursos e ambos são acessados por meio de  URIs\footnotemark[23]. Ele funciona baseado no protocolo HTTP, portanto, já possui os mecanismos de segurança, cabeçalhos e respostas embutidos.
 
-\footnotetext[20]{URI: \textit{Uniform Resource Identifier} - \textit{Link} completo para acessar um determinado recurso.}
+\footnotetext[23]{URI: \textit{Uniform Resource Identifier} - \textit{Link} completo para acessar um determinado recurso.}
 
-Para \citeonline{ibm_web_service}, o \textit{Web service} REST segue 4 princípios básicos. São eles: 
+Para \citeonline{ibm_web_service}, o \textit{Web service} REST segue quatro princípios básicos. São eles: 
 
 \begin{itemize}
 	\item Utilização dos métodos HTTP explicitamente;
 	\item Orientação à conexão;
 	\item Expõe a estrutura de diretório por meio das URIs;
-	\item Trabalha com -\textit{Extensible Markup Language} - XML\footnotemark[21], \textit{Javascript Object Notation} - JSON\footnotemark[22] - ou ambos.
+	\item Trabalha com -\textit{Extensible Markup Language} - XML\footnotemark[24], \textit{Javascript Object Notation} - JSON\footnotemark[25] - ou ambos.
 \end{itemize}
 
-\footnotetext[21]{XML: \textit{Extensible Markup Language} - Tecnologia utilizada para transferência de dados, configuração, entre outras atividades.}
+\footnotetext[24]{XML: \textit{Extensible Markup Language} - Tecnologia utilizada para transferência de dados, configuração, entre outras atividades.}
 
-\footnotetext[22]{JSON: \textit{Javascript Object Notation} - Notação de objetos via Javascript, porém seu uso não é restrito apenas ao Javascript.}
+\footnotetext[25]{JSON: \textit{Javascript Object Notation} - Notação de objetos via Javascript, porém seu uso não é restrito apenas ao Javascript.}
 
 Esta tecnologia foi selecionada para ser utilizada neste trabalho, pois a forma de acesso ao banco de dados Neo4j utiliza uma API REST fornecida pelo próprio Neo4j.
