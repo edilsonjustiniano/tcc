@@ -25,7 +25,7 @@
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {QUADRO METODOL\IeC {\'O}GICO}}{36}{chapter.3}
 \contentsline {section}{\numberline {3.1}Tipo de pesquisa}{36}{section.3.1}
 \contentsline {section}{\numberline {3.2}Contexto de pesquisa}{37}{section.3.2}
-\contentsline {section}{\numberline {3.3}Participantes}{37}{section.3.3}
+\contentsline {section}{\numberline {3.3}Participantes}{38}{section.3.3}
 \contentsline {section}{\numberline {3.4}Instrumentos}{38}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Question\IeC {\'a}rios}{39}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}An\IeC {\'a}lise documental}{39}{subsection.3.4.2}
