@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  21 AUG 2015 21:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  22 AUG 2015 12:36
 entering extended mode
 **Principal.tex
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.tex"
@@ -1515,11 +1515,11 @@ droMetodologico.tex" [35]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _metodologico/tipo_pesquisa.tex")
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/contexto_pesquisa.tex")
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/participantes.tex" [36
+_metodologico/contexto_pesquisa.tex" [36
 
 ])
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
+_metodologico/participantes.tex")
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _metodologico/instrumentos.tex" [37])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
@@ -1732,7 +1732,7 @@ lic/lm/lmtl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (54 pages, 669980 bytes).
+Output written on Principal.pdf (54 pages, 670076 bytes).
 PDF statistics:
  892 PDF objects out of 1000 (max. 8388607)
  193 named destinations out of 1000 (max. 500000)
