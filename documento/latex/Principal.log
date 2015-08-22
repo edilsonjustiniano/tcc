@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  22 AUG 2015 12:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  22 AUG 2015 15:54
 entering extended mode
 **Principal.tex
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.tex"
@@ -1513,23 +1513,23 @@ ub/tcc/documento/latex/imagens/javascript_include.png>]))
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/12_Qua
 droMetodologico.tex" [35]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/tipo_pesquisa.tex")
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/contexto_pesquisa.tex" [36
+_metodologico/tipo_pesquisa.tex" [36
 
 ])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/participantes.tex")
+_metodologico/contexto_pesquisa.tex")
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/instrumentos.tex" [37])
+_metodologico/participantes.tex" [37])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/questionarios.tex")
+_metodologico/instrumentos.tex")
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
+_metodologico/questionarios.tex" [38])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _metodologico/analise_documental.tex")
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/procedimentos.tex" [38] [39] [40] [41])
+_metodologico/procedimentos.tex" [39] [40] [41] [42])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/cronograma.tex" [42]
+_metodologico/cronograma.tex" [43]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 9.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
@@ -1612,27 +1612,27 @@ Overfull \hbox (0.5013pt too wide) in paragraph at lines 22--22
 
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/orcamento.tex" [43]))
+_metodologico/orcamento.tex" [44]))
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/13_Res
-ultados.tex" [44])
+ultados.tex" [45])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/14_Con
-clusao.tex" [45
+clusao.tex" [46
 
 ])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.bbl"
-[46
+[47
 
 ]
 bibitemlist
-[47
+[48
 
-] [48])
+] [49])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/20_Ape
-ndices.tex" [49] [50
+ndices.tex" [50] [51
 
 ]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/21_Ape
-ndice_01.tex" <./imagens/apendice_img1.png, id=651, 526.96875pt x 501.875pt>
+ndice_01.tex" <./imagens/apendice_img1.png, id=655, 526.96875pt x 501.875pt>
 File: ./imagens/apendice_img1.png Graphic file (type png)
 
 <use ./imagens/apendice_img1.png>
@@ -1640,7 +1640,7 @@ Package pdftex.def Info: ./imagens/apendice_img1.png used on input line 7.
 (pdftex.def)             Requested size: 263.48372pt x 250.93687pt.
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/22_Ape
-ndice_02.tex" [51
+ndice_02.tex" [52
 
  <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
 _img1.png>]
@@ -1683,13 +1683,13 @@ Package xcolor Warning: Incompatible color definition on input line 33.
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/30_Ane
 xos.tex"
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis\31_Ane
-xo_01.tex" [52
+xo_01.tex" [53
 
 ]))
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[53
+[54
 
 ]
 
@@ -1716,8 +1716,8 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
  ) 
 Here is how much of TeX's memory you used:
- 15534 strings out of 493921
- 245504 string characters out of 3144849
+ 15535 strings out of 493921
+ 245511 string characters out of 3144849
  380530 words of memory out of 3000000
  18245 multiletter control sequences out of 15000+200000
  69047 words of font info for 69 fonts, out of 3000000 for 9000
@@ -1732,9 +1732,9 @@ lic/lm/lmtl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (54 pages, 670076 bytes).
+Output written on Principal.pdf (55 pages, 672210 bytes).
 PDF statistics:
- 892 PDF objects out of 1000 (max. 8388607)
- 193 named destinations out of 1000 (max. 500000)
+ 897 PDF objects out of 1000 (max. 8388607)
+ 194 named destinations out of 1000 (max. 500000)
  444 words of extra memory for PDF output out of 10000 (max. 10000000)
 
