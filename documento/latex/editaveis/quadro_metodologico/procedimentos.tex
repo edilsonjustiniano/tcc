@@ -3,15 +3,65 @@
 \par Para que esta pesquisa seja levada a cabo, torna-se necessário a implementação de algumas ações, as quais são descritas abaixo.
 
 \begin{itemize}
-	\item Realizar o levantamento de tecnologias a serem utilizadas;
-	\item Fazer um levantamento de teorias em livros da área;
-	\item Fazer um levantamento de requisitos;
-	\item Definir todas as ações que o usuário poderá realizar, por meio de diagramas como o de caso de uso;
-	\item Escrever os diagramas necessários para o início do desenvolvimento do projeto;
-	\item Desenvolver a base de dados, de acordo com os requisitos levantados;
-	\item Implementar o sistema utilizando as tecnologias descritas no quadro teórico;
-	\item Realizar testes, a fim de, evitar que erros passem despercebidos;
-	\item Disponibilizar o sistema na \textit{web}.
+	\item escolha da dupla;
+	\item Decisão do tema (dezembro 2014)
+	\item Escolha do orientador
+	\item Levantamento das tecnologias que seriam utilizadas
+	\item Estudo e pequenos testes a fim de validar as tecnologias
+	\item Definição da metodologia de desenvolvimento de software.
+	\item Pesquisa de mercado para saber a aceitação da ideia
+	\item Inicio do desenvolvimento do pré projeto
+	\item Escrita da introdução, objetivos e justificativa
+	\item levantamento de requisitos textuais do sistema ( através de possíveis cenários e simulações);
+	\item Escrita do quadro teórico para o pré projeto 
+	\item Quadro metodológico
+	\item Criação do cronograma de atividades;
+	\item Revisão do pré projeto
+	\item Banca de qualificação
+	\item Correção do projeto de acordo com as sugestões da banca
+	\item atualização do cronograma	
+	\item Iniciou-se o processo de elaboração da engenharia de software.
+	\item Modelagem da base de dados
+	\item Inicio do desenvolvimento do software.	
+	\item Configuração do ambiente de desenvolvimento (Instalação das ferramentas)
+	\item Tentativa de desenvolvimento utilizando a seguintes tecnologias:
+		- Neo4j embedded, primefaces e JSF.(criar conta) Porem não estava fluindo como o esperado, uma vez que o Neoo4j utilizado da maneira embedded não nos permitia conectar ao sistema de gerenciamento da base de dados (web)e abrir uma nova instancia de conexão simultânea devido a limitações do próprio Neo4j, já que um processo java já ocupava tal conexão com o socket.
+		Outro problema encontrado ao utilizar tais tecnologias foi que tanto a parte cliente (front end) quanto a parte do servidor (back end, modelo de negócios) se encontravam totalmente acoplados em uma aplicação java web, portanto, a cada alteração realizada nos controllers (principalmente, pois este era alterado constantemente, uma vez que ele era diretamente relacionado a página web,seguindo o padrão de desenvolvimento estabelecido ao utilizar as tecnologias descritas acima), sendo necessário recompilar, construir e publicar a aplicação no servidor web (tomcat). Isto estava impedindo que o desenvolvimento do software fluísse naturalmente, como era esperado. Por estes motivos decidiu-se mudar algumas das tecnologias utilizadas no front end e em como o banco de dados era acessado até então. 
+			Passou a utilizar então:
+			- Html5, CSS3, Java Script e o framework Angular JS para auxiliar no desenvolvimento do front end, ao invés de primefaces e JSF.
+			- Para acesso ao banco de dados, lançou-se mão da forma embedded disponibilizada pelo banco de dados e passou-se a utilizar a API REST também disponibilizada pelo mesmo. Tais decisões nos permitiram desacoplar o sistema e manter o front end e o back end independentes.
+		\item Estudo a respeito de web service REST;
+		\item Instalação e configuração do Angular JS. 
+		\item Testes utilizando o web Service REST a fim de validar a conexão com o banco de dados via API REST 
+		\item Testes utilizando Angular JS para enviar requisições ao servidor e receber as respostas. 
+		\item Configurar o acesso da aplicação cliente ao web service localizados em domínios distintos, utilizando o CORS. 
+		\item Implementação do caso de uso 'criar conta' utilizando as novas tecnologias.
+		\item Desenvolvido o sistema de login com armazenamento da sessão no cliente de forma errada; ( Colocando o usuário e senha decodificados na própria sessão do navegador).
+		\item Desenvolvimento do Logoff
+		\item Refatoração do sistema de login e armazenamento e validação da sessão. A partir deste ponto, foi utilizado o sistema de login via token. Gerando assim, sempre um novo token a fim de manter a segurança dos dados. 
+		\item Criar a página inicial do sistema (Página Home)
+		\item Implementação da busca por parceiros (buscando todos os contratantes registrados no banco, ou seja, sem critérios para a busca, a fim de criar a rede de parcerias primeiramente);
+		\item Implementação da funcionalidade 'Adicionar Parceria'.
+		\item Implementação da fila de requisição em espera para análise do contratante no menu principal.
+		\item Implementação da funcionalidade 'Aceitar parceria'.
+		\item Implementação do serviço de localização de possíveis parceiros com base em sua rede de relacionamento (parcerias) na página inicial do sistema.
+		\item Implementação da busca por todos os parceiros do contratante autenticado no sistema para ser apresentado na página de rede de parceria
+		\item Implementação da busca por novos parceiros para o contratante autenticado no sistema na página de rede de parceria.
+		\item Implementação da funcionalidade 'Listar todos os serviços' cujo o provedor de serviço possui atrelado a ele.
+		\item Implementação da funcionalidade 'Adicionar serviços' para os provedores de serviços.
+		\item Implementação de remoção de serviços.
+		\item Implementação da funcionalidade Listar Mão de obra. Inicialmente, como feito na lista de parceiros, também feito na lista de provedores de serviços. (Listei todos os provedores de serviços que executavam o serviço procurado pela pessoa naquele momento), a fim de criar a rede de avaliações de serviços.
+		\item Implementar a funcionalidade de Avaliar o serviço.
+		\item Implementar a funcionalidade de Localização de mão de obra, agora baseando-se nas avaliações anteriormente realizadas pelos meus parceiros.
+		\item Abranger a busca por provedores de serviço, que ainda não foram avaliadas, para localizar mão de obras dentro da mesma cidade do contratante.
+		\item Implementar a busca pelas últimas avaliações realizadas pelo contratante autenticado no sistema.
+		\item Criar a página de perfil do provedor de serviço e apresentar um relatório contendo a média das avaliações em diferentes situações (na rede de parceria, na empresa e na cidade)
+		\item Criar a página de perfil dos contratantes apresentando a quantidade de parceiros em comum e o nome de alguns deles
+		\item Desenvolver o design do sistema
+		\item Refatorar a página Incial (Página Home) de ambos os tipos de acesso (Provedor de serviços e Contratantes ou ambos)
+		\item Criar uma página com dicas randômicas para os prestadores de serviços
+		\item Criar o feed de notícias na página inicial do sistema (parecido com o do facebook)
+		\item Criar os gráficos (à desenvolver)	
 \end{itemize}
 
 \par Realizando todos os passos descritos acima, será possível obter como resultado final a realização deste projeto.
