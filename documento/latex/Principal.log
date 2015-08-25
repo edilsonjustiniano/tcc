@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  23 AUG 2015 22:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  24 AUG 2015 20:59
 entering extended mode
 **Principal.tex
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.tex"
@@ -1326,7 +1326,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 droTeorico.tex" [13]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _teorico/iconix.tex"
-<./imagens/visao_geral_iconix.png, id=206, 402.7848pt x 240.9pt>
+<./imagens/visao_geral_iconix.png, id=198, 402.7848pt x 240.9pt>
 File: ./imagens/visao_geral_iconix.png Graphic file (type png)
 
 <use ./imagens/visao_geral_iconix.png>
@@ -1345,7 +1345,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ao_geral_iconix.png>])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _teorico/teoria_grafos.tex" [16]
-<./imagens/Konigsberg_7_bridges.jpg, id=235, 501.875pt x 401.5pt>
+<./imagens/Konigsberg_7_bridges.jpg, id=227, 501.875pt x 401.5pt>
 File: ./imagens/Konigsberg_7_bridges.jpg Graphic file (type jpg)
 
 <use ./imagens/Konigsberg_7_bridges.jpg>
@@ -1354,14 +1354,14 @@ Package pdftex.def Info: ./imagens/Konigsberg_7_bridges.jpg used on input line
 (pdftex.def)             Requested size: 364.2138pt x 182.72566pt.
  [17 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/Koni
 gsberg_7_bridges.jpg>]
-<./imagens/simple_graph.png, id=258, 400.49625pt x 194.7275pt>
+<./imagens/simple_graph.png, id=250, 400.49625pt x 194.7275pt>
 File: ./imagens/simple_graph.png Graphic file (type png)
 
 <use ./imagens/simple_graph.png>
 Package pdftex.def Info: ./imagens/simple_graph.png used on input line 34.
 (pdftex.def)             Requested size: 308.38306pt x 149.94061pt.
 
-<./imagens/multigraph_example.png, id=265, 246.9225pt x 178.6675pt>
+<./imagens/multigraph_example.png, id=257, 246.9225pt x 178.6675pt>
 File: ./imagens/multigraph_example.png Graphic file (type png)
 
 <use ./imagens/multigraph_example.png>
@@ -1371,7 +1371,7 @@ Package pdftex.def Info: ./imagens/multigraph_example.png used on input line 47
  [18 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/simp
 le_graph.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/ima
 gens/multigraph_example.png>]
-<./imagens/simple_digraph_graph.png, id=282, 256.96pt x 256.96pt>
+<./imagens/simple_digraph_graph.png, id=274, 256.96pt x 256.96pt>
 File: ./imagens/simple_digraph_graph.png Graphic file (type png)
 
 <use ./imagens/simple_digraph_graph.png>
@@ -1386,7 +1386,7 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 67.
 
-<./imagens/grafos_isomorficos.png, id=291, 264.99pt x 107.40125pt>
+<./imagens/grafos_isomorficos.png, id=283, 264.99pt x 107.40125pt>
 File: ./imagens/grafos_isomorficos.png Graphic file (type png)
 
 <use ./imagens/grafos_isomorficos.png>
@@ -1396,7 +1396,7 @@ Package pdftex.def Info: ./imagens/grafos_isomorficos.png used on input line 76
  [19 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/simp
 le_digraph_graph.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/l
 atex/imagens/grafos_isomorficos.png>]
-<./imagens/matriz_adjacencia.png, id=305, 230.8625pt x 168.63pt>
+<./imagens/matriz_adjacencia.png, id=297, 230.8625pt x 168.63pt>
 File: ./imagens/matriz_adjacencia.png Graphic file (type png)
 
 <use ./imagens/matriz_adjacencia.png>
@@ -1413,7 +1413,7 @@ _teorico/banco_dados_relacionais.tex" [21])
 _teorico/banco_dados_nosql.tex") [22]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _teorico/neo4j.tex" [23]
-<./imagens/simple_graph_neo4j.png, id=367, 374.39874pt x 187.70125pt>
+<./imagens/simple_graph_neo4j.png, id=359, 374.39874pt x 187.70125pt>
 File: ./imagens/simple_graph_neo4j.png Graphic file (type png)
 
 <use ./imagens/simple_graph_neo4j.png>
@@ -1431,7 +1431,7 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 21.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [27]
-<./imagens/processo_compilacao_java.png, id=423, 297.7524pt x 81.4242pt>
+<./imagens/processo_compilacao_java.png, id=415, 297.7524pt x 81.4242pt>
 File: ./imagens/processo_compilacao_java.png Graphic file (type png)
 
 <use ./imagens/processo_compilacao_java.png>
@@ -1458,7 +1458,7 @@ _teorico/css3.tex"
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 18.
  [31]
-<./imagens/example_css_inline.png, id=505, 488.82625pt x 149.55875pt>
+<./imagens/example_css_inline.png, id=497, 488.82625pt x 149.55875pt>
 File: ./imagens/example_css_inline.png Graphic file (type png)
 
 <use ./imagens/example_css_inline.png>
@@ -1466,7 +1466,7 @@ Package pdftex.def Info: ./imagens/example_css_inline.png used on input line 22
 .
 (pdftex.def)             Requested size: 391.06152pt x 119.64716pt.
 
-<./imagens/example_css_incorpored.png, id=506, 609.27625pt x 219.82124pt>
+<./imagens/example_css_incorpored.png, id=498, 609.27625pt x 219.82124pt>
 File: ./imagens/example_css_incorpored.png Graphic file (type png)
 
 <use ./imagens/example_css_incorpored.png>
@@ -1476,7 +1476,7 @@ e 31.
  [32 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/exam
 ple_css_inline.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/lat
 ex/imagens/example_css_incorpored.png>] <./imagens/example_external_css.png, id
-=513, 544.0325pt x 169.63374pt>
+=505, 544.0325pt x 169.63374pt>
 File: ./imagens/example_external_css.png Graphic file (type png)
 
 <use ./imagens/example_external_css.png>
@@ -1486,7 +1486,7 @@ Package pdftex.def Info: ./imagens/example_external_css.png used on input line
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _teorico/javascript.tex"
-<./imagens/javascript_code.png, id=524, 517.935pt x 169.63374pt>
+<./imagens/javascript_code.png, id=516, 517.935pt x 169.63374pt>
 File: ./imagens/javascript_code.png Graphic file (type png)
 
 <use ./imagens/javascript_code.png>
@@ -1498,7 +1498,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [33 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/examp
 le_external_css.png>]
-<./imagens/javascript_include.png, id=532, 434.62375pt x 126.4725pt>
+<./imagens/javascript_include.png, id=524, 434.62375pt x 126.4725pt>
 File: ./imagens/javascript_include.png Graphic file (type png)
 
 <use ./imagens/javascript_include.png>
@@ -1519,120 +1519,29 @@ _metodologico/tipo_pesquisa.tex" [36
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _metodologico/contexto_pesquisa.tex" [37])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/participantes.tex")
+_metodologico/instrumentos.tex")
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/instrumentos.tex" [38])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/questionarios.tex")
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/analise_documental.tex")
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/procedimentos.tex" [39] [40] [41] [42])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/cronograma.tex" [43]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 9.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 11.
-
-Overfull \hbox (0.5013pt too wide) in paragraph at lines 12--12
-[][] 
- []
-
-
-Overfull \vbox (4.12767pt too high) detected at line 12
- []
-
-
-Overfull \hbox (0.5013pt too wide) in paragraph at lines 12--12
-[][] 
- []
-
-
-Overfull \hbox (2.11678pt too wide) in paragraph at lines 13--13
-[][] 
- []
-
-
-Overfull \hbox (0.5013pt too wide) in paragraph at lines 14--14
-[][] 
- []
-
-
-Overfull \hbox (0.5013pt too wide) in paragraph at lines 15--15
-[][] 
- []
-
-
-Overfull \hbox (0.5013pt too wide) in paragraph at lines 16--16
-[][] 
- []
-
-
-Overfull \hbox (0.5013pt too wide) in paragraph at lines 17--17
-[][] 
- []
-
-
-Overfull \hbox (2.3598pt too wide) in paragraph at lines 18--18
-[][] 
- []
-
-
-Overfull \vbox (4.4966pt too high) detected at line 19
- []
-
-
-Overfull \hbox (0.5013pt too wide) in paragraph at lines 19--19
-[][] 
- []
-
-
-Overfull \hbox (0.5013pt too wide) in paragraph at lines 20--20
-[][] 
- []
-
-
-Overfull \vbox (8.22295pt too high) detected at line 21
- []
-
-
-Overfull \hbox (0.5013pt too wide) in paragraph at lines 21--21
-[][] 
- []
-
-
-Overfull \vbox (7.48466pt too high) detected at line 22
- []
-
-
-Overfull \hbox (0.5013pt too wide) in paragraph at lines 22--22
-[][] 
- []
-
-)
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/orcamento.tex" [44]))
+_metodologico/procedimentos.tex" [38] [39] [40] [41]))
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/13_Res
-ultados.tex" [45])
+ultados.tex" [42])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/14_Con
-clusao.tex" [46
+clusao.tex" [43
 
 ])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.bbl"
-[47
+[44
 
 ]
 bibitemlist
-[48
+[45
 
-] [49])
+] [46])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/20_Ape
-ndices.tex" [50] [51
+ndices.tex" [47] [48
 
 ]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/21_Ape
-ndice_01.tex" <./imagens/apendice_img1.png, id=655, 526.96875pt x 501.875pt>
+ndice_01.tex" <./imagens/apendice_img1.png, id=637, 526.96875pt x 501.875pt>
 File: ./imagens/apendice_img1.png Graphic file (type png)
 
 <use ./imagens/apendice_img1.png>
@@ -1640,7 +1549,7 @@ Package pdftex.def Info: ./imagens/apendice_img1.png used on input line 7.
 (pdftex.def)             Requested size: 263.48372pt x 250.93687pt.
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/22_Ape
-ndice_02.tex" [52
+ndice_02.tex" [49
 
  <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
 _img1.png>]
@@ -1683,13 +1592,13 @@ Package xcolor Warning: Incompatible color definition on input line 33.
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/30_Ane
 xos.tex"
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis\31_Ane
-xo_01.tex" [53
+xo_01.tex" [50
 
 ]))
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[54
+[51
 
 ]
 
@@ -1716,25 +1625,31 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
  ) 
 Here is how much of TeX's memory you used:
- 15535 strings out of 493921
- 245511 string characters out of 3144849
- 380530 words of memory out of 3000000
- 18245 multiletter control sequences out of 15000+200000
- 69047 words of font info for 69 fonts, out of 3000000 for 9000
+ 15492 strings out of 493921
+ 243916 string characters out of 3144849
+ 361883 words of memory out of 3000000
+ 18228 multiletter control sequences out of 15000+200000
+ 59916 words of font info for 62 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 46i,16n,43p,963b,1461s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files (x86)/M
-iKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmtl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
-8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (55 pages, 672940 bytes).
+ 46i,12n,43p,963b,1461s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{section.3.5} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{page.52} has been referenced but does not exist, re
+placed by a fixed one
+
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files (x86)/MiK
+TeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmtl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Principal.pdf (52 pages, 663024 bytes).
 PDF statistics:
- 897 PDF objects out of 1000 (max. 8388607)
- 194 named destinations out of 1000 (max. 500000)
- 444 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 863 PDF objects out of 1000 (max. 8388607)
+ 188 named destinations out of 1000 (max. 500000)
+ 404 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -3,7 +3,7 @@
 \setlength{\labelsep}{0pt}\begin{thebibliography}{}
 \providecommand{\abntrefinfo}[3]{}
 \providecommand{\abntbstabout}[1]{}
-\abntbstabout{v-1.9.2 }
+\abntbstabout{v-1.9.5 }
 
 \bibitem[Apache 2015]{apache_about_tomcat}
 \abntrefinfo{Apache}{APACHE}{2015}
@@ -77,10 +77,25 @@ Acesso em 28 de dezembro de 2014.}
 {FLANAGAN, D. \emph{\textbf{Javascript: The Definitive Guide}}. 6. ed. [S.l.]:
   O' Reilly, 2011.}
 
+\bibitem[Fonseca 2002]{fonseca_metodologia_da_pesquisa}
+\abntrefinfo{Fonseca}{FONSECA}{2002}
+{FONSECA, J. J.~S. \emph{\textbf{Metodologia da pesquisa Científica}}. [S.l.]:
+  UEC, 2002.}
+
 \bibitem[Frank e Seibt 2002]{javascript_diego_leonard}
 \abntrefinfo{Frank e Seibt}{FRANK; SEIBT}{2002}
 {FRANK, D.~R.; SEIBT, L. Javascript.
 2002.}
+
+\bibitem[Gil 1999]{gil_metodos_e_tecnicas_de_pesquisa}
+\abntrefinfo{Gil}{GIL}{1999}
+{GIL, A.~C. \emph{\textbf{Métodos e técnicas de pesquisa social}}. 5. ed.
+  [S.l.]: Atlas, 1999.}
+
+\bibitem[Gil 2007]{gil_como_elaborar_projeto_de_pesquisa}
+\abntrefinfo{Gil}{GIL}{2007}
+{GIL, A.~C. \emph{\textbf{Como elaborar projetos de pesquisa}}. 4. ed. [S.l.]:
+  Atlas, 2007.}
 
 \bibitem[Green e Seshadri 2013]{green_seshadri_angularjs}
 \abntrefinfo{Green e Seshadri}{GREEN; SESHADRI}{2013}
@@ -163,15 +178,15 @@ Acesso em 23/07/2015.}
   \url{http://www.maa.org/publications/periodicals/convergence/leonard-eulers-solution-to-the-konigsberg-bridge-problem}.
 Acesso em 26 de fevereiro de 2015.}
 
-\bibitem[Penha e Carvalho 2013]{tcc_univas_penha_carvalho_recomendacao_filmes}
-\abntrefinfo{Penha e Carvalho}{PENHA; CARVALHO}{2013}
-{PENHA, A.~L. da S.; CARVALHO, W. \emph{Sistema de recomendação de filmes
-  utilizando graph database}. [S.l.: s.n.], 2013.}
-
 \bibitem[Pádua 2007]{padua_metodologia_pesquisa}
 \abntrefinfo{Pádua}{PáDUA}{2007}
 {PáDUA, E. M.~M. de. \emph{\textbf{Metodologia da Pesquisa: Abordagem
   Teorico-Pratica}}. 16. ed. [S.l.]: Papirus, 2007.}
+
+\bibitem[Penha e Carvalho 2013]{tcc_univas_penha_carvalho_recomendacao_filmes}
+\abntrefinfo{Penha e Carvalho}{PENHA; CARVALHO}{2013}
+{PENHA, A.~L. da S.; CARVALHO, W. \emph{Sistema de recomendação de filmes
+  utilizando graph database}. [S.l.: s.n.], 2013.}
 
 \bibitem[Robinson, Webber e Eifrem
   2013]{robinson_webber_eifrem_graph_databases}
@@ -242,12 +257,6 @@ Acesso em 23/07/2015.}
 \abntrefinfo{Silva e Pires}{SILVA; PIRES}{2013}
 {SILVA, A.~C. da; PIRES, J.~P. \emph{Banco de dados relacional versus banco de
   dados orientado a grafos aplicados a redes sociais}. [S.l.: s.n.], 2013.}
-
-\bibitem[Silva e Menezes
-  2005]{silva_menezes_metodologia_pesquisa_elaboracao_dissertacao}
-\abntrefinfo{Silva e Menezes}{SILVA; MENEZES}{2005}
-{SILVA, E.~L. da; MENEZES, E.~M. \emph{\textbf{Metodologia da Pesquisa e
-  Elaboração de Dissertação}}. 4. ed. [S.l.]: UFSC, 2005.}
 
 \bibitem[Silva 2011]{silva_css_3}
 \abntrefinfo{Silva}{SILVA}{2011a}

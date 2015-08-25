@@ -1,17 +1,6 @@
-This is BibTeX, Version 0.99d (TeX Live 2014)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: Principal.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Principal.aux
 A level-1 auxiliary file: fixos/01_Capa.aux
 The style file: abntex2-alf.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: biblio.bib
 Repeated entry---line 134 of file biblio.bib
@@ -29,54 +18,9 @@ I was expecting a `,' or a `}'---line 399 of file biblio.bib
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "ABNT-final"
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=20001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 +---------------------------------------------------------+
-| Estilo bibliográfico abntex2-alf.bst versão v-1.9.2           |
+| Estilo bibliográfico abntex2-alf.bst versão v-1.9.5           |
 | Em caso de dúvidas ou problemas com este estilo procure |
-| http://abntex2.googlecode.com                           |
+| http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 49 entries,
-            6711 wiz_defined-function locations,
-            1392 strings with 15798 characters,
-and the built_in function-call counts, 34364 in all, are:
-= -- 2637
-> -- 1215
-< -- 12
-+ -- 487
-- -- 379
-* -- 2268
-:= -- 4770
-add.period$ -- 178
-call.type$ -- 49
-change.case$ -- 447
-chr.to.int$ -- 82
-cite$ -- 48
-duplicate$ -- 1734
-empty$ -- 2802
-format.name$ -- 1777
-if$ -- 8163
-int.to.chr$ -- 3
-int.to.str$ -- 0
-missing$ -- 926
-newline$ -- 219
-num.names$ -- 240
-pop$ -- 1272
-preamble$ -- 1
-purify$ -- 176
-quote$ -- 0
-skip$ -- 1876
-stack$ -- 1
-substring$ -- 922
-swap$ -- 695
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 290
-width$ -- 0
-write$ -- 695
 (There were 3 error messages)
