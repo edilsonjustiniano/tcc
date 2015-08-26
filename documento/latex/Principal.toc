@@ -26,7 +26,7 @@
 \contentsline {section}{\numberline {3.1}Tipo de pesquisa}{36}{section.3.1}
 \contentsline {section}{\numberline {3.2}Contexto de pesquisa}{37}{section.3.2}
 \contentsline {section}{\numberline {3.3}Instrumentos}{38}{section.3.3}
-\contentsline {section}{\numberline {3.4}Procedimentos}{38}{section.3.4}
+\contentsline {section}{\numberline {3.4}Procedimentos}{39}{section.3.4}
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {RESULTADOS}}{43}{chapter.4}
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {CONCLUS\IeC {\~A}O}}{44}{chapter.5}
 \vspace {\cftbeforechapterskip }
