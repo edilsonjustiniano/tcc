@@ -1,7 +1,10 @@
 package br.edu.univas.si.tcc.trunp.dao;
 
+import java.util.List;
+
 import javax.ws.rs.core.MediaType;
 
+import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
@@ -9,6 +12,7 @@ import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
 import br.edu.univas.si.tcc.trunp.model.Person;
+import br.edu.univas.si.tcc.trunp.util.JSONUtil;
 
 public class SessionDAO {
 	
@@ -50,21 +54,32 @@ public class SessionDAO {
 	}
 
 	
-	public String getPersonDataInSession(Person person) {
+	public JSONArray getPersonDataInSession(Person person) throws JSONException {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		
 		String query = null;
 		query = "{\"query\":\" MATCH (person:Person {email: '" + person.getEmail() + "'})" +
-				" RETURN person.name, person.email, person.typeOfPerson, person.typeOfAccount, person.photo; \"}";
+				" RETURN {name: person.name, email: person.email, typeOfPerson: person.typeOfPerson, "  + 
+				"typeOfAccount: person.typeOfAccount, photo: person.photo} as person; \"}";
 		System.out.println(query);
 		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
 		
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 									.type(MediaType.APPLICATION_JSON).entity(query)
 									.post(ClientResponse.class);
-		String result = responseCreate.getEntity(String.class);
-			
-		return result;
+		String resp = responseCreate.getEntity(String.class);
+		
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 	}
 }

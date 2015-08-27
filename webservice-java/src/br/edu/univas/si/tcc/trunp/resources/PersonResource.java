@@ -58,7 +58,7 @@ public class PersonResource {
 			e2.printStackTrace();
 		}
 		
-		String objectCreate = dao.createAccountPersonalData(jsonObj);
+		String objectCreate = null;//dao.createAccountPersonalData(jsonObj);
 		
 		JSONObject response = null;
 		try {

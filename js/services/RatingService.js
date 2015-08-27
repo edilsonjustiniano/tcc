@@ -1,8 +1,8 @@
 app.service('RatingService', function($http){
 
-    this.getMyLastestRatings = function(callback) {
+    this.getMyLastestRatings = function(callback, error) {
 		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/rating/myLastestRatings', {token: token}).
-		success(callback);
+		$http.get('http://localhost:8080/WebService/rating/mylastestratings/' + token).
+		then(callback, error);
 	};
 });

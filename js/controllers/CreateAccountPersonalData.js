@@ -92,16 +92,10 @@ TCCApp.service('CreateAccountService', function($http){
     	return true;
 	};
 
-	this.createAccount = function(person, callback) {
+	this.createAccount = function(person, callback, error) {
 
-		$http.post('http://localhost:8080/WebService/person/createAccountPersonalData', JSON.stringify(person)).
-		success(callback);
-		// error(function(data, status, headers, config) {
-		//     // called asynchronously if an error occurs
-		//     // or server returns response with an error status.
-		//     console.log('error');
-		//     //return undefined;
-		// });
+		$http.post('http://localhost:8080/WebService/person/createaccount/personaldata', JSON.stringify(person)).
+		then(callback, error);
 	};
 
 });
@@ -132,7 +126,7 @@ TCCApp.controller('CreateAccountPersonalData', function($scope, CreateAccountSer
 			return;
 		}
 
-		var person = new Person();
+		var person = {};
 		/* Check if the type of Person is equal to PHISIC, In this case, we need to validate the CPF */
 		if ($scope.typeOfPerson == 'PHISIC') {
 			
@@ -150,8 +144,8 @@ TCCApp.controller('CreateAccountPersonalData', function($scope, CreateAccountSer
 			
 			// } else {
 				/* Continue with the new cadastre */
-				person.setCPF($scope.cpf);
-				person.setGender($scope.gender);
+				person.cpf  = $scope.cpf;
+				person.gender = $scope.gender;
 			// }
 		
 		} else { /* Juridic Person */
@@ -170,15 +164,15 @@ TCCApp.controller('CreateAccountPersonalData', function($scope, CreateAccountSer
 			
 			// } else {
 				/* Continue with the new cadastre */
-				person.setCNPJ($scope.cnpj);
+				person.cnpj = $scope.cnpj;
 			// }
 		}
 
-		person.setName($scope.name);
-		person.setEmail($scope.email);
-		person.setPassword($scope.password);
-		person.setTypeOfAccount($scope.typeOfAccount);
-		person.setTypeOfPerson($scope.typeOfPerson);
+		person.name = $scope.name;
+		person.email = $scope.email;
+		person.password = $scope.password;
+		person.typeOfAccount = $scope.typeOfAccount;
+		person.typeOfPerson = $scope.typeOfPerson;
 
 	
 		var data = CreateAccountService.createAccount(person, function(callback) {
@@ -194,20 +188,25 @@ TCCApp.controller('CreateAccountPersonalData', function($scope, CreateAccountSer
 			$scope.gender = 'F';
 			*/
 			/* Redirect to page create account work data */
-			if (!callback.success) {
+            var data = callback.data;
+			if (!data.success) {
 				$scope.msg.type = 'ERROR';
-				$scope.msg.msg = callback.mesage;
+				$scope.msg.msg = data.mesage;
 			} else {
 				$scope.msg.type = 'SUCCESS';
-				$scope.msg.msg = callback.mesage;
-				window.localStorage['token'] = callback.token;
+				$scope.msg.msg = data.mesage;
+				window.localStorage['token'] = data.token;
 				window.location.href = 'create-account-work-data.html';
 			}
-		}); 
+		}, $scope.error); 
 		
 
 			//return {"cliente":[{"id":"1","name":"Edilson"},{"id":"2","name":"Josy"}]}
 			//$scope.clientes = data.cliente; //cliente is the root element in JSON return
 		// });
 	};
+    
+    $scope.error = function(response) {
+        console.log('error: '); 
+    };
 });

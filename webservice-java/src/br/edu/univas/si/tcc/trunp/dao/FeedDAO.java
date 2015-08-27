@@ -1,15 +1,22 @@
 package br.edu.univas.si.tcc.trunp.dao;
 
+import java.util.List;
+
 import javax.ws.rs.core.MediaType;
+
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
 
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
 import br.edu.univas.si.tcc.trunp.model.Person;
+import br.edu.univas.si.tcc.trunp.util.JSONUtil;
 
 public class FeedDAO {
 
-	public String getLastPartnership(Person person) {
+	public JSONArray getLastestPartnership(Person person) throws JSONException {
 
 		WebResource resource = FactoryDAO.GetInstance();
 		
@@ -19,22 +26,34 @@ public class FeedDAO {
 							"(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners), " +
 							"(partners)-[partnerA:PARTNER_OF]->(user)-[partnerB:PARTNER_OF]->(partners) " +
 							"WHERE partners <> me " +
-							"RETURN DISTINCT(partners.name), partners.email, user.name, user.email, partnerA.since, partnerB.since, 0 as null1, 0 as null2, false as rating " +
-							"ORDER BY partnerA.since, partnerB.since DESC \"}";
+							"RETURN DISTINCT({partnerName: partners.name, partnerEmail: partners.email, " +
+							"userName: user.name, userEmail: user.email, partnerASince: partnerA.since, " + 
+							"partnerBSince: partnerB.since, null1: 0, null2: 0, rating: false}) as partnership " +
+							"ORDER BY partnership.partnerASince, partnership.partnerBSince DESC \"}";
 		System.out.println(query);
 		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
 		
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 									.type(MediaType.APPLICATION_JSON).entity(query)
 									.post(ClientResponse.class);
-		String result = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 			
-		return result;
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 	}
 	
 	
 	
-	public String getLastestRatings(Person person) {
+	public JSONArray getLastestRatings(Person person) throws JSONException {
 
 		WebResource resource = FactoryDAO.GetInstance();
 		
@@ -50,17 +69,29 @@ public class FeedDAO {
 							"(executed)-[:TO]->(partners), " +
 							"(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners) " +
 							"WHERE partners <> me AND sp.typeOfAccount <> 'CONTRACTOR' " +
-							"RETURN DISTINCT(sp.name), sp.email, service.name, executed.note, executed.comments, executed.date, partners.name, partners.email, true as rating " +
-							"ORDER BY executed.date DESC; \"}";
+							"RETURN DISTINCT({serviceProviderName: sp.name, serviceProviderEmail: sp.email, " +
+							"service: service.name, note: executed.note, comments: executed.comments, " +
+							"date: executed.date, partnerName: partners.name, partnerEmail: partners.email, rating: true}) as rating " +
+							"ORDER BY rating.date DESC; \"}";
 		System.out.println(query);
 		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
 		
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 									.type(MediaType.APPLICATION_JSON).entity(query)
 									.post(ClientResponse.class);
-		String result = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 			
-		return result;
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+		
+		return arr;
 	}
 
 }

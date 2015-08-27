@@ -3,30 +3,28 @@
 
 app.service('MenuBarService', function ($http) {
 
-    this.getAllPartnerRequest = function (callback) {
+    this.getAllPartnerRequest = function (callback, error) {
         var token = window.localStorage['token'];
-        $http.post('http://localhost:8080/WebService/partner/getAllPartnerRequest', {
-            token: token
-        }).
-        success(callback);
+        $http.get('http://localhost:8080/WebService/partner/allpartnerrequest/' + token).
+        then(callback, error);
     };
 
-    this.acceptPartnerRequest = function (partner, callback) {
+    this.acceptPartnerRequest = function (partner, callback, error) {
         var token = window.localStorage['token'];
-        $http.post('http://localhost:8080/WebService/partner/acceptPartnerRequest', {
+        $http.post('http://localhost:8080/WebService/partner/acceptpartnerrequest', {
             partner: partner.requestFromEmail,
             token: token
         }).
-        success(callback);
+        then(callback, error);
     };
 
-    this.rejectPartnerRequest = function (partner, callback) {
+    this.rejectPartnerRequest = function (partner, callback, error) {
         var token = window.localStorage['token'];
-        $http.post('http://localhost:8080/WebService/partner/rejectPartnerRequest', {
+        $http.post('http://localhost:8080/WebService/partner/rejectpartnerrequest', {
             partner: partner.requestFromEmail,
             token: token
         }).
-        success(callback);
+        then(callback, error);
     };
 });
 
@@ -55,29 +53,31 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
     $scope.getUserInfoFromSession = function () {
 
         SessionService.getUserInfoFromSession(function (callback) {
-            if (!callback.success) { /* Ivalid session or expired session */
+            var data = callback.data;
+            if (!data.success) { /* Ivalid session or expired session */
                 $scope.msg.type = 'ERROR';
-                $scope.msg.msg = callback.mesage;
+                $scope.msg.msg = data.mesage;
                 window.localStorage['token'] = null;
                 window.location.href = 'index.html';
             } else {
                 //get data from return and fill the components according to type of account
-                window.localStorage['token'] = callback.token;
-                $scope.user.name = callback.data[0][0]; //name
+                window.localStorage['token'] = data.token;
+                var userData = data.results[0];
+                $scope.user.name = userData.name; //name
                 var arrayNames = $scope.user.name.split(" "); //Show only the first name
                 $scope.user.name = arrayNames[0];
-                $scope.user.typeOfAccount = callback.data[0][3];
-                $scope.user.photo = callback.data[0][4];
+                $scope.user.typeOfAccount = userData.typeOfAccount;
+                $scope.user.photo = userData.photo;
                 $scope.user.photo == null ? $scope.user.photo = 'image/user-profile.png' : $scope.user.photo = $scope.user.photo;
-//                $scope.name = callback.data[0][0]; //name
-//                var arrayNames = $scope.name.split(" "); //Show only the first name
-//                $scope.name = arrayNames[0];
+                //                $scope.name = callback.data[0][0]; //name
+                //                var arrayNames = $scope.name.split(" "); //Show only the first name
+                //                $scope.name = arrayNames[0];
                 //$scope.email = callback.data[0][1]; //email (It works)
                 //$scope.typeOfPerson = callback.data[0][2]; //typeOfPerson (It works)
-//                $scope.user.typeOfAccount = callback.data[0][3]; //typeOfAccount
+                //                $scope.user.typeOfAccount = callback.data[0][3]; //typeOfAccount
                 window.sessionStorage.setItem('typeOfAccount', $scope.user.typeOfAccount);
             }
-        });
+        }, $scope.error);
     };
 
     $scope.logout = function () {
@@ -100,8 +100,8 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
         }
 
         MenuBarService.getAllPartnerRequest(function (callback) {
-
-            if (!callback.success) { /* Invalid session or expired session */
+            var data = callback.data;
+            if (!data.success) { /* Invalid session or expired session */
 
                 window.sessionStorage.setItem('typeOfAccount', undefined);
                 window.localStorage['token'] = null;
@@ -109,18 +109,18 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
 
             } else {
 
-                window.localStorage['token'] = callback.token;
-                var array = callback.data;
+                window.localStorage['token'] = data.token;
+                var array = data.results;
                 array.forEach(function (iter) {
                     $scope.partnerRequests.push({
-                        requestFromName: iter[0],
-                        requestFromEmail: iter[1]
+                        requestFromName: iter.name,
+                        requestFromEmail: iter.email
                     });
                 });
 
             }
 
-        });
+        }, $scope.error);
     };
 
     $scope.getAllPartnerRequest();
@@ -130,19 +130,18 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
     $scope.acceptPartnerRequest = function (partner) {
 
         MenuBarService.acceptPartnerRequest(partner, function (callback) {
-            if (!callback.success) { /* Invalid session or expired session */
-
+            var data = callback.data;
+            if (!data.success) { /* Invalid session or expired session */
                 window.sessionStorage.setItem('typeOfAccount', null);
                 window.localStorage['token'] = null;
                 window.location.href = "index.html";
 
             } else {
-
-                window.localStorage['token'] = callback.token;
+                window.localStorage['token'] = data.token;
                 $scope.partnerRequests = [];
                 $scope.getAllPartnerRequest();
             }
-        });
+        }, $scope.error);
     };
 
 
@@ -151,15 +150,13 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
     $scope.rejectPartnerRequest = function (partner) {
 
         MenuBarService.rejectPartnerRequest(partner, function (callback) {
-            if (!callback.success) { /* Invalid session or expired session */
-
+            var data = callback.data;
+            if (!data.success) { /* Invalid session or expired session */
                 window.sessionStorage.setItem('typeOfAccount', null);
                 window.localStorage['token'] = null;
                 window.location.href = "index.html";
-
             } else {
-
-                window.localStorage['token'] = callback.token;
+                window.localStorage['token'] = data.token;
                 $scope.partnerRequests = [];
                 $scope.getAllPartnerRequest();
             }
@@ -174,9 +171,9 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
             return;
         }
 
-//        MenuBarService.getServicesProvidersByService($scope.service, function (callback) {
-        ServiceProviderService.getServicesByName($scope.service, function(callback) {
-            
+        //        MenuBarService.getServicesProvidersByService($scope.service, function (callback) {
+        ServiceProviderService.getServicesByName($scope.service, function (callback) {
+
             if (!callback.success) {
                 window.sessionStorage.setItem('typeOfAccount', null);
                 window.localStorage['token'] = null;
@@ -184,7 +181,7 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
             } else {
                 $scope.services = [];
                 var array = callback.data;
-                
+
                 if (array != null && array.length > 0) {
                     array.forEach(function (iter) {
                         $scope.services.push({
@@ -199,11 +196,11 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
     };
 
     $scope.selectService = function (service) {
-        
+
         if (service == null) {
-			return;
-		}
-        
+            return;
+        }
+
         ServiceProviderService.getServicesProvidersByService(service.name, function (callback) {
             if (!callback.success) {
                 window.sessionStorage.setItem('typeOfAccount', null);
@@ -213,7 +210,7 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
                 window.localStorage['token'] = callback.token;
                 $scope.serviceProviders = [];
                 var array = callback.data;
-                
+
                 if (array != null && array.length > 0) {
                     array.forEach(function (iter) {
                         $scope.serviceProviders.push({
@@ -224,48 +221,35 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
                     });
                 }
             }
-            
+
             console.log($scope.serviceProviders.length);
         });
-        
-        
-//        var encodedData = ServiceProviderService.encodeEmail(person);
-//        console.log('Service : ' + person.email + "|" + person.service);
-//        console.log('Encoded Data: ' + encodedData);
-//        
-//		window.location.href = "#/service-provider-profile/" + encodedData;
-//        $scope.services = [];
+
+
+        //        var encodedData = ServiceProviderService.encodeEmail(person);
+        //        console.log('Service : ' + person.email + "|" + person.service);
+        //        console.log('Encoded Data: ' + encodedData);
+        //        
+        //		window.location.href = "#/service-provider-profile/" + encodedData;
+        //        $scope.services = [];
     };
-    
-    
-    $scope.selectServiceProvider = function(provider) {
-        console.log("Service Provider Selected: " + provider.name + " | " + provider.service); 
-        
+
+
+    $scope.selectServiceProvider = function (provider) {
+        console.log("Service Provider Selected: " + provider.name + " | " + provider.service);
+
         var encodedData = ServiceProviderService.encodeEmail(provider);
         console.log('Service : ' + provider.email + "|" + provider.service);
         console.log('Encoded Data: ' + encodedData);
-        
-		window.location.href = "#/service-provider-profile/" + encodedData;
+
+        window.location.href = "#/service-provider-profile/" + encodedData;
         /* Reset fields and options */
         $scope.service = '';
         $scope.services = [];
         $scope.serviceProviders = [];
     };
-    
-    
-    
-    /* Load all options */
-//    $scope.selectService = function (person) {
-//        
-//        if (person == null) {
-//			return;
-//		}
-//        
-//        var encodedData = ServiceProviderService.encodeEmail(person);
-//        console.log('Service : ' + person.email + "|" + person.service);
-//        console.log('Encoded Data: ' + encodedData);
-//        
-//		window.location.href = "#/service-provider-profile/" + encodedData;
-//        $scope.services = [];
-//    };
+
+    $scope.error = function (response) {
+        console.log('error: ');
+    };
 });

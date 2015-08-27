@@ -3,17 +3,19 @@ var TCCApp = angular.module('TCCApp', []);
 
 TCCApp.service('CreateAccountWorkDataService', function($http){
 	
-	this.getAllStates = function(data) {
-		$http.get('http://localhost:8080/WebService/state/getAllStates').success(data);
+	this.getAllStates = function(success, error) {
+		$http.get('http://localhost:8080/WebService/uf').
+        then(success, error);
 	};
 
-	this.getAllCitiesByState = function(state, data) {
-		$http.get('http://localhost:8080/WebService/city/getAllCitiesByState/' + state).success(data);
+	this.getAllCitiesByState = function(state, success, error) {
+		$http.get('http://localhost:8080/WebService/city/cities/' + state).
+        then(success, error);
 	};
 
-	this.createAccount = function(person, callback) {
-		$http.post('http://localhost:8080/WebService/person/createAccountWorkData', JSON.stringify(person)).
-		success(callback);
+	this.createAccount = function(person, callback, error) {
+		$http.post('http://localhost:8080/WebService/person/createaccount/workdata', JSON.stringify(person)).
+		then(callback, error);
 	};
 });
 
@@ -39,57 +41,57 @@ TCCApp.controller('CreateAccountWorkData', function($scope, CreateAccountWorkDat
 
 	$scope.getAllStates = function() {
 
-		CreateAccountWorkDataService.getAllStates(function(data){
-			var array = data.data;
+		CreateAccountWorkDataService.getAllStates(function(callback) {
+			var array = callback.data.results;
 			array.forEach(function(iter){
-				$scope.states.push({name: iter[0], abbreviation: iter[1]});
+				$scope.states.push({name: iter.name, abbreviation: iter.abbreviation});
 			});
-		});
+		}, $scope.error);
 	};
 
 	$scope.getAllStates(); //get All states
 
 	$scope.getAllCitiesByStateForCompany = function() {
-		CreateAccountWorkDataService.getAllCitiesByState($scope.ufCompany.trim(), function(data) {
-			var array = data.data;
+		CreateAccountWorkDataService.getAllCitiesByState($scope.ufCompany.trim(), function(callback) {
+			var array = callback.data.results;
 			array.forEach(function(iter){
-				$scope.citiesCompany.push({name: iter[0]});
+				$scope.citiesCompany.push({name: iter.name});
 			});
-		});
+		}, $scope.error);
 	};
 
 	$scope.getAllCitiesByStateForLives = function() {
-		CreateAccountWorkDataService.getAllCitiesByState($scope.ufLives.trim(), function(data) {
-			var array = data.data;
+		CreateAccountWorkDataService.getAllCitiesByState($scope.ufLives.trim(), function(callback) {
+			var array = callback.data.results;
 			array.forEach(function(iter){
-				$scope.citiesLives.push({name: iter[0]});
+				$scope.citiesLives.push({name: iter.name});
 			});
-		});
+		}, $scope.error);
 	};
 
 	$scope.createAccount = function() {
 
-		var person = new Person();
-		var stateForCompany = new State();
-		var stateForLive = new State();
-		var livesIn = new City();
-		var worksIn = new Company();
+		var person = {};
+		var stateForCompany = {};
+		var stateForLive = {};
+		var livesIn = {};
+		var worksIn = {};
 
-		stateForLive.setName($scope.ufLives.trim());
-		livesIn.setName($scope.cityLives.trim());
-		livesIn.setState(stateForLive);
-		person.setLivesIn(livesIn);
+		stateForLive.name = $scope.ufLives.trim();
+		livesIn.name = $scope.cityLives.trim();
+		livesIn.state = stateForLive;
+		person.livesIn = livesIn;
 
-		worksIn.setName($scope.company);
-		var city = new City();
-		city.setName($scope.cityCompany.trim());
-		stateForCompany.setName($scope.ufCompany.trim());
-		city.setState(stateForCompany);
-		worksIn.setLocatedIn(city);
-		person.setWorksIn(worksIn);
+		worksIn.name = $scope.company;
+		var city = {};
+		city.name = $scope.cityCompany.trim();
+		stateForCompany.name = $scope.ufCompany.trim();
+		city.state = stateForCompany;
+		worksIn.locatedIn = city;
+		person.worksIn = worksIn;
 		
-		person.setDistrict($scope.district);
-		person.setAddress($scope.address);
+		person.district = $scope.district;
+		person.address = $scope.address;
 		
 		/* Load the info about the session */
 		if (window.localStorage['token'] == undefined || window.localStorage['token'] == null) {
@@ -98,24 +100,27 @@ TCCApp.controller('CreateAccountWorkData', function($scope, CreateAccountWorkDat
 			return;
 		}
 
-		person.setToken(window.localStorage['token']);
+		person.token = window.localStorage['token'];
 
 		CreateAccountWorkDataService.createAccount(person, function(callback) {
-			 console.log('callback' + callback);
-			 if (!callback.success) {
+			var data = callback.data; 
+            if (!data.success) {
 			 	$scope.msg.type = 'ERROR';
-				$scope.msg.msg = callback.mesage;
+				$scope.msg.msg = data.mesage;
 				return;		 
 			} else {
 				$scope.msg.type = 'SUCCESS';
-				$scope.msg.msg = callback.mesage;
-				window.localStorage['token'] = callback.token;
+				$scope.msg.msg = data.mesage;
+				window.localStorage['token'] = data.token;
 				window.location.href = 'create-account-photo.html';
 			}
 
-		});
+		}, $scope.error);
 			
 	};
 
+    $scope.error = function(response) {
+        console.log('error: '); 
+    };
 
 });

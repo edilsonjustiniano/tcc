@@ -17,19 +17,22 @@ app.controller('HomeController', function ($scope, PartnerService, SessionServic
 
     $scope.getTypeOfAccount = function () {
         SessionService.getTypeOfAccount(function (callback) {
-            if (!callback.success) { /* Ivalid session or expired session */
+            var data = callback.data;
+            if (!data.success) { /* Ivalid session or expired session */
                 $scope.msg.type = 'ERROR';
-                $scope.msg.msg = callback.mesage;
+                $scope.msg.msg = data.mesage;
                 window.localStorage['token'] = null;
                 window.location.href = 'index.html';
             } else {
                 //get data from return and fill the components according to type of account
-                window.localStorage['token'] = callback.token;
-                $scope.name = callback.data[0][0]; //name
+                window.localStorage['token'] = data.token;
+                var userData = data.results[0];
+                $scope.name = userData.name; //name
                 //$scope.email = callback.data[0][1]; //email (It works)
                 //$scope.typeOfPerson = callback.data[0][2]; //typeOfPerson (It works)
-                $scope.typeOfAccount = callback.data[0][3]; //typeOfAccount
+                $scope.typeOfAccount = userData.typeOfAccount; //typeOfAccount
                 window.sessionStorage.setItem('typeOfAccount', $scope.typeOfAccount);
+                $scope.getServicesProvideByMe();
             }
         });
     };
@@ -64,47 +67,49 @@ app.controller('HomeController', function ($scope, PartnerService, SessionServic
     };
 
 
-    $scope.getFeedLastPartnership = function () {
-        FeedsService.getFeedLastPartnership(function (callback) {
-            if (!callback.success) {
+    $scope.getFeedLastestPartnership = function () {
+        FeedsService.getFeedLastestPartnership(function (callback) {
+            var data = callback.data;
+            if (!data.success) {
                 window.sessionStorage.setItem('typeOfAccount', null);
                 window.localStorage['token'] = null;
                 window.location.href = "index.html";
             } else {
-                var array = callback.data;
+                var array = data.results;
                 if (array != null && array.length > 0) {
                     array.forEach(function (iter) {
                         $scope.feeds.push({
-                            partner: iter[0],
-                            partnerEmail: iter[1],
-                            user: iter[2],
-                            userEmail: iter[3],
-                            receivedIn: iter[4],
-                            answeredIn: iter[5],
-                            isRating: iter[8]
+                            partner: iter.partnerName,
+                            partnerEmail: iter.partnerEmail,
+                            user: iter.userName,
+                            userEmail: iter.userEmail,
+                            receivedIn: iter.partnerASince,
+                            answeredIn: iter.partnerBSince,
+                            isRating: iter.rating
                         });
                     });
                 }
 
             }
-        });
+        }, $scope.error);
     };
 
-    $scope.getFeedLastPartnership();
+    $scope.getFeedLastestPartnership();
 
 
     $scope.getFeedLastestRatings = function () {
         FeedsService.getFeedLastestRatings(function (callback) {
-            if (!callback.success) {
+            var data = callback.data;
+            if (!data.success) {
                 window.sessionStorage.setItem('typeOfAccount', null);
                 window.localStorage['token'] = null;
                 window.location.href = "index.html";
             } else {
-                var array = callback.data;
+                var array = data.results;
                 if (array != null && array.length > 0) {
                     array.forEach(function (iter) {
 
-                        var dateSplit = iter[5].split(' ');
+                        var dateSplit = iter.date.split(' ');
                         dateSplit = dateSplit[0];
                         dateSplit = dateSplit.split('-'); //[2015] [08] [11]
                         var year = dateSplit[0];
@@ -112,20 +117,20 @@ app.controller('HomeController', function ($scope, PartnerService, SessionServic
                         var day = dateSplit[2];
 
                         $scope.feeds.push({
-                            serviceProvider: iter[0],
-                            serviceProviderEmail: iter[1],
-                            service: iter[2],
-                            note: iter[3],
-                            comments: iter[4],
+                            serviceProvider: iter.serviceProviderName,
+                            serviceProviderEmail: iter.serviceProviderEmail,
+                            service: iter.service,
+                            note: iter.note,
+                            comments: iter.comments,
                             date: day + '/' + month + '/' + year, //date
-                            user: iter[6],
-                            userEmail: iter[7],
-                            isRating: iter[8]
+                            user: iter.partnerName,
+                            userEmail: iter.partnerEmail,
+                            isRating: iter.rating
                         });
                     });
                 }
             }
-        });
+        }, $scope.error);
     };
 
     $scope.getFeedLastestRatings();
@@ -134,27 +139,31 @@ app.controller('HomeController', function ($scope, PartnerService, SessionServic
     /* For Service Providers (get the service whose it provide) */
     $scope.getServicesProvideByMe = function () {
 
-        if ($scope.typeOfAccount != 'CONTRACTOR') {
+        if ($scope.typeOfAccount && $scope.typeOfAccount != 'CONTRACTOR') {
             ServiceProviderService.getMyServices(function (callback) {
-
-                if (!callback.success) {
+                var data = callback.data;
+                if (!data.success) {
                     window.sessionStorage.setItem('typeOfAccount', null);
                     window.localStorage['token'] = null;
                     window.location.href = "index.html";
                 } else {
-                    var array = callback.data;
+                    var array = data.results;
                     if (array.length > 0) {
                         array.forEach(function (iter) {
                             $scope.myServices.push({
-                                name: iter[0]
+                                name: iter.service
                             });
                         });
                     }
                 }
-            });
+            }, $scope.error);
         }
     };
 
     $scope.getServicesProvideByMe();
+    
+    $scope.error = function(response) {
+        console.log('error: '); 
+    };
 
 });

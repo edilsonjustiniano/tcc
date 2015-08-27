@@ -6,26 +6,27 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
 import br.edu.univas.si.tcc.trunp.api.UFService;
-import br.edu.univas.si.tcc.trunp.exception.JSONTrunpException;
+import br.edu.univas.si.tcc.trunp.controller.UFController;
+import br.edu.univas.si.tcc.trunp.util.JSONUtil;
 
 @Path("/uf")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class UFServiceImpl implements UFService {
 	
+	private UFController ufController = new UFController();
+	
 	@GET
-	public JSONObject uf() throws JSONTrunpException {
-		JSONObject json = new JSONObject();
-		try {
-			json.put("success", true);
-		} catch (JSONException e) {
-			throw new JSONTrunpException();
-		}
+	public JSONObject uf() throws JSONException {
+		
+		JSONArray responseStates = ufController.getUfs();  //dao.getAllStates();
+		
+		JSONObject json = JSONUtil.generateJSONSuccessByData(true, responseStates);
 		return json;
 	}
-
 }

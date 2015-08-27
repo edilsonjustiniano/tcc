@@ -1,14 +1,14 @@
 app.service('SessionService', function($http){
 	
-	this.getUserInfoFromSession = function(callback) {
+	this.getUserInfoFromSession = function(callback, error) {
 		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/session/getUserInfo', {token: token}).
-		success(callback);
+		$http.get('http://localhost:8080/WebService/session/userinfo/' + token).
+		then(callback, error);
 	};
 	
-	this.getTypeOfAccount = function(callback) {
+	this.getTypeOfAccount = function(callback, error) {
 		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/session/getUserInfo', {token: token}).
-		success(callback);
+		$http.get('http://localhost:8080/WebService/session/userinfo/' + token).
+		then(callback, error);
 	};
 });

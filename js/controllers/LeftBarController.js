@@ -7,21 +7,23 @@ app.controller('LeftBarController',
     
 	$scope.getTypeOfAccount = function() {
 		SessionService.getTypeOfAccount(function(callback) {
-			if (!callback.success) { /* Ivalid session or expired session */
+            var data = callback.data;
+			if (!data.success) { /* Ivalid session or expired session */
 				window.localStorage['token'] = null;
 				window.location.href = 'index.html';
 			} else {
 				//get data from return and fill the components according to type of account
-				window.localStorage['token'] = callback.token;
-				$scope.user.name = callback.data[0][0]; //name
+				window.localStorage['token'] = data.token;
+                var userData = data.results[0];
+				$scope.user.name = userData.name; //name
 				//$scope.user.email = callback.data[0][1]; //email (It works)
 				//$scope.user.typeOfPerson = callback.data[0][2]; //typeOfPerson (It works)
-				$scope.user.typeOfAccount = callback.data[0][3]; //typeOfAccount
+				$scope.user.typeOfAccount = userData.typeOfAccount; //typeOfAccount
 				window.sessionStorage.setItem('typeOfAccount', $scope.user.typeOfAccount);
-                $scope.user.photo = callback.data[0][4]; //photo
+                $scope.user.photo = userData.photo; //photo
                 $scope.user.photo == null ? $scope.user.photo = 'image/user-profile.png' : $scope.user.photo = $scope.user.photo;
 			}
-		});
+		}, $scope.error);
 	};
 
 	$scope.typeOfAccount = $scope.getTypeOfAccount();
@@ -34,19 +36,20 @@ app.controller('LeftBarController',
 			return;
 		}
 		PartnerService.getPossiblePartners(function(callback) {
-			if (callback.success) { // Ivalid session or expired session
-				if (callback.data == undefined)
+            var data = callback.data;
+			if (data.success) { // Ivalid session or expired session
+				if (data.results == undefined)
 					return;
-				var array = callback.data;
+				var array = data.results;
 				array.forEach(function(iter){
 					$scope.possiblePartners.push({
-                        name: iter[0], 
-                        email: iter[1], 
-                        photo: iter[3] == null ? iter[3] = 'image/user-profile.png': iter[3] = iter[3]
+                        name: iter.name, 
+                        email: iter.email, 
+                        photo: iter.photo == null ? iter.photo = 'image/user-profile.png': iter.photo = iter.photo
                     });
 				});
 			}
-		});
+		}, $scope.error);
 	};
 
 	$scope.getPossiblePartners();
@@ -92,16 +95,17 @@ app.controller('LeftBarController',
 	/* Get the lastest ratings */
 	$scope.getMyLastestRatings = function() {
 		RatingService.getMyLastestRatings(function(callback) {
-			if (!callback.success) {
+            var data = callback.data;
+			if (!data.success) {
 				window.sessionStorage.setItem('typeOfAccount', null);
 				window.localStorage['token'] = null;
 				window.location.href = "index.html";
 			} else {
-				var array = callback.data;
+				var array = data.results;
 				if (array != null && array.length > 0) {
 					array.forEach(function(iter) {
                         
-                        var dateSplit = iter[6].split(' ');
+                        var dateSplit = iter.date.split(' ');
                         dateSplit = dateSplit[0];
                         dateSplit = dateSplit.split('-'); //[2015] [08] [11]
                         var year = dateSplit[0];
@@ -109,12 +113,12 @@ app.controller('LeftBarController',
                         var day = dateSplit[2];
                         
 						$scope.lastestRatings.push({
-							name: iter[0],
-                            email: iter[1],
-                            photo: iter[2] == null ? iter[2] = 'image/user-profile.png' : iter[2] = iter[2],
-                            service: iter[3],
-                            note: iter[4],
-                            comments: iter[5],
+							name: iter.serviceProviderName,
+                            email: iter.serviceProviderEmail,
+                            photo: iter.serviceProviderPhoto == null ? iter.serviceProviderPhoto = 'image/user-profile.png' : iter.serviceProviderPhoto = iter.serviceProviderPhoto,
+                            service: iter.service,
+                            note: iter.note,
+                            comments: iter.comments,
                             date: day + '/' + month + '/' + year,
                             showComments: false
 						});
@@ -122,7 +126,7 @@ app.controller('LeftBarController',
 				}
 
 			}
-		});
+		}, $scope.error);
 	};
     
     $scope.getMyLastestRatings();
@@ -151,5 +155,9 @@ app.controller('LeftBarController',
                 break;
             }
         }
+    };
+    
+    $scope.error = function (response) {
+        console.log('error: ');
     };
 });

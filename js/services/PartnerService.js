@@ -61,10 +61,10 @@ app.service('PartnerService', function($http){
 		success(callback);
 	};
     
-    this.getPossiblePartners = function(callback) {
+    this.getPossiblePartners = function(callback, error) {
         var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/getPossiblePartners', {token: token}).
-		success(callback);
+		$http.get('http://localhost:8080/WebService/partner/possiblepartners/' + token).
+		then(callback, error);
     };
     
     this.getCommonsPartners = function(partner, callback) {

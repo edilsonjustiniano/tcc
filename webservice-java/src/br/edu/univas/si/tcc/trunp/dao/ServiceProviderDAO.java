@@ -2,13 +2,16 @@ package br.edu.univas.si.tcc.trunp.dao;
 
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.List;
 
 import javax.ws.rs.core.MediaType;
 
+import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
 import br.edu.univas.si.tcc.trunp.model.Person;
+import br.edu.univas.si.tcc.trunp.util.JSONUtil;
 
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
@@ -492,21 +495,32 @@ public class ServiceProviderDAO {
 
 
 
-	public String getMyServices(Person person) {
+	public JSONArray getMyServices(Person person) throws JSONException {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		String query = "{\"query\":\" MATCH (me:Person {email: '"+ person.getEmail() +"'}), "
 				+ "(service:Service), " 
 				+ "(me)-[:PROVIDE]->(service) "
 				+ "WHERE me.typeOfAccount <> 'CONTRACTOR' "
-				+ "RETURN DISTINCT(service.name); \"}";
+				+ "RETURN DISTINCT({service.name}) as service; \"}";
 		
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String result = responseCreate.getEntity(String.class);	
-		return result;
+		String resp = responseCreate.getEntity(String.class);	
+		
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 	}
 
 

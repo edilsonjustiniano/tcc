@@ -1,15 +1,22 @@
 package br.edu.univas.si.tcc.trunp.dao;
 
+import java.util.List;
+
 import javax.ws.rs.core.MediaType;
+
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
 
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
 import br.edu.univas.si.tcc.trunp.model.Person;
+import br.edu.univas.si.tcc.trunp.util.JSONUtil;
 
 public class RatingDAO {
 
-	public String getMyLastestRatings(Person person) {
+	public JSONArray getMyLastestRatings(Person person) throws JSONException {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		
@@ -24,7 +31,7 @@ public class RatingDAO {
 							"(executed)-[:TO]->(me) " +
 							"WHERE me.typeOfAccount <> 'SERVICE_PROVIDER' " +
 							"AND sp.typeOfAccount <> 'CONTRACTOR' " +
-							"RETURN sp.name, sp.email, sp.photo, service.name, executed.note, executed.comments, executed.date " +
+							"RETURN {serviceProviderName: sp.name, serviceProviderEmail: sp.email, serviceProviderPhoto: sp.photo, service: service.name, note: executed.note, comments: executed.comments, date: executed.date} as rate " +
 							"ORDER BY executed.date ASC " +
 							"LIMIT 4; \"}";
 		System.out.println(query);
@@ -33,9 +40,19 @@ public class RatingDAO {
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 									.type(MediaType.APPLICATION_JSON).entity(query)
 									.post(ClientResponse.class);
-		String result = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 			
-		return result;
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 	}
 	
 }

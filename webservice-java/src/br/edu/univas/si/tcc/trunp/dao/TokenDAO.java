@@ -6,6 +6,7 @@ import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
 import br.edu.univas.si.tcc.trunp.model.Token;
+import br.edu.univas.si.tcc.trunp.util.MD5Util;
 
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
@@ -18,7 +19,7 @@ public class TokenDAO {
 		
 		String query = null;
 		query = "{\"query\":\" MATCH (person:Person {email: '" + token.getEmail() + "'," + 
-				" password: '" + token.getPassword() + "'})" +
+				" password: '" + MD5Util.generateMD5(token.getPassword()) + "'})" +
 				" RETURN COUNT(person) as qtde; \"}";
 		System.out.println(query);
 		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
@@ -44,8 +45,8 @@ public class TokenDAO {
 			e.printStackTrace();
 		}
 		if (qtde > 0) {
-			return false;
+			return true;
 		}
-		return true;
+		return false;
 	}
 }
