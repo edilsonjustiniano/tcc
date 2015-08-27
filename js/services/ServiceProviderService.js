@@ -31,18 +31,15 @@ app.service('ServiceProviderService', function($http){
 		$http.post('http://localhost:8080/WebService/serviceProvider/saveEvaluate', {provider: serviceProvider.email, service: serviceProvider.service, note: note, comments: comments, token: token}).
 		success(callback);
     };
-    
+    /*
     this.getServicesByName = function(service, data) {
 		$http.get('http://localhost:8080/WebService/service/getServicesByName/' + service).success(data);
 	};
-    
-    this.getServicesProvidersByService = function (service, callback) {
+    */
+    this.getServicesProvidersByService = function (service, success, error) {
         var token = window.localStorage['token'];
-        $http.post('http://localhost:8080/WebService/serviceProvider/getServiceProvidersByService', {
-            service: service,
-            token: token
-        }).
-        success(callback);
+        $http.get('http://localhost:8080/WebService/serviceprovider/byservice/' + service + '?token=' + token).
+        then(success, error);
     };
     
     /* Rating in my partner network */

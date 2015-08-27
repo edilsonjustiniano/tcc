@@ -34,14 +34,35 @@ public class ServiceProviderServiceImpl implements ServiceProviderService {
 	
 	@GET
 	@Path("/byservice/{service}")
-	public JSONObject serviceProvidersByService(@PathParam("service") String data) {
-		JSONObject json = new JSONObject();
-		try {
-			json.put("success", true);
-		} catch (JSONException e) {
-			e.printStackTrace();
+	public JSONObject serviceProvidersByService(@PathParam("service") String service,
+												@QueryParam("token") String token) throws JSONException {
+		
+		System.out.println(service + token);
+		JSONObject json = null;
+		Token tokenDecoded = null;
+		Person person = new Person();
+		
+		byte[] tokenByte = token.getBytes();
+		
+		tokenDecoded = Base64Util.decodeToken(tokenByte);
+		person.setEmail(tokenDecoded.getEmail());
+		person.setPassword(MD5Util.generateMD5(tokenDecoded.getPassword()));
+		
+		if (!tokenController.isValidSession(tokenDecoded)) {
+			return JSONUtil.generateJSONErrorSessionExpired(false, "Sessão inválida!", false);
 		}
-		return json;
+		
+		if (tokenController.isExpiredSession(tokenDecoded)) {
+			return JSONUtil.generateJSONErrorSessionExpired(false, "Sessão expirada, por favor realize o login novamente!", true);
+		}
+
+		JSONArray result = serviceProviderController.getServiceProvidersByService(person, service);
+		json = JSONUtil.generateJSONSuccessByData(true, result);
+		tokenByte = Base64Util.encodeToken(tokenDecoded.getEmail(), tokenDecoded.getPassword());
+		json.put("token", new String(tokenByte));
+		
+		return json;		
+
 	}
 
 	

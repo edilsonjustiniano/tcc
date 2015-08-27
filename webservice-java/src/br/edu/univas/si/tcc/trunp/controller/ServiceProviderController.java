@@ -17,4 +17,9 @@ public class ServiceProviderController {
 	public JSONArray getMyServices(Person person) throws JSONException {
 		return serviceProviderBi.getMyServices(person);
 	}
+
+	public JSONArray getServiceProvidersByService(Person person, String service) throws JSONException {
+		// TODO Auto-generated method stub
+		return serviceProviderBi.getServiceProvidersByService(person, service);
+	}
 }

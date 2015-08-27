@@ -1,4 +1,4 @@
-app.controller('SearchServiceProviderController', function ($scope, ServiceProviderService) {
+app.controller('SearchServiceProviderController', function ($scope, ServiceProviderService, ServiceService) {
 
     $scope.services = [];
     $scope.service = '';
@@ -12,20 +12,20 @@ app.controller('SearchServiceProviderController', function ($scope, ServiceProvi
         }
 
         //MenuBarService.getServicesProvidersByService($scope.service, function (callback) {
-        ServiceProviderService.getServicesByName($scope.service, function (callback) {
-
-            if (!callback.success) {
+        ServiceService.getServicesByName($scope.service, function (callback) {
+            var data = callback.data;
+            if (!data.success) {
                 window.sessionStorage.setItem('typeOfAccount', null);
                 window.localStorage['token'] = null;
                 window.location.href = "index.html";
             } else {
                 $scope.services = [];
-                var array = callback.data;
+                var array = data.results;
 
                 if (array != null && array.length > 0) {
                     array.forEach(function (iter) {
                         $scope.services.push({
-                            name: iter[0]
+                            name: iter.service
                         });
                     });
                 }
@@ -40,14 +40,15 @@ app.controller('SearchServiceProviderController', function ($scope, ServiceProvi
         }
 
         ServiceProviderService.getServicesProvidersByService(service.name, function (callback) {
-            if (!callback.success) {
+            var data = callback.data;
+            if (!data.success) {
                 window.sessionStorage.setItem('typeOfAccount', null);
                 window.localStorage['token'] = null;
                 window.location.href = "index.html";
             } else {
-                window.localStorage['token'] = callback.token;
+                window.localStorage['token'] = data.token;
                 $scope.serviceProviders = [];
-                var array = callback.data;
+                var array = data.results;
 
                 /* A consulta foi alterada para ser apenas uma, sendo que, a order vai definir como foram localizados,
                  * exemplo: 1 - Na rede de parceiros do usuário; 2 - Na empresa onde o usuário trabalha;
@@ -60,7 +61,7 @@ app.controller('SearchServiceProviderController', function ($scope, ServiceProvi
                         /* Check before if there is the same person added before */
                         var isExist = false;
                         for (var i = 0; i < $scope.serviceProviders.length; i++) {
-                            if ($scope.serviceProviders[i].email == iter[1]) {
+                            if ($scope.serviceProviders[i].email == iter.serviceProviderEmail) {
                                 isExist = true;
                                 break;
                             }
@@ -69,11 +70,11 @@ app.controller('SearchServiceProviderController', function ($scope, ServiceProvi
 
                         if (!isExist) {
                             $scope.serviceProviders.push({
-                                name: iter[0],
-                                email: iter[1],
-                                service: iter[2],
-                                howManyPersonsEvaluate: iter[3],
-                                average: iter != null ? iter[4].toFixed(2) : 0
+                                name: iter.serviceProviderName,
+                                email: iter.serviceProviderEmail,
+                                service: iter.service,
+                                howManyPersonsEvaluate: iter.total,
+                                average: iter != null ? iter.media.toFixed(2) : 0
                             });
                         }
                     });
@@ -83,7 +84,7 @@ app.controller('SearchServiceProviderController', function ($scope, ServiceProvi
             console.log($scope.serviceProviders.length);
             $scope.service = service.name;
             $scope.services = [];
-        });
+        }, $scope.error);
     };
 
 
@@ -105,4 +106,7 @@ app.controller('SearchServiceProviderController', function ($scope, ServiceProvi
         console.log(div);
     };
 
+     $scope.error = function(response) {
+        console.log('error: '); 
+    };
 });

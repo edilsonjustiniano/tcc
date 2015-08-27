@@ -1,4 +1,4 @@
-app.controller('ServiceController', function ($scope, ServiceProviderService) {
+app.controller('ServiceController', function ($scope, ServiceProviderService, ServiceService) {
 
     $scope.services = [];
     $scope.service = '';
@@ -14,25 +14,25 @@ app.controller('ServiceController', function ($scope, ServiceProviderService) {
         }
 
         //MenuBarService.getServicesProvidersByService($scope.service, function (callback) {
-        ServiceProviderService.getServicesByName($scope.service, function (callback) {
-
-            if (!callback.success) {
+        ServiceService.getServicesByName($scope.service, function (callback) {
+            var data = callback.data;
+            if (!data.success) {
                 window.sessionStorage.setItem('typeOfAccount', null);
                 window.localStorage['token'] = null;
                 window.location.href = "index.html";
             } else {
                 $scope.services = [];
-                var array = callback.data;
+                var array = data.results;
 
                 if (array != null && array.length > 0) {
                     array.forEach(function (iter) {
                         $scope.services.push({
-                            name: iter[0]
+                            name: iter.service
                         });
                     });
                 }
             }
-        });
+        }, $scope.error);
     };
   
     $scope.selectService = function(iter){
@@ -112,6 +112,10 @@ app.controller('ServiceController', function ($scope, ServiceProviderService) {
                 }
         });
         }  
+    };
+    
+     $scope.error = function(response) {
+        console.log('error: '); 
     };
 
 });

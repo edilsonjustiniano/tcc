@@ -42,7 +42,7 @@ public class ServiceProviderDAO {
 	 * The first one will be done by my network partners and after that will be done
 	 * by my company and last one will be my city
 	 */
-	public String getServiceProvidersByService(Person person, String service) {
+	public JSONArray getServiceProvidersByService(Person person, String service) throws JSONException {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		
@@ -99,7 +99,8 @@ public class ServiceProviderDAO {
 				"AND UPPER(service.name) = UPPER('" + service + "') " +
 				"AND (executed)-[:TO]->(partners) " +
 				"AND me <> sp " +
-				"RETURN DISTINCT(sp.name), sp.email, service.name, count(executed) as total, avg(executed.note) as media, 1 as order ORDER BY order, media DESC " +
+				"RETURN DISTINCT({serviceProviderName: sp.name, serviceProviderEmail: sp.email, service: service.name, " +
+				"total: count(executed), media: avg(executed.note), order: 1}) as sp ORDER BY sp.order, sp.media DESC " +
 				"UNION ALL " +
 				"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +  
 				"(sp:Person), " +
@@ -114,7 +115,8 @@ public class ServiceProviderDAO {
 				"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 				"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
 				"AND me <> sp " +
-				"RETURN DISTINCT(sp.name), sp.email, service.name, count(executed) as total, avg(executed.note) as media, 2 as order ORDER BY order, media DESC " +
+				"RETURN DISTINCT({serviceProviderName: sp.name, serviceProviderEmail: sp.email, service: service.name, " +
+				"total: count(executed), media: avg(executed.note), order: 2}) as sp ORDER BY sp.order, sp.media DESC " +
 				"UNION ALL " +
 				"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +  
 				"(sp:Person), " +
@@ -130,7 +132,8 @@ public class ServiceProviderDAO {
 				"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
 				"AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
 				"AND me <> sp " +
-				"RETURN DISTINCT(sp.name), sp.email, service.name, count(executed) as total, avg(executed.note) as media, 3 as order ORDER BY order, media DESC " + 
+				"RETURN DISTINCT({serviceProviderName: sp.name, serviceProviderEmail: sp.email, service: service.name, " +
+				"total: count(executed), media: avg(executed.note), order: 3}) as sp ORDER BY sp.order, sp.media DESC " + 
 				"UNION ALL " +
 				"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +  
 				"(sp:Person), " +
@@ -142,14 +145,25 @@ public class ServiceProviderDAO {
 				"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
 				"AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
 				"AND me <> sp " +
-				"RETURN DISTINCT(sp.name), sp.email, service.name, 0 as total, 0 as media, 4 as order ORDER BY order, media DESC; \"}";
+				"RETURN DISTINCT({serviceProviderName: sp.name, serviceProviderEmail: sp.email, service: service.name, total: 0, "+
+				"media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 		
-		return objectCreate;
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 	}
 	
 	

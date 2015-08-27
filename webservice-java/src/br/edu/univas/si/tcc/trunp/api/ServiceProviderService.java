@@ -5,7 +5,7 @@ import org.codehaus.jettison.json.JSONObject;
 
 public interface ServiceProviderService {
 
-	public JSONObject serviceProvidersByService(String data);
+	public JSONObject serviceProvidersByService(String data, String token) throws JSONException;
 	public JSONObject ratingInMyNetworkPartners(String data);
 	public JSONObject ratingInMyCompany(String data);
 	public JSONObject ratingInMyCity(String data);

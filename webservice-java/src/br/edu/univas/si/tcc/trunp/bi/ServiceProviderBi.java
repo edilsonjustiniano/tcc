@@ -17,4 +17,8 @@ public class ServiceProviderBi {
 	public JSONArray getMyServices(Person person) throws JSONException {
 		return dao.getMyServices(person);
 	}
+
+	public JSONArray getServiceProvidersByService(Person person, String service) throws JSONException {
+		return dao.getServiceProvidersByService(person, service);
+	}
 }
