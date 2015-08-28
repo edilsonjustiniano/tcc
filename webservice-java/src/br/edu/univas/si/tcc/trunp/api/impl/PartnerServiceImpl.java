@@ -6,6 +6,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.codehaus.jettison.json.JSONArray;
@@ -61,10 +62,22 @@ public class PartnerServiceImpl implements PartnerService {
 	}
 	
 	@GET
-	@Path("/allpartners")
-	public JSONObject allPartners(String data) {
-		// TODO Auto-generated method stub
-		return null;
+	@Path("/allpartners/{token}")
+	public JSONObject allPartners(@PathParam("token") String token) throws JSONException {
+		
+		JSONObject json = null;
+		Token tokenDecoded = null;
+		Person person = new Person();
+		byte[] tokenByte = token.getBytes();
+		
+		tokenDecoded = Base64Util.decodeToken(tokenByte);
+		person.setEmail(tokenDecoded.getEmail());
+		person.setPassword(MD5Util.generateMD5(tokenDecoded.getPassword()));
+		
+		JSONArray result = partnerController.getAllPartners(person);
+		json = JSONUtil.generateJSONSuccessByData(true, result);
+		
+		return json;
 	}
 	
 	@POST
@@ -202,17 +215,66 @@ public class PartnerServiceImpl implements PartnerService {
 	}
 
 	@GET
-	@Path("/ismypartner")
-	public JSONObject isMyPartner(String data) {
-		// TODO Auto-generated method stub
-		return null;
+	@Path("/ismypartner/{partner}")
+	public JSONObject isMyPartner(@PathParam("partner")String partner, @QueryParam("token") String token) throws JSONException {
+	
+		JSONObject json = null;
+		Token tokenDecoded = null;
+		Person person = new Person();
+		byte[] tokenByte = token.getBytes();
+		
+		tokenDecoded = Base64Util.decodeToken(tokenByte);
+		person.setEmail(tokenDecoded.getEmail());
+		person.setPassword(MD5Util.generateMD5(tokenDecoded.getPassword()));
+		
+		if (!tokenController.isValidSession(tokenDecoded)) {
+			return JSONUtil.generateJSONErrorSessionExpired(false, "Sessão inválida!", false);
+		}
+		
+		if (tokenController.isExpiredSession(tokenDecoded)) {
+			return JSONUtil.generateJSONErrorSessionExpired(false, "Sessão expirada, por favor realize o login novamente!", false);
+		}
+		
+		if (partnerController.isMyPartner(person, partner)) {
+			json = JSONUtil.generateJSONSuccess(true, "");
+			json.put("isMyPartner", true);
+		} else {
+			json = JSONUtil.generateJSONSuccess(true, "");
+			json.put("isMyPartner", false);
+		}
+		
+		return json;
+		
 	}
 
 	@GET
-	@Path("/commonspartners")
-	public JSONObject commonsPartners(String data) {
-		// TODO Auto-generated method stub
-		return null;
+	@Path("/commonspartner/{partner}")
+	public JSONObject commonsPartners(@PathParam("partner") String partner, @QueryParam("token") String token) throws JSONException {
+
+		JSONObject json = null;
+		Token tokenDecoded = null;
+		Person person = new Person();
+		
+		byte[] tokenByte = token.getBytes();
+		
+		tokenDecoded = Base64Util.decodeToken(tokenByte);
+		person.setEmail(tokenDecoded.getEmail());
+		person.setPassword(MD5Util.generateMD5(tokenDecoded.getPassword()));
+		
+		/*
+		 * First we need define how it will be defined the order of precedency
+		 * e.g. First the person that works with you, in the same company,
+		 * second person who lives in the same city of you, but ordered according 
+		 * to the quantity of the common friends between you and her.
+		 * Third person whose its work is in the same city of you work according
+		 * to the quantity of the common partners between you and her.
+		 * fourth person who contracted a person whose it was contracted by you too
+		 */
+		JSONArray result = partnerController.getCommonsPartners(person, partner);
+		json = JSONUtil.generateJSONSuccessByData(true, result);
+		
+		return json;
+
 	}
 
 }

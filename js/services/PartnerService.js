@@ -1,9 +1,9 @@
 app.service('PartnerService', function($http){
 	
-	this.getAllPartners = function(limit, offset, callback) {
+	this.getAllPartners = function(success, error) {
 		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/getAllPartners', {limit: limit, offset: offset, token: token}).
-		success(callback);
+		$http.get('http://localhost:8080/WebService/partner/allpartners/' + token).
+		then(success, error);
 	};
 
 	this.addPartner = function(partner, callback) {
@@ -37,16 +37,16 @@ app.service('PartnerService', function($http){
 		return encodedString;
 	};
 
-	this.isMyPartner = function(partnerEmail, callback) {
+	this.isMyPartner = function(partnerEmail, success, error) {
 		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/isMyPartner', {partner: partnerEmail, token: token}).
-		success(callback);
+		$http.get('http://localhost:8080/WebService/partner/ismypartner/' + partnerEmail + '?token=' + token).
+		then(success, error);
 	};
 
-	this.getPartnerData = function(partnerEmail, callback) {
+	this.getPartnerData = function(partnerEmail, success, error) {
 		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/person/getPersonData', {partner: partnerEmail, token: token}).
-		success(callback);
+		$http.get('http://localhost:8080/WebService/person/persondata/' + partnerEmail + '?token=' + token).
+		then(success, error);
 	};
 
 	this.searchNewPartners = function(limit, offset, partnerName, callback) {
@@ -67,9 +67,9 @@ app.service('PartnerService', function($http){
 		then(callback, error);
     };
     
-    this.getCommonsPartners = function(partner, callback) {
+    this.getCommonsPartners = function(partner, success, error) {
         var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/getCommonsPartners', {token: token, partner: partner.email}).
-		success(callback);
+		$http.get('http://localhost:8080/WebService/partner/commonspartner/' + partner.email + '?token=' + token).
+		then(success, error);
     };
 });

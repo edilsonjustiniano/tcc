@@ -161,8 +161,9 @@ public class PersonDAO {
 	 * 
 	 * @param partnerEmail
 	 * @return
+	 * @throws JSONException 
 	 */
-	public String getPersonData(String partnerEmail) {
+	public JSONArray getPersonData(String partnerEmail) throws JSONException {
 
 		WebResource resource = FactoryDAO.GetInstance();
 
@@ -173,15 +174,26 @@ public class PersonDAO {
 				+ "(company:Company), "
 				+ "(partner)-[:LIVES_IN]->(city), "
 				+ "(partner)-[:WORKS_IN]->(company) "
-				+ "RETURN DISTINCT(partner.name), partner.email, partner.photo, city.name, company.name; \"}";
+				+ "RETURN DISTINCT({name: partner.name, email: partner.email, photo: partner.photo, city: city.name, " +
+				"company: company.name}) as partner; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource
 				.accept(MediaType.APPLICATION_JSON)
 				.type(MediaType.APPLICATION_JSON).entity(query)
 				.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 
-		return objectCreate;
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 	}
 
 	public String setPhoto(String email, String photoName) {

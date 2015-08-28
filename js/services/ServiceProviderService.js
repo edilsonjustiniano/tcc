@@ -19,10 +19,12 @@ app.service('ServiceProviderService', function($http){
 		return encodedString;
 	};
     
-    this.getServiceProviderData = function(serviceProvider, callback) {
+    this.getServiceProviderData = function(serviceProvider, success, error) {
 		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/serviceProvider/getServiceProviderData', {provider: serviceProvider.email, service: serviceProvider.service, token: token}).
-		success(callback);
+		$http.get('http://localhost:8080/WebService/serviceprovider/data?provider=' + serviceProvider.email +
+                   '&service=' + serviceProvider.service +
+                   '&token=' + token).
+		then(success, error);
 	};
     
     
@@ -43,37 +45,34 @@ app.service('ServiceProviderService', function($http){
     };
     
     /* Rating in my partner network */
-    this.getServiceProviderRatingInMyNetworkPartners = function(serviceProvider, callback) {
+    this.getServiceProviderRatingInMyNetworkPartners = function(serviceProvider, success, error) {
         var token = window.localStorage['token'];
-        $http.post('http://localhost:8080/WebService/serviceProvider/getServiceProviderRatingInMyNetworkPartners', {
-            serviceProvider: serviceProvider.email,
-            service: serviceProvider.service,
-            token: token
-        }).
-        success(callback);
+        $http.get('http://localhost:8080/WebService/serviceprovider/ratingInMyNetworkPartners' +
+                   '?provider=' + serviceProvider.email +
+                   '&service=' + serviceProvider.service + 
+                   '&token=' + token).
+                    then(success, error);
     };
     
     /* Rating in my company */
-    this.getServiceProviderRatingInMyCompany = function(serviceProvider, callback) {
+    this.getServiceProviderRatingInMyCompany = function(serviceProvider, success, error) {
         var token = window.localStorage['token'];
-        $http.post('http://localhost:8080/WebService/serviceProvider/getServiceProviderRatingInMyCompany', {
-            serviceProvider: serviceProvider.email,
-            service: serviceProvider.service,
-            token: token
-        }).
-        success(callback);
+        $http.get('http://localhost:8080/WebService/serviceprovider/ratingInMyCompany' +
+                   '?provider=' + serviceProvider.email +
+                   '&service=' + serviceProvider.service + 
+                   '&token=' + token).
+                    then(success, error);
     };
     
     
     /* Rating in my company */
-    this.getServiceProviderRatingInMyCity = function(serviceProvider, callback) {
+    this.getServiceProviderRatingInMyCity = function(serviceProvider, success, error) {
         var token = window.localStorage['token'];
-        $http.post('http://localhost:8080/WebService/serviceProvider/getServiceProviderRatingInMyCity', {
-            serviceProvider: serviceProvider.email,
-            service: serviceProvider.service,
-            token: token
-        }).
-        success(callback);
+        $http.get('http://localhost:8080/WebService/serviceprovider/ratingInMyCity' +
+                   '?provider=' + serviceProvider.email +
+                   '&service=' + serviceProvider.service + 
+                   '&token=' + token).
+                    then(success, error);
     };
     
     /* Calculate the average to show to user in profile page */

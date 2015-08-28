@@ -19,7 +19,25 @@ public class ServiceProviderController {
 	}
 
 	public JSONArray getServiceProvidersByService(Person person, String service) throws JSONException {
-		// TODO Auto-generated method stub
 		return serviceProviderBi.getServiceProvidersByService(person, service);
+	}
+	
+	public JSONArray getServiceProviderData(String providerEmail, String providerService) throws JSONException {
+		return serviceProviderBi.getServiceProviderData(providerEmail, providerService);
+	}
+
+	public JSONArray getServiceProviderRatingInMyNetworkPartners(Person person,
+			String service, String provider) throws JSONException {
+		return serviceProviderBi.getServiceProviderRatingInMyNetworkPartners(person, service, provider);
+	}
+
+	public JSONArray getServiceProviderRatingInMyCompany(Person person,
+			String service, String provider) throws JSONException {
+		return serviceProviderBi.getServiceProviderRatingInMyCompany(person, service, provider);
+	}
+
+	public JSONArray getServiceProviderRatingInMyCity(Person person,
+			String service, String provider) throws JSONException {
+		return serviceProviderBi.getServiceProviderRatingInMyCity(person, service, provider);
 	}
 }

@@ -7,6 +7,6 @@ public interface PersonService {
 
 	public JSONObject accountPersonalData(String data) throws JSONException;
 	public JSONObject accountWorkData(String data) throws JSONException;
-	public JSONObject personData(String token);
+	public JSONObject personData(String partner, String token) throws JSONException;
 	
 }

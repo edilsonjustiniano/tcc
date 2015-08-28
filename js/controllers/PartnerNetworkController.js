@@ -24,21 +24,23 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 
 	$scope.getTypeOfAccount = function() {
 		SessionService.getTypeOfAccount(function(callback) {
-			if (!callback.success) { /* Ivalid session or expired session */
+            var data = callback.data;
+			if (!data.success) { /* Ivalid session or expired session */
 				$scope.msg.type = 'ERROR';
-				$scope.msg.msg = callback.mesage;
+				$scope.msg.msg = data.mesage;
 				window.localStorage['token'] = null;
 				window.location.href = 'index.html';
 			} else {
 				//get data from return and fill the components according to type of account
-				window.localStorage['token'] = callback.token;
-				$scope.name = callback.data[0][0]; //name
+				window.localStorage['token'] = data.token;
+                var userData = data.results[0];
+				$scope.name = userData.name; //name
 				//$scope.email = callback.data[0][1]; //email (It works)
 				//$scope.typeOfPerson = callback.data[0][2]; //typeOfPerson (It works)
-				$scope.typeOfAccount = callback.data[0][3]; //typeOfAccount
+				$scope.typeOfAccount = userData.typeOfAccount; //typeOfAccount
 				window.sessionStorage.setItem('typeOfAccount', $scope.typeOfAccount);
 			}
-		});
+		}, $scope.error);
 	};
 
 	$scope.getTypeOfAccount();
@@ -50,18 +52,19 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 		if (window.sessionStorage.getItem('typeOfAccount') == 'SERVICE_PROVIDER') {
 			return;
 		}
-		PartnerService.getAllPartners($scope.limit, $scope.offset, function(callback) {
-			if (callback.success) { /* Ivalid session or expired session */
-				var array = callback.data;
+		PartnerService.getAllPartners(function(callback) {
+            var data = callback.data;
+			if (data.success) { /* Ivalid session or expired session */
+				var array = data.results;
 				array.forEach(function(iter){
 					$scope.partners.push({
-                        name: iter[0], 
-                        email: iter[1], 
-                        photo: iter[2] == null ? iter[2] = 'image/user-profile.png' : iter[2] = iter[2]
+                        name: iter.name, 
+                        email: iter.email, 
+                        photo: iter.photo == null ? iter.photo = 'image/user-profile.png' : iter.photo = iter.photo
                     });
 				});
 			}
-		});
+		}, $scope.error);
 	};
 
 	$scope.getAllPartners();
@@ -129,4 +132,8 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 
 		window.location.href = "#/partner-profile/" + encodedString;
 	};
+    
+     $scope.error = function(response) {
+        console.log('error: '); 
+    };
 });

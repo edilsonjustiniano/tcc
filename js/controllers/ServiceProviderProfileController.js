@@ -48,20 +48,21 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     $scope.getServiceProviderData = function () {
 
         ServiceProviderService.getServiceProviderData($scope.serviceProvider, function (callback) {
-            if (!callback.success) { /* Invalid Session or Expired */
+            var data = callback.data;
+            if (!data.success) { /* Invalid Session or Expired */
                 window.localStorage['token'] = null;
                 window.sessionStorage.setItem('typeOfAccount', null);
                 window.location.href = 'index.html';
             } else {
-                var array = callback.data;
+                var array = data.results;
                 if (array.length > 0) {
                     array.forEach(function (iter) {
-                        $scope.serviceProvider.name = iter[0]; //name
-                        $scope.serviceProvider.photo = iter[3] == null ? iter[3] = 'image/user-profile.png' : iter[3] = iter[3];
+                        $scope.serviceProvider.name = iter.serviceProviderName; //name
+                        $scope.serviceProvider.photo = iter.photo == null ? iter.photo = 'image/user-profile.png' : iter.photo = iter.photo;
                     });
                 }
             }
-        });
+        }, $scope.error);
     };
 
     $scope.getServiceProviderData();
@@ -71,14 +72,15 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     $scope.getServiceProviderRatingInMyNetworkPartners = function() {
         if ($scope.serviceProvider != null && $scope.serviceProvider != undefined) {
             ServiceProviderService.getServiceProviderRatingInMyNetworkPartners($scope.serviceProvider, function(callback) {
-                if (!callback.success) {
+                var data = callback.data;
+                if (!data.success) {
                     window.localStorage['token'] = null;
                     window.sessionStorage.setItem('typeOfAccount', null);
                     window.location.href = 'index.html';
                 } else {
-                    var array = callback.data;
+                    var array = data.results;
                     array.forEach(function(iter) {
-                        var dateSplit = iter[3].split(' ');
+                        var dateSplit = iter.date.split(' ');
                         dateSplit = dateSplit[0];
                         dateSplit = dateSplit.split('-'); //[2015] [08] [11]
                         var year = dateSplit[0];
@@ -87,19 +89,19 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
                         
                         
                         $scope.ratingInMyNetwork.push({
-                            partner : iter[0], //partner name
-                            note    : iter[1], //note
-                            comments: iter[2], //comments
+                            partner : iter.partner, //partner name
+                            note    : iter.note, //note
+                            comments: iter.comments, //comments
                             date    : day + '/' + month + '/' + year //date
                         });
-                        $scope.personsWhoseRateitInMyNetwork += iter[0] + '\n';
+                        $scope.personsWhoseRateitInMyNetwork += iter.partner + '\n';
                     });
-                    window.localStorage['token'] = callback.token;
+                    window.localStorage['token'] = data.token;
                     
                     $scope.averageInMyNetwork = ServiceProviderService.calculateAverage($scope.ratingInMyNetwork);
                     $scope.percentInMyNetwork = ServiceProviderService.calculatePercentage($scope.averageInMyNetwork);
                 }
-            });
+            }, $scope.error);
         }
     };
     
@@ -120,14 +122,15 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     $scope.getServiceProviderRatingInMyCompany = function() {
         if ($scope.serviceProvider != null && $scope.serviceProvider != undefined) {
             ServiceProviderService.getServiceProviderRatingInMyCompany($scope.serviceProvider, function(callback) {
-                if (!callback.success) {
+                var data = callback.data;
+                if (!data.success) {
                     window.localStorage['token'] = null;
                     window.sessionStorage.setItem('typeOfAccount', null);
                     window.location.href = 'index.html';
                 } else {
-                    var array = callback.data;
+                    var array = data.results;
                     array.forEach(function(iter) {
-                        var dateSplit = iter[3].split(' ');
+                        var dateSplit = iter.date.split(' ');
                         dateSplit = dateSplit[0];
                         dateSplit = dateSplit.split('-'); //[2015] [08] [11]
                         var year = dateSplit[0];
@@ -135,19 +138,19 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
                         var day = dateSplit[2];
                         
                         $scope.ratingInMyCompany.push({
-                            partner : iter[0], //partner name
-                            note    : iter[1], //note
-                            comments: iter[2], //comments
+                            partner : iter.partner, //partner name
+                            note    : iter.note, //note
+                            comments: iter.comments, //comments
                             date    : day + '/' + month + '/' + year  //date
                         });
-                        $scope.personsWhoseRateitInMyCompany += iter[0] + '\n';
+                        $scope.personsWhoseRateitInMyCompany += iter.partner + '\n';
                     });
-                    window.localStorage['token'] = callback.token;
+                    window.localStorage['token'] = data.token;
                     
                     $scope.averageInMyCompany = ServiceProviderService.calculateAverage($scope.ratingInMyCompany);
                     $scope.percentInMyCompany = ServiceProviderService.calculatePercentage($scope.averageInMyCompany);
                 }
-            });
+            }, $scope.error);
         }
     };
     
@@ -168,14 +171,15 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     $scope.getServiceProviderRatingInMyCity = function() {
         if ($scope.serviceProvider != null && $scope.serviceProvider != undefined) {
             ServiceProviderService.getServiceProviderRatingInMyCity($scope.serviceProvider, function(callback) {
-                if (!callback.success) {
+                var data = callback.data;
+                if (!data.success) {
                     window.localStorage['token'] = null;
                     window.sessionStorage.setItem('typeOfAccount', null);
                     window.location.href = 'index.html';
                 } else {
-                    var array = callback.data;
+                    var array = data.results;
                     array.forEach(function(iter) {
-                        var dateSplit = iter[3].split(' ');
+                        var dateSplit = iter.date.split(' ');
                         dateSplit = dateSplit[0];
                         dateSplit = dateSplit.split('-'); //[2015] [08] [11]
                         var year = dateSplit[0];
@@ -183,19 +187,19 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
                         var day = dateSplit[2];
                         
                         $scope.ratingInMyCity.push({
-                            partner : iter[0], //partner name
-                            note    : iter[1], //note
-                            comments: iter[2], //comments
+                            partner : iter.partner, //partner name
+                            note    : iter.note, //note
+                            comments: iter.comments, //comments
                             date    : day + '/' + month + '/' + year  //date
                         });
-                        $scope.personsWhoseRateitInMyCity += iter[0] + '\n';
+                        $scope.personsWhoseRateitInMyCity += iter.partner + '\n';
                     });
-                    window.localStorage['token'] = callback.token;
+                    window.localStorage['token'] = data.token;
                     
                     $scope.averageInMyCity = ServiceProviderService.calculateAverage($scope.ratingInMyCity);
                     $scope.percentInMyCity = ServiceProviderService.calculatePercentage($scope.averageInMyCity);
                 }
-            });
+            }, $scope.error);
         }
     };
     
@@ -249,5 +253,9 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     $scope.mesageButtonClick = function() {
         $scope.showAddEvaluate = false;
         $scope.showAddMesage = true;
+    };
+    
+     $scope.error = function(response) {
+        console.log('error: '); 
     };
 });

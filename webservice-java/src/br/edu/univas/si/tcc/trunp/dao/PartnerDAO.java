@@ -177,21 +177,31 @@ public class PartnerDAO {
 		return arr;
 	}
 	
-	public String getAllPartners(int limit, int offset, Person person) {
+	public JSONArray getAllPartners(Person person) throws JSONException {
 		WebResource resource = FactoryDAO.GetInstance();
 		
 		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
 				"(partner:Person), " +
 				"(partner)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partner)" +
 				"WHERE partner <> me " +
-				"RETURN partner.name, partner.email, partner.photo; \"}";
+				"RETURN {name: partner.name, email: partner.email, photo: partner.photo} as partner; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 		
-		return objectCreate;
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 	}
 
 
@@ -366,7 +376,7 @@ public class PartnerDAO {
 
 
 
-	public String getCommonsPartners(Person person, String partnerEmail) {
+	public JSONArray getCommonsPartners(Person person, String partnerEmail) throws JSONException {
 
 		WebResource resource = FactoryDAO.GetInstance();
 		
@@ -378,15 +388,25 @@ public class PartnerDAO {
 							"(me)-[:PARTNER_OF]->(commons)-[:PARTNER_OF]->(me), " +
 							"(partner)-[:PARTNER_OF]->(commons)-[:PARTNER_OF]->(partner) " +
 							"WHERE me <> partner and me <> commons and partner <> commons " +
-							"RETURN commons.name, commons.email " +
-							"ORDER BY commons.name ASC; \"}";
+							"RETURN {name: commons.name, email: commons.email} as common " +
+							"ORDER BY common.name ASC; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 		
-		return objectCreate;
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 	}
 
 }

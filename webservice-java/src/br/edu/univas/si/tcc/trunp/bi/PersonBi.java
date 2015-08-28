@@ -26,6 +26,10 @@ public class PersonBi {
 	public JSONArray createAccountWorkData(Person person) throws JSONException {
 		return dao.createAccountWorkData(person);
 	}
+
+	public JSONArray getPersonData(String partner) throws JSONException {
+		return dao.getPersonData(partner);
+	}
 	
 	
 

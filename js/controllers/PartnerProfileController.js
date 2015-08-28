@@ -28,13 +28,15 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 
 	$scope.getPartnerData = function() {
 
-		PartnerService.getPartnerData($scope.partner, function(callback){
-			if (!callback.success) { /* Invalid Session or Expired */
+		PartnerService.getPartnerData($scope.partner.email, function(callback){
+            var data = callback.data;
+			if (!data.success) { /* Invalid Session or Expired */
 				window.localStorage['token'] = null;
 				window.sessionStorage.setItem('typeOfAccount', null);
 				window.location.href = 'index.html';
 			} else {
-				$scope.partner.photo = callback.data[0][2]; //get photo
+                var userData = data.results[0];
+				$scope.partner.photo = userData.photo; //get photo
                 $scope.partner.photo == null ? $scope.partner.photo = 'image/user-profile.png' : $scope.partner.photo = $scope.partner.photo;
 			}
 		});
@@ -45,12 +47,13 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 	$scope.isMyPartner = function() {
 
 		PartnerService.isMyPartner($scope.partner.email, function(callback){
-			if (!callback.success) { /* Invalid Session or Expired */
+            var data = callback.data;
+			if (!data.success) { /* Invalid Session or Expired */
 				window.localStorage['token'] = null;
 				window.sessionStorage.setItem('typeOfAccount', null);
 				window.location.href = 'index.html';
 			} else {
-				$scope.myPartner = callback.isMyPartner;
+				$scope.myPartner = data.isMyPartner;
 			}
 		});
 	};
@@ -107,17 +110,18 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
     $scope.getCommonsPartners = function() {
         
         PartnerService.getCommonsPartners($scope.partner, function(callback) {
-            if (!callback.success) {
+            var data = callback.data;
+            if (!data.success) {
                 window.sessionStorage.setItem('typeOfAccount', null);
 				window.localStorage['token'] = null;
 				window.location.href = "index.html";
             } else {
-                var array = callback.data;
+                var array = data.results;
                 if (array!= null && array.length > 0){
                     array.forEach(function(iter) {
                         $scope.commonsPartners.push({
-                            name : iter[0],
-                            email: iter[1]
+                            name : iter.name,
+                            email: iter.email
                         });
                     });
                 }

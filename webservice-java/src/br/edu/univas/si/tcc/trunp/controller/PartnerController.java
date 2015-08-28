@@ -29,4 +29,16 @@ public class PartnerController {
 	public JSONArray rejectPartnerRequest(Person person, String partnerEmail) throws JSONException {
 		return partnerBi.rejectPartnerRequest(person, partnerEmail);
 	}
+
+	public JSONArray getAllPartners(Person person) throws JSONException {
+		return partnerBi.getAllPartners(person);
+	}
+
+	public boolean isMyPartner(Person person, String partner) {
+		return partnerBi.isMyPartner(person, partner);
+	}
+
+	public JSONArray getCommonsPartners(Person person, String partner) throws JSONException {
+		return partnerBi.getCommonsPartners(person, partner);
+	}
 }

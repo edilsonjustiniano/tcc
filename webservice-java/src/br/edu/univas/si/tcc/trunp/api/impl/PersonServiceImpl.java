@@ -6,6 +6,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.codehaus.jettison.json.JSONArray;
@@ -25,6 +26,7 @@ import br.edu.univas.si.tcc.trunp.model.Token;
 import br.edu.univas.si.tcc.trunp.model.UF;
 import br.edu.univas.si.tcc.trunp.util.Base64Util;
 import br.edu.univas.si.tcc.trunp.util.JSONUtil;
+import br.edu.univas.si.tcc.trunp.util.MD5Util;
 
 @Path("/person")
 @Consumes(MediaType.APPLICATION_JSON)
@@ -159,14 +161,31 @@ public class PersonServiceImpl implements PersonService {
 	
 	
 	@GET
-	@Path("/persondata/{token}")
-	public JSONObject personData(@PathParam("token") String token) {
-		JSONObject json = new JSONObject();
-		try {
-			json.put("success", true);
-		} catch (JSONException e) {
-			e.printStackTrace();
+	@Path("/persondata/{partner}")
+	public JSONObject personData(@PathParam("partner") String partner, @QueryParam("token") String token) throws JSONException {
+		
+		JSONObject json = null;
+		Token tokenDecoded = null;
+		Person person = new Person();
+		byte[] tokenByte = token.getBytes();
+		
+		tokenDecoded = Base64Util.decodeToken(tokenByte);
+		person.setEmail(tokenDecoded.getEmail());
+		person.setPassword(MD5Util.generateMD5(tokenDecoded.getPassword()));
+		
+		if (!tokenController.isValidSession(tokenDecoded)) {
+			return JSONUtil.generateJSONErrorSessionExpired(false, "Sessão inválida", false);
 		}
+		
+		if (tokenController.isExpiredSession(tokenDecoded)) {
+			return JSONUtil.generateJSONErrorSessionExpired(false, "Sessão expirada, por favor realize o login novamente!", false);
+		}
+
+		JSONArray result = personController.getPersonData(partner);
+		json = JSONUtil.generateJSONSuccessByData(true, result);
+		tokenByte = Base64Util.encodeToken(tokenDecoded.getEmail(), tokenDecoded.getPassword());
+		json.put("token", new String(tokenByte));
+		
 		return json;
 	}
 

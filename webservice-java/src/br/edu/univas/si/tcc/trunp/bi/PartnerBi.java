@@ -30,4 +30,16 @@ public class PartnerBi {
 		return dao.rejectPartnerRequest(person, partnerEmail);
 	}
 
+	public JSONArray getAllPartners(Person person) throws JSONException {
+		return dao.getAllPartners(person);
+	}
+
+	public boolean isMyPartner(Person person, String partner) {
+		return dao.isMyPartner(person, partner);
+	}
+
+	public JSONArray getCommonsPartners(Person person, String partner) throws JSONException {
+		return dao.getCommonsPartners(person, partner);
+	}
+
 }

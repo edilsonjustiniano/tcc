@@ -26,4 +26,8 @@ public class PersonController {
 	public JSONArray createAccountWorkData(Person person) throws JSONException {
 		return personBi.createAccountWorkData(person);
 	}
+
+	public JSONArray getPersonData(String partner) throws JSONException {
+		return personBi.getPersonData(partner);
+	}
 }

@@ -168,7 +168,7 @@ public class ServiceProviderDAO {
 	
 	
 
-	public String getServiceProviderData(String providerEmail, String providerService) {
+	public JSONArray getServiceProviderData(String providerEmail, String providerService) throws JSONException {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		
@@ -177,14 +177,25 @@ public class ServiceProviderDAO {
 							"(service:Service {name: '" + providerService + "'}), " +
 							"(sp)-[:PROVIDE]->(service) " +
 							"WHERE sp.typeOfAccount <> 'CONTRACTOR' " + 
-							"RETURN DISTINCT(sp.name), sp.email, sp.gender, sp.photo, service.name \"}";
+							"RETURN DISTINCT({serviceProviderName: sp.name, serviceProviderEmail: sp.email, " +
+							"gender: sp.gender, photo: sp.photo, service: service.name}) as person \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 		
-		return objectCreate;
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 
 	}
 
@@ -263,8 +274,8 @@ public class ServiceProviderDAO {
 
 
 
-	public String getServiceProviderRatingInMyNetworkPartners(Person person,
-			String service, String serviceProvider) {
+	public JSONArray getServiceProviderRatingInMyNetworkPartners(Person person,
+			String service, String serviceProvider) throws JSONException {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		
@@ -293,22 +304,32 @@ public class ServiceProviderDAO {
 						"(executed)-[:TO]->(partners) " +
 						"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 						"AND UPPER(service.name) = UPPER('" + service + "') " +
-						"RETURN partners.name, executed.note, executed.comments, executed.date ORDER BY executed.note DESC; \"}";
+						"RETURN {partner: partners.name, note: executed.note, comments: executed.comments, date: executed.date} as execution ORDER BY execution.note DESC; \"}";
 
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 		
-		return objectCreate;
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 
 	}
 
 
 
-	public String getServiceProviderRatingInMyCompany(Person person,
-			String service, String serviceProvider) {
+	public JSONArray getServiceProviderRatingInMyCompany(Person person,
+			String service, String serviceProvider) throws JSONException {
 	
 		WebResource resource = FactoryDAO.GetInstance();
 		
@@ -337,21 +358,32 @@ public class ServiceProviderDAO {
 						"(executed)-[:TO]->(partners) " +
 						"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 						"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
-						"RETURN partners.name, executed.note, executed.comments, executed.date ORDER BY executed.note DESC; \"}";
+						"RETURN {partner: partners.name, note: executed.note, comments: executed.comments, date: executed.date} as execution ORDER BY execution.note DESC; \"}";
 
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 		
-		return objectCreate;
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
+		
 	}
 
 
 
-	public String getServiceProviderRatingInMyCity(Person person,
-			String service, String serviceProvider) {
+	public JSONArray getServiceProviderRatingInMyCity(Person person,
+			String service, String serviceProvider) throws JSONException {
 
 		WebResource resource = FactoryDAO.GetInstance();
 		
@@ -382,16 +414,25 @@ public class ServiceProviderDAO {
 						"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 						"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
 						"AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
-						"RETURN partners.name, executed.note, executed.comments, executed.date ORDER BY executed.note DESC; \"}";
+						"RETURN {partner: partners.name, note: executed.note, comments: executed.comments, date: executed.date} as execution ORDER BY execution.note DESC; \"}";
 
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 		
-		return objectCreate;
-	
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 	}
 
 
