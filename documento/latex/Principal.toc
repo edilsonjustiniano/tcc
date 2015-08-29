@@ -27,12 +27,12 @@
 \contentsline {section}{\numberline {3.2}Contexto de pesquisa}{37}{section.3.2}
 \contentsline {section}{\numberline {3.3}Instrumentos}{38}{section.3.3}
 \contentsline {section}{\numberline {3.4}Procedimentos}{39}{section.3.4}
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {RESULTADOS}}{43}{chapter.4}
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {CONCLUS\IeC {\~A}O}}{44}{chapter.5}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {RESULTADOS}}{44}{chapter.4}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {CONCLUS\IeC {\~A}O}}{45}{chapter.5}
 \vspace {\cftbeforechapterskip }
-\contentsline {chapter}{REFER\IeC {\^E}NCIAS}{47}{section*.27}
+\contentsline {chapter}{REFER\IeC {\^E}NCIAS}{48}{section*.27}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {chapter}{AP\IeC {\^E}NDICES}{49}{section*.27}
-\contentsline {chapter}{ANEXOS}{50}{figure.caption.32}
+\contentsline {chapter}{AP\IeC {\^E}NDICES}{50}{section*.27}
+\contentsline {chapter}{ANEXOS}{51}{figure.caption.32}
