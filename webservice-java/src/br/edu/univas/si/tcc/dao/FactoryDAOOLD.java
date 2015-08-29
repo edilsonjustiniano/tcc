@@ -4,7 +4,7 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.filter.HTTPBasicAuthFilter;
 
-public class FactoryDAO {
+public class FactoryDAOOLD {
 
 	private static final String DATABASE_ENDPOINT = "http://localhost:7474/db/data";
 
@@ -16,7 +16,7 @@ public class FactoryDAO {
     
 	private static WebResource instance;
 	
-	private FactoryDAO() {
+	private FactoryDAOOLD() {
 	}
 	
 	public static WebResource GetInstance() {

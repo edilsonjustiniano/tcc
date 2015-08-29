@@ -16,4 +16,8 @@ public class ServiceBi {
 	public JSONArray getServiceByName(String service) throws JSONException {
 		return dao.getServiceByName(service);
 	}
+
+	public void createService(String service) {
+		dao.createService(service);
+	}
 }

@@ -97,13 +97,13 @@ app.service('ServiceProviderService', function($http){
         return percent.toFixed(2);
     };
 
-    this.addService = function(service, callback) {
+    this.addService = function(service, success, error) {
         var token = window.localStorage['token'];
-        $http.post('http://localhost:8080/WebService/serviceProvider/addService', {
+        $http.post('http://localhost:8080/WebService/serviceprovider/addservice', {
             service: service,
             token: token
         }).
-        success(callback);
+        then(success, error);
 
     };
 
@@ -114,13 +114,13 @@ app.service('ServiceProviderService', function($http){
 
     };
     
-    this.removeService = function(service, callback) {
+    this.removeService = function(service, success, error) {
         var token = window.localStorage['token'];
-        $http.post('http://localhost:8080/WebService/serviceProvider/removeService', {
+        $http.post('http://localhost:8080/WebService/serviceprovider/removeservice', {
             service: service,
             token: token
         }).
-        success(callback);
+        then(success, error);
 
     };
 });

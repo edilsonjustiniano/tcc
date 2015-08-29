@@ -437,38 +437,35 @@ public class ServiceProviderDAO {
 	}
 
 
-    // Criando um novo serviço (nó)
-	public void createService(String service) {
-		
-		WebResource resource = FactoryDAO.GetInstance();
-		String query = "{\"query\":\" CREATE (s:Service {name: '"+ service +"'})" +
-					"RETURN s.name; \"}";
-		System.out.println(query);
-		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
-												.type(MediaType.APPLICATION_JSON).entity(query)
-												.post(ClientResponse.class);
-		responseCreate.getEntity(String.class);				
-	}
-	
-	
-	
 	
 	// Atribuindo o serviço a uma pessoa
-	public String addService(String service, Person person) {
+	public JSONArray addService(String service, Person person) throws JSONException {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		String query = "{\"query\":\" MATCH (n:Person {email: '"+ person.getEmail() +"'}), "
 				+ "(service:Service {name: '"+ service +"'}) " 
 				+ "WITH DISTINCT (n), service "
 				+ "CREATE (n)-[:PROVIDE]->(service) "
-				+ "RETURN n.email, service.name; \"}";
+				+ "RETURN {email: n.email, service: service.name} as result; \"}";
 		
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String result = responseCreate.getEntity(String.class);	
-		return result;
+		String resp = responseCreate.getEntity(String.class);	
+		
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
+
 	}
 
 
@@ -503,21 +500,32 @@ public class ServiceProviderDAO {
 
 
 
-	public String removeService(String service, Person person) {
+	public JSONArray removeService(String service, Person person) throws JSONException {
 		WebResource resource = FactoryDAO.GetInstance();
 		String query = "{\"query\":\" MATCH (me:Person {email: '"+ person.getEmail() +"'}), "
 				+ "(service:Service), " 
 				+ "(me)-[relProvide:PROVIDE]->(service) "
 				+ "WHERE me.typeOfAccount <> 'CONTRACTOR' AND service.name = '" + service + "' "
 				+ "DELETE relProvide "
-				+ "RETURN DISTINCT(service.name); \"}";
+				+ "RETURN DISTINCT({service: service.name}) as s; \"}";
 		
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String result = responseCreate.getEntity(String.class);	
-		return result;
+		String resp = responseCreate.getEntity(String.class);
+		
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 	}
 
 }

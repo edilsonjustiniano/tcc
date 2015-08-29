@@ -40,4 +40,20 @@ public class ServiceProviderController {
 			String service, String provider) throws JSONException {
 		return serviceProviderBi.getServiceProviderRatingInMyCity(person, service, provider);
 	}
+
+	public boolean isNewService(String service) {
+		return serviceProviderBi.isNewService(service);
+	}
+
+	public boolean isAlreadyStored(String service, Person person) {
+		return serviceProviderBi.isAlreadyStored(service, person);
+	}
+
+	public JSONArray addService(String service, Person person) throws JSONException {
+		return serviceProviderBi.addService(service, person);
+	}
+
+	public JSONArray removeService(String service, Person person) throws JSONException {
+		return serviceProviderBi.removeService(service, person);
+	}
 }

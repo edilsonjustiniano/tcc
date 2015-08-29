@@ -15,5 +15,9 @@ public class ServiceController {
 	
 	public JSONArray getServiceByName(String service) throws JSONException {
 		return serviceBi.getServiceByName(service);
+	}
+
+	public void createService(String service) {
+		serviceBi.createService(service);
 	} 
 }

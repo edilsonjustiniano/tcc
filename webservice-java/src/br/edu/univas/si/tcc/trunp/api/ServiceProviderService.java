@@ -11,7 +11,7 @@ public interface ServiceProviderService {
 	public JSONObject ratingInMyCity(String provider, String service, String token) throws JSONException;
 	public JSONObject data(String provider, String service, String token) throws JSONException;
 	public JSONObject myServices(String token) throws JSONException;
-	public JSONObject addService(String data);
-	public JSONObject removeService(String data);
+	public JSONObject addService(String data) throws JSONException;
+	public JSONObject removeService(String data) throws JSONException;
 	
 }

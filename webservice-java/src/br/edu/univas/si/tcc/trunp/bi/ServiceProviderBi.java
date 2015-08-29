@@ -41,4 +41,20 @@ public class ServiceProviderBi {
 			String service, String provider) throws JSONException {
 		return dao.getServiceProviderRatingInMyCompany(person, service, provider);
 	}
+
+	public boolean isNewService(String service) {
+		return dao.isNewService(service);
+	}
+
+	public boolean isAlreadyStored(String service, Person person) {
+		return dao.isAlreadyStored(service, person);
+	}
+
+	public JSONArray addService(String service, Person person) throws JSONException {
+		return dao.addService(service, person);
+	}
+
+	public JSONArray removeService(String service, Person person) throws JSONException {
+		return dao.removeService(service, person);
+	}
 }

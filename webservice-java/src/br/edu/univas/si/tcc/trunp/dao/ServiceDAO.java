@@ -14,39 +14,39 @@ import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
 public class ServiceDAO {
-	
+
 	public String getAllService() {
-		
+
 		WebResource resource = FactoryDAO.GetInstance();
-		
-        String query = "MATCH (service:Service) RETURN service.name;";
-        
-        String request = "{\"query\":\"" + query + "\"}";
-        ClientResponse response = resource.accept(MediaType.APPLICATION_JSON)
-                							.type(MediaType.APPLICATION_JSON).entity(request)
-                							.post(ClientResponse.class);
-        
-        String responseStr = response.getEntity(String.class);
-		
+
+		String query = "MATCH (service:Service) RETURN service.name;";
+
+		String request = "{\"query\":\"" + query + "\"}";
+		ClientResponse response = resource.accept(MediaType.APPLICATION_JSON)
+				.type(MediaType.APPLICATION_JSON).entity(request)
+				.post(ClientResponse.class);
+
+		String responseStr = response.getEntity(String.class);
+
 		return responseStr;
 	}
-	
-	
+
 	public JSONArray getServiceByName(String service) throws JSONException {
-		
+
 		WebResource resource = FactoryDAO.GetInstance();
-		
-        String query = "MATCH (service:Service) WHERE UPPER(service.name) =~ '" + service.toUpperCase() + ".*' " +
-        				"RETURN {service: service.name} as service;";
-        
-        String request = "{\"query\":\"" + query + "\"}";
-        ClientResponse response = resource.accept(MediaType.APPLICATION_JSON)
-                							.type(MediaType.APPLICATION_JSON).entity(request)
-                							.post(ClientResponse.class);
-        
-        String resp = response.getEntity(String.class);
-        
-        JSONObject json = null;
+
+		String query = "MATCH (service:Service) WHERE UPPER(service.name) =~ '"
+				+ service.toUpperCase() + ".*' "
+				+ "RETURN {service: service.name} as service;";
+
+		String request = "{\"query\":\"" + query + "\"}";
+		ClientResponse response = resource.accept(MediaType.APPLICATION_JSON)
+				.type(MediaType.APPLICATION_JSON).entity(request)
+				.post(ClientResponse.class);
+
+		String resp = response.getEntity(String.class);
+
+		JSONObject json = null;
 		JSONArray objData = null;
 		json = new JSONObject(resp);
 		objData = json.getJSONArray("data");
@@ -57,6 +57,19 @@ public class ServiceDAO {
 		System.out.println(arr);
 
 		return arr;
+	}
+
+	// Criando um novo serviço (nó)
+	public void createService(String service) {
+
+		WebResource resource = FactoryDAO.GetInstance();
+		String query = "{\"query\":\" CREATE (s:Service {name: '" + service + "'}) RETURN s.name; \"}";
+		System.out.println(query);
+		ClientResponse responseCreate = resource
+				.accept(MediaType.APPLICATION_JSON)
+				.type(MediaType.APPLICATION_JSON).entity(query)
+				.post(ClientResponse.class);
+		responseCreate.getEntity(String.class);
 	}
 
 }
