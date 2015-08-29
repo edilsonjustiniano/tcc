@@ -65,8 +65,8 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 	$scope.addPartner = function () {
 		
 		PartnerService.addPartner($scope.partner, function(callback) {
-
-			if (!callback.success) { /* Invalid session or expired session */
+            var data = callback.data;
+			if (!data.success) { /* Invalid session or expired session */
 
 				window.sessionStorage.setItem('typeOfAccount', null);
 				window.localStorage['token'] = null;
@@ -75,8 +75,8 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 			} else {
 
 				$scope.msg.type = 'SUCCESS';
-				$scope.msg.msg = callback.mesage;
-				window.localStorage['token'] = callback.token;
+				$scope.msg.msg = data.mesage;
+				window.localStorage['token'] = data.token;
 				$scope.isMyPartner();
 			}
 		});

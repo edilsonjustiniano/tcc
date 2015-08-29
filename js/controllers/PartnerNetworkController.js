@@ -82,43 +82,53 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 		if (window.sessionStorage.getItem('typeOfAccount') == 'SERVICE_PROVIDER') {
 			return;
 		}
-		PartnerService.searchNewPartners($scope.limit, $scope.offset, $scope.newPartner, function(callback) {
-			
-			if (callback.success) { 
+		PartnerService.searchNewPartners($scope.newPartner, function(callback) {
+			var data = callback.data;
+			if (data.success) { 
 				$scope.possibleNewPartners = [];
-				var array = callback.data;
+				var array = data.results;
 				
-				if (array == undefined || array.length <= 2) { /* Make another request, but in this time, get the possible partners filtering only by name */
+				if (array.length <= 2) { /* Make another request, but in this time, get the possible partners filtering only by name */
 					array.forEach(function(iter){
-						$scope.possibleNewPartners.push({name: iter[0], email: iter[1], photo: iter[3]});
+						$scope.possibleNewPartners.push({
+                            name: iter.name, 
+                            email: iter.email, 
+                            photo: iter.photo == null ? iter.photo = "image/user-profile.png" : iter.photo = iter.photo
+                        });
 					});
 
 					PartnerService.searchNewPartnersOnlyByName($scope.newPartner, function(callback) {
-
-						if (callback.success) {
-							array = callback.data;
+                        var dataNew = callback.data;
+						if (dataNew.success) {
+							array = dataNew.results;
 							array.forEach(function(iter){
 
-								if (!PartnerNetworkService.isDuplicatadedPartner(iter[0], iter[1], $scope.possibleNewPartners) ) {
+								if (!PartnerNetworkService.isDuplicatadedPartner(iter.name, 
+                                                                                 iter.email, 
+                                                                                 $scope.possibleNewPartners) ) {
+                                    
 									$scope.possibleNewPartners.push({
-                                        name: iter[0], 
-                                        email: iter[1], 
-                                        photo: iter[3] == null ? iter[3] = 'image/user-profile.png' : iter[3] = iter[3]
+                                        name: iter.name, 
+                                        email: iter.email, 
+                                        photo: iter.photo == null ? iter.photo = 'image/user-profile.png' : iter.photo = iter.photo
                                     });
 								}
 								
 							});
 						}
-					});
+					}, $scope.error);
 				} else {
 
 					array.forEach(function(iter){
-						$scope.possibleNewPartners.push({name: iter[0], email: iter[1]});
+						$scope.possibleNewPartners.push({
+                            name: iter.name, 
+                            email: iter.email
+                        });
 					});
 				}
-				window.localStorage['token'] = callback.token;
+				window.localStorage['token'] = data.token;
 			}
-		});
+		}, $scope.error);
 	};
 	
 	

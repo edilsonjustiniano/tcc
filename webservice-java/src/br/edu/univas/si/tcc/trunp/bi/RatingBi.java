@@ -17,4 +17,14 @@ public class RatingBi {
 	public JSONArray getMyLastestRatings(Person person) throws JSONException {
 		return dao.getMyLastestRatings(person);
 	}
+
+	public boolean isNewEvaluate(String providerEmail, String providerService,
+			Person person) {
+		return dao.isNewEvaluate(providerEmail, providerService, person);
+	}
+
+	public JSONArray saveRating(String providerEmail, String providerService,
+			int note, String comments, Person person) throws JSONException {
+		return dao.saveRating(providerEmail, providerService, note, comments, person);
+	}
 }

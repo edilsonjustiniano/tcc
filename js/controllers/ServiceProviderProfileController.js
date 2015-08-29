@@ -1,4 +1,4 @@
-app.controller('ServiceProviderProfileController', function ($scope, $routeParams, ServiceProviderService) {
+app.controller('ServiceProviderProfileController', function ($scope, $routeParams, ServiceProviderService, RatingService) {
 
     // Decode the String
     var doubleUnderscore = $routeParams.provider.indexOf("__");
@@ -42,7 +42,7 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     $scope.msg.type = '';
     $scope.msg.msg = '';
 
-    $scope.showAddEvaluate = false;
+    $scope.showAddRating = false;
     $scope.showAddMesage = false;
     
     $scope.getServiceProviderData = function () {
@@ -217,7 +217,7 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     
     
     /* save evaluate */
-    $scope.saveEvaluate = function () {
+    $scope.saveRating = function () {
         
         if ($scope.evaluateNote == undefined || $scope.evaluateNote == null) {
             $scope.msg.type = 'ERROR';
@@ -225,33 +225,34 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
             return;
         }
         
-        ServiceProviderService.saveEvaluate($scope.serviceProvider, $scope.evaluateNote, $scope.comments, function (callback) {
-            if (!callback.success) { /* Invalid Session or Expired */
+        RatingService.saveRating($scope.serviceProvider, $scope.evaluateNote, $scope.comments, function (callback) {
+            var data = callback.data;
+            if (!data.success) { /* Invalid Session or Expired */
                 window.localStorage['token'] = null;
                 window.sessionStorage.setItem('typeOfAccount', null);
                 window.location.href = 'index.html';
             } else {
-                if (!callback.isNewEvaluate) {
+                if (!data.isNewEvaluate) {
                     $scope.msg.type = 'ERROR';
-                    $scope.msg.msg = callback.mesage;
+                    $scope.msg.msg = data.mesage;
                 } else {
                     $scope.msg.type = 'SUCCESS';
-                    $scope.msg.msg = callback.mesage;
+                    $scope.msg.msg = data.mesage;
                 }
-                window.localStorage['token'] = callback.token;
+                window.localStorage['token'] = data.token;
             }
         });
     };
     
     /* open evaluate form */
     $scope.evaluateButtonClick = function() {
-        $scope.showAddEvaluate = true;
+        $scope.showAddRating = true;
         $scope.showAddMesage = false;
     };
     
     /* open mesage form */
     $scope.mesageButtonClick = function() {
-        $scope.showAddEvaluate = false;
+        $scope.showAddRating = false;
         $scope.showAddMesage = true;
     };
     

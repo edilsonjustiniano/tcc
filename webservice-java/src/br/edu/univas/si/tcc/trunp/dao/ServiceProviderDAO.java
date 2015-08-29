@@ -1,7 +1,5 @@
 package br.edu.univas.si.tcc.trunp.dao;
 
-import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
 
 import javax.ws.rs.core.MediaType;
@@ -200,80 +198,6 @@ public class ServiceProviderDAO {
 	}
 
 
-	public boolean isNewEvaluate(String providerEmail, String providerService, Person person) {
-		
-		WebResource resource = FactoryDAO.GetInstance();
-		
-//		MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: 'edilsonjustiniano@gmail.com'}), 
-//		(sp:Person {typeOfAccount: 'SERVICE_PROVIDER', email: 'mariaaparecida@gmail.com'}),
-//		(service:Service {name: 'Doméstica'}),
-//		(service)-[:EXECUTE]->(executed),
-//		(sp)-[:EXECUTE]->(executed)-[:TO]->(me)
-//		RETURN service.name, me.name, sp.name, COUNT(executed) as qtde;
-		
-		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
-					"(sp:Person {email: '" + providerEmail + "'}), " + 
-					"(service:Service {name: '" + providerService + "'}), " +
-					"(service)-[:EXECUTE]->(executed), " +
-					"(sp)-[:EXECUTE]->(executed)-[:TO]->(me) " +
-					"WHERE sp.typeOfAccount <> 'CONTRACTOR' " +
-					"RETURN COUNT(executed) as qtde; \"}";
-		System.out.println(query);
-		/* Corrigir a consulta para retornar um valor ou tratar quando vier null */ 
-		
-		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
-									.type(MediaType.APPLICATION_JSON).entity(query)
-									.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
-			
-		JSONObject response = null;
-		try {
-			response = new JSONObject(objectCreate);
-		} catch (JSONException e1) {
-			e1.printStackTrace();
-		}
-		
-		int qtde = 0;
-		try {
-			String qtdeStr = response.getString("data");
-			qtdeStr = qtdeStr.replaceAll("[^0-9]", "");
-			qtde = Integer.parseInt(qtdeStr);
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-		if (qtde > 0) {
-			return false;
-		}
-		return true;
-	}
-
-	
-	
-	public String saveEvaluate(String providerEmail, String providerService, int note, String comments, Person person) {
-		
-		WebResource resource = FactoryDAO.GetInstance();
-		Date currentTime = new Timestamp(new Date().getTime());
-		
-		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
-					"(sp:Person {email: '" + providerEmail + "'}), " + 
-					"(service:Service {name: '" + providerService + "'}) " +
-					"WHERE sp.typeOfAccount <> 'CONTRACTOR' " +
-					"CREATE (executed:Execute {note: " + note + ", comments: '" + comments + "', date: '" + currentTime + "'}), " +
-					"(service)-[:EXECUTE]->(executed), " +
-					"(sp)-[:EXECUTE]->(executed)-[:TO]->(me) " +
-					"RETURN service.name, me.name, sp.name, COUNT(executed) as qtde; \"}";
-		System.out.println(query);
-		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
-												.type(MediaType.APPLICATION_JSON).entity(query)
-												.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
-		
-		return objectCreate;
-			
-	}
-
-
-
 	public JSONArray getServiceProviderRatingInMyNetworkPartners(Person person,
 			String service, String serviceProvider) throws JSONException {
 		
@@ -325,7 +249,6 @@ public class ServiceProviderDAO {
 		return arr;
 
 	}
-
 
 
 	public JSONArray getServiceProviderRatingInMyCompany(Person person,
@@ -557,7 +480,7 @@ public class ServiceProviderDAO {
 				+ "(service:Service), " 
 				+ "(me)-[:PROVIDE]->(service) "
 				+ "WHERE me.typeOfAccount <> 'CONTRACTOR' "
-				+ "RETURN DISTINCT({service.name}) as service; \"}";
+				+ "RETURN DISTINCT({service: service.name}) as s; \"}";
 		
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)

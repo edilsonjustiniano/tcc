@@ -198,7 +198,7 @@ public class ServiceProviderServiceImpl implements ServiceProviderService {
 
 	@GET
 	@Path("/myservices/{token}")
-	public JSONObject myServices(@QueryParam("token") String token) throws JSONException {
+	public JSONObject myServices(@PathParam("token") String token) throws JSONException {
 		
 		System.out.println(token);
 		JSONObject json = null;

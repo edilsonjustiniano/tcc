@@ -41,4 +41,20 @@ public class PartnerController {
 	public JSONArray getCommonsPartners(Person person, String partner) throws JSONException {
 		return partnerBi.getCommonsPartners(person, partner);
 	}
+
+	public JSONArray searchNewPartners(Person person, String partner) throws JSONException {
+		return partnerBi.searchNewPartners(person, partner);
+	}
+
+	public JSONArray searchNewPartnersOnlyByName(Person person, String partner) throws JSONException {
+		return partnerBi.searchNewPartnersOnlyByName(person, partner);
+	}
+
+	public JSONArray addPartner(Person person, String partnerEmail) throws JSONException {
+		return partnerBi.addPartner(person, partnerEmail);
+	}
+
+	public JSONArray cancelPartner(Person person, String partnerEmail) throws JSONException {
+		return partnerBi.cancelPartner(person, partnerEmail);
+	}
 }

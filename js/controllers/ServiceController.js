@@ -73,22 +73,22 @@ app.controller('ServiceController', function ($scope, ServiceProviderService, Se
     $scope.getMyServices = function () {
 
         ServiceProviderService.getMyServices(function (callback) {
-
-                if (!callback.success) {
+                var data = callback.data;
+                if (!data.success) {
                     window.sessionStorage.setItem('typeOfAccount', null);
                     window.localStorage['token'] = null;
                     window.location.href = "index.html";
                 } else {
-                    var array = callback.data;
+                    var array = data.results;
                     if (array.length > 0){
                         array.forEach(function(iter){
                             $scope.myServices.push({
-                                name: iter[0]
+                                name: iter.service
                             });
                         });
                     }
                 }
-        });
+        }, $scope.error);
     };
 
     $scope.getMyServices();

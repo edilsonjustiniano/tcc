@@ -5,7 +5,7 @@ import org.codehaus.jettison.json.JSONObject;
 
 public interface RatingService {
 	
-	public JSONObject rating(String data);
+	public JSONObject save(String data) throws JSONException;
 	public JSONObject myLastestRatings(String token) throws JSONException;
 
 }

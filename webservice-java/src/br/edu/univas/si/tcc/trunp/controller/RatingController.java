@@ -17,4 +17,14 @@ public class RatingController {
 	public JSONArray getMyLastestRatings(Person person) throws JSONException {
 		return ratingBi.getMyLastestRatings(person);
 	}
+
+	public boolean isNewEvaluate(String providerEmail, String providerService,
+			Person person) {
+		return ratingBi.isNewEvaluate(providerEmail, providerService, person);
+	}
+
+	public JSONArray saveRating(String providerEmail, String providerService,
+			int note, String comments, Person person) throws JSONException {
+		return ratingBi.saveRating(providerEmail, providerService, note, comments, person);
+	}
 }

@@ -42,4 +42,20 @@ public class PartnerBi {
 		return dao.getCommonsPartners(person, partner);
 	}
 
+	public JSONArray searchNewPartners(Person person, String partner) throws JSONException {
+		return dao.searchNewPartners(person, partner);
+	}
+
+	public JSONArray searchNewPartnersOnlyByName(Person person, String partner) throws JSONException {
+		return dao.searchNewPartnersOnlyByName(person, partner);
+	}
+
+	public JSONArray addPartner(Person person, String partnerEmail) throws JSONException {
+		return dao.addPartner(person, partnerEmail);
+	}
+
+	public JSONArray cancelPartner(Person person, String partnerEmail) throws JSONException {
+		return dao.cancelPartner(person, partnerEmail);
+	}
+
 }

@@ -6,15 +6,15 @@ app.service('PartnerService', function($http){
 		then(success, error);
 	};
 
-	this.addPartner = function(partner, callback) {
+	this.addPartner = function(partner, success, error) {
 		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/addPartner', {partner: partner.email, token: token}).
-		success(callback);
+		$http.post('http://localhost:8080/WebService/partner/add', {partner: partner.email, token: token}).
+		then(success, error);
 	}
 
 	this.cancelPartner = function(partner, callback) {
 		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/cancelPartner', {partner: partner.email, token: token}).
+		$http.post('http://localhost:8080/WebService/partner/cancel', {partner: partner.email, token: token}).
 		success(callback);
 	};
 
@@ -49,22 +49,22 @@ app.service('PartnerService', function($http){
 		then(success, error);
 	};
 
-	this.searchNewPartners = function(limit, offset, partnerName, callback) {
+	this.searchNewPartners = function(partnerName, success, error) {
 		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/searchNewPartners', {limit: limit, offset: offset, partner: partnerName, token: token}).
-		success(callback);	
+		$http.post('http://localhost:8080/WebService/partner/searchnewpartners', {partner: partnerName, token: token}).
+		then(success, error);	
 	};
 
-	this.searchNewPartnersOnlyByName = function(partnerName, callback) {
+	this.searchNewPartnersOnlyByName = function(partnerName, success, error) {
 		var token = window.localStorage['token'];
-		$http.post('http://localhost:8080/WebService/partner/searchNewPartnersOnlyByName', {partner: partnerName, token: token}).
-		success(callback);
+		$http.post('http://localhost:8080/WebService/partner/searchnewpartnersonlybyname', {partner: partnerName, token: token}).
+		then(success, error);
 	};
     
-    this.getPossiblePartners = function(callback, error) {
+    this.getPossiblePartners = function(success, error) {
         var token = window.localStorage['token'];
 		$http.get('http://localhost:8080/WebService/partner/possiblepartners/' + token).
-		then(callback, error);
+		then(success, error);
     };
     
     this.getCommonsPartners = function(partner, success, error) {

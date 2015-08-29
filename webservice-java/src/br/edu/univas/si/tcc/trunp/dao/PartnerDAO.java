@@ -100,7 +100,7 @@ public class PartnerDAO {
 
 	
 	
-	public String addPartner(Person me, String partnerEmail) {
+	public JSONArray addPartner(Person me, String partnerEmail) throws JSONException {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		Long currentTime = new Timestamp(new Date().getTime()).getTime();
@@ -108,19 +108,30 @@ public class PartnerDAO {
 		String query = "{\"query\":\" MATCH (me:Person {email: '" + me.getEmail() + "'}), " +
 				"(partner:Person {email: '" + partnerEmail +  "'}) " +
 				"CREATE (me)-[:PARTNER_OF {since: " + currentTime + "}]->(partner) " +
-				"RETURN me.name, me.email, partner.name, partner.email; \"}";
+				"RETURN {myName: me.name, myEmail: me.email, partnerName: partner.name, partnerEmail: partner.email} as added; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 		
-		return objectCreate;
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
+
 	}
 
 
 	
-	public String cancelPartner(Person me, String partnerEmail) {
+	public JSONArray cancelPartner(Person me, String partnerEmail) throws JSONException {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		
@@ -128,25 +139,36 @@ public class PartnerDAO {
 				"(partner:Person {email: '" + partnerEmail +  "'}), " +
 				"(partner)-[rel:PARTNER_OF]->(me) " +
 				"DELETE rel " +
-				"RETURN me.name, me.email, partner.name, partner.email; \"}";
+				"RETURN {myName: me.name, myEmail: me.email, partnerName: partner.name, partnerEmail: partner.email} as deleted; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 		
 		
 		query = "{\"query\":\" MATCH (me:Person {email: '" + me.getEmail() + "'}), " +
 				"(partner:Person {email: '" + partnerEmail +  "'}), " +
 				"(me)-[rel:PARTNER_OF]->(partner) " +
 				"DELETE rel " +
-				"RETURN me.name, me.email, partner.name, partner.email; \"}";
+				"RETURN {myName: me.name, myEmail: me.email, partnerName: partner.name, partnerEmail: partner.email} as deleted; \"}";
 		System.out.println(query);
 		responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		objectCreate = responseCreate.getEntity(String.class);
-		return objectCreate;
+		resp = responseCreate.getEntity(String.class);
+
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 	}
 
 
@@ -266,7 +288,7 @@ public class PartnerDAO {
 
 
 
-	public String searchNewPartners(Person person, String partner) {
+	public JSONArray searchNewPartners(Person person, String partner) throws JSONException {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		
@@ -281,9 +303,9 @@ public class PartnerDAO {
 							"OPTIONAL MATCH " +
 							"pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
 							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
-							"RETURN DISTINCT(users.name), users.email, 1 as length, users.photo, " +
-							"count(DISTINCT pMutualFriends) AS mutualFriends " +
-							"ORDER BY length, mutualFriends DESC " +
+							"RETURN DISTINCT({name: users.name, email: users.email, length: 1, photo: users.photo, " +
+							"mutualFriends: count(DISTINCT pMutualFriends)}) as partner  " +
+							"ORDER BY partner.length, partner.mutualFriends DESC " +
 							"UNION ALL " +
 							"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
 							"(users:Person), " +
@@ -295,21 +317,31 @@ public class PartnerDAO {
 							"OPTIONAL MATCH " +
 							"pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
 							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
-							"RETURN DISTINCT(users.name), users.email, 2 as length, users.photo, " +
-							"count(DISTINCT pMutualFriends) AS mutualFriends " +
-							"ORDER BY length, mutualFriends DESC \"}";
+							"RETURN DISTINCT({name: users.name, email: users.email, length: 2, photo: users.photo, " +
+							"mutualFriends: count(DISTINCT pMutualFriends)}) as partner " +
+							"ORDER BY partner.length, partner.mutualFriends DESC \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 		
-		return objectCreate;
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 	}
 
 
 
-	public String searchNewPartnersOnlyByName(Person person, String partner) {
+	public JSONArray searchNewPartnersOnlyByName(Person person, String partner) throws JSONException {
 		
 		WebResource resource = FactoryDAO.GetInstance();
 		
@@ -322,15 +354,25 @@ public class PartnerDAO {
 							"AND users.typeOfAccount <> 'SERVICE_PROVIDER' " +
 							"AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " + 
 							"AND users <> me " +
-							"RETURN DISTINCT(users.name), users.email, 3 as length, users.photo " +
-							"ORDER BY users.name ASC; \"}";
+							"RETURN DISTINCT({name: users.name, email: users.email, length: 3, photo: users.photo}) as partner " +
+							"ORDER BY partner.name ASC; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);
-		String objectCreate = responseCreate.getEntity(String.class);
+		String resp = responseCreate.getEntity(String.class);
 		
-		return objectCreate;
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
 
 	}
 
