@@ -27,29 +27,30 @@
 
 \subsection{Análise de requisitos}
 
-A fase de análise de requisitos tem como finalidade identificar os objetos do problema real e, a partir desses objetos definir como eles serão abstraídos para o software por meio do modelo de domínio; Também apresenta um protótipo das possíveis interfaces gráficas e, por fim, descrever os casos de uso. Quando possível, elabora-se os diagramas de navegação para que o cliente possa entender melhor o funcionamento do sistema como um todo.
+A função da fase de análise de requisitos é modelar os objetos do problema real a partir dos requisitos do software já levantados, e, a partir destes objetos gerar o diagrama de modelo de domínio. Ainda nesta fase, e, com base nos requisitos, deve-se definir os casos de uso do \textit{software}. Estes casos de uso são o elo entre os requisitos e a implementação propriamente dita do \textit{software}. Por isto, a definição destes diagramas se fazem tão importante para o ICONIX. 
+
+%A fase de análise de requisitos tem como finalidade identificar os objetos do problema real e, a partir destes objetos definir como eles serão abstraídos para o software por meio do modelo de domínio. Estes objetos são identificados a partir dos requisitos que foram levantados anteriormente. Também apresenta um protótipo das possíveis interfaces gráficas e, por fim, descrever os casos de uso. Quando possível, elabora-se os diagramas de navegação para que o cliente possa entender melhor o funcionamento do sistema como um todo.
 
 \subsection{Análise e projeto preliminar}
 
-Detalhar todos os casos de uso identificados na fase de requisitos, por meio de diagramas de robustez, baseando-se no texto dos casos de uso (fluxo de eventos). O diagrama de robustez não faz parte dos diagramas padrões da UML. Porém, este é utilizado para descobrir as classes de análise e detalhar superficialmente o funcionamento dos casos de uso.
+Nesta fase deve-se detalhar todos os casos de uso identificados na fase de análise de requisitos, por meio de diagramas de robustez, baseando-se no texto dos casos de uso (fluxo de eventos). O diagrama de robustez não faz parte dos diagramas padrões da UML. Porém, este é utilizado para descobrir as classes de análise e detalhar superficialmente o funcionamento dos casos de uso.
 
-Em paralelo, deve-se atualizar o modelo de domínio adicionando os atributos às entidades identificados. A partir deste momento será possível gerar a base de dados do sistema.
+Em paralelo, deve-se atualizar o modelo de domínio adicionando os atributos identificados às suas respectivias entidades. que foram descobertas na fase de análise de requisitos. A partir deste momento será possível gerar a base de dados do sistema.
 
 
 \subsection{Projeto detalhado}
 
-Elaborar o diagrama de sequência fundamentando-se nos diagramas de casos de uso identificados anteriormente, a fim de detalhar a implementação do caso de uso.
+Na fase denominada projeto detalhado deve-se elaborar o diagrama de sequência fundamentando-se nos diagramas de casos de uso identificados anteriormente, a fim de detalhar a implementação do caso de uso.
 
-O diagrama de sequência deve conter as classes que serão implementadas e as mensagens enviadas entre os objetos, corresponderão aos métodos que realmente serão implementados futuramente.
- 
+O diagrama de sequência deve conter as classes que serão implementadas e as mensagens enviadas entre os objetos corresponderão as operações que realmente serão implementadas futuramente. Estas operações devem ser incluídas no modelo de domínio em conjunto com as novas classes do projeto infentificadas, criando assim, o diagrama de classes final.
 
 \subsection{Implementação}
 
-Desenvolver o código fonte e os testes do sistema. O ICONIX não define os passos a serem seguidos nesta fase, ficando a cargo da equipe de desenvolvimento.
+Na fase de implementação deve-se desenvolver o código fonte do \textit{software} e os testes necessários para obter um software com qualidade. O ICONIX não define os passos a serem seguidos nesta fase, ficando a cargo de cada um definir a forma como será implementado o projeto.
  
 Ao término de cada fase um artefato é gerado, sendo respectivamente: revisão dos requisitos, revisão do projeto preliminar, revisão detalhada e entrega.
 
-O ICONIX é considerado um processo prático de desenvolvimento de software, pois a partir das iterações que ocorrem na análise de requisitos e na construção dos modelos de domínios (parte dinâmica), os diagramas de classes (parte estática) são incrementados e a partir destes, o sistema poderá ser codificado.
+O ICONIX é considerado um processo prático de desenvolvimento de software, pois a partir das iterações que ocorrem na análise de requisitos e na construção dos modelos de domínios (parte dinâmica), os diagramas de classes (parte estática) são incrementados e, a partir destes, o sistema poderá ser codificado.
 
 
-Por proporcionar esta praticidade, o ICONIX será empregado para o desenvolvimento deste projeto, pois por meio dele é possível obter produtividade no desenvolvimento do \textit{software} ao mesmo tempo em que alguns artefatos são gerados, unindo o aspecto de abrangência e agilidade.
+Por proporcionar essa praticidade, o ICONIX será empregado para o desenvolvimento deste projeto, pois por meio dele é possível obter produtividade no desenvolvimento do \textit{software} ao mesmo tempo em que alguns artefatos são gerados, unindo o aspecto de abrangência e agilidade.

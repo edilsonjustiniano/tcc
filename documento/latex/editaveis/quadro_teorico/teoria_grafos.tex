@@ -1,6 +1,6 @@
 \section{Teoria dos Grafos}
 
-\par A teoria dos grafos foi criada pelo matemático suiço \textit{Leonhard} Euler no século XVIII com o propósito de solucionar um antigo problema, conhecido como as 7 pontes de \textit{Königsberg} \cite{harju_graph_theory}.
+\par A teoria dos grafos foi criada pelo matemático suiço Leonhard Euler no século XVIII com o propósito de solucionar um antigo problema, conhecido como as 7 pontes de \textit{Königsberg} \cite{harju_graph_theory}.
 
 \par \textit{Königsberg}, atualmente conhecida como \textit{Kaliningrad}, era uma antiga cidade medieval cortada pelo rio \textit{Pregel} dividindo-a em 4 partes interligadas por 7 pontes. Ela era localizada na antiga Prússia, hoje, território Russo. O problema mencionado anteriormente consistia basicamente em atravessar toda a cidade, visitando todas as partes e utilizar todas as pontes desde que não repetisse uma das quatro partes ou uma das 7 pontes. A Figura 2 ilustra o problema mencionado.
 
@@ -12,7 +12,7 @@
 	\label{fig:exemplo1}
 \end{figure}
 
-\par De acordo com \citeonline{bruggen_learning_neo4j}, para tentar solucionar o problema, Euler utilizou uma abordagem matemática ao contrário dos demais que tentaram utilizar a força bruta para solucionar tal problema, desenhando N números de diferentes possibilidades de rotas. Euler mudou o foco e passou a dar mais atenção ao número de pontes e não as partes da cidade. Através desta observação, foi possível perceber que realizar tal tarefa seria impossível, pois de acordo com sua teoria seria necessário possuir no mínimo mais uma ponte, uma vez que, o número de pontes era ímpar, não sendo possível realizar um caminho único e sem repetição. Desta forma, obteve-se a solução para este problema e criou-se o primeiro grafo no mundo.
+\par De acordo com \citeonline{bruggen_learning_neo4j}, para tentar solucionar o problema, Euler utilizou uma abordagem matemática ao contrário dos demais que tentaram utilizar a força bruta para solucionar tal problema, desenhando N números de diferentes possibilidades de rotas. Euler mudou o foco e passou a dar mais atenção ao número de pontes e não as partes da cidade. Por meio desta observação, foi possível perceber que realizar tal tarefa seria impossível, pois de acordo com sua teoria seria necessário possuir no mínimo mais uma ponte, uma vez que, o número de pontes era ímpar, não sendo possível realizar um caminho único e sem repetição. Desta forma, obteve-se a solução para este problema e criou-se o primeiro grafo no mundo.
 
 \par \citeonline[p. 16]{rocha_algoritmos_particionamento_banco_dados_orientado_grafos} afirma que: 
 
@@ -50,8 +50,10 @@
 	\label{fig:exemplo1}
 \end{figure}
 
+\newpage
+
 %BANCA_QUALIFICACAO. Comentado este parágrafo, porém o mesmo retornará para a banca de qualificação
-\par Para \citeonline{harju_graph_theory}, os grafos podem ser direcionados (\textit{dígrafo}) ou não direcionados. Os  direcionados são aqueles cujos vértices ligados a uma aresta são ordenados e permitem que uma aresta que conecta os vértices \textit{x} e \textit{y} seja representada apenas de uma forma, sendo ela \{x, y\} ou \{y, x\}, ao contrário dos não direcionados que, para este mesmo caso, pode ser representado por ambas as formas \citeonline{rocha_algoritmos_particionamento_banco_dados_orientado_grafos}. A Figura 5 demonstra um grafo direcionado.
+\par Para \citeonline{harju_graph_theory}, os grafos podem ser direcionados (\textit{dígrafo}) ou não direcionados. Os  direcionados são aqueles cujos vértices ligados a uma aresta são ordenados e permitem que uma aresta que conecta os vértices \textit{x} e \textit{y} seja representada apenas de uma forma, sendo ela \{x, y\} ou \{y, x\}, ao contrário dos não direcionados que, para este mesmo caso, podem ser representado por ambas as formas \cite{rocha_algoritmos_particionamento_banco_dados_orientado_grafos}. A Figura 5 demonstra um grafo direcionado.
 
 % Imagem de um grafo direcionado - VOLTAR NA BANCA DE QUALIFICACAO
 \begin{figure}[h!]
@@ -66,9 +68,9 @@ Segundo \citeonline{harju_graph_theory}, os tipos de grafos são:
 \begin{itemize}
 	\item \textbf{grafo simples:} são aqueles grafos que não possuem \textit{loops} ou arestas paralelas;
 	
-	\item \textbf{grafo completo:} são aqueles que, qualquer par de vértices são adjacentes;
+	\item \textbf{grafo completo:} são aqueles em que, qualquer par de vértices são adjacentes;
 	
-	\item \textbf{subgrafos:} São pequenos grafos que em conjunto constituem um grafo maior.
+	\item \textbf{subgrafos:} são pequenos grafos que em conjunto constituem um grafo maior.
 	
 	\item \textbf{grafos isomórficos:} dois grafos são isomórficos se, ambos possuírem a mesma estrutura de nós, e relacionamentos, exceto pelos identificadores de cada nó que podem ser diferentes, veja na Figura 6 um exemplo de dois grafos isomórficos \cite{harju_graph_theory}.
 	
@@ -81,7 +83,7 @@ Segundo \citeonline{harju_graph_theory}, os tipos de grafos são:
 	
 	\item \textbf{caminho (travessia):} é uma sequência de vértices \{v1, v2,...,vn\} conectados por meio de arestas. Exemplo: \{e1 = \{v1, v2\}, \{v1, v3\}..., \{vn, vm\}\};
 
-	\item \textbf{grafo conexo:} são aqueles que, para qualquer par vértices, há um caminho que os ligam;
+	\item \textbf{grafo conexo:} são aqueles que, para qualquer par de vértices, há um caminho que os ligam;
 	
 	\item \textbf{grau do vértice:} é definido pela quantidade de arestas que se conectam ao vértice.
 	
@@ -89,7 +91,7 @@ Segundo \citeonline{harju_graph_theory}, os tipos de grafos são:
 
 Para \citeonline{rocha_algoritmos_particionamento_banco_dados_orientado_grafos} existem várias formas de se representar um grafo computacionalmente utilizando diferentes estruturas de dados. Entretanto, a mais utilizada e simples é a matriz adjacência.
 
-Uma matriz adjacência consiste de uma matriz contendo o mesmo número de linhas e colunas (\textit{n x n}). Veja na Figura 7 um exemplo de representação de um grafo utilizando esta estrutura.
+Uma matriz adjacência consiste em uma matriz contendo o mesmo número de linhas e colunas (\textit{n x n}). Veja na Figura 7 um exemplo de representação de um grafo utilizando esta estrutura.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.7]{./imagens/matriz_adjacencia.png}}
@@ -98,6 +100,6 @@ Uma matriz adjacência consiste de uma matriz contendo o mesmo número de linhas
 	\label{fig:exemplo1}
 \end{figure}
 
-Na Figura 7, as posições da matriz cujo o valor é igual a 1, definem que há uma aresta conectando os vértices, os tornando assim, adjacentes. Caso o valor seja 0, os vértices não estão conectados entre si no grafo e, portanto, não são vértices adjacentes.
+Na Figura 7, as posições da matriz cujo o valor é igual a 1, definem que há uma aresta conectando os vértices, tornando-os assim, adjacentes. Caso o valor seja 0, os vértices não estão conectados entre si no grafo e, portanto, não são vértices adjacentes.
 
-\par Este conteúdo teórico foi escolhido para ser utilizado neste trabalho pois este, visa equacionar o problema relacionado à busca por mão de obra, através do modelo utilizado pelas redes sociais. Isto é possível pois, como mencionado anteriormente por meio desta teoria, é possível descrever várias situações do mundo real e como ela é muito bem aplicada à redes sociais, inclusive grandes empresas desta área já a utilizam. Portanto, esta teoria é  utilizada para auxiliar no desenvolvimento deste projeto.
+\par Este conteúdo teórico foi escolhido para ser utilizado neste trabalho pois este visa equacionar o problema relacionado à busca por mão de obra, através do modelo utilizado pelas redes sociais. Isto é possível pois, como mencionado anteriormente por meio desta teoria, é possível descrever várias situações do mundo real e como ela é muito bem aplicada à redes sociais, inclusive grandes empresas desta área já a utilizam. Devido a esses motivos, a teoria dos grafos foi utilizada para auxiliar no desenvolvimento deste trabalho.
