@@ -2,14 +2,17 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Uma vis\IeC {\~a}o geral do ICONIX e seus componentes.}}{15}{figure.caption.11}
 \contentsline {figure}{\numberline {2}{\ignorespaces O problema das 7 pontes de \textit {K\IeC {\"o}nigsberg} }}{17}{figure.caption.12}
 \contentsline {figure}{\numberline {3}{\ignorespaces Ilustra\IeC {\c c}\IeC {\~a}o de uma representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de um simples grafo}}{18}{figure.caption.13}
-\contentsline {figure}{\numberline {4}{\ignorespaces Ilustra\IeC {\c c}\IeC {\~a}o de uma representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de um \textit {multigraph}}}{18}{figure.caption.14}
+\contentsline {figure}{\numberline {4}{\ignorespaces Ilustra\IeC {\c c}\IeC {\~a}o de uma representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de um \textit {multigraph}}}{19}{figure.caption.14}
 \contentsline {figure}{\numberline {5}{\ignorespaces Imagem de uma representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de um grafo direcionado}}{19}{figure.caption.15}
-\contentsline {figure}{\numberline {6}{\ignorespaces Imagem de um grafo isom\IeC {\'o}rfico}}{19}{figure.caption.16}
+\contentsline {figure}{\numberline {6}{\ignorespaces Imagem de um grafo isom\IeC {\'o}rfico}}{20}{figure.caption.16}
 \contentsline {figure}{\numberline {7}{\ignorespaces Grafo representado por meio de uma matriz adjac\IeC {\^e}ncia}}{20}{figure.caption.17}
-\contentsline {figure}{\numberline {8}{\ignorespaces Exemplo simples de um grafo no Neo4j}}{24}{figure.caption.18}
+\contentsline {figure}{\numberline {8}{\ignorespaces Exemplo simples de um grafo no Neo4j}}{25}{figure.caption.18}
 \contentsline {figure}{\numberline {9}{\ignorespaces Uma vis\IeC {\~a}o geral do processo de desenvolvimento de software.}}{28}{figure.caption.19}
 \contentsline {figure}{\numberline {10}{\ignorespaces Exemplo de inclus\IeC {\~a}o do estilo CSS inline}}{32}{figure.caption.20}
-\contentsline {figure}{\numberline {11}{\ignorespaces Exemplo de inclus\IeC {\~a}o do estilo CSS incorporado \IeC {\`a} p\IeC {\'a}gina HTML}}{32}{figure.caption.21}
+\contentsline {figure}{\numberline {11}{\ignorespaces Exemplo de inclus\IeC {\~a}o do estilo CSS incorporado \IeC {\`a} p\IeC {\'a}gina HTML}}{33}{figure.caption.21}
 \contentsline {figure}{\numberline {12}{\ignorespaces Exemplo de inclus\IeC {\~a}o do estilo CSS a partir de um arquivo externo}}{33}{figure.caption.22}
 \contentsline {figure}{\numberline {13}{\ignorespaces Exemplo de inclus\IeC {\~a}o do c\IeC {\'o}digo em Javascript incorporado ao HTML}}{34}{figure.caption.23}
 \contentsline {figure}{\numberline {14}{\ignorespaces Exemplo de inclus\IeC {\~a}o do c\IeC {\'o}digo Javascript de um arquivo externo}}{34}{figure.caption.24}
+\contentsline {figure}{\numberline {15}{\ignorespaces Tela de servi\IeC {\c c}os do GitHub }}{41}{figure.caption.25}
+\contentsline {figure}{\numberline {16}{\ignorespaces Tela de inicializa\IeC {\c c}\IeC {\~a}o do Neo4j }}{42}{figure.caption.26}
+\contentsline {figure}{\numberline {17}{\ignorespaces Demonstra\IeC {\c c}\IeC {\~a}o de uma consulta Cypher.}}{42}{figure.caption.27}
