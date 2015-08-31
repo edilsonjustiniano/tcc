@@ -89,9 +89,70 @@ imagem do diagrama de classes
 
 \par Para a escrita do código relacionado ao HTML, CSS e Javascript, foi utilizado o mesmo editor de texto citado anteriormente.
 
-\par O trabalho fez uso de um banco de dados orientado a grafos, o Neo4j. A escolha desse banco se deu pela sua simplicidade de instalação, configuração, facilidade de integração com a API \textit{Cypher} e por disponibilizar uma API REST para acesso aos seus dados, conforme descrito no quadro teórico deste trabalho. O Neo4j faz parte do enquadramento de softwares livres, seguindo o conceito \textit{open source}, o que permite ao desenvolvedor utilizá-lo da forma que melhor lhe convém. A Figura 22 e 23 demonstram a tela inicial do banco de dados Neo4j e um exemplo de consulta realizada por meio da aplicação de gerencia da base de dados.
+\par O trabalho fez uso de um banco de dados orientado a grafos, o Neo4j. A escolha desse banco se deu pela sua simplicidade de instalação, configuração, facilidade de integração com a API \textit{Cypher} e por disponibilizar uma API REST para acesso aos seus dados, conforme descrito no quadro teórico deste trabalho. O Neo4j faz parte do enquadramento de softwares livres, seguindo o conceito \textit{open source}, o que permite ao desenvolvedor utilizá-lo da forma que melhor lhe convém. 
+
+
+\par A seguir serão detalhados os passos para a instalação do banco de dados Neo4j.
+
+\par Para realizar o \textit{download} do instalador do banco de dados Neo4j, deve-se acessar a seguinte url, por meio de um  navegador de internet: http://neo4j.com/download e selecionar a opção desejada. Neste trabalho como já descrito foi utilizada a versão \textit{Community}. A Figura 22 apresenta a página de download do Neo4j.
 
 \newpage
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.4]{./imagens/download-neo4j.png}}
+	\caption[Página de download do Neo4j]
+	{Página de download do Neo4j. \textbf{Fonte:} http://neo4j.com/download}
+	\label{fig:exemplo1}
+\end{figure}
+
+\par Após concluído o \textit{download}, deve-se executar o arquivo. O processo de instalação se inicia e, a primeira tela apresentada ao usuário é a tela contendo uma mensagem de boas vindas, conforme demonstra a Figura 23. Nesta tela, deve-se clicar no botão \textit{Next} para prosseguir com o processo de instalação.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.4]{./imagens/neo4j-install-step1.png}}
+	\caption[Tela de boas vindas da instalação do Neo4j]
+	{Tela de boas vindas da instalação do Neo4j. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:exemplo1}
+\end{figure}
+
+\par A próxima tela apresentada ao usuário diz respeito ao contrato de uso do \textit{software}, como mostra a Figura 24. Após lê-lo, deve-se aceitar os termos do contrato e clicar no \textit{Next}.
+
+\newpage
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.4]{./imagens/neo4j-install-step2.png}}
+	\caption[Tela do contrato de uso do Neo4j]
+	{Tela do contrato de uso do Neo4j. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:exemplo1}
+\end{figure}
+
+\par Na próxima tela, conforme a Figura 25 demonstra, é definido o diretório de instalação do Neo4j. Por padrão este diretório é o mesmo das demais aplicações no Windows, podendo ser alterado conforme a necessidade. Após definir o diretório de instalação deve-se clicar no botão \textit{Next}.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.4]{./imagens/neo4j-install-step3.png}}
+	\caption[Tela para definição do diretório de instalaão do Neo4j]
+	{Tela para definição do diretório de instalaão do Neo4j. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:exemplo1}
+\end{figure}
+
+\par Após as definições anteriores, uma tela é apresentada questionando ao usuário a respeito da criação de atalhos na área de trabalho, como é demonstrado na Figura 26. Após definir os atalhos do Neo4j, deve-se clicar no botão \textit{Next}.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.4]{./imagens/neo4j-install-step4.png}}
+	\caption[Tela para criação de atalhos do Neo4j]
+	{Tela para criação de atalhos do Neo4j. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:exemplo1}
+\end{figure}
+
+\par Após realizar os procedimentos descritos para a instalação do Neo4j a tela final de instalação será apresentada, informando-o a respeito do resultado da instalação conforme demonstra a Figura 27. Clique no botão \textit{Finish} para finalizar o processo de instalação.
+Após todos os passos realizados com sucesso, o Neo4j estará disponível.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.4]{./imagens/neo4j-install-step5.png}}
+	\caption[Tela final de instalação do Neo4j]
+	{Tela final de instalação do Neo4j. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:exemplo1}
+\end{figure}
+
+\par A Figura 28 e 29 demonstram a tela inicial do banco de dados Neo4j e um exemplo de consulta realizada por meio da aplicação de gerencia da base de dados.
+
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.60]{./imagens/neo4j.jpg}}
 	\caption[Tela de inicialização do Neo4j ]
@@ -105,67 +166,8 @@ imagem do diagrama de classes
 	{Demonstração de uma consulta Cypher. \textbf{Fonte:} Elaborado pelos autores.}
 	\label{fig:exemplo1}
 \end{figure}
-
-\par A seguir serão detalhados os passos para a instalação do banco de dados Neo4j.
-
-\par Para realizar o download do instalador do banco de dados Neo4j, deve-se acessar a seguinte url, por meio de um  navegador de internet: http://neo4j.com/download e selecionar a opção desejada. Neste trabalho como já descrito foi utilizada a versão \textit{Community}. A Figura 24 apresenta a página de download do Neo4j.
-
-\newpage
-\begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.4]{./imagens/download-neo4j.png}}
-	\caption[Página de download do Neo4j]
-	{Página de download do Neo4j. \textbf{Fonte:} http://neo4j.com/download}
-	\label{fig:exemplo1}
-\end{figure}
-
-\par Após concluído o \textit{download}, deve-se executar o arquivo. O processo de instalação se inicia e, a primeira tela apresentada ao usuário é a tela contendo uma mensagem de boas vindas, conforme demonstra a Figura 25. Nesta tela, deve-se clicar no botão \textit{Next} para prosseguir com o processo de instalação.
-
-\begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.4]{./imagens/neo4j-install-step1.png}}
-	\caption[Tela de boas vindas da instalação do Neo4j]
-	{Tela de boas vindas da instalação do Neo4j. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
-\end{figure}
-
-\par A próxima tela apresentada ao usuário diz respeito ao contrato de uso do \textit{software}, como mostra a Figura 26. Após lê-lo, deve-se aceitar os termos do contrato e clicar no \textit{Next}.
-
-\newpage
-\begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.4]{./imagens/neo4j-install-step2.png}}
-	\caption[Tela do contrato de uso do Neo4j]
-	{Tela do contrato de uso do Neo4j. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
-\end{figure}
-
-\par Na próxima tela, conforme a Figura 27 demonstra, é definido o diretório de instalação do Neo4j. Por padrão este diretório é o mesmo das demais aplicações no Windows, podendo ser alterado conforme a necessidade. Após definir o diretório de instalação deve-se clicar no botão \textit{Next}.
-
-\begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.4]{./imagens/neo4j-install-step3.png}}
-	\caption[Tela para definição do diretório de instalaão do Neo4j]
-	{Tela para definição do diretório de instalaão do Neo4j. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
-\end{figure}
-
-\par Após as definições anteriores, uma tela é apresentada questionando ao usuário a respeito da criação de atalhos na área de trabalho, como é demonstrado na Figura 28. Após definir os atalhos do Neo4j, deve-se clicar no botão \textit{Next}.
-
-\begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.4]{./imagens/neo4j-install-step4.png}}
-	\caption[Tela para criação de atalhos do Neo4j]
-	{Tela para criação de atalhos do Neo4j. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
-\end{figure}
-
-\par Após realizar os procedimentos descritos para a instalação do Neo4j a tela final de instalação será apresentada, informando-o a respeito do resultado da instalação conforme demonstra a Figura 29. Clique no botão \textit{Finish} para finalizar o processo de instalação.
-Após todos os passos realizados com sucesso, o Neo4j estará disponível.
-
-\begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.4]{./imagens/neo4j-install-step5.png}}
-	\caption[Tela final de instalação do Neo4j]
-	{Tela final de instalação do Neo4j. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
-\end{figure}
  
-
+\newpage
 
 \par Posterior a configuração do ambiente, iniciou-se o desenvolvimento propriamente dito. A princípio, utilizou-se as tecnologias Neo4j, sendo executado de forma \textit{embedded}, Primefaces e JSF. Porem não estava fluindo como o esperado, uma vez que o Neo4j utilizado desta maneira não permitia conectar ao sistema de gerenciamento da base de dados e abrir uma nova instancia de conexão simultânea, devido a limitações do próprio Neo4j, uma vez que um processo Java já ocupava tal conexão com o \textit{socket} do banco de dados.
 

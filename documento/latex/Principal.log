@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  30 AUG 2015 18:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  31 AUG 2015 19:42
 entering extended mode
 **Principal.tex
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.tex"
@@ -1093,6 +1093,42 @@ LaTeX Warning: Label `fig:exemplo1' multiply defined.
 
 LaTeX Warning: Label `fig:exemplo1' multiply defined.
 
+
+LaTeX Warning: Label `fig:exemplo1' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo1' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo1' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo1' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo1' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo1' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo1' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo1' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo1' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo1' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo1' multiply defined.
+
+
+LaTeX Warning: Label `fig:exemplo1' multiply defined.
+
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
@@ -1335,7 +1371,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 droTeorico.tex" [13]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _teorico/iconix.tex"
-<./imagens/visao_geral_iconix.png, id=202, 402.7848pt x 240.9pt>
+<./imagens/visao_geral_iconix.png, id=226, 402.7848pt x 240.9pt>
 File: ./imagens/visao_geral_iconix.png Graphic file (type png)
 
 <use ./imagens/visao_geral_iconix.png>
@@ -1360,7 +1396,7 @@ o di-a-grama de sequên-cia fundamentando-
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _teorico/teoria_grafos.tex" [16]
-<./imagens/Konigsberg_7_bridges.jpg, id=230, 501.875pt x 401.5pt>
+<./imagens/Konigsberg_7_bridges.jpg, id=254, 501.875pt x 401.5pt>
 File: ./imagens/Konigsberg_7_bridges.jpg Graphic file (type jpg)
 
 <use ./imagens/Konigsberg_7_bridges.jpg>
@@ -1369,14 +1405,14 @@ Package pdftex.def Info: ./imagens/Konigsberg_7_bridges.jpg used on input line
 (pdftex.def)             Requested size: 364.2138pt x 182.72566pt.
  [17 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/Koni
 gsberg_7_bridges.jpg>]
-<./imagens/simple_graph.png, id=253, 400.49625pt x 194.7275pt>
+<./imagens/simple_graph.png, id=277, 400.49625pt x 194.7275pt>
 File: ./imagens/simple_graph.png Graphic file (type png)
 
 <use ./imagens/simple_graph.png>
 Package pdftex.def Info: ./imagens/simple_graph.png used on input line 34.
 (pdftex.def)             Requested size: 308.38306pt x 149.94061pt.
 
-<./imagens/multigraph_example.png, id=260, 246.9225pt x 178.6675pt>
+<./imagens/multigraph_example.png, id=284, 246.9225pt x 178.6675pt>
 File: ./imagens/multigraph_example.png Graphic file (type png)
 
 <use ./imagens/multigraph_example.png>
@@ -1389,7 +1425,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [18 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/simpl
 e_graph.png>]
-<./imagens/simple_digraph_graph.png, id=277, 256.96pt x 256.96pt>
+<./imagens/simple_digraph_graph.png, id=301, 256.96pt x 256.96pt>
 File: ./imagens/simple_digraph_graph.png Graphic file (type png)
 
 <use ./imagens/simple_digraph_graph.png>
@@ -1404,7 +1440,7 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
 
-<./imagens/grafos_isomorficos.png, id=286, 264.99pt x 107.40125pt>
+<./imagens/grafos_isomorficos.png, id=310, 264.99pt x 107.40125pt>
 File: ./imagens/grafos_isomorficos.png Graphic file (type png)
 
 <use ./imagens/grafos_isomorficos.png>
@@ -1418,7 +1454,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [19 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/multi
 graph_example.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/late
 x/imagens/simple_digraph_graph.png>]
-<./imagens/matriz_adjacencia.png, id=300, 230.8625pt x 168.63pt>
+<./imagens/matriz_adjacencia.png, id=324, 230.8625pt x 168.63pt>
 File: ./imagens/matriz_adjacencia.png Graphic file (type png)
 
 <use ./imagens/matriz_adjacencia.png>
@@ -1436,7 +1472,7 @@ _teorico/banco_dados_relacionais.tex" [21])
 _teorico/banco_dados_nosql.tex" [22])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _teorico/neo4j.tex" [23]
-<./imagens/simple_graph_neo4j.png, id=361, 374.39874pt x 187.70125pt>
+<./imagens/simple_graph_neo4j.png, id=385, 374.39874pt x 187.70125pt>
 File: ./imagens/simple_graph_neo4j.png Graphic file (type png)
 
 <use ./imagens/simple_graph_neo4j.png>
@@ -1458,7 +1494,7 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 21.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<./imagens/processo_compilacao_java.png, id=418, 297.7524pt x 81.4242pt>
+<./imagens/processo_compilacao_java.png, id=442, 297.7524pt x 81.4242pt>
 File: ./imagens/processo_compilacao_java.png Graphic file (type png)
 
 <use ./imagens/processo_compilacao_java.png>
@@ -1485,7 +1521,7 @@ _teorico/css3.tex" [31]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 18.
 
-<./imagens/example_css_inline.png, id=500, 488.82625pt x 149.55875pt>
+<./imagens/example_css_inline.png, id=524, 488.82625pt x 149.55875pt>
 File: ./imagens/example_css_inline.png Graphic file (type png)
 
 <use ./imagens/example_css_inline.png>
@@ -1493,7 +1529,7 @@ Package pdftex.def Info: ./imagens/example_css_inline.png used on input line 21
 .
 (pdftex.def)             Requested size: 391.06152pt x 119.64716pt.
 
-<./imagens/example_css_incorpored.png, id=501, 609.27625pt x 219.82124pt>
+<./imagens/example_css_incorpored.png, id=525, 609.27625pt x 219.82124pt>
 File: ./imagens/example_css_incorpored.png Graphic file (type png)
 
 <use ./imagens/example_css_incorpored.png>
@@ -1504,7 +1540,7 @@ e 30.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./imagens/example_external_css.png, id=502, 544.0325pt x 169.63374pt>
+<./imagens/example_external_css.png, id=526, 544.0325pt x 169.63374pt>
 File: ./imagens/example_external_css.png Graphic file (type png)
 
 <use ./imagens/example_external_css.png>
@@ -1521,14 +1557,14 @@ _teorico/javascript.tex" [32 <C:/Users/Andressa Faria/Documents/GitHub/tcc/docu
 mento/latex/imagens/example_css_inline.png>] [33 <C:/Users/Andressa Faria/Docum
 ents/GitHub/tcc/documento/latex/imagens/example_css_incorpored.png> <C:/Users/A
 ndressa Faria/Documents/GitHub/tcc/documento/latex/imagens/example_external_css
-.png>] <./imagens/javascript_code.png, id=526, 517.935pt x 169.63374pt>
+.png>] <./imagens/javascript_code.png, id=550, 517.935pt x 169.63374pt>
 File: ./imagens/javascript_code.png Graphic file (type png)
 
 <use ./imagens/javascript_code.png>
 Package pdftex.def Info: ./imagens/javascript_code.png used on input line 14.
 (pdftex.def)             Requested size: 414.34854pt x 135.70717pt.
 
-<./imagens/javascript_include.png, id=527, 434.62375pt x 126.4725pt>
+<./imagens/javascript_include.png, id=551, 434.62375pt x 126.4725pt>
 File: ./imagens/javascript_include.png Graphic file (type png)
 
 <use ./imagens/javascript_include.png>
@@ -1551,51 +1587,160 @@ _metodologico/contexto_pesquisa.tex" [37])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _metodologico/instrumentos.tex")
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/procedimentos.tex" [38] [39] [40]
-<./imagens/github.jpg, id=585, 1242.6425pt x 661.47125pt>
+_metodologico/procedimentos.tex" [38] [39]
+<./imagens/modelo-dominio-inicial.png, id=605, 757.83125pt x 532.99126pt>
+File: ./imagens/modelo-dominio-inicial.png Graphic file (type png)
+
+<use ./imagens/modelo-dominio-inicial.png>
+Package pdftex.def Info: ./imagens/modelo-dominio-inicial.png used on input lin
+e 15.
+(pdftex.def)             Requested size: 341.02092pt x 239.84384pt.
+
+<./imagens/caso-de-uso.png, id=606, 521.95pt x 464.73625pt>
+File: ./imagens/caso-de-uso.png Graphic file (type png)
+
+<use ./imagens/caso-de-uso.png>
+Package pdftex.def Info: ./imagens/caso-de-uso.png used on input line 22.
+(pdftex.def)             Requested size: 313.17241pt x 278.84389pt.
+ [40 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/mode
+lo-dominio-inicial.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento
+/latex/imagens/caso-de-uso.png>]
+<./imagens/robustez.png, id=613, 1132.23pt x 543.02875pt>
+File: ./imagens/robustez.png Graphic file (type png)
+
+<use ./imagens/robustez.png>
+Package pdftex.def Info: ./imagens/robustez.png used on input line 31.
+(pdftex.def)             Requested size: 396.28644pt x 190.0629pt.
+
+<./imagens/modelo-dominio-com-atributos.png, id=614, 865.2325pt x 600.2425pt>
+File: ./imagens/modelo-dominio-com-atributos.png Graphic file (type png)
+
+<use ./imagens/modelo-dominio-com-atributos.png>
+Package pdftex.def Info: ./imagens/modelo-dominio-com-atributos.png used on inp
+ut line 38.
+(pdftex.def)             Requested size: 519.14351pt x 360.14827pt.
+ [41 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/robu
+stez.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens
+/modelo-dominio-com-atributos.png>] [42]
+<./imagens/sequence-localizar-mao-de-obra.png, id=626, 4298.55937pt x 763.35187
+pt>
+File: ./imagens/sequence-localizar-mao-de-obra.png Graphic file (type png)
+ <use ./imagens/sequence-localizar-mao-de-obra.png>
+Package pdftex.def Info: ./imagens/sequence-localizar-mao-de-obra.png used on i
+nput line 48.
+(pdftex.def)             Requested size: 4298.54893pt x 763.35pt.
+ [43 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/sequ
+ence-localizar-mao-de-obra.png>] <./imagens/github.jpg, id=632, 1242.6425pt x 6
+61.47125pt>
 File: ./imagens/github.jpg Graphic file (type jpg)
 
 <use ./imagens/github.jpg>
-Package pdftex.def Info: ./imagens/github.jpg used on input line 38.
+Package pdftex.def Info: ./imagens/github.jpg used on input line 66.
 (pdftex.def)             Requested size: 434.9314pt x 231.5184pt.
- [41 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/gith
+ [44 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/gith
 ub.jpg>]
-<./imagens/neo4j.jpg, id=590, 409.53pt x 268.00125pt>
+<./imagens/eclipse-editor-texto.png, id=637, 1282.7925pt x 777.90625pt>
+File: ./imagens/eclipse-editor-texto.png Graphic file (type png)
+
+<use ./imagens/eclipse-editor-texto.png>
+Package pdftex.def Info: ./imagens/eclipse-editor-texto.png used on input line 
+80.
+(pdftex.def)             Requested size: 448.9841pt x 272.27126pt.
+ [45 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ecli
+pse-editor-texto.png>]
+<./imagens/download-neo4j.png, id=643, 846.91406pt x 686.565pt>
+File: ./imagens/download-neo4j.png Graphic file (type png)
+
+<use ./imagens/download-neo4j.png>
+Package pdftex.def Info: ./imagens/download-neo4j.png used on input line 101.
+(pdftex.def)             Requested size: 338.75963pt x 274.62112pt.
+
+<./imagens/neo4j-install-step1.png, id=644, 388.45125pt x 322.95656pt>
+File: ./imagens/neo4j-install-step1.png Graphic file (type png)
+
+<use ./imagens/neo4j-install-step1.png>
+Package pdftex.def Info: ./imagens/neo4j-install-step1.png used on input line 1
+10.
+(pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
+ [46 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/down
+load-neo4j.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/i
+magens/neo4j-install-step1.png>]
+<./imagens/neo4j-install-step2.png, id=651, 387.69844pt x 322.95656pt>
+File: ./imagens/neo4j-install-step2.png Graphic file (type png)
+
+<use ./imagens/neo4j-install-step2.png>
+Package pdftex.def Info: ./imagens/neo4j-install-step2.png used on input line 1
+20.
+(pdftex.def)             Requested size: 155.07661pt x 129.18033pt.
+
+<./imagens/neo4j-install-step3.png, id=652, 388.45125pt x 322.95656pt>
+File: ./imagens/neo4j-install-step3.png Graphic file (type png)
+
+<use ./imagens/neo4j-install-step3.png>
+Package pdftex.def Info: ./imagens/neo4j-install-step3.png used on input line 1
+29.
+(pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
+
+<./imagens/neo4j-install-step4.png, id=653, 388.45125pt x 322.95656pt>
+File: ./imagens/neo4j-install-step4.png Graphic file (type png)
+
+<use ./imagens/neo4j-install-step4.png>
+Package pdftex.def Info: ./imagens/neo4j-install-step4.png used on input line 1
+38.
+(pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
+ [47 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/neo4
+j-install-step2.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/la
+tex/imagens/neo4j-install-step3.png> <C:/Users/Andressa Faria/Documents/GitHub/
+tcc/documento/latex/imagens/neo4j-install-step4.png>]
+<./imagens/neo4j-install-step5.png, id=661, 389.20406pt x 323.70938pt>
+File: ./imagens/neo4j-install-step5.png Graphic file (type png)
+
+<use ./imagens/neo4j-install-step5.png>
+Package pdftex.def Info: ./imagens/neo4j-install-step5.png used on input line 1
+48.
+(pdftex.def)             Requested size: 155.67886pt x 129.48145pt.
+
+<./imagens/neo4j.jpg, id=662, 409.53pt x 268.00125pt>
 File: ./imagens/neo4j.jpg Graphic file (type jpg)
 
 <use ./imagens/neo4j.jpg>
-Package pdftex.def Info: ./imagens/neo4j.jpg used on input line 60.
+Package pdftex.def Info: ./imagens/neo4j.jpg used on input line 157.
 (pdftex.def)             Requested size: 245.7199pt x 160.80197pt.
 
-<./imagens/neo4j2.jpg, id=591, 1103.12125pt x 504.88625pt>
+<./imagens/neo4j2.jpg, id=663, 1103.12125pt x 504.88625pt>
 File: ./imagens/neo4j2.jpg Graphic file (type jpg)
 
 <use ./imagens/neo4j2.jpg>
-Package pdftex.def Info: ./imagens/neo4j2.jpg used on input line 67.
+Package pdftex.def Info: ./imagens/neo4j2.jpg used on input line 164.
 (pdftex.def)             Requested size: 441.24068pt x 201.95091pt.
- [42 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/neo4
-j.jpg> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ne
-o4j2.jpg>] [43] [44] [45] [46]))
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[48 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/neo4j
+-install-step5.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/lat
+ex/imagens/neo4j.jpg>] [49 <C:/Users/Andressa Faria/Documents/GitHub/tcc/docume
+nto/latex/imagens/neo4j2.jpg>] [50] [51] [52] [53]))
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/13_Res
-ultados.tex" [47] [48])
+ultados.tex" [54])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/14_Con
-clusao.tex" [49
+clusao.tex" [55
 
 ])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.bbl"
-[50
+[56
 
 ]
 bibitemlist
-[51
+[57
 
-] [52])
+] [58])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/20_Ape
-ndices.tex" [53] [54
+ndices.tex" [59] [60
 
 ]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/21_Ape
-ndice_01.tex" <./imagens/apendice_img1.png, id=670, 526.96875pt x 501.875pt>
+ndice_01.tex" <./imagens/apendice_img1.png, id=743, 526.96875pt x 501.875pt>
 File: ./imagens/apendice_img1.png Graphic file (type png)
 
 <use ./imagens/apendice_img1.png>
@@ -1603,7 +1748,7 @@ Package pdftex.def Info: ./imagens/apendice_img1.png used on input line 7.
 (pdftex.def)             Requested size: 263.48372pt x 250.93687pt.
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/22_Ape
-ndice_02.tex" [55
+ndice_02.tex" [61
 
  <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
 _img1.png>]
@@ -1646,13 +1791,13 @@ Package xcolor Warning: Incompatible color definition on input line 33.
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/30_Ane
 xos.tex"
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis\31_Ane
-xo_01.tex" [56
+xo_01.tex" [62
 
 ]))
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[57
+[63
 
 ]
 
@@ -1679,10 +1824,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
  ) 
 Here is how much of TeX's memory you used:
- 15508 strings out of 493921
- 244006 string characters out of 3144849
+ 15586 strings out of 493921
+ 246340 string characters out of 3144849
  361500 words of memory out of 3000000
- 18236 multiletter control sequences out of 15000+200000
+ 18284 multiletter control sequences out of 15000+200000
  59916 words of font info for 62 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  46i,12n,43p,1092b,1461s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1695,9 +1840,9 @@ lic/lm/lmtl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (58 pages, 1201999 bytes).
+Output written on Principal.pdf (64 pages, 1776181 bytes).
 PDF statistics:
- 896 PDF objects out of 1000 (max. 8388607)
- 194 named destinations out of 1000 (max. 500000)
- 419 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 972 PDF objects out of 1000 (max. 8388607)
+ 212 named destinations out of 1000 (max. 500000)
+ 479 words of extra memory for PDF output out of 10000 (max. 10000000)
 
