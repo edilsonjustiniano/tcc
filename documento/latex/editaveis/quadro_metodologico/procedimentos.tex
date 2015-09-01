@@ -203,11 +203,25 @@ Após todos os passos realizados com sucesso, o Neo4j estará disponível.
 
 \par Posterior a realização dos testes e da escolha definitiva da arquitetura que seria utilizada, iniciou-se a implementação dos casos de uso. O primeiro a ser implementado foi o caso de uso de criação de conta. Para este caso de uso, teve-se o cuidado de criar um mecanismo de criptografia de dados sigilosos, como usuário e senha, visando garantir a segurança da aplicação. Estas informações criptografadas são enviadas a cada requisição e validadas pelo \textit{web service}, sendo atualizadas caso sejam válidas, tornado mais complexo a quebra desta criptografia. Este mecanismo foi desenvolvido com base no sistema de \textit{login} via \textit{token}. Segundo o embasamento usado na criação de contas, deu-se início ao desenvolvimento do sistema de \textit{login} e \textit{logoff}, que também utilizam o conceito de criptografia via \textit{token}. 
 
-Imagem tela de login
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.60]{./imagens/login.jpg}}
+	\caption[Tela de login ]
+	{Tela de login \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:exemplo1}
+\end{figure}
+
+\newpage
 
 \par Com o funcionamento do sistema de login, passou-se a desenvolver a página inicial da aplicação. Esta página contém as informações que são restritas ao usuário cadastrado, podendo ser eles: contratantes, provedores de serviço ou ambos. O sistema apresenta uma página inicial diferente para cada tipo de conta, contendo apenas as informações que são liberadas de acordo com o acesso do usuário, sendo essas informações relatórios, últimas atualizações na rede de parceiros, avaliações de serviços e prováveis parceiros.
 
-imagem das 3 contas.
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.60]{./imagens/novaconta1.jpg}}
+	\caption[Tela de criação de conta ]
+	{Tela de criação de conta \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:exemplo1}
+\end{figure}
+
+\newpage
 
 \par O caso de uso localizar parceiros foi desenvolvido após a conclusão do caso de uso criar conta. A lógica deste caso de uso consiste em localizar os possíveis parceiros, com base na rede de parceria do contrante.
 
