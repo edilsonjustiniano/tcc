@@ -25,7 +25,7 @@
 	\label{fig:exemplo1}
 \end{figure}
 
-\par Na segunda fase, análise e projeto preliminar, houve um refinamento dos requisitos levantados na fase anterior, definindo melhor as ações do usuário, por meio dos diagramas de casos de uso. Posterior a esta definição foram gerados os diagramas de robustez, de acordo com os casos de uso definidos, como demonstra a Figura 17. Paralelamente a modelagem desses diagramas, foi atualizado o modelo de domínio, acrescentando os atributos identificados, conforme a Figura 18. Com o modelo de domínio atualizado, foi feita a modelagem do banco de dados da aplicação.
+\par Na segunda fase, análise e projeto preliminar, houve um refinamento dos requisitos levantados na fase anterior, definindo melhor as ações do usuário, por meio dos diagramas de casos de uso. Posterior a esta definição foram gerados os diagramas de robustez, de acordo com os casos de uso definidos, como demonstra a Figura 17. Paralelamente a modelagem desses diagramas, foi atualizado o modelo de domínio, acrescentando os atributos identificados, conforme a Figura 18. Com o modelo de domínio atualizado, foi feita a modelagem do banco de dados da aplicação como apresenta a Figura 19.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.35]{./imagens/robustez.png}}
@@ -41,7 +41,15 @@
 	\label{fig:exemplo1}
 \end{figure} 
 
-\par Na terceira fase, definida como projeto detalhado, foram criados os diagramas de sequencia, tendo como base os casos de uso modelados na fase anterior. Esta fase tem como objetivo detalhar todo o funcionamento do \textit{software}, visando definir a melhor maneira de realizar sua implementação. A Figura 19 apresenta o diagrama de sequência do caso de uso localizar mão de obra.
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.5]{./imagens/structure-all-nodes.png}}
+	\caption[Modelo de dados da aplicação]
+	{Modelo de dados da aplicação. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:exemplo1}
+\end{figure} 
+
+
+\par Na terceira fase, definida como projeto detalhado, foram criados os diagramas de sequencia, tendo como base os casos de uso modelados na fase anterior. Esta fase tem como objetivo detalhar todo o funcionamento do \textit{software}, visando definir a melhor maneira de realizar sua implementação. A Figura 20 apresenta o diagrama de sequência do caso de uso localizar mão de obra.
 
 \newpage
 \begin{figure}[h!]
@@ -58,7 +66,7 @@ imagem do diagrama de classes
 
 \par Na quarta e última fase do ICONIX, denominada implementação, iniciou-se a preparação do ambiente de desenvolvimento, incluindo a instalação de \textit{softwares} adicionais, necessários para o desenvolvimento prático da aplicação.
 
-\par Visto que o trabalho seria desenvolvido em equipe, foi necessário estabelecer uma ferramenta de controle de versão. Esta ferramente permitiu o gerenciamento de diferentes versões de arquivos, gerando um histórico contendo as modificações que foram realizadas no decorrer do processo de desenvolvimento. Este histórico permite o retorno de alguma revisão, caso haja necessidade. A ferramenta escolhida para realizar esse controle foi o GitHub, que já havia sido utilizado em alguns trabalhos do contexto acadêmico, evitando o desprendimento de tempo para estudo de uma nova ferramenta de apoio. O GitHub é uma ferramenta bem difundida e permite que os seus usuários colaborem com os projetos que estão armazenados em seus repositórios\footnotemark[31]. A Figura 20 demonstra a tela de serviços provida pelo GitHub.
+\par Visto que o trabalho seria desenvolvido em equipe, foi necessário estabelecer uma ferramenta de controle de versão. Esta ferramente permitiu o gerenciamento de diferentes versões de arquivos, gerando um histórico contendo as modificações que foram realizadas no decorrer do processo de desenvolvimento. Este histórico permite o retorno de alguma revisão, caso haja necessidade. A ferramenta escolhida para realizar esse controle foi o GitHub, que já havia sido utilizado em alguns trabalhos do contexto acadêmico, evitando o desprendimento de tempo para estudo de uma nova ferramenta de apoio. O GitHub é uma ferramenta bem difundida e permite que os seus usuários colaborem com os projetos que estão armazenados em seus repositórios\footnotemark[31]. A Figura 21 demonstra a tela de serviços provida pelo GitHub.
 
 \footnotetext[31]{Repositório: local cujo desenvolvedor utiliza para armazenar os documentos relacionados ao \textit{software}.}
 
@@ -73,7 +81,7 @@ imagem do diagrama de classes
 
 \par Como mencionado no quadro teórico, neste trabalho foi utilizada a linguagem Java, sendo assim necessário a utilização de uma IDE de apoio. A IDE escolhida foi o Eclipse, pois se trata de uma ferramenta \textit{open source}, bem difundida no mercado e que permite a escrita de um código mais legível, facilitando tarefas como \textit{debug} e configurações do projeto.
 
-\par O Eclipse possui várias ferramentas, dentre elas, pode-se citar o editor de texto, utilizado não somente para a escrita de códigos em Java, e também a perspectiva de configuração para servidores \textit{web}, utilizada neste trabalho, conforme apresenta a Figura 21. Por meio desta perspectiva, foi configurada a aplicação \textit{container} Tomcat na versão 7.
+\par O Eclipse possui várias ferramentas, dentre elas, pode-se citar o editor de texto, utilizado não somente para a escrita de códigos em Java, e também a perspectiva de configuração para servidores \textit{web}, utilizada neste trabalho, conforme apresenta a Figura 22. Por meio desta perspectiva, foi configurada a aplicação \textit{container} Tomcat na versão 7.
 
 \newpage
 \begin{figure}[h!]
@@ -94,7 +102,7 @@ imagem do diagrama de classes
 
 \par A seguir serão detalhados os passos para a instalação do banco de dados Neo4j.
 
-\par Para realizar o \textit{download} do instalador do banco de dados Neo4j, deve-se acessar a seguinte url, por meio de um  navegador de internet: http://neo4j.com/download e selecionar a opção desejada. Neste trabalho como já descrito foi utilizada a versão \textit{Community}. A Figura 22 apresenta a página de download do Neo4j.
+\par Para realizar o \textit{download} do instalador do banco de dados Neo4j, deve-se acessar a seguinte url, por meio de um  navegador de internet: http://neo4j.com/download e selecionar a opção desejada. Neste trabalho como já descrito foi utilizada a versão \textit{Community}. A Figura 23 apresenta a página de download do Neo4j.
 
 \newpage
 \begin{figure}[h!]
@@ -104,7 +112,7 @@ imagem do diagrama de classes
 	\label{fig:exemplo1}
 \end{figure}
 
-\par Após concluído o \textit{download}, deve-se executar o arquivo. O processo de instalação se inicia e, a primeira tela apresentada ao usuário é a tela contendo uma mensagem de boas vindas, conforme demonstra a Figura 23. Nesta tela, deve-se clicar no botão \textit{Next} para prosseguir com o processo de instalação.
+\par Após concluído o \textit{download}, deve-se executar o arquivo. O processo de instalação se inicia e, a primeira tela apresentada ao usuário é a tela contendo uma mensagem de boas vindas, conforme demonstra a Figura 24. Nesta tela, deve-se clicar no botão \textit{Next} para prosseguir com o processo de instalação.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.4]{./imagens/neo4j-install-step1.png}}
@@ -113,7 +121,7 @@ imagem do diagrama de classes
 	\label{fig:exemplo1}
 \end{figure}
 
-\par A próxima tela apresentada ao usuário diz respeito ao contrato de uso do \textit{software}, como mostra a Figura 24. Após lê-lo, deve-se aceitar os termos do contrato e clicar no \textit{Next}.
+\par A próxima tela apresentada ao usuário diz respeito ao contrato de uso do \textit{software}, como mostra a Figura 25. Após lê-lo, deve-se aceitar os termos do contrato e clicar no \textit{Next}.
 
 \newpage
 \begin{figure}[h!]
@@ -123,7 +131,7 @@ imagem do diagrama de classes
 	\label{fig:exemplo1}
 \end{figure}
 
-\par Na próxima tela, conforme a Figura 25 demonstra, é definido o diretório de instalação do Neo4j. Por padrão este diretório é o mesmo das demais aplicações no Windows, podendo ser alterado conforme a necessidade. Após definir o diretório de instalação deve-se clicar no botão \textit{Next}.
+\par Na próxima tela, conforme a Figura 26 demonstra, é definido o diretório de instalação do Neo4j. Por padrão este diretório é o mesmo das demais aplicações no Windows, podendo ser alterado conforme a necessidade. Após definir o diretório de instalação deve-se clicar no botão \textit{Next}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.4]{./imagens/neo4j-install-step3.png}}
@@ -132,7 +140,7 @@ imagem do diagrama de classes
 	\label{fig:exemplo1}
 \end{figure}
 
-\par Após as definições anteriores, uma tela é apresentada questionando ao usuário a respeito da criação de atalhos na área de trabalho, como é demonstrado na Figura 26. Após definir os atalhos do Neo4j, deve-se clicar no botão \textit{Next}.
+\par Após as definições anteriores, uma tela é apresentada questionando ao usuário a respeito da criação de atalhos na área de trabalho, como é demonstrado na Figura 27. Após definir os atalhos do Neo4j, deve-se clicar no botão \textit{Next}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.4]{./imagens/neo4j-install-step4.png}}
@@ -141,7 +149,7 @@ imagem do diagrama de classes
 	\label{fig:exemplo1}
 \end{figure}
 
-\par Após realizar os procedimentos descritos para a instalação do Neo4j a tela final de instalação será apresentada, informando-o a respeito do resultado da instalação conforme demonstra a Figura 27. Clique no botão \textit{Finish} para finalizar o processo de instalação.
+\par Após realizar os procedimentos descritos para a instalação do Neo4j a tela final de instalação será apresentada, informando-o a respeito do resultado da instalação conforme demonstra a Figura 28. Clique no botão \textit{Finish} para finalizar o processo de instalação.
 Após todos os passos realizados com sucesso, o Neo4j estará disponível.
 
 \begin{figure}[h!]
@@ -151,7 +159,7 @@ Após todos os passos realizados com sucesso, o Neo4j estará disponível.
 	\label{fig:exemplo1}
 \end{figure}
 
-\par A Figura 28 e 29 demonstram a tela inicial do banco de dados Neo4j e um exemplo de consulta realizada por meio da aplicação de gerencia da base de dados.
+\par A Figura 29 e 30 demonstram a tela inicial do banco de dados Neo4j e um exemplo de consulta realizada por meio da aplicação de gerencia da base de dados.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.60]{./imagens/neo4j.jpg}}
@@ -199,89 +207,20 @@ imagem localizar parceiro
 
 imagem aqui :D
 
-\par Após realizada a implementação do caso de uso adicionar parceiro, houve-se a necessidade de desenvolver a busca por todos os parceiros do usuário contratante ou ambos e também da funcionalidade de localizar novos parceiros, baseando-se na localização da empresa na qual o usuário trabalha e na cidade onde ele vive, sempre ordenando os resultados por meio da quantidade de parceiros em comum. 
+\par Após realizada a implementação do caso de uso adicionar parceiro, houve-se a necessidade de desenvolver a busca por todos os usuário que possuiam o tipo de conta contratante ou ambos e que possuiam um relacionamento de parceria com o usuário autenticado no sistema, além da funcionalidade de localizar novos parceiros, baseando-se na localização da empresa na qual o usuário trabalha e na cidade onde ele vive, sempre ordenando os resultados por meio da quantidade de parceiros em comum. 
 
- 
+\par O caso de uso gerenciar serviços foi implementado em sequência, abrangendo as principais funcionalidaes de gerenciamento: cadastrar e adicionar um novo serviço ao usuário, cujo tipo de conta é provedor de serviços, listar os serviços atribuídos a ele, e remover serviços quando necessário. Visando melhorar a usabilidade, foi implementado um mecanismo de busca, que permitiu filtrar os resultados por meio de um campo que possui a função  auto completar, evitando assim, possíveis erros e diminuindo o tempo gasto pelo usuário para adicionar o serviço. A função realiza a busca em uma lista de serviços anteriormente cadastrados, no entanto, caso não haja o serviço solicitado, o usuário tem a liberdade de cadastrá-lo e atribuí-lo a si mesmo.
 
- 
+\par A partir deste ponto, foi possível iniciar o desenvolvimento do caso de uso localizar mão de obra, uma vez que, este caso de uso dependia diretamente das implementações das funcionalidades adicionar parceiros para os usuários contratantes e adicionar serviços aos provedores de serviço. Para facilitar a localização e deixar o \textit{software} mais usual, esta busca se basea inicialmente no serviço buscado pelo usuário, sendo posteriormente modificada para também levar em consideração a funcionalidade avaliar serviço que foi implementada paralelamente. A avaliação de serviço permite ao contratante dar uma nota ao serviço que foi prestado a ele. Com estas informações foi possível desenvolver uma busca que levaria em consideração, além destas informações, a rede de parceiros do usuário contratante, a fim de lhe apresentar as melhores opções possíveis.
 
+\par A fim de abranger a busca e possibilitar que novos prestadores de serviços sejam avaliados pelos contratantes, a consulta que antes apresentava apenas provedores de serviços que possuiam avaliações, sendo elas, positivas ou negativas, foi ampliada, possibilitando que profissionais não avaliados também entrassem na lista de prováveis provedores de serviços.
 
+\par Para auxiliar na tomada de decisão do usuário contratante, foi implementada uma funcionalidade que realiza o cálculo da média de um determinado serviço prestado por um usuário provedor de serviço, tomando como base as avaliações da rede de parceiros do usuário autenticado, da empresa onde ele trabalha e da cidade onde vive, oferecendo assim uma forma simples de ter acesso a qualidade do serviço prestado. *******************************
 
+\par Após realizada todas as implementações já descritas, houve-se a preocupação de desenvolver uma interface, que além de amigável fosse prática ao usuário, desta forma, foi disponibilizada algumas informações relevantes, que auxiliam o usuário a compreender o que está ocorrendo em sua rede de parceria. Como exemplo é possível citar a lista de parceiros em comum entre o usuário autenticado no sistema e um determinado contratante por meio da página de perfil dele.
 
+\par A fim de agregar mais funcionalidades para o usuário provedor de serviços, foi criado na página inicial do \textit{software} uma funcionalidade que visa apresentar algumas dicas interessantes que contribui com a sua imagem perante ao \textit{software}, levando-o assim a obter uma quantidade maior de oportunidades de trabalho.
 
+\par Para finalizar o desenvolvimento foram desenvolvidos gráficos que apresentam ao usuário informações a respeito da qualidade do serviço prestado pelo provedor de serviços, comparando-os com os demais prestadores.
 
-\begin{itemize}
-	\item escolha da dupla;
-	\item Decisão do tema (dezembro 2014)
-	\item Escolha do orientador
-	\item Levantamento das tecnologias que seriam utilizadas
-	\item Estudo e pequenos testes a fim de validar as tecnologias
-	\item Definição da metodologia de desenvolvimento de software.
-	\item Pesquisa de mercado para saber a aceitação da ideia
-	\item Inicio do desenvolvimento do pré projeto
-	\item Escrita da introdução, objetivos e justificativa
-	\item levantamento de requisitos textuais do sistema ( através de possíveis cenários e simulações);
-	\item Escrita do quadro teórico para o pré projeto 
-	\item Quadro metodológico
-	\item Criação do cronograma de atividades;
-	\item Revisão do pré projeto
-	\item Banca de qualificação
-	\item Correção do projeto de acordo com as sugestões da banca
-	\item atualização do cronograma	
-	\item Iniciou-se o processo de elaboração da engenharia de software.
-	\item Modelagem da base de dados
-	\item Inicio do desenvolvimento do software.	
-	\item Configuração do ambiente de desenvolvimento (Instalação das ferramentas)
-	\item Tentativa de desenvolvimento utilizando a seguintes tecnologias:
-		- Neo4j embedded, primefaces e JSF.(criar conta) Porem não estava fluindo como o esperado, uma vez que o Neoo4j utilizado da maneira embedded não nos permitia conectar ao sistema de gerenciamento da base de dados (web)e abrir uma nova instancia de conexão simultânea devido a limitações do próprio Neo4j, já que um processo java já ocupava tal conexão com o socket.
-		Outro problema encontrado ao utilizar tais tecnologias foi que tanto a parte cliente (front end) quanto a parte do servidor (back end, modelo de negócios) se encontravam totalmente acoplados em uma aplicação java web, portanto, a cada alteração realizada nos controllers (principalmente, pois este era alterado constantemente, uma vez que ele era diretamente relacionado a página web,seguindo o padrão de desenvolvimento estabelecido ao utilizar as tecnologias descritas acima), sendo necessário recompilar, construir e publicar a aplicação no servidor web (tomcat). Isto estava impedindo que o desenvolvimento do software fluísse naturalmente, como era esperado. Por estes motivos decidiu-se mudar algumas das tecnologias utilizadas no front end e em como o banco de dados era acessado até então. 
-			Passou a utilizar então:
-			- Html5, CSS3, Java Script e o framework Angular JS para auxiliar no desenvolvimento do front end, ao invés de primefaces e JSF.
-			- Para acesso ao banco de dados, lançou-se mão da forma embedded disponibilizada pelo banco de dados e passou-se a utilizar a API REST também disponibilizada pelo mesmo. Tais decisões nos permitiram desacoplar o sistema e manter o front end e o back end independentes.
-		\item Estudo a respeito de web service REST;
-		\item Instalação e configuração do Angular JS. 
-		\item Testes utilizando o web Service REST a fim de validar a conexão com o banco de dados via API REST 
-		\item Testes utilizando Angular JS para enviar requisições ao servidor e receber as respostas. 
-		\item Configurar o acesso da aplicação cliente ao web service localizados em domínios distintos, utilizando o CORS. 
-		\item Implementação do caso de uso 'criar conta' utilizando as novas tecnologias.
-		\item Desenvolvido o sistema de login com armazenamento da sessão no cliente de forma errada; ( Colocando o usuário e senha decodificados na própria sessão do navegador).
-		\item Desenvolvimento do Logoff
-		\item Refatoração do sistema de login e armazenamento e validação da sessão. A partir deste ponto, foi utilizado o sistema de login via token. Gerando assim, sempre um novo token a fim de manter a segurança dos dados. 
-		\item Criar a página inicial do sistema (Página Home)
-		\item Implementação da busca por parceiros (buscando todos os contratantes registrados no banco, ou seja, sem critérios para a busca, a fim de criar a rede de parcerias primeiramente);
-		\item Implementação da funcionalidade 'Adicionar Parceria'.
-		\item Implementação da fila de requisição em espera para análise do contratante no menu principal.
-		\item Implementação da funcionalidade 'Aceitar parceria'.
-		\item Implementação do serviço de localização de possíveis parceiros com base em sua rede de relacionamento (parcerias) na página inicial do sistema.
-		\item Implementação da busca por todos os parceiros do contratante autenticado no sistema para ser apresentado na página de rede de parceria
-		\item Implementação da busca por novos parceiros para o contratante autenticado no sistema na página de rede de parceria.
-		\item Implementação da funcionalidade 'Listar todos os serviços' cujo o provedor de serviço possui atrelado a ele.
-		\item Implementação da funcionalidade 'Adicionar serviços' para os provedores de serviços.
-		\item Implementação de remoção de serviços.
-		\item Implementação da funcionalidade Listar Mão de obra. Inicialmente, como feito na lista de parceiros, também feito na lista de provedores de serviços. (Listei todos os provedores de serviços que executavam o serviço procurado pela pessoa naquele momento), a fim de criar a rede de avaliações de serviços.
-		\item Implementar a funcionalidade de Avaliar o serviço.
-		\item Implementar a funcionalidade de Localização de mão de obra, agora baseando-se nas avaliações anteriormente realizadas pelos meus parceiros.
-		\item Abranger a busca por provedores de serviço, que ainda não foram avaliadas, para localizar mão de obras dentro da mesma cidade do contratante.
-		\item Implementar a busca pelas últimas avaliações realizadas pelo contratante autenticado no sistema.
-		\item Criar a página de perfil do provedor de serviço e apresentar um relatório contendo a média das avaliações em diferentes situações (na rede de parceria, na empresa e na cidade)
-		\item Criar a página de perfil dos contratantes apresentando a quantidade de parceiros em comum e o nome de alguns deles
-		\item Desenvolver o design do sistema
-		\item Refatorar a página Incial (Página Home) de ambos os tipos de acesso (Provedor de serviços e Contratantes ou ambos)
-		\item Criar uma página com dicas randômicas para os prestadores de serviços
-		\item Criar o feed de notícias na página inicial do sistema (parecido com o do facebook)
-		\item Criar os gráficos (à desenvolver)	
-\end{itemize}
-
-\par Realizando todos os passos descritos acima, será possível obter como resultado final a realização deste projeto.
-
-
-%Comentar, pois na correção do pré-projeto a Joelma disse que isto seria feito via tópicos e não texto.
-%\par Para desenvolver este projeto, usaremos os processos de engenharia de softwares definidos no ICONIX, que consistem em quatro etapas subdivididas em algumas tarefas específicas.
-
-%\par Na primeira etapa, será realizada a análise dos requisitos que serão necessários para o início do projeto. Nesta fase será desenvolvido o modelo de domínio e, posteriormente, os casos de uso.
-
-%\par Após o término da primeira etapa, será feita a análise preliminar, realizando para cada caso de uso, um diagrama de robustez e atualizando paralelamente o modelo de domínio, com os atributos e métodos. Com as informações geradas a partir deste processo, será possível desenvolver a base de dados da aplicação.
-
-%\par Após a segunda etapa concluída será criado, para cada caso de uso, um diagrama de sequencia, contendo detalhes a respeito da futura implementação e novamente, o modelo de domínio gerado na 1ª etapa será atualizado, incluindo a ele os novos métodos que foram coletados neste processo.
-
-%\par Para concluir, o último passo será a implementação, que com base em todos os processos descritos acima, será realizado com segurança, de que este projeto possivelmente irá atender aos requisitos levantados.
+\par Realizado todos os procedimentos apresentados nesta sessão foi possível obter como resultado final a conclusão deste trabalho.
