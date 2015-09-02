@@ -10,7 +10,8 @@ public class FactoryDAO {
 
 	private static final String DATABASE_USERNAME = "neo4j";
 
-	private static final String DATABASE_PASSWORD = "admin";
+	private static final String DATABASE_PASSWORD = "123"; //Andressa
+	//private static final String DATABASE_PASSWORD = "admin"; Edilson
 
 	private static final String cypherUrl = DATABASE_ENDPOINT + "/cypher";
     
