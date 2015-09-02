@@ -193,8 +193,18 @@ Após todos os passos realizados com sucesso, o Neo4j estará disponível.
 	\label{fig:exemplo1}
 \end{figure}
 
-\par Após realizar a mudança de tecnologias, foi necessário realizar alguns testes para compreender o funcionamento do \textit{web service} REST e paralelamente foi feito o levantamento de materiais de referência do \textit{framework} Angular JS. Foi preciso realizar testes para validar a conexão com o banco de dados Neo4j via API REST, fornecida por ele. Também foram realizados testes para envio de requisições e recebimento de respostas do \textit{web service} REST, utilizando o Angular JS.
+\par Após realizar a mudança de tecnologias, foi necessário realizar alguns testes para compreender o funcionamento do \textit{web service} REST e paralelamente foi feito o levantamento de materiais de referência do \textit{framework} Angular JS. Foi preciso realizar testes para validar a conexão com o banco de dados Neo4j via API REST, fornecida por ele. Também foram realizados testes para envio de requisições e recebimento de respostas do \textit{web service} REST, utilizando o Angular JS. Para validar a conexão ao banco de dados via API REST foi necessário desenvolver algumas consultas em \textit{cypher} como apresenta a Figura 32.
 
+\newpage
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.45]{./imagens/query-cypher.png}}
+	\caption[Exemplo de consulta usando a API \textit{cypher}]
+	{Exemplo de consulta usando a API \textit{cypher}. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:exemplo1}
+\end{figure}
+
+\par Ao realizar estes testes foi constatado que seria necessário desenvolver uma maneira de converter os resultados das buscas realizadas no banco de dados Neo4j que, por padrão não retorna os resultados no formato JSON comum para um JSON válido, portanto, houve-se a preocupação em tratar estas respostas, a fim de retornar um JSON válido ao usuário que futuramente viria a utilizar a API REST fornecida por este \textit{software}. É possível visualizar este tratamento na Figura 32. 
+ 
 \par A partir deste ponto, a aplicação estava totalmente desacoplada, sendo necessário realizar uma configuração, a fim de permitir que as requisições enviadas pelo \textit{front end} fossem aceitas pelo \textit{back end}, localizado em outro domínio.
 
 \par Devido a mudança de tecnologias já comentadas, houve-se a necessidade de atualizar os diagramas de sequencia e de classe, inserindo os contratos de serviços do \textit{web service} REST. Com a definição deste contrato, deu-se início ao desenvolvimento dos casos de uso, identificados na primeira fase do ICONIX. 

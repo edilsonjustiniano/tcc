@@ -168,15 +168,13 @@ public class PersonDAO {
 		WebResource resource = FactoryDAO.GetInstance();
 
 		String query = null;
-		query = "{\"query\":\" MATCH (partner:Person {email: '"
-				+ partnerEmail
-				+ "'}), (city:City), "
+		query = "{\"query\":\" MATCH (partner:Person {email: '" + partnerEmail + "'}), "
+				+ "(city:City), "
 				+ "(company:Company), "
 				+ "(partner)-[:LIVES_IN]->(city), "
 				+ "(partner)-[:WORKS_IN]->(company) "
 				+ "RETURN DISTINCT({name: partner.name, email: partner.email, photo: partner.photo, city: city.name, " +
 				"company: company.name}) as partner; \"}";
-		System.out.println(query);
 		ClientResponse responseCreate = resource
 				.accept(MediaType.APPLICATION_JSON)
 				.type(MediaType.APPLICATION_JSON).entity(query)
@@ -188,10 +186,7 @@ public class PersonDAO {
 		json = new JSONObject(resp);
 		objData = json.getJSONArray("data");
 		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
-		System.out.println(parser);
-
 		JSONArray arr = new JSONArray(parser);
-		System.out.println(arr);
 
 		return arr;
 	}
