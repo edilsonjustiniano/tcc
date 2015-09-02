@@ -2,9 +2,9 @@
 
 \par Para que esta pesquisa fosse levada a cabo, tornou-se necessário a implementação de algumas ações, as quais serão detalhadas.
 
-\par O início da pesquisa deu-se através da escolha do tema, seguido pelo levantamento das tecnologias que seriam utilizadas. A princípio, foi definido um escopo contendo algumas tecnologias que foram ministradas no ambiente acadêmico, o que diminui a curva de aprendizado, no entanto, foi preciso agregar alguns conhecimentos novos, onde foi desprendido um tempo a mais para estudo e realização de pequenos testes. As tecnologias que foram empregadas no desenvolvimento deste trabalho são as seguintes: a linguagem de programação JAVA, o banco de dados orientado a grafos Neo4j, juntamente com a API Cypher, Tomcat, Primefaces e JSF, sendo que no decorrer do desenvolvimento prático, viu-se a necessidade de substituir as duas ultimas tecnologias citadas pelas linguagens HTML, CSS, Javascript e Angular JS. As tecnologias que acompanharam o desenvolvimento deste trabalho até a sua conclusão estão descritas no quadro teórico desta pesquisa.
+\par O início da pesquisa deu-se através da escolha do tema, seguido pelo levantamento das tecnologias que seriam utilizadas. A princípio, foi definido um escopo contendo algumas tecnologias que haviam sido ministradas no ambiente acadêmico, diminuindo assim a curva de aprendizado. No entanto, foi preciso agregar alguns conhecimentos novos, desprendendo um tempo maior para estudo e realização de pequenos testes. As tecnologias que foram empregadas no desenvolvimento deste trabalho são: a linguagem de programação JAVA, o banco de dados orientado a grafos Neo4j, juntamente com a API Cypher, Tomcat, Primefaces e JSF, sendo que no decorrer do desenvolvimento prático, viu-se a necessidade de substituir as duas ultimas tecnologias citadas pelas linguagens HTML, CSS, Javascript e Angular JS. As tecnologias que acompanharam o desenvolvimento deste trabalho até a sua conclusão estão descritas no quadro teórico desta pesquisa.
 
-\par Para garantir que as tecnologias selecionadas seriam a melhor escolha no desenvolvimento deste trabalho, foram realizados alguns testes por meio de aplicações simples. Os testes foram focados na avaliação do comportamento do banco de dados orientado a grafos aplicado ao contexto desta pesquisa, cujo objetivo foi desenvolver uma aplicação de busca de mão de obra baseada em uma rede de relacionamentos. Estes testes também foram realizados como fins didáticos, a fim de se familiarizar com as tecnologias utilizadas.
+\par Para garantir que as tecnologias selecionadas fossem as melhores para o desenvolvimento, foram realizados alguns testes por meio de aplicações simples. Os testes foram focados na avaliação do comportamento do banco de dados orientado a grafos aplicado ao contexto desta pesquisa, cujo objetivo foi desenvolver uma aplicação de busca de mão de obra baseando-se em uma rede de relacionamentos. Estes testes também foram realizados como fins didáticos, a fim de gerar a  familiarização com as tecnologias utilizadas.
 
 \par Para garantir a qualidade desta pesquisa, o ICONIX foi escolhido como a metodologia de desenvolvimento de \textit{software}, desempenhando um papel fundamental na organização do trabalho. Sua abordagem proveu uma sequencia de procedimentos, que foram seguidos conforme o necessário, levando a construção de uma aplicação estável. Como relatado no quadro teórico, foram seguidas as quatro fases definidas pelo ICONIX.
 
@@ -196,12 +196,13 @@ Após todos os passos realizados com sucesso, o Neo4j estará disponível.
 \par Após realizar a mudança de tecnologias, foi necessário realizar alguns testes para compreender o funcionamento do \textit{web service} REST e paralelamente foi feito o levantamento de materiais de referência do \textit{framework} Angular JS. Foi preciso realizar testes para validar a conexão com o banco de dados Neo4j via API REST, fornecida por ele. Também foram realizados testes para envio de requisições e recebimento de respostas do \textit{web service} REST, utilizando o Angular JS. Para validar a conexão ao banco de dados via API REST foi necessário desenvolver algumas consultas em \textit{cypher} como apresenta a Figura 32.
 
 \newpage
-\begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.45]{./imagens/query-cypher.png}}
-	\caption[Exemplo de consulta usando a API \textit{cypher}]
-	{Exemplo de consulta usando a API \textit{cypher}. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
-\end{figure}
+Colocar a imagem de novo, não sei porque não veio... estava dando erro 
+%\begin{figure}[h!]
+%	\centerline{\includegraphics[scale=0.45]{./imagens/query-cypher.png}}
+%	\caption[Exemplo de consulta usando a API \textit{cypher}]
+%	{Exemplo de consulta usando a API \textit{cypher}. \textbf{Fonte:} Elaborado pelos autores.}
+%	\label{fig:exemplo1}
+%\end{figure}
 
 \par Ao realizar estes testes foi constatado que seria necessário desenvolver uma maneira de converter os resultados das buscas realizadas no banco de dados Neo4j que, por padrão não retorna os resultados no formato JSON comum para um JSON válido, portanto, houve-se a preocupação em tratar estas respostas, a fim de retornar um JSON válido ao usuário que futuramente viria a utilizar a API REST fornecida por este \textit{software}. É possível visualizar este tratamento na Figura 32. 
  

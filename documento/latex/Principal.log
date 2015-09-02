@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  1 SEP 2015 10:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  1 SEP 2015 23:20
 entering extended mode
 **Principal.tex
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.tex"
@@ -1725,28 +1725,18 @@ Package pdftex.def Info: ./imagens/neo4j-install-step5.png used on input line 1
 56.
 (pdftex.def)             Requested size: 155.67886pt x 129.48145pt.
 
-<./imagens/conexao-banco.jpg, id=677, 1334.9875pt x 684.5575pt>
-File: ./imagens/conexao-banco.jpg Graphic file (type jpg)
-
-<use ./imagens/conexao-banco.jpg>
-Package pdftex.def Info: ./imagens/conexao-banco.jpg used on input line 167.
-(pdftex.def)             Requested size: 467.25264pt x 239.59871pt.
-
-<./imagens/neo4j.jpg, id=678, 409.53pt x 268.00125pt>
+<./imagens/neo4j.jpg, id=677, 409.53pt x 268.00125pt>
 File: ./imagens/neo4j.jpg Graphic file (type jpg)
 
 <use ./imagens/neo4j.jpg>
-Package pdftex.def Info: ./imagens/neo4j.jpg used on input line 177.
+Package pdftex.def Info: ./imagens/neo4j.jpg used on input line 166.
 (pdftex.def)             Requested size: 245.7199pt x 160.80197pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./imagens/neo4j2.jpg, id=679, 1103.12125pt x 504.88625pt>
+<./imagens/neo4j2.jpg, id=678, 1103.12125pt x 504.88625pt>
 File: ./imagens/neo4j2.jpg Graphic file (type jpg)
 
 <use ./imagens/neo4j2.jpg>
-Package pdftex.def Info: ./imagens/neo4j2.jpg used on input line 184.
+Package pdftex.def Info: ./imagens/neo4j2.jpg used on input line 173.
 (pdftex.def)             Requested size: 441.24068pt x 201.95091pt.
 
 
@@ -1754,33 +1744,33 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [49 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/neo4j
 -install-step5.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/lat
-ex/imagens/conexao-banco.jpg>] [50 <C:/Users/Andressa Faria/Documents/GitHub/tc
-c/documento/latex/imagens/neo4j.jpg> <C:/Users/Andressa Faria/Documents/GitHub/
-tcc/documento/latex/imagens/neo4j2.jpg>]
-<./imagens/login.jpg, id=689, 339.2675pt x 307.1475pt>
+ex/imagens/neo4j.jpg>] [50 <C:/Users/Andressa Faria/Documents/GitHub/tcc/docume
+nto/latex/imagens/neo4j2.jpg>]
+<./imagens/conexao-banco.jpg, id=688, 1334.9875pt x 684.5575pt>
+File: ./imagens/conexao-banco.jpg Graphic file (type jpg)
+
+<use ./imagens/conexao-banco.jpg>
+Package pdftex.def Info: ./imagens/conexao-banco.jpg used on input line 190.
+(pdftex.def)             Requested size: 467.25264pt x 239.59871pt.
+ [51 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/cone
+xao-banco.jpg>]
+<./imagens/login.jpg, id=693, 339.2675pt x 307.1475pt>
 File: ./imagens/login.jpg Graphic file (type jpg)
 
 <use ./imagens/login.jpg>
-Package pdftex.def Info: ./imagens/login.jpg used on input line 207.
+Package pdftex.def Info: ./imagens/login.jpg used on input line 216.
 (pdftex.def)             Requested size: 203.56206pt x 184.28992pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[51] <./imagens/novaconta1.jpg, id=694, 343.2825pt x 548.0475pt>
+ [52 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/logi
+n.jpg>]
+<./imagens/novaconta1.jpg, id=698, 343.2825pt x 548.0475pt>
 File: ./imagens/novaconta1.jpg Graphic file (type jpg)
 
 <use ./imagens/novaconta1.jpg>
-Package pdftex.def Info: ./imagens/novaconta1.jpg used on input line 218.
+Package pdftex.def Info: ./imagens/novaconta1.jpg used on input line 227.
 (pdftex.def)             Requested size: 205.97107pt x 328.83104pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[52 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/login
-.jpg>] [53 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagen
-s/novaconta1.jpg>] [54]
-Overfull \hbox (16.38818pt too wide) in paragraph at lines 250--251
+ [53 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/nova
+conta1.jpg>] [54]
+Overfull \hbox (16.38818pt too wide) in paragraph at lines 259--260
 \T1/ptm/m/n/12 rio in-for-ma-ções a res-peito da qua-li-dade do ser-viço pres-t
 ado pelo pro-ve-dor de ser-vi-ços, comparando-
  []
@@ -1895,7 +1885,7 @@ Here is how much of TeX's memory you used:
  18300 multiletter control sequences out of 15000+200000
  59916 words of font info for 62 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 46i,12n,43p,1092b,1461s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,12n,43p,1079b,1461s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files (x86)/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files (x86)/MiKTeX 2.9/f
@@ -1905,7 +1895,7 @@ lic/lm/lmtl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (65 pages, 2431599 bytes).
+Output written on Principal.pdf (65 pages, 2432593 bytes).
 PDF statistics:
  993 PDF objects out of 1000 (max. 8388607)
  217 named destinations out of 1000 (max. 500000)
