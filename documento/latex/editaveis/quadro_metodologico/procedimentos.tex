@@ -223,20 +223,26 @@ Após todos os passos realizados com sucesso, o Neo4j estará disponível.
 	\label{fig:exemplo1}
 \end{figure}
 
-\par Com o funcionamento do sistema de login, passou-se a desenvolver à página inicial da aplicação, contendo as informações que são restritas ao usuário cadastrado. O sistema apresenta uma página inicial diferente para cada tipo de conta, sendo elas: contratantes, provedores de serviço ou ambos, contendo apenas as informações que são liberadas de acordo com o acesso do usuário, sendo essas informações relatórios, últimas atualizações na rede de parceiros, avaliações de serviços e prováveis parceiros. A página para criação de contas é apresentada na Figura 35.
+\par Com o funcionamento do sistema de login, passou-se a desenvolver à página inicial da aplicação, contendo as informações que são restritas ao usuário cadastrado. O sistema apresenta uma página inicial diferente para cada tipo de conta, sendo elas: contratantes, provedores de serviço ou ambos, contendo apenas as informações que são liberadas de acordo com o acesso do usuário, sendo essas informações relatórios, últimas atualizações na rede de parceiros, avaliações de serviços e prováveis parceiros. A página inicial do tipo contratante é apresentada na Figura 35.
 
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.60]{./imagens/novaconta1.jpg}}
-	\caption[Tela de criação de conta ]
-	{Tela de criação de conta \textbf{Fonte:} Elaborado pelos autores.}
+	\centerline{\includegraphics[scale=0.35]{./imagens/home-contratante.png}}
+	\caption[Página inicial do usuário contratante]
+	{Página inicial do usuário contratante \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:exemplo1}
+\end{figure}
+
+
+\par O caso de uso localizar parceiros foi desenvolvido após a conclusão do caso de uso criar conta. A lógica deste caso de uso consiste em buscar por possíveis parceiros, com base na rede de parceria do contrante. A Figura 36 apresenta esta busca.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.35]{./imagens/localizar-parceiro.png}}
+	\caption[Página de localização de parceiros]
+	{Página de localização de parceiros \textbf{Fonte:} Elaborado pelos autores.}
 	\label{fig:exemplo1}
 \end{figure}
 
 \newpage
-
-\par O caso de uso localizar parceiros foi desenvolvido após a conclusão do caso de uso criar conta. A lógica deste caso de uso consiste em buscar por possíveis parceiros, com base na rede de parceria do contrante.
-
-imagem localizar parceiro
 
 
 
@@ -251,7 +257,7 @@ imagem localizar parceiro
 
 \par A fim de abranger a busca e possibilitar que novos prestadores de serviços sejam avaliados pelos contratantes, a consulta que antes apresentava apenas provedores de serviços que possuíam avaliações, sendo elas, positivas ou negativas, foi ampliada, possibilitando que profissionais não avaliados também entrassem na lista de prováveis provedores de serviços.
 
-\par Para auxiliar na tomada de decisão do usuário contratante, foi implementada uma funcionalidade que realiza o cálculo da média de um determinado serviço prestado por um usuário provedor de serviço, tomando como base as avaliações da rede de parceiros do usuário autenticado, da empresa onde ele trabalha e da cidade onde vive, oferecendo assim uma forma simples de ter acesso a qualidade do serviço prestado. *******************************
+\par Para auxiliar na tomada de decisão do usuário contratante, foi implementada uma funcionalidade que realiza o cálculo da média de avaliações de um serviço prestado por um profissional temporário, tendo como base as avaliações já realizadas pela rede de parceiros do usuário autenticado, da empresa onde ele trabalha e da cidade onde vive, oferecendo assim uma forma simples de obter acesso a qualidade do serviço prestado.
 
 \par Após realizada todas as implementações já descritas, houve-se a preocupação de desenvolver uma interface, que além de amigável fosse prática ao usuário, desta forma, foi disponibilizada algumas informações relevantes, que auxiliam o usuário a compreender o que está ocorrendo em sua rede de parceria. Como exemplo é possível citar a lista de parceiros em comum entre o usuário autenticado no sistema e um determinado contratante por meio da página de perfil dele.
 
