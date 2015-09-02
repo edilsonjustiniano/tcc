@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  2 SEP 2015 20:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  2 SEP 2015 20:29
 entering extended mode
 **Principal.tex
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.tex"
@@ -1816,13 +1816,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [54 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/login
 .jpg> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/hom
 e-contratante.png>] [55 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento
-/latex/imagens/localizar-parceiro.png>]
-Overfull \hbox (16.38818pt too wide) in paragraph at lines 266--267
-\T1/ptm/m/n/12 rio in-for-ma-ções a res-peito da qua-li-dade do ser-viço pres-t
-ado pelo pro-ve-dor de ser-vi-ços, comparando-
- []
-
-) [56])
+/latex/imagens/localizar-parceiro.png>] [56]))
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/13_Res
 ultados.tex" [57])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/14_Con
@@ -1942,7 +1936,7 @@ lic/lm/lmtl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
 8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (67 pages, 2951468 bytes).
+Output written on Principal.pdf (67 pages, 2951558 bytes).
 PDF statistics:
  1014 PDF objects out of 1200 (max. 8388607)
  222 named destinations out of 1000 (max. 500000)
