@@ -71,7 +71,6 @@ public class SessionServiceImpl implements SessionService {
 		
 		System.out.println(token);
 		JSONObject json = null;
-		JSONObject jsonObj = null;
 		Token tokenDecoded = null;
 		Person person = new Person();
 		
