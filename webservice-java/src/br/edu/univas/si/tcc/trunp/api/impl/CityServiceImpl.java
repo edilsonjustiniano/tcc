@@ -36,16 +36,4 @@ public class CityServiceImpl implements CityService {
 		return json;
 	}
 	
-	@GET
-	@Path("/citiesbyquery")
-	public JSONObject citiesByQuery(@QueryParam("state") String state) throws JSONTrunpException {
-		JSONObject json = new JSONObject();
-		try {
-			json.put("success", true);
-		} catch (JSONException e) {
-			throw new JSONTrunpException("Falha ao manipular as respostas", e);
-		}
-		return json;
-	}
-
 }
