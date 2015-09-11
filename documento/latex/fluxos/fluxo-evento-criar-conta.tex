@@ -1,0 +1,34 @@
+\begin{fluxoDeEventos}
+  \addTitle{Criar Conta}
+  \addrow{Ator principal}{Usuário}
+  \addrow{Ator secundário}{-}
+  \addrow{Pré-condições}{}
+  \addrow{Pós-condições}{Conta criada com sucesso}
+  
+  
+
+  \startBasicFlow{Ator} {Sistema}
+  \addItemByColumnOne{O ator acessa a página inicial do sistema.}
+  \addItemByColumnTwo{O sistema apresenta a página de boas vindas ao usuário.}
+  
+  \addItemByColumnOne{O ator clica no menu “Criar conta” na barra de menu superior.}
+  \addItemByColumnTwo{O sistema apresenta a tela para criar a nova conta.}
+  
+  \addItemByColumnOne{O ator preenche alguns campos relacionados aos seus dados pessoais e clica no botão “Próximo”.}
+  \addItemByColumnTwo{O sistema armazena a nova conta e redireciona o ator para a página contendo o formulário correspondente ao segundo passo para concluir a criação de conta.}
+  
+  \addItemByColumnOne{O ator preenche alguns campos relacionados aos seus dados profissionais e clica no botão “Próximo”.}
+  \addItemByColumnTwo{O sistema atualiza os dados da conta recém-criada e redireciona o ator para a página relacionada ao terceiro e último passo para criação da conta.}
+  
+  \addItemByColumnOne{O ator insere a sua imagem de perfil e clica no botão “Salvar”.}
+  \addItemByColumnTwo{O sistema atualiza a conta recém-criada e redireciona o ator para a sua página inicial.}
+  
+  
+  \startAlternativeFlow{Fluxo alternativo 1}
+  \addItemByColumnTwo{No item 6 do fluxo principal, o sistema verifica que já existe um usuário com o mesmo e-mail.}
+  
+  \addItemByColumnTwo{O sistema apresenta uma mensagem de erro informando a situação ao ator.}
+  
+  \addItemByColumnOne{O ator lê a mensagem de erro.}
+  \addItemByColumnTwo{O sistema mantém o estado atual da página, aguardando pela inserção de um e-mail válido.}
+\end{fluxoDeEventos}

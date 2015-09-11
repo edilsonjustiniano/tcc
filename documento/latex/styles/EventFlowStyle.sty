@@ -70,6 +70,47 @@
   \hline
 }
 
+% Usar para inserir os steps por coluna. Ex:
+% 1. testes   2. segundo teste
+\newcommand\addItemByColumnOne[1]{ 
+	\numbercell
+	\begin{minipage}[t]{7cm}
+		#1
+		\vspace{1.3ex}
+	\end{minipage}
+}
+
+\newcommand\addItemByColumnTwo[1]{ 
+	& \numbercell
+	\begin{minipage}[t]{7cm}
+		#1
+		\vspace{1.3ex}
+	\end{minipage}
+	\\
+	\hline
+	
+}
+
+% Usar quando for aplicar vários pontos em uma linha apenas de um lado só. Ex:
+% 1. testes
+% 2. segundo teste
+\newcommand\addSeveralItensByColumnOne[1]{ 
+	& \numbercell
+	\begin{minipage}[t]{7cm}
+		#1
+		\vspace{1.3ex}
+	\end{minipage}
+}
+
+\newcommand\addSeveralItensByColumnTwo[1]{ 
+	& \numbercell
+	\begin{minipage}[t]{7cm}
+		#1
+		\vspace{1.3ex}
+	\end{minipage}
+	\\
+}
+
 \newcommand\addHeading[2]{\textbf{#1} & \textbf{#2}\\ \hline}
 
 \newcommand\addTitle[1]{\multicolumn{2}{|c|}{\textbf{#1}} \\ \hline}

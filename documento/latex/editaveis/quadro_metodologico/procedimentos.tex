@@ -1,4 +1,4 @@
-\section{Procedimentos}
+\section{Procedimentos e resultados}
 
 \par Para que esta pesquisa fosse levada a cabo, se fez necessária a implementação de algumas ações, as quais serão detalhadas.
 
@@ -6,9 +6,11 @@
 
 \par Para garantir que as tecnologias selecionadas fossem as melhores para o desenvolvimento, foram realizados alguns testes, por meio de aplicações simples. Os testes foram focados na avaliação do comportamento do banco de dados aplicado ao contexto desta pesquisa, cujo objetivo foi desenvolver uma aplicação de busca por mão de obra baseando-se em uma rede de relacionamentos. Estes testes também foram realizados como fins didáticos, visando gerar a familiarização com as tecnologias utilizadas.
 
+\subsection{ICONIX}
+
 \par Para nortear este trabalho, o ICONIX foi escolhido como a metodologia de desenvolvimento de \textit{software}, desempenhando um papel fundamental na organização. Sua abordagem proveu uma sequência de procedimentos, que foram seguidos conforme o necessário, levando à construção de uma aplicação estável. Como relatado no quadro teórico, foram seguidas as quatro fases definidas pelo ICONIX.
 
-\par Na primeira fase, definida como análise de requisitos, foi realizado o levantamento das informações pertinentes ao desenvolvimento. Este levantamento foi realizado por meio da observação do comportamento das pessoas ao buscar por mão de obra temporária. A partir daí, foram levantadas as principais características, indispensáveis para a construção do \textit{software} e desenvolvido o modelo de domínio inicial, como demonstra a Figura 15. Nesta fase, também foram definidas todas as ações que o usuário poderia realizar no sistema, por meio dos casos de uso, conforme a Figura 16.
+\par Na primeira fase, definida como análise de requisitos, foi realizado o levantamento das informações pertinentes ao desenvolvimento. Este levantamento foi realizado por meio da observação do comportamento das pessoas ao buscar por mão de obra temporária. A partir daí, foram levantadas as principais características, indispensáveis para a construção do \textit{software} e desenvolvido o modelo de domínio inicial, como demonstra a Figura 15. Nesta fase, também foram definidas todas as ações que o usuário poderia realizar no sistema, por meio dos casos de uso, conforme a Figura~\ref{fig:exemplo_test}. e foram criados os fluxos de eventos como apresentam os quadros abaixo.
 
 \newpage
 \begin{figure}[h!]
@@ -22,10 +24,20 @@
 	\centerline{\includegraphics[scale=0.6]{./imagens/caso-de-uso.png}}
 	\caption[Diagrama de caso de uso]
 	{Diagrama de caso de uso. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:exemplo_test}
 \end{figure}
 
-\par Na segunda fase, análise e projeto preliminar, houve um refinamento dos requisitos levantados na fase anterior, aperfeiçoando as ações do usuário, por meio dos diagramas de casos de uso. Posterior a esta definição, foram desenvolvidos os diagramas de robustez, como demonstra a Figura 17. Em paralelo, foi atualizado o modelo de domínio, acrescentando os novos atributos identificados, conforme a Figura 18. Com o modelo de domínio atualizado, foi feita a modelagem do banco de dados da aplicação, como apresenta a Figura 19.
+\par Agora será mostrado o exemplo do uso de fluxo de eventos apresentado no Quadro~\ref{quad:fluxo_evento_cadastro_filme}.
+
+\begin{quadro}[h!]
+	\input{./fluxos/fluxo-evento-criar-conta}
+	\caption[Fluxo de eventos para o caso de uso criar conta]
+	{Fluxo de eventos para o caso de uso criar conta. \textbf{Fonte:} Elaborado pelos autores}
+	\label{quad:fluxo_evento_cadastro_filme}
+\end{quadro}
+
+\newpage
+\par Na segunda fase, análise e projeto preliminar, houve um refinamento dos requisitos levantados na fase anterior, aperfeiçoando as ações do usuário, por meio dos diagramas de casos de uso ou fluxos de eventos. Posterior a esta definição, foram desenvolvidos os diagramas de robustez, como demonstra a Figura 17. Em paralelo, foi atualizado o modelo de domínio, acrescentando os novos atributos identificados, conforme a Figura 18. Com o modelo de domínio atualizado, foi feita a modelagem do banco de dados da aplicação, como apresenta a Figura 19.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.35]{./imagens/robustez.png}}
