@@ -6,11 +6,13 @@
 
 \par Para garantir que as tecnologias selecionadas fossem as melhores para o desenvolvimento, foram realizados alguns testes, por meio de aplicações simples. Os testes foram focados na avaliação do comportamento do banco de dados aplicado ao contexto desta pesquisa, cujo objetivo foi desenvolver uma aplicação de busca por mão de obra baseando-se em uma rede de relacionamentos. Estes testes também foram realizados como fins didáticos, visando gerar a familiarização com as tecnologias utilizadas.
 
+\par Para nortear este trabalho, usou-se uma metodologia de desenvolvimento, apresentada a seguir.
+
 \subsection{ICONIX}
 
-\par Para nortear este trabalho, o ICONIX foi escolhido como a metodologia de desenvolvimento de \textit{software}, desempenhando um papel fundamental na organização. Sua abordagem proveu uma sequência de procedimentos, que foram seguidos conforme o necessário, levando à construção de uma aplicação estável. Como relatado no quadro teórico, foram seguidas as quatro fases definidas pelo ICONIX.
+\par O ICONIX foi escolhido como a metodologia de desenvolvimento de \textit{software}, desempenhando um papel fundamental na organização. Sua abordagem proveu uma sequência de procedimentos, que foram seguidos conforme o necessário, levando à construção de uma aplicação estável. Como relatado no quadro teórico, foram seguidas as quatro fases definidas pelo ICONIX,
 
-\par Na primeira fase, definida como análise de requisitos, foi realizado o levantamento das informações pertinentes ao desenvolvimento. Este levantamento foi realizado por meio da observação do comportamento das pessoas ao buscar por mão de obra temporária. A partir daí, foram levantadas as principais características, indispensáveis para a construção do \textit{software} e desenvolvido o modelo de domínio inicial, como demonstra a Figura 15. Nesta fase, também foram definidas todas as ações que o usuário poderia realizar no sistema, por meio dos casos de uso, conforme a Figura~\ref{fig:exemplo_test}. e foram criados os fluxos de eventos como apresentam os quadros abaixo.
+\par Na primeira fase, definida como análise de requisitos, foi realizado o levantamento das informações pertinentes ao desenvolvimento. Este levantamento foi realizado por meio da observação do comportamento das pessoas ao buscar por mão de obra temporária. A partir daí, foram levantadas as principais características, indispensáveis para a construção do \textit{software} e desenvolvido o modelo de domínio inicial, como demonstra a Figura 15. Nesta fase, também foram definidas todas as ações que o usuário poderia realizar no sistema, por meio dos casos de uso, conforme a Figura 16.
 
 \newpage
 \begin{figure}[h!]
@@ -81,7 +83,9 @@
 \end{figure}
 
 \newpage
-\par Na quarta e última fase do ICONIX, denominada implementação, iniciou-se a preparação do ambiente, incluindo a instalação dos \textit{softwares} necessários para o desenvolvimento prático da aplicação.
+\par Na quarta e última fase do ICONIX, denominada implementação, iniciou-se a preparação do ambiente, incluindo a instalação dos \textit{softwares} necessários para o desenvolvimento prático da aplicação. Essa preparação é abordada a seguir.
+
+\subsection{Preparação do ambiente}
 
 \par Visto que o trabalho seria desenvolvido em equipe, foi necessário estabelecer uma ferramenta de controle de versão. Esta ferramente permitiu o gerenciamento de diferentes versões de arquivos, mantendo um histórico com as modificações que foram realizadas no decorrer do processo de desenvolvimento. Este histórico permite o retorno de alguma revisão, caso haja necessidade. A ferramenta escolhida para realizar esse controle foi o GitHub, que já havia sido utilizado em alguns trabalhos do contexto acadêmico, evitando o desprendimento de tempo para estudo de uma nova ferramenta de apoio. O GitHub é uma ferramenta bem difundida e permite que os seus usuários colaborem com os projetos que estão armazenados em seus repositórios\footnotemark[31]. A Figura 22 demonstra a tela de serviços provida pelo GitHub.
 
@@ -119,18 +123,16 @@
 \par O trabalho fez uso de um banco de dados orientado a grafos, o Neo4j. A escolha desse banco se deu pela sua simplicidade de instalação, configuração, facilidade de integração com a API \textit{Cypher} e por disponibilizar uma API REST para acesso aos seus dados, conforme descrito no quadro teórico deste trabalho. O Neo4j faz parte do enquadramento de softwares livres, seguindo o conceito \textit{open source}, o que permite ao desenvolvedor utilizá-lo da forma que melhor lhe convier. 
 
 
-\par Os passos para a instalação do banco de dados Neo4j são detalhados no apêndice tal desta pesquisa. .
+\par Os passos para a instalação do banco de dados Neo4j são detalhados no apêndice tal desta pesquisa.
 
- 
-\newpage
+\par Posterior à configuração do ambiente, iniciou-se o desenvolvimento propriamente dito, apresentado a seguir.
 
-\par Posterior à configuração do ambiente, iniciou-se o desenvolvimento propriamente dito. A princípio, utilizou-se as tecnologias Neo4j, sendo executado de forma \textit{embedded}, Primefaces e JSF. Porém não estava fluindo como o esperado, uma vez que o Neo4j utilizado desta maneira não permitia conectar ao sistema de gerenciamento da base de dados e abrir uma nova instancia de conexão simultânea, devido a limitações do próprio Neo4j, uma vez que um processo Java já ocupava tal conexão com o \textit{socket} do banco de dados.
-
-\par Outro problema encontrado ao utilizar tais tecnologias foi que tanto a parte cliente (\textit{front end}) quanto a parte servidor (\textit{back end}) se encontravam totalmente acoplados em uma aplicação Java \textit{web}, portanto, a cada alteração realizada havia a necessidade de recompilar, construir e publicar a aplicação no servidor \textit{web}, impedindo a agilidade no desenvolvimento do \textit{software}. Por esses motivos decidiu-se mudar algumas das tecnologias utilizadas no \textit{front end} e a maneira como o banco de dados era acessado até então. 
+\subsection{Desenvolvimento}
+\par A princípio, utilizou-se as tecnologias Neo4j, sendo executado de forma \textit{embedded}, Primefaces e JSF. Porém não estava fluindo como o esperado. Outro problema encontrado ao utilizar tais tecnologias foi que tanto a parte cliente (\textit{front end}) quanto a parte servidor (\textit{back end}) se encontravam totalmente acoplados em uma aplicação Java \textit{web}.Por estes motivos decidiu-se mudar algumas das tecnologias utilizadas.
 
 \par Posterior a esse incidente, passou-se a utilizar então as linguagens HTML 5, CSS 3, Javascript e o \textit{framework} Angular JS para auxiliar no desenvolvimento do \textit{front end}, ao invés de Primefaces e JSF. Para acesso ao banco de dados, lançou-se mão da forma \textit{embedded} e passou-se a utilizar a API REST disponibilizada pelo próprio banco. Tais decisões nos permitiram desacoplar o sistema e manter o \textit{front end} e o \textit{back end} independentes, evitando, assim, que o mesmo problema voltasse a ocorrer.
 
-\par Como a forma de conexão ao banco de dados foi alterada, houve a necessidade de reescrever a classe responsável por realizar esta conexão. Ao utilizar esta nova abordagem de conexão ao banco de dados, foi necessário informar o \textit{hostname} e a porta IP cujo banco está instalado e o diretório onde os dados estão localizados internamente no Neo4j. Neste trabalho foi utilizado o diretório padrão (/db/data). Após realizada esta configuração, foi necessário acrescentar o parâmetro ''/cypher'' à criação da instância de conexão, a fim de utilizar a API \textit{Cypher} em conjunto com esta nova abordagem, conforme apresenta a Figura 32.
+\par Como a forma de conexão ao banco de dados foi alterada, houve a necessidade de reescrever a classe responsável por realizar esta conexão, conforme apresenta a Figura 32.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.35]{./imagens/conexao-banco.jpg}}
@@ -139,7 +141,7 @@
 	\label{fig:exemplo1}
 \end{figure}
 
-\par Após realizar a mudança de tecnologias, foram executados alguns testes para compreender o funcionamento do \textit{web service} REST e em paralelo, foi feito o levantamento dos materiais de referência do \textit{framework} Angular JS. Foi preciso realizar testes para validar a conexão com o banco de dados Neo4j via API REST, fornecida por ele. Também foram realizados testes para envio de requisições e recebimento de respostas do \textit{web service} REST, utilizando o Angular JS. Para validar a conexão ao banco de dados via API REST foi necessário desenvolver algumas consultas em \textit{cypher} como apresenta a Figura 33.
+\par Após realizar a mudança de tecnologias, foram executados alguns procedimentos para compreender o funcionamento do \textit{web service} REST e em paralelo, foi feito o levantamento dos materiais de referência do \textit{framework} Angular JS. Foi preciso realizar testes para validar a conexão com o banco de dados Neo4j via API REST, fornecida por ele. Também foram realizados testes para envio de requisições e recebimento de respostas do \textit{web service} REST, utilizando o Angular JS. Para validar a conexão ao banco de dados via API REST foi necessário desenvolver algumas consultas em \textit{cypher} como apresenta a Figura 33.
 
 \newpage 
 \begin{figure}[h!]
