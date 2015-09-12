@@ -12,21 +12,20 @@
 
 \par O ICONIX foi escolhido como a metodologia de desenvolvimento de \textit{software}, desempenhando um papel fundamental na organização. Sua abordagem proveu uma sequência de procedimentos, que foram seguidos conforme o necessário, levando à construção de uma aplicação estável. Como relatado no quadro teórico, foram seguidas as quatro fases definidas pelo ICONIX,
 
-\par Na primeira fase, definida como análise de requisitos, foi realizado o levantamento das informações pertinentes ao desenvolvimento. Este levantamento foi realizado por meio da observação do comportamento das pessoas ao buscar por mão de obra temporária. A partir daí, foram levantadas as principais características, indispensáveis para a construção do \textit{software} e desenvolvido o modelo de domínio inicial, como demonstra a Figura 15. Nesta fase, também foram definidas todas as ações que o usuário poderia realizar no sistema, por meio dos casos de uso, conforme a Figura 16.
+\par Na primeira fase, definida como análise de requisitos, foi realizado o levantamento das informações pertinentes ao desenvolvimento. Este levantamento foi realizado por meio da observação do comportamento das pessoas ao buscar por mão de obra temporária. A partir daí, foram levantadas as principais características, indispensáveis para a construção do \textit{software} e desenvolvido o modelo de domínio inicial, como demonstra a Figura~\ref{fig:modelo_dominio_inicial}. Nesta fase, também foram definidas todas as ações que o usuário poderia realizar no sistema, por meio dos casos de uso, conforme a Figura~\ref{fig:caso_uso_inicial}.
 
-\newpage
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.45]{./imagens/modelo-dominio-inicial.png}}
 	\caption[Modelo de domínio inicial]
 	{Modelo de domínio inicial. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:modelo_dominio_inicial}
 \end{figure}
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.6]{./imagens/caso-de-uso.png}}
 	\caption[Diagrama de caso de uso]
 	{Diagrama de caso de uso. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo_test}
+	\label{fig:caso_uso_inicial}
 \end{figure}
 
 \par Agora será mostrado o exemplo do uso de fluxo de eventos apresentado no Quadro~\ref{quad:fluxo_evento_cadastro_filme}.
@@ -39,47 +38,50 @@
 \end{quadro}
 
 \newpage
-\par Na segunda fase, análise e projeto preliminar, houve um refinamento dos requisitos levantados na fase anterior, aperfeiçoando as ações do usuário, por meio dos diagramas de casos de uso ou fluxos de eventos. Posterior a esta definição, foram desenvolvidos os diagramas de robustez, como demonstra a Figura 17. Em paralelo, foi atualizado o modelo de domínio, acrescentando os novos atributos identificados, conforme a Figura 18. Com o modelo de domínio atualizado, foi feita a modelagem do banco de dados da aplicação, como apresenta a Figura 19.
+\par Na segunda fase, análise e projeto preliminar, houve um refinamento dos requisitos levantados na fase anterior, aperfeiçoando as ações do usuário, por meio dos diagramas de casos de uso ou fluxos de eventos. Posterior a esta definição, foram desenvolvidos os diagramas de robustez, como demonstra a Figura~\ref{fig:diagrama_robustez_localizar_mao_de_obra}. Em paralelo, foi atualizado o modelo de domínio, acrescentando os novos atributos identificados, conforme a Figura~\ref{fig:modelo_dominio_atualizado}. Com o modelo de domínio atualizado, foi feita a modelagem do banco de dados da aplicação, como apresenta a Figura~\ref{fig:modelo_dados_aplicacao}.
 
+\newpage
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.35]{./imagens/robustez.png}}
 	\caption[Diagrama de robustez do caso de uso Localizar mão de obra]
 	{Diagrama de robustez do caso de uso Localizar mão de obra. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:diagrama_robustez_localizar_mao_de_obra}
 \end{figure}
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.6]{./imagens/modelo-dominio-com-atributos.png}}
 	\caption[Modelo de domínio atualizado]
 	{Modelo de domínio atualizado. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:modelo_dominio_atualizado}
 \end{figure} 
+
+\newpage
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.5]{./imagens/structure-all-nodes.png}}
 	\caption[Modelo de dados da aplicação]
 	{Modelo de dados da aplicação. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:modelo_dados_aplicacao}
 \end{figure} 
 
 
-\par Na terceira fase, definida como projeto detalhado, foram criados os diagramas de sequência, tendo como base os casos de uso modelados na fase anterior. Esta fase tem como objetivo detalhar todo o funcionamento do \textit{software}, visando definir a melhor maneira de realizar sua implementação. A Figura 20 apresenta o diagrama de sequência do caso de uso localizar mão de obra.
+\par Na terceira fase, definida como projeto detalhado, foram criados os diagramas de sequência, tendo como base os casos de uso modelados na fase anterior. Esta fase tem como objetivo detalhar todo o funcionamento do \textit{software}, visando definir a melhor maneira de realizar sua implementação. A Figura~\ref{fig:diagrama_sequencia} apresenta o diagrama de sequência do caso de uso localizar mão de obra.
 
 \newpage
 \begin{figure}[h!]
 	\centerline{\includegraphics[angle=90,height=0.7\textheight,width=0.7\textwidth]{./imagens/sequence-localizar-mao-de-obra.png}}
 	\caption[Diagrama de caso de uso]
 	{Diagrama de caso de uso \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:diagrama_sequencia}
 \end{figure}
 
-\par Ainda na fase de projeto detalhado, após a modelagem dos diagramas de sequência, as operações encontradas nestes diagramas foram adicionadas ao modelo de domínio, em conjunto com as novas classes identificadas, gerando assim, o digrama de classes como mostra a Figura 21.
+\par Ainda na fase de projeto detalhado, após a modelagem dos diagramas de sequência, as operações encontradas nestes diagramas foram adicionadas ao modelo de domínio, em conjunto com as novas classes identificadas, gerando assim, o digrama de classes como mostra a Figura~\ref{fig:diagrama_classe}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[angle=90,height=0.7\textheight,width=0.7\textwidth]{./imagens/classe.jpg}}
 	\caption[Diagrama de classes]
 	{Diagrama de classes \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:diagrama_classe}
 \end{figure}
 
 \newpage
@@ -87,7 +89,7 @@
 
 \subsection{Preparação do ambiente}
 
-\par Visto que o trabalho seria desenvolvido em equipe, foi necessário estabelecer uma ferramenta de controle de versão. Esta ferramente permitiu o gerenciamento de diferentes versões de arquivos, mantendo um histórico com as modificações que foram realizadas no decorrer do processo de desenvolvimento. Este histórico permite o retorno de alguma revisão, caso haja necessidade. A ferramenta escolhida para realizar esse controle foi o GitHub, que já havia sido utilizado em alguns trabalhos do contexto acadêmico, evitando o desprendimento de tempo para estudo de uma nova ferramenta de apoio. O GitHub é uma ferramenta bem difundida e permite que os seus usuários colaborem com os projetos que estão armazenados em seus repositórios\footnotemark[31]. A Figura 22 demonstra a tela de serviços provida pelo GitHub.
+\par Visto que o trabalho seria desenvolvido em equipe, foi necessário estabelecer uma ferramenta de controle de versão. Esta ferramente permitiu o gerenciamento de diferentes versões de arquivos, mantendo um histórico com as modificações que foram realizadas no decorrer do processo de desenvolvimento. Este histórico permite o retorno de alguma revisão, caso haja necessidade. A ferramenta escolhida para realizar esse controle foi o GitHub, que já havia sido utilizado em alguns trabalhos do contexto acadêmico, evitando o desprendimento de tempo para estudo de uma nova ferramenta de apoio. O GitHub é uma ferramenta bem difundida e permite que os seus usuários colaborem com os projetos que estão armazenados em seus repositórios\footnotemark[31]. A Figura~\ref{fig:github_inicio} demonstra a tela de serviços provida pelo GitHub.
 
 \footnotetext[31]{Repositório: local cujo desenvolvedor utiliza para armazenar os documentos relacionados ao \textit{software}.}
 
@@ -95,7 +97,7 @@
 	\centerline{\includegraphics[scale=0.35]{./imagens/github.jpg}}
 	\caption[Tela de serviços do GitHub ]
 	{Tela de serviços do GitHub \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:github_inicio}
 \end{figure}
 
 \par Os passos de instalação detalhados do GitHub são descritos  no Apêndice I deste trabalho.
@@ -104,14 +106,13 @@
 
 \footnotetext[32]{IDE: \textit{Integrated Development Environment} - Aplicação contendo uma série de ferramentas para auxiliar no desenvolvimento de \textit{software}.}
 
-\par O Eclipse possui várias ferramentas, dentre elas, pode-se citar o editor de texto, usado não somente para a escrita de códigos em Java, e também a perspectiva de configuração para servidores \textit{web}, utilizada neste trabalho, conforme apresenta a Figura 23. Por meio desta perspectiva, foi configurada a aplicação \textit{container} Tomcat na versão 7.
+\par O Eclipse possui várias ferramentas, dentre elas, pode-se citar o editor de texto, usado não somente para a escrita de códigos em Java, e também a perspectiva de configuração para servidores \textit{web}, utilizada neste trabalho, conforme apresenta a Figura~\ref{fig:ide_eclipse}. Por meio desta perspectiva, foi configurada a aplicação \textit{container} Tomcat na versão 7.
 
-\newpage
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.35]{./imagens/eclipse-editor-texto.png}}
 	\caption[Ferramentas da IDE Eclipse]
 	{Ferramentas da IDE Eclipse \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:ide_eclipse}
 \end{figure}
 
 \par O Tomcat desempenhou um papel fundamental na execução desta aplicação, pois serviu como hospedeiro para a aplicação Java desenvolvida neste trabalho. 
@@ -132,62 +133,58 @@
 
 \par Posterior a esse incidente, passou-se a utilizar então as linguagens HTML 5, CSS 3, Javascript e o \textit{framework} Angular JS para auxiliar no desenvolvimento do \textit{front end}, ao invés de Primefaces e JSF. Para acesso ao banco de dados, lançou-se mão da forma \textit{embedded} e passou-se a utilizar a API REST disponibilizada pelo próprio banco. Tais decisões nos permitiram desacoplar o sistema e manter o \textit{front end} e o \textit{back end} independentes, evitando, assim, que o mesmo problema voltasse a ocorrer.
 
-\par Como a forma de conexão ao banco de dados foi alterada, houve a necessidade de reescrever a classe responsável por realizar esta conexão, conforme apresenta a Figura 32.
+\par Como a forma de conexão ao banco de dados foi alterada, houve a necessidade de reescrever a classe responsável por realizar esta conexão, conforme apresenta a Figura~\ref{fig:codigo_comunicacao_banco}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.35]{./imagens/conexao-banco.jpg}}
 	\caption[Código de comunicação com o banco]
 	{Código de comunicação com o banco \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:codigo_comunicacao_banco}
 \end{figure}
 
-\par Após realizar a mudança de tecnologias, foram executados alguns procedimentos para compreender o funcionamento do \textit{web service} REST e em paralelo, foi feito o levantamento dos materiais de referência do \textit{framework} Angular JS. Foi preciso realizar testes para validar a conexão com o banco de dados Neo4j via API REST, fornecida por ele, além de realizados testes funcionais para envio de requisições e recebimento de respostas do \textit{web service} REST, utilizando o Angular JS. Para validar a conexão ao banco de dados via API REST foi necessário desenvolver algumas consultas em \textit{cypher} como apresenta a Figura 33.
+\par Após realizar a mudança de tecnologias, foram executados alguns procedimentos para compreender o funcionamento do \textit{web service} REST e em paralelo, foi feito o levantamento dos materiais de referência do \textit{framework} Angular JS. Foi preciso realizar testes para validar a conexão com o banco de dados Neo4j via API REST, fornecida por ele, além de realizados testes funcionais para envio de requisições e recebimento de respostas do \textit{web service} REST, utilizando o Angular JS. Para validar a conexão ao banco de dados via API REST foi necessário desenvolver algumas consultas em \textit{cypher} como apresenta a Figura~\ref{fig:consulta_usando_api_cypher}.
 
-\newpage 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.45]{./imagens/query-cypher.png}}
 	\caption[Exemplo de consulta usando a API \textit{cypher}]
 	{Exemplo de consulta usando a API \textit{cypher}. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:consulta_usando_api_cypher}
 \end{figure}
 
-\par Ao realizar estes testes, foi constatado que seria necessário desenvolver uma maneira de converter os resultados das buscas realizadas no banco de dados Neo4j que, por padrão, não retorna os resultados no formato JSON comum, portanto, houve a preocupação em tratar estas respostas, a fim de retornar um JSON válido ao usuário que futuramente viria a utilizar a API REST fornecida por este \textit{software}. É possível visualizar este tratamento na Figura 33. 
+\par Ao realizar estes testes, foi constatado que seria necessário desenvolver uma maneira de converter os resultados das buscas realizadas no banco de dados Neo4j que, por padrão, não retorna os resultados no formato JSON comum, portanto, houve a preocupação em tratar estas respostas, a fim de retornar um JSON válido ao usuário que futuramente viria a utilizar a API REST fornecida por este \textit{software}. É possível visualizar este tratamento na Figura~\ref{fig:consulta_usando_api_cypher}. 
  
 \par A partir deste ponto, a aplicação estava totalmente desacoplada, sendo necessário realizar uma configuração, a fim de permitir que as requisições enviadas pelo \textit{front end} fossem aceitas pelo \textit{back end}, localizado em outro domínio.
 
 \par Devido à mudança de tecnologias já comentadas, houve a necessidade de atualizar os diagramas de sequência e de classe, inserindo os contratos de serviços do \textit{web service} REST. Com a definição deste contrato, deu-se início ao desenvolvimento dos casos de uso, identificados na primeira fase do ICONIX. 
 
-\par Posterior à realização dos testes e da escolha definitiva da arquitetura que seria utilizada, iniciou-se a implementação dos casos de uso. O primeiro a ser implementado foi o caso de uso de criação de conta. Para este caso de uso, teve-se o cuidado de criar um mecanismo de criptografia de dados sigilosos, como usuário e senha, visando garantir a segurança da aplicação. Estas informações criptografadas são enviadas a cada requisição e validadas pelo \textit{web service}, sendo atualizadas caso sejam válidas, tornado mais complexo a quebra desta criptografia. Este mecanismo foi desenvolvido com base no sistema de \textit{login} via \textit{token}. Segundo o embasamento usado na criação de contas, deu-se início ao desenvolvimento do sistema de \textit{login} e \textit{logoff}, que também utilizam o conceito de criptografia via \textit{token}. A Figura 34 apresenta a página de \textit{login}.
+\par Posterior à realização dos testes e da escolha definitiva da arquitetura que seria utilizada, iniciou-se a implementação dos casos de uso. O primeiro a ser implementado foi o caso de uso de criação de conta. Para este caso de uso, teve-se o cuidado de criar um mecanismo de criptografia de dados sigilosos, como usuário e senha, visando garantir a segurança da aplicação. Estas informações criptografadas são enviadas a cada requisição e validadas pelo \textit{web service}, sendo atualizadas caso sejam válidas, tornado mais complexo a quebra desta criptografia. Este mecanismo foi desenvolvido com base no sistema de \textit{login} via \textit{token}. Segundo o embasamento usado na criação de contas, deu-se início ao desenvolvimento do sistema de \textit{login} e \textit{logoff}, que também utilizam o conceito de criptografia via \textit{token}. A Figura~\ref{fig:pagina_login} apresenta a página de \textit{login}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.60]{./imagens/login.jpg}}
 	\caption[Tela de login ]
 	{Tela de login \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:pagina_login}
 \end{figure}
 
-\par Com o funcionamento do sistema de \textit{login}, passou-se a desenvolver a página inicial da aplicação, contendo as informações que são restritas ao usuário cadastrado. O sistema apresenta uma página inicial diferente para cada tipo de conta, sendo elas: contratantes, provedores de serviço ou ambos, contendo apenas as informações que são liberadas de acordo com o acesso do usuário, sendo essas informações relatórios, últimas atualizações na rede de parceiros, avaliações de serviços e prováveis parceiros. A página inicial do tipo contratante é apresentada na Figura 35.
+\par Com o funcionamento do sistema de \textit{login}, passou-se a desenvolver a página inicial da aplicação, contendo as informações que são restritas ao usuário cadastrado. O sistema apresenta uma página inicial diferente para cada tipo de conta, sendo elas: contratantes, provedores de serviço ou ambos, contendo apenas as informações que são liberadas de acordo com o acesso do usuário, sendo essas informações relatórios, últimas atualizações na rede de parceiros, avaliações de serviços e prováveis parceiros. A página inicial do tipo contratante é apresentada na Figura~\ref{fig:pagina_inicial_contratante}.
 
+\newpage
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.35]{./imagens/home-contratante.png}}
 	\caption[Página inicial do usuário contratante]
 	{Página inicial do usuário contratante \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:pagina_inicial_contratante}
 \end{figure}
 
 
-\par O caso de uso localizar parceiros foi desenvolvido após a conclusão do caso de uso criar conta. A lógica deste caso de uso consiste em buscar por possíveis parceiros, com base na rede de parceria do contrante. A Figura 36 apresenta esta busca.
+\par O caso de uso localizar parceiros foi desenvolvido após a conclusão do caso de uso criar conta. A lógica deste caso de uso consiste em buscar por possíveis parceiros, com base na rede de parceria do contrante. A Figura~\ref{fig:pagina_localizar_parceiro} apresenta esta busca.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.35]{./imagens/localizar-parceiro.png}}
 	\caption[Página de localização de parceiros]
 	{Página de localização de parceiros \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:exemplo1}
+	\label{fig:pagina_localizar_parceiro}
 \end{figure}
-
-\newpage
-
-
 
 \par Ainda relacionado ao tipo de conta contratante ou ambos, foi implementado o caso de uso adicionar parceiro, que permite ao usuário convidar um possível parceiro para fazer parte da sua rede. Após a implementação da lógica para adicionar um novo parceiro, houve a necessidade de implementar o serviço de requisições de parcerias, uma vez que não bastava apenas um contratante convidar outro para se tornarem parceiros, mas sim que o contratante convidado aceitasse sua solicitação de parceria, para assim se tornarem parceiros. Visando disponibilizar estas solicitações de forma agradável ao usuário, foi desenvolvida uma funcionalidade para que o usuário pudesse aceitar ou rejeitar a solicitação enviada à ele.
 

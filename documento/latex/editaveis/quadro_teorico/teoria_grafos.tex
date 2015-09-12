@@ -2,14 +2,14 @@
 
 \par A teoria dos grafos foi criada pelo matemático suíço Leonhard Euler no século XVIII com o propósito de solucionar um antigo problema, conhecido como as 7 pontes de \textit{Königsberg} \cite{harju_graph_theory}.
 
-\par \textit{Königsberg}, atualmente conhecida como \textit{Kaliningrad}, era uma antiga cidade medieval cortada pelo rio \textit{Pregel} dividindo-a em 4 partes interligadas por 7 pontes. Ela era localizada na antiga Prússia, hoje, território Russo. O problema mencionado anteriormente consistia basicamente em atravessar toda a cidade, visitando todas as partes e utilizar todas as pontes desde que não repetisse uma das quatro partes ou uma das 7 pontes. A Figura 2 ilustra o problema mencionado.
+\par \textit{Königsberg}, atualmente conhecida como \textit{Kaliningrad}, era uma antiga cidade medieval cortada pelo rio \textit{Pregel} dividindo-a em 4 partes interligadas por 7 pontes. Ela era localizada na antiga Prússia, hoje, território Russo. O problema mencionado anteriormente consistia basicamente em atravessar toda a cidade, visitando todas as partes e utilizar todas as pontes desde que não repetisse uma das quatro partes ou uma das 7 pontes. A Figura~\ref{fig:problema_sete_pontes} ilustra o problema mencionado.
 
 % Imagem do problema das 7 pontes da teoria dos grafos
 \begin{figure}[h!]
 	\centerline{\includegraphics[height=0.26\textheight,width=0.8\textwidth]{./imagens/Konigsberg_7_bridges.jpg}}
 	\caption[O problema das 7 pontes de \textit{Königsberg} ]
 	{O problema das 7 pontes de \textit{Königsberg}. \textbf{Fonte:} \citeonline{paoletti_seven_bridges_konigsberg}}
-	\label{fig:exemplo1}
+	\label{fig:problema_sete_pontes}
 \end{figure}
 
 \par De acordo com \citeonline{bruggen_learning_neo4j}, para tentar solucionar o problema, Euler utilizou uma abordagem matemática ao contrário dos demais que tentaram utilizar a força bruta para solucionar tal problema, desenhando N números de diferentes possibilidades de rotas. Euler mudou o foco e passou a dar mais atenção ao número de pontes e não as partes da cidade. Por meio desta observação, foi possível perceber que realizar tal tarefa seria impossível, pois de acordo com sua teoria seria necessário possuir no mínimo mais uma ponte, uma vez que, o número de pontes era ímpar, não sendo possível realizar um caminho único e sem repetição. Desta forma, obteve-se a solução para este problema e criou-se o primeiro grafo no mundo.
@@ -25,7 +25,7 @@
 \par Segundo \citeonline{bondy_murty_graph_theory_with_applications}, muitas situações do mundo real podem ser descritas através de um conjunto de pontos conectados por linhas formando assim um grafo, como um centro de comunicações e seus \textit{links}, ou as pessoas e seus amigos, ou uma troca de emails entre pessoas, entre outras. Isto é possível pois, de acordo com \citeonline{rocha_algoritmos_particionamento_banco_dados_orientado_grafos}, existem muitos problemas atualmente que podem ser mapeados para uma estrutura genérica possibilitando assim utilizar a teoria de grafos para tentar solucioná-los, tais como: rotas geográficas, redes sociais, entre outros.
 
 %BANCA_QUALIFICACAO. Comentado este parágrafo, porém o mesmo retornará para a banca de qualificação
-\par A Figura 3 demostra de maneira visual um grafo, conforme ideia de \citeonline{bondy_murty_graph_theory_with_applications}, utilizando como exemplo o seguinte grafo \textit{G} = \{a, b, c, d, e, f, g, h\} e suas respectivas arestas \textit{E}$_g$ = \{(a, b), (a, h), (a, e), (b, f), (c, e), (c, d), (c, g), (d, e), (d, h), (d, g), (f, h)\}, sendo que os vértices serão representados por círculos e as arestas que os interligam por linhas.
+\par A Figura~\ref{fig:ilustracao_grafo_simples} demostra de maneira visual um grafo, conforme ideia de \citeonline{bondy_murty_graph_theory_with_applications}, utilizando como exemplo o seguinte grafo \textit{G} = \{a, b, c, d, e, f, g, h\} e suas respectivas arestas \textit{E}$_g$ = \{(a, b), (a, h), (a, e), (b, f), (c, e), (c, d), (c, g), (d, e), (d, h), (d, g), (f, h)\}, sendo que os vértices serão representados por círculos e as arestas que os interligam por linhas.
 
 %subscrito $_CARCTER_DESEJADO$
 
@@ -34,11 +34,11 @@
 	\centerline{\includegraphics[scale=0.77]{./imagens/simple_graph.png}}
 	\caption[Ilustração de uma representação gráfica de um simples grafo]
 	{Ilustração de uma representação gráfica de um simples grafo. \textbf{Fonte:} \citeonline{rocha_algoritmos_particionamento_banco_dados_orientado_grafos}}
-	\label{fig:exemplo1}
+	\label{fig:ilustracao_grafo_simples}
 \end{figure}
 
 %BANCA_QUALIFICACAO. Comentado este parágrafo, porém o mesmo retornará para a banca de qualificação
-\par \citeonline{ruohonen_graph_theory} afirma que os grafos podem ser gerados com a possibilidade de permitir \textit{loops}\footnotemark[4] e arestas paralelas ou multiplas entre os vértices, obtendo um \textit{multigraph}. A Figura 4 ilustra um simples \textit{multigraph}.
+\par \citeonline{ruohonen_graph_theory} afirma que os grafos podem ser gerados com a possibilidade de permitir \textit{loops}\footnotemark[4] e arestas paralelas ou multiplas entre os vértices, obtendo um \textit{multigraph}. A Figura~\ref{fig:ilustracao_multigrafo_simples} ilustra um simples \textit{multigraph}.
 
 \footnotetext[4]{\textit{loops} - Uma aresta que interliga o mesmo vértice.}
 
@@ -47,20 +47,20 @@
 	\centerline{\includegraphics[scale=0.9]{./imagens/multigraph_example.png}}
 	\caption[Ilustração de uma representação gráfica de um \textit{multigraph}]
 	{Ilustração de uma representação gráfica de um \textit{multigraph}. \textbf{Fonte:} Adaptado de \citeonline{harju_graph_theory}}
-	\label{fig:exemplo1}
+	\label{fig:ilustracao_multigrafo_simples}
 \end{figure}
 
 \newpage
 
 %BANCA_QUALIFICACAO. Comentado este parágrafo, porém o mesmo retornará para a banca de qualificação
-\par Para \citeonline{harju_graph_theory}, os grafos podem ser direcionados (\textit{dígrafo}) ou não direcionados. Os  direcionados são aqueles cujos vértices ligados a uma aresta são ordenados e permitem que uma aresta que conecta os vértices \textit{x} e \textit{y} seja representada apenas de uma forma, sendo ela \{x, y\} ou \{y, x\}, ao contrário dos não direcionados que, para este mesmo caso, podem ser representado por ambas as formas \cite{rocha_algoritmos_particionamento_banco_dados_orientado_grafos}. A Figura 5 demonstra um grafo direcionado.
+\par Para \citeonline{harju_graph_theory}, os grafos podem ser direcionados (\textit{dígrafo}) ou não direcionados. Os  direcionados são aqueles cujos vértices ligados a uma aresta são ordenados e permitem que uma aresta que conecta os vértices \textit{x} e \textit{y} seja representada apenas de uma forma, sendo ela \{x, y\} ou \{y, x\}, ao contrário dos não direcionados que, para este mesmo caso, podem ser representado por ambas as formas \cite{rocha_algoritmos_particionamento_banco_dados_orientado_grafos}. A Figura~\ref{fig:ilustracao_grafo_direcionado} demonstra um grafo direcionado.
 
 % Imagem de um grafo direcionado - VOLTAR NA BANCA DE QUALIFICACAO
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.6]{./imagens/simple_digraph_graph.png}}
 	\caption[Imagem de uma representação gráfica de um grafo direcionado]
 	{Imagem de uma representação gráfica de um grafo direcionado. \textbf{Fonte:} \citeonline{robert_keller_acylic_graph}}
-	\label{fig:exemplo1}
+	\label{fig:ilustracao_grafo_direcionado}
 \end{figure}
 
 Segundo \citeonline{harju_graph_theory}, os tipos de grafos são:
@@ -72,13 +72,13 @@ Segundo \citeonline{harju_graph_theory}, os tipos de grafos são:
 	
 	\item \textbf{subgrafos:} são pequenos grafos que em conjunto constituem um grafo maior.
 	
-	\item \textbf{grafos isomórficos:} dois grafos são isomórficos se, ambos possuírem a mesma estrutura de nós, e relacionamentos, exceto pelos identificadores de cada nó que podem ser diferentes, veja na Figura 6 um exemplo de dois grafos isomórficos \cite{harju_graph_theory}.
+	\item \textbf{grafos isomórficos:} dois grafos são isomórficos se, ambos possuírem a mesma estrutura de nós, e relacionamentos, exceto pelos identificadores de cada nó que podem ser diferentes, veja na Figura~\ref{fig:ilustracao_grafo_isomorfico} um exemplo de dois grafos isomórficos \cite{harju_graph_theory}.
 	
 	\begin{figure}[h!]
 		\centerline{\includegraphics[scale=1]{./imagens/grafos_isomorficos.png}}
 		\caption[Imagem de um grafo isomórfico]
 		{Imagem de um grafo isomórfico. \textbf{Fonte:} \citeonline{harju_graph_theory}}
-		\label{fig:exemplo1}
+		\label{fig:ilustracao_grafo_isomorfico}
 	\end{figure}
 	
 	\item \textbf{caminho (travessia):} é uma sequência de vértices \{v1, v2,...,vn\} conectados por meio de arestas. Exemplo: \{e1 = \{v1, v2\}, \{v1, v3\}..., \{vn, vm\}\};
@@ -91,15 +91,15 @@ Segundo \citeonline{harju_graph_theory}, os tipos de grafos são:
 
 Para \citeonline{rocha_algoritmos_particionamento_banco_dados_orientado_grafos} existem várias formas de se representar um grafo computacionalmente utilizando diferentes estruturas de dados. Entretanto, a mais utilizada e simples é a matriz adjacência.
 
-Uma matriz adjacência consiste em uma matriz contendo o mesmo número de linhas e colunas (\textit{n x n}). Veja na Figura 7 um exemplo de representação de um grafo utilizando esta estrutura.
+Uma matriz adjacência consiste em uma matriz contendo o mesmo número de linhas e colunas (\textit{n x n}). Veja na Figura~\ref{fig:ilustracao_matriz_adjacencia} um exemplo de representação de um grafo utilizando esta estrutura.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.7]{./imagens/matriz_adjacencia.png}}
 	\caption[Grafo representado por meio de uma matriz adjacência]
 	{Grafo representado por meio de uma matriz adjacência. \textbf{Fonte:} \citeonline{rocha_algoritmos_particionamento_banco_dados_orientado_grafos}}
-	\label{fig:exemplo1}
+	\label{fig:ilustracao_matriz_adjacencia}
 \end{figure}
 
-Na Figura 7, as posições da matriz cujo o valor é igual a 1, definem que há uma aresta conectando os vértices, tornando-os assim, adjacentes. Caso o valor seja 0, os vértices não estão conectados entre si no grafo e, portanto, não são vértices adjacentes.
+Na Figura~\ref{fig:ilustracao_matriz_adjacencia}, as posições da matriz cujo o valor é igual a 1, definem que há uma aresta conectando os vértices, tornando-os assim, adjacentes. Caso o valor seja 0, os vértices não estão conectados entre si no grafo e, portanto, não são vértices adjacentes.
 
 \par Este conteúdo teórico foi escolhido para ser utilizado neste trabalho pois este visa equacionar o problema relacionado à busca por mão de obra, através do modelo utilizado pelas redes sociais. Isto é possível pois, como mencionado anteriormente por meio desta teoria, é possível descrever várias situações do mundo real e como ela é muito bem aplicada à redes sociais, inclusive grandes empresas desta área já a utilizam. Devido a esses motivos, a teoria dos grafos foi utilizada para auxiliar no desenvolvimento deste trabalho.
