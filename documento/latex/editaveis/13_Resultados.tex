@@ -1,22 +1,18 @@
 
 \chapter{DISCUSSÃO DOS RESULTADOS} 
 
-\par O desenvolvimento deste trabalho teve como objetivo desenvolver um sistema que pudesse auxiliar em contratações de mão de obra temporária, fazendo uso do banco do dados orientado a grafos. Por meio do desenvolvimento do \textit{software}, utilizando as linguagens de programação HTML, CSS, Javascript e Java, juntamente com o \textit{framework} Angular JS, foi possível desenvolver este sistema, iniciando primeiramente com o objetivo de analisar os conceitos e as funcionalidades do banco de dados orientado a grafos.
+\par Neste capitulo serão apresentados e discutidos os resultados obtidos por esta pesquisa e desenvolvimento do \textit{software}, apresentando os seus pontos positivos e negativos.
 
-\par Web service (comunicação com o banco de dados)
-\par Telas de navegação (mudanças de tecnologia)
-\par Banco de dados (comentar sobre a mudança na maneira de utilização)
-\par Linguagem Java (falta de documentação em PHP);
+\par Inicialmente foram utilizadas as tecnologias Java, Primefaces e JSF para desenvolver este trabalho, no entanto, viu-se a necessidade de alterar algumas destas tecnologias, visando agilizar o processo de desenvolvimento. Desta forma, passou-se a utilizar HTML, CSS, Javascript em conjunto com o \textit{framework} Angular JS.
 
+\par A mudança de tecnologias trouxe como benefício o desacoplamento das partes cliente (\textit{front-end}) e servidor (\textit{back end}), não sendo mais necessário recompilar, construir e publicar a aplicação no servidor \textit{web}, como era feito até então a cada alteração.
 
-\par Telas de navegação
+\par Após esta mudança, notou-se que a forma como o banco de dados era acessado poderia ser ajustada, a fim de seguir a mesma ideia proposta pela troca de tecnologias já mencionadas, uma vez que o banco de dados Neo4j permite duas maneiras de conexão, sendo elas: \textit{embedded} e por meio da API REST.(XXXXX).Desta forma, passou-se a utilizar a API REST ao invés da forma \textit{embedded}, utilizada até então.
 
-\par Segundo Shackel (1991), a usabilidade de um sistema pode ser definida como a possibilidade do sistema ser utilizado facilmente e eficazmente pela gama de usuários aos quais ele se destina na realização de determinadas tarefas, dentro de contextos específicos.  O design de uma tela é parte integrante de um produto online e é de extrema importância no planejamento visual. Por meio dele é possível criar uma experiencia amigável ao usuário. Para auxiliar no desenvolvimento das telas, foram escolhidas tecnologias  
+\par Posterior a estas mudanças, deu-se continuidade no desenvolvimento da aplicação, onde os seus principais resultados da são apresentados a seguir.
 
 
-\section{Web Service}
 
-\par Inicialmente, foi proposto desenvolver um sistema para a busca de mão de obra e para tanto, não se fazia necessário utilizar um \textit{web service}, uma vez que, o banco de dados que foi utilizado fornecia duas maneiras de se conectar a ele, sendo elas a \textit{embedded} e a segunda por meio da API REST fornecida por ele, conforme (XXXX). A princípio seria utilizado a primeira forma, o que facilitaria o desenvolvimento do \textit{software}, pois ele seria desenvolvido utilizando tecnologias como o Java, o JSF e Primefaces o que permitiria ao desenvolvedor trabalhar diretamente com objetos sem a necessidade de um meio de comunicação externo entre o \textit{front-end} e \textit{back-end}.
 
 \section{Neo4j}
 
