@@ -42,6 +42,7 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" href="">
 						Novas Parcerias
 				        <b class="caret"></b>
+				        <b class="requests-waiting" ng-show="partnerRequests.length > 0">{{partnerRequests.length}}</b>
 				    </a>
                     <ul class="dropdown-menu">
                         <li ng-repeat="partner in partnerRequests | orderBy: 'date' ">

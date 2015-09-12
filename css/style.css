@@ -44,6 +44,17 @@ body {
     background-color: #8DDC8B;
 }
 
+.requests-waiting {
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: -15px;
+    text-align: center;
+}
+
 /* Left bar */
 #left-bar {
     float: left;
