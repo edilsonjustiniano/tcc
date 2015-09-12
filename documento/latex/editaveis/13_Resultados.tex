@@ -12,21 +12,30 @@
 \par Posterior a estas mudanças, deu-se continuidade no desenvolvimento da aplicação, onde os seus principais resultados da são apresentados a seguir.
 
 
+\section{Buscar Serviços}
+
+\par Uma das funcionalidades implementadas no desenvolvimento foi a busca por serviços. Esta busca permite que o usuário encontre profissionais que desempenham a função específica procurada por ele. Para realizar esta busca, foi preciso escrever uma consulta que leva em conta três níveis de análise, sendo elas, a busca pelo profissional que desempenha o trabalho dentro da rede de parceiros, dentro da empresa onde o usuário trabalha e por último, dentro da cidade onde ele vive. A ideia é apresentar um possível prestador de serviços que já tenha sido avaliado por alguém em comum ao usuário, uma vez que desta forma, há uma confiança maior em relação ao profissional que está sendo contratado. 
+
+\par Para escrever esta consulta foi utilizada a tecnologia \textit{Cypher}, que é uma linguagem específica para o banco Neo4j \cite{neo4j_team_manual}. A Figura~\ref{fig:consulta_busca} apresenta à \textit{query} utilizada para realizar a busca.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.7]{./imagens/consulta-busca-domestica.png}}
+	\caption[\textit{Query} para buscar serviços.]
+	{\textit{Query} para buscar serviços \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:consulta_busca}
+\end{figure}
 
 
-\section{Neo4j}
 
-\par Para desenvolver este trabalho foi necessário utilizar um banco de dados orientado a grafo, a fim de aplicar o mesmo conceito utilizado pelas redes sociais, para que o objetivo proposto por este trabalho fosse alcançado. Foi realizada um levantamento para validar as opções de banco de dados orientado a grafos disponíveis, entretanto, o Neo4j demonstrou-se superior aos demais pela sua simplicidade de instalação, utilização, configuração e por possuir uma linguagem para realizar consultas que se assemelha muito à linguagem humana, a API \textit{Cypher}.
+\par A Figura~\ref{fig:busca_domestica_edilson} demonstra a página apresentada ao usuário após buscar o serviço solicitado. No exemplo, é apresentado o resultado ao se realizar uma busca por um profissional que desempenhe o serviço de faxineira.
 
-\par No inicio do desenvolvimento deste projeto esperava-se que o Neo4j fosse utilizado por meio da forma \textit{embedded}, porém, devido a dificuldades que esta forma apresentou, uma vez que, não era possível conectar-se à base de dados pela aplicação em desenvolvimento e pelo sistema de gerenciamento do Neo4j simultaneamente, impedindo que as alterações no banco de dados fossem validadas pelo sistema de gerenciamentono momento em que as alterações eram realizadas no \textit{software} desenvolvido neste trabalho, somado ao fato que foi necessário alterar as tecnologias que inicialmente esperavam ser utilizadas no \textit{front-end}, houve-se a necessidade de lançar mão da forma \textit{server} e utilizar a API REST que o próprio Neo4j disponibiliza e abrir mão antiga maneira proposta inicialmente.
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.4]{./imagens/busca-domestica-edilson.png}}
+	\caption[\textit Página resultante da busca por doméstica.]
+	{\textit Página resultante da busca por doméstica \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:busca_domestica_edilson}
+\end{figure}
 
-\par Após estas definições foram criados testes para validar a conexão ao banco de dados, a fim de constatar que a conexão com o Neo4j via API REST em conjunto com a também API \textit{Cypher} havia sido realizada de forma correta.
+\newpage
 
-\par Na próxima seção serão apresentados os resultados obtidos no desenvolvimento da aplicação \textit{web}.
-
-\section{Aplicação web}
-
-\par A linguagem Java foi proposta desde o princípio para ser utlizada como linguagem padrão para o \textit{back-end}, porém devido aos problemas já citados relacionados a troca de tecnologias, foi proposto realizar a troca da linguagem Java por PHP, pois, apesar dos autores deste trabalho obterem conhecimento nesta linguagem, o PHP não foi abordado no curso o que seria muito bem aceito, entretanto, foi realizado alguns testes e constatou-se que, esta troca não seria conveniente devido a excassez de documentação que esta nova linguagem apresenta se tratanto da comunicação com o Neo4j via API REST. Sendo assim, optou-se por continuar a utilizar o Java, o que evitou o despendimento de tempo para resolver problemas com falta de documentação.
-
-\par Ainda após as trocas de tecnologias e  da forma de conectar-se ao banco de dados, foi necessário alterar as classes responsáveis pela conexão com o Neo4j e também as classes que realizam as operações no banco. 
-
+\section{Buscar novos parceiros}
