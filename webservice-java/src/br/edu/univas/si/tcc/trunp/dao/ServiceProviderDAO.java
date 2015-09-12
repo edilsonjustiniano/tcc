@@ -41,49 +41,7 @@ public class ServiceProviderDAO {
 	 * by my company and last one will be my city
 	 */
 	public JSONArray getServiceProvidersByService(Person person, String service) throws JSONException {
-		
-		WebResource resource = FactoryDAO.GetInstance();
-		
-//		MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: 'edilsonjustiniano@gmail.com'}),  
-//		(sp:Person {typeOfAccount: 'SERVICE_PROVIDER'}), 
-//		(service:Service), 
-//		(executed:Execute), 
-//		(partners:Person {typeOfAccount: 'CONTRACTOR'}), 
-//		(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners),
-//		(sp)-[:PROVIDE]->(service), 
-//		(service)-[:EXECUTE]->(executed), 
-//		(sp)-[:EXECUTE]->(executed) 
-//		WHERE UPPER(service.name) = UPPER('doméstica') 
-//		AND (executed)-[:TO]->(partners)
-//		RETURN DISTINCT(sp.name), sp.email, /*partners.name,*/ service.name, count(executed) as total, avg(executed.note) as media, 1 as order ORDER BY order, media DESC
-//		UNION ALL
-//		MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: 'edilsonjustiniano@gmail.com'}),  
-//		(sp:Person {typeOfAccount: 'SERVICE_PROVIDER'}),
-//		(service:Service {name: 'Doméstica'}), 
-//		(executed:Execute), 
-//		(partners:Person {typeOfAccount: 'CONTRACTOR'}),
-//		(partners)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me),
-//		(sp)-[:PROVIDE]->(service), 
-//		(service)-[:EXECUTE]->(executed), 
-//		(sp)-[:EXECUTE]->(executed),
-//		(executed)-[:TO]->(partners)
-//		WHERE NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners))
-//		RETURN DISTINCT(sp.name), sp.email, /*partners.name,*/ service.name, count(executed) as total, avg(executed.note) as media, 2 as order ORDER BY order, media DESC
-//		UNION ALL
-//		MATCH (me:Person {typeOfAccount: 'CONTRACTOR', email: 'edilsonjustiniano@gmail.com'}),  
-//		(sp:Person {typeOfAccount: 'SERVICE_PROVIDER'}),  //remover o email para pegar todos os provedores de serviços 
-//		(service:Service {name: 'Doméstica'}), 
-//		(executed:Execute), 
-//		(partners:Person {typeOfAccount: 'CONTRACTOR'}),
-//		(partners)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me),
-//		(sp)-[:PROVIDE]->(service), 
-//		(service)-[:EXECUTE]->(executed), 
-//		(sp)-[:EXECUTE]->(executed),
-//		(executed)-[:TO]->(partners)
-//		WHERE NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners))
-//		AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me))
-//		RETURN DISTINCT(sp.name), sp.email, /*partners.name,*/ service.name, count(executed) as total, avg(executed.note) as media, 3 as order ORDER BY order, media DESC
-		
+		WebResource resource = FactoryDAO.GetInstance();		
 		String query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), "+
 				"(sp:Person), " +
 				"(service:Service), " + 
@@ -145,7 +103,6 @@ public class ServiceProviderDAO {
 				"AND me <> sp " +
 				"RETURN DISTINCT({serviceProviderName: sp.name, serviceProviderEmail: sp.email, service: service.name, total: 0, "+
 				"media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC; \"}";
-		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)
 												.post(ClientResponse.class);

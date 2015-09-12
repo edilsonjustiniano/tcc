@@ -58,16 +58,6 @@ public class PartnerDAO {
 							"qtde: count(DISTINCT pMutualFriends)}) as person " +
 							"ORDER BY person.length, person.qtde DESC " +
 							"UNION ALL " +
-//							"MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
-//							"(users:Person {typeOfAccount: 'CONTRACTOR'}), " +
-//							"(users)-[:LIVES_IN]-(city)<-[:LIVES_IN]-(me) " +
-//							"WHERE NOT((users)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
-//							"OPTIONAL MATCH " +
-//							"pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), " +
-//							"(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) " +
-//							"RETURN DISTINCT(users.name), users.email, 2 as length, " +
-//							"count(DISTINCT pMutualFriends) AS mutualFriends " +
-//							"ORDER BY length, mutualFriends DESC \"}";
 							"MATCH (me:Person {email: '" + person.getEmail() + "'}), " + 
 							"(users:Person), " +
 							"(users)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me) " +
