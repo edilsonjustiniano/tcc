@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc xml:lang="en" title="http://localhost:8080"/>
+  <resources base="http://localhost:8080">
+    <resource path="WebService/city/cities/{state}" id="city">
+      <doc xml:lang="en" title="city"/>
+      <param name="state" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="GET" id="city-cities">
+        <doc xml:lang="en" title="city-cities"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="WebService/feed/lastestratings/{token}" id="feed">
+      <doc xml:lang="en" title="feed"/>
+      <param name="token" type="xs:string" required="false" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="GET" id="feed-lastestpartnership">
+        <doc xml:lang="en" title="feed-lastestpartnership"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="GET" id="feed-lastestratings">
+        <doc xml:lang="en" title="feed-lastestratings"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="WebService/partner/commonspartner/{partner}" id="partner">
+      <doc xml:lang="en" title="partner"/>
+      <param name="partner" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <param name="token" type="xs:string" required="true" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="GET" id="partner-possiblepartners">
+        <doc xml:lang="en" title="partner-possiblepartners"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="GET" id="partner-allpartners">
+        <doc xml:lang="en" title="partner-allpartners"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="partner-add">
+        <doc xml:lang="en" title="partner-add"/>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="partner-cancel">
+        <doc xml:lang="en" title="partner-cancel"/>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="GET" id="partner-allpartnerrequest">
+        <doc xml:lang="en" title="partner-allpartnerrequest"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="partner-acceptpartnerrequest">
+        <doc xml:lang="en" title="partner-acceptpartnerrequest"/>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="partner-rejectpartnerrequest">
+        <doc xml:lang="en" title="partner-rejectpartnerrequest"/>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="partner-searchnewpartners">
+        <doc xml:lang="en" title="partner-searchnewpartners"/>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="partner-searchnewpartnersonlybyname">
+        <doc xml:lang="en" title="partner-searchnewpartnersonlybyname"/>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="GET" id="partner-ismypartner">
+        <doc xml:lang="en" title="partner-ismypartner"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="GET" id="partner-commonspartner">
+        <doc xml:lang="en" title="partner-commonspartner"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="WebService/person/persondata/{partner}" id="person">
+      <doc xml:lang="en" title="person"/>
+      <param name="partner" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <param name="token" type="xs:string" required="true" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="POST" id="person-createaccount-personaldata">
+        <doc xml:lang="en" title="person-createaccount-personaldata"/>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="person-createaccount-workdata">
+        <doc xml:lang="en" title="person-createaccount-workdata"/>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="GET" id="person-persondata">
+        <doc xml:lang="en" title="person-persondata"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="WebService/rating/mylastestratings/{token}" id="rating">
+      <doc xml:lang="en" title="rating"/>
+      <param name="token" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="POST" id="rating-save">
+        <doc xml:lang="en" title="rating-save"/>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="GET" id="rating-mylastestratings">
+        <doc xml:lang="en" title="rating-mylastestratings"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="WebService/serviceprovider/removeservice" id="serviceprovider">
+      <doc xml:lang="en" title="serviceprovider"/>
+      <method name="GET" id="serviceprovider-byservice">
+        <doc xml:lang="en" title="serviceprovider-byservice"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="GET" id="serviceprovider-ratingInMyNetworkPartners">
+        <doc xml:lang="en" title="serviceprovider-ratingInMyNetworkPartners"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="GET" id="serviceprovider-ratingInMyCompany">
+        <doc xml:lang="en" title="serviceprovider-ratingInMyCompany"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="GET" id="serviceprovider-ratingInMyCity">
+        <doc xml:lang="en" title="serviceprovider-ratingInMyCity"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="GET" id="serviceprovider-data">
+        <doc xml:lang="en" title="serviceprovider-data"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="GET" id="serviceprovider-myservices">
+        <doc xml:lang="en" title="serviceprovider-myservices"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="serviceprovider-addservice">
+        <doc xml:lang="en" title="serviceprovider-addservice"/>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="serviceprovider-removeservice">
+        <doc xml:lang="en" title="serviceprovider-removeservice"/>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="WebService/services/service/{name}" id="services">
+      <doc xml:lang="en" title="services"/>
+      <param name="name" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="GET" id="services-service">
+        <doc xml:lang="en" title="services-service"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="WebService/session/userinfo/{token}" id="session">
+      <doc xml:lang="en" title="session"/>
+      <param name="token" type="xs:string" required="false" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="POST" id="session-login">
+        <doc xml:lang="en" title="session-login"/>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="GET" id="session-userinfo">
+        <doc xml:lang="en" title="session-userinfo"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="WebService/uf" id="uf">
+      <doc xml:lang="en" title="uf"/>
+      <method name="GET" id="uf">
+        <doc xml:lang="en" title="uf"/>
+        <request/>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>

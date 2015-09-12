@@ -185,7 +185,7 @@ public class ServiceProviderDAO {
 						"(executed)-[:TO]->(partners) " +
 						"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 						"AND UPPER(service.name) = UPPER('" + service + "') " +
-						"RETURN {partner: partners.name, note: executed.note, comments: executed.comments, date: executed.date} as execution ORDER BY execution.note DESC; \"}";
+						"RETURN DISTINCT({partner: partners.name, note: executed.note, comments: executed.comments, date: executed.date}) as execution ORDER BY execution.note DESC; \"}";
 
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
@@ -238,7 +238,7 @@ public class ServiceProviderDAO {
 						"(executed)-[:TO]->(partners) " +
 						"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 						"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
-						"RETURN {partner: partners.name, note: executed.note, comments: executed.comments, date: executed.date} as execution ORDER BY execution.note DESC; \"}";
+						"RETURN DISTINCT({partner: partners.name, note: executed.note, comments: executed.comments, date: executed.date}) as execution ORDER BY execution.note DESC; \"}";
 
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
@@ -294,7 +294,7 @@ public class ServiceProviderDAO {
 						"WHERE sp.typeOfAccount <> 'CONTRACTOR' AND partners.typeOfAccount <> 'SERVICE_PROVIDER' " +
 						"AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners)) " +
 						"AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) " +
-						"RETURN {partner: partners.name, note: executed.note, comments: executed.comments, date: executed.date} as execution ORDER BY execution.note DESC; \"}";
+						"RETURN DISTINCT({partner: partners.name, note: executed.note, comments: executed.comments, date: executed.date}) as execution ORDER BY execution.note DESC; \"}";
 
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
