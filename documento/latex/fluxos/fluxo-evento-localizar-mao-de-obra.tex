@@ -1,0 +1,23 @@
+\begin{fluxoDeEventos}
+  \addTitle{Localizar Mão de obra}
+  \addrow{Ator principal}{Contratante ou Ambos}
+  \addrow{Ator secundário}{-}
+  \addrow{Pré-condições}{O ator estar autenticado no sistema}
+  \addrow{Pós-condições}{Provedores de serviço e suas respectivas mão de obras apresentadas ao ator.}
+  
+  \startBasicFlow{Ator} {Sistema}
+  \addItemByColumnOne{O ator acessa a página para buscar o serviço por meio do menu “Busca” localizado no menu principal do sistema.}
+  \addItemByColumnTwo{O sistema apresenta a página de busca de serviço e mão de obra.}
+  
+  \addItemByColumnOne{O ator informa qual a mão de obra que ele deseja pesquisar, por meio do campo “Buscar serviço”.}
+  \addItemByColumnTwo{O sistema realiza uma busca pelo serviços que possuem o nome parecido com o nome do serviço informado pelo ator.ceiros que possuem maior probabilidade de se juntar a sua rede de parceiros.}
+  
+  \addItemByColumnOne{O ator seleciona o serviço a qual ele deseja que sejam pesquisados os provedores de serviço.}
+  \addItemByColumnTwo{O sistema irá realizar a busca pela mão de obra solicitada pelo ator em sua base de dados, levando em consideração a rede de parceiros do ator, a empresa onde ele trabalha e a cidade onde o ator vive. Além é claro, da qualificação dos provedores de serviço. Após esta busca, o sistema apresentará uma página com a lista de prestadores de serviço que prestam tal mão de obra, ordenada pela credibilidade em sua rede de parceiros.}
+  
+  \addItemByColumnOne{O ator analisa a lista e seleciona a melhor opção a ele, clicando em sua imagem de perfil.}
+  \addItemByColumnTwo{O sistema pesquisa todas as informações restantes do provedor de serviço, selecionado, pelo ator e apresenta uma página contendo todas as informações do provedor selecionado.}
+   
+  \startAlternativeFlow{Fluxo alternativo 1}
+  \noAlternativeFlow{Não há fluxos alternativos}
+\end{fluxoDeEventos}

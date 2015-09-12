@@ -9,7 +9,12 @@
   \thetablecell. % **
 }
 
-\newcommand\addrow[2]{  \multicolumn{1}{|l|}{\textbf{#1}} & \multicolumn{1}{|l|}{ #2}\\ \hline}
+\newcommand\addrow[2]{  \multicolumn{1}{|l|}{\textbf{#1}} & \multicolumn{1}{|l|}{
+		\begin{minipage}[t]{7cm}
+			#2
+			\vspace{1.3ex}
+		\end{minipage}
+	}\\ \hline}
 
 \newenvironment{fluxoDeEventos}{
 \begin{small}
@@ -42,6 +47,14 @@
   \multicolumn{2}{|c|}{\setcounter{tablecell}{0} \textbf{#1}} 
   \\
   \hline 
+}
+
+%Usar para definir que não existe mais fluxos alternativos
+\newcommand\noAlternativeFlow[1]{ 
+	\hline 
+	\multicolumn{2}{|c|}{\setcounter{tablecell}{0} #1} 
+	\\
+	\hline 
 }
 
 \newcommand\startErrorFlow[1]{ 
@@ -109,6 +122,15 @@
 		\vspace{1.3ex}
 	\end{minipage}
 	\\
+}
+
+\newcommand\addEmptyColumn{ 
+	&
+	\begin{minipage}[t]{7cm}
+		\vspace{1.3ex}
+	\end{minipage}
+	\\
+	\hline
 }
 
 \newcommand\addHeading[2]{\textbf{#1} & \textbf{#2}\\ \hline}

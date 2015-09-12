@@ -1,0 +1,17 @@
+\begin{fluxoDeEventos}
+  \addTitle{Adicionar Parceiro}
+  \addrow{Ator principal}{Contratante ou Ambos}
+  \addrow{Ator secundário}{-}
+  \addrow{Pré-condições}{O ator estar autenticado no sistema}
+  \addrow{Pós-condições}{Parceiro(a) adicionado(a) a lista de parcerias do ator.}
+  
+  \startBasicFlow{Ator} {Sistema}
+  \addItemByColumnOne{Após o item 4 do fluxo de eventos “Localizar Parceiros”. O ator clica na imagem de perfil do contratante a fim de, visualizar o perfil do possível novo parceiro.}
+  \addItemByColumnTwo{O sistema realiza a busca das demais informações do contratante, cujo o ator selecionou para visualizar o perfil e apresenta a página de perfil dele ao ator.}
+  
+  \addItemByColumnOne{O ator visualiza o perfil do contratante e clique no botão “Adicionar Parceiro” para adicioná-lo  à sua lista de parceiros.}
+  \addItemByColumnTwo{O sistema armazena esta requisição em sua base de dados, para aguardar a aprovação ou não do parceiro requisitado e apresenta uma mensagem de sucesso na requisição.}
+ 
+  \startAlternativeFlow{Fluxo alternativo 1}
+  \noAlternativeFlow{Não há fluxos alternativos}
+\end{fluxoDeEventos}

@@ -1,0 +1,23 @@
+\begin{fluxoDeEventos}
+  \addTitle{Aceitar Parceria}
+  \addrow{Ator principal}{Contratante ou Ambos}
+  \addrow{Ator secundário}{-}
+  \addrow{Pré-condições}{O ator estar autenticado no sistema}
+  \addrow{Pós-condições}{Novo(a) parceiro(a) adicionado(a) a lista de  parceiros do ator.}
+  
+  \startBasicFlow{Ator} {Sistema}
+  \addItemByColumnOne{O ator acessa a página inicial do sistema personalizada a ele.}
+  \addItemByColumnTwo{O sistema busca em sua base de dados todas as requisições de parcerias pendentes ao ator.}
+  
+  \addItemByColumnOne{Uma notificação push é apresentada ao ator no ícone “Novas Parcerias” do menu principal. Para visualizar a lista de requições pendentes, o ator deve passar o mouse sob este menu e um menu drop-down será apresentado ao ator contendo todas as requisições de parcerias.}
+ 
+  \addEmptyColumn
+  
+  \addItemByColumnOne{Para responder a requisição o ator deve clicar no botão “confirmar” ou “cancelar” de cada uma das requisições da lista.}
+  
+  \addItemByColumnTwo{Ao clicar no botão “confirmar” o sistema confirma a parceria entre ambos os contratantes e apresenta uma mensagem de sucesso ao ator.}
+  
+  \startAlternativeFlow{Fluxo alternativo 1}
+  \addItemByColumnOne{No item 4 do fluxo principal o ator clica no botão “cancelar” da requisição de parceria.}
+  \addItemByColumnTwo{O sistema remove a requisição de parceria da sua base de dados, impedindo assim que a mesma requisição volte a ser apresentada ao ator.}
+\end{fluxoDeEventos}
