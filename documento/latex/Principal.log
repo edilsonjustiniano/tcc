@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  19 SEP 2015 18:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  19 SEP 2015 18:34
 entering extended mode
 **Principal.tex
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.tex"
@@ -1817,39 +1817,102 @@ ndices.tex" [73] [74
 ]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/21_Ape
 ndice_01.tex"
-
-LaTeX Warning: Reference `fig:ap1:pagina_inicial_github' on page 75 undefined o
-n input line 8.
-
-
-<./imagens/apendices/pagina-inicial-github.png, id=898, 773.13844pt x 368.87813
+<./imagens/apendices/pagina-inicial-github.png, id=899, 773.13844pt x 368.87813
 pt>
 File: ./imagens/apendices/pagina-inicial-github.png Graphic file (type png)
  <use ./imagens/apendices/pagina-inicial-github.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-inicial-github.png used on 
 input line 12.
 (pdftex.def)             Requested size: 425.22746pt x 202.88359pt.
-
-
-LaTeX Warning: Reference `fig:ap1:pagina_home_github' on page 75 undefined on i
-nput line 18.
-
-[75
+ [75
 
  <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
 s/pagina-inicial-github.png>]
-<./imagens/apendices/pagina-home-github.png, id=906, 794.2172pt x 691.83469pt>
+<./imagens/apendices/pagina-home-github.png, id=909, 794.2172pt x 691.83469pt>
 File: ./imagens/apendices/pagina-home-github.png Graphic file (type png)
 
 <use ./imagens/apendices/pagina-home-github.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-home-github.png used on inp
 ut line 23.
 (pdftex.def)             Requested size: 436.8208pt x 380.51025pt.
+ [76 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+dices/pagina-home-github.png>]
+<./imagens/download-neo4j.png, id=917, 846.91406pt x 686.565pt>
+File: ./imagens/download-neo4j.png Graphic file (type png)
+
+<use ./imagens/download-neo4j.png>
+Package pdftex.def Info: ./imagens/download-neo4j.png used on input line 36.
+(pdftex.def)             Requested size: 338.75963pt x 274.62112pt.
+
+<./imagens/neo4j-install-step1.png, id=919, 388.45125pt x 322.95656pt>
+File: ./imagens/neo4j-install-step1.png Graphic file (type png)
+
+<use ./imagens/neo4j-install-step1.png>
+Package pdftex.def Info: ./imagens/neo4j-install-step1.png used on input line 4
+5.
+(pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
+ [77 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/down
+load-neo4j.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/i
+magens/neo4j-install-step1.png>]
+<./imagens/neo4j-install-step2.png, id=929, 387.69844pt x 322.95656pt>
+File: ./imagens/neo4j-install-step2.png Graphic file (type png)
+
+<use ./imagens/neo4j-install-step2.png>
+Package pdftex.def Info: ./imagens/neo4j-install-step2.png used on input line 5
+5.
+(pdftex.def)             Requested size: 155.07661pt x 129.18033pt.
+
+<./imagens/neo4j-install-step3.png, id=931, 388.45125pt x 322.95656pt>
+File: ./imagens/neo4j-install-step3.png Graphic file (type png)
+
+<use ./imagens/neo4j-install-step3.png>
+Package pdftex.def Info: ./imagens/neo4j-install-step3.png used on input line 6
+4.
+(pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
+
+<./imagens/neo4j-install-step4.png, id=933, 388.45125pt x 322.95656pt>
+File: ./imagens/neo4j-install-step4.png Graphic file (type png)
+
+<use ./imagens/neo4j-install-step4.png>
+Package pdftex.def Info: ./imagens/neo4j-install-step4.png used on input line 7
+3.
+(pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
+ [78 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/neo4
+j-install-step2.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/la
+tex/imagens/neo4j-install-step3.png> <C:/Users/Andressa Faria/Documents/GitHub/
+tcc/documento/latex/imagens/neo4j-install-step4.png>]
+<./imagens/neo4j-install-step5.png, id=945, 389.20406pt x 323.70938pt>
+File: ./imagens/neo4j-install-step5.png Graphic file (type png)
+
+<use ./imagens/neo4j-install-step5.png>
+Package pdftex.def Info: ./imagens/neo4j-install-step5.png used on input line 8
+3.
+(pdftex.def)             Requested size: 155.67886pt x 129.48145pt.
+
+<./imagens/neo4j.jpg, id=948, 409.53pt x 268.00125pt>
+File: ./imagens/neo4j.jpg Graphic file (type jpg)
+
+<use ./imagens/neo4j.jpg>
+Package pdftex.def Info: ./imagens/neo4j.jpg used on input line 93.
+(pdftex.def)             Requested size: 245.7199pt x 160.80197pt.
+
+<./imagens/neo4j2.jpg, id=949, 1103.12125pt x 504.88625pt>
+File: ./imagens/neo4j2.jpg Graphic file (type jpg)
+
+<use ./imagens/neo4j2.jpg>
+Package pdftex.def Info: ./imagens/neo4j2.jpg used on input line 100.
+(pdftex.def)             Requested size: 441.24068pt x 201.95091pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/22_Ape
-ndice_02.tex" [76 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex
-/imagens/apendices/pagina-home-github.png>]
-<./imagens/apendice_img1.png, id=914, 526.96875pt x 501.875pt>
+ndice_02.tex" [79 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex
+/imagens/neo4j-install-step5.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc
+/documento/latex/imagens/neo4j.jpg>] [80 <C:/Users/Andressa Faria/Documents/Git
+Hub/tcc/documento/latex/imagens/neo4j2.jpg>]
+<./imagens/apendice_img1.png, id=963, 526.96875pt x 501.875pt>
 File: ./imagens/apendice_img1.png Graphic file (type png)
 
 <use ./imagens/apendice_img1.png>
@@ -1890,14 +1953,14 @@ Package xcolor Warning: Incompatible color definition on input line 33.
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/30_Ane
 xos.tex"
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis\31_Ane
-xo_01.tex" [77
+xo_01.tex" [81
 
  <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
 _img1.png>]))
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[78
+[82
 
 ]
 
@@ -1920,36 +1983,30 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 57.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 57.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
  ) 
 Here is how much of TeX's memory you used:
- 15786 strings out of 493921
- 253092 string characters out of 3144849
- 367480 words of memory out of 3000000
- 18407 multiletter control sequences out of 15000+200000
+ 15844 strings out of 493921
+ 254660 string characters out of 3144849
+ 368704 words of memory out of 3000000
+ 18447 multiletter control sequences out of 15000+200000
  69046 words of font info for 69 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 46i,12n,43p,1075b,1465s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{figure.caption.60} has been referenced but does n
-ot exist, replaced by a fixed one
-
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files (x86)/MiK
-TeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmtl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (79 pages, 3296066 bytes).
+ 46i,12n,43p,1075b,1463s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files (x86)/M
+iKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmtl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
+8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Principal.pdf (83 pages, 3723833 bytes).
 PDF statistics:
- 1169 PDF objects out of 1200 (max. 8388607)
- 250 named destinations out of 1000 (max. 500000)
- 580 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1219 PDF objects out of 1440 (max. 8388607)
+ 261 named destinations out of 1000 (max. 500000)
+ 620 words of extra memory for PDF output out of 10000 (max. 10000000)
 
