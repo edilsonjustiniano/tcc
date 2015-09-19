@@ -2,7 +2,7 @@
 <div id="container">
     <div id="user-profile-data">
         <img class="img-circle" src="{{user.photo}}" alt="Profile Photo" />
-        <form>
+        <form ng-submit="save()">
                 <legend>Configuração da conta</legend>
                 
                 <!-- Msg error -->
@@ -59,11 +59,48 @@
 
 
                 <input type="text" class="input-xlarge" ng-show="user.typeOfPerson == 'PHISIC'" ng-model="cpf" placeholder="CPF" />
+
+                <label>UF da empresa</label>
+                <select ng-model="user.ufWork" ng-change="getAllCitiesByStateForCompany()" >
+                    <option ng-repeat="uf in states | orderBy: 'name' " ng-hide="user.ufWork == uf">
+                        {{uf.name}}
+                    </option>
+                    <option>{{user.ufWork}}</option>
+                </select>
+                    
+                <label>Cidade da empresa</label>
+                <select ng-model="user.cityWork">
+                    <option ng-repeat="city in citiesCompany | orderBy: 'name' ">
+                        {{city.name}}
+                    </option>
+                    <option>{{user.cityWork}}</option>
+                </select>
+
+                <input type="text" class="input-xlarge" ng-model="user.company" placeholder="Nome da empresa" required="required" />
+                
+                <hr />
+
+                <label>UF onde vive</label>
+                <select ng-model="user.ufLives" ng-change="getAllCitiesByStateForLives()">
+                    <option ng-repeat="uf in states | orderBy: 'name' ">
+                        {{uf.name}}
+                    </option>
+                    <option>{{user.ufLives}}</option>
+                </select>
+                    
+                <label>Cidade onde vive</label>
+                <select ng-model="user.cityLives">
+                    <option ng-repeat="city in citiesLives | orderBy: 'name' ">
+                        {{city.name}}
+                    </option>
+                    <option>{{user.cityLives}}</option>
+                </select>
                 
                 <p>
-                <input type="submit" class="btn btn-large btn-primary" value="Próximo" />
+                <input type="submit" class="btn btn-large btn-primary" value="Salvar" />
                 <input type="reset" class="btn btn-large" value="Cancelar" />
                 </p>
+
             </form>
 
 </div>

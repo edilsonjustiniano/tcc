@@ -189,5 +189,128 @@ public class PersonServiceImpl implements PersonService {
 		return json;
 	}
 
+
+	@POST
+	@Path("/edit")
+	public JSONObject editAccount(String data) throws JSONException {
+		
+		System.out.println(data);
+		JSONObject jsonData = new JSONObject(data);
+		JSONObject json = null;
+		String token = null;
+		Token tokenDecoded = null;
+		token = jsonData.getString("token");
+		String userData = jsonData.getString("user");
+		JSONObject jsonUserData = new JSONObject(userData);
+		
+		Person p = new Person();
+		p.setName(jsonUserData.getString("name"));
+		p.setEmail(jsonUserData.getString("email"));
+		p.setTypeOfAccount(jsonUserData.getString("typeOfAccount"));
+		p.setAddress(jsonUserData.getString("address"));
+		p.setDistrict(jsonUserData.getString("district"));
+		p.setTypeOfPerson(jsonUserData.getString("typeOfPerson"));
+		
+		City cityWork = new City();
+		UF ufWork = new UF();
+		
+		cityWork.setName(jsonData.getString("cityWork"));
+		ufWork.setName(jsonUserData.getString("ufWork"));
+		cityWork.setUf(ufWork);
+		
+		City cityLives = new City();
+		UF ufLives = new UF();
+		
+		cityLives.setName(jsonUserData.getString("cityLives"));
+		ufLives.setName(jsonUserData.getString("ufLives"));
+		cityLives.setUf(ufLives);
+		
+		Company company = new Company();
+		
+		company.setName(jsonUserData.getString("company"));
+		
+		
+		
+		/* Check if the email is free or not */
+		if (!personController.isFreeEmail(jsonData.getString("email"))) {
+			return JSONUtil.generateJSONError(false, "Email já registrado, por favor utilize outro!");
+		}
+		
+		//Check if session is Valid
+		if (!tokenController.isValidToken(token)) {
+			
+			return JSONUtil.generateJSONError(false, "É necessário informar os dados pessoais primeiro!");
+		
+		} else { //token is filled
+
+			tokenDecoded = Base64Util.decodeToken(token.getBytes());
+			
+			//Check if the session is expired
+			TokenController tokenController = new TokenController();
+			if (tokenController.isExpiredSession(tokenDecoded)) {
+				return JSONUtil.generateJSONErrorSessionExpired(false, "Sessão expirada", true);
+			}
+			
+			if (!tokenController.isValidSession(tokenDecoded)) {
+				return JSONUtil.generateJSONErrorSessionExpired(false, "Sessão Inválida!", false);
+			}
+		}
+		
+		
+		//Check if there is a company with the same name informed by user and in the same city
+		JSONObject jsonWorksIn = null;
+		JSONObject jsonLocatedIn = null;
+		JSONObject jsonStateOfWork = null;
+		Company company = null;
+		City city = null;
+		UF uf = null;
+		
+		jsonData = new JSONObject(data);
+		String worksIn = jsonData.getString("worksIn"); //{"name":"CEP","locatedIn":{"name":"ITAJUBÁ"}}
+		jsonWorksIn = new JSONObject(worksIn);//{"name":"CEP","locatedIn":{"name":"ITAJUBÁ","state":{"name":"MINAS GERAIS"}}}
+		jsonLocatedIn = new JSONObject(jsonWorksIn.getString("locatedIn")); //{"name":"ITAJUBÁ","state":{"name":"MINAS GERAIS"}}
+		jsonStateOfWork = new JSONObject(jsonLocatedIn.getString("state"));//{"name":"MINAS GERAIS"}
+			
+		company = new Company();
+		company.setName(jsonWorksIn.getString("name"));
+		city = new City();
+		city.setName(jsonLocatedIn.getString("name"));
+		uf = new UF();
+		uf.setName(jsonStateOfWork.getString("name"));
+		city.setUf(uf);
+		company.setLocatedIn(city);
+
+		if (!companyController.companyAlreadyExist(company)) { //create node for company because it is not exist in graph
+			companyController.createCompany(company);
+		}
+			
+		//Now we need to edit the user data on database
+		Person person = new Person();
+		person.setEmail(tokenDecoded.getEmail()); //set original e-mail from user
+		person.setWorksIn(company);
+		
+		JSONObject jsonLivesIn = null;
+		JSONObject jsonState = null;
+		City cityLives = new City();
+		UF ufLives = new UF();
+		
+		jsonData = new JSONObject(data);
+		String livesIn = jsonData.getString("livesIn"); //{"name":"Itajubá","state":{"name":"Minas Gerais"}},"worksIn":{"name":"CEP1","locatedIn":{"name":"Itajubá","state":{"name":"Minas Gerais"}}},"district":"Centro","address":"Rua Nova, 100","token":"cGVkcm9AZ21haWwuY29tfHBlZHJv"}
+		jsonLivesIn = new JSONObject(livesIn);
+		jsonState = new JSONObject(jsonLivesIn.getString("state")); //{"name":"Minas Gerais"}
+		
+		cityLives.setName(jsonLivesIn.getString("name"));
+		ufLives.setName(jsonState.getString("name"));
+		cityLives.setUf(ufLives);
+			
+		person.setLivesIn(cityLives);
+		person.setAddress(jsonData.getString("address"));
+		person.setDistrict(jsonData.getString("district"));
+			
+		
+		
+		return null;
+	}
+
 	
 }
