@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  13 SEP 2015 16:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  19 SEP 2015 18:19
 entering extended mode
 **Principal.tex
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.tex"
@@ -1276,16 +1276,16 @@ las.tex" [12
 
 ])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/10_Int
-roducao.tex" [14
-
-]
+roducao.tex"
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 26.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 26.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 26.
-)
+ [14
+
+])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/11_Qua
 droTeorico.tex" [15]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
@@ -1816,20 +1816,43 @@ ndices.tex" [73] [74
 
 ]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/21_Ape
-ndice_01.tex" <./imagens/apendice_img1.png, id=900, 526.96875pt x 501.875pt>
+ndice_01.tex"
+
+LaTeX Warning: Reference `fig:ap1:pagina_inicial_github' on page 75 undefined o
+n input line 8.
+
+
+<./imagens/apendices/pagina-inicial-github.png, id=898, 773.13844pt x 368.87813
+pt>
+File: ./imagens/apendices/pagina-inicial-github.png Graphic file (type png)
+ <use ./imagens/apendices/pagina-inicial-github.png>
+Package pdftex.def Info: ./imagens/apendices/pagina-inicial-github.png used on 
+input line 12.
+(pdftex.def)             Requested size: 425.22746pt x 202.88359pt.
+
+
+LaTeX Warning: Reference `fig:ap1:pagina_home_github' on page 75 undefined on i
+nput line 18.
+
+[75
+
+ <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
+s/pagina-inicial-github.png>]
+<./imagens/apendices/pagina-home-github.png, id=906, 794.2172pt x 691.83469pt>
+File: ./imagens/apendices/pagina-home-github.png Graphic file (type png)
+
+<use ./imagens/apendices/pagina-home-github.png>
+Package pdftex.def Info: ./imagens/apendices/pagina-home-github.png used on inp
+ut line 23.
+(pdftex.def)             Requested size: 436.8208pt x 380.51025pt.
+)
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/22_Ape
+ndice_02.tex" [76 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex
+/imagens/apendices/pagina-home-github.png>]
+<./imagens/apendice_img1.png, id=914, 526.96875pt x 501.875pt>
 File: ./imagens/apendice_img1.png Graphic file (type png)
 
 <use ./imagens/apendice_img1.png>
-Package pdftex.def Info: ./imagens/apendice_img1.png used on input line 7.
-(pdftex.def)             Requested size: 263.48372pt x 250.93687pt.
-)
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/22_Ape
-ndice_02.tex" [75
-
- <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
-_img1.png>]
-File: ./imagens/apendice_img1.png Graphic file (type png)
- <use ./imagens/apendice_img1.png>
 Package pdftex.def Info: ./imagens/apendice_img1.png used on input line 8.
 (pdftex.def)             Requested size: 158.09184pt x 150.56366pt.
 
@@ -1867,13 +1890,14 @@ Package xcolor Warning: Incompatible color definition on input line 33.
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/30_Ane
 xos.tex"
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis\31_Ane
-xo_01.tex" [76
+xo_01.tex" [77
 
-]))
+ <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
+_img1.png>]))
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[77
+[78
 
 ]
 
@@ -1896,30 +1920,36 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 57.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 57.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
  ) 
 Here is how much of TeX's memory you used:
- 15769 strings out of 493921
- 252521 string characters out of 3144849
- 367499 words of memory out of 3000000
- 18396 multiletter control sequences out of 15000+200000
+ 15786 strings out of 493921
+ 253092 string characters out of 3144849
+ 367480 words of memory out of 3000000
+ 18407 multiletter control sequences out of 15000+200000
  69046 words of font info for 69 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 46i,12n,43p,1075b,1457s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files (x86)/M
-iKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmtl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
-8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (78 pages, 3052891 bytes).
+ 46i,12n,43p,1075b,1465s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{figure.caption.60} has been referenced but does n
+ot exist, replaced by a fixed one
+
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files (x86)/MiK
+TeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmtl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Principal.pdf (79 pages, 3296066 bytes).
 PDF statistics:
- 1160 PDF objects out of 1200 (max. 8388607)
- 247 named destinations out of 1000 (max. 500000)
- 570 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1169 PDF objects out of 1200 (max. 8388607)
+ 250 named destinations out of 1000 (max. 500000)
+ 580 words of extra memory for PDF output out of 10000 (max. 10000000)
 
