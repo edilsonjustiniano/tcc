@@ -1,32 +1,39 @@
 //App
 var TCCApp = angular.module('TCCApp', []);
 
-TCCApp.service('LoginService', function ($http) {
+TCCApp.service('LoginService', function ($http, $rootScope) {
 
     this.login = function (person, callback, error) {
         //$http.post('http://localhost:8080/WebService/session/login', JSON.stringify(person)).
         //success(callback);
         $http.post('http://localhost:8080/WebService/session/login', JSON.stringify(person))
-                .then(callback, error);
+                .then(callback, error).finally(function() {
+            console.log('teste');
+            console.log('finally');
+            console.log($rootScope.loading);
+            $rootScope.loading = false;
+            
+        });
     };
 });
 
 
-TCCApp.controller('LoginController', function ($scope, LoginService) {
+TCCApp.controller('LoginController', function ($scope, $rootScope, LoginService) {
 
     //UF Fields
     $scope.email = '';
     $scope.password = '';
-    $scope.loading = true;
     $scope.msg = {}; /* Error or success mesage */
     $scope.msg.type = '';
     $scope.msg.msg = '';
+     $rootScope.loading = true;
 
     $scope.login = function () {
 
         /* show loading image But it is not Work. It seems it wait for the finish */
         //$scope.loading = false;
 
+        $rootScope.loading = true;
         var person = {};
         person.email = $scope.email;
         person.password = $scope.password;
@@ -43,7 +50,11 @@ TCCApp.controller('LoginController', function ($scope, LoginService) {
                 window.localStorage['token'] = data.token;
                 window.location.href = 'home.html#/home';
             }
-        }, $scope.error);
+        }, $scope.error).finally(function() {
+            console.log('finally');
+            console.log($scope.loading);
+            $scope.loading = false;
+        });
     };
                            
     $scope.error = function(response) {
