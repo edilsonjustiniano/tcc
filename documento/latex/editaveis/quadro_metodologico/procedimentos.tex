@@ -124,7 +124,7 @@
 \newpage
 
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.5]{./imagens/structure-all-nodes.png}}
+	\centerline{\includegraphics[scale=0.4]{./imagens/structure-all-nodes.png}}
 	\caption[Modelo de dados da aplicação]
 	{Modelo de dados da aplicação. \textbf{Fonte:} Elaborado pelos autores.}
 	\label{fig:modelo_dados_aplicacao}
@@ -160,7 +160,7 @@
 \footnotetext[31]{Repositório: local cujo desenvolvedor utiliza para armazenar os documentos relacionados ao \textit{software}.}
 
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.35]{./imagens/github.jpg}}
+	\centerline{\includegraphics[scale=0.3]{./imagens/github.jpg}}
 	\caption[Tela de serviços do GitHub ]
 	{Tela de serviços do GitHub \textbf{Fonte:} Elaborado pelos autores.}
 	\label{fig:github_inicio}
@@ -175,7 +175,7 @@
 \par O Eclipse possui várias ferramentas, dentre elas, pode-se citar o editor de texto, usado não somente para a escrita de códigos em Java, e também a perspectiva de configuração para servidores \textit{web}, utilizada neste trabalho, conforme apresenta a Figura~\ref{fig:ide_eclipse}. Por meio desta perspectiva, foi configurada a aplicação \textit{container} Tomcat na versão 7.
 
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.35]{./imagens/eclipse-editor-texto.png}}
+	\centerline{\includegraphics[scale=0.3]{./imagens/eclipse-editor-texto.png}}
 	\caption[Ferramentas da IDE Eclipse]
 	{Ferramentas da IDE Eclipse \textbf{Fonte:} Elaborado pelos autores.}
 	\label{fig:ide_eclipse}
@@ -189,21 +189,20 @@
 
 \par O trabalho fez uso de um banco de dados orientado a grafos, o Neo4j. A escolha desse banco se deu pela sua simplicidade de instalação, configuração, facilidade de integração com a API \textit{Cypher} e por disponibilizar uma API REST para acesso aos seus dados, conforme descrito no quadro teórico deste trabalho. O Neo4j faz parte do enquadramento de softwares livres, seguindo o conceito \textit{open source}, o que permite ao desenvolvedor utilizá-lo da forma que melhor lhe convier. 
 
-
-\par Os passos para a instalação do banco de dados Neo4j são detalhados no apêndice tal desta pesquisa.
+\par Os passos para a instalação do banco de dados Neo4j são detalhados no Apêndice III deste trabalho.
 
 \par Posterior à configuração do ambiente, iniciou-se o desenvolvimento propriamente dito, apresentado a seguir.
 
 \subsection{Desenvolvimento}
+
 \par A princípio, utilizou-se as tecnologias Neo4j, sendo executado de forma \textit{embedded}, Primefaces e JSF. Porém não estava fluindo como o esperado. Outro problema encontrado ao utilizar tais tecnologias foi que tanto a parte cliente (\textit{front end}) quanto a parte servidor (\textit{back end}) se encontravam totalmente acoplados em uma aplicação Java \textit{web}.Por estes motivos decidiu-se mudar algumas das tecnologias utilizadas.
 
 \par Posterior a esse incidente, passou-se a utilizar então as linguagens HTML 5, CSS 3, Javascript e o \textit{framework} Angular JS para auxiliar no desenvolvimento do \textit{front end}, ao invés de Primefaces e JSF. Para acesso ao banco de dados, lançou-se mão da forma \textit{embedded} e passou-se a utilizar a API REST disponibilizada pelo próprio banco. Tais decisões nos permitiram desacoplar o sistema e manter o \textit{front end} e o \textit{back end} independentes, evitando, assim, que o mesmo problema voltasse a ocorrer.
 
 \par Como a forma de conexão ao banco de dados foi alterada, houve a necessidade de reescrever a classe responsável por realizar esta conexão, conforme apresenta a Figura~\ref{fig:codigo_comunicacao_banco}.
 
-\newpage
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.35]{./imagens/conexao-banco.jpg}}
+	\centerline{\includegraphics[scale=0.3]{./imagens/conexao-banco.jpg}}
 	\caption[Código de comunicação com o banco]
 	{Código de comunicação com o banco \textbf{Fonte:} Elaborado pelos autores.}
 	\label{fig:codigo_comunicacao_banco}
@@ -235,8 +234,9 @@
 
 \par Com o funcionamento do sistema de \textit{login}, passou-se a desenvolver a página inicial da aplicação, contendo as informações que são restritas ao usuário cadastrado. O sistema apresenta uma página inicial diferente para cada tipo de conta, sendo elas: contratantes, provedores de serviço ou ambos, contendo apenas as informações que são liberadas de acordo com o acesso do usuário, sendo essas informações relatórios, últimas atualizações na rede de parceiros, avaliações de serviços e prováveis parceiros. A página inicial do tipo contratante é apresentada na Figura~\ref{fig:pagina_inicial_contratante}.
 
+\newpage
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.35]{./imagens/home-contratante.png}}
+	\centerline{\includegraphics[scale=0.3]{./imagens/home-contratante.png}}
 	\caption[Página inicial do usuário contratante]
 	{Página inicial do usuário contratante \textbf{Fonte:} Elaborado pelos autores.}
 	\label{fig:pagina_inicial_contratante}
@@ -245,9 +245,8 @@
 
 \par O caso de uso localizar parceiros foi desenvolvido após a conclusão do caso de uso criar conta. A lógica deste caso de uso consiste em buscar por possíveis parceiros, com base na rede de parceria do contrante. A Figura~\ref{fig:pagina_localizar_parceiro} apresenta esta busca.
 
-\newpage
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.35]{./imagens/localizar-parceiro.png}}
+	\centerline{\includegraphics[scale=0.3]{./imagens/localizar-parceiro.png}}
 	\caption[Página de localização de parceiros]
 	{Página de localização de parceiros \textbf{Fonte:} Elaborado pelos autores.}
 	\label{fig:pagina_localizar_parceiro}
