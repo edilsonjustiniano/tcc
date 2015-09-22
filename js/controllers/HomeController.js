@@ -1,9 +1,10 @@
 app.controller('HomeController', function ($scope, PartnerService, SessionService, ServiceProviderService, FeedsService) {
 
-    $scope.typeOfAccount = '';
     $scope.feeds = []; //mix of the both feeds partnership and ratings
     $scope.myServices = [];
     $scope.dicas = [];
+    $scope.loading = true;
+    
     $scope.dicas.push({
         dica: 'Cadastre todos os serviços que você realiza!'
     }, {
@@ -130,6 +131,7 @@ app.controller('HomeController', function ($scope, PartnerService, SessionServic
                     });
                 }
             }
+            $scope.loading = false;
         }, $scope.error);
     };
 

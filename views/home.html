@@ -3,6 +3,7 @@
     <div id="feed-content" ng-hide="typeOfAccount == 'SERVICE_PROVIDER'">
 
         <h1>Últimas atualizações</h1>
+        <loading></loading>
 
         <div class="feeds" ng-repeat="iter in feeds">
             <!-- Últimas parcerias criadas -->
@@ -25,9 +26,10 @@
     </div>
     
     
-    <div id="feed-content" ng-hide="typeOfAccount == 'CONTRACTOR'">
+    <div id="feed-content" ng-hide="typeOfAccount == 'CONTRACTOR' || typeOfAccount == undefined">
         
         <h1>Dicas</h1>
+        <loading></loading>
         Notamos que você realiza o(s) seguinte(s) serviço(s):
         <span class="services" ng-repeat="iter in myServices">{{iter.name}}, </span>
         

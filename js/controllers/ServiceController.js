@@ -12,6 +12,7 @@ app.controller('ServiceController', function ($scope, ServiceProviderService, Se
             $scope.services = [];
             return;
         }
+        $scope.loading = true;
 
         //MenuBarService.getServicesProvidersByService($scope.service, function (callback) {
         ServiceService.getServicesByName($scope.service, function (callback) {
@@ -32,6 +33,7 @@ app.controller('ServiceController', function ($scope, ServiceProviderService, Se
                     });
                 }
             }
+            $scope.loading = false;
         }, $scope.error);
     };
 
@@ -71,7 +73,7 @@ app.controller('ServiceController', function ($scope, ServiceProviderService, Se
     };
 
     $scope.getMyServices = function () {
-
+        $scope.loading = true;
         ServiceProviderService.getMyServices(function (callback) {
             var data = callback.data;
             if (!data.success) {
@@ -88,6 +90,7 @@ app.controller('ServiceController', function ($scope, ServiceProviderService, Se
                     });
                 }
             }
+            $scope.loading = false;
         }, $scope.error);
     };
 

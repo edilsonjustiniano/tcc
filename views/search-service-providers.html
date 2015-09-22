@@ -9,6 +9,7 @@
     </div>
 
     <div id="list-service-providers">
+        <loading></loading>
         <div class="options-service-providers" ng-repeat="provider in serviceProviders | orderBy: name" ng-show="serviceProviders.length > 0" ng-click="selectServiceProvider(provider)">
             <img class="img-circle" src="upload/user-profile.png" title="{{provider.name}}">
             <span>{{provider.name}}</span>

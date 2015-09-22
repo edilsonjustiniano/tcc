@@ -2,6 +2,7 @@
 <div id="container">
 
    <div id="user-profile-data">
+        <loading></loading>
         <img class="img-circle" src="{{serviceProvider.photo}}" alt="Profile Photo" />
         <span class="name">{{serviceProvider.name}}</span>
         <span class="other-infos">Idade</span>
@@ -46,6 +47,7 @@
 
     <div class="service-provider-evaluates">
         <h3>Em minha rede de parceiros</h3>
+        <loading></loading>
         <span class="note-rating">Avaliado por: {{ratingInMyNetwork.length}} parceiro(s) Média: {{averageInMyNetwork}}</span>
         <div class="progress progress-info progress-striped">
             <div class="bar" style="width: {{percentInMyNetwork}}%" title="Avaliado por: {{personsWhoseRateitInMyNetwork}}"></div>
@@ -59,6 +61,7 @@
         
         
         <h3>Na empresa onde trabalho</h3>
+        <loading></loading>
         <span class="note-rating">Avaliado por: {{ratingInMyCompany.length}} pessoa(s) Média: {{averageInMyCompany}}</span>
         <div class="progress progress-success progress-striped">
             <div class="bar" style="width: {{percentInMyCompany}}%" title="Avaliado por: {{personsWhoseRateitInMyCompany}}"></div>
@@ -72,6 +75,7 @@
         
         
         <h3>Em minha cidade</h3>
+        <loading></loading>
         <span class="note-rating">Avaliado por: {{ratingInMyCity.length}} pessoa(s) Média: {{averageInMyCity}}</span>
         <div class="progress progress-warning progress-striped">
             <div class="bar" style="width: {{percentInMyCity}}%" title="Avaliado por: {{personsWhoseRateitInMyCity}}"></div>

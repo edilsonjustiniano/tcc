@@ -22,7 +22,7 @@
     <div id="list-my-services">
 
         <h1>Meus serviços</h1>
-
+        <loading></loading>
         <div class="services" ng-repeat="iter in myServices | orderBy: name">
             <span class="service-name">{{iter.name}}</span>
             <div class="remove" ng-click="removeService(iter)"></div>

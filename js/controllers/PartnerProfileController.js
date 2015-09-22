@@ -25,6 +25,8 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 	$scope.msg = {}; /* Error or success mesage */
 	$scope.msg.type = '';
 	$scope.msg.msg = '';
+    
+    $scope.loading = true;
 
 	$scope.getPartnerData = function() {
 
@@ -134,6 +136,7 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
                 }
                 
             }
+            $scope.loading = false;
         });
     };
     

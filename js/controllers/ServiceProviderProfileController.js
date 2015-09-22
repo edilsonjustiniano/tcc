@@ -45,6 +45,8 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
     $scope.showAddRating = false;
     $scope.showAddMesage = false;
     
+    $scope.loading = true;
+    
     $scope.getServiceProviderData = function () {
 
         ServiceProviderService.getServiceProviderData($scope.serviceProvider, function (callback) {
@@ -199,6 +201,9 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
                     $scope.averageInMyCity = ServiceProviderService.calculateAverage($scope.ratingInMyCity);
                     $scope.percentInMyCity = ServiceProviderService.calculatePercentage($scope.averageInMyCity);
                 }
+                
+                $scope.loading = false;
+                
             }, $scope.error);
         }
     };

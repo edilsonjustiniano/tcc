@@ -77,11 +77,14 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 			$scope.possibleNewPartners = [];
 			return;
 		}
+        
 
 		/* Only contractor user can perform this query */
 		if (window.sessionStorage.getItem('typeOfAccount') == 'SERVICE_PROVIDER') {
 			return;
 		}
+        
+        $scope.loading = true;
 		PartnerService.searchNewPartners($scope.newPartner, function(callback) {
 			var data = callback.data;
 			if (data.success) { 
@@ -128,6 +131,7 @@ app.controller('PartnerNetworkController', function ($scope, PartnerNetworkServi
 				}
 				window.localStorage['token'] = data.token;
 			}
+            $scope.loading = false;
 		}, $scope.error);
 	};
 	

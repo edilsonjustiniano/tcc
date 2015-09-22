@@ -4,8 +4,9 @@
 
         <div id="add-partner" ng-hide="typeOfAccount == 'SERVICE_PROVIDER'">
             <h1>Adicionar Parceiros</h1>
+            
             <input class="span9" type="text" ng-model="newPartner" ng-change="searchNewPartners()" placeholder="Informe o nome do(a) novo(a) paceiro(a)">
-
+            <loading></loading>
             <div ng-repeat="iter in possibleNewPartners | orderBy: 'name' ">
                 <div class="user-found">
                     <img class="img-circle" src="{{iter.photo}}" alt="Profile Photo" ng-click="openPartnerProfile(iter)" />
@@ -17,7 +18,6 @@
         <!-- Partners registered before -->
         <div id="list-partners">
             <h1>Seus Parceiros</h1>
-
             <input class="span9" type="text" ng-model="filtro" placeholder="Filtrar pelo nome do paceiro(a)">
 
             <div ng-repeat="iter in partners | orderBy: 'name' | filter:filtro">

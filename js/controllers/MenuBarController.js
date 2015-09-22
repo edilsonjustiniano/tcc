@@ -48,7 +48,7 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
     $scope.services = [];
     $scope.service = '';
     $scope.serviceProviders = [];
-
+    $scope.loading = true;
 
     $scope.getUserInfoFromSession = function () {
 
@@ -119,6 +119,8 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
                 });
 
             }
+            
+            $scope.loading = false;
 
         }, $scope.error);
     };

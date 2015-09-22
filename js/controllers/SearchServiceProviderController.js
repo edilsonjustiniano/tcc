@@ -38,6 +38,8 @@ app.controller('SearchServiceProviderController', function ($scope, ServiceProvi
         if (service == null) {
             return;
         }
+        
+        $scope.loading = true;
 
         ServiceProviderService.getServicesProvidersByService(service.name, function (callback) {
             var data = callback.data;
@@ -80,7 +82,7 @@ app.controller('SearchServiceProviderController', function ($scope, ServiceProvi
                     });
                 }
             }
-
+            $scope.loading = false;
             console.log($scope.serviceProviders.length);
             $scope.service = service.name;
             $scope.services = [];

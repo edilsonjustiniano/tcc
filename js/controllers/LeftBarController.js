@@ -4,8 +4,10 @@ app.controller('LeftBarController',
     $scope.user = {};
     $scope.lastestRatings = [];
     $scope.possiblePartners = [];
+    $scope.loading = true;
     
 	$scope.getTypeOfAccount = function() {
+        
 		SessionService.getTypeOfAccount(function(callback) {
             var data = callback.data;
 			if (!data.success) { /* Ivalid session or expired session */
@@ -35,6 +37,7 @@ app.controller('LeftBarController',
 		if (window.sessionStorage.getItem('typeOfAccount') == 'SERVICE_PROVIDER') {
 			return;
 		}
+        
 		PartnerService.getPossiblePartners(function(callback) {
             var data = callback.data;
 			if (data.success) { // Ivalid session or expired session
@@ -124,7 +127,8 @@ app.controller('LeftBarController',
 						});
 					});
 				}
-
+                
+                $scope.loading = false;
 			}
 		}, $scope.error);
 	};
