@@ -15,11 +15,12 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
 	$scope.partner = {};
 	$scope.partner.email = data[0]; //email
 	$scope.partner.name = data[1]; //name
+    $scope.gender = '';
 	$scope.myPartner = true;
     
     //commons partners
     $scope.commonsPartners = [];
-    $scope.limitCommonsPartner = 3;
+    $scope.limitCommonsPartner = 7;
     $scope.otherCommonsPartner = '';
 
 	$scope.msg = {}; /* Error or success mesage */
@@ -40,6 +41,15 @@ app.controller('PartnerProfileController', function($scope, $routeParams, Partne
                 var userData = data.results[0];
 				$scope.partner.photo = userData.photo; //get photo
                 $scope.partner.photo == null ? $scope.partner.photo = 'image/user-profile.png' : $scope.partner.photo = $scope.partner.photo;
+                $scope.partner.gender = userData.gender;
+                $scope.partner.company = userData.company;
+                $scope.partner.city = userData.city;
+                
+                if ($scope.partner.gender == 'M') {
+                    $scope.gender = 'Masculino';
+                } else {
+                    $scope.gender = 'Feminino';   
+                }
 			}
 		});
 	};
