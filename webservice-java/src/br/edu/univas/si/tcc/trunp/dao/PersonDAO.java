@@ -175,7 +175,8 @@ public class PersonDAO {
 				+ "(partner)-[:LIVES_IN]->(city), "
 				+ "(partner)-[:WORKS_IN]->(company) "
 				+ "RETURN DISTINCT({name: partner.name, email: partner.email, photo: partner.photo, city: city.name, " +
-				"company: company.name}) as partner; \"}";
+				"company: company.name, cpf: partner.cpf, cnpj: partner.cnpj, typeOfPerson: partner.typeOfPerson, " +
+				"gender: partner.gender}) as partner; \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource
 				.accept(MediaType.APPLICATION_JSON)
