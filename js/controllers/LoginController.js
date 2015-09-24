@@ -50,11 +50,7 @@ TCCApp.controller('LoginController', function ($scope, $rootScope, LoginService)
                 window.localStorage['token'] = data.token;
                 window.location.href = 'home.html#/home';
             }
-        }, $scope.error).finally(function() {
-            console.log('finally');
-            console.log($scope.loading);
-            $scope.loading = false;
-        });
+        }, $scope.error);
     };
                            
     $scope.error = function(response) {

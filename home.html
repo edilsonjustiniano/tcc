@@ -22,6 +22,9 @@
 
             <ul class="nav pull-right">
 
+               <li>
+                   <loading></loading>
+               </li>
                 <!-- Search service providers -->
                 <li ng-hide="user.typeOfAccount == 'SERVICE_PROVIDER'">
                     <a href="#/search-service-providers">Busca</a>
@@ -115,6 +118,7 @@
         
         <div id="last-ratings" ng-hide="user.typeOfAccount == 'SERVICE_PROVIDER'">
             <h1>Suas últimas avaliações</h1>
+            <loading></loading>
             <div class="ratings" ng-repeat="iter in lastestRatings" >
                 <img class="img-circle" src="{{iter.photo}}" title="{{iter.name}}" ng-click="openServiceProviderProfile(iter)" />
                 <span class="name" ng-click="openServiceProviderProfile(iter)">{{iter.name}}</span>
@@ -134,6 +138,7 @@
 	    <!-- Possible partners -->
 	    <div id="possible-partners" ng-hide="user.typeOfAccount == 'SERVICE_PROVIDER'">
 	        <h1>Possíveis parceiros</h1>
+	        <loading></loading>
 	        <div class="partners" ng-repeat="iter in possiblePartners">
                 <img class="img-circle" src="{{iter.photo}}" title="{{iter.name}}" ng-click="openPartnerProfile(iter)" />
                 <span class="name" ng-click="openPartnerProfile(iter)">{{iter.name}}</span>
@@ -155,6 +160,9 @@
     <!-- Angular libs -->
     <script type="text/javascript" src="js/angularjs/angular.min.js"></script>
     <script type="text/javascript" src="js/angularjs/angular-route.min.js"></script>
+    
+    <!-- Charts -->
+    <script type="text/javascript" src="js/charts/Chart.js"></script>
 
     <!-- App -->
     <script type="text/javascript" src="js/app.js"></script>
@@ -181,5 +189,8 @@
     <script type="text/javascript" src="js/controllers/SearchServiceProviderController.js"></script>
     <script type="text/javascript" src="js/controllers/ServiceController.js"></script>
     <script type="text/javascript" src="js/controllers/ConfigController.js"></script>
+    
+    <!-- Directive -->
+    <script type="text/javascript" src="js/directives/Loading.js"></script>
 </body>
 </html>
