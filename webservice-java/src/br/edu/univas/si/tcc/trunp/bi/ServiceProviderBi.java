@@ -34,12 +34,12 @@ public class ServiceProviderBi {
 
 	public JSONArray getServiceProviderRatingInMyCompany(Person person,
 			String service, String provider) throws JSONException {
-		return dao.getServiceProviderRatingInMyCity(person, service, provider);
+		return dao.getServiceProviderRatingInMyCompany(person, service, provider);
 	}
 
 	public JSONArray getServiceProviderRatingInMyCity(Person person,
 			String service, String provider) throws JSONException {
-		return dao.getServiceProviderRatingInMyCompany(person, service, provider);
+		return dao.getServiceProviderRatingInMyCity(person, service, provider);
 	}
 
 	public boolean isNewService(String service) {
