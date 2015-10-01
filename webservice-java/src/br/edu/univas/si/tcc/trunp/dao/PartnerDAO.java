@@ -338,8 +338,8 @@ public class PartnerDAO {
 		String query = null;
 		
 		query = "{\"query\":\" MATCH (me:Person {email: '" + person.getEmail() + "'}), " +
-							"(users:Person), " +
-							"(users)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me) " +
+							"(users:Person)/*, " +
+							"(users)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me)*/ " +
 							"WHERE users.name =~ '" + partner + ".*' " +
 							"AND users.typeOfAccount <> 'SERVICE_PROVIDER' " +
 							"AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) " + 

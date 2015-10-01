@@ -7,12 +7,22 @@ TCCApp.service('CreateAccountWorkDataService', function($http){
 		$http.post('http://localhost:8080/WebService/person/createaccount/workdata', JSON.stringify(person)).
 		then(callback, error);
 	};
+
+	this.getAllStates = function(success, error) {
+        $http.get('http://localhost:8080/WebService/uf').
+        then(success, error);
+    };
+
+    this.getAllCitiesByState = function(state, success, error) {
+        $http.get('http://localhost:8080/WebService/city/cities/' + state).
+        then(success, error);
+    };
 });
 
 
-TCCApp.controller('CreateAccountWorkData', ['$scope','CreateAccountWorkDataService', 'CityService',
- function($scope, CreateAccountWorkDataService, CityService){
-	
+TCCApp.controller('CreateAccountWorkData', ['$scope','CreateAccountWorkDataService',
+ function($scope, CreateAccountWorkDataService) {
+
 	//Create the attributes
 	$scope.states = [];
 	$scope.ufCompany = '';
@@ -32,7 +42,7 @@ TCCApp.controller('CreateAccountWorkData', ['$scope','CreateAccountWorkDataServi
 
 	$scope.getAllStates = function() {
 
-		CityService.getAllStates(function(callback) {
+		CreateAccountWorkDataService.getAllStates(function(callback) {
 			var array = callback.data.results;
 			array.forEach(function(iter){
 				$scope.states.push({name: iter.name, abbreviation: iter.abbreviation});
@@ -43,7 +53,7 @@ TCCApp.controller('CreateAccountWorkData', ['$scope','CreateAccountWorkDataServi
 	$scope.getAllStates(); //get All states
 
 	$scope.getAllCitiesByStateForCompany = function() {
-		CityService.getAllCitiesByState($scope.ufCompany.trim(), function(callback) {
+		CreateAccountWorkDataService.getAllCitiesByState($scope.ufCompany.trim(), function(callback) {
 			var array = callback.data.results;
 			array.forEach(function(iter){
 				$scope.citiesCompany.push({name: iter.name});
@@ -52,7 +62,7 @@ TCCApp.controller('CreateAccountWorkData', ['$scope','CreateAccountWorkDataServi
 	};
 
 	$scope.getAllCitiesByStateForLives = function() {
-		CityService.getAllCitiesByState($scope.ufLives.trim(), function(callback) {
+		CreateAccountWorkDataService.getAllCitiesByState($scope.ufLives.trim(), function(callback) {
 			var array = callback.data.results;
 			array.forEach(function(iter){
 				$scope.citiesLives.push({name: iter.name});
