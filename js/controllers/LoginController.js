@@ -26,7 +26,7 @@ TCCApp.controller('LoginController', function ($scope, $rootScope, LoginService)
     $scope.msg = {}; /* Error or success mesage */
     $scope.msg.type = '';
     $scope.msg.msg = '';
-     $rootScope.loading = true;
+    $rootScope.loading = false;
 
     $scope.login = function () {
 
@@ -43,11 +43,12 @@ TCCApp.controller('LoginController', function ($scope, $rootScope, LoginService)
             if (!data.success) {
                 $scope.msg.type = 'ERROR';
                 $scope.msg.msg = data.mesage;
-                $scope.loading = true;
+                $scope.loading = false;
             } else {
                 $scope.msg.type = 'SUCCESS';
                 $scope.msg.type = data.mesage;
                 window.localStorage['token'] = data.token;
+                $scope.loading = false;
                 window.location.href = 'home.html#/home';
             }
         }, $scope.error);
