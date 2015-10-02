@@ -8,9 +8,9 @@ app.controller('HomeController', function ($scope, PartnerService, SessionServic
     $scope.dicas.push({
         dica: 'Cadastre todos os serviços que você realiza!'
     }, {
-        dica: 'Quanto mais serviços forncecer maiores serão suas oportunidades!'
+        dica: 'Quanto mais serviços fornecer maiores serão suas oportunidades!'
     }, {
-        dica: 'Capriche nos trabalhos! Afinal, são eles que vão te garantir melhores oportunidades!'
+        dica: 'Capriche nos trabalhos! Afinal, são eles que vão lhe garantir melhores oportunidades!'
     }, {
         dica: 'Se torne um(a) profissional qualificado(a)!'
     });
@@ -174,7 +174,7 @@ app.controller('HomeController', function ($scope, PartnerService, SessionServic
     };
     
     $scope.lineChartData = {
-			labels : ["January","February","March","April","May","June","July"],
+			labels : ["Jan","Fev","Março","Abril","Maio","Junho","Julho"],
 			datasets : [
 				{
 					label: "My First dataset",
