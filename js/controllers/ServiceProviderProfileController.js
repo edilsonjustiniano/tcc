@@ -1,4 +1,5 @@
-app.controller('ServiceProviderProfileController', function ($scope, $routeParams, ServiceProviderService, RatingService) {
+app.controller('ServiceProviderProfileController', 
+    function ($scope, $routeParams, ServiceProviderService, RatingService, ReportService) {
 
     // Decode the String
     var doubleUnderscore = $routeParams.provider.indexOf("__");
@@ -264,4 +265,118 @@ app.controller('ServiceProviderProfileController', function ($scope, $routeParam
      $scope.error = function(response) {
         console.log('error: '); 
     };
+
+    $scope.lastEvaluateOfServiceProvider = function(){ 
+        ReportService.lastEvaluateOfServiceProvider( 
+            $scope.serviceProvider.email, 
+            $scope.serviceProvider.service, 
+            20, function (callback){
+
+                var data = callback.data;
+                if (!data.success) {
+                    window.localStorage['token'] = null;
+                    window.sessionStorage.setItem('typeOfAccount', null);
+                    window.location.href = 'index.html';
+                } else {
+                    var array = data.results;
+                    var notes = [0, 0, 0, 0];
+                    var evaluates = [0, 0, 0, 0];
+                    var results = [];
+
+
+                    for (var i = 0; i < array.length; i++) {
+                        if(i < 5){
+                            notes[0] += array[i];
+                            evaluates[0] += 1;
+                        }
+                        if (i < 10) {
+                            notes[1] += array[i];
+                            evaluates[1] += 1;
+                        }
+                        if(i < 15){
+                            notes[2] += array[i];
+                            evaluates[2] += 1;
+                        }
+                        if(i < 20){
+                            notes[3] += array[i];
+                            evaluates[3] += 1;
+                        }
+                    }
+
+                    for (var i = 0; i < notas.length; i++) {
+                        if (notes[i] > 0) {
+                            results[i] = notes[i] / evaluates[i];
+                        } else {
+                            results[i] = 0;
+                        }
+                        
+                    }
+                    array.forEach(function(iter) {
+                        var dateSplit = iter.date.split(' ');
+                        dateSplit = dateSplit[0];
+                        dateSplit = dateSplit.split('-'); //[2015] [08] [11]
+                        var year = dateSplit[0];
+                        var month = Number.parseInt(dateSplit[1]);
+                        var day = dateSplit[2];
+                        
+                        $scope.ratingInMyCity.push({
+                            partner : iter.partner, //partner name
+                            note    : iter.note, //note
+                            comments: iter.comments, //comments
+                            date    : day + '/' + month + '/' + year  //date
+                        });
+                        $scope.personsWhoseRateitInMyCity += iter.partner + '\n';
+                    });
+                    window.localStorage['token'] = data.token;
+                    
+                    $scope.averageInMyCity = ServiceProviderService.calculateAverage($scope.ratingInMyCity);
+                    $scope.percentInMyCity = ServiceProviderService.calculatePercentage($scope.averageInMyCity);
+                }
+
+            }, $scope.error)
+    };
+
+    $scope.lastEvaluateOfServiceInNetwork = function(){ 
+        return Math.round(Math.random()*100)
+    };
+    
+    $scope.lineChartData = {
+            labels : ["5 últimas","10 últimas","15 últimas","20 últimas"],
+            datasets : [
+                {
+                    label: "Avaliações de " + $scope.serviceProvider.name,
+                    fillColor : "rgba(220,220,220,0.2)",
+                    strokeColor : "rgba(220,220,220,1)",
+                    pointColor : "rgba(220,220,220,1)",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill : "#fff",
+                    pointHighlightStroke : "rgba(220,220,220,1)",
+                    data : [
+                        $scope.lastEvaluateOfServiceProvider()
+                    ]
+                },
+                {
+                    label: "Avaliações da minha rede de parceiros",
+                    fillColor : "rgba(151,187,205,0.2)",
+                    strokeColor : "rgba(151,187,205,1)",
+                    pointColor : "rgba(151,187,205,1)",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill : "#fff",
+                    pointHighlightStroke : "rgba(151,187,205,1)",
+                    data : [
+                        $scope.lastEvaluateOfServiceInNetwork()
+                    ]
+                }
+            ]
+
+        }
+
+    $scope.loadGraph = function(){
+        var ctx = document.getElementById("canvas").getContext("2d");
+        window.myLine = new Chart(ctx).Line($scope.lineChartData, {
+            responsive: true
+        });
+    };
+    
+    $scope.loadGraph();
 });
