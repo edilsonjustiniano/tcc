@@ -47,6 +47,8 @@ app.controller('ServiceProviderProfileController',
     $scope.showAddMesage = false;
     
     $scope.loading = true;
+
+    $scope.reportResults = [2, 5, 4, 1];
     
     $scope.getServiceProviderData = function () {
 
@@ -281,56 +283,34 @@ app.controller('ServiceProviderProfileController',
                     var array = data.results;
                     var notes = [0, 0, 0, 0];
                     var evaluates = [0, 0, 0, 0];
-                    var results = [];
-
-
+                    
                     for (var i = 0; i < array.length; i++) {
                         if(i < 5){
-                            notes[0] += array[i];
+                            notes[0] += array[i].note;
                             evaluates[0] += 1;
                         }
                         if (i < 10) {
-                            notes[1] += array[i];
+                            notes[1] += array[i].note;
                             evaluates[1] += 1;
                         }
                         if(i < 15){
-                            notes[2] += array[i];
+                            notes[2] += array[i].note;
                             evaluates[2] += 1;
                         }
                         if(i < 20){
-                            notes[3] += array[i];
+                            notes[3] += array[i].note;
                             evaluates[3] += 1;
                         }
                     }
 
-                    for (var i = 0; i < notas.length; i++) {
+                    for (var i = 0; i < notes.length; i++) {
                         if (notes[i] > 0) {
-                            results[i] = notes[i] / evaluates[i];
+                            $scope.reportResults[i] = notes[i] / evaluates[i];
                         } else {
-                            results[i] = 0;
+                            $scope.reportResults[i] = 0;
                         }
                         
                     }
-                    array.forEach(function(iter) {
-                        var dateSplit = iter.date.split(' ');
-                        dateSplit = dateSplit[0];
-                        dateSplit = dateSplit.split('-'); //[2015] [08] [11]
-                        var year = dateSplit[0];
-                        var month = Number.parseInt(dateSplit[1]);
-                        var day = dateSplit[2];
-                        
-                        $scope.ratingInMyCity.push({
-                            partner : iter.partner, //partner name
-                            note    : iter.note, //note
-                            comments: iter.comments, //comments
-                            date    : day + '/' + month + '/' + year  //date
-                        });
-                        $scope.personsWhoseRateitInMyCity += iter.partner + '\n';
-                    });
-                    window.localStorage['token'] = data.token;
-                    
-                    $scope.averageInMyCity = ServiceProviderService.calculateAverage($scope.ratingInMyCity);
-                    $scope.percentInMyCity = ServiceProviderService.calculatePercentage($scope.averageInMyCity);
                 }
 
             }, $scope.error)
@@ -352,8 +332,11 @@ app.controller('ServiceProviderProfileController',
                     pointHighlightFill : "#fff",
                     pointHighlightStroke : "rgba(220,220,220,1)",
                     data : [
-                        $scope.lastEvaluateOfServiceProvider()
-                    ]
+                        $scope.reportResults[0],
+                        $scope.reportResults[1],
+                        $scope.reportResults[2],
+                        $scope.reportResults[3]
+                    ]   
                 },
                 {
                     label: "Avaliações da minha rede de parceiros",
@@ -364,13 +347,18 @@ app.controller('ServiceProviderProfileController',
                     pointHighlightFill : "#fff",
                     pointHighlightStroke : "rgba(151,187,205,1)",
                     data : [
+                        $scope.lastEvaluateOfServiceInNetwork(),
+                        $scope.lastEvaluateOfServiceInNetwork(),
+                        $scope.lastEvaluateOfServiceInNetwork(),
                         $scope.lastEvaluateOfServiceInNetwork()
                     ]
                 }
             ]
 
-        }
+        };
 
+    $scope.lastEvaluateOfServiceProvider();
+        
     $scope.loadGraph = function(){
         var ctx = document.getElementById("canvas").getContext("2d");
         window.myLine = new Chart(ctx).Line($scope.lineChartData, {

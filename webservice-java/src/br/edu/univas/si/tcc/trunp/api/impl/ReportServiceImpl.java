@@ -1,6 +1,7 @@
 package br.edu.univas.si.tcc.trunp.api.impl;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
@@ -25,6 +26,7 @@ public class ReportServiceImpl implements ReportService {
 
 	private ReportController reportController = new ReportController();
 
+	@GET
 	@Path("/lastEvaluateOfServiceProvider")
 	public JSONObject lastEvaluateOfServiceProvider(
 			@QueryParam("token") String token,
@@ -47,6 +49,7 @@ public class ReportServiceImpl implements ReportService {
 		return json;
 	}
 
+	@GET
 	@Path("/lastEvaluateOfServiceInNetwork")
 	public JSONObject lastEvaluateOfServiceInNetwork(
 			@QueryParam("token") String token,
