@@ -46,13 +46,13 @@
     </div>
 
      <!-- Grafico -->
-    <div style="width:50%">
+    <div id="report-line">
         <div>
             <canvas id="canvas" height="450" width="600"></canvas>
         </div>
         <div id="legend-graphic">
-            <div class="first"></div><p>Avaliações do provedor de Serviço</p>
-            <div class="second"></div><p>Avaliações do mesmo serviço em minha rede de parceiros</p>
+            <span>Média das avaliações de {{serviceProvider.name}} como {{serviceProvider.service}}<div class="first"></div></span>
+            <span>Média das avaliações de {{serviceProvider.service}} em minha rede de parceiros<div class="second"></div></span>
         </div>
     </div>
 

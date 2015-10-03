@@ -741,20 +741,34 @@ label.subtitle {
 }
 
 /* Gráficos */
+#report-line {
+    display: block;
+    width: 50%;
+}
 #legend-graphic {
     display: block;
 }
 
 #legend-graphic div.first{
-    display: inline;
-    height: 20px;
-    width: 30px;
-    background-color: rgb(220, 220, 220);
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(220,220,220);
 }
 
 #legend-graphic div.second{
-    display: inline;
-    height: 20px;
-    width: 30px;
-    background-color: rgb(151,187,205,1);
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(151,187,205);
 }
+
+#legend-graphic span {
+    display: block;
+}
+
+#legend-graphic span > div{
+    margin-left: 10px;
+    display: inline-block;
+}
+
