@@ -64,6 +64,10 @@ app.controller('ServiceProviderProfileController',
                     array.forEach(function (iter) {
                         $scope.serviceProvider.name = iter.serviceProviderName; //name
                         $scope.serviceProvider.photo = iter.photo == null ? iter.photo = 'image/user-profile.png' : iter.photo = iter.photo;
+                        $scope.serviceProvider.gender = iter.gender == "F" ? "Feminino" : "Masculino";
+                        $scope.serviceProvider.worksIn = iter.worksIn;
+                        $scope.serviceProvider.livesIn = iter.livesIn;
+                        
                     });
                 }
             }

@@ -53,7 +53,7 @@ TCCApp.controller('LoginController', function ($scope, $rootScope, LoginService)
             }
         }, $scope.error);
     };
-                           
+       
     $scope.error = function(response) {
         console.log('error: '); 
     };

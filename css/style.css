@@ -283,6 +283,26 @@ body {
     color: #2E85E1;
 }
 
+/* Home page (dicas) */
+#feed-content div.services {
+    display: inline-block;
+    height: 30px;
+    width: auto;
+    border-radius: 5px;
+    background-color: #E8EDF2;
+    margin-top: 8px;
+    margin-right: 10px;
+    padding: 10px 20px 5px 20px;
+}
+
+#feed-content div.services:hover {
+    opacity: .6;
+}
+
+#feed-content span.name {
+    color: #175FAB;
+}
+
 /* Partner Network Page */
 #partner-network-content h1 {
     color: #125116;

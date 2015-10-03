@@ -31,11 +31,15 @@
         
         <h1>Dicas</h1>
         <loading></loading>
-        Notamos que você realiza o(s) seguinte(s) serviço(s):
-        <span class="services" ng-repeat="iter in myServices">{{iter.name}}, </span>
+        
+        <div ng-if="myServices.length > 0">
+            Notamos que você realiza o(s) seguinte(s) serviço(s):
+            <div class="services" ng-repeat="iter in myServices">
+                <span class="name">{{iter.name}}</span>
+            </div>
+        </div>
         
         <div class="feeds" ng-repeat="iter in dicas">
-            <!-- Últimas parcerias criadas -->
             <div class="feed">
                 {{iter.dica}}
             </div>

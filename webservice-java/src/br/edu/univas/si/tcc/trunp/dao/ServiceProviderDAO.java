@@ -130,10 +130,14 @@ public class ServiceProviderDAO {
 		String query = null;
 		query = "{\"query\":\" MATCH (sp:Person {email: '" + providerEmail + "'}), " + 
 							"(service:Service {name: '" + providerService + "'}), " +
-							"(sp)-[:PROVIDE]->(service) " +
+							"(city:City), (company:Company), " +
+							"(sp)-[:PROVIDE]->(service), " +
+							"(sp)-[:WORKS_IN]->(company), " +
+							"(sp)-[:LIVES_IN]->(city) " +
 							"WHERE sp.typeOfAccount <> 'CONTRACTOR' " + 
 							"RETURN DISTINCT({serviceProviderName: sp.name, serviceProviderEmail: sp.email, " +
-							"gender: sp.gender, photo: sp.photo, service: service.name}) as person \"}";
+							"gender: sp.gender, photo: sp.photo, service: service.name, worksIn: company.name, " +
+							"livesIn: city.name}) as person \"}";
 		System.out.println(query);
 		ClientResponse responseCreate = resource.accept(MediaType.APPLICATION_JSON)
 												.type(MediaType.APPLICATION_JSON).entity(query)

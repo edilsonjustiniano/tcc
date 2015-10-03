@@ -113,7 +113,7 @@ TCCApp.controller('CreateAccountWorkData', ['$scope','CreateAccountWorkDataServi
 				$scope.msg.type = 'SUCCESS';
 				$scope.msg.msg = data.mesage;
 				window.localStorage['token'] = data.token;
-				window.location.href = 'create-account-photo.html';
+				window.location.href = 'home.html#/home'; //Redirect to home page
 			}
 
 		}, $scope.error);
