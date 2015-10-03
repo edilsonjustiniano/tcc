@@ -719,3 +719,22 @@ label.subtitle {
 	color: black;
 	text-decoration: none;
 }
+
+/* Gráficos */
+#legend-graphic {
+    display: block;
+}
+
+#legend-graphic div.first{
+    display: inline;
+    height: 20px;
+    width: 30px;
+    background-color: rgb(220, 220, 220);
+}
+
+#legend-graphic div.second{
+    display: inline;
+    height: 20px;
+    width: 30px;
+    background-color: rgb(151,187,205,1);
+}

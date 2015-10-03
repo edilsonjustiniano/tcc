@@ -268,7 +268,7 @@ app.controller('ServiceProviderProfileController',
         console.log('error: '); 
     };
 
-    $scope.lastEvaluateOfServiceProvider = function(){ 
+    $scope.lastEvaluateOfServiceProvider = function(limit){ 
         ReportService.lastEvaluateOfServiceProvider( 
             $scope.serviceProvider.email, 
             $scope.serviceProvider.service, 
@@ -309,15 +309,65 @@ app.controller('ServiceProviderProfileController',
                         } else {
                             $scope.reportResults[i] = 0;
                         }
-                        
                     }
+                    
+                    $scope.lineChartData.datasets[0].data = $scope.reportResults;
+                    $scope.lastEvaluateOfServiceInNetwork();
+                    //$scope.loadGraph();
                 }
 
             }, $scope.error)
     };
 
     $scope.lastEvaluateOfServiceInNetwork = function(){ 
-        return Math.round(Math.random()*100)
+        ReportService.lastEvaluateOfServiceInNetwork( 
+            $scope.serviceProvider.email, 
+            $scope.serviceProvider.service, 
+            20, function (callback){
+
+                var data = callback.data;
+                if (!data.success) {
+                    window.localStorage['token'] = null;
+                    window.sessionStorage.setItem('typeOfAccount', null);
+                    window.location.href = 'index.html';
+                } else {
+                    var array = data.results;
+                    var notes = [0, 0, 0, 0];
+                    var evaluates = [0, 0, 0, 0];
+                    var results = [];
+                    
+                    for (var i = 0; i < array.length; i++) {
+                        if(i < 5){
+                            notes[0] += array[i].note;
+                            evaluates[0] += 1;
+                        }
+                        if (i < 10) {
+                            notes[1] += array[i].note;
+                            evaluates[1] += 1;
+                        }
+                        if(i < 15){
+                            notes[2] += array[i].note;
+                            evaluates[2] += 1;
+                        }
+                        if(i < 20){
+                            notes[3] += array[i].note;
+                            evaluates[3] += 1;
+                        }
+                    }
+
+                    for (var i = 0; i < notes.length; i++) {
+                        if (notes[i] > 0) {
+                            results[i] = notes[i] / evaluates[i];
+                        } else {
+                            results[i] = 0;
+                        }
+                    }
+                    
+                    $scope.lineChartData.datasets[1].data = results;
+                    $scope.loadGraph();
+                }
+
+            }, $scope.error)
     };
     
     $scope.lineChartData = {
@@ -332,14 +382,11 @@ app.controller('ServiceProviderProfileController',
                     pointHighlightFill : "#fff",
                     pointHighlightStroke : "rgba(220,220,220,1)",
                     data : [
-                        $scope.reportResults[0],
-                        $scope.reportResults[1],
-                        $scope.reportResults[2],
-                        $scope.reportResults[3]
+                        //filled by lastEvaluateOfServiceProvider
                     ]   
                 },
                 {
-                    label: "Avaliações da minha rede de parceiros",
+                    label: "B",
                     fillColor : "rgba(151,187,205,0.2)",
                     strokeColor : "rgba(151,187,205,1)",
                     pointColor : "rgba(151,187,205,1)",
@@ -347,17 +394,14 @@ app.controller('ServiceProviderProfileController',
                     pointHighlightFill : "#fff",
                     pointHighlightStroke : "rgba(151,187,205,1)",
                     data : [
-                        $scope.lastEvaluateOfServiceInNetwork(),
-                        $scope.lastEvaluateOfServiceInNetwork(),
-                        $scope.lastEvaluateOfServiceInNetwork(),
-                        $scope.lastEvaluateOfServiceInNetwork()
+                        //filled by lastEvaluateOfServiceInNetwork
                     ]
                 }
             ]
 
         };
 
-    $scope.lastEvaluateOfServiceProvider();
+    $scope.lastEvaluateOfServiceProvider(); //Load data to fill graphic
         
     $scope.loadGraph = function(){
         var ctx = document.getElementById("canvas").getContext("2d");
@@ -365,6 +409,4 @@ app.controller('ServiceProviderProfileController',
             responsive: true
         });
     };
-    
-    $scope.loadGraph();
 });
