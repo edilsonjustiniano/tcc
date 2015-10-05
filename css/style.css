@@ -237,11 +237,10 @@ body {
     margin-top: 80px;
     padding: 10px;
     width: 75%;
-    overflow-y: auto;
 }
 
 #container {
-    overflow-y: inherit;
+    overflow-y: auto;
     height: calc(100vh - 15vh);
 }
 
