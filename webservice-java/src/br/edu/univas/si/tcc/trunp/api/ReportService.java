@@ -9,4 +9,8 @@ public interface ReportService {
 	
 	public JSONObject lastEvaluateOfServiceInNetwork(String token, String serviceProvider, String service, int limit) throws JSONException;
 
+	public JSONObject lastEvaluate(String serviceProvider, String service, int limit) throws JSONException;
+	
+	public JSONObject lastEvaluateInMyCity(String serviceProvider, String service, int limit) throws JSONException;
+	
 }

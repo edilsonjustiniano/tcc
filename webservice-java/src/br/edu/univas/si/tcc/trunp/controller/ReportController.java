@@ -29,4 +29,14 @@ public class ReportController {
 				service, limit);
 	}
 
+	public JSONArray lastEvaluate(String serviceProvider, String service,
+			int limit) throws JSONException {
+		return reportBi.lastEvaluate(serviceProvider, service, limit);
+	}
+
+	public JSONArray lastEvaluateInMyCity(String serviceProvider,
+			String service, int limit) throws JSONException {
+		return reportBi.lastEvaluateInMyCity(serviceProvider, service, limit);
+	}
+
 }

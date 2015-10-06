@@ -55,7 +55,8 @@ public class ReportDAO {
 
 	public JSONArray lastEvaluateOfServiceInNetwork(String user,
 			String serviceProvider, String service, int limit) throws JSONException {
-			WebResource resource = FactoryDAO.GetInstance();
+			
+		WebResource resource = FactoryDAO.GetInstance();
 
 		String query = "MATCH (me:Person {email: '"+ user +"'}), " + 
 				"(sp:Person {email: '"+ serviceProvider +"'}),(otherSP:Person), "  +
@@ -72,6 +73,77 @@ public class ReportDAO {
 				"RETURN DISTINCT({partner: partners.name, note: executed.note, comments: executed.comments, " +
 				"date: executed.date, to: otherSP.name}) as execution ORDER BY execution.date DESC LIMIT " + limit;
 
+		String request = "{\"query\":\"" + query + "\"}";
+		ClientResponse response = resource.accept(MediaType.APPLICATION_JSON)
+				.type(MediaType.APPLICATION_JSON).entity(request)
+				.post(ClientResponse.class);
+
+		String resp = response.getEntity(String.class);
+
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
+	}
+
+	public JSONArray lasEvaluate(String serviceProvider, String service,
+			int limit) throws JSONException {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+
+		String query = "MATCH(sp:Person {email: '" + serviceProvider + "'}), " +
+				"(service:Service {name: '" + service + "'}), " +
+				"(executed:Execute), " + 
+				"(person:Person), " +
+				"(service)-[:EXECUTE]->(executed), " +
+				"(sp)-[:EXECUTE]->(executed), " + 
+				"(executed)-[:TO]->(person) " +
+				"RETURN DISTINCT({note: executed.note, date: executed.date}) as result ORDER BY result.date LIMIT " + limit;
+		
+		String request = "{\"query\":\"" + query + "\"}";
+		ClientResponse response = resource.accept(MediaType.APPLICATION_JSON)
+				.type(MediaType.APPLICATION_JSON).entity(request)
+				.post(ClientResponse.class);
+
+		String resp = response.getEntity(String.class);
+
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
+	}
+
+	public JSONArray lastEvaluateInMyCity(String serviceProvider,
+			String service, int limit) throws JSONException {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+		
+		String query = "MATCH(sp:Person {email: '" + serviceProvider + "'}), (otherSP:Person), " +
+				"(service:Service {name: '" + service + "'}), " +
+				"(executed:Execute), " +
+				"(person:Person), " + 
+				"(service)-[:EXECUTE]->(executed), " +
+				"(otherSP)-[:EXECUTE]->(executed), " +
+				"(executed)-[:TO]->(person), " +
+				"(person)-[:LIVES_IN]->()<-[:LIVES_IN]-(sp) " +
+				"WHERE otherSP <> sp " +
+				"RETURN DISTINCT({note: executed.note, date: executed.date}) as result ORDER BY result.date LIMIT " + limit;	
+		
+		System.out.println("QUERY: " + query);
 		String request = "{\"query\":\"" + query + "\"}";
 		ClientResponse response = resource.accept(MediaType.APPLICATION_JSON)
 				.type(MediaType.APPLICATION_JSON).entity(request)

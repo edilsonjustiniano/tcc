@@ -72,4 +72,42 @@ public class ReportServiceImpl implements ReportService {
 		return json;
 	}
 
+	@GET
+	@Path("/lastEvaluate")
+	public JSONObject lastEvaluate(	@QueryParam("token") String token, 
+									@QueryParam("service") String service,
+									@QueryParam("limit") int limit) throws JSONException {
+		
+		Token tokenDecoded = null;
+		Person person = new Person();
+		byte[] tokenByte = token.getBytes();
+
+		tokenDecoded = Base64Util.decodeToken(tokenByte);
+		person.setEmail(tokenDecoded.getEmail());
+		
+		JSONArray response = reportController.lastEvaluate(person.getEmail(), service, limit);
+		JSONObject json = JSONUtil.generateJSONSuccessByData(true, response);
+
+		return json;
+	}
+
+	@GET
+	@Path("/lastEvaluateInMyCity")
+	public JSONObject lastEvaluateInMyCity( @QueryParam("token") String token, 
+											@QueryParam("service") String service,
+											@QueryParam("limit") int limit) throws JSONException {
+		
+		Token tokenDecoded = null;
+		Person person = new Person();
+		byte[] tokenByte = token.getBytes();
+
+		tokenDecoded = Base64Util.decodeToken(tokenByte);
+		person.setEmail(tokenDecoded.getEmail());
+		
+		JSONArray response = reportController.lastEvaluateInMyCity(person.getEmail(), service, limit);
+		JSONObject json = JSONUtil.generateJSONSuccessByData(true, response);
+
+		return json;
+	}
+
 }

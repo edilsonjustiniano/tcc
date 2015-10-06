@@ -26,4 +26,14 @@ public class ReportBi {
 		return dao.lastEvaluateOfServiceInNetwork(token, serviceProvider,
 				service, limit);
 	}
+
+	public JSONArray lastEvaluate(String serviceProvider, String service,
+			int limit) throws JSONException {
+		return dao.lasEvaluate(serviceProvider, service, limit);
+	}
+
+	public JSONArray lastEvaluateInMyCity(String serviceProvider,
+			String service, int limit) throws JSONException {
+		return dao.lastEvaluateInMyCity(serviceProvider, service, limit);
+	}
 }

@@ -1,9 +1,11 @@
-app.controller('HomeController', function ($scope, PartnerService, SessionService, ServiceProviderService, FeedsService) {
+app.controller('HomeController', 
+               function ($scope, PartnerService, SessionService, ServiceProviderService, FeedsService, ReportService) {
 
     $scope.feeds = []; //mix of the both feeds partnership and ratings
     $scope.myServices = [];
     $scope.dicas = [];
     $scope.loading = true;
+    $scope.showGraphics = false;
     
     $scope.dicas.push({
         dica: 'Cadastre todos os serviços que você realiza!'
@@ -166,6 +168,150 @@ app.controller('HomeController', function ($scope, PartnerService, SessionServic
     
     $scope.error = function(response) {
         console.log('error: '); 
+    };
+    
+    
+    $scope.reloadGraph = function(service) {
+        if (service) {
+            $scope.showGraphics = true;
+            $scope.selectedService = service.name;
+            $scope.lastEvaluate(service.name, 20);   
+        }
+    }
+    
+    /** Graficos **/
+    $scope.lastEvaluate = function(service, limit){ 
+        ReportService.lastEvaluate(service, limit, function (callback){
+
+                var data = callback.data;
+                if (!data.success) {
+                    window.localStorage['token'] = null;
+                    window.sessionStorage.setItem('typeOfAccount', null);
+                    window.location.href = 'index.html';
+                } else {
+                    var array = data.results;
+                    var notes = [0, 0, 0, 0];
+                    var evaluates = [0, 0, 0, 0];
+                    var results = [];
+                    
+                    for (var i = 0; i < array.length; i++) {
+                        if(i < 5){
+                            notes[0] += array[i].note;
+                            evaluates[0] += 1;
+                        }
+                        if (i < 10) {
+                            notes[1] += array[i].note;
+                            evaluates[1] += 1;
+                        }
+                        if(i < 15){
+                            notes[2] += array[i].note;
+                            evaluates[2] += 1;
+                        }
+                        if(i < 20){
+                            notes[3] += array[i].note;
+                            evaluates[3] += 1;
+                        }
+                    }
+
+                    for (var i = 0; i < notes.length; i++) {
+                        if (notes[i] > 0) {
+                            results[i] = notes[i] / evaluates[i];
+                        } else {
+                            results[i] = 0;
+                        }
+                    }
+                    
+                    $scope.lineChartData.datasets[0].data = results;
+                    $scope.lastEvaluateInMyCity(service, limit);
+                }
+
+            }, $scope.error)
+    };
+
+    $scope.lastEvaluateInMyCity = function(service, limit){ 
+        ReportService.lastEvaluateInMyCity(service, limit, function (callback){
+
+                var data = callback.data;
+                if (!data.success) {
+                    window.localStorage['token'] = null;
+                    window.sessionStorage.setItem('typeOfAccount', null);
+                    window.location.href = 'index.html';
+                } else {
+                    var array = data.results;
+                    var notes = [0, 0, 0, 0];
+                    var evaluates = [0, 0, 0, 0];
+                    var results = [];
+                    
+                    for (var i = 0; i < array.length; i++) {
+                        if(i < 5){
+                            notes[0] += array[i].note;
+                            evaluates[0] += 1;
+                        }
+                        if (i < 10) {
+                            notes[1] += array[i].note;
+                            evaluates[1] += 1;
+                        }
+                        if(i < 15){
+                            notes[2] += array[i].note;
+                            evaluates[2] += 1;
+                        }
+                        if(i < 20){
+                            notes[3] += array[i].note;
+                            evaluates[3] += 1;
+                        }
+                    }
+
+                    for (var i = 0; i < notes.length; i++) {
+                        if (notes[i] > 0) {
+                            results[i] = notes[i] / evaluates[i];
+                        } else {
+                            results[i] = 0;
+                        }
+                    }
+                    
+                    $scope.lineChartData.datasets[1].data = results;
+                    $scope.loadGraph();
+                }
+
+            }, $scope.error)
+    };
+    
+    $scope.lineChartData = {
+            labels : ["5 últimas","10 últimas","15 últimas","20 últimas"],
+            datasets : [
+                {
+                    label: "Minhas avaliações como " + $scope.selectedService,
+                    fillColor : "rgba(220,220,220,0.2)",
+                    strokeColor : "rgba(220,220,220,1)",
+                    pointColor : "rgba(220,220,220,1)",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill : "#fff",
+                    pointHighlightStroke : "rgba(220,220,220,1)",
+                    data : [
+                        //filled by lastEvaluateOfServiceProvider
+                    ]   
+                },
+                {
+                    label: "As avaliações de " + $scope.selectedService + " em minha cidade",
+                    fillColor : "rgba(151,187,205,0.2)",
+                    strokeColor : "rgba(151,187,205,1)",
+                    pointColor : "rgba(151,187,205,1)",
+                    pointStrokeColor : "#fff",
+                    pointHighlightFill : "#fff",
+                    pointHighlightStroke : "rgba(151,187,205,1)",
+                    data : [
+                        //filled by lastEvaluateOfServiceInNetwork
+                    ]
+                }
+            ]
+
+        };
+
+    $scope.loadGraph = function(){
+        var ctx = document.getElementById("canvas").getContext("2d");
+        window.myLine = new Chart(ctx).Line($scope.lineChartData, {
+            responsive: true
+        });
     };
 
 });

@@ -96,6 +96,7 @@ app.controller('MenuBarController', function ($scope, MenuBarService, SessionSer
 
         /* Only contractor user can perform this query */
         if (window.sessionStorage.getItem('typeOfAccount') == 'SERVICE_PROVIDER') {
+            $scope.loading = false;
             return;
         }
 

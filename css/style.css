@@ -296,6 +296,7 @@ body {
 
 #feed-content div.services:hover {
     opacity: .6;
+    cursor: pointer;
 }
 
 #feed-content span.name {
