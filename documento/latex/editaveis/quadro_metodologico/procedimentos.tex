@@ -51,8 +51,8 @@
 \newpage
 \begin{quadro}[h!]
 	\input{./fluxos/fluxo-evento-localizar-mao-de-obra}
-	\caption[Fluxo de eventos para o caso de uso localizar mão de obra]
-	{Fluxo de eventos para o caso de uso localizar mão de obra. \textbf{Fonte:} Elaborado pelos autores}
+	\caption[Fluxo de eventos para o caso de uso ''localizar mão de obra'']
+	{Fluxo de eventos para o caso de uso ''localizar mão de obr''. \textbf{Fonte:} Elaborado pelos autores}
 	\label{quad:fluxo_evento_localizar_mao_de_obra}
 \end{quadro}
 
@@ -195,7 +195,7 @@
 
 \subsection{Desenvolvimento}
 
-\par A princípio, utilizou-se as tecnologias Neo4j, sendo executado de forma \textit{embedded}, Primefaces e JSF. Porém não estava fluindo como o esperado. Outro problema encontrado ao utilizar tais tecnologias foi que tanto a parte cliente (\textit{front end}) quanto a parte servidor (\textit{back end}) se encontravam totalmente acoplados em uma aplicação Java \textit{web}.Por estes motivos decidiu-se mudar algumas das tecnologias utilizadas.
+\par A princípio, utilizou-se as tecnologias Neo4j, sendo executado de forma \textit{embedded}, Primefaces e JSF. Porém não estava fluindo como o esperado. Outro problema encontrado ao utilizar tais tecnologias foi que tanto a parte cliente (\textit{front end}) quanto a parte servidor (\textit{back end}) se encontravam totalmente acoplados em uma aplicação Java \textit{web}. Por estes motivos decidiu-se mudar algumas das tecnologias utilizadas.
 
 \par Posterior a esse incidente, passou-se a utilizar então as linguagens HTML 5, CSS 3, Javascript e o \textit{framework} Angular JS para auxiliar no desenvolvimento do \textit{front end}, ao invés de Primefaces e JSF. Para acesso ao banco de dados, lançou-se mão da forma \textit{embedded} e passou-se a utilizar a API REST disponibilizada pelo próprio banco. Tais decisões nos permitiram desacoplar o sistema e manter o \textit{front end} e o \textit{back end} independentes, evitando, assim, que o mesmo problema voltasse a ocorrer.
 
