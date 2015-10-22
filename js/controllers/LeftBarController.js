@@ -45,11 +45,13 @@ app.controller('LeftBarController',
 					return;
 				var array = data.results;
 				array.forEach(function(iter){
-					$scope.possiblePartners.push({
-                        name: iter.name, 
-                        email: iter.email, 
-                        photo: iter.photo == null ? iter.photo = 'image/user-profile.png': iter.photo = iter.photo
-                    });
+                    //if ($scope.possiblePartners.length < 4) {
+                        $scope.possiblePartners.push({
+                            name: iter.name, 
+                            email: iter.email, 
+                            photo: iter.photo == null ? iter.photo = 'image/user-profile.png': iter.photo = iter.photo
+                        });
+                    //}
 				});
 			}
 		}, $scope.error);
