@@ -201,6 +201,34 @@
 
 \par Como a forma de conexão ao banco de dados foi alterada, houve a necessidade de reescrever a classe responsável por realizar esta conexão, conforme apresenta a Figura~\ref{fig:codigo_comunicacao_banco}.
 
+
+Exemplo de código Java:
+
+\begin{lstlisting} [style=custom_Java,caption={[Métodos da classe \texttt{FilmeBean}]{Métodos da classe \texttt{FilmeBean}. \textbf{Fonte:} Elaborado pelos autores.}}, label=fig:metodosclassebean] 	
+public class FactoryDAO {
+
+	private static final String DATABASE_ENDPOINT = "http://localhost:7474/db/data";
+	private static final String DATABASE_USERNAME = "neo4j";
+	private static final String DATABASE_PASSWORD = "admin";
+	private static final String cypherUrl = DATABASE_ENDPOINT + "/cypher";
+	
+	private static WebResource instance;
+	
+	private FactoryDAO() {
+	}
+	
+	public static WebResource GetInstance() {
+		WebResource resource = null;
+		if (instance == null) {
+			Client c = Client.create();
+			c.addFilter(new HTTPBasicAuthFilter(DATABASE_USERNAME, DATABASE_PASSWORD));
+			resource = c.resource(cypherUrl);
+		}
+		return resource;
+	}
+}
+\end{lstlisting}
+
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.3]{./imagens/conexao-banco.jpg}}
 	\caption[Código de comunicação com o banco]
