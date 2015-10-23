@@ -200,18 +200,20 @@
 
 \par Posterior a esse incidente, passou-se a utilizar então as linguagens HTML 5, CSS 3, Javascript e o \textit{framework} Angular JS para auxiliar no desenvolvimento do \textit{front end}, ao invés de Primefaces e JSF. Para acesso ao banco de dados, lançou-se mão da forma \textit{embedded} e passou-se a utilizar a API REST disponibilizada pelo próprio banco. Tais decisões nos permitiram desacoplar o sistema e manter o \textit{front end} e o \textit{back end} independentes, evitando, assim, que o mesmo problema voltasse a ocorrer.
 
-\par Como a forma de conexão ao banco de dados foi alterada, houve a necessidade de reescrever a classe responsável por realizar esta conexão, conforme apresenta a Figura~\ref{fig:codigo_comunicacao_banco}.
+\par Como a forma de conexão ao banco de dados foi alterada, houve a necessidade de reescrever a classe responsável por realizar esta conexão, conforme apresenta o Código~\ref{list:codigo_comunicacao_banco}.
 
 
 Exemplo de código Java:
 
-\begin{lstlisting} [style=custom_Java,caption={[Código de comunicação com o banco de dados]{Código de comunicação com o banco de dados. \textbf{Fonte:} Elaborado pelos autores.}}, label=fig:codigo_comunicacao_banco] 	
+\begin{lstlisting} [style=custom_Java,caption={[Código de comunicação com o banco de dados]{Código de comunicação com o banco de dados. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:codigo_comunicacao_banco] 	
 public class FactoryDAO {
 
-	private static final String DATABASE_ENDPOINT = "http://localhost:7474/db/data";
+	private static final String DATABASE_ENDPOINT =
+								 "http://localhost:7474/db/data";
 	private static final String DATABASE_USERNAME = "neo4j";
 	private static final String DATABASE_PASSWORD = "admin";
-	private static final String cypherUrl = DATABASE_ENDPOINT + "/cypher";
+	private static final String cypherUrl = 
+								 DATABASE_ENDPOINT + "/cypher";
 	
 	private static WebResource instance;
 	
@@ -238,14 +240,61 @@ public class FactoryDAO {
 %	\label{fig:codigo_comunicacao_banco}
 %\end{figure}
 
-\par Após realizar a mudança de tecnologias, foram executados alguns procedimentos para compreender o funcionamento do \textit{web service} REST e em paralelo, foi feito o levantamento dos materiais de referência do \textit{framework} Angular JS. Foi preciso realizar testes para validar a conexão com o banco de dados Neo4j via API REST, fornecida por ele, além de realizados testes funcionais para envio de requisições e recebimento de respostas do \textit{web service} REST, utilizando o Angular JS. Para validar a conexão ao banco de dados via API REST foi necessário desenvolver algumas consultas em \textit{cypher} como apresenta a Figura~\ref{fig:consulta_usando_api_cypher}.
+\par Após realizar a mudança de tecnologias, foram executados alguns procedimentos para compreender o funcionamento do \textit{web service} REST e em paralelo, foi feito o levantamento dos materiais de referência do \textit{framework} Angular JS. Foi preciso realizar testes para validar a conexão com o banco de dados Neo4j via API REST, fornecida por ele, além de realizados testes funcionais para envio de requisições e recebimento de respostas do \textit{web service} REST, utilizando o Angular JS. Para validar a conexão ao banco de dados via API REST foi necessário desenvolver algumas consultas em \textit{cypher} como apresenta o Código~\ref{list:consulta_usando_api_cypher}.
 
-\begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.45]{./imagens/query-cypher.png}}
-	\caption[Exemplo de consulta usando a API \textit{cypher}]
-	{Exemplo de consulta usando a API \textit{cypher}. \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:consulta_usando_api_cypher}
-\end{figure}
+\begin{lstlisting} [style=custom_Java,caption={[Exemplo de consulta usando a API \textit{cypher}]{Exemplo de consulta usando a API \textit{cypher}. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_usando_api_cypher] 	
+
+public class PersonDAO {
+...
+
+	/**
+	* Used to get all data of person to show the profile data
+	* 
+	* @param partnerEmail
+	* @return
+	* @throws JSONException 
+	*/
+	public JSONArray getPersonData(String partnerEmail) throws JSONException {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+		
+		String query = null;
+		query = "{\"query\":\" MATCH (partner:Person {email: '"
+			+ partnerEmail + "'}), (city:City), "
+			+ "(company:Company), "
+			+ "(partner)-[:LIVES_IN]->(city), "
+			+ "(partner)-[:WORKS_IN]->(company) "
+			+ "RETURN DISTINCT({name: partner.name, "
+			+ "email: partner.email, photo: partner.photo, " 
+			+ "city: city.name, company: company.name, " 
+			+ "cpf: partner.cpf, cnpj: partner.cnpj, " 
+			+ "typeOfPerson: partner.typeOfPerson, " 
+			+ "gender: partner.gender}) as partner; \"}";
+		ClientResponse responseCreate = resource
+									.accept(MediaType.APPLICATION_JSON)
+									.type(MediaType.APPLICATION_JSON).entity(query)
+									.post(ClientResponse.class);
+		String resp = responseCreate.getEntity(String.class);
+		
+		JSONObject json = new JSONObject(resp);
+		JSONArray objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil
+												.parseJSONArrayToListJSON(objData);
+		JSONArray arr = new JSONArray(parser);
+		
+		return arr;
+	}
+...
+}
+\end{lstlisting}
+
+% Trocado de imagem para listagem
+%\begin{figure}[h!]
+%	\centerline{\includegraphics[scale=0.45]{./imagens/query-cypher.png}}
+%	\caption[Exemplo de consulta usando a API \textit{cypher}]
+%	{Exemplo de consulta usando a API \textit{cypher}. \textbf{Fonte:} Elaborado pelos autores.}
+%	\label{fig:consulta_usando_api_cypher}
+%\end{figure}
 
 \par Ao realizar estes testes, foi constatado que seria necessário desenvolver uma maneira de converter os resultados das buscas realizadas no banco de dados Neo4j que, por padrão, não retorna os resultados no formato JSON comum, portanto, houve a preocupação em tratar estas respostas, a fim de retornar um JSON válido ao usuário que futuramente viria a utilizar a API REST fornecida por este \textit{software}. É possível visualizar este tratamento na Figura~\ref{fig:consulta_usando_api_cypher}. 
  
