@@ -1,0 +1,237 @@
+\subsection{Desenvolvimento}
+
+\par A princípio, utilizou-se as tecnologias Neo4j, sendo executado de forma \textit{embedded}, Primefaces e JSF. Porém não estava fluindo como o esperado. Outro problema encontrado ao utilizar tais tecnologias foi que tanto a parte cliente (\textit{front end}) quanto a parte servidor (\textit{back end}) se encontravam totalmente acoplados em uma aplicação Java \textit{web}. Por estes motivos decidiu-se mudar algumas das tecnologias utilizadas.
+
+\par Posterior a esse incidente, passou-se a utilizar então as linguagens HTML 5, CSS 3, Javascript e o \textit{framework} Angular JS para auxiliar no desenvolvimento do \textit{front end}, ao invés de Primefaces e JSF. Para acesso ao banco de dados, lançou-se mão da forma \textit{embedded} e passou-se a utilizar a API REST disponibilizada pelo próprio banco. Tais decisões nos permitiram desacoplar o sistema e manter o \textit{front end} e o \textit{back end} independentes, evitando, assim, que o mesmo problema voltasse a ocorrer.
+
+\par Como a forma de conexão ao banco de dados foi alterada, houve a necessidade de reescrever a classe responsável por realizar esta conexão, conforme apresenta o Código~\ref{list:codigo_comunicacao_banco}.
+
+
+Exemplo de código Java:
+
+\begin{lstlisting} [style=custom_Java,caption={[Código de comunicação com o banco de dados]{Código de comunicação com o banco de dados. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:codigo_comunicacao_banco] 	
+public class FactoryDAO {
+
+	private static final String DATABASE_ENDPOINT =
+								 "http://localhost:7474/db/data";
+	private static final String DATABASE_USERNAME = "neo4j";
+	private static final String DATABASE_PASSWORD = "admin";
+	private static final String cypherUrl = 
+								 DATABASE_ENDPOINT + "/cypher";
+	
+	private static WebResource instance;
+	
+	private FactoryDAO() {
+	}
+	
+	public static WebResource GetInstance() {
+		WebResource resource = null;
+		if (instance == null) {
+			Client c = Client.create();
+			c.addFilter(new HTTPBasicAuthFilter(DATABASE_USERNAME, DATABASE_PASSWORD));
+			resource = c.resource(cypherUrl);
+		}
+		return resource;
+	}
+}
+\end{lstlisting}
+
+% Trocado de imagem para listagem
+%\begin{figure}[h!]
+%	\centerline{\includegraphics[scale=0.3]{./imagens/conexao-banco.jpg}}
+%	\caption[Código de comunicação com o banco]
+%	{Código de comunicação com o banco \textbf{Fonte:} Elaborado pelos autores.}
+%	\label{fig:codigo_comunicacao_banco}
+%\end{figure}
+
+\par Após realizar a mudança de tecnologias, foram executados alguns procedimentos para compreender o funcionamento do \textit{web service} REST e em paralelo, foi feito o levantamento dos materiais de referência do \textit{framework} Angular JS. Foi preciso realizar testes para validar a conexão com o banco de dados Neo4j via API REST, fornecida por ele, além de realizados testes funcionais para envio de requisições e recebimento de respostas do \textit{web service} REST, utilizando o Angular JS. Para validar a conexão ao banco de dados via API REST foi necessário desenvolver algumas consultas em \textit{cypher} como apresenta o Código~\ref{list:consulta_usando_api_cypher}.
+
+\begin{lstlisting} [style=custom_Java,caption={[Exemplo de consulta usando a API \textit{cypher}]{Exemplo de consulta usando a API \textit{cypher}. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_usando_api_cypher] 	
+
+public class PersonDAO {
+...
+
+	/**
+	* Used to get all data of person to show the profile data
+	* 
+	* @param partnerEmail
+	* @return
+	* @throws JSONException 
+	*/
+	public JSONArray getPersonData(String partnerEmail) throws JSONException {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+		
+		String query = null;
+		query = "{\"query\":\" MATCH (partner:Person {email: '"
+			+ partnerEmail + "'}), (city:City), "
+			+ "(company:Company), "
+			+ "(partner)-[:LIVES_IN]->(city), "
+			+ "(partner)-[:WORKS_IN]->(company) "
+			+ "RETURN DISTINCT({name: partner.name, "
+			+ "email: partner.email, photo: partner.photo, " 
+			+ "city: city.name, company: company.name, " 
+			+ "cpf: partner.cpf, cnpj: partner.cnpj, " 
+			+ "typeOfPerson: partner.typeOfPerson, " 
+			+ "gender: partner.gender}) as partner; \"}";
+		ClientResponse responseCreate = resource
+									.accept(MediaType.APPLICATION_JSON)
+									.type(MediaType.APPLICATION_JSON).entity(query)
+									.post(ClientResponse.class);
+		String resp = responseCreate.getEntity(String.class);
+		
+		JSONObject json = new JSONObject(resp);
+		JSONArray objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil
+												.parseJSONArrayToListJSON(objData);
+		JSONArray arr = new JSONArray(parser);
+		
+		return arr;
+	}
+...
+}
+\end{lstlisting}
+
+% Trocado de imagem para listagem
+%\begin{figure}[h!]
+%	\centerline{\includegraphics[scale=0.45]{./imagens/query-cypher.png}}
+%	\caption[Exemplo de consulta usando a API \textit{cypher}]
+%	{Exemplo de consulta usando a API \textit{cypher}. \textbf{Fonte:} Elaborado pelos autores.}
+%	\label{fig:consulta_usando_api_cypher}
+%\end{figure}
+
+\par Ao realizar estes testes, foi constatado que seria necessário desenvolver uma maneira de converter os resultados das buscas realizadas no banco de dados Neo4j que, por padrão, não retorna os resultados no formato JSON comum, portanto, houve a preocupação em tratar estas respostas, a fim de retornar um JSON válido ao usuário que futuramente viria a utilizar a API REST fornecida por este \textit{software}. É possível visualizar este tratamento no Código~\ref{list:consulta_usando_api_cypher}. 
+ 
+\par A partir deste ponto, a aplicação estava totalmente desacoplada, sendo necessário realizar uma configuração, a fim de permitir que as requisições enviadas pelo \textit{front end} fossem aceitas pelo \textit{back end}, localizado em outro domínio.
+
+\par Devido à mudança de tecnologias já comentadas, houve a necessidade de atualizar os diagramas de sequência e de classe, inserindo os contratos de serviços do \textit{web service} REST. Com a definição deste contrato, deu-se início ao desenvolvimento dos casos de uso, identificados na primeira fase do ICONIX. 
+
+\par Posterior à realização dos testes e da escolha definitiva da arquitetura que seria utilizada, iniciou-se a implementação dos casos de uso. O primeiro a ser implementado foi o caso de uso de criação de conta. Para este caso de uso, teve-se o cuidado de criar um mecanismo de criptografia de dados sigilosos, como usuário e senha, visando garantir a segurança da aplicação. Estas informações criptografadas são enviadas a cada requisição e validadas pelo \textit{web service}, sendo atualizadas caso sejam válidas, tornado mais complexo a quebra desta criptografia. Este mecanismo foi desenvolvido com base no sistema de \textit{login} via \textit{token}. Segundo o embasamento usado na criação de contas, deu-se início ao desenvolvimento do sistema de \textit{login} e \textit{logoff}, que também utilizam o conceito de criptografia via \textit{token}. A Figura~\ref{fig:pagina_login} apresenta a página de \textit{login}.
+
+\newpage
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.60]{./imagens/login.jpg}}
+	\caption[Tela de login ]
+	{Tela de login \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:pagina_login}
+\end{figure}
+
+Segundo \citeonline{token_traditional_babal}, os sistemas de autenticações tradicionais utilizam recursos como sessão e \textit{cookies}. A autenticação do usuário é realizada por meio de alguns dados, geralmente nome de usuário (ou email) e senha, com esses dados a aplicação no \textit{back-end}, os validam junto a base de dados e caso obtenha sucesso nesse processo de validação é criada uma sessão e armazenada no servidor, após realizada toda a validação a aplicação retorna a informação dessa sessão para quem a requisitou de modo que ela seja armazenada no navegador de internet por meio de sessão e/ou \textit{cookies}. A partir desse momento, a cada nova solicitação a aplicação \textit{back-end} irá comparar a sessão armazenada no servidor com a fornecida pelo \textit{front-end}. A Fígura~\ref{fig:autenticacao_via_sessao} demonstra o fluxo utilizado pelos sistemas cuja autenticação de sessão é a tradicional.
+
+\newpage
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.55]{./imagens/tokens-traditional.png}}
+	\caption[Fluxo de autenticação de usuários utilizando a forma tradicional]
+	{Fluxo de autenticação de usuários utilizando a forma tradicional. \textbf{Fonte:} \cite{authentication_via_token_chris_sevilleja}}
+	\label{fig:autenticacao_via_sessao}
+\end{figure}
+
+Para \citeonline{authentication_via_token_chris_sevilleja}, a autenticação via \textit{token}, diferente da forma convencional não utiliza os recursos de sessão e \textit{cookies}. Contudo o processo inicial é o mesmo, a autenticação se inicia por meio dos mesmos dados da autenticação tradicional, realiza o mesmo o processo de validação dos dados informados junto a base de dados, porém caso obtenha sucesso não cria uma sessão, e sim um \textit{token} com os dados necessários para a sua validação \textit{criptografados}. Após criado o \textit{token} ele é enviado de volta ao usuário solicitante de modo que ele seja armazenado pela aplicação cliente, sendo ela um aplicativo \textit{web} ou \textit{mobile}, entre outras. A partir desse momento, a cada nova solicitação, a aplicação cliente deverá enviar o \textit{token} anteriormente recebido do servidor e armazenado por ela, para que ele seja validado pelo servidor. A Fígura~\ref{fig:autenticacao_via_token} demonstra o fluxo utilizado pelos sistemas cuja autenticação é realizada via \textit{token}.
+
+\newpage
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.5]{./imagens/tokens-new.png}}
+	\caption[Fluxo de autenticação de usuários utilizando \textit{token}]
+	{Fluxo de autenticação de usuários utilizando \textit{token}. \textbf{Fonte:} \cite{authentication_via_token_chris_sevilleja}}
+	\label{fig:autenticacao_via_token}
+\end{figure}
+
+Para construir a aplicação seguindo o modelo de autenticação via \textit{token} foi necessário criar uma classe chamada \texttt{Base64Util} responsável por \textit{criptografar e descriptografar} as informações fornecidas no \textit{token} a fim de validá-lo junto a base de dados da aplicação. Essa classe é apresentada no Código~\ref{list:classe_criptografa_descriptografa_token}.
+
+\begin{lstlisting} [style=custom_Java,caption={[Classe responsável pela criptografia e descriptografia do \textit{token}]{Classe responsável pela criptografia e descriptografia do \textit{token}. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:classe_criptografa_descriptografa_token]
+public class Base64Util {
+	
+	public static final String BASE64_TOKEN_SEPARATOR = "|";
+	
+	public static byte[] encodeToken(String email, String password) {
+		/* Get Current Time in order to check if the session
+		 * is valid yet.
+		 */
+		Long currentTime = new Timestamp(new Date().getTime()).getTime();
+		byte[] token = Base64.encode(email + BASE64_TOKEN_SEPARATOR + password + BASE64_TOKEN_SEPARATOR + currentTime);
+		return token;
+	}
+	
+	public static Token decodeToken(byte[] tokenDecoded) {
+		Token token = new Token();
+		
+		byte[] bytes = Base64.decode(tokenDecoded);
+		String tokenStr = new String(bytes);
+		
+		String[] splitStr = tokenStr.split("\\" + BASE64_TOKEN_SEPARATOR);
+		token.setEmail(splitStr[0]);
+		token.setPassword(splitStr[1]);
+		token.setLastAccessTime(Long.parseLong(splitStr[2]));
+		
+		return token;
+	}
+}
+\end{lstlisting}
+
+No código acima, o método chamado \texttt{encodeToken} recebe como parâmetro o \textit{e-mail} e a senha fornecidos pelo usuário no momento da realização do login, a partir dessas informações somado a hora atual do sistema que é obtida na linha 10 é gerado o \textit{token} criptografado em \texttt{Base64}. Para realizar a decodificação do \textit{token} é utilizado o método \texttt{decodeToken} cuja chamada é realizada a cada requisição que o cliente realiza, esse método recebe como parâmentro o \textit{token} criptografado e o descriptografa usando a classe \texttt{Base64} como é apresentado na linha 18. Após a descriptografia dele é criado um objeto da classe \texttt{Token} com as informações obtidas pelo \textit{token} fornecido pela requisição.
+
+Diferentemente das aplicações que utilizam este conceito de sessão via \textit{token}, neste trabalho houve-se a necessidade de validar além das informações do usuário incluídas no próprio \textit{token}, a data e hora da última requisição realizada pelo usuário. Portanto, para validar o \textit{token} expirado foi necessário criar a classe \texttt{TokenBi} como demonstra o Código~\ref{list:classe_valida_token}.
+
+\begin{lstlisting} [style=custom_Java,caption={[Classe responsável pela validação do \textit{token}]{Classe responsável pela validação do \textit{token}. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:classe_valida_token]
+public class TokenBi {
+	
+	private static final int MINUTES_OF_SESSION_ACTIVE = 15; //15min
+	...
+	
+	/* Method to check if session is still alive */
+	public boolean isExpiredSession(Token token) {
+		
+		final long ONE_MINUTE_IN_MILLIS = 60000;//millisecs
+		
+		Date currentTime = new Date();
+		Date timeLastAccess = new Date(token.getLastAccessTime() 
+				+ (MINUTES_OF_SESSION_ACTIVE * ONE_MINUTE_IN_MILLIS));
+		
+		if (timeLastAccess.before(currentTime)) {
+			return true; //session already expired
+		}
+		return false; //session activate yet
+	}
+	...
+}
+\end{lstlisting}
+
+Para realizar a validação do \textit{token} expirado, foi criado o método \texttt{isExpiredSession} que  recebe como parâmetro um objeto da classe \texttt{Token} contendo além dos dados do usuário, também a informação relacionada a data e hora da última requisição, com base nessa última informação na linha 12 é realizado um cálculo para obter um objeto do tipo \texttt{Date} contendo a data da última requisição do usuário somado a mais 15 minutos. A partir dessa informação é realizado uma comparação entre ela e a data atual do sistema, como é possível visualizar na linha 15, caso essa informação seja anterior a data atual do sistema o \textit{token} está expirado e o método \texttt{isExpiredSession} retorna \textit{true}. Caso contrário ele irá retornar \textit{false}.
+
+\par Com o funcionamento do sistema de \textit{login}, passou-se a desenvolver a página inicial da aplicação, contendo as informações que são restritas ao usuário cadastrado. O sistema apresenta uma página inicial diferente para cada tipo de conta, sendo elas: contratantes, provedores de serviço ou ambos, contendo apenas as informações que são liberadas de acordo com o acesso do usuário, sendo essas informações relatórios, últimas atualizações na rede de parceiros, avaliações de serviços e prováveis parceiros. A página inicial do tipo contratante é apresentada na Figura~\ref{fig:pagina_inicial_contratante}.
+
+\newpage
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.3]{./imagens/home-contratante.png}}
+	\caption[Página inicial do usuário contratante]
+	{Página inicial do usuário contratante \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:pagina_inicial_contratante}
+\end{figure}
+
+
+\par O caso de uso localizar parceiros foi desenvolvido após a conclusão do caso de uso criar conta. A lógica deste caso de uso consiste em buscar por possíveis parceiros, com base na rede de parceria do contrante. A Figura~\ref{fig:pagina_localizar_parceiro} apresenta esta busca.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.3]{./imagens/localizar-parceiro.png}}
+	\caption[Página de localização de parceiros]
+	{Página de localização de parceiros \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:pagina_localizar_parceiro}
+\end{figure}
+
+\par Ainda relacionado ao tipo de conta contratante ou ambos, foi implementado o caso de uso adicionar parceiro, que permite ao usuário convidar um possível parceiro para fazer parte da sua rede. Após a implementação da lógica para adicionar um novo parceiro, houve a necessidade de implementar o serviço de requisições de parcerias, uma vez que não bastava apenas um contratante convidar outro para se tornarem parceiros, mas sim que o contratante convidado aceitasse sua solicitação de parceria, para assim se tornarem parceiros. Visando disponibilizar estas solicitações de forma agradável ao usuário, foi desenvolvida uma funcionalidade para que o usuário pudesse aceitar ou rejeitar a solicitação enviada à ele.
+
+\par Após realizada a implementação do caso de uso adicionar parceiro, houve a necessidade de desenvolver a busca por todos os usuários que possuíam o tipo de conta contratante ou ambos e que possuíam um relacionamento de parceria com o usuário autenticado no sistema, além da funcionalidade de localizar novos parceiros, baseando-se na localização da empresa na qual o usuário trabalha e na cidade onde ele vive, sempre ordenando os resultados por meio da quantidade de parceiros em comum. 
+
+\par O caso de uso gerenciar serviços foi implementado em sequência, abrangendo as principais funcionalidades de gerenciamento: cadastrar e adicionar um novo serviço ao usuário, cujo tipo de conta é provedor de serviços, listar os serviços atribuídos a ele, e remover serviços quando necessário. Visando melhorar a usabilidade, foi implementado um mecanismo de busca, que permitiu filtrar os resultados por meio de um campo que possui a função  auto completar, evitando assim, possíveis erros e diminuindo o tempo gasto pelo usuário para adicionar o serviço. A função realiza a busca em uma lista de serviços anteriormente cadastrados, no entanto, caso não haja o serviço solicitado, o usuário tem a liberdade de cadastrá-lo e atribuí-lo a si mesmo.
+
+\par A partir deste ponto, foi possível iniciar o desenvolvimento do caso de uso "localizar mão de obra", uma vez que, este caso de uso dependia diretamente das implementações das funcionalidades adicionar parceiros para os usuários contratantes e adicionar serviços aos provedores de serviço. Para facilitar a localização e deixar o \textit{software} mais usual, esta busca se baseia inicialmente no serviço buscado pelo usuário, sendo posteriormente modificada para também levar em consideração a funcionalidade avaliar serviço que foi implementada paralelamente. A avaliação de serviço permite ao contratante dar uma nota ao serviço que foi prestado a ele. Com estas informações foi possível desenvolver uma busca que levaria em consideração, além destas informações, a rede de parceiros do usuário contratante, a fim de lhe apresentar as melhores opções possíveis.
+
+\par A fim de abranger a busca e possibilitar que novos prestadores de serviços sejam avaliados pelos contratantes, a consulta que antes apresentava apenas provedores de serviços que possuíam avaliações, sendo elas, positivas ou negativas, foi ampliada, possibilitando que profissionais não avaliados também entrassem na lista de prováveis provedores de serviços.
+
+\par Para auxiliar na tomada de decisão do usuário contratante, foi implementada uma funcionalidade que realiza o cálculo da média de avaliações de um serviço prestado por um profissional temporário, tendo como base as avaliações já realizadas pela rede de parceiros do usuário autenticado, da empresa onde ele trabalha e da cidade onde vive, oferecendo assim uma forma simples de obter acesso a qualidade do serviço prestado.
+
+\par Após realizada todas as implementações já descritas, houve a preocupação de desenvolver uma interface, que além de amigável fosse prática ao usuário, desta forma, foi disponibilizada algumas informações relevantes, que auxiliam o usuário a compreender o que está ocorrendo em sua rede de parceria. Como exemplo é possível citar a lista de parceiros em comum entre o usuário autenticado no sistema e um determinado contratante por meio da página de perfil dele.
+
+\par A fim de agregar mais funcionalidades para o usuário provedor de serviços, foi criado na página inicial do \textit{software} uma funcionalidade que visa apresentar algumas dicas interessantes que contribui com a sua imagem perante ao \textit{software}, levando-o assim a obter uma quantidade maior de oportunidades de trabalho.
+
+\par Para finalizar o desenvolvimento será necessário desenvolver alguns gráficos que apresentem ao usuário informações a respeito da qualidade do serviço prestado pelo provedor de serviços, comparando-os com os demais prestadores, porém estes gráficos ainda não foram implementados até o momento.

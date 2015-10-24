@@ -1,0 +1,144 @@
+\subsection{Iconix}
+
+\par O Iconix foi escolhido como a metodologia de desenvolvimento de \textit{software}, desempenhando um papel fundamental na organização. Sua abordagem proveu uma sequência de procedimentos, levando à construção de uma aplicação estável. Como relatado no quadro teórico, foram seguidas as quatro fases definidas pelo Iconix,
+
+\par Na primeira fase, definida como análise de requisitos, foi realizado o levantamento das informações pertinentes ao desenvolvimento. Este levantamento foi realizado por meio da observação do comportamento das pessoas ao buscar por mão de obra temporária. A partir daí, foram levantadas as principais características, indispensáveis para a construção do \textit{software} e desenvolvido o modelo de domínio inicial, como demonstra a Figura~\ref{fig:modelo_dominio_inicial}.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.45]{./imagens/modelo-dominio-inicial.png}}
+	\caption[Modelo de domínio inicial]
+	{Modelo de domínio inicial. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:modelo_dominio_inicial}
+\end{figure}
+
+\par Nesta fase, também foram definidas todas as ações que cada tipo de usuário poderia realizar no sistema, por meio dos casos de uso, conforme as Figuras~\ref{fig:caso_uso_contratantes_inicial}, ~\ref{fig:caso_uso_provedor_servico_inicial} e ~\ref{fig:caso_uso_usuario_inicial}.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.6]{./imagens/caso-de-uso-contratantes.png}}
+	\caption[Diagrama de caso de uso para contratantes]
+	{Diagrama de caso de uso para contratantes. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:caso_uso_contratantes_inicial}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.6]{./imagens/caso-de-uso-provedores-servico.png}}
+	\caption[Diagrama de caso de uso para provedores de serviços]
+	{Diagrama de caso de uso para provedores de serviços. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:caso_uso_provedor_servico_inicial}
+\end{figure}
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.6]{./imagens/caso-de-uso-usuario.png}}
+	\caption[Diagrama de caso de uso para contratantes e provedores de serviços]
+	{Diagrama de caso de uso para contratantes e provedores de serviços. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:caso_uso_usuario_inicial}
+\end{figure}
+
+\par Após definir os casos de uso, foram escritos os fluxos de eventos, para cada caso de uso, conforme apresentam os quadros a seguir.
+
+% Conferir com o Márcio se os quadros serão removidos daqui e colocados nos apêndices depois só colar esta parte onde for inserida
+%\newpage
+%\begin{quadro}[h!]
+%	\input{./fluxos/fluxo-evento-localizar-mao-de-obra}
+%	\caption[Fluxo de eventos para o caso de uso ''localizar mão de obra'']
+%	{Fluxo de eventos para o caso de uso ''localizar mão de obr''. \textbf{Fonte:} Elaborado pelos autores}
+%	\label{quad:fluxo_evento_localizar_mao_de_obra}
+%\end{quadro}
+
+%\begin{quadro}[h!]
+%	\input{./fluxos/fluxo-evento-avaliar-mao-de-obra}
+%	\caption[Fluxo de eventos para o caso de uso localizar mão de obra]
+%	{Fluxo de eventos para o caso de uso localizar mão de obra. \textbf{Fonte:} Elaborado pelos autores}
+%	\label{quad:fluxo_evento_avaliar_mao_de_obra}
+%\end{quadro}
+
+%\newpage
+%\begin{quadro}[h!]
+%	\input{./fluxos/fluxo-evento-localizar-parceiro}
+%	\caption[Fluxo de eventos para o caso de uso localizar parceiro]
+%	{Fluxo de eventos para o caso de uso localizar parceiro. \textbf{Fonte:} Elaborado pelos autores}
+%	\label{quad:fluxo_evento_localizar_parceiro}
+%\end{quadro}
+
+%\newpage
+%\begin{quadro}[h!]
+%	\input{./fluxos/fluxo-evento-adicionar-parceiro}
+%	\caption[Fluxo de eventos para o caso de uso adicionar parceiro]
+%	{Fluxo de eventos para o caso de uso adicionar parceiro. \textbf{Fonte:} Elaborado pelos autores}
+%	\label{quad:fluxo_evento_adicionar_parceiro}
+%\end{quadro}
+
+%\newpage
+%\begin{quadro}[h!]
+%	\input{./fluxos/fluxo-evento-aceitar-parceria}
+%	\caption[Fluxo de eventos para o caso de uso aceitar parceria]
+%	{Fluxo de eventos para o caso de uso aceitar parceria. \textbf{Fonte:} Elaborado pelos autores}
+%	\label{quad:fluxo_evento_aceitar_parceria}
+%\end{quadro}
+
+%\newpage
+%\begin{quadro}[h!]
+%	\input{./fluxos/fluxo-evento-gerenciar-servicos}
+%	\caption[Fluxo de eventos para o caso de uso gerenciar serviços]
+%	{Fluxo de eventos para o caso de uso gerenciar serviços. \textbf{Fonte:} Elaborado pelos autores}
+%	\label{quad:fluxo_evento_gerenciar_servicos}
+%\end{quadro}
+
+%\newpage
+%\begin{quadro}[h!]
+%	\input{./fluxos/fluxo-evento-criar-conta}
+%	\caption[Fluxo de eventos para o caso de uso criar conta]
+%	{Fluxo de eventos para o caso de uso criar conta. \textbf{Fonte:} Elaborado pelos autores}
+%	\label{quad:fluxo_evento_criar_conta}
+%\end{quadro}
+
+
+\par Na segunda fase, análise e projeto preliminar, houve um refinamento dos requisitos levantados na fase anterior, aperfeiçoando as ações do usuário, por meio dos diagramas de casos de uso ou fluxos de eventos. Posterior a esta definição, foram desenvolvidos os diagramas de robustez, como demonstra a Figura~\ref{fig:diagrama_robustez_localizar_mao_de_obra}. Em paralelo, foi atualizado o modelo de domínio, acrescentando os novos atributos identificados, conforme a Figura~\ref{fig:modelo_dominio_atualizado}. Com o modelo de domínio atualizado, foi feita a modelagem do banco de dados da aplicação, como apresenta a Figura~\ref{fig:modelo_dados_aplicacao}.
+
+\newpage
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.35]{./imagens/robustez.png}}
+	\caption[Diagrama de robustez do caso de uso ''Localizar mão de obra'']
+	{Diagrama de robustez do caso de uso ''Localizar mão de obra''. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:diagrama_robustez_localizar_mao_de_obra}
+\end{figure}
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.5]{./imagens/modelo-dominio-com-atributos.png}}
+	\caption[Modelo de domínio atualizado]
+	{Modelo de domínio atualizado. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:modelo_dominio_atualizado}
+\end{figure} 
+
+\newpage
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.4]{./imagens/structure-all-nodes.png}}
+	\caption[Modelo de dados da aplicação]
+	{Modelo de dados da aplicação. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:modelo_dados_aplicacao}
+\end{figure} 
+
+\par Na terceira fase, definida como projeto detalhado, foram criados os diagramas de sequência, tendo como base os casos de uso modelados na fase anterior. Esta fase tem como objetivo detalhar todo o funcionamento do \textit{software}, visando definir a melhor maneira de realizar sua implementação. A Figura~\ref{fig:diagrama_sequencia_localizar_parceiros} apresenta o diagrama de sequência do caso de uso ''Localizar parceiros''.
+
+\newpage
+\begin{figure}[h!]
+	\centerline{\includegraphics[angle=90,scale=0.4]{./imagens/diagrama-sequencia-localizar-novos-parceiros.jpg}}
+	\caption[Diagrama de sequência do caso de uso ''Localizar parceiros'']
+	{Diagrama de sequência do caso de uso ''Localizar parceiros''. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:diagrama_sequencia_localizar_parceiros}
+\end{figure}
+
+\par Ainda na fase de projeto detalhado, após a modelagem dos diagramas de sequência, as operações encontradas nestes diagramas foram adicionadas ao modelo de domínio, em conjunto com as novas classes identificadas, gerando assim, o digrama de classes como mostra a Figura~\ref{fig:diagrama_classe}.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[angle=90,height=0.7\textheight,width=0.7\textwidth]{./imagens/classe.jpg}}
+	\caption[Diagrama de classes]
+	{Diagrama de classes \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:diagrama_classe}
+\end{figure}
+
+\newpage
+\par Na quarta e última fase do ICONIX, denominada implementação, iniciou-se a preparação do ambiente, incluindo a instalação dos \textit{softwares} necessários para o desenvolvimento prático da aplicação. Essa preparação é abordada a seguir.
