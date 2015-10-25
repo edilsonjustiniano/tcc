@@ -6,9 +6,6 @@
 
 \par Como a forma de conexão ao banco de dados foi alterada, houve a necessidade de reescrever a classe responsável por realizar esta conexão, conforme apresenta o Código~\ref{list:codigo_comunicacao_banco}.
 
-
-Exemplo de código Java:
-
 \begin{lstlisting} [style=custom_Java,caption={[Código de comunicação com o banco de dados]{Código de comunicação com o banco de dados. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:codigo_comunicacao_banco] 	
 public class FactoryDAO {
 
@@ -28,7 +25,8 @@ public class FactoryDAO {
 		WebResource resource = null;
 		if (instance == null) {
 			Client c = Client.create();
-			c.addFilter(new HTTPBasicAuthFilter(DATABASE_USERNAME, DATABASE_PASSWORD));
+			c.addFilter(new HTTPBasicAuthFilter(DATABASE_USERNAME,
+												DATABASE_PASSWORD));
 			resource = c.resource(cypherUrl);
 		}
 		return resource;
@@ -44,7 +42,7 @@ public class FactoryDAO {
 %	\label{fig:codigo_comunicacao_banco}
 %\end{figure}
 
-\par Após realizar a mudança de tecnologias, foram executados alguns procedimentos para compreender o funcionamento do \textit{web service} REST e em paralelo, foi feito o levantamento dos materiais de referência do \textit{framework} Angular JS. Foi preciso realizar testes para validar a conexão com o banco de dados Neo4j via API REST, fornecida por ele, além de realizados testes funcionais para envio de requisições e recebimento de respostas do \textit{web service} REST, utilizando o Angular JS. Para validar a conexão ao banco de dados via API REST foi necessário desenvolver algumas consultas em \textit{cypher} como apresenta o Código~\ref{list:consulta_usando_api_cypher}.
+\par Após realizar a mudança de tecnologias, foram executados alguns procedimentos para compreender o funcionamento do \textit{web service} REST e em paralelo, foi feito o levantamento dos materiais de referência do \textit{framework} Angular JS. Foi preciso realizar testes para validar a conexão com o banco de dados Neo4j via API REST, fornecida por ele, além de realizados testes funcionais para envio de requisições e recebimento de respostas do \textit{web service} REST, utilizando o Angular JS. Para validar a conexão ao banco de dados via API REST foi necessário desenvolver algumas consultas em \textit{cypher}, como apresenta o Código~\ref{list:consulta_usando_api_cypher}.
 
 \begin{lstlisting} [style=custom_Java,caption={[Exemplo de consulta usando a API \textit{cypher}]{Exemplo de consulta usando a API \textit{cypher}. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_usando_api_cypher] 	
 
@@ -100,7 +98,51 @@ public class PersonDAO {
 %	\label{fig:consulta_usando_api_cypher}
 %\end{figure}
 
-\par Ao realizar estes testes, foi constatado que seria necessário desenvolver uma maneira de converter os resultados das buscas realizadas no banco de dados Neo4j que, por padrão, não retorna os resultados no formato JSON comum, portanto, houve a preocupação em tratar estas respostas, a fim de retornar um JSON válido ao usuário que futuramente viria a utilizar a API REST fornecida por este \textit{software}. É possível visualizar este tratamento no Código~\ref{list:consulta_usando_api_cypher}. 
+Nesse trecho de código entre as linhas 17 e 27 é apresentada uma consulta escrita usando a API \textit{Cypher}, ela tem por finalidade recuperar os dados de um determinado usuário. Como já mencionado no quadro teórico deste trabalho, o \textit{Cypher} utiliza algumas cláusulas, dentre elas é possível mencionar a \texttt{MATCH} e \texttt{RETURN} cuja utilização delas é apresentada nessa consulta. Na cláusula \texttt{MATCH} são definidos os padrões para realizar a busca, nesse caso, uma pessoa que viva em qualquer cidade, trabalhe em uma empresa qualquer e que possua o \textit{e-mail} igual ao recebido como parâmetro pelo método \texttt{getPersonData}. Já a clásula \texttt{RETURN}, são definidos os dados desejados pela consulta, nesse caso, são eles: o nome do usuário, o \textit{e-mail}, a foto, a cidade onde vive, a empresa onde trabalha, o CPF (em caso de pessoas físicas), o CNPJ (para pessoas jurídicas), o tipo da conta (pessoa jurídica ou física), e o sexo do usuário (usado para pessoas físicas). Mas como é possível notar, foi necessário gerar um objeto JSON manualmente contendo os dados desejados como pode ser visualizado a partir da linha 22 até a linha 27, pois, por padrão o Neo4j não retorna os resultados no formato JSON comum, como demonstra o Código~\ref{list:exemplo_json_retornado_neo4j}. 
+
+\begin{lstlisting} [style=custom_HTML,caption={[Exemplo de um objeto JSON retornado de uma consulta via \textit{Cypher}]{Exemplo de um objeto JSON retornado de uma consulta via \textit{Cypher}. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:exemplo_json_retornado_neo4j] 	
+{
+	...
+	column: [
+		"name",
+		"email",
+		"password"
+	],
+	data: [
+		"Andressa Faria",
+		"andressa_faria18@hotmail.com",
+		"78hweqroqy5brlfgvqpOIoi9uijkhgyteqwr"
+	]
+	...
+}
+\end{lstlisting}
+
+Portanto, foi necessário desenvolver uma forma de converter os resultados obtidos nas buscas realizadas no banco de dados, a fim de retornar um JSON válido ao usuário, que futuramente viria a utilizar a API REST fornecida por este \textit{software}. É possível visualizar este tratamento no Código~\ref{list:consulta_usando_api_cypher} a partir da linha 34 até a linha 38.
+
+Na linha 34 foi necessário criar um objeto JSON da classe \texttt{JSONObject} passando o retorno da consulta em seu construtor. Já na linha 35 foi obtido os dados retornados da consulta, porém, como demonstrado no Código~\ref{list:exemplo_json_retornado_neo4j} os dados são retornados em uma \textit{collection} (coleção) e não em objetos, portanto, para recuperar os dados foi necessário criar um objeto da classe \texttt{JSONArray} e recuperar os dados por meio do campo \texttt{data} do resultado.
+
+Após recuperar os dados, foi necessário extrair os dados de cada resultado da consulta que até este ponto estavam armazenados em um \texttt{array} e transferí-los para uma lista de objetos da classe \texttt{JSONObject} como apresenta a linha 36 do Código~\ref{list:consulta_usando_api_cypher}, para tanto, foi criada uma classe estática denominada \texttt{JSONUtil} responsável por realizar essa tarefa e retonar os dados no formato padrão. Essae método é apresentado no Código~\ref{list:parser_jsonarray_to_list_json_object}.
+
+\begin{lstlisting} [style=custom_JAVA,caption={[Gerarador de JSON padrão com os resultados das consultas \textit{Cypher}]{Gerarador de JSON padrão com os resultados das consultas \textit{Cypher}. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:parser_jsonarray_to_list_json_object] 	
+public class JSONUtil {
+	...
+	public static List<JSONObject>
+									parseJSONArrayToListJSON(JSONArray array) throws JSONException {
+		List<JSONObject> response = new ArrayList<JSONObject>();
+		for (int i = 0; i < array.length(); i++) {
+			JSONArray arr1 = array.getJSONArray(i);
+			for (int j = 0; j < arr1.length(); j++) {
+				JSONObject obj = arr1.getJSONObject(j);
+				response.add(obj);
+			}
+		}
+		return response;
+	}
+	...
+}
+\end{lstlisting}
+
+Após essa extração de dados foi necessário criar um objeto da classe \texttt{JSONArray} passando o retorno do método \texttt{parseJSONArrayToListJSON} da classe \texttt{JSONUtil} em seu construtor, uma vez que, o limite de resultados obtidos em uma consulta depende, exclusivamente da própria consulta e da quantidade de registros armazenados no banco de dados. Após realizar todos esses passos, um objeto da classe \texttt{JSONArray} contendo todos os dados devidamente preenchidos é retornado para o método que requisitou essa consulta, como mostra a linha 38 e 40 do Código~\ref{list:consulta_usando_api_cypher}.
  
 \par A partir deste ponto, a aplicação estava totalmente desacoplada, sendo necessário realizar uma configuração, a fim de permitir que as requisições enviadas pelo \textit{front end} fossem aceitas pelo \textit{back end}, localizado em outro domínio.
 
@@ -108,7 +150,6 @@ public class PersonDAO {
 
 \par Posterior à realização dos testes e da escolha definitiva da arquitetura que seria utilizada, iniciou-se a implementação dos casos de uso. O primeiro a ser implementado foi o caso de uso de criação de conta. Para este caso de uso, teve-se o cuidado de criar um mecanismo de criptografia de dados sigilosos, como usuário e senha, visando garantir a segurança da aplicação. Estas informações criptografadas são enviadas a cada requisição e validadas pelo \textit{web service}, sendo atualizadas caso sejam válidas, tornado mais complexo a quebra desta criptografia. Este mecanismo foi desenvolvido com base no sistema de \textit{login} via \textit{token}. Segundo o embasamento usado na criação de contas, deu-se início ao desenvolvimento do sistema de \textit{login} e \textit{logoff}, que também utilizam o conceito de criptografia via \textit{token}. A Figura~\ref{fig:pagina_login} apresenta a página de \textit{login}.
 
-\newpage
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.60]{./imagens/login.jpg}}
 	\caption[Tela de login ]
@@ -218,7 +259,14 @@ Para realizar a validação do \textit{token} expirado, foi criado o método \te
 	\label{fig:pagina_localizar_parceiro}
 \end{figure}
 
-\par Ainda relacionado ao tipo de conta contratante ou ambos, foi implementado o caso de uso adicionar parceiro, que permite ao usuário convidar um possível parceiro para fazer parte da sua rede. Após a implementação da lógica para adicionar um novo parceiro, houve a necessidade de implementar o serviço de requisições de parcerias, uma vez que não bastava apenas um contratante convidar outro para se tornarem parceiros, mas sim que o contratante convidado aceitasse sua solicitação de parceria, para assim se tornarem parceiros. Visando disponibilizar estas solicitações de forma agradável ao usuário, foi desenvolvida uma funcionalidade para que o usuário pudesse aceitar ou rejeitar a solicitação enviada à ele.
+\par Ainda relacionado ao tipo de conta contratante ou ambos, foi implementado o caso de uso adicionar parceiro, que permite ao usuário convidar um possível parceiro para fazer parte da sua rede. Após a implementação da lógica para adicionar um novo parceiro, houve a necessidade de implementar o serviço de requisições de parcerias, uma vez que não bastava apenas um contratante convidar outro para se tornarem parceiros, mas sim que o contratante convidado aceitasse sua solicitação de parceria, para assim se tornarem parceiros. Visando disponibilizar estas solicitações de forma agradável ao usuário, foi desenvolvida uma funcionalidade para que o usuário pudesse aceitar ou rejeitar a solicitação enviada à ele, essa funcionalidade apresentada em destaque na Figura~\ref{fig:aceitar_rejeitar_solicitacao_parceria}.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.45]{./imagens/aceitar_rejeitar_solicitacao_parceria.png}}
+	\caption[Tela para aceitar ou rejeitar solicitação de parceria]
+	{Tela para aceitar ou rejeitar solicitação de parceria. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:aceitar_rejeitar_solicitacao_parceria}
+\end{figure}
 
 \par Após realizada a implementação do caso de uso adicionar parceiro, houve a necessidade de desenvolver a busca por todos os usuários que possuíam o tipo de conta contratante ou ambos e que possuíam um relacionamento de parceria com o usuário autenticado no sistema, além da funcionalidade de localizar novos parceiros, baseando-se na localização da empresa na qual o usuário trabalha e na cidade onde ele vive, sempre ordenando os resultados por meio da quantidade de parceiros em comum. 
 
