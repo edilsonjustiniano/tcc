@@ -259,7 +259,21 @@ Para realizar a validação do \textit{token} expirado, foi criado o método \te
 	\label{fig:pagina_localizar_parceiro}
 \end{figure}
 
-\par Ainda relacionado ao tipo de conta contratante ou ambos, foi implementado o caso de uso adicionar parceiro, que permite ao usuário convidar um possível parceiro para fazer parte da sua rede. Após a implementação da lógica para adicionar um novo parceiro, houve a necessidade de implementar o serviço de requisições de parcerias, uma vez que não bastava apenas um contratante convidar outro para se tornarem parceiros, mas sim que o contratante convidado aceitasse sua solicitação de parceria, para assim se tornarem parceiros. Visando disponibilizar estas solicitações de forma agradável ao usuário, foi desenvolvida uma funcionalidade para que o usuário pudesse aceitar ou rejeitar a solicitação enviada à ele, essa funcionalidade apresentada em destaque na Figura~\ref{fig:aceitar_rejeitar_solicitacao_parceria}.
+\par Ainda relacionado ao tipo de conta contratante ou ambos, foi implementado o caso de uso adicionar parceiro, que permite ao usuário convidar um possível parceiro para fazer parte da sua rede.
+
+\par Ao enviar a solicitação de parceria, a aplicação executa uma consulta no banco de dados. Essa consulta é responsável por criar uma aresta entre o nó do usuário autenticado no sistema e o parceiro convidado, conforme apresenta o Código~\ref{list:query_adicionar_parceiro}.
+
+\begin{lstlisting} [style=custom_SQL,caption={[\textit{Query} para enviar solicitação de parceria]{\textit{Query} para enviar solicitação de parceria. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:query_adicionar_parceiro] 	
+MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}),
+(partner:Person {email: 'andressa_faria18@hotmail.com'})
+CREATE (me)-[:PARTNER_OF {since: 9898723435424281}]->(partner)
+RETURN {myName: me.name, myEmail: me.email, partnerName: partner.name, 
+partnerEmail: partner.email} as added
+\end{lstlisting}
+
+\par Essa consulta é separada em três partes, sendo elas dividas pelas cláusulas \texttt{MATCH}, \texttt{CREATE} e \texttt{RETURN}. A primeira parte dessa consulta irá localizar os vértices cujos \textit{e-mails} sejam semelhantes ao do usuário autenticado no sistema e do parceiro convidado, respectivamente. A segunda parte é responsável por criar a aresta entre os vértices obtidos pela primeira parte da consulta. A terceira e última parte, irá retornar os dados de ambos os usuários, sendo eles, o usuário autenticado no sistema e parceiro recém convidado a fazer parte da rede de parceiros do usuário autenticado.
+
+\par Após a implementação da lógica para adicionar um novo parceiro, houve a necessidade de implementar o serviço de requisições de parcerias, uma vez que não bastava apenas um contratante convidar outro para se tornarem parceiros, mas sim que o contratante convidado aceitasse sua solicitação de parceria, para assim se tornarem parceiros. Visando disponibilizar estas solicitações de forma agradável ao usuário, foi desenvolvida uma funcionalidade para que o usuário pudesse aceitar ou rejeitar a solicitação enviada à ele, essa funcionalidade apresentada em destaque na Figura~\ref{fig:aceitar_rejeitar_solicitacao_parceria}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.45]{./imagens/aceitar_rejeitar_solicitacao_parceria.png}}
@@ -267,6 +281,21 @@ Para realizar a validação do \textit{token} expirado, foi criado o método \te
 	{Tela para aceitar ou rejeitar solicitação de parceria. \textbf{Fonte:} Elaborado pelos autores.}
 	\label{fig:aceitar_rejeitar_solicitacao_parceria}
 \end{figure}
+
+\par A partir dessa funcionalidade, o usuário será capaz de aceitar ou recusar a solicitação apenas com um \textit{click}. Caso o usuário aceite a solicitação, o sistema irá realizar os procedimentos necessários e irá executar a mesma consulta apresentada no Código~\ref{list:query_adicionar_parceiro}, porém com os \textit{e-mails} invertidos. Essa consulta será reutilizada, pois, para que dois usuários se tornem parceiros é necessário que ambos possuam uma aresta do tipo \texttt{PARTNER OF} apontando um ao outro.
+
+\par Se o usuário rejeitar a solicitação, o sistema realizará os procedimentos necessários e executará a consulta apresentada no Código~\ref{list:query_remover_parceiro} a fim de excluir a aresta criada anteriormente pela solicitação de parceria.
+
+\begin{lstlisting} [style=custom_SQL,caption={[\textit{Query} para remover solicitação de parceria]{\textit{Query} para remover solicitação de parceria. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:query_remover_parceiro] 	
+MATCH (me:Person {email: 'andressa_faria18@hotmail.com'}),
+(partner:Person {email: 'edilsonjustiniano@gmail.com'}),
+(partner)-[rel:PARTNER_OF]->(me)
+DELETE rel
+RETURN {myName: me.name, myEmail: me.email, 
+partnerName: partner.name, partnerEmail: partner.email} as deleted;
+\end{lstlisting}
+
+\par Essa consulta, a exemplo da anterior, é separada em três partes, sendo elas dividas pelas cláusulas \texttt{MATCH}, \texttt{DELETE} e \texttt{RETURN}. A primeira parte dessa consulta irá localizar os vértices cujos \textit{e-mails} sejam semelhantes ao do usuário autenticado no sistema e do parceiro convidado, respectivamente, e que possuam uma aresta do tipo \texttt{PARTNER OF} os conectando, porém, essa aresta se inicia no vértice relacionado ao parceiro convidado e o final seja vértice relacionado ao usuário autenticado. A segunda parte consiste apenas na exclusão da aresta obtida na primeira parte da consulta. A terceira e última parte, irá retornar os dados de ambos os usuários, sendo eles, o usuário autenticado no sistema e parceiro cujo, convite para se tornar parceiro foi rejeitado pelo usuário autenticado no sistema.
 
 \par Após realizada a implementação do caso de uso adicionar parceiro, houve a necessidade de desenvolver a busca por todos os usuários que possuíam o tipo de conta contratante ou ambos e que possuíam um relacionamento de parceria com o usuário autenticado no sistema, além da funcionalidade de localizar novos parceiros, baseando-se na localização da empresa na qual o usuário trabalha e na cidade onde ele vive, sempre ordenando os resultados por meio da quantidade de parceiros em comum. 
 
