@@ -3,23 +3,30 @@
 \setlength{\labelsep}{0pt}\begin{thebibliography}{}
 \providecommand{\abntrefinfo}[3]{}
 \providecommand{\abntbstabout}[1]{}
-\abntbstabout{v-1.9.2 }
+\abntbstabout{v-1.9.5 }
 
 \bibitem[Apache 2015]{apache_about_tomcat}
 \abntrefinfo{Apache}{APACHE}{2015}
-\justify{APACHE. \textbf{Apache Tomcat}. 2015. Disponível em:
+{APACHE. \emph{\textbf{Apache Tomcat}}. 2015. Disponível em:
   \url{http://tomcat.apache.org/index.html}.
 Acesso em: 15 de janeiro de 2015.}
 
 \bibitem[Azevedo 2010]{o_engenheiro_software_as_fases_iconix_mecva}
 \abntrefinfo{Azevedo}{AZEVEDO}{2010}
-\justify{AZEVEDO, M. E. C.~V. de. \textbf{Quantas fases tem o ICONIX?} 2010.
+{AZEVEDO, M. E. C.~V. de. \emph{Quantas fases tem o ICONIX?} 2010.
   \url{http://oengenheirodesoftware.blogspot.com.br/2010/11/quantas-fases-tem-o-iconix.html}.
 Acesso em: 22 de julho de 2015.}
 
+\bibitem[Babal 2014]{token_traditional_babal}
+\abntrefinfo{Babal}{BABAL}{2014}
+{BABAL seyin. \emph{Autenticação com Tokens Usando AngularJS \& NodeJS}.
+  2014.
+  \url{http://code.tutsplus.com/pt/tutorials/token-based-authentication-with-angularjs-nodejs--cms-22543}.
+Acesso em: 23 de outubro de 2015.}
+
 \bibitem[Barbosa 2011]{barbosa_why_people_use_social_network}
 \abntrefinfo{Barbosa}{BARBOSA}{2011}
-\justify{BARBOSA, K. \textbf{Por que as pessoas usam as redes sociais?} 2011.
+{BARBOSA, K. \emph{\textbf{Por que as pessoas usam as redes sociais?}} 2011.
   Disponível em:
   \url{http://super.abril.com.br/blogs/tendencias/por-que-as-pessoas-usam-as-redes-sociais/}.
 Acesso em: 28 de dezembro de 2014.}
@@ -27,196 +34,196 @@ Acesso em: 28 de dezembro de 2014.}
 \bibitem[Bashman, Sierra e Bates
   2010]{basham_sierra_bates_use_cabeca_servlets_jsp}
 \abntrefinfo{Bashman, Sierra e Bates}{BASHMAN; SIERRA; BATES}{2010}
-\justify{BASHMAN, B.; SIERRA, K.; BATES, B. \textbf{Use a Cabeça! Servlets e
-  JSP}. [S.l.]: Alta Books, 2010.}
+{BASHMAN, B.; SIERRA, K.; BATES, B. \emph{\textbf{Use a Cabeça! Servlets e
+  JSP}}. [S.l.]: Alta Books, 2010.}
 
 \bibitem[Bondy e Murty 1976]{bondy_murty_graph_theory_with_applications}
 \abntrefinfo{Bondy e Murty}{BONDY; MURTY}{1976}
-\justify{BONDY, J.~A.; MURTY, U. S.~R. \textbf{Graph Theory with applications}.
+{BONDY, J.~A.; MURTY, U. S.~R. \textbf{Graph Theory with applications}.
 1976.}
 
 \bibitem[Brittain e Darwin 2007]{brittain_darwin_apache_tomcat_2nd_edition}
 \abntrefinfo{Brittain e Darwin}{BRITTAIN; DARWIN}{2007}
-\justify{BRITTAIN, J.; DARWIN, I.~F. \textbf{Tomcat The Definitive Guide}. 2.
+{BRITTAIN, J.; DARWIN, I.~F. \emph{\textbf{Tomcat The Definitive Guide}}. 2.
   ed. [S.l.: s.n.], 2007.}
 
 \bibitem[Bruggen 2014]{bruggen_learning_neo4j}
 \abntrefinfo{Bruggen}{BRUGGEN}{2014}
-\justify{BRUGGEN, R.~V. \textbf{Learning Neo4j}. [S.l.]: Packt, 2014.}
+{BRUGGEN, R.~V. \emph{\textbf{Learning Neo4j}}. [S.l.]: Packt, 2014.}
 
 \bibitem[Date 2003]{date_introducao_sistemas_bancos_dados}
 \abntrefinfo{Date}{DATE}{2003}
-\justify{DATE, C.~J. \textbf{Introdução a sistemas de bancos de dados}. 8. ed.
+{DATE, C.~J. \emph{\textbf{Introdução a sistemas de bancos de dados}}. 8. ed.
   [S.l.]: Elsevier, 2003.}
 
 \bibitem[Elmasri e Navathe 2005]{elmasri_navathe_sistemas_banco_dados}
 \abntrefinfo{Elmasri e Navathe}{ELMASRI; NAVATHE}{2005}
-\justify{ELMASRI, R.; NAVATHE, S.~B. \textbf{Sistemas de Banco de Dados}. 1. ed.
+{ELMASRI, R.; NAVATHE, S.~B. \emph{\textbf{Sistemas de Banco de Dados}}. 1. ed.
   [S.l.]: Pearson, 2005.}
 
 \bibitem[Erl et al. 2012]{erl_soa_with_rest}
 \abntrefinfo{Erl et al.}{ERL et al.}{2012}
-\justify{ERL, T. et al. \textbf{SOA with REST: principles, patterns \&
-  constraints for building enterprise solutions with REST}. [S.l.]: Novatec,
+{ERL, T. et al. \emph{\textbf{SOA with REST: principles, patterns \&
+  constraints for building enterprise solutions with REST}}. [S.l.]: Novatec,
   2012.}
 
 \bibitem[Faria
   2008]{tcc_univas_faria_aspectj_programacao_orientada_aspecto_java}
 \abntrefinfo{Faria}{FARIA}{2008}
-\justify{FARIA, M.~A. de. \textbf{ASPECTJ: Programação orientada a aspecto em Java}.
+{FARIA, M.~A. de. \emph{ASPECTJ: Programação orientada a aspecto em Java}.
   [S.l.: s.n.], 2008.}
 
 \bibitem[Flanagan 2011]{flanagan_javascript_definitive_guide}
 \abntrefinfo{Flanagan}{FLANAGAN}{2011}
-\justify{FLANAGAN, D. \textbf{Javascript: The Definitive Guide}. 6. ed. [S.l.]:
+{FLANAGAN, D. \emph{\textbf{Javascript: The Definitive Guide}}. 6. ed. [S.l.]:
   O' Reilly, 2011.}
 
 \bibitem[Fonseca 2002]{fonseca_metodologia_da_pesquisa}
 \abntrefinfo{Fonseca}{FONSECA}{2002}
-\justify{FONSECA, J. J.~S. \textbf{Metodologia da pesquisa Científica}. [S.l.]:
+{FONSECA, J. J.~S. \emph{\textbf{Metodologia da pesquisa Científica}}. [S.l.]:
   UEC, 2002.}
 
 \bibitem[Frank e Seibt 2002]{javascript_diego_leonard}
 \abntrefinfo{Frank e Seibt}{FRANK; SEIBT}{2002}
-\justify{FRANK, D.~R.; SEIBT, L. \textbf{Javascript}.
+{FRANK, D.~R.; SEIBT, L. Javascript.
 2002.}
 
 \bibitem[Gil 1999]{gil_metodos_e_tecnicas_de_pesquisa}
 \abntrefinfo{Gil}{GIL}{1999}
-\justify{GIL, A.~C. \textbf{Métodos e técnicas de pesquisa social}. 5. ed.
+{GIL, A.~C. \emph{\textbf{Métodos e técnicas de pesquisa social}}. 5. ed.
   [S.l.]: Atlas, 1999.}
 
 \bibitem[Gil 2007]{gil_como_elaborar_projeto_de_pesquisa}
 \abntrefinfo{Gil}{GIL}{2007}
-\justify{GIL, A.~C. \textbf{Como elaborar projetos de pesquisa}. 4. ed. [S.l.]:
+{GIL, A.~C. \emph{\textbf{Como elaborar projetos de pesquisa}}. 4. ed. [S.l.]:
   Atlas, 2007.}
 
 \bibitem[Green e Seshadri 2013]{green_seshadri_angularjs}
 \abntrefinfo{Green e Seshadri}{GREEN; SESHADRI}{2013}
-\justify{GREEN, B.; SESHADRI, S. \textbf{Javascript: The Definitive Guide}.
+{GREEN, B.; SESHADRI, S. \emph{\textbf{Javascript: The Definitive Guide}}.
   [S.l.]: O' Reilly, 2013.}
 
 \bibitem[Harju 2014]{harju_graph_theory}
 \abntrefinfo{Harju}{HARJU}{2014}
-\justify{HARJU, T. \textbf{Graph theory}.
+{HARJU, T. Graph theory.
 2014.}
 
 \bibitem[Junid et al.
   2012]{junid_tahir_majid_idros_potential_graph_thory_for_dna_sequence_alignment}
 \abntrefinfo{Junid et al.}{JUNID et al.}{2012}
-\justify{JUNID, S. A. M.~A. et al. \textbf{Potential of graph theory algorithm approach for dna
-  sequence alignment and comparison.}
+{JUNID, S. A. M.~A. et al. Potential of graph theory algorithm approach for dna
+  sequence alignment and comparison.
 2012.}
 
 \bibitem[Keller 2015]{robert_keller_acylic_graph}
 \abntrefinfo{Keller}{KELLER}{2015}
-\justify{KELLER, R.~M. \textbf{Acylic Graph}. 2015.
+{KELLER, R.~M. \emph{Acylic Graph}. 2015.
   \url{http://www.cs.hmc.edu/~keller/courses/cs60/s98/examples/acyclic/}.
 Acesso em: 20 de abril de 2015.}
 
 \bibitem[Kozlowski e Darwin
   2013]{kozlowski_darwin_mastering_web_application_angular_js}
 \abntrefinfo{Kozlowski e Darwin}{KOZLOWSKI; DARWIN}{2013}
-\justify{KOZLOWSKI, P.; DARWIN, P.~B. \textbf{Mastering Web Application
-  Development with AngularJS}. [S.l.]: Packt Publishing, 2013.}
+{KOZLOWSKI, P.; DARWIN, P.~B. \emph{\textbf{Mastering Web Application
+  Development with AngularJS}}. [S.l.]: Packt Publishing, 2013.}
 
 \bibitem[Laurie e Laurie 2003]{laurie_laurie_apache_the_definitive_guide}
 \abntrefinfo{Laurie e Laurie}{LAURIE; LAURIE}{2003}
-\justify{LAURIE, B.; LAURIE, P. \textbf{Apache: The Definitive Guide}. [S.l.]:
+{LAURIE, B.; LAURIE, P. \emph{\textbf{Apache: The Definitive Guide}}. [S.l.]:
   RepKover, 2003.}
 
 \bibitem[Marconi e Lakatos
   2009]{marconi_lakatos_metodologia_trabalho_cientifico}
 \abntrefinfo{Marconi e Lakatos}{MARCONI; LAKATOS}{2009}
-\justify{MARCONI, M.~A.; LAKATOS, E.~M. \textbf{Metodologia do trabalho
-  científico}. 7. ed. [S.l.]: Atlas, 2009.}
+{MARCONI, M.~A.; LAKATOS, E.~M. \emph{\textbf{Metodologia do trabalho
+  científico}}. 7. ed. [S.l.]: Atlas, 2009.}
 
 \bibitem[Marzullo 2013]{marzulo_soa_na_pratica}
 \abntrefinfo{Marzullo}{MARZULLO}{2013}
-\justify{MARZULLO, F.~P. \textbf{SOA na prática: inovando seu negócio por meio
-  de soluções orientadas a serviços}. [S.l.]: ServiceTech Press, 2013.}
+{MARZULLO, F.~P. \emph{\textbf{SOA na prática: inovando seu negócio por meio
+  de soluções orientadas a serviços}}. [S.l.]: ServiceTech Press, 2013.}
 
 \bibitem[Matthew e Stones
   2005]{matthew_stones_beginning_databases_with_postgresql}
 \abntrefinfo{Matthew e Stones}{MATTHEW; STONES}{2005}
-\justify{MATTHEW, N.; STONES, R. \textbf{Beginnig databases with postgresql - from novice to
-  professional.}
+{MATTHEW, N.; STONES, R. Beginnig databases with postgresql - from novice to
+  professional.
 2005.}
 
 \bibitem[Neo4j 2013]{neo4j_team_manual}
 \abntrefinfo{Neo4j}{NEO4J}{2013}
-\justify{NEO4J. \textbf{The Neo4j Manual}. [S.l.: s.n.], 2013.}
+{NEO4J. \emph{\textbf{The Neo4j Manual}}. [S.l.: s.n.], 2013.}
 
 \bibitem[Oracle 2010]{oracle_about_java_technology}
 \abntrefinfo{Oracle}{ORACLE}{2010}
-\justify{ORACLE. \textbf{About the Java Technology}. 2010. Disponível em:
+{ORACLE. \emph{\textbf{About the Java Technology}}. 2010. Disponível em:
   \url{http://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html}.
 Acesso em: 28 de dezembro de 2014.}
 
 \bibitem[Oracle 2015]{polymorphism_oracle}
 \abntrefinfo{Oracle}{ORACLE}{2015a}
-\justify{ORACLE. \textbf{Polymorphism}. 2015.
+{ORACLE. \emph{Polymorphism}. 2015.
   \url{https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html}.
 Acesso em: 22 de julho de 2015.}
 
 \bibitem[Oracle 2015]{oracle_web_service}
 \abntrefinfo{Oracle}{ORACLE}{2015b}
-\justify{ORACLE. \textbf{What are RESTful Web Services?} 2015.
+{ORACLE. \emph{What are RESTful Web Services?} 2015.
   \url{https://docs.oracle.com/javaee/6/tutorial/doc/gijqy.html}.
 Acesso em: 23 de julho de 2015.}
 
 \bibitem[Paoletti 2006]{paoletti_seven_bridges_konigsberg}
 \abntrefinfo{Paoletti}{PAOLETTI}{2006}
-\justify{PAOLETTI, T. \textbf{Leonard Euler's Solution to the Konigsberg Bridge Problem}.
+{PAOLETTI, T. \emph{Leonard Euler's Solution to the Konigsberg Bridge Problem}.
   2006.
   \url{http://www.maa.org/publications/periodicals/convergence/leonard-eulers-solution-to-the-konigsberg-bridge-problem}.
 Acesso em: 26 de fevereiro de 2015.}
 
-\bibitem[Penha e Carvalho 2013]{tcc_univas_penha_carvalho_recomendacao_filmes}
-\abntrefinfo{Penha e Carvalho}{PENHA; CARVALHO}{2013}
-\justify{PENHA, A.~L. da S.; CARVALHO, W. \textbf{Sistema de recomendação de filmes
-  utilizando graph database}. [S.l.: s.n.], 2013.}
-
 \bibitem[Pádua 2007]{padua_metodologia_pesquisa}
 \abntrefinfo{Pádua}{PáDUA}{2007}
-\justify{PáDUA, E. M.~M. de. \textbf{Metodologia da Pesquisa: Abordagem
-  Teorico-Pratica}. 16. ed. [S.l.]: Papirus, 2007.}
+{PáDUA, E. M.~M. de. \emph{\textbf{Metodologia da Pesquisa: Abordagem
+  Teorico-Pratica}}. 16. ed. [S.l.]: Papirus, 2007.}
+
+\bibitem[Penha e Carvalho 2013]{tcc_univas_penha_carvalho_recomendacao_filmes}
+\abntrefinfo{Penha e Carvalho}{PENHA; CARVALHO}{2013}
+{PENHA, A.~L. da S.; CARVALHO, W. \emph{Sistema de recomendação de filmes
+  utilizando graph database}. [S.l.: s.n.], 2013.}
 
 \bibitem[Robinson, Webber e Eifrem
   2013]{robinson_webber_eifrem_graph_databases}
 \abntrefinfo{Robinson, Webber e Eifrem}{ROBINSON; WEBBER; EIFREM}{2013}
-\justify{ROBINSON, I.; WEBBER, J.; EIFREM, E. \textbf{Graph Databases}. [S.l.]:
+{ROBINSON, I.; WEBBER, J.; EIFREM, E. \emph{\textbf{Graph Databases}}. [S.l.]:
   O'Reilly, 2013.}
 
 \bibitem[Rocha
   2013]{rocha_algoritmos_particionamento_banco_dados_orientado_grafos}
 \abntrefinfo{Rocha}{ROCHA}{2013}
-\justify{ROCHA, R.~R. \textbf{Algoritmos de particionamento e banco de dados orientado a
-  grafos.}
+{ROCHA, R.~R. Algoritmos de particionamento e banco de dados orientado a
+  grafos.
 2013.}
 
 \bibitem[Rodriguez 2008]{ibm_web_service}
 \abntrefinfo{Rodriguez}{RODRIGUEZ}{2008}
-\justify{RODRIGUEZ, A. \textbf{RESTful Web services: The basics}. 2008.
+{RODRIGUEZ, A. \emph{RESTful Web services: The basics}. 2008.
   \url{http://www.ibm.com/developerworks/library/ws-restful/}.
 Acesso em: 23 de julho de 2015.}
 
 \bibitem[Rosenberg e Scott
   1999]{rosenberg_scott_use_case_driven_object_modeling_with_uml}
 \abntrefinfo{Rosenberg e Scott}{ROSENBERG; SCOTT}{1999}
-\justify{ROSENBERG, D.; SCOTT, K. \textbf{Use Case Driven Object Modeling With
-  UML A Pratical Approach}. 1. ed. [S.l.: s.n.], 1999.}
+{ROSENBERG, D.; SCOTT, K. \emph{\textbf{Use Case Driven Object Modeling With
+  UML A Pratical Approach}}. 1. ed. [S.l.: s.n.], 1999.}
 
 \bibitem[Rosenberg e Stephens
   2007]{rosenberg_stephens_use_case_driven_object_modeling_with_uml}
 \abntrefinfo{Rosenberg e Stephens}{ROSENBERG; STEPHENS}{2007}
-\justify{ROSENBERG, D.; STEPHENS, M. \textbf{Use Case Driven Object Modeling With
-  UML Theory and Practice}. 1. ed. [S.l.: s.n.], 2007.}
+{ROSENBERG, D.; STEPHENS, M. \emph{\textbf{Use Case Driven Object Modeling With
+  UML Theory and Practice}}. 1. ed. [S.l.: s.n.], 2007.}
 
 \bibitem[Rosenberg, Stephens e Collins-Cope 2005]{rosenberg_iconix_process}
 \abntrefinfo{Rosenberg, Stephens e Collins-Cope}{ROSENBERG; STEPHENS;
   COLLINS-COPE}{2005}
-\justify{ROSENBERG, D.; STEPHENS, M.; COLLINS-COPE, M. \textbf{Agile Development with
+{ROSENBERG, D.; STEPHENS, M.; COLLINS-COPE, M. \textbf{Agile Development with
   ICONIX Process: People, Process, and Pragmatism}.
 2005.}
 
@@ -227,54 +234,60 @@ Acesso em: 23 de julho de 2015.}
 
 \bibitem[Sadalage e Fowler 2013]{sadalage_fowler_nosql_distilled_brief_guide}
 \abntrefinfo{Sadalage e Fowler}{SADALAGE; FOWLER}{2013}
-\justify{SADALAGE, P.~J.; FOWLER, M. \textbf{NoSQL Distilled - A Brief Guide to
-  the Emerging World of Polyglot Persistence}. [S.l.: s.n.], 2013.}
+{SADALAGE, P.~J.; FOWLER, M. \emph{\textbf{NoSQL Distilled - A Brief Guide to
+  the Emerging World of Polyglot Persistence}}. [S.l.: s.n.], 2013.}
 
 \bibitem[Schildt 2007]{schildt_java_complete_reference}
 \abntrefinfo{Schildt}{SCHILDT}{2007}
-\justify{SCHILDT, H. \textbf{Java: The Complete Reference}. 7. ed. [S.l.: s.n.],
+{SCHILDT, H. \emph{\textbf{Java: The Complete Reference}}. 7. ed. [S.l.: s.n.],
   2007.}
 
 \bibitem[Setzer e Silva
   2005]{setzer_silva_banco_dados_aprenda_o_que_sao_melhore_conhecimento}
 \abntrefinfo{Setzer e Silva}{SETZER; SILVA}{2005}
-\justify{SETZER, V.~W.; SILVA, F. S.~C. da. \textbf{Banco de dados: Aprenda o que
-  são, melhore seu conhecimento, construa os seus}. [S.l.]: Edgard Blucher,
+{SETZER, V.~W.; SILVA, F. S.~C. da. \emph{\textbf{Banco de dados: Aprenda o que
+  são, melhore seu conhecimento, construa os seus}}. [S.l.]: Edgard Blucher,
   2005.}
+
+\bibitem[Sevilleja 2015]{authentication_via_token_chris_sevilleja}
+\abntrefinfo{Sevilleja}{SEVILLEJA}{2015}
+{SEVILLEJA, C. \emph{The Ins and Outs of Token Based Authentication}. 2015.
+  \url{https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication}.
+Acesso em: 23 de outubro de 2015.}
 
 \bibitem[Silva e Videira 2001]{silva_videira_uml_metodologias_ferramentas_case}
 \abntrefinfo{Silva e Videira}{SILVA; VIDEIRA}{2001}
-\justify{SILVA, A.; VIDEIRA, C. \textbf{UML, Metodologias e Ferramentas Case}.
+{SILVA, A.; VIDEIRA, C. \emph{\textbf{UML, Metodologias e Ferramentas Case}}.
   1. ed. [S.l.: s.n.], 2001.}
 
 \bibitem[Silva e Pires 2013]{tcc_univas_silva_pires_comparacao_banco_dados}
 \abntrefinfo{Silva e Pires}{SILVA; PIRES}{2013}
-\justify{SILVA, A.~C. da; PIRES, J.~P. \textbf{Banco de dados relacional versus banco de
+{SILVA, A.~C. da; PIRES, J.~P. \emph{Banco de dados relacional versus banco de
   dados orientado a grafos aplicados a redes sociais}. [S.l.: s.n.], 2013.}
 
 \bibitem[Silva 2011]{silva_css_3}
 \abntrefinfo{Silva}{SILVA}{2011a}
-\justify{SILVA, M.~S. \textbf{CSS 3: desenvolva aplicações web profissionais
-  com o uso dos poderosos recursos de estilização das CSS 3}. [S.l.]:
+{SILVA, M.~S. \emph{\textbf{CSS 3: desenvolva aplicações web profissionais
+  com o uso dos poderosos recursos de estilização das CSS 3}}. [S.l.]:
   Novatec, 2011.}
 
 \bibitem[Silva 2011]{silva_html5}
 \abntrefinfo{Silva}{SILVA}{2011b}
-\justify{SILVA, M.~S. \textbf{HTML 5}. [S.l.: s.n.], 2011.}
+{SILVA, M.~S. \emph{\textbf{HTML 5}}. [S.l.: s.n.], 2011.}
 
 \bibitem[Vukotic e Goodwill 2011]{vukotic_goodwill_apache_tomcat_7}
 \abntrefinfo{Vukotic e Goodwill}{VUKOTIC; GOODWILL}{2011}
-\justify{VUKOTIC, A.; GOODWILL, J. \textbf{Apache Tomcat 7}. [S.l.]: Apress, 2011.}
+{VUKOTIC, A.; GOODWILL, J. \emph{Apache Tomcat 7}. [S.l.]: Apress, 2011.}
 
 \bibitem[W3C 2015]{w3c_html_fundamentals}
 \abntrefinfo{W3C}{W3C}{2015a}
-\justify{W3C. \textbf{The Basics of HTML}. 2015.
+{W3C. \emph{The Basics of HTML}. 2015.
   \url{https://docs.webplatform.org/wiki/guides/the_basics_of_html}.
 Acesso em: 24 de julho de 2015.}
 
 \bibitem[W3C 2015]{w3c_css_definition}
 \abntrefinfo{W3C}{W3C}{2015b}
-\justify{W3C. \textbf{What is CSS?} 2015. \url{http://www.w3.org/Style/CSS/}.
+{W3C. \emph{What is CSS?} 2015. \url{http://www.w3.org/Style/CSS/}.
 Acesso em: 24 de julho de 2015.}
 
 \end{thebibliography}

@@ -250,14 +250,42 @@ Para realizar a validação do \textit{token} expirado, foi criado o método \te
 \end{figure}
 
 
-\par O caso de uso localizar parceiros foi desenvolvido após a conclusão do caso de uso criar conta. A lógica deste caso de uso consiste em buscar por possíveis parceiros, com base na rede de parceria do contrante. A Figura~\ref{fig:pagina_localizar_parceiro} apresenta esta busca.
+\par O caso de uso localizar parceiros foi desenvolvido após a conclusão do caso de uso criar conta. A lógica deste caso de uso consiste em buscar por possíveis parceiros, com base na rede de parceria do contrante. O Código~\ref{list:consulta_possiveis_parceiros} apresenta a consulta realizada no banco de dados a fim de obter essas informações.
 
-\begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.3]{./imagens/localizar-parceiro.png}}
-	\caption[Página de localização de parceiros]
-	{Página de localização de parceiros \textbf{Fonte:} Elaborado pelos autores.}
-	\label{fig:pagina_localizar_parceiro}
-\end{figure}
+\begin{lstlisting} [style=custom_SQL,caption={[\textit{Query} para apresentar possíveis parceiros]{\textit{Query} para apresentar possíveis parceiros. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_possiveis_parceiros] 	
+MATCH (me:Person {email: 'andressa_faria18@hotmal.com'}), (users:Person),
+(users)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me)
+WHERE users <> me AND users.typeOfAccount <> 'SERVICE_PROVIDER'
+AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) 
+OPTIONAL MATCH
+	pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me),
+	(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users)
+RETURN DISTINCT({name: users.name, email: users.email, length: 1, 
+photo: users.photo, qtde: count(DISTINCT pMutualFriends)}) as person
+ORDER BY person.length, person.qtde DESC
+UNION ALL
+MATCH (me:Person {email: 'andressa_faria18@hotmal.com'}), (users:Person),
+(users)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me)
+WHERE NOT((users)-[:WORKS_IN]->()<-[:WORKS_IN]-(me))
+AND users.typeOfAccount <> 'SERVICE_PROVIDER'
+AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users))
+OPTIONAL MATCH 
+	pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me),
+	(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users)
+RETURN DISTINCT({name: users.name, email: users.email, length: 2, 
+photo: users.photo, qtde: count(DISTINCT pMutualFriends)}) as person
+ORDER BY person.length, person.qtde DESC
+\end{lstlisting}
+
+\par Essa consulta é dividida em duas sub consultas separadas pela cláusula \texttt{UNION ALL}, a fim de atingir um número maior de possíveis parceiros ao usuário, sendo que a primeira delas está recuperando os dados de pessoas que trabalham na empresa cujo o usuário autenticado no sistema trabalha e não possua o relacionamento de ''parceria'' com ele. A última sub consulta é responsável por obter os dados de pessoas que vivem na cidade cujo o usuário autenticado vive, porém não possuem relacionamento de ''parceria'' e não trabalham na mesma empresa.
+
+%\begin{figure}[h!]
+%	\centerline{\includegraphics[scale=0.3]{./imagens/localizar-parceiro.png}}
+%	\caption[Página de localização de parceiros]
+%	{Página de localização de parceiros \textbf{Fonte:} Elaborado pelos autores.}
+%	\label{fig:pagina_localizar_parceiro}
+%\end{figure}
+
 
 \par Ainda relacionado ao tipo de conta contratante ou ambos, foi implementado o caso de uso adicionar parceiro, que permite ao usuário convidar um possível parceiro para fazer parte da sua rede.
 
@@ -297,13 +325,178 @@ partnerName: partner.name, partnerEmail: partner.email} as deleted;
 
 \par Essa consulta, a exemplo da anterior, é separada em três partes, sendo elas dividas pelas cláusulas \texttt{MATCH}, \texttt{DELETE} e \texttt{RETURN}. A primeira parte dessa consulta irá localizar os vértices cujos \textit{e-mails} sejam semelhantes ao do usuário autenticado no sistema e do parceiro convidado, respectivamente, e que possuam uma aresta do tipo \texttt{PARTNER OF} os conectando, porém, essa aresta se inicia no vértice relacionado ao parceiro convidado e o final seja vértice relacionado ao usuário autenticado. A segunda parte consiste apenas na exclusão da aresta obtida na primeira parte da consulta. A terceira e última parte, irá retornar os dados de ambos os usuários, sendo eles, o usuário autenticado no sistema e parceiro cujo, convite para se tornar parceiro foi rejeitado pelo usuário autenticado no sistema.
 
-\par Após realizada a implementação do caso de uso adicionar parceiro, houve a necessidade de desenvolver a busca por todos os usuários que possuíam o tipo de conta contratante ou ambos e que possuíam um relacionamento de parceria com o usuário autenticado no sistema, além da funcionalidade de localizar novos parceiros, baseando-se na localização da empresa na qual o usuário trabalha e na cidade onde ele vive, sempre ordenando os resultados por meio da quantidade de parceiros em comum. 
+\par Após realizada a implementação do caso de uso adicionar parceiro, houve a necessidade de desenvolver a busca por todos os usuários que possuíam o tipo de conta contratante ou ambos e que possuíam um relacionamento de parceria com o usuário autenticado no sistema, além da funcionalidade de localizar novos parceiros, baseando-se na localização da empresa na qual o usuário trabalha e na cidade onde ele vive, sempre ordenando os resultados por meio da quantidade de parceiros em comum. O Código~\ref{list:consulta_novos_parceiros} apresenta a \textit{query} utilizada para realizar esta busca.
+
+\begin{lstlisting} [style=custom_SQL,caption={[\textit{Query} para apresentar novos parceiros]{\textit{Query} para apresentar novos parceiros. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_novos_parceiros] 	
+MATCH (me:Person {email: 'andressa_faria18@hotmail.com'}), (users:Person),
+(users)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me)
+WHERE users.name =~ 'Edil.*'
+AND users.typeOfAccount <> 'SERVICE_PROVIDER'
+AND users <> me AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users))  
+OPTIONAL MATCH 
+	pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), 
+	(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) 
+RETURN DISTINCT({name: users.name, email: users.email, length: 1, 
+photo: users.photo, mutualFriends: count(DISTINCT pMutualFriends)}) 
+as partner ORDER BY partner.length, partner.mutualFriends DESC 
+UNION ALL 
+MATCH (me:Person {email: 'andressa_faria18@hotmail.com'}), (users:Person),
+(users)-[:LIVES_IN]-(city)<-[:LIVES_IN]-(me)
+WHERE users.name =~ 'Edil.*'
+AND users.typeOfAccount <> 'SERVICE_PROVIDER' 
+AND NOT((users)-[:WORKS_IN]->()<-[:WORKS_IN]-(me)) 
+AND NOT((users)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(users)) 
+OPTIONAL MATCH 
+	pMutualFriends=(me)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(me), 
+	(users)-[:PARTNER_OF]->(another)-[:PARTNER_OF]->(users) 
+RETURN DISTINCT({name: users.name, email: users.email, length: 2, 
+photo: users.photo, mutualFriends: count(DISTINCT pMutualFriends)})
+as partner ORDER BY partner.length, partner.mutualFriends DESC
+\end{lstlisting}
+
+\par Essa consulta é muito parecida com a apresentada no Código~\ref{list:consulta_possiveis_parceiros}, porém há uma diferença, neste caso é levado em consideração o nome informado pelo usuário como critério de busca.
+ 
 
 \par O caso de uso gerenciar serviços foi implementado em sequência, abrangendo as principais funcionalidades de gerenciamento: cadastrar e adicionar um novo serviço ao usuário, cujo tipo de conta é provedor de serviços, listar os serviços atribuídos a ele, e remover serviços quando necessário. Visando melhorar a usabilidade, foi implementado um mecanismo de busca, que permitiu filtrar os resultados por meio de um campo que possui a função  auto completar, evitando assim, possíveis erros e diminuindo o tempo gasto pelo usuário para adicionar o serviço. A função realiza a busca em uma lista de serviços anteriormente cadastrados, no entanto, caso não haja o serviço solicitado, o usuário tem a liberdade de cadastrá-lo e atribuí-lo a si mesmo.
 
-\par A partir deste ponto, foi possível iniciar o desenvolvimento do caso de uso "localizar mão de obra", uma vez que, este caso de uso dependia diretamente das implementações das funcionalidades adicionar parceiros para os usuários contratantes e adicionar serviços aos provedores de serviço. Para facilitar a localização e deixar o \textit{software} mais usual, esta busca se baseia inicialmente no serviço buscado pelo usuário, sendo posteriormente modificada para também levar em consideração a funcionalidade avaliar serviço que foi implementada paralelamente. A avaliação de serviço permite ao contratante dar uma nota ao serviço que foi prestado a ele. Com estas informações foi possível desenvolver uma busca que levaria em consideração, além destas informações, a rede de parceiros do usuário contratante, a fim de lhe apresentar as melhores opções possíveis.
 
-\par A fim de abranger a busca e possibilitar que novos prestadores de serviços sejam avaliados pelos contratantes, a consulta que antes apresentava apenas provedores de serviços que possuíam avaliações, sendo elas, positivas ou negativas, foi ampliada, possibilitando que profissionais não avaliados também entrassem na lista de prováveis provedores de serviços.
+\par A partir deste ponto, foi possível iniciar o desenvolvimento do caso de uso "localizar mão de obra", uma vez que, este caso de uso dependia diretamente das implementações das funcionalidades adicionar parceiros para os usuários contratantes e adicionar serviços aos provedores de serviço. Para facilitar a localização e deixar o \textit{software} mais usual, esta busca se baseia inicialmente no serviço buscado pelo usuário, sendo posteriormente modificada para também levar em consideração a funcionalidade avaliar serviço que foi implementada paralelamente. A avaliação de serviço permite ao contratante dar uma nota ao serviço que foi prestado a ele. Com estas informações foi possível desenvolver uma busca que levaria em consideração, além destas informações, a rede de parceiros do usuário contratante, a fim de lhe apresentar as melhores opções possíveis. O Código~\ref{list:consulta_busca} apresenta a \textit{query} utilizada para realizar esta busca.
+
+
+\begin{lstlisting} [style=custom_SQL,caption={[\textit{Query} para localização de mão de obra]{\textit{Query} para localização de mão de obra. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_busca] 	
+MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}), (sp:Person), 
+(service:Service), (executed:Execute), (partners:Person), 
+(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners),
+(sp)-[:PROVIDE]->(service), (service)-[:EXECUTE]->(executed),
+(sp)-[:EXECUTE]->(executed)
+WHERE sp.typeOfAccount <> 'CONTRACTOR' 
+AND partners.typeOfAccount <> 'SERVICE_PROVIDER'
+AND UPPER(service.name) = UPPER('Domestica')
+AND (executed)-[:TO]->(partners) AND me <> sp
+RETURN DISTINCT({serviceProviderName: sp.name, 
+serviceProviderEmail: sp.email, service: service.name,
+total: count(executed), media: avg(executed.note), order: 1}) as sp 
+ORDER BY sp.order, sp.media DESC
+UNION ALL
+MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}), (sp:Person),
+(service:Service {name: 'Domestica'}), (executed:Execute),
+(partners:Person), (partners)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me),
+(sp)-[:PROVIDE]->(service), (service)-[:EXECUTE]->(executed), 
+(sp)-[:EXECUTE]->(executed), (executed)-[:TO]->(partners)
+WHERE sp.typeOfAccount <> 'CONTRACTOR' 
+AND partners.typeOfAccount <> 'SERVICE_PROVIDER'
+AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners))
+AND me <> sp
+RETURN DISTINCT({serviceProviderName: sp.name, 
+serviceProviderEmail: sp.email, service: service.name, 
+total: count(executed), media: avg(executed.note), order: 2}) as sp 
+ORDER BY sp.order, sp.media DESC
+UNION ALL
+MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}), (sp:Person),
+(service:Service {name: 'Domestica'}), (executed:Execute), 
+(partners:Person), (partners)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me),
+(sp)-[:PROVIDE]->(service), (service)-[:EXECUTE]->(executed), 
+(sp)-[:EXECUTE]->(executed), (executed)-[:TO]->(partners)
+WHERE sp.typeOfAccount <> 'CONTRACTOR' 
+AND partners.typeOfAccount <> 'SERVICE_PROVIDER'
+AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners))
+AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me))
+AND me <> sp
+RETURN DISTINCT({serviceProviderName: sp.name, 
+serviceProviderEmail: sp.email, service: service.name, 
+total: count(executed), media: avg(executed.note), order: 3}) as sp 
+ORDER BY sp.order, sp.media DESC 
+UNION ALL
+MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}), (sp:Person),
+(service:Service {name: 'Domestica'}), (partners:Person),
+(partners)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me), 
+(sp)-[:PROVIDE]->(service)
+WHERE sp.typeOfAccount <> 'CONTRACTOR' 
+AND partners.typeOfAccount <> 'SERVICE_PROVIDER'
+AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners))
+AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me))
+AND me <> sp
+RETURN DISTINCT({serviceProviderName: sp.name, 
+serviceProviderEmail: sp.email, service: service.name, total: 0,
+media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC;
+\end{lstlisting}
+
+Essa consulta é dividida em quatro sub consultas, separadas pela cláusula \texttt{UNION ALL}, a fim de atingir um número maior de possibilidades de prestadores de serviços. Visando facilitar o entendimento, suas partes são apresentadas isoladamente a seguir.
+
+A primeira delas está recuperando os dados de pessoas que proveram o serviço de doméstica para usuários que possuem o relacionamento de parceria com o usuário autenticado no sistema, nesse caso o \textit{e-mail} dele é edilsonjustiniano@gmail.com. Portanto, nessa primeira parte da consulta serão retornadas as avaliações realizadas pelos parceiros do usuário autenticado no sistema voltadas as pessoas que proveem o serviço de doméstica. Essa sub consulta é demonstrada no trecho de Código~\ref{list:consulta_busca_parte1}.
+
+\begin{lstlisting} [style=custom_SQL,caption={[Primeira \textit{sub query} para localização de mão de obra.]{Primeira \textit{sub query} para localização de mão de obra. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_busca_parte1] 	
+MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}), (sp:Person), 
+(service:Service), (executed:Execute), (partners:Person), 
+(partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners),
+(sp)-[:PROVIDE]->(service), (service)-[:EXECUTE]->(executed),
+(sp)-[:EXECUTE]->(executed)
+WHERE sp.typeOfAccount <> 'CONTRACTOR' 
+AND partners.typeOfAccount <> 'SERVICE_PROVIDER'
+AND UPPER(service.name) = UPPER('Domestica')
+AND (executed)-[:TO]->(partners) AND me <> sp
+RETURN DISTINCT({serviceProviderName: sp.name, 
+serviceProviderEmail: sp.email, service: service.name,
+total: count(executed), media: avg(executed.note), order: 1}) as sp 
+ORDER BY sp.order, sp.media DESC
+\end{lstlisting}
+
+A segunda sub consulta irá obter os dados de pessoas que proveram o mesmo serviço da sub consulta anterior para usuários que trabalhem na mesma empresa mas que não possuem o relacionamento de parceria com o usuário autenticado no sistema. Portanto, nessa segunda parte da consulta serão retornados as avaliações realizadas por pessoas que não são parceiras do usuário autenticado no sistema, mas que trabalham na mesma empresa. Essa sub consulta é demonstrada no trecho de Código~\ref{list:consulta_busca_parte2}.
+
+\begin{lstlisting} [style=custom_SQL,caption={[Segunda \textit{sub query} para localização de mão de obra.]{Segunda \textit{sub query} para localização de mão de obra. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_busca_parte2] 	
+MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}), (sp:Person),
+(service:Service {name: 'Domestica'}), (executed:Execute),
+(partners:Person), (partners)-[:WORKS_IN]->(company)<-[:WORKS_IN]-(me),
+(sp)-[:PROVIDE]->(service), (service)-[:EXECUTE]->(executed), 
+(sp)-[:EXECUTE]->(executed), (executed)-[:TO]->(partners)
+WHERE sp.typeOfAccount <> 'CONTRACTOR' 
+AND partners.typeOfAccount <> 'SERVICE_PROVIDER'
+AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners))
+AND me <> sp
+RETURN DISTINCT({serviceProviderName: sp.name, 
+serviceProviderEmail: sp.email, service: service.name, 
+total: count(executed), media: avg(executed.note), order: 2}) as sp 
+ORDER BY sp.order, sp.media DESC
+\end{lstlisting}
+
+
+Já a terceira sub consulta irá obter os dados de pessoas que proveram o mesmo serviço das sub consultas anteriores para usuários que vivem na mesma cidade que o usuário autenticado no sistema, mas que não trabalham na mesma empresa que ele e não possuem o relacionamento de parceria com ele. Portanto, nessa terceira parte da consulta serão retornados as avaliações realizadas por pessoas que não são parceiras do usuário autenticado no sistema, que não trabalham na mesma empresa dele, mas que vivem na mesma cidade. Essa sub consulta é demonstrada no trecho de Código~\ref{list:consulta_busca_parte3}.
+
+\begin{lstlisting} [style=custom_SQL,caption={[Terceira \textit{sub query} para localização de mão de obra.]{Terceira \textit{sub query} para localização de mão de obra. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_busca_parte3] 	
+MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}), (sp:Person),
+(service:Service {name: 'Domestica'}), (executed:Execute), 
+(partners:Person), (partners)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me),
+(sp)-[:PROVIDE]->(service), (service)-[:EXECUTE]->(executed), 
+(sp)-[:EXECUTE]->(executed), (executed)-[:TO]->(partners)
+WHERE sp.typeOfAccount <> 'CONTRACTOR' 
+AND partners.typeOfAccount <> 'SERVICE_PROVIDER'
+AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners))
+AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me))
+AND me <> sp
+RETURN DISTINCT({serviceProviderName: sp.name, 
+serviceProviderEmail: sp.email, service: service.name, 
+total: count(executed), media: avg(executed.note), order: 3}) as sp 
+ORDER BY sp.order, sp.media DESC 
+\end{lstlisting}
+
+Já a quarta e última sub consulta foi inserida a fim de abranger a busca e possibilitar que novos prestadores de serviços sejam avaliados pelos contratantes. Ela irá obter os dados de pessoas que ainda não foram avaliadas por nenhum parceiro, ou por pessoas que vivam na mesma cidade ou trabalhem na mesma empresa do usuário autenticado no sistema, o que permitiu aos usuários que acabaram de criar sua conta e não obtiveram a oportunidade de serem avaliados que fossem apresentados como opções para o serviço. Essa sub consulta é demonstrada no trecho de Código~\ref{list:consulta_busca_parte4}.
+
+
+\begin{lstlisting} [style=custom_SQL,caption={[Quarta \textit{sub query} para localização de mão de obra.]{Quarta \textit{sub query} para localização de mão de obra. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_busca_parte4] 	
+MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}), (sp:Person),
+(service:Service {name: 'Domestica'}), (partners:Person),
+(partners)-[:LIVES_IN]->(city)<-[:LIVES_IN]-(me), 
+(sp)-[:PROVIDE]->(service)
+WHERE sp.typeOfAccount <> 'CONTRACTOR' 
+AND partners.typeOfAccount <> 'SERVICE_PROVIDER'
+AND NOT((partners)-[:PARTNER_OF]->(me)-[:PARTNER_OF]->(partners))
+AND NOT((partners)-[:WORKS_IN]->()<-[:WORKS_IN]-(me))
+AND me <> sp
+RETURN DISTINCT({serviceProviderName: sp.name, 
+serviceProviderEmail: sp.email, service: service.name, total: 0,
+media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
+\end{lstlisting}
+
 
 \par Para auxiliar na tomada de decisão do usuário contratante, foi implementada uma funcionalidade que realiza o cálculo da média de avaliações de um serviço prestado por um profissional temporário, tendo como base as avaliações já realizadas pela rede de parceiros do usuário autenticado, da empresa onde ele trabalha e da cidade onde vive, oferecendo assim uma forma simples de obter acesso a qualidade do serviço prestado.
 
@@ -311,4 +504,18 @@ partnerName: partner.name, partnerEmail: partner.email} as deleted;
 
 \par A fim de agregar mais funcionalidades para o usuário provedor de serviços, foi criado na página inicial do \textit{software} uma funcionalidade que visa apresentar algumas dicas interessantes que contribui com a sua imagem perante ao \textit{software}, levando-o assim a obter uma quantidade maior de oportunidades de trabalho.
 
-\par Para finalizar o desenvolvimento será necessário desenvolver alguns gráficos que apresentem ao usuário informações a respeito da qualidade do serviço prestado pelo provedor de serviços, comparando-os com os demais prestadores, porém estes gráficos ainda não foram implementados até o momento.
+\par Para finalizar o desenvolvimento foram desenvolvidos gráficos que apresentem ao usuário informações a respeito da qualidade do serviço prestado pelo provedor de serviços, comparando-os com os demais prestadores.
+
+\par O primeiro gráfico foi disponibilizado na página de perfil do prestador de serviços, estando visível ao contratante assim que ele efetua a busca por uma determinada mão de obra. Este gráfico apresenta a média avaliativa dos trabalhos prestados pelo provedor selecionado, em uma determinada função. O sistema toma como base as vinte últimas avaliações recebidas, independente do período em que elas foram feitas. Desta forma, um provedor de serviços que trabalha a muito tempo em um mesmo local não será prejudicado, pois terá registrada as avaliações que recebeu neste tempo, mesmo que elas não sejam atuais. O gráfico que representa esta funcionalidade é apresentado na Figura XXXXX.
+
+----Print aqui----
+
+
+\par O segundo gráfico foi disponibilizado visando possibilitar ao prestador de serviços ter um \textit{feedback} dos trabalhos realizados por ele. Este gráfico é apresentado em sua página inicial e trás informações referente a sua média avaliativa. A média é gerada com base nas últimas vinte avaliações recebidas, seguindo o mesmo padrão do gráfico disponibilizado na página de perfil. Para que o provedor tenha uma base da qualidade do serviço prestado, o gráfico apresenta um comparativo da média recebida por ele e a média geral de prestadores de serviço que desempenham o mesmo trabalho em sua cidade. O gráfico que representa esta funcionalidade é apresentado na Figura XXXXX.
+
+
+---Print aqui---
+
+
+
+\par Seguindo todos os procedimentos descritos nessa seção obteve-se como resultado a aplicação proposta por este trabalho.

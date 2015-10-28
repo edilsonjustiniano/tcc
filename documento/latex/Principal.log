@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  27 SEP 2015 17:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  28 OCT 2015 20:49
 entering extended mode
 **Principal.tex
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.tex"
@@ -1045,26 +1045,26 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.aux"
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fixos/01_Capa.au
 x"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 18.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring ON on input line 14.
+Package hyperref Info: Link coloring ON on input line 18.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1076,10 +1076,10 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 14.
-LaTeX Info: Redefining \ref on input line 14.
-LaTeX Info: Redefining \pageref on input line 14.
-LaTeX Info: Redefining \nameref on input line 14.
+LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
 \myptabbox=\box34
 \myptabboxwidth=\skip219
 
@@ -1135,11 +1135,11 @@ mkii"
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 14.
+(lastpage)             ! on input line 18.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 14.
+LaTeX Info: Redefining \selectfont on input line 18.
 
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fixos/01_Capa.te
 x"
@@ -1194,9 +1194,12 @@ l.35 \imprimirfolhaderosto*{}
 ])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fixos/0A_ListasA
 utomaticas.tex"
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.lof"
-[2]) [3]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.loq")
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.lof")
+[2] ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.lo
+q") [3
+
+]
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.lol")
 [4
 
 ])
@@ -1222,18 +1225,18 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  [7
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 48.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 47.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
- [8])
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
+)
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/11_Qua
-droTeorico.tex" [9]
+droTeorico.tex" [8] [9]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _teorico/iconix.tex"
-<./imagens/visao_geral_iconix.png, id=236, 402.7848pt x 240.9pt>
+<./imagens/visao_geral_iconix.png, id=245, 402.7848pt x 240.9pt>
 File: ./imagens/visao_geral_iconix.png Graphic file (type png)
 
 <use ./imagens/visao_geral_iconix.png>
@@ -1249,16 +1252,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [10
 
 ] [11 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/vis
-ao_geral_iconix.png>]
-Overfull \hbox (41.32205pt too wide) in paragraph at lines 43--44
-[]\T1/ptm/m/n/12 Na fase de-no-mi-nada pro-jeto de-ta-lhado deve-se ela-bo-rar 
-o di-a-grama de sequên-cia fundamentando-
- []
-
-)
+ao_geral_iconix.png>])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _teorico/teoria_grafos.tex" [12]
-<./imagens/Konigsberg_7_bridges.jpg, id=266, 501.875pt x 401.5pt>
+<./imagens/Konigsberg_7_bridges.jpg, id=275, 501.875pt x 401.5pt>
 File: ./imagens/Konigsberg_7_bridges.jpg Graphic file (type jpg)
 
 <use ./imagens/Konigsberg_7_bridges.jpg>
@@ -1267,14 +1264,14 @@ Package pdftex.def Info: ./imagens/Konigsberg_7_bridges.jpg used on input line
 (pdftex.def)             Requested size: 364.2138pt x 182.72566pt.
  [13 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/Koni
 gsberg_7_bridges.jpg>]
-<./imagens/simple_graph.png, id=290, 400.49625pt x 194.7275pt>
+<./imagens/simple_graph.png, id=299, 400.49625pt x 194.7275pt>
 File: ./imagens/simple_graph.png Graphic file (type png)
 
 <use ./imagens/simple_graph.png>
 Package pdftex.def Info: ./imagens/simple_graph.png used on input line 34.
 (pdftex.def)             Requested size: 308.38306pt x 149.94061pt.
 
-<./imagens/multigraph_example.png, id=298, 246.9225pt x 178.6675pt>
+<./imagens/multigraph_example.png, id=307, 246.9225pt x 178.6675pt>
 File: ./imagens/multigraph_example.png Graphic file (type png)
 
 <use ./imagens/multigraph_example.png>
@@ -1287,7 +1284,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [14 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/simpl
 e_graph.png>]
-<./imagens/simple_digraph_graph.png, id=316, 256.96pt x 256.96pt>
+<./imagens/simple_digraph_graph.png, id=325, 256.96pt x 256.96pt>
 File: ./imagens/simple_digraph_graph.png Graphic file (type png)
 
 <use ./imagens/simple_digraph_graph.png>
@@ -1295,7 +1292,7 @@ Package pdftex.def Info: ./imagens/simple_digraph_graph.png used on input line
 60.
 (pdftex.def)             Requested size: 154.17719pt x 154.17719pt.
 
-<./imagens/grafos_isomorficos.png, id=326, 264.99pt x 107.40125pt>
+<./imagens/grafos_isomorficos.png, id=335, 264.99pt x 107.40125pt>
 File: ./imagens/grafos_isomorficos.png Graphic file (type png)
 
 <use ./imagens/grafos_isomorficos.png>
@@ -1309,7 +1306,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [15 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/multi
 graph_example.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/late
 x/imagens/simple_digraph_graph.png>]
-<./imagens/matriz_adjacencia.png, id=340, 230.8625pt x 168.63pt>
+<./imagens/matriz_adjacencia.png, id=349, 230.8625pt x 168.63pt>
 File: ./imagens/matriz_adjacencia.png Graphic file (type png)
 
 <use ./imagens/matriz_adjacencia.png>
@@ -1327,7 +1324,7 @@ _teorico/banco_dados_relacionais.tex" [17])
 _teorico/banco_dados_nosql.tex" [18])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _teorico/neo4j.tex" [19]
-<./imagens/simple_graph_neo4j.png, id=404, 374.39874pt x 187.70125pt>
+<./imagens/simple_graph_neo4j.png, id=413, 374.39874pt x 187.70125pt>
 File: ./imagens/simple_graph_neo4j.png Graphic file (type png)
 
 <use ./imagens/simple_graph_neo4j.png>
@@ -1349,7 +1346,7 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 21.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<./imagens/processo_compilacao_java.png, id=461, 297.7524pt x 81.4242pt>
+<./imagens/processo_compilacao_java.png, id=470, 297.7524pt x 81.4242pt>
 File: ./imagens/processo_compilacao_java.png Graphic file (type png)
 
 <use ./imagens/processo_compilacao_java.png>
@@ -1375,407 +1372,3604 @@ _teorico/html5.tex" [26])
 _teorico/css3.tex" [27]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 18.
-
-<./imagens/example_css_inline.png, id=544, 488.82625pt x 149.55875pt>
-File: ./imagens/example_css_inline.png Graphic file (type png)
-
-<use ./imagens/example_css_inline.png>
-Package pdftex.def Info: ./imagens/example_css_inline.png used on input line 21
-.
-(pdftex.def)             Requested size: 391.06152pt x 119.64716pt.
-
-<./imagens/example_css_incorpored.png, id=546, 609.27625pt x 219.82124pt>
-File: ./imagens/example_css_incorpored.png Graphic file (type png)
-
-<use ./imagens/example_css_incorpored.png>
-Package pdftex.def Info: ./imagens/example_css_incorpored.png used on input lin
-e 30.
-(pdftex.def)             Requested size: 396.02486pt x 142.8821pt.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 21.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Package xcolor Warning: Incompatible color definition on input line 28.
 
-[28 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/examp
-le_css_inline.png>]
-<./imagens/example_external_css.png, id=554, 544.0325pt x 169.63374pt>
-File: ./imagens/example_external_css.png Graphic file (type png)
+[28]
 
-<use ./imagens/example_external_css.png>
-Package pdftex.def Info: ./imagens/example_external_css.png used on input line 
-40.
-(pdftex.def)             Requested size: 435.2266pt x 135.70717pt.
+Package xcolor Warning: Incompatible color definition on input line 51.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/javascript.tex" [29 <C:/Users/Andressa Faria/Documents/GitHub/tcc/docu
-mento/latex/imagens/example_css_incorpored.png> <C:/Users/Andressa Faria/Docume
-nts/GitHub/tcc/documento/latex/imagens/example_external_css.png>]
-<./imagens/javascript_code.png, id=573, 517.935pt x 169.63374pt>
-File: ./imagens/javascript_code.png Graphic file (type png)
+_teorico/javascript.tex" [29]
 
-<use ./imagens/javascript_code.png>
-Package pdftex.def Info: ./imagens/javascript_code.png used on input line 14.
-(pdftex.def)             Requested size: 414.34854pt x 135.70717pt.
+Package xcolor Warning: Incompatible color definition on input line 21.
 
-<./imagens/javascript_include.png, id=575, 434.62375pt x 126.4725pt>
-File: ./imagens/javascript_include.png Graphic file (type png)
+[30]
 
-<use ./imagens/javascript_include.png>
-Package pdftex.def Info: ./imagens/javascript_include.png used on input line 23
-.
-(pdftex.def)             Requested size: 347.69946pt x 101.17813pt.
- [30 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/java
-script_code.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/
-imagens/javascript_include.png>])
+Package xcolor Warning: Incompatible color definition on input line 47.
+
+)
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/angularjs.tex"))
+_teorico/angularjs.tex" [31]))
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/12_Qua
-droMetodologico.tex" [31]
+droMetodologico.tex" [32]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/tipo_pesquisa.tex" [32
+_metodologico/tipo_pesquisa.tex" [33
 
 ])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _metodologico/contexto_pesquisa.tex")
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/instrumentos.tex" [33])
+_metodologico/instrumentos.tex" [34])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/procedimentos.tex" [34]
-<./imagens/modelo-dominio-inicial.png, id=626, 757.83125pt x 532.99126pt>
+_metodologico/procedimentos.tex" [35]
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
+_metodologico/procedimentos/iconix.tex" [36]
+<./imagens/modelo-dominio-inicial.png, id=694, 764.8575pt x 540.51938pt>
 File: ./imagens/modelo-dominio-inicial.png Graphic file (type png)
 
 <use ./imagens/modelo-dominio-inicial.png>
 Package pdftex.def Info: ./imagens/modelo-dominio-inicial.png used on input lin
-e 18.
-(pdftex.def)             Requested size: 341.02092pt x 239.84384pt.
+e 9.
+(pdftex.def)             Requested size: 344.1827pt x 243.23146pt.
+ [37 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/mode
+lo-dominio-inicial.png>]
+<./imagens/caso-de-uso-unificado.png, id=701, 781.2387pt x 756.6669pt>
+File: ./imagens/caso-de-uso-unificado.png Graphic file (type png)
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./imagens/caso-de-uso-contratantes.png, id=630, 521.95pt x 464.73625pt>
-File: ./imagens/caso-de-uso-contratantes.png Graphic file (type png)
-
-<use ./imagens/caso-de-uso-contratantes.png>
-Package pdftex.def Info: ./imagens/caso-de-uso-contratantes.png used on input l
-ine 27.
-(pdftex.def)             Requested size: 313.17241pt x 278.84389pt.
- [35] [36 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens
-/modelo-dominio-inicial.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/docu
-mento/latex/imagens/caso-de-uso-contratantes.png>]
-<./imagens/caso-de-uso-provedores-servico.png, id=642, 412.54124pt x 236.885pt>
-File: ./imagens/caso-de-uso-provedores-servico.png Graphic file (type png)
-<use ./imagens/caso-de-uso-provedores-servico.png>
-Package pdftex.def Info: ./imagens/caso-de-uso-provedores-servico.png used on i
-nput line 36.
-(pdftex.def)             Requested size: 247.52666pt x 142.13208pt.
-
-<./imagens/caso-de-uso-usuario.png, id=643, 465.74pt x 419.5675pt>
-File: ./imagens/caso-de-uso-usuario.png Graphic file (type png)
-
-<use ./imagens/caso-de-uso-usuario.png>
-Package pdftex.def Info: ./imagens/caso-de-uso-usuario.png used on input line 4
-3.
-(pdftex.def)             Requested size: 279.44615pt x 251.74243pt.
- [37 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/caso
--de-uso-provedores-servico.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/d
-ocumento/latex/imagens/caso-de-uso-usuario.png>]
+<use ./imagens/caso-de-uso-unificado.png>
+Package pdftex.def Info: ./imagens/caso-de-uso-unificado.png used on input line
+ 19.
+(pdftex.def)             Requested size: 390.6184pt x 378.33252pt.
+ [38 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/caso
+-de-uso-unificado.png>]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-localizar-mao-de-obra.tex"
+nto-localizar-parceiro.tex"
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1--55
+Underfull \hbox (badness 10000) in paragraph at lines 1--63
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--55
-
- []
-
-
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-avaliar-mao-de-obra.tex")
-Underfull \hbox (badness 10000) in paragraph at lines 1--62
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--62
-
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[38]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-localizar-parceiro.tex")
-Underfull \hbox (badness 10000) in paragraph at lines 1--70
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--70
+Underfull \hbox (badness 10000) in paragraph at lines 1--63
 
  []
 
 [39]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-adicionar-parceiro.tex")
-Underfull \hbox (badness 10000) in paragraph at lines 1--78
-[][]
- []
+<./imagens/apendices/diagrama-robustez-localizar-parceiros.png, id=713, 1154.81
+438pt x 524.71031pt>
+File: ./imagens/apendices/diagrama-robustez-localizar-parceiros.png Graphic fil
+e (type png)
 
+<use ./imagens/apendices/diagrama-robustez-localizar-parceiros.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-localizar-parcei
+ros.png used on input line 104.
+(pdftex.def)             Requested size: 404.19109pt x 183.65135pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--78
-
- []
-
-[40]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-aceitar-parceria.tex")
-Underfull \hbox (badness 10000) in paragraph at lines 1--86
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--86
-
- []
-
-[41]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-gerenciar-servicos.tex")
-Underfull \hbox (badness 10000) in paragraph at lines 1--94
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--94
-
- []
-
-[42]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-criar-conta.tex")
-Underfull \hbox (badness 10000) in paragraph at lines 1--102
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--102
-
- []
-
-[43] <./imagens/robustez.png, id=678, 1132.23pt x 543.02875pt>
-File: ./imagens/robustez.png Graphic file (type png)
-
-<use ./imagens/robustez.png>
-Package pdftex.def Info: ./imagens/robustez.png used on input line 111.
-(pdftex.def)             Requested size: 396.28644pt x 190.0629pt.
-
-<./imagens/modelo-dominio-com-atributos.png, id=679, 865.2325pt x 600.2425pt>
+<./imagens/modelo-dominio-com-atributos.png, id=715, 880.2486pt x 736.4313pt>
 File: ./imagens/modelo-dominio-com-atributos.png Graphic file (type png)
 
 <use ./imagens/modelo-dominio-com-atributos.png>
 Package pdftex.def Info: ./imagens/modelo-dominio-com-atributos.png used on inp
-ut line 118.
-(pdftex.def)             Requested size: 519.14351pt x 360.14827pt.
- [44 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/robu
-stez.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens
-/modelo-dominio-com-atributos.png>] <./imagens/structure-all-nodes.png, id=686,
- 939.51pt x 624.3325pt>
+ut line 113.
+(pdftex.def)             Requested size: 440.12323pt x 368.21475pt.
+
+<./imagens/structure-all-nodes.png, id=717, 939.51pt x 624.3325pt>
 File: ./imagens/structure-all-nodes.png Graphic file (type png)
 
 <use ./imagens/structure-all-nodes.png>
 Package pdftex.def Info: ./imagens/structure-all-nodes.png used on input line 1
-27.
+22.
 (pdftex.def)             Requested size: 375.79733pt x 249.72858pt.
-
-Overfull \hbox (1.06189pt too wide) in paragraph at lines 134--135
+ [40 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+dices/diagrama-robustez-localizar-parceiros.png> <C:/Users/Andressa Faria/Docum
+ents/GitHub/tcc/documento/latex/imagens/modelo-dominio-com-atributos.png>]
+Overfull \hbox (1.06189pt too wide) in paragraph at lines 128--129
 []\T1/ptm/m/n/12 Na ter-ceira fase, de-fi-nida como pro-jeto de-ta-lhado, fo-ra
 m cri-a-dos os di-a-gra-mas de sequên-
  []
 
-[45 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/struc
+[41 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/struc
 ture-all-nodes.png>]
-<./imagens/diagrama-sequencia-localizar-novos-parceiros.jpg, id=693, 2485.285pt
- x 1489.565pt>
-File: ./imagens/diagrama-sequencia-localizar-novos-parceiros.jpg Graphic file (
-type jpg)
+<./imagens/apendices/diagrama-sequencia-localizar-parceiros.png, id=730, 1338.5
+0063pt x 754.31813pt>
+File: ./imagens/apendices/diagrama-sequencia-localizar-parceiros.png Graphic fi
+le (type png)
 
-<use ./imagens/diagrama-sequencia-localizar-novos-parceiros.jpg>
-Package pdftex.def Info: ./imagens/diagrama-sequencia-localizar-novos-parceiros
-.jpg used on input line 138.
-(pdftex.def)             Requested size: 2485.27898pt x 1489.56137pt.
- [46 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/diag
-rama-sequencia-localizar-novos-parceiros.jpg>]
-<./imagens/classe.jpg, id=699, 2746.26pt x 1561.835pt>
+<use ./imagens/apendices/diagrama-sequencia-localizar-parceiros.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-localizar-parce
+iros.png used on input line 132.
+(pdftex.def)             Requested size: 1338.49738pt x 754.3163pt.
+
+<./imagens/classe.jpg, id=732, 2746.26pt x 1561.835pt>
 File: ./imagens/classe.jpg Graphic file (type jpg)
 
 <use ./imagens/classe.jpg>
-Package pdftex.def Info: ./imagens/classe.jpg used on input line 147.
+Package pdftex.def Info: ./imagens/classe.jpg used on input line 141.
 (pdftex.def)             Requested size: 2746.25333pt x 1561.8312pt.
- [47 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/clas
-se.jpg>]
-<./imagens/github.jpg, id=705, 1242.6425pt x 661.47125pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[42 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
+ices/diagrama-sequencia-localizar-parceiros.png>])
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
+_metodologico/procedimentos/preparacao_ambiente.tex" [43 <C:/Users/Andressa Far
+ia/Documents/GitHub/tcc/documento/latex/imagens/classe.jpg>]
+<./imagens/github.jpg, id=744, 1242.6425pt x 661.47125pt>
 File: ./imagens/github.jpg Graphic file (type jpg)
 
 <use ./imagens/github.jpg>
-Package pdftex.def Info: ./imagens/github.jpg used on input line 163.
+Package pdftex.def Info: ./imagens/github.jpg used on input line 8.
 (pdftex.def)             Requested size: 372.79562pt x 198.4429pt.
- [48 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/gith
+ [44 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/gith
 ub.jpg>]
-<./imagens/eclipse-editor-texto.png, id=712, 1282.7925pt x 777.90625pt>
+<./imagens/eclipse-editor-texto.png, id=750, 1282.7925pt x 777.90625pt>
 File: ./imagens/eclipse-editor-texto.png Graphic file (type png)
 
 <use ./imagens/eclipse-editor-texto.png>
 Package pdftex.def Info: ./imagens/eclipse-editor-texto.png used on input line 
-178.
+23.
 (pdftex.def)             Requested size: 384.84071pt x 233.37367pt.
- [49 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ecli
-pse-editor-texto.png>]
-<./imagens/conexao-banco.jpg, id=719, 1334.9875pt x 684.5575pt>
-File: ./imagens/conexao-banco.jpg Graphic file (type jpg)
+)
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
+_metodologico/procedimentos/desenvolvimento.tex" [45 <C:/Users/Andressa Faria/D
+ocuments/GitHub/tcc/documento/latex/imagens/eclipse-editor-texto.png>]
+("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang
+1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
 
-<use ./imagens/conexao-banco.jpg>
-Package pdftex.def Info: ./imagens/conexao-banco.jpg used on input line 205.
-(pdftex.def)             Requested size: 400.49934pt x 205.36882pt.
- [50 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/cone
-xao-banco.jpg>]
-<./imagens/query-cypher.png, id=725, 934.49126pt x 516.93124pt>
-File: ./imagens/query-cypher.png Graphic file (type png)
+Package xcolor Warning: Incompatible color definition on input line 10.
 
-<use ./imagens/query-cypher.png>
-Package pdftex.def Info: ./imagens/query-cypher.png used on input line 214.
-(pdftex.def)             Requested size: 420.51718pt x 232.6169pt.
- [51 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/quer
-y-cypher.png>]
-<./imagens/login.jpg, id=733, 339.2675pt x 307.1475pt>
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 10.
+
+Package xcolor Warning: Incompatible color definition on input line 10.
+
+
+Package xcolor Warning: Incompatible color definition on input line 12.
+
+
+Package xcolor Warning: Incompatible color definition on input line 12.
+
+
+Package xcolor Warning: Incompatible color definition on input line 12.
+
+
+Package xcolor Warning: Incompatible color definition on input line 14.
+
+
+Package xcolor Warning: Incompatible color definition on input line 14.
+
+
+Package xcolor Warning: Incompatible color definition on input line 14.
+
+
+Package xcolor Warning: Incompatible color definition on input line 15.
+
+
+Package xcolor Warning: Incompatible color definition on input line 15.
+
+
+Package xcolor Warning: Incompatible color definition on input line 15.
+
+
+Package xcolor Warning: Incompatible color definition on input line 16.
+
+
+Package xcolor Warning: Incompatible color definition on input line 16.
+
+
+Package xcolor Warning: Incompatible color definition on input line 16.
+
+
+Package xcolor Warning: Incompatible color definition on input line 19.
+
+
+Package xcolor Warning: Incompatible color definition on input line 19.
+
+
+Package xcolor Warning: Incompatible color definition on input line 21.
+
+
+Package xcolor Warning: Incompatible color definition on input line 24.
+
+
+Package xcolor Warning: Incompatible color definition on input line 24.
+
+
+Package xcolor Warning: Incompatible color definition on input line 25.
+
+
+Package xcolor Warning: Incompatible color definition on input line 26.
+
+
+Package xcolor Warning: Incompatible color definition on input line 26.
+
+
+Package xcolor Warning: Incompatible color definition on input line 28.
+
+
+Package xcolor Warning: Incompatible color definition on input line 32.
+
+[46]
+
+Package xcolor Warning: Incompatible color definition on input line 49.
+
+
+Package xcolor Warning: Incompatible color definition on input line 49.
+
+
+Package xcolor Warning: Incompatible color definition on input line 52.
+
+
+Package xcolor Warning: Incompatible color definition on input line 52.
+
+
+Package xcolor Warning: Incompatible color definition on input line 52.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 53.
+
+
+Package xcolor Warning: Incompatible color definition on input line 54.
+
+
+Package xcolor Warning: Incompatible color definition on input line 54.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
+
+Package xcolor Warning: Incompatible color definition on input line 56.
+
+
+Package xcolor Warning: Incompatible color definition on input line 56.
+
+
+Package xcolor Warning: Incompatible color definition on input line 56.
+
+
+Package xcolor Warning: Incompatible color definition on input line 56.
+
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 58.
+
+
+Package xcolor Warning: Incompatible color definition on input line 58.
+
+
+Package xcolor Warning: Incompatible color definition on input line 59.
+
+
+Package xcolor Warning: Incompatible color definition on input line 59.
+
+
+Package xcolor Warning: Incompatible color definition on input line 63.
+
+
+Package xcolor Warning: Incompatible color definition on input line 78.
+
+
+Package xcolor Warning: Incompatible color definition on input line 79.
+
+
+Package xcolor Warning: Incompatible color definition on input line 81.
+
+
+Package xcolor Warning: Incompatible color definition on input line 85.
+
+
+Package xcolor Warning: Incompatible color definition on input line 87.
+
+[47] [48]
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 130.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 132.
+
+
+Package xcolor Warning: Incompatible color definition on input line 132.
+
+
+Package xcolor Warning: Incompatible color definition on input line 134.
+
+
+Package xcolor Warning: Incompatible color definition on input line 134.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+[49] <./imagens/login.jpg, id=881, 339.2675pt x 307.1475pt>
 File: ./imagens/login.jpg Graphic file (type jpg)
 
 <use ./imagens/login.jpg>
-Package pdftex.def Info: ./imagens/login.jpg used on input line 229.
+Package pdftex.def Info: ./imagens/login.jpg used on input line 154.
 (pdftex.def)             Requested size: 203.56206pt x 184.28992pt.
- [52 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/logi
+ [50 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/logi
 n.jpg>]
-<./imagens/home-contratante.png, id=739, 1283.79625pt x 672.5125pt>
+<./imagens/tokens-traditional.png, id=890, 803.0pt x 1058.95625pt>
+File: ./imagens/tokens-traditional.png Graphic file (type png)
+
+<use ./imagens/tokens-traditional.png>
+Package pdftex.def Info: ./imagens/tokens-traditional.png used on input line 16
+4.
+(pdftex.def)             Requested size: 441.65137pt x 582.42775pt.
+ [51 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/toke
+ns-traditional.png>] [52]
+<./imagens/tokens-new.png, id=908, 803.0pt x 1304.875pt>
+File: ./imagens/tokens-new.png Graphic file (type png)
+
+<use ./imagens/tokens-new.png>
+Package pdftex.def Info: ./imagens/tokens-new.png used on input line 174.
+(pdftex.def)             Requested size: 401.49902pt x 652.43591pt.
+ [53 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/toke
+ns-new.png>]
+
+Package xcolor Warning: Incompatible color definition on input line 183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 185.
+
+
+Package xcolor Warning: Incompatible color definition on input line 185.
+
+
+Package xcolor Warning: Incompatible color definition on input line 185.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 190.
+
+
+Package xcolor Warning: Incompatible color definition on input line 190.
+
+
+Package xcolor Warning: Incompatible color definition on input line 191.
+
+
+Package xcolor Warning: Incompatible color definition on input line 191.
+
+
+Package xcolor Warning: Incompatible color definition on input line 192.
+
+
+Package xcolor Warning: Incompatible color definition on input line 193.
+
+
+Package xcolor Warning: Incompatible color definition on input line 196.
+
+
+Package xcolor Warning: Incompatible color definition on input line 196.
+
+
+Package xcolor Warning: Incompatible color definition on input line 196.
+
+
+Package xcolor Warning: Incompatible color definition on input line 197.
+
+
+Package xcolor Warning: Incompatible color definition on input line 199.
+
+
+Package xcolor Warning: Incompatible color definition on input line 200.
+
+
+Package xcolor Warning: Incompatible color definition on input line 207.
+
+
+Package xcolor Warning: Incompatible color definition on input line 217.
+
+
+Package xcolor Warning: Incompatible color definition on input line 217.
+
+[54]
+
+Package xcolor Warning: Incompatible color definition on input line 219.
+
+
+Package xcolor Warning: Incompatible color definition on input line 219.
+
+
+Package xcolor Warning: Incompatible color definition on input line 219.
+
+
+Package xcolor Warning: Incompatible color definition on input line 219.
+
+
+Package xcolor Warning: Incompatible color definition on input line 219.
+
+
+Package xcolor Warning: Incompatible color definition on input line 219.
+
+
+Package xcolor Warning: Incompatible color definition on input line 219.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 223.
+
+
+Package xcolor Warning: Incompatible color definition on input line 223.
+
+
+Package xcolor Warning: Incompatible color definition on input line 225.
+
+
+Package xcolor Warning: Incompatible color definition on input line 225.
+
+
+Package xcolor Warning: Incompatible color definition on input line 225.
+
+
+Package xcolor Warning: Incompatible color definition on input line 225.
+
+
+Package xcolor Warning: Incompatible color definition on input line 227.
+
+
+Package xcolor Warning: Incompatible color definition on input line 228.
+
+
+Package xcolor Warning: Incompatible color definition on input line 231.
+
+
+Package xcolor Warning: Incompatible color definition on input line 232.
+
+
+Package xcolor Warning: Incompatible color definition on input line 232.
+
+
+Package xcolor Warning: Incompatible color definition on input line 232.
+
+
+Package xcolor Warning: Incompatible color definition on input line 232.
+
+
+Package xcolor Warning: Incompatible color definition on input line 232.
+
+
+Package xcolor Warning: Incompatible color definition on input line 232.
+
+
+Package xcolor Warning: Incompatible color definition on input line 232.
+
+
+Package xcolor Warning: Incompatible color definition on input line 232.
+
+
+Package xcolor Warning: Incompatible color definition on input line 234.
+
+
+Package xcolor Warning: Incompatible color definition on input line 234.
+
+
+Package xcolor Warning: Incompatible color definition on input line 234.
+
+
+Package xcolor Warning: Incompatible color definition on input line 234.
+
+
+Package xcolor Warning: Incompatible color definition on input line 234.
+
+
+Package xcolor Warning: Incompatible color definition on input line 234.
+
+
+Package xcolor Warning: Incompatible color definition on input line 234.
+
+
+Package xcolor Warning: Incompatible color definition on input line 234.
+
+[55] <./imagens/home-contratante.png, id=978, 1283.79625pt x 672.5125pt>
 File: ./imagens/home-contratante.png Graphic file (type png)
 
 <use ./imagens/home-contratante.png>
-Package pdftex.def Info: ./imagens/home-contratante.png used on input line 239.
+Package pdftex.def Info: ./imagens/home-contratante.png used on input line 246.
 
 (pdftex.def)             Requested size: 385.14185pt x 201.7553pt.
 
-<./imagens/localizar-parceiro.png, id=741, 1282.7925pt x 668.4975pt>
-File: ./imagens/localizar-parceiro.png Graphic file (type png)
+("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang
+1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
 
-<use ./imagens/localizar-parceiro.png>
-Package pdftex.def Info: ./imagens/localizar-parceiro.png used on input line 24
-9.
-(pdftex.def)             Requested size: 384.84071pt x 200.5508pt.
- [53 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/home
--contratante.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex
-/imagens/localizar-parceiro.png>]
-[54]))
+Package xcolor Warning: Incompatible color definition on input line 256.
+
+
+Package xcolor Warning: Incompatible color definition on input line 258.
+
+
+Package xcolor Warning: Incompatible color definition on input line 258.
+
+
+Package xcolor Warning: Incompatible color definition on input line 259.
+
+
+Package xcolor Warning: Incompatible color definition on input line 259.
+
+
+Package xcolor Warning: Incompatible color definition on input line 260.
+
+
+Package xcolor Warning: Incompatible color definition on input line 263.
+
+
+Package xcolor Warning: Incompatible color definition on input line 263.
+
+
+Package xcolor Warning: Incompatible color definition on input line 264.
+
+
+Package xcolor Warning: Incompatible color definition on input line 264.
+
+
+Package xcolor Warning: Incompatible color definition on input line 264.
+
+
+Package xcolor Warning: Incompatible color definition on input line 265.
+
+
+Package xcolor Warning: Incompatible color definition on input line 265.
+
+
+Package xcolor Warning: Incompatible color definition on input line 265.
+
+
+Package xcolor Warning: Incompatible color definition on input line 266.
+
+
+Package xcolor Warning: Incompatible color definition on input line 266.
+
+
+Package xcolor Warning: Incompatible color definition on input line 267.
+
+
+Package xcolor Warning: Incompatible color definition on input line 269.
+
+
+Package xcolor Warning: Incompatible color definition on input line 269.
+
+
+Package xcolor Warning: Incompatible color definition on input line 270.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 272.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+[56 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/home-
+contratante.png>]
+
+Package xcolor Warning: Incompatible color definition on input line 277.
+
+
+Package xcolor Warning: Incompatible color definition on input line 277.
+
+
+Package xcolor Warning: Incompatible color definition on input line 277.
+
+
+Package xcolor Warning: Incompatible color definition on input line 295.
+
+
+Package xcolor Warning: Incompatible color definition on input line 297.
+
+
+Package xcolor Warning: Incompatible color definition on input line 298.
+
+
+Package xcolor Warning: Incompatible color definition on input line 299.
+
+
+<./imagens/aceitar_rejeitar_solicitacao_parceria.png, id=1008, 1027.84pt x 327.
+2225pt>
+File: ./imagens/aceitar_rejeitar_solicitacao_parceria.png Graphic file (type pn
+g)
+ <use ./imagens/aceitar_rejeitar_solicitacao_parceria.png>
+Package pdftex.def Info: ./imagens/aceitar_rejeitar_solicitacao_parceria.png us
+ed on input line 307.
+(pdftex.def)             Requested size: 462.52373pt x 147.24876pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[57]
+
+Package xcolor Warning: Incompatible color definition on input line 318.
+
+
+Package xcolor Warning: Incompatible color definition on input line 321.
+
+
+Package xcolor Warning: Incompatible color definition on input line 322.
+
+
+Package xcolor Warning: Incompatible color definition on input line 323.
+
+[58 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/aceit
+ar_rejeitar_solicitacao_parceria.png>]
+
+Package xcolor Warning: Incompatible color definition on input line 331.
+
+
+Package xcolor Warning: Incompatible color definition on input line 333.
+
+
+Package xcolor Warning: Incompatible color definition on input line 334.
+
+
+Package xcolor Warning: Incompatible color definition on input line 335.
+
+
+Package xcolor Warning: Incompatible color definition on input line 335.
+
+
+Package xcolor Warning: Incompatible color definition on input line 335.
+
+
+Package xcolor Warning: Incompatible color definition on input line 336.
+
+
+Package xcolor Warning: Incompatible color definition on input line 339.
+
+
+Package xcolor Warning: Incompatible color definition on input line 339.
+
+
+Package xcolor Warning: Incompatible color definition on input line 340.
+
+
+Package xcolor Warning: Incompatible color definition on input line 340.
+
+
+Package xcolor Warning: Incompatible color definition on input line 341.
+
+
+Package xcolor Warning: Incompatible color definition on input line 341.
+
+
+Package xcolor Warning: Incompatible color definition on input line 341.
+
+
+Package xcolor Warning: Incompatible color definition on input line 341.
+
+
+Package xcolor Warning: Incompatible color definition on input line 342.
+
+
+Package xcolor Warning: Incompatible color definition on input line 342.
+
+
+Package xcolor Warning: Incompatible color definition on input line 343.
+
+
+Package xcolor Warning: Incompatible color definition on input line 345.
+
+
+Package xcolor Warning: Incompatible color definition on input line 346.
+
+
+Package xcolor Warning: Incompatible color definition on input line 347.
+
+
+Package xcolor Warning: Incompatible color definition on input line 347.
+
+
+Package xcolor Warning: Incompatible color definition on input line 348.
+
+
+Package xcolor Warning: Incompatible color definition on input line 348.
+
+
+Package xcolor Warning: Incompatible color definition on input line 349.
+
+
+Package xcolor Warning: Incompatible color definition on input line 352.
+
+
+Package xcolor Warning: Incompatible color definition on input line 352.
+
+
+Package xcolor Warning: Incompatible color definition on input line 353.
+
+
+Package xcolor Warning: Incompatible color definition on input line 353.
+
+
+Package xcolor Warning: Incompatible color definition on input line 354.
+
+
+Package xcolor Warning: Incompatible color definition on input line 354.
+
+
+Package xcolor Warning: Incompatible color definition on input line 354.
+
+
+Package xcolor Warning: Incompatible color definition on input line 354.
+
+[59]
+
+Package xcolor Warning: Incompatible color definition on input line 367.
+
+
+Package xcolor Warning: Incompatible color definition on input line 368.
+
+
+Package xcolor Warning: Incompatible color definition on input line 370.
+
+
+Package xcolor Warning: Incompatible color definition on input line 371.
+
+
+Package xcolor Warning: Incompatible color definition on input line 372.
+
+
+Package xcolor Warning: Incompatible color definition on input line 373.
+
+
+Package xcolor Warning: Incompatible color definition on input line 374.
+
+
+Package xcolor Warning: Incompatible color definition on input line 374.
+
+
+Package xcolor Warning: Incompatible color definition on input line 374.
+
+
+Package xcolor Warning: Incompatible color definition on input line 375.
+
+
+Package xcolor Warning: Incompatible color definition on input line 375.
+
+
+Package xcolor Warning: Incompatible color definition on input line 376.
+
+
+Package xcolor Warning: Incompatible color definition on input line 376.
+
+
+Package xcolor Warning: Incompatible color definition on input line 378.
+
+
+Package xcolor Warning: Incompatible color definition on input line 378.
+
+
+Package xcolor Warning: Incompatible color definition on input line 378.
+
+
+Package xcolor Warning: Incompatible color definition on input line 378.
+
+
+Package xcolor Warning: Incompatible color definition on input line 379.
+
+
+Package xcolor Warning: Incompatible color definition on input line 379.
+
+
+Package xcolor Warning: Incompatible color definition on input line 379.
+
+
+Package xcolor Warning: Incompatible color definition on input line 379.
+
+
+Package xcolor Warning: Incompatible color definition on input line 380.
+
+
+Package xcolor Warning: Incompatible color definition on input line 380.
+
+
+Package xcolor Warning: Incompatible color definition on input line 381.
+
+
+Package xcolor Warning: Incompatible color definition on input line 382.
+
+
+Package xcolor Warning: Incompatible color definition on input line 384.
+
+
+Package xcolor Warning: Incompatible color definition on input line 385.
+
+
+Package xcolor Warning: Incompatible color definition on input line 386.
+
+
+Package xcolor Warning: Incompatible color definition on input line 387.
+
+[60]
+
+Package xcolor Warning: Incompatible color definition on input line 388.
+
+
+Package xcolor Warning: Incompatible color definition on input line 388.
+
+
+Package xcolor Warning: Incompatible color definition on input line 389.
+
+
+Package xcolor Warning: Incompatible color definition on input line 390.
+
+
+Package xcolor Warning: Incompatible color definition on input line 390.
+
+
+Package xcolor Warning: Incompatible color definition on input line 392.
+
+
+Package xcolor Warning: Incompatible color definition on input line 392.
+
+
+Package xcolor Warning: Incompatible color definition on input line 392.
+
+
+Package xcolor Warning: Incompatible color definition on input line 392.
+
+
+Package xcolor Warning: Incompatible color definition on input line 393.
+
+
+Package xcolor Warning: Incompatible color definition on input line 393.
+
+
+Package xcolor Warning: Incompatible color definition on input line 393.
+
+
+Package xcolor Warning: Incompatible color definition on input line 393.
+
+
+Package xcolor Warning: Incompatible color definition on input line 394.
+
+
+Package xcolor Warning: Incompatible color definition on input line 394.
+
+
+Package xcolor Warning: Incompatible color definition on input line 395.
+
+
+Package xcolor Warning: Incompatible color definition on input line 396.
+
+
+Package xcolor Warning: Incompatible color definition on input line 398.
+
+
+Package xcolor Warning: Incompatible color definition on input line 399.
+
+
+Package xcolor Warning: Incompatible color definition on input line 400.
+
+
+Package xcolor Warning: Incompatible color definition on input line 401.
+
+
+Package xcolor Warning: Incompatible color definition on input line 402.
+
+
+Package xcolor Warning: Incompatible color definition on input line 402.
+
+
+Package xcolor Warning: Incompatible color definition on input line 403.
+
+
+Package xcolor Warning: Incompatible color definition on input line 403.
+
+
+Package xcolor Warning: Incompatible color definition on input line 404.
+
+
+Package xcolor Warning: Incompatible color definition on input line 405.
+
+
+Package xcolor Warning: Incompatible color definition on input line 405.
+
+
+Package xcolor Warning: Incompatible color definition on input line 407.
+
+
+Package xcolor Warning: Incompatible color definition on input line 407.
+
+
+Package xcolor Warning: Incompatible color definition on input line 407.
+
+
+Package xcolor Warning: Incompatible color definition on input line 407.
+
+
+Package xcolor Warning: Incompatible color definition on input line 408.
+
+
+Package xcolor Warning: Incompatible color definition on input line 408.
+
+
+Package xcolor Warning: Incompatible color definition on input line 408.
+
+
+Package xcolor Warning: Incompatible color definition on input line 408.
+
+
+Package xcolor Warning: Incompatible color definition on input line 409.
+
+
+Package xcolor Warning: Incompatible color definition on input line 409.
+
+
+Package xcolor Warning: Incompatible color definition on input line 410.
+
+
+Package xcolor Warning: Incompatible color definition on input line 414.
+
+
+Package xcolor Warning: Incompatible color definition on input line 415.
+
+
+Package xcolor Warning: Incompatible color definition on input line 416.
+
+
+Package xcolor Warning: Incompatible color definition on input line 416.
+
+
+Package xcolor Warning: Incompatible color definition on input line 417.
+
+
+Package xcolor Warning: Incompatible color definition on input line 417.
+
+
+Package xcolor Warning: Incompatible color definition on input line 418.
+
+
+Package xcolor Warning: Incompatible color definition on input line 419.
+
+
+Package xcolor Warning: Incompatible color definition on input line 419.
+
+
+Package xcolor Warning: Incompatible color definition on input line 421.
+
+
+Package xcolor Warning: Incompatible color definition on input line 421.
+
+
+Package xcolor Warning: Incompatible color definition on input line 421.
+
+
+Package xcolor Warning: Incompatible color definition on input line 421.
+
+
+Package xcolor Warning: Incompatible color definition on input line 421.
+
+
+Package xcolor Warning: Incompatible color definition on input line 421.
+
+[61]
+
+Package xcolor Warning: Incompatible color definition on input line 429.
+
+
+Package xcolor Warning: Incompatible color definition on input line 430.
+
+
+Package xcolor Warning: Incompatible color definition on input line 432.
+
+
+Package xcolor Warning: Incompatible color definition on input line 433.
+
+
+Package xcolor Warning: Incompatible color definition on input line 434.
+
+
+Package xcolor Warning: Incompatible color definition on input line 435.
+
+
+Package xcolor Warning: Incompatible color definition on input line 436.
+
+
+Package xcolor Warning: Incompatible color definition on input line 436.
+
+
+Package xcolor Warning: Incompatible color definition on input line 436.
+
+
+Package xcolor Warning: Incompatible color definition on input line 437.
+
+
+Package xcolor Warning: Incompatible color definition on input line 437.
+
+
+Package xcolor Warning: Incompatible color definition on input line 438.
+
+
+Package xcolor Warning: Incompatible color definition on input line 438.
+
+
+Package xcolor Warning: Incompatible color definition on input line 440.
+
+
+Package xcolor Warning: Incompatible color definition on input line 440.
+
+
+Package xcolor Warning: Incompatible color definition on input line 440.
+
+
+Package xcolor Warning: Incompatible color definition on input line 440.
+
+
+Package xcolor Warning: Incompatible color definition on input line 441.
+
+
+Package xcolor Warning: Incompatible color definition on input line 441.
+
+
+Package xcolor Warning: Incompatible color definition on input line 441.
+
+
+Package xcolor Warning: Incompatible color definition on input line 441.
+
+
+Package xcolor Warning: Incompatible color definition on input line 447.
+
+
+Package xcolor Warning: Incompatible color definition on input line 448.
+
+
+Package xcolor Warning: Incompatible color definition on input line 450.
+
+
+Package xcolor Warning: Incompatible color definition on input line 451.
+
+
+Package xcolor Warning: Incompatible color definition on input line 452.
+
+
+Package xcolor Warning: Incompatible color definition on input line 453.
+
+
+Package xcolor Warning: Incompatible color definition on input line 454.
+
+
+Package xcolor Warning: Incompatible color definition on input line 454.
+
+
+Package xcolor Warning: Incompatible color definition on input line 455.
+
+
+Package xcolor Warning: Incompatible color definition on input line 456.
+
+
+Package xcolor Warning: Incompatible color definition on input line 456.
+
+
+Package xcolor Warning: Incompatible color definition on input line 458.
+
+
+Package xcolor Warning: Incompatible color definition on input line 458.
+
+
+Package xcolor Warning: Incompatible color definition on input line 458.
+
+
+Package xcolor Warning: Incompatible color definition on input line 458.
+
+[62]
+
+Package xcolor Warning: Incompatible color definition on input line 459.
+
+
+Package xcolor Warning: Incompatible color definition on input line 459.
+
+
+Package xcolor Warning: Incompatible color definition on input line 459.
+
+
+Package xcolor Warning: Incompatible color definition on input line 459.
+
+
+Package xcolor Warning: Incompatible color definition on input line 466.
+
+
+Package xcolor Warning: Incompatible color definition on input line 467.
+
+
+Package xcolor Warning: Incompatible color definition on input line 469.
+
+
+Package xcolor Warning: Incompatible color definition on input line 470.
+
+
+Package xcolor Warning: Incompatible color definition on input line 471.
+
+
+Package xcolor Warning: Incompatible color definition on input line 472.
+
+
+Package xcolor Warning: Incompatible color definition on input line 473.
+
+
+Package xcolor Warning: Incompatible color definition on input line 473.
+
+
+Package xcolor Warning: Incompatible color definition on input line 474.
+
+
+Package xcolor Warning: Incompatible color definition on input line 474.
+
+
+Package xcolor Warning: Incompatible color definition on input line 475.
+
+
+Package xcolor Warning: Incompatible color definition on input line 476.
+
+
+Package xcolor Warning: Incompatible color definition on input line 476.
+
+
+Package xcolor Warning: Incompatible color definition on input line 478.
+
+
+Package xcolor Warning: Incompatible color definition on input line 478.
+
+
+Package xcolor Warning: Incompatible color definition on input line 478.
+
+
+Package xcolor Warning: Incompatible color definition on input line 478.
+
+
+Package xcolor Warning: Incompatible color definition on input line 479.
+
+
+Package xcolor Warning: Incompatible color definition on input line 479.
+
+
+Package xcolor Warning: Incompatible color definition on input line 479.
+
+
+Package xcolor Warning: Incompatible color definition on input line 479.
+
+
+Package xcolor Warning: Incompatible color definition on input line 486.
+
+[63]
+
+Package xcolor Warning: Incompatible color definition on input line 490.
+
+
+Package xcolor Warning: Incompatible color definition on input line 491.
+
+
+Package xcolor Warning: Incompatible color definition on input line 492.
+
+
+Package xcolor Warning: Incompatible color definition on input line 492.
+
+
+Package xcolor Warning: Incompatible color definition on input line 493.
+
+
+Package xcolor Warning: Incompatible color definition on input line 493.
+
+
+Package xcolor Warning: Incompatible color definition on input line 494.
+
+
+Package xcolor Warning: Incompatible color definition on input line 495.
+
+
+Package xcolor Warning: Incompatible color definition on input line 495.
+
+
+Package xcolor Warning: Incompatible color definition on input line 497.
+
+
+Package xcolor Warning: Incompatible color definition on input line 497.
+
+
+Package xcolor Warning: Incompatible color definition on input line 497.
+
+
+Package xcolor Warning: Incompatible color definition on input line 497.
+
+
+Package xcolor Warning: Incompatible color definition on input line 497.
+
+
+Package xcolor Warning: Incompatible color definition on input line 497.
+
+
+Overfull \hbox (16.38818pt too wide) in paragraph at lines 507--508
+\T1/ptm/m/n/12 rio in-for-ma-ções a res-peito da qua-li-dade do ser-viço pres-t
+ado pelo pro-ve-dor de ser-vi-ços, comparando-
+ []
+
+[64])))
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/13_Res
-ultados.tex" [55] [56
+ultados.tex" [65] [66
 
-] [57]
-<./imagens/consulta-busca-domestica.png, id=774, 569.12625pt x 739.76375pt>
-File: ./imagens/consulta-busca-domestica.png Graphic file (type png)
-
-<use ./imagens/consulta-busca-domestica.png>
-Package pdftex.def Info: ./imagens/consulta-busca-domestica.png used on input l
-ine 29.
-(pdftex.def)             Requested size: 398.38567pt x 517.83109pt.
- [58 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/cons
-ulta-busca-domestica.png>]
-<./imagens/busca-domestica-edilson.png, id=781, 1282.7925pt x 666.49pt>
+]
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
+sao_resultados/localizar_mao_de_obra.tex" [67]
+<./imagens/busca-domestica-edilson.png, id=1219, 1282.7925pt x 666.49pt>
 File: ./imagens/busca-domestica-edilson.png Graphic file (type png)
 
 <use ./imagens/busca-domestica-edilson.png>
 Package pdftex.def Info: ./imagens/busca-domestica-edilson.png used on input li
-ne 39.
+ne 12.
 (pdftex.def)             Requested size: 384.84071pt x 199.94853pt.
- [59 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/busc
-a-domestica-edilson.png>]
-<./imagens/consulta-busca-possiveis-parceiros.png, id=788, 696.6025pt x 394.473
-75pt>
-File: ./imagens/consulta-busca-possiveis-parceiros.png Graphic file (type png)
- <use ./imagens/consulta-busca-possiveis-parceiros.png>
-Package pdftex.def Info: ./imagens/consulta-busca-possiveis-parceiros.png used 
-on input line 55.
-(pdftex.def)             Requested size: 417.96472pt x 236.68607pt.
-
-<./imagens/busca-possiveis-parceiros.png, id=790, 250.9375pt x 636.3775pt>
+)
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
+sao_resultados/apresentar_possiveis_parceiros.tex"
+<./imagens/busca-possiveis-parceiros.png, id=1222, 250.9375pt x 636.3775pt>
 File: ./imagens/busca-possiveis-parceiros.png Graphic file (type png)
 
 <use ./imagens/busca-possiveis-parceiros.png>
 Package pdftex.def Info: ./imagens/busca-possiveis-parceiros.png used on input 
-line 64.
+line 20.
 (pdftex.def)             Requested size: 100.37321pt x 254.5465pt.
- [60 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/cons
-ulta-busca-possiveis-parceiros.png> <C:/Users/Andressa Faria/Documents/GitHub/t
-cc/documento/latex/imagens/busca-possiveis-parceiros.png>]
-<./imagens/consulta-busca-novos-parceiros.png, id=799, 636.3775pt x 401.5pt>
-File: ./imagens/consulta-busca-novos-parceiros.png Graphic file (type png)
 
-<use ./imagens/consulta-busca-novos-parceiros.png>
-Package pdftex.def Info: ./imagens/consulta-busca-novos-parceiros.png used on i
-nput line 76.
-(pdftex.def)             Requested size: 381.82944pt x 240.90184pt.
 
-<./imagens/busca-novos-parceiros.png, id=801, 1283.79625pt x 646.415pt>
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
+sao_resultados/localizar_novos_parceiros.tex" [68 <C:/Users/Andressa Faria/Docu
+ments/GitHub/tcc/documento/latex/imagens/busca-domestica-edilson.png>]
+<./imagens/busca-novos-parceiros.png, id=1229, 1283.79625pt x 646.415pt>
 File: ./imagens/busca-novos-parceiros.png Graphic file (type png)
 
 <use ./imagens/busca-novos-parceiros.png>
 Package pdftex.def Info: ./imagens/busca-novos-parceiros.png used on input line
- 85.
+ 7.
 (pdftex.def)             Requested size: 385.14185pt x 193.926pt.
- [61 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/cons
-ulta-busca-novos-parceiros.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/d
-ocumento/latex/imagens/busca-novos-parceiros.png>])
+) [69 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/bus
+ca-possiveis-parceiros.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/docum
+ento/latex/imagens/busca-novos-parceiros.png>])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/14_Con
-clusao.tex" [62])
+clusao.tex" [70])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.bbl"
-[63
+[71
 
 ]
 bibitemlist
-[64
+[72
 
-] [65])
+] [73])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/20_Ape
-ndices.tex" [66] [67
+ndices.tex" [74] [75
 
 ]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/21_Apendice_01_Github.tex"
-<./imagens/apendices/pagina-inicial-github.png, id=855, 773.13844pt x 368.87813
-pt>
+ces/21_Apendice_01_Iconix.tex"
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
+nto-aceitar-parceria.tex")
+Underfull \hbox (badness 10000) in paragraph at lines 1--14
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--14
+
+ []
+
+
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
+nto-localizar-parceiro.tex")
+Underfull \hbox (badness 10000) in paragraph at lines 1--24
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--24
+
+ []
+
+[76
+
+]
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
+nto-adicionar-parceiro.tex")
+Underfull \hbox (badness 10000) in paragraph at lines 1--34
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--34
+
+ []
+
+[77]
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
+nto-localizar-mao-de-obra.tex")
+Underfull \hbox (badness 10000) in paragraph at lines 1--44
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--44
+
+ []
+
+[78]
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
+nto-avaliar-mao-de-obra.tex")
+Underfull \hbox (badness 10000) in paragraph at lines 1--55
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--55
+
+ []
+
+[79]
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
+nto-gerenciar-servicos.tex")
+Underfull \hbox (badness 10000) in paragraph at lines 1--66
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--66
+
+ []
+
+[80]
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
+nto-criar-conta.tex")
+Underfull \hbox (badness 10000) in paragraph at lines 1--76
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--76
+
+ []
+
+[81]
+<./imagens/apendices/diagrama-robustez-aceitar-parceria.png, id=1328, 1120.9378
+pt x 755.82375pt>
+File: ./imagens/apendices/diagrama-robustez-aceitar-parceria.png Graphic file (
+type png)
+
+<use ./imagens/apendices/diagrama-robustez-aceitar-parceria.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-aceitar-parceria
+.png used on input line 89.
+(pdftex.def)             Requested size: 448.36719pt x 302.32414pt.
+File: ./imagens/apendices/diagrama-robustez-localizar-parceiros.png Graphic fil
+e (type png)
+
+<use ./imagens/apendices/diagrama-robustez-localizar-parceiros.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-localizar-parcei
+ros.png used on input line 99.
+(pdftex.def)             Requested size: 461.91757pt x 209.8804pt.
+
+<./imagens/apendices/diagrama-robustez-adicionar-parceiro.png, id=1331, 1205.25
+28pt x 584.1825pt>
+File: ./imagens/apendices/diagrama-robustez-adicionar-parceiro.png Graphic file
+ (type png)
+
+<use ./imagens/apendices/diagrama-robustez-adicionar-parceiro.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-adicionar-parcei
+ro.png used on input line 109.
+(pdftex.def)             Requested size: 482.09259pt x 233.66885pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<./imagens/apendices/diagrama-robustez-localizar-mao-de-obra.png, id=1333, 1166
+.85938pt x 633.11531pt>
+File: ./imagens/apendices/diagrama-robustez-localizar-mao-de-obra.png Graphic f
+ile (type png)
+
+<use ./imagens/apendices/diagrama-robustez-localizar-mao-de-obra.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-localizar-mao-de
+-obra.png used on input line 119.
+(pdftex.def)             Requested size: 466.73549pt x 253.24162pt.
+ [82 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+dices/diagrama-robustez-aceitar-parceria.png>] [83 <C:/Users/Andressa Faria/Doc
+uments/GitHub/tcc/documento/latex/imagens/apendices/diagrama-robustez-adicionar
+-parceiro.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/im
+agens/apendices/diagrama-robustez-localizar-mao-de-obra.png>]
+<./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png, id=1350, 976.39
+781pt x 545.03625pt>
+File: ./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png Graphic fil
+e (type png)
+
+<use ./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-avaliar-mao-de-o
+bra.png used on input line 130.
+(pdftex.def)             Requested size: 419.84288pt x 234.36102pt.
+
+<./imagens/apendices/diagrama-robustez-adicionar-servicos.png, id=1352, 1141.26
+375pt x 590.95781pt>
+File: ./imagens/apendices/diagrama-robustez-adicionar-servicos.png Graphic file
+ (type png)
+
+<use ./imagens/apendices/diagrama-robustez-adicionar-servicos.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-adicionar-servic
+os.png used on input line 140.
+(pdftex.def)             Requested size: 456.49742pt x 236.37894pt.
+ [84 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+dices/diagrama-robustez-avaliar-mao-de-obra.png> <C:/Users/Andressa Faria/Docum
+ents/GitHub/tcc/documento/latex/imagens/apendices/diagrama-robustez-adicionar-s
+ervicos.png>]
+<./imagens/apendices/diagrama-robustez-criar-conta.png, id=1363, 1001.24063pt x
+ 904.88063pt>
+File: ./imagens/apendices/diagrama-robustez-criar-conta.png Graphic file (type 
+png)
+ <use ./imagens/apendices/diagrama-robustez-criar-conta.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-criar-conta.png 
+used on input line 151.
+(pdftex.def)             Requested size: 400.48917pt x 361.94585pt.
+
+[85 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
+ices/diagrama-robustez-criar-conta.png>]
+<./imagens/apendices/diagrama-sequencia-aceitar-parceria.png, id=1371, 1455.939
+38pt x 522.45187pt>
+File: ./imagens/apendices/diagrama-sequencia-aceitar-parceria.png Graphic file 
+(type png)
+
+<use ./imagens/apendices/diagrama-sequencia-aceitar-parceria.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-aceitar-parceri
+a.png used on input line 166.
+(pdftex.def)             Requested size: 1455.93584pt x 522.45059pt.
+ [86 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+dices/diagrama-sequencia-aceitar-parceria.png>]
+File: ./imagens/apendices/diagrama-sequencia-localizar-parceiros.png Graphic fi
+le (type png)
+
+<use ./imagens/apendices/diagrama-sequencia-localizar-parceiros.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-localizar-parce
+iros.png used on input line 177.
+(pdftex.def)             Requested size: 1338.49738pt x 754.3163pt.
+ [87]
+<./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png, id=1384, 2325.
+4378pt x 1178.90437pt>
+File: ./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png Graphic fi
+le (type png)
+
+<use ./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-adicionar-parce
+iros.png used on input line 187.
+(pdftex.def)             Requested size: 2325.43216pt x 1178.9015pt.
+
+<./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png, id=1386, 174
+5.01938pt x 524.71031pt>
+File: ./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png Graphic 
+file (type png)
+
+<use ./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-localizar-mao-d
+e-obra.png used on input line 197.
+(pdftex.def)             Requested size: 1745.01514pt x 524.70901pt.
+ [88 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+dices/diagrama-sequencia-adicionar-parceiros.png>]
+<./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png, id=1395, 3439.
+60031pt x 1163.0953pt>
+File: ./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png Graphic fi
+le (type png)
+
+<use ./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-avaliar-mao-de-
+obra.png used on input line 207.
+(pdftex.def)             Requested size: 3439.59196pt x 1163.09247pt.
+ [89 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+dices/diagrama-sequencia-localizar-mao-de-obra.png>] [90 <C:/Users/Andressa Far
+ia/Documents/GitHub/tcc/documento/latex/imagens/apendices/diagrama-sequencia-av
+aliar-mao-de-obra.png>]
+<./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png, id=1410, 1818.7
+95pt x 973.38657pt>
+File: ./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png Graphic fil
+e (type png)
+
+<use ./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-gerenciar-servi
+cos.png used on input line 218.
+(pdftex.def)             Requested size: 1818.79059pt x 973.3842pt.
+
+<./imagens/apendices/diagrama-sequencia-criar-conta.png, id=1412, 1805.24437pt 
+x 1027.58907pt>
+File: ./imagens/apendices/diagrama-sequencia-criar-conta.png Graphic file (type
+ png)
+ <use ./imagens/apendices/diagrama-sequencia-criar-conta.png>
+Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-criar-conta.png
+ used on input line 228.
+(pdftex.def)             Requested size: 1805.23999pt x 1027.58656pt.
+
+[91 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
+ices/diagrama-sequencia-gerenciar-servicos.png>])
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
+ces/22_Apendice_02_API_Rest.tex" [92 <C:/Users/Andressa Faria/Documents/GitHub/
+tcc/documento/latex/imagens/apendices/diagrama-sequencia-criar-conta.png>]
+[93]
+
+Package xcolor Warning: Incompatible color definition on input line 9.
+
+
+Package xcolor Warning: Incompatible color definition on input line 10.
+
+
+Package xcolor Warning: Incompatible color definition on input line 10.
+
+
+Package xcolor Warning: Incompatible color definition on input line 10.
+
+
+Package xcolor Warning: Incompatible color definition on input line 10.
+
+
+Package xcolor Warning: Incompatible color definition on input line 11.
+
+
+Package xcolor Warning: Incompatible color definition on input line 11.
+
+
+Package xcolor Warning: Incompatible color definition on input line 12.
+
+
+Package xcolor Warning: Incompatible color definition on input line 12.
+
+
+Package xcolor Warning: Incompatible color definition on input line 12.
+
+
+Package xcolor Warning: Incompatible color definition on input line 13.
+
+
+Package xcolor Warning: Incompatible color definition on input line 13.
+
+
+Package xcolor Warning: Incompatible color definition on input line 13.
+
+
+Package xcolor Warning: Incompatible color definition on input line 13.
+
+
+Package xcolor Warning: Incompatible color definition on input line 14.
+
+
+Package xcolor Warning: Incompatible color definition on input line 14.
+
+
+Package xcolor Warning: Incompatible color definition on input line 15.
+
+
+Package xcolor Warning: Incompatible color definition on input line 15.
+
+
+Package xcolor Warning: Incompatible color definition on input line 15.
+
+
+Package xcolor Warning: Incompatible color definition on input line 15.
+
+
+Package xcolor Warning: Incompatible color definition on input line 16.
+
+
+Package xcolor Warning: Incompatible color definition on input line 17.
+
+
+Package xcolor Warning: Incompatible color definition on input line 18.
+
+
+Package xcolor Warning: Incompatible color definition on input line 18.
+
+
+Package xcolor Warning: Incompatible color definition on input line 19.
+
+
+Package xcolor Warning: Incompatible color definition on input line 20.
+
+
+Package xcolor Warning: Incompatible color definition on input line 21.
+
+
+Package xcolor Warning: Incompatible color definition on input line 22.
+
+
+Package xcolor Warning: Incompatible color definition on input line 23.
+
+
+Package xcolor Warning: Incompatible color definition on input line 30.
+
+
+Package xcolor Warning: Incompatible color definition on input line 31.
+
+
+Package xcolor Warning: Incompatible color definition on input line 31.
+
+
+Package xcolor Warning: Incompatible color definition on input line 31.
+
+
+Package xcolor Warning: Incompatible color definition on input line 31.
+
+
+Package xcolor Warning: Incompatible color definition on input line 32.
+
+
+Package xcolor Warning: Incompatible color definition on input line 32.
+
+
+Package xcolor Warning: Incompatible color definition on input line 33.
+
+
+Package xcolor Warning: Incompatible color definition on input line 33.
+
+
+Package xcolor Warning: Incompatible color definition on input line 33.
+
+
+Package xcolor Warning: Incompatible color definition on input line 34.
+
+
+Package xcolor Warning: Incompatible color definition on input line 34.
+
+
+Package xcolor Warning: Incompatible color definition on input line 34.
+
+
+Package xcolor Warning: Incompatible color definition on input line 34.
+
+
+Package xcolor Warning: Incompatible color definition on input line 35.
+
+
+Package xcolor Warning: Incompatible color definition on input line 35.
+
+
+Package xcolor Warning: Incompatible color definition on input line 36.
+
+
+Package xcolor Warning: Incompatible color definition on input line 36.
+
+
+Package xcolor Warning: Incompatible color definition on input line 37.
+
+
+Package xcolor Warning: Incompatible color definition on input line 38.
+
+
+Package xcolor Warning: Incompatible color definition on input line 38.
+
+[94
+
+]
+
+Package xcolor Warning: Incompatible color definition on input line 39.
+
+
+Package xcolor Warning: Incompatible color definition on input line 39.
+
+
+Package xcolor Warning: Incompatible color definition on input line 39.
+
+
+Package xcolor Warning: Incompatible color definition on input line 39.
+
+
+Package xcolor Warning: Incompatible color definition on input line 40.
+
+
+Package xcolor Warning: Incompatible color definition on input line 41.
+
+
+Package xcolor Warning: Incompatible color definition on input line 42.
+
+
+Package xcolor Warning: Incompatible color definition on input line 42.
+
+
+Package xcolor Warning: Incompatible color definition on input line 43.
+
+
+Package xcolor Warning: Incompatible color definition on input line 44.
+
+
+Package xcolor Warning: Incompatible color definition on input line 45.
+
+
+Package xcolor Warning: Incompatible color definition on input line 46.
+
+
+Package xcolor Warning: Incompatible color definition on input line 47.
+
+
+Package xcolor Warning: Incompatible color definition on input line 54.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
+
+Package xcolor Warning: Incompatible color definition on input line 56.
+
+
+Package xcolor Warning: Incompatible color definition on input line 56.
+
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 58.
+
+
+Package xcolor Warning: Incompatible color definition on input line 58.
+
+
+Package xcolor Warning: Incompatible color definition on input line 58.
+
+
+Package xcolor Warning: Incompatible color definition on input line 58.
+
+
+Package xcolor Warning: Incompatible color definition on input line 59.
+
+
+Package xcolor Warning: Incompatible color definition on input line 59.
+
+
+Package xcolor Warning: Incompatible color definition on input line 60.
+
+
+Package xcolor Warning: Incompatible color definition on input line 60.
+
+
+Package xcolor Warning: Incompatible color definition on input line 61.
+
+
+Package xcolor Warning: Incompatible color definition on input line 62.
+
+
+Package xcolor Warning: Incompatible color definition on input line 62.
+
+
+Package xcolor Warning: Incompatible color definition on input line 63.
+
+
+Package xcolor Warning: Incompatible color definition on input line 63.
+
+
+Package xcolor Warning: Incompatible color definition on input line 63.
+
+
+Package xcolor Warning: Incompatible color definition on input line 63.
+
+
+Package xcolor Warning: Incompatible color definition on input line 64.
+
+
+Package xcolor Warning: Incompatible color definition on input line 65.
+
+
+Package xcolor Warning: Incompatible color definition on input line 65.
+
+
+Package xcolor Warning: Incompatible color definition on input line 66.
+
+
+Package xcolor Warning: Incompatible color definition on input line 67.
+
+
+Package xcolor Warning: Incompatible color definition on input line 68.
+
+
+Package xcolor Warning: Incompatible color definition on input line 68.
+
+
+Package xcolor Warning: Incompatible color definition on input line 69.
+
+
+Package xcolor Warning: Incompatible color definition on input line 70.
+
+
+Package xcolor Warning: Incompatible color definition on input line 71.
+
+
+Package xcolor Warning: Incompatible color definition on input line 71.
+
+
+Package xcolor Warning: Incompatible color definition on input line 72.
+
+
+Package xcolor Warning: Incompatible color definition on input line 72.
+
+
+Package xcolor Warning: Incompatible color definition on input line 72.
+
+
+Package xcolor Warning: Incompatible color definition on input line 72.
+
+
+Package xcolor Warning: Incompatible color definition on input line 73.
+
+
+Package xcolor Warning: Incompatible color definition on input line 74.
+
+
+Package xcolor Warning: Incompatible color definition on input line 75.
+
+
+Package xcolor Warning: Incompatible color definition on input line 75.
+
+
+Package xcolor Warning: Incompatible color definition on input line 76.
+
+
+Package xcolor Warning: Incompatible color definition on input line 77.
+
+
+Package xcolor Warning: Incompatible color definition on input line 78.
+
+
+Package xcolor Warning: Incompatible color definition on input line 79.
+
+[95]
+
+Package xcolor Warning: Incompatible color definition on input line 80.
+
+
+Package xcolor Warning: Incompatible color definition on input line 86.
+
+
+Package xcolor Warning: Incompatible color definition on input line 87.
+
+
+Package xcolor Warning: Incompatible color definition on input line 87.
+
+
+Package xcolor Warning: Incompatible color definition on input line 87.
+
+
+Package xcolor Warning: Incompatible color definition on input line 87.
+
+
+Package xcolor Warning: Incompatible color definition on input line 88.
+
+
+Package xcolor Warning: Incompatible color definition on input line 88.
+
+
+Package xcolor Warning: Incompatible color definition on input line 89.
+
+
+Package xcolor Warning: Incompatible color definition on input line 89.
+
+
+Package xcolor Warning: Incompatible color definition on input line 89.
+
+
+Package xcolor Warning: Incompatible color definition on input line 90.
+
+
+Package xcolor Warning: Incompatible color definition on input line 90.
+
+
+Package xcolor Warning: Incompatible color definition on input line 90.
+
+
+Package xcolor Warning: Incompatible color definition on input line 90.
+
+
+Package xcolor Warning: Incompatible color definition on input line 91.
+
+
+Package xcolor Warning: Incompatible color definition on input line 91.
+
+
+Package xcolor Warning: Incompatible color definition on input line 92.
+
+
+Package xcolor Warning: Incompatible color definition on input line 92.
+
+
+Package xcolor Warning: Incompatible color definition on input line 93.
+
+
+Package xcolor Warning: Incompatible color definition on input line 94.
+
+
+Package xcolor Warning: Incompatible color definition on input line 94.
+
+
+Package xcolor Warning: Incompatible color definition on input line 95.
+
+
+Package xcolor Warning: Incompatible color definition on input line 95.
+
+
+Package xcolor Warning: Incompatible color definition on input line 95.
+
+
+Package xcolor Warning: Incompatible color definition on input line 95.
+
+
+Package xcolor Warning: Incompatible color definition on input line 96.
+
+
+Package xcolor Warning: Incompatible color definition on input line 97.
+
+
+Package xcolor Warning: Incompatible color definition on input line 98.
+
+
+Package xcolor Warning: Incompatible color definition on input line 98.
+
+
+Package xcolor Warning: Incompatible color definition on input line 99.
+
+
+Package xcolor Warning: Incompatible color definition on input line 100.
+
+
+Package xcolor Warning: Incompatible color definition on input line 101.
+
+
+Package xcolor Warning: Incompatible color definition on input line 102.
+
+
+Package xcolor Warning: Incompatible color definition on input line 103.
+
+
+Package xcolor Warning: Incompatible color definition on input line 109.
+
+
+Package xcolor Warning: Incompatible color definition on input line 110.
+
+
+Package xcolor Warning: Incompatible color definition on input line 110.
+
+
+Package xcolor Warning: Incompatible color definition on input line 110.
+
+
+Package xcolor Warning: Incompatible color definition on input line 110.
+
+
+Package xcolor Warning: Incompatible color definition on input line 111.
+
+
+Package xcolor Warning: Incompatible color definition on input line 111.
+
+
+Package xcolor Warning: Incompatible color definition on input line 111.
+
+
+Package xcolor Warning: Incompatible color definition on input line 112.
+
+
+Package xcolor Warning: Incompatible color definition on input line 112.
+
+
+Package xcolor Warning: Incompatible color definition on input line 112.
+
+
+Package xcolor Warning: Incompatible color definition on input line 112.
+
+
+Package xcolor Warning: Incompatible color definition on input line 113.
+
+
+Package xcolor Warning: Incompatible color definition on input line 113.
+
+
+Package xcolor Warning: Incompatible color definition on input line 114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 114.
+
+
+Package xcolor Warning: Incompatible color definition on input line 115.
+
+
+Package xcolor Warning: Incompatible color definition on input line 116.
+
+
+Package xcolor Warning: Incompatible color definition on input line 117.
+
+
+Package xcolor Warning: Incompatible color definition on input line 117.
+
+
+Package xcolor Warning: Incompatible color definition on input line 118.
+
+
+Package xcolor Warning: Incompatible color definition on input line 119.
+
+
+Package xcolor Warning: Incompatible color definition on input line 120.
+
+
+Package xcolor Warning: Incompatible color definition on input line 120.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+
+Package xcolor Warning: Incompatible color definition on input line 121.
+
+[96]
+
+Package xcolor Warning: Incompatible color definition on input line 122.
+
+
+Package xcolor Warning: Incompatible color definition on input line 123.
+
+
+Package xcolor Warning: Incompatible color definition on input line 124.
+
+
+Package xcolor Warning: Incompatible color definition on input line 124.
+
+
+Package xcolor Warning: Incompatible color definition on input line 125.
+
+
+Package xcolor Warning: Incompatible color definition on input line 126.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 127.
+
+
+Package xcolor Warning: Incompatible color definition on input line 128.
+
+
+Package xcolor Warning: Incompatible color definition on input line 128.
+
+
+Package xcolor Warning: Incompatible color definition on input line 128.
+
+
+Package xcolor Warning: Incompatible color definition on input line 128.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 130.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 131.
+
+
+Package xcolor Warning: Incompatible color definition on input line 132.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 134.
+
+
+Package xcolor Warning: Incompatible color definition on input line 134.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package xcolor Warning: Incompatible color definition on input line 136.
+
+
+Package xcolor Warning: Incompatible color definition on input line 137.
+
+
+Package xcolor Warning: Incompatible color definition on input line 138.
+
+
+Package xcolor Warning: Incompatible color definition on input line 138.
+
+
+Package xcolor Warning: Incompatible color definition on input line 139.
+
+
+Package xcolor Warning: Incompatible color definition on input line 140.
+
+
+Package xcolor Warning: Incompatible color definition on input line 141.
+
+
+Package xcolor Warning: Incompatible color definition on input line 141.
+
+
+Package xcolor Warning: Incompatible color definition on input line 142.
+
+
+Package xcolor Warning: Incompatible color definition on input line 142.
+
+
+Package xcolor Warning: Incompatible color definition on input line 142.
+
+
+Package xcolor Warning: Incompatible color definition on input line 142.
+
+
+Package xcolor Warning: Incompatible color definition on input line 143.
+
+
+Package xcolor Warning: Incompatible color definition on input line 144.
+
+
+Package xcolor Warning: Incompatible color definition on input line 145.
+
+
+Package xcolor Warning: Incompatible color definition on input line 145.
+
+
+Package xcolor Warning: Incompatible color definition on input line 146.
+
+
+Package xcolor Warning: Incompatible color definition on input line 147.
+
+
+Package xcolor Warning: Incompatible color definition on input line 148.
+
+
+Package xcolor Warning: Incompatible color definition on input line 148.
+
+
+Package xcolor Warning: Incompatible color definition on input line 149.
+
+
+Package xcolor Warning: Incompatible color definition on input line 149.
+
+
+Package xcolor Warning: Incompatible color definition on input line 149.
+
+
+Package xcolor Warning: Incompatible color definition on input line 149.
+
+
+Package xcolor Warning: Incompatible color definition on input line 150.
+
+
+Package xcolor Warning: Incompatible color definition on input line 151.
+
+
+Package xcolor Warning: Incompatible color definition on input line 152.
+
+
+Package xcolor Warning: Incompatible color definition on input line 152.
+
+
+Package xcolor Warning: Incompatible color definition on input line 153.
+
+
+Package xcolor Warning: Incompatible color definition on input line 154.
+
+
+Package xcolor Warning: Incompatible color definition on input line 155.
+
+
+Package xcolor Warning: Incompatible color definition on input line 155.
+
+
+Package xcolor Warning: Incompatible color definition on input line 156.
+
+
+Package xcolor Warning: Incompatible color definition on input line 156.
+
+
+Package xcolor Warning: Incompatible color definition on input line 156.
+
+
+Package xcolor Warning: Incompatible color definition on input line 156.
+
+
+Package xcolor Warning: Incompatible color definition on input line 157.
+
+
+Package xcolor Warning: Incompatible color definition on input line 158.
+
+
+Package xcolor Warning: Incompatible color definition on input line 158.
+
+
+Package xcolor Warning: Incompatible color definition on input line 159.
+
+
+Package xcolor Warning: Incompatible color definition on input line 160.
+
+
+Package xcolor Warning: Incompatible color definition on input line 161.
+
+
+Package xcolor Warning: Incompatible color definition on input line 161.
+
+[97]
+
+Package xcolor Warning: Incompatible color definition on input line 162.
+
+
+Package xcolor Warning: Incompatible color definition on input line 163.
+
+
+Package xcolor Warning: Incompatible color definition on input line 164.
+
+
+Package xcolor Warning: Incompatible color definition on input line 164.
+
+
+Package xcolor Warning: Incompatible color definition on input line 165.
+
+
+Package xcolor Warning: Incompatible color definition on input line 165.
+
+
+Package xcolor Warning: Incompatible color definition on input line 165.
+
+
+Package xcolor Warning: Incompatible color definition on input line 165.
+
+
+Package xcolor Warning: Incompatible color definition on input line 166.
+
+
+Package xcolor Warning: Incompatible color definition on input line 167.
+
+
+Package xcolor Warning: Incompatible color definition on input line 167.
+
+
+Package xcolor Warning: Incompatible color definition on input line 168.
+
+
+Package xcolor Warning: Incompatible color definition on input line 169.
+
+
+Package xcolor Warning: Incompatible color definition on input line 170.
+
+
+Package xcolor Warning: Incompatible color definition on input line 170.
+
+
+Package xcolor Warning: Incompatible color definition on input line 171.
+
+
+Package xcolor Warning: Incompatible color definition on input line 172.
+
+
+Package xcolor Warning: Incompatible color definition on input line 173.
+
+
+Package xcolor Warning: Incompatible color definition on input line 174.
+
+
+Package xcolor Warning: Incompatible color definition on input line 180.
+
+
+Package xcolor Warning: Incompatible color definition on input line 181.
+
+
+Package xcolor Warning: Incompatible color definition on input line 181.
+
+
+Package xcolor Warning: Incompatible color definition on input line 181.
+
+
+Package xcolor Warning: Incompatible color definition on input line 181.
+
+
+Package xcolor Warning: Incompatible color definition on input line 182.
+
+
+Package xcolor Warning: Incompatible color definition on input line 182.
+
+
+Package xcolor Warning: Incompatible color definition on input line 182.
+
+
+Package xcolor Warning: Incompatible color definition on input line 183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 183.
+
+
+Package xcolor Warning: Incompatible color definition on input line 184.
+
+
+Package xcolor Warning: Incompatible color definition on input line 184.
+
+
+Package xcolor Warning: Incompatible color definition on input line 185.
+
+
+Package xcolor Warning: Incompatible color definition on input line 185.
+
+
+Package xcolor Warning: Incompatible color definition on input line 186.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 188.
+
+
+Package xcolor Warning: Incompatible color definition on input line 189.
+
+
+Package xcolor Warning: Incompatible color definition on input line 190.
+
+
+Package xcolor Warning: Incompatible color definition on input line 190.
+
+
+Package xcolor Warning: Incompatible color definition on input line 191.
+
+
+Package xcolor Warning: Incompatible color definition on input line 192.
+
+
+Package xcolor Warning: Incompatible color definition on input line 193.
+
+
+Package xcolor Warning: Incompatible color definition on input line 193.
+
+
+Package xcolor Warning: Incompatible color definition on input line 194.
+
+
+Package xcolor Warning: Incompatible color definition on input line 195.
+
+
+Package xcolor Warning: Incompatible color definition on input line 196.
+
+
+Package xcolor Warning: Incompatible color definition on input line 196.
+
+
+Package xcolor Warning: Incompatible color definition on input line 197.
+
+
+Package xcolor Warning: Incompatible color definition on input line 197.
+
+
+Package xcolor Warning: Incompatible color definition on input line 197.
+
+
+Package xcolor Warning: Incompatible color definition on input line 197.
+
+
+Package xcolor Warning: Incompatible color definition on input line 198.
+
+
+Package xcolor Warning: Incompatible color definition on input line 199.
+
+
+Package xcolor Warning: Incompatible color definition on input line 200.
+
+
+Package xcolor Warning: Incompatible color definition on input line 200.
+
+
+Package xcolor Warning: Incompatible color definition on input line 201.
+
+
+Package xcolor Warning: Incompatible color definition on input line 202.
+
+[98]
+
+Package xcolor Warning: Incompatible color definition on input line 203.
+
+
+Package xcolor Warning: Incompatible color definition on input line 204.
+
+
+Package xcolor Warning: Incompatible color definition on input line 210.
+
+
+Package xcolor Warning: Incompatible color definition on input line 211.
+
+
+Package xcolor Warning: Incompatible color definition on input line 211.
+
+
+Package xcolor Warning: Incompatible color definition on input line 211.
+
+
+Package xcolor Warning: Incompatible color definition on input line 212.
+
+
+Package xcolor Warning: Incompatible color definition on input line 212.
+
+
+Package xcolor Warning: Incompatible color definition on input line 212.
+
+
+Package xcolor Warning: Incompatible color definition on input line 212.
+
+
+Package xcolor Warning: Incompatible color definition on input line 213.
+
+
+Package xcolor Warning: Incompatible color definition on input line 213.
+
+
+Package xcolor Warning: Incompatible color definition on input line 214.
+
+
+Package xcolor Warning: Incompatible color definition on input line 214.
+
+
+Package xcolor Warning: Incompatible color definition on input line 215.
+
+
+Package xcolor Warning: Incompatible color definition on input line 216.
+
+
+Package xcolor Warning: Incompatible color definition on input line 216.
+
+
+Package xcolor Warning: Incompatible color definition on input line 217.
+
+
+Package xcolor Warning: Incompatible color definition on input line 217.
+
+
+Package xcolor Warning: Incompatible color definition on input line 218.
+
+
+Package xcolor Warning: Incompatible color definition on input line 219.
+
+
+Package xcolor Warning: Incompatible color definition on input line 219.
+
+
+Package xcolor Warning: Incompatible color definition on input line 220.
+
+
+Package xcolor Warning: Incompatible color definition on input line 220.
+
+
+Package xcolor Warning: Incompatible color definition on input line 220.
+
+
+Package xcolor Warning: Incompatible color definition on input line 220.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 222.
+
+
+Package xcolor Warning: Incompatible color definition on input line 223.
+
+
+Package xcolor Warning: Incompatible color definition on input line 224.
+
+
+Package xcolor Warning: Incompatible color definition on input line 225.
+
+
+Package xcolor Warning: Incompatible color definition on input line 225.
+
+
+Package xcolor Warning: Incompatible color definition on input line 226.
+
+
+Package xcolor Warning: Incompatible color definition on input line 227.
+
+
+Package xcolor Warning: Incompatible color definition on input line 228.
+
+
+Package xcolor Warning: Incompatible color definition on input line 228.
+
+
+Package xcolor Warning: Incompatible color definition on input line 229.
+
+
+Package xcolor Warning: Incompatible color definition on input line 229.
+
+
+Package xcolor Warning: Incompatible color definition on input line 229.
+
+
+Package xcolor Warning: Incompatible color definition on input line 229.
+
+
+Package xcolor Warning: Incompatible color definition on input line 230.
+
+
+Package xcolor Warning: Incompatible color definition on input line 231.
+
+
+Package xcolor Warning: Incompatible color definition on input line 231.
+
+
+Package xcolor Warning: Incompatible color definition on input line 232.
+
+
+Package xcolor Warning: Incompatible color definition on input line 233.
+
+
+Package xcolor Warning: Incompatible color definition on input line 234.
+
+
+Package xcolor Warning: Incompatible color definition on input line 234.
+
+
+Package xcolor Warning: Incompatible color definition on input line 235.
+
+
+Package xcolor Warning: Incompatible color definition on input line 236.
+
+
+Package xcolor Warning: Incompatible color definition on input line 237.
+
+
+Package xcolor Warning: Incompatible color definition on input line 237.
+
+
+Package xcolor Warning: Incompatible color definition on input line 238.
+
+
+Package xcolor Warning: Incompatible color definition on input line 238.
+
+
+Package xcolor Warning: Incompatible color definition on input line 238.
+
+
+Package xcolor Warning: Incompatible color definition on input line 238.
+
+
+Package xcolor Warning: Incompatible color definition on input line 239.
+
+
+Package xcolor Warning: Incompatible color definition on input line 240.
+
+
+Package xcolor Warning: Incompatible color definition on input line 241.
+
+
+Package xcolor Warning: Incompatible color definition on input line 241.
+
+
+Package xcolor Warning: Incompatible color definition on input line 242.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+[99]
+
+Package xcolor Warning: Incompatible color definition on input line 244.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 252.
+
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+
+Package xcolor Warning: Incompatible color definition on input line 254.
+
+
+Package xcolor Warning: Incompatible color definition on input line 254.
+
+
+Package xcolor Warning: Incompatible color definition on input line 254.
+
+
+Package xcolor Warning: Incompatible color definition on input line 254.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 256.
+
+
+Package xcolor Warning: Incompatible color definition on input line 256.
+
+
+Package xcolor Warning: Incompatible color definition on input line 257.
+
+
+Package xcolor Warning: Incompatible color definition on input line 258.
+
+
+Package xcolor Warning: Incompatible color definition on input line 258.
+
+
+Package xcolor Warning: Incompatible color definition on input line 259.
+
+
+Package xcolor Warning: Incompatible color definition on input line 259.
+
+
+Package xcolor Warning: Incompatible color definition on input line 260.
+
+
+Package xcolor Warning: Incompatible color definition on input line 261.
+
+
+Package xcolor Warning: Incompatible color definition on input line 261.
+
+
+Package xcolor Warning: Incompatible color definition on input line 262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 263.
+
+
+Package xcolor Warning: Incompatible color definition on input line 264.
+
+
+Package xcolor Warning: Incompatible color definition on input line 265.
+
+
+Package xcolor Warning: Incompatible color definition on input line 265.
+
+
+Package xcolor Warning: Incompatible color definition on input line 266.
+
+
+Package xcolor Warning: Incompatible color definition on input line 267.
+
+
+Package xcolor Warning: Incompatible color definition on input line 268.
+
+
+Package xcolor Warning: Incompatible color definition on input line 268.
+
+
+Package xcolor Warning: Incompatible color definition on input line 269.
+
+
+Package xcolor Warning: Incompatible color definition on input line 269.
+
+
+Package xcolor Warning: Incompatible color definition on input line 269.
+
+
+Package xcolor Warning: Incompatible color definition on input line 269.
+
+
+Package xcolor Warning: Incompatible color definition on input line 270.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 272.
+
+
+Package xcolor Warning: Incompatible color definition on input line 272.
+
+
+Package xcolor Warning: Incompatible color definition on input line 273.
+
+
+Package xcolor Warning: Incompatible color definition on input line 274.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 277.
+
+
+Package xcolor Warning: Incompatible color definition on input line 278.
+
+
+Package xcolor Warning: Incompatible color definition on input line 278.
+
+
+Package xcolor Warning: Incompatible color definition on input line 279.
+
+
+Package xcolor Warning: Incompatible color definition on input line 280.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 283.
+
+
+Package xcolor Warning: Incompatible color definition on input line 284.
+
+
+Package xcolor Warning: Incompatible color definition on input line 284.
+
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+[100]
+
+Package xcolor Warning: Incompatible color definition on input line 286.
+
+
+Package xcolor Warning: Incompatible color definition on input line 287.
+
+
+Package xcolor Warning: Incompatible color definition on input line 287.
+
+
+Package xcolor Warning: Incompatible color definition on input line 288.
+
+
+Package xcolor Warning: Incompatible color definition on input line 289.
+
+
+Package xcolor Warning: Incompatible color definition on input line 290.
+
+
+Package xcolor Warning: Incompatible color definition on input line 290.
+
+
+Package xcolor Warning: Incompatible color definition on input line 291.
+
+
+Package xcolor Warning: Incompatible color definition on input line 292.
+
+
+Package xcolor Warning: Incompatible color definition on input line 293.
+
+
+Package xcolor Warning: Incompatible color definition on input line 293.
+
+
+Package xcolor Warning: Incompatible color definition on input line 294.
+
+
+Package xcolor Warning: Incompatible color definition on input line 294.
+
+
+Package xcolor Warning: Incompatible color definition on input line 294.
+
+
+Package xcolor Warning: Incompatible color definition on input line 294.
+
+
+Package xcolor Warning: Incompatible color definition on input line 295.
+
+
+Package xcolor Warning: Incompatible color definition on input line 296.
+
+
+Package xcolor Warning: Incompatible color definition on input line 297.
+
+
+Package xcolor Warning: Incompatible color definition on input line 297.
+
+
+Package xcolor Warning: Incompatible color definition on input line 298.
+
+
+Package xcolor Warning: Incompatible color definition on input line 299.
+
+
+Package xcolor Warning: Incompatible color definition on input line 300.
+
+
+Package xcolor Warning: Incompatible color definition on input line 300.
+
+
+Package xcolor Warning: Incompatible color definition on input line 301.
+
+
+Package xcolor Warning: Incompatible color definition on input line 301.
+
+
+Package xcolor Warning: Incompatible color definition on input line 301.
+
+
+Package xcolor Warning: Incompatible color definition on input line 301.
+
+
+Package xcolor Warning: Incompatible color definition on input line 302.
+
+
+Package xcolor Warning: Incompatible color definition on input line 303.
+
+
+Package xcolor Warning: Incompatible color definition on input line 303.
+
+
+Package xcolor Warning: Incompatible color definition on input line 304.
+
+
+Package xcolor Warning: Incompatible color definition on input line 305.
+
+
+Package xcolor Warning: Incompatible color definition on input line 306.
+
+
+Package xcolor Warning: Incompatible color definition on input line 306.
+
+
+Package xcolor Warning: Incompatible color definition on input line 307.
+
+
+Package xcolor Warning: Incompatible color definition on input line 308.
+
+
+Package xcolor Warning: Incompatible color definition on input line 309.
+
+
+Package xcolor Warning: Incompatible color definition on input line 309.
+
+
+Package xcolor Warning: Incompatible color definition on input line 310.
+
+
+Package xcolor Warning: Incompatible color definition on input line 310.
+
+
+Package xcolor Warning: Incompatible color definition on input line 310.
+
+
+Package xcolor Warning: Incompatible color definition on input line 310.
+
+
+Package xcolor Warning: Incompatible color definition on input line 311.
+
+
+Package xcolor Warning: Incompatible color definition on input line 312.
+
+
+Package xcolor Warning: Incompatible color definition on input line 312.
+
+
+Package xcolor Warning: Incompatible color definition on input line 313.
+
+
+Package xcolor Warning: Incompatible color definition on input line 314.
+
+
+Package xcolor Warning: Incompatible color definition on input line 315.
+
+
+Package xcolor Warning: Incompatible color definition on input line 315.
+
+
+Package xcolor Warning: Incompatible color definition on input line 316.
+
+
+Package xcolor Warning: Incompatible color definition on input line 317.
+
+
+Package xcolor Warning: Incompatible color definition on input line 318.
+
+
+Package xcolor Warning: Incompatible color definition on input line 318.
+
+
+Package xcolor Warning: Incompatible color definition on input line 319.
+
+
+Package xcolor Warning: Incompatible color definition on input line 319.
+
+
+Package xcolor Warning: Incompatible color definition on input line 319.
+
+
+Package xcolor Warning: Incompatible color definition on input line 319.
+
+
+Package xcolor Warning: Incompatible color definition on input line 320.
+
+
+Package xcolor Warning: Incompatible color definition on input line 321.
+
+
+Package xcolor Warning: Incompatible color definition on input line 321.
+
+
+Package xcolor Warning: Incompatible color definition on input line 322.
+
+
+Package xcolor Warning: Incompatible color definition on input line 323.
+
+
+Package xcolor Warning: Incompatible color definition on input line 324.
+
+
+Package xcolor Warning: Incompatible color definition on input line 324.
+
+
+Package xcolor Warning: Incompatible color definition on input line 325.
+
+
+Package xcolor Warning: Incompatible color definition on input line 326.
+
+[101]
+
+Package xcolor Warning: Incompatible color definition on input line 327.
+
+
+Package xcolor Warning: Incompatible color definition on input line 327.
+
+
+Package xcolor Warning: Incompatible color definition on input line 328.
+
+
+Package xcolor Warning: Incompatible color definition on input line 328.
+
+
+Package xcolor Warning: Incompatible color definition on input line 328.
+
+
+Package xcolor Warning: Incompatible color definition on input line 328.
+
+
+Package xcolor Warning: Incompatible color definition on input line 329.
+
+
+Package xcolor Warning: Incompatible color definition on input line 330.
+
+
+Package xcolor Warning: Incompatible color definition on input line 330.
+
+
+Package xcolor Warning: Incompatible color definition on input line 331.
+
+
+Package xcolor Warning: Incompatible color definition on input line 332.
+
+
+Package xcolor Warning: Incompatible color definition on input line 333.
+
+
+Package xcolor Warning: Incompatible color definition on input line 333.
+
+
+Package xcolor Warning: Incompatible color definition on input line 334.
+
+
+Package xcolor Warning: Incompatible color definition on input line 335.
+
+
+Package xcolor Warning: Incompatible color definition on input line 336.
+
+
+Package xcolor Warning: Incompatible color definition on input line 336.
+
+
+Package xcolor Warning: Incompatible color definition on input line 337.
+
+
+Package xcolor Warning: Incompatible color definition on input line 337.
+
+
+Package xcolor Warning: Incompatible color definition on input line 337.
+
+
+Package xcolor Warning: Incompatible color definition on input line 337.
+
+
+Package xcolor Warning: Incompatible color definition on input line 338.
+
+
+Package xcolor Warning: Incompatible color definition on input line 339.
+
+
+Package xcolor Warning: Incompatible color definition on input line 340.
+
+
+Package xcolor Warning: Incompatible color definition on input line 340.
+
+
+Package xcolor Warning: Incompatible color definition on input line 341.
+
+
+Package xcolor Warning: Incompatible color definition on input line 342.
+
+
+Package xcolor Warning: Incompatible color definition on input line 343.
+
+
+Package xcolor Warning: Incompatible color definition on input line 343.
+
+
+Package xcolor Warning: Incompatible color definition on input line 344.
+
+
+Package xcolor Warning: Incompatible color definition on input line 344.
+
+
+Package xcolor Warning: Incompatible color definition on input line 344.
+
+
+Package xcolor Warning: Incompatible color definition on input line 344.
+
+
+Package xcolor Warning: Incompatible color definition on input line 345.
+
+
+Package xcolor Warning: Incompatible color definition on input line 346.
+
+
+Package xcolor Warning: Incompatible color definition on input line 347.
+
+
+Package xcolor Warning: Incompatible color definition on input line 347.
+
+
+Package xcolor Warning: Incompatible color definition on input line 348.
+
+
+Package xcolor Warning: Incompatible color definition on input line 349.
+
+
+Package xcolor Warning: Incompatible color definition on input line 350.
+
+
+Package xcolor Warning: Incompatible color definition on input line 351.
+
+
+Package xcolor Warning: Incompatible color definition on input line 358.
+
+
+Package xcolor Warning: Incompatible color definition on input line 359.
+
+
+Package xcolor Warning: Incompatible color definition on input line 359.
+
+
+Package xcolor Warning: Incompatible color definition on input line 359.
+
+
+Package xcolor Warning: Incompatible color definition on input line 360.
+
+
+Package xcolor Warning: Incompatible color definition on input line 360.
+
+
+Package xcolor Warning: Incompatible color definition on input line 360.
+
+
+Package xcolor Warning: Incompatible color definition on input line 360.
+
+
+Package xcolor Warning: Incompatible color definition on input line 361.
+
+
+Package xcolor Warning: Incompatible color definition on input line 361.
+
+
+Package xcolor Warning: Incompatible color definition on input line 362.
+
+
+Package xcolor Warning: Incompatible color definition on input line 362.
+
+
+Package xcolor Warning: Incompatible color definition on input line 363.
+
+
+Package xcolor Warning: Incompatible color definition on input line 364.
+
+
+Package xcolor Warning: Incompatible color definition on input line 364.
+
+
+Package xcolor Warning: Incompatible color definition on input line 365.
+
+
+Package xcolor Warning: Incompatible color definition on input line 365.
+
+
+Package xcolor Warning: Incompatible color definition on input line 365.
+
+
+Package xcolor Warning: Incompatible color definition on input line 365.
+
+
+Package xcolor Warning: Incompatible color definition on input line 366.
+
+
+Package xcolor Warning: Incompatible color definition on input line 367.
+
+
+Package xcolor Warning: Incompatible color definition on input line 368.
+
+
+Package xcolor Warning: Incompatible color definition on input line 368.
+
+[102]
+
+Package xcolor Warning: Incompatible color definition on input line 369.
+
+
+Package xcolor Warning: Incompatible color definition on input line 370.
+
+
+Package xcolor Warning: Incompatible color definition on input line 371.
+
+
+Package xcolor Warning: Incompatible color definition on input line 371.
+
+
+Package xcolor Warning: Incompatible color definition on input line 372.
+
+
+Package xcolor Warning: Incompatible color definition on input line 372.
+
+
+Package xcolor Warning: Incompatible color definition on input line 372.
+
+
+Package xcolor Warning: Incompatible color definition on input line 372.
+
+
+Package xcolor Warning: Incompatible color definition on input line 373.
+
+
+Package xcolor Warning: Incompatible color definition on input line 374.
+
+
+Package xcolor Warning: Incompatible color definition on input line 375.
+
+
+Package xcolor Warning: Incompatible color definition on input line 375.
+
+
+Package xcolor Warning: Incompatible color definition on input line 376.
+
+
+Package xcolor Warning: Incompatible color definition on input line 377.
+
+
+Package xcolor Warning: Incompatible color definition on input line 378.
+
+
+Package xcolor Warning: Incompatible color definition on input line 379.
+
+)
+("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
+ces/23_Apendice_03_Github.tex" [103]
+<./imagens/apendices/pagina-inicial-github.png, id=1808, 773.13844pt x 368.8781
+3pt>
 File: ./imagens/apendices/pagina-inicial-github.png Graphic file (type png)
  <use ./imagens/apendices/pagina-inicial-github.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-inicial-github.png used on 
 input line 10.
 (pdftex.def)             Requested size: 386.56828pt x 184.4386pt.
- [68
+ [104
 
  <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
 s/pagina-inicial-github.png>]
-<./imagens/apendices/pagina-home-github.png, id=865, 794.2172pt x 691.83469pt>
+<./imagens/apendices/pagina-home-github.png, id=1818, 794.2172pt x 691.83469pt>
 File: ./imagens/apendices/pagina-home-github.png Graphic file (type png)
-
 <use ./imagens/apendices/pagina-home-github.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-home-github.png used on inp
 ut line 21.
 (pdftex.def)             Requested size: 397.10762pt x 345.91649pt.
- [69 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/pagina-home-github.png>]
-<./imagens/apendices/pagina-criacao-repositorio-github.png, id=873, 778.40813pt
- x 436.63126pt>
+ [105 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
+ndices/pagina-home-github.png>]
+<./imagens/apendices/pagina-criacao-repositorio-github.png, id=1826, 778.40813p
+t x 436.63126pt>
 File: ./imagens/apendices/pagina-criacao-repositorio-github.png Graphic file (t
 ype png)
 
@@ -1783,19 +4977,20 @@ ype png)
 Package pdftex.def Info: ./imagens/apendices/pagina-criacao-repositorio-github.
 png used on input line 32.
 (pdftex.def)             Requested size: 389.20311pt x 218.3151pt.
- [70 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/pagina-criacao-repositorio-github.png>]
-<./imagens/apendices/pagina-inicial-repositorio-github.png, id=881, 767.11594pt
- x 506.6428pt>
+ [106 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
+ndices/pagina-criacao-repositorio-github.png>]
+<./imagens/apendices/pagina-inicial-repositorio-github.png, id=1834, 767.11594p
+t x 506.6428pt>
 File: ./imagens/apendices/pagina-inicial-repositorio-github.png Graphic file (t
 ype png)
- <use ./imagens/apendices/pagina-inicial-repositorio-github.png>
+
+<use ./imagens/apendices/pagina-inicial-repositorio-github.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-inicial-repositorio-github.
 png used on input line 45.
 (pdftex.def)             Requested size: 383.55702pt x 253.32079pt.
 
-<./imagens/apendices/pagina-adicionar-colaborador-ao-repositorio.png, id=883, 7
-66.36313pt x 396.7322pt>
+<./imagens/apendices/pagina-adicionar-colaborador-ao-repositorio.png, id=1836, 
+766.36313pt x 396.7322pt>
 File: ./imagens/apendices/pagina-adicionar-colaborador-ao-repositorio.png Graph
 ic file (type png)
 
@@ -1804,8 +4999,8 @@ Package pdftex.def Info: ./imagens/apendices/pagina-adicionar-colaborador-ao-re
 positorio.png used on input line 55.
 (pdftex.def)             Requested size: 383.18063pt x 198.3656pt.
 
-<./imagens/apendices/pagina-download-github.png, id=885, 904.88063pt x 670.7559
-4pt>
+<./imagens/apendices/pagina-download-github.png, id=1838, 904.88063pt x 670.755
+94pt>
 File: ./imagens/apendices/pagina-download-github.png Graphic file (type png)
  <use ./imagens/apendices/pagina-download-github.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-download-github.png used on
@@ -1815,22 +5010,22 @@ Package pdftex.def Info: ./imagens/apendices/pagina-download-github.png used on
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[71 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
-ices/pagina-inicial-repositorio-github.png> <C:/Users/Andressa Faria/Documents/
-GitHub/tcc/documento/latex/imagens/apendices/pagina-adicionar-colaborador-ao-re
-positorio.png>]
-<./imagens/apendices/instalacao-github-step1.png, id=895, 402.00188pt x 229.607
-82pt>
+[107 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+dices/pagina-inicial-repositorio-github.png> <C:/Users/Andressa Faria/Documents
+/GitHub/tcc/documento/latex/imagens/apendices/pagina-adicionar-colaborador-ao-r
+epositorio.png>]
+<./imagens/apendices/instalacao-github-step1.png, id=1848, 402.00188pt x 229.60
+782pt>
 File: ./imagens/apendices/instalacao-github-step1.png Graphic file (type png)
  <use ./imagens/apendices/instalacao-github-step1.png>
 Package pdftex.def Info: ./imagens/apendices/instalacao-github-step1.png used o
 n input line 75.
 (pdftex.def)             Requested size: 201.00044pt x 114.80362pt.
- [72 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/pagina-download-github.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc
-/documento/latex/imagens/apendices/instalacao-github-step1.png>]
-<./imagens/apendices/clonar-repositorio-github.png, id=906, 1005.7575pt x 664.4
-825pt>
+ [108 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
+ndices/pagina-download-github.png> <C:/Users/Andressa Faria/Documents/GitHub/tc
+c/documento/latex/imagens/apendices/instalacao-github-step1.png>]
+<./imagens/apendices/clonar-repositorio-github.png, id=1859, 1005.7575pt x 664.
+4825pt>
 File: ./imagens/apendices/clonar-repositorio-github.png Graphic file (type png)
 
  <use ./imagens/apendices/clonar-repositorio-github.png>
@@ -1839,21 +5034,21 @@ Package pdftex.def Info: ./imagens/apendices/clonar-repositorio-github.png used
 (pdftex.def)             Requested size: 402.29587pt x 265.78828pt.
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/22_Apendice_02_Eclipse_Tomcat.tex" [73 <C:/Users/Andressa Faria/Documents/G
-itHub/tcc/documento/latex/imagens/apendices/clonar-repositorio-github.png>]
-<./imagens/apendices/pagina-download-eclipse.png, id=913, 874.01532pt x 660.969
-38pt>
+ces/24_Apendice_04_Eclipse_Tomcat.tex" [109 <C:/Users/Andressa Faria/Documents/
+GitHub/tcc/documento/latex/imagens/apendices/clonar-repositorio-github.png>]
+<./imagens/apendices/pagina-download-eclipse.png, id=1866, 874.01532pt x 660.96
+938pt>
 File: ./imagens/apendices/pagina-download-eclipse.png Graphic file (type png)
  <use ./imagens/apendices/pagina-download-eclipse.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-download-eclipse.png used o
 n input line 12.
 (pdftex.def)             Requested size: 349.59993pt x 264.38306pt.
- [74
+ [110
 
  <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
 s/pagina-download-eclipse.png>]
-<./imagens/apendices/eclipse-selecionar-workspace.png, id=922, 521.69907pt x 48
-4.81125pt>
+<./imagens/apendices/eclipse-selecionar-workspace.png, id=1875, 521.69907pt x 4
+84.81125pt>
 File: ./imagens/apendices/eclipse-selecionar-workspace.png Graphic file (type p
 ng)
  <use ./imagens/apendices/eclipse-selecionar-workspace.png>
@@ -1867,10 +5062,10 @@ Overfull \hbox (59.34492pt too wide) in paragraph at lines 36--37
 n/12 https://tomcat.apache.org,
  []
 
-[75 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
-ices/eclipse-selecionar-workspace.png>]
-<./imagens/apendices/pagina-inicial-apache-tomcat.png, id=931, 1179.40625pt x 5
-97.23125pt>
+[111 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+dices/eclipse-selecionar-workspace.png>]
+<./imagens/apendices/pagina-inicial-apache-tomcat.png, id=1884, 1179.40625pt x 
+597.23125pt>
 File: ./imagens/apendices/pagina-inicial-apache-tomcat.png Graphic file (type p
 ng)
  <use ./imagens/apendices/pagina-inicial-apache-tomcat.png>
@@ -1878,18 +5073,18 @@ Package pdftex.def Info: ./imagens/apendices/pagina-inicial-apache-tomcat.png u
 sed on input line 41.
 (pdftex.def)             Requested size: 412.79837pt x 209.03406pt.
 
-<./imagens/apendices/pagina-download-tomcat-7.png, id=933, 982.67125pt x 607.26
-875pt>
+<./imagens/apendices/pagina-download-tomcat-7.png, id=1886, 982.67125pt x 607.2
+6875pt>
 File: ./imagens/apendices/pagina-download-tomcat-7.png Graphic file (type png)
  <use ./imagens/apendices/pagina-download-tomcat-7.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-download-tomcat-7.png used 
 on input line 51.
 (pdftex.def)             Requested size: 393.06154pt x 242.9032pt.
- [76 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/pagina-inicial-apache-tomcat.png> <C:/Users/Andressa Faria/Documents/GitH
-ub/tcc/documento/latex/imagens/apendices/pagina-download-tomcat-7.png>]
-<./imagens/apendices/perspectiva-server-sem-servidor.png, id=942, 765.86125pt x
- 197.73875pt>
+ [112 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
+ndices/pagina-inicial-apache-tomcat.png> <C:/Users/Andressa Faria/Documents/Git
+Hub/tcc/documento/latex/imagens/apendices/pagina-download-tomcat-7.png>]
+<./imagens/apendices/perspectiva-server-sem-servidor.png, id=1895, 765.86125pt 
+x 197.73875pt>
 File: ./imagens/apendices/perspectiva-server-sem-servidor.png Graphic file (typ
 e png)
  <use ./imagens/apendices/perspectiva-server-sem-servidor.png>
@@ -1897,8 +5092,8 @@ Package pdftex.def Info: ./imagens/apendices/perspectiva-server-sem-servidor.pn
 g used on input line 67.
 (pdftex.def)             Requested size: 382.92969pt x 98.86913pt.
 
-<./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png, id=944, 528.9762
-6pt x 538.01pt>
+<./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png, id=1897, 528.976
+26pt x 538.01pt>
 File: ./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png Graphic file
  (type png)
 
@@ -1906,12 +5101,12 @@ File: ./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png Graphic file
 Package pdftex.def Info: ./imagens/apendices/criar-configuracao-tomcat-no-eclip
 se.png used on input line 77.
 (pdftex.def)             Requested size: 211.58675pt x 215.20018pt.
- [77 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/perspectiva-server-sem-servidor.png> <C:/Users/Andressa Faria/Documents/G
-itHub/tcc/documento/latex/imagens/apendices/criar-configuracao-tomcat-no-eclips
-e.png>]
-<./imagens/apendices/definir-pasta-home-tomcat.png, id=955, 526.96875pt x 537.0
-0626pt>
+ [113 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
+ndices/perspectiva-server-sem-servidor.png> <C:/Users/Andressa Faria/Documents/
+GitHub/tcc/documento/latex/imagens/apendices/criar-configuracao-tomcat-no-eclip
+se.png>]
+<./imagens/apendices/definir-pasta-home-tomcat.png, id=1908, 526.96875pt x 537.
+00626pt>
 File: ./imagens/apendices/definir-pasta-home-tomcat.png Graphic file (type png)
 
  <use ./imagens/apendices/definir-pasta-home-tomcat.png>
@@ -1920,45 +5115,45 @@ Package pdftex.def Info: ./imagens/apendices/definir-pasta-home-tomcat.png used
 (pdftex.def)             Requested size: 210.78375pt x 214.79869pt.
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/23_Apendice_03_Neo4j.tex" [78 <C:/Users/Andressa Faria/Documents/GitHub/tcc
-/documento/latex/imagens/apendices/definir-pasta-home-tomcat.png>]
-<./imagens/apendices/download-neo4j.png, id=963, 846.91406pt x 686.565pt>
+ces/25_Apendice_05_Neo4j.tex" [114 <C:/Users/Andressa Faria/Documents/GitHub/tc
+c/documento/latex/imagens/apendices/definir-pasta-home-tomcat.png>]
+<./imagens/apendices/download-neo4j.png, id=1916, 846.91406pt x 686.565pt>
 File: ./imagens/apendices/download-neo4j.png Graphic file (type png)
 
 <use ./imagens/apendices/download-neo4j.png>
 Package pdftex.def Info: ./imagens/apendices/download-neo4j.png used on input l
 ine 10.
 (pdftex.def)             Requested size: 338.75963pt x 274.62112pt.
- [79
+ [115
 
  <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
 s/download-neo4j.png>]
-<./imagens/apendices/neo4j-install-step1.png, id=973, 388.45125pt x 322.95656pt
->
+<./imagens/apendices/neo4j-install-step1.png, id=1926, 388.45125pt x 322.95656p
+t>
 File: ./imagens/apendices/neo4j-install-step1.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step1.png>
 Package pdftex.def Info: ./imagens/apendices/neo4j-install-step1.png used on in
 put line 21.
 (pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
 
-<./imagens/apendices/neo4j-install-step2.png, id=975, 387.69844pt x 322.95656pt
->
+<./imagens/apendices/neo4j-install-step2.png, id=1928, 387.69844pt x 322.95656p
+t>
 File: ./imagens/apendices/neo4j-install-step2.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step2.png>
 Package pdftex.def Info: ./imagens/apendices/neo4j-install-step2.png used on in
 put line 31.
 (pdftex.def)             Requested size: 155.07661pt x 129.18033pt.
 
-<./imagens/apendices/neo4j-install-step3.png, id=977, 388.45125pt x 322.95656pt
->
+<./imagens/apendices/neo4j-install-step3.png, id=1930, 388.45125pt x 322.95656p
+t>
 File: ./imagens/apendices/neo4j-install-step3.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step3.png>
 Package pdftex.def Info: ./imagens/apendices/neo4j-install-step3.png used on in
 put line 41.
 (pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
 
-<./imagens/apendices/neo4j-install-step4.png, id=979, 388.45125pt x 322.95656pt
->
+<./imagens/apendices/neo4j-install-step4.png, id=1932, 388.45125pt x 322.95656p
+t>
 File: ./imagens/apendices/neo4j-install-step4.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step4.png>
 Package pdftex.def Info: ./imagens/apendices/neo4j-install-step4.png used on in
@@ -1968,20 +5163,20 @@ put line 51.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[80 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
-ices/neo4j-install-step1.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/doc
-umento/latex/imagens/apendices/neo4j-install-step2.png> <C:/Users/Andressa Fari
-a/Documents/GitHub/tcc/documento/latex/imagens/apendices/neo4j-install-step3.pn
-g>]
-<./imagens/apendices/neo4j-install-step5.png, id=991, 389.20406pt x 323.70938pt
->
+[116 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+dices/neo4j-install-step1.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/do
+cumento/latex/imagens/apendices/neo4j-install-step2.png> <C:/Users/Andressa Far
+ia/Documents/GitHub/tcc/documento/latex/imagens/apendices/neo4j-install-step3.p
+ng>]
+<./imagens/apendices/neo4j-install-step5.png, id=1944, 389.20406pt x 323.70938p
+t>
 File: ./imagens/apendices/neo4j-install-step5.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step5.png>
 Package pdftex.def Info: ./imagens/apendices/neo4j-install-step5.png used on in
 put line 62.
 (pdftex.def)             Requested size: 155.67886pt x 129.48145pt.
 
-<./imagens/apendices/neo4j.jpg, id=993, 409.53pt x 268.00125pt>
+<./imagens/apendices/neo4j.jpg, id=1946, 409.53pt x 268.00125pt>
 File: ./imagens/apendices/neo4j.jpg Graphic file (type jpg)
 
 <use ./imagens/apendices/neo4j.jpg>
@@ -1991,15 +5186,15 @@ Package pdftex.def Info: ./imagens/apendices/neo4j.jpg used on input line 73.
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/30_Ane
 xos.tex"
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis\31_Ane
-xo_01.tex" [81 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/im
-agens/apendices/neo4j-install-step4.png> <C:/Users/Andressa Faria/Documents/Git
-Hub/tcc/documento/latex/imagens/apendices/neo4j-install-step5.png> <C:/Users/An
-dressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendices/neo4j.jpg>]
-))
+xo_01.tex" [117 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/i
+magens/apendices/neo4j-install-step4.png> <C:/Users/Andressa Faria/Documents/Gi
+tHub/tcc/documento/latex/imagens/apendices/neo4j-install-step5.png> <C:/Users/A
+ndressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendices/neo4j.jpg>
+]))
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[82
+[118
 
 ]
 
@@ -2012,40 +5207,44 @@ See the caption package documentation for explanation.
 
 \tf@lof=\write4
 \tf@loq=\write5
-\tf@toc=\write6
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 57.
+\tf@lol=\write6
+\tf@toc=\write7
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.aux"
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fixos/01_Capa.au
 x"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 57.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 57.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 61.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
- 15577 strings out of 493921
- 255074 string characters out of 3144849
- 370313 words of memory out of 3000000
- 18201 multiletter control sequences out of 15000+200000
- 68727 words of font info for 68 fonts, out of 3000000 for 9000
+ 17222 strings out of 493921
+ 281729 string characters out of 3144849
+ 488049 words of memory out of 3000000
+ 19033 multiletter control sequences out of 15000+200000
+ 69364 words of font info for 70 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 46i,12n,43p,1075b,608s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/
-MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmtl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb
-8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (83 pages, 4613753 bytes).
+ 46i,12n,45p,1564b,2092s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files (x86)/
+MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/
+fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy
+10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtl10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+urw/times/utmri8a.pfb>
+Output written on Principal.pdf (119 pages, 5375958 bytes).
 PDF statistics:
- 1214 PDF objects out of 1440 (max. 8388607)
- 245 named destinations out of 1000 (max. 500000)
- 627 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2332 PDF objects out of 2487 (max. 8388607)
+ 1017 named destinations out of 1200 (max. 500000)
+ 645 words of extra memory for PDF output out of 10000 (max. 10000000)
 
