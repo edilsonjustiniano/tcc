@@ -357,7 +357,14 @@ as partner ORDER BY partner.length, partner.mutualFriends DESC
 \par Essa consulta é muito parecida com a apresentada no Código~\ref{list:consulta_possiveis_parceiros}, porém há uma diferença, neste caso é levado em consideração o nome informado pelo usuário como critério de busca.
  
 
-\par O caso de uso gerenciar serviços foi implementado em sequência, abrangendo as principais funcionalidades de gerenciamento: cadastrar e adicionar um novo serviço ao usuário, cujo tipo de conta é provedor de serviços, listar os serviços atribuídos a ele, e remover serviços quando necessário. Visando melhorar a usabilidade, foi implementado um mecanismo de busca, que permitiu filtrar os resultados por meio de um campo que possui a função  auto completar, evitando assim, possíveis erros e diminuindo o tempo gasto pelo usuário para adicionar o serviço. A função realiza a busca em uma lista de serviços anteriormente cadastrados, no entanto, caso não haja o serviço solicitado, o usuário tem a liberdade de cadastrá-lo e atribuí-lo a si mesmo.
+\par O caso de uso gerenciar serviços foi implementado em sequência, abrangendo as principais funcionalidades de gerenciamento: cadastrar e adicionar um novo serviço ao usuário, cujo tipo de conta é provedor de serviços, listar os serviços atribuídos a ele, e remover serviços quando necessário. Visando melhorar a usabilidade, foi implementado um mecanismo de busca, que permitiu filtrar os resultados por meio de um campo que possui a função  auto completar, evitando assim, possíveis erros e diminuindo o tempo gasto pelo usuário para adicionar o serviço. A função realiza a busca em uma lista de serviços anteriormente cadastrados, no entanto, caso não haja o serviço solicitado, o usuário tem a liberdade de cadastrá-lo e atribuí-lo a si mesmo. A Fígura~\ref{fig:adicionar_servicos} apresenta essa funcionalidade.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.3]{./imagens/adcionar-servico.png}}
+	\caption[Página para adicionar serviços.]
+	{Página para adicionar serviços. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:adicionar_servicos}
+\end{figure}
 
 
 \par A partir deste ponto, foi possível iniciar o desenvolvimento do caso de uso "localizar mão de obra", uma vez que, este caso de uso dependia diretamente das implementações das funcionalidades adicionar parceiros para os usuários contratantes e adicionar serviços aos provedores de serviço. Para facilitar a localização e deixar o \textit{software} mais usual, esta busca se baseia inicialmente no serviço buscado pelo usuário, sendo posteriormente modificada para também levar em consideração a funcionalidade avaliar serviço que foi implementada paralelamente. A avaliação de serviço permite ao contratante dar uma nota ao serviço que foi prestado a ele. Com estas informações foi possível desenvolver uma busca que levaria em consideração, além destas informações, a rede de parceiros do usuário contratante, a fim de lhe apresentar as melhores opções possíveis. O Código~\ref{list:consulta_busca} apresenta a \textit{query} utilizada para realizar esta busca.
@@ -506,15 +513,24 @@ media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
 
 \par Para finalizar o desenvolvimento foram desenvolvidos gráficos que apresentem ao usuário informações a respeito da qualidade do serviço prestado pelo provedor de serviços, comparando-os com os demais prestadores.
 
-\par O primeiro gráfico foi disponibilizado na página de perfil do prestador de serviços, estando visível ao contratante assim que ele efetua a busca por uma determinada mão de obra. Este gráfico apresenta a média avaliativa dos trabalhos prestados pelo provedor selecionado, em uma determinada função. O sistema toma como base as vinte últimas avaliações recebidas, independente do período em que elas foram feitas. Desta forma, um provedor de serviços que trabalha a muito tempo em um mesmo local não será prejudicado, pois terá registrada as avaliações que recebeu neste tempo, mesmo que elas não sejam atuais. O gráfico que representa esta funcionalidade é apresentado na Figura XXXXX.
+\par O primeiro gráfico foi disponibilizado na página de perfil do prestador de serviços, estando visível ao contratante assim que ele efetua a busca por uma determinada mão de obra. Este gráfico apresenta a média avaliativa dos trabalhos prestados pelo provedor selecionado, em uma determinada função. O sistema toma como base as vinte últimas avaliações recebidas, independente do período em que elas foram feitas. Desta forma, um provedor de serviços que trabalha a muito tempo em um mesmo local não será prejudicado, pois terá registrada as avaliações que recebeu neste tempo, mesmo que elas não sejam atuais. O gráfico que representa esta funcionalidade é apresentado na Figura \ref{fig:grafico_pagina_perfil}.
 
-----Print aqui----
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.65]{./imagens/grafico-pagina-perfil.png}}
+	\caption[\textit Gráfico localizado na página de perfil.]
+	{\textit Página resultante da busca por doméstica \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:grafico_pagina_perfil}
+\end{figure}-
 
 
-\par O segundo gráfico foi disponibilizado visando possibilitar ao prestador de serviços ter um \textit{feedback} dos trabalhos realizados por ele. Este gráfico é apresentado em sua página inicial e trás informações referente a sua média avaliativa. A média é gerada com base nas últimas vinte avaliações recebidas, seguindo o mesmo padrão do gráfico disponibilizado na página de perfil. Para que o provedor tenha uma base da qualidade do serviço prestado, o gráfico apresenta um comparativo da média recebida por ele e a média geral de prestadores de serviço que desempenham o mesmo trabalho em sua cidade. O gráfico que representa esta funcionalidade é apresentado na Figura XXXXX.
+\par O segundo gráfico foi disponibilizado visando possibilitar ao prestador de serviços ter um \textit{feedback} dos trabalhos realizados por ele. Este gráfico é apresentado em sua página inicial e trás informações referente a sua média avaliativa. A média é gerada com base nas últimas vinte avaliações recebidas, seguindo o mesmo padrão do gráfico disponibilizado na página de perfil. Para que o provedor tenha uma base da qualidade do serviço prestado, o gráfico apresenta um comparativo da média recebida por ele e a média geral de prestadores de serviço que desempenham o mesmo trabalho em sua cidade. O gráfico que representa esta funcionalidade é apresentado na Figura \ref{fig:grafico_pagina_inicial}.
 
-
----Print aqui---
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.65]{./imagens/grafico-pagina-inicial.png}}
+	\caption[\textit Página resultante da busca por doméstica.]
+	{\textit Gráfico inserido na página inicial \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:grafico_pagina_inicial}
+\end{figure}
 
 
 
