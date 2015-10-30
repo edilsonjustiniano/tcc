@@ -4,10 +4,8 @@
 
 \par Para escrever esta consulta foi utilizada a tecnologia \textit{Cypher}, que é uma linguagem específica para o banco Neo4j \cite{neo4j_team_manual}. O Código~\ref{list:consulta_busca} apresenta a \textit{query} utilizada para realizar esta busca.
 
-
 \par A Figura~\ref{fig:busca_domestica_edilson} demonstra a página apresentada ao usuário após realizar esta busca por um determinado serviço. No exemplo, é apresentado o resultado ao se realizar a busca por um profissional que desempenhe o serviço de doméstica.
 
-\newpage
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.3]{./imagens/busca-domestica-edilson.png}}
 	\caption[\textit Página resultante da busca por doméstica.]
@@ -15,4 +13,6 @@
 	\label{fig:busca_domestica_edilson}
 \end{figure}
 
-\par A ideia desta funcionalidade foi apresentar um possível prestador de serviços que já tenha sido avaliado por alguém em comum ao usuário solicitante, desta forma, há uma confiança maior em relação ao profissional que está sendo contratado.
+\par A ideia desta funcionalidade foi apresentar um possível prestador de serviços que já tenha sido avaliado por alguém em comum ao usuário solicitante, desta forma, há uma confiança maior em relação ao profissional que está sendo contratado. Portanto, essa busca irá apresentar diferentes prestadores de serviços, incluindo as médias de cada um deles, a cada usuário solicitante.
+
+\par O uso de um banco de dados orientedo a grafos simplificou a forma de obter este resultado, uma vez que ao utilizar um banco relacional, o mesmo resultado poderia ser obtido, porém com um custo maior de processamento e \textit{performance}. A API \textit{Cypher} facilitou a escrita de todas as consultas inclusive essa, por meio dela foi possível desenvolver consultas mais complexas como esta de forma mais rápida, agilizando o desenvolvimento da principal parte do trabalho.
