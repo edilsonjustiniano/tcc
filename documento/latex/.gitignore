@@ -1,9 +1,2 @@
-*.aux
-*.bbl
-*.lof
-*.txt
-*.lol
-*.loq
-*.lot
-*.synctex.tar.gz
-*.toc
+Principal.*
+tmp
