@@ -379,6 +379,48 @@ Nesse Apêndice será apresentado o contrato de serviços providos pelo \textit{
 </application>
 \end{lstlisting}
 
-FALTA ADICIONAR O CONTRATO DOS GrÁFICOS.
+\section*{Gráficos}
+
+\begin{lstlisting} [style=custom_XML,title={Contrato de serviço referente aos gráficos. \textbf{Fonte:} Elaborado pelos autores.}, label=list:contrato_graficos] 	
+<application xmlns="http://wadl.dev.java.net/2009/02">
+	<resource path="WebService/report/lastEvaluateInMyCity" id="report">
+		<doc xml:lang="en" title="report"/>
+		<param name="token" type="xs:string" required="true"
+		 style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+		<param name="service" type="xs:string" required="true"
+		 style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+		<param name="limit" type="xs:string" required="true"
+		 style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+		<method name="GET" id="report-lastEvaluateOfServiceProvider">
+			<doc xml:lang="en" title="report-lastEvaluateOfServiceProvider"/>
+			<request/>
+			<response status="200">
+				<representation mediaType="application/json"/>
+			</response>
+		</method>
+		<method name="GET" id="report-lastEvaluateOfServiceInNetwork">
+			<doc xml:lang="en" title="report-lastEvaluateOfServiceInNetwork"/>
+			<request/>
+			<response status="200">
+				<representation mediaType="application/json"/>
+			</response>
+		</method>
+		<method name="GET" id="report-lastEvaluate">
+			<doc xml:lang="en" title="report-lastEvaluate"/>
+			<request/>
+			<response status="200">
+				<representation mediaType="application/json"/>
+			</response>
+		</method>
+		<method name="GET" id="report-lastEvaluateInMyCity">
+			<doc xml:lang="en" title="report-lastEvaluateInMyCity"/>
+			<request/>
+			<response status="200">
+				<representation mediaType="application/json"/>
+			</response>
+		</method>
+	</resource>
+</application>
+\end{lstlisting}
 
 Com este contrato definido foi possível dar continuidade no processo de desenvolvimento da aplicação.
