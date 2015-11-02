@@ -367,7 +367,7 @@ as partner ORDER BY partner.length, partner.mutualFriends DESC
 \end{figure}
 
 
-\par A partir deste ponto, foi possível iniciar o desenvolvimento do caso de uso "localizar mão de obra", uma vez que, este caso de uso dependia diretamente das implementações das funcionalidades adicionar parceiros para os usuários contratantes e adicionar serviços aos provedores de serviço. Para facilitar a localização e deixar o \textit{software} mais usual, esta busca se baseia inicialmente no serviço buscado pelo usuário, sendo posteriormente modificada para também levar em consideração a funcionalidade avaliar serviço que foi implementada paralelamente. A avaliação de serviço permite ao contratante dar uma nota ao serviço que foi prestado a ele. Com estas informações foi possível desenvolver uma busca que levaria em consideração, além destas informações, a rede de parceiros do usuário contratante, a fim de lhe apresentar as melhores opções possíveis. O Código~\ref{list:consulta_busca} apresenta a \textit{query} utilizada para realizar esta busca.
+\par A partir deste ponto, foi possível iniciar o desenvolvimento do caso de uso "localizar mão de obra", uma vez que, este caso de uso dependia diretamente das implementações das funcionalidades adicionar parceiros para os usuários contratantes e adicionar serviços aos provedores de serviço. Para facilitar a localização e deixar o \textit{software} mais usual, esta busca se baseia inicialmente no serviço buscado pelo usuário, sendo posteriormente modificada para também levar em consideração a funcionalidade, avaliar serviço que foi implementada paralelamente. A avaliação de serviço permite ao contratante dar uma nota ao serviço que foi prestado a ele. Com estas informações foi possível desenvolver uma busca que levaria em consideração, além destas informações, a rede de parceiros do usuário contratante, a fim de lhe apresentar as melhores opções possíveis. O Código~\ref{list:consulta_busca} apresenta a \textit{query} utilizada para realizar esta busca.
 
 
 \begin{lstlisting} [style=custom_SQL,caption={[\textit{Query} para localização de mão de obra]{\textit{Query} para localização de mão de obra. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_busca] 	
@@ -466,7 +466,6 @@ total: count(executed), media: avg(executed.note), order: 2}) as sp
 ORDER BY sp.order, sp.media DESC
 \end{lstlisting}
 
-
 Já a terceira sub consulta irá obter os dados de pessoas que proveram o mesmo serviço das sub consultas anteriores para usuários que vivem na mesma cidade que o usuário autenticado no sistema, mas que não trabalham na mesma empresa que ele e não possuem o relacionamento de parceria com ele. Portanto, nessa terceira parte da consulta serão retornados as avaliações realizadas por pessoas que não são parceiras do usuário autenticado no sistema, que não trabalham na mesma empresa dele, mas que vivem na mesma cidade. Essa sub consulta é demonstrada no trecho de Código~\ref{list:consulta_busca_parte3}.
 
 \begin{lstlisting} [style=custom_SQL,caption={[Terceira \textit{sub query} para localização de mão de obra.]{Terceira \textit{sub query} para localização de mão de obra. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_busca_parte3] 	
@@ -504,12 +503,26 @@ serviceProviderEmail: sp.email, service: service.name, total: 0,
 media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
 \end{lstlisting}
 
+\par Para auxiliar na tomada de decisão do usuário contratante, foi implementada uma funcionalidade que realiza o cálculo da média de avaliações de um serviço prestado por um profissional temporário, tendo como base as avaliações já realizadas pela rede de parceiros do usuário autenticado, da empresa onde ele trabalha e da cidade onde vive, oferecendo assim uma forma simples de obter acesso a qualidade do serviço prestado como demonstra a Fígura~\ref{fig:taxa_avaliacao}.
 
-\par Para auxiliar na tomada de decisão do usuário contratante, foi implementada uma funcionalidade que realiza o cálculo da média de avaliações de um serviço prestado por um profissional temporário, tendo como base as avaliações já realizadas pela rede de parceiros do usuário autenticado, da empresa onde ele trabalha e da cidade onde vive, oferecendo assim uma forma simples de obter acesso a qualidade do serviço prestado.
+\newpage
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.45]{./imagens/taxa-avaliacao.png}}
+	\caption[Tela contendo a taxa de avaliação do serviço prestado.]
+	{Tela contendo a taxa de avaliação do serviço prestado. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:taxa_avaliacao}
+\end{figure}
 
 \par Após realizada todas as implementações já descritas, houve a preocupação de desenvolver uma interface, que além de amigável fosse prática ao usuário, desta forma, foi disponibilizada algumas informações relevantes, que auxiliam o usuário a compreender o que está ocorrendo em sua rede de parceria. Como exemplo é possível citar a lista de parceiros em comum entre o usuário autenticado no sistema e um determinado contratante por meio da página de perfil dele.
 
-\par A fim de agregar mais funcionalidades para o usuário provedor de serviços, foi criado na página inicial do \textit{software} uma funcionalidade que visa apresentar algumas dicas interessantes que contribui com a sua imagem perante ao \textit{software}, levando-o assim a obter uma quantidade maior de oportunidades de trabalho.
+\par A fim de agregar mais funcionalidades para o usuário provedor de serviços, foi criado na página inicial do \textit{software} uma funcionalidade que visa apresentar algumas dicas interessantes que contribui com a sua imagem perante ao \textit{software}, levando-o assim a obter uma quantidade maior de oportunidades de trabalho como mostra a Fígura~\ref{fig:dicas_randomicas}.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.4]{./imagens/dicas-randomicas.png}}
+	\caption[Tela de dicas para provedores de serviços.]
+	{Tela de dicas para provedores de serviços. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:dicas_randomicas}
+\end{figure}
 
 \par Para finalizar o desenvolvimento foram desenvolvidos gráficos que apresentem ao usuário informações a respeito da qualidade do serviço prestado pelo provedor de serviços, comparando-os com os demais prestadores.
 
@@ -517,18 +530,17 @@ media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.65]{./imagens/grafico-pagina-perfil.png}}
-	\caption[\textit Gráfico localizado na página de perfil.]
-	{\textit Página resultante da busca por doméstica \textbf{Fonte:} Elaborado pelos autores.}
+	\caption[Gráfico de avaliação do serviço na página de perfil do provedor.]
+	{Gráfico de avaliação do serviço na página de perfil do provedor. \textbf{Fonte:} Elaborado pelos autores.}
 	\label{fig:grafico_pagina_perfil}
-\end{figure}-
-
+\end{figure}
 
 \par O segundo gráfico foi disponibilizado visando possibilitar ao prestador de serviços ter um \textit{feedback} dos trabalhos realizados por ele. Este gráfico é apresentado em sua página inicial e trás informações referente a sua média avaliativa. A média é gerada com base nas últimas vinte avaliações recebidas, seguindo o mesmo padrão do gráfico disponibilizado na página de perfil. Para que o provedor tenha uma base da qualidade do serviço prestado, o gráfico apresenta um comparativo da média recebida por ele e a média geral de prestadores de serviço que desempenham o mesmo trabalho em sua cidade. O gráfico que representa esta funcionalidade é apresentado na Figura \ref{fig:grafico_pagina_inicial}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.65]{./imagens/grafico-pagina-inicial.png}}
-	\caption[\textit Página resultante da busca por doméstica.]
-	{\textit Gráfico inserido na página inicial \textbf{Fonte:} Elaborado pelos autores.}
+	\caption[Gráfico de avaliação do serviço na página inicial do provedor.]
+	{Gráfico de avaliação do serviço na página inicial do provedor. \textbf{Fonte:} Elaborado pelos autores.}
 	\label{fig:grafico_pagina_inicial}
 \end{figure}
 
