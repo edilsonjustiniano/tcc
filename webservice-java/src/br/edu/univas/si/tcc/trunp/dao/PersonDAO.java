@@ -215,4 +215,52 @@ public class PersonDAO {
 		return objectCreate;
 
 	}
+
+	public JSONArray edit(Person person) throws JSONException {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+
+		String query = "{\"query\":\" MATCH (cityWorks:City {name: '"
+				+ person.getWorksIn().getLocatedIn().getName() + "'}), "
+				+ "(cityLives:City {name: '" + person.getLivesIn().getName()
+				+ "'}), (oldCityLives:City), (ufWorks:UF {name: '"
+				+ person.getWorksIn().getLocatedIn().getUf().getName()
+				+ "'}), " + "(ufLives:UF {name: '"
+				+ person.getWorksIn().getLocatedIn().getUf().getName()
+				+ "'}), (oldUfLives:UF), (newCompany:Company {name: '"
+				+ person.getWorksIn().getName() + "'}), (oldCompany:Company), "
+				+ "(person:Person {email: '" + person.getEmail() + "'}), "
+				+ "(person)-[oldWorksIn:WORKS_IN]->(oldCompany), "
+				+ "(person)-[oldLivesInCity:LIVES_IN]->(oldCityLives), "
+				+ "(newCompany)-[:LOCATED_IN]->(cityWorks), "
+				+ "(cityWorks)-[:BELONGS_TO]->(ufWorks), "
+				+ "(cityLives)-[:BELONGS_TO]->(ufLives) "
+				+ "WITH DISTINCT(person), cityLives, newCompany, oldWorksIn, oldLivesInCity "
+				+ "DELETE oldWorksIn, oldLivesInCity "
+				+ "CREATE (person)-[:LIVES_IN]->(cityLives), "
+				+ "(person)-[:WORKS_IN]->(newCompany) "
+				+ "SET person += {district: '" + person.getDistrict() + "', "
+				+ "address: '" + person.getAddress() + "', name: '" + person.getName() + "', "
+				+ "email: '" + person.getEmail() + "', typeOfAccount: '" + person.getTypeOfAccount() + "', " 
+				+ "typeOfPerson: '" + person.getTypeOfPerson() + "'} "
+				+ "RETURN DISTINCT({name: person.name, email: person.email}) as person; \"}";
+		System.out.println(query);
+		ClientResponse responseCreate = resource
+				.accept(MediaType.APPLICATION_JSON)
+				.type(MediaType.APPLICATION_JSON).entity(query)
+				.post(ClientResponse.class);
+		String resp = responseCreate.getEntity(String.class);
+
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
+	}
 }

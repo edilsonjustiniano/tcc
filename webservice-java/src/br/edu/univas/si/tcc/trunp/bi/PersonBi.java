@@ -30,6 +30,10 @@ public class PersonBi {
 	public JSONArray getPersonData(String partner) throws JSONException {
 		return dao.getPersonData(partner);
 	}
+
+	public JSONArray edit(Person person) throws JSONException {
+		return dao.edit(person);
+	}
 	
 	
 

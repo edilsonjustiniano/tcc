@@ -30,4 +30,8 @@ public class PersonController {
 	public JSONArray getPersonData(String partner) throws JSONException {
 		return personBi.getPersonData(partner);
 	}
+	
+	public JSONArray edit(Person person) throws JSONException {
+		return personBi.edit(person);
+	}
 }
