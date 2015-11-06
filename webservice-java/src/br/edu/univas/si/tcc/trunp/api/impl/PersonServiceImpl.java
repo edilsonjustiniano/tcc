@@ -203,13 +203,13 @@ public class PersonServiceImpl implements PersonService {
 		String userData = jsonData.getString("user");
 		JSONObject jsonUserData = new JSONObject(userData);
 		
-		Person p = new Person();
-		p.setName(jsonUserData.getString("name"));
-		p.setEmail(jsonUserData.getString("email"));
-		p.setTypeOfAccount(jsonUserData.getString("typeOfAccount"));
-		p.setAddress(jsonUserData.getString("address"));
-		p.setDistrict(jsonUserData.getString("district"));
-		p.setTypeOfPerson(jsonUserData.getString("typeOfPerson"));
+		Person person = new Person();
+		person.setName(jsonUserData.getString("name"));
+		person.setEmail(jsonUserData.getString("email"));
+		person.setTypeOfAccount(jsonUserData.getString("typeOfAccount"));
+		person.setAddress(jsonUserData.getString("address"));
+		person.setDistrict(jsonUserData.getString("district"));
+		person.setTypeOfPerson(jsonUserData.getString("typeOfPerson"));
 		
 		City cityWork = new City();
 		City cityLives = new City();
@@ -260,16 +260,13 @@ public class PersonServiceImpl implements PersonService {
 		}
 			
 		//Now we need to edit the user data on database
-		Person person = new Person();
-		person.setEmail(tokenDecoded.getEmail()); //set original e-mail from user
 		person.setWorksIn(company);
 		person.setLivesIn(cityLives);
-		person.setAddress(jsonUserData.getString("address"));
-		person.setDistrict(jsonUserData.getString("district"));
+		person.setPassword(tokenDecoded.getPassword());
 		
 		JSONArray result = personController.edit(person);
 		json = JSONUtil.generateJSONSuccessByData(true, result);
-		byte[] tokenByte = Base64Util.encodeToken(tokenDecoded.getEmail(), tokenDecoded.getPassword());
+		byte[] tokenByte = Base64Util.encodeToken(person.getEmail(), person.getPassword());
 		json.put("token", new String(tokenByte));
 		
 		return json;

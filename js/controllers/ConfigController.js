@@ -110,18 +110,20 @@ app.controller('ConfigController', ['$scope', 'SessionService', 'CityService', '
 	};
 
 	$scope.save = function(){
+        $scope.user.cityLives = $scope.user.cityLives.trim();
+        $scope.user.ufLives = $scope.user.ufLives.trim();
+        $scope.user.cityWork = $scope.user.cityWork.trim();
+        $scope.user.ufWork = $scope.user.ufWork.trim();
 		AccountService.editAccount(function (callback){
 			var data = callback.data;
 			if(data.success){
 				$scope.msg.type = "SUCCESS";
+                $scope.msg.msg = "Sucesso ao realizar alterações";
 				window.localStorage['token'] = data.token;
 			}else{
 				$scope.msg.type = "ERROR";
-				
+                $scope.msg.msg = data.mesage;
 			}
-
-			$scope.msg.msg = data.mesage;
-
 		},$scope.error, $scope.user);
 	};
 

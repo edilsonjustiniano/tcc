@@ -55,10 +55,10 @@
                 </label>
                 -->
                 <label>CPF/CNPJ</label>
-                <input type="text" class="input-xlarge" ng-show="user.typeOfPerson == 'JURIDIC'" ng-model="cnpj" placeholder="CNPJ" />
+                <input type="text" class="input-xlarge" ng-show="user.typeOfPerson == 'JURIDIC'" ng-model="user.cnpj" placeholder="CNPJ" />
 
 
-                <input type="text" class="input-xlarge" ng-show="user.typeOfPerson == 'PHISIC'" ng-model="cpf" placeholder="CPF" />
+                <input type="text" class="input-xlarge" ng-show="user.typeOfPerson == 'PHISIC'" ng-model="user.cpf" placeholder="CPF" />
 
                 <label>UF da empresa</label>
                 <select ng-model="user.ufWork" ng-change="getAllCitiesByStateForCompany()" >
