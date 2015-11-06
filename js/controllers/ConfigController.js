@@ -93,6 +93,7 @@ app.controller('ConfigController', ['$scope', 'SessionService', 'CityService', '
 
 	$scope.getAllCitiesByStateForCompany = function() {
 		CityService.getAllCitiesByState($scope.user.ufWork.trim(), function(callback) {
+            $scope.citiesCompany = [];
 			var array = callback.data.results;
 			array.forEach(function(iter){
 				$scope.citiesCompany.push({name: iter.name});
@@ -102,6 +103,7 @@ app.controller('ConfigController', ['$scope', 'SessionService', 'CityService', '
 	
 	$scope.getAllCitiesByStateForLives = function() {
 		CityService.getAllCitiesByState($scope.user.ufLives.trim(), function(callback) {
+            $scope.citiesLives = [];
 			var array = callback.data.results;
 			array.forEach(function(iter){
 				$scope.citiesLives.push({name: iter.name});

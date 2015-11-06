@@ -226,7 +226,7 @@ public class PersonDAO {
 				+ "'}), (oldCityLives:City), (ufWorks:UF {name: '"
 				+ person.getWorksIn().getLocatedIn().getUf().getName()
 				+ "'}), " + "(ufLives:UF {name: '"
-				+ person.getWorksIn().getLocatedIn().getUf().getName()
+				+ person.getLivesIn().getUf().getName()
 				+ "'}), (oldUfLives:UF), (newCompany:Company {name: '"
 				+ person.getWorksIn().getName() + "'}), (oldCompany:Company), "
 				+ "(person:Person {email: '" + person.getEmail() + "'}), "

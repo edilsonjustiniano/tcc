@@ -75,10 +75,9 @@
                     </option>
                     <option>{{user.cityWork}}</option>
                 </select>
-
-                <input type="text" class="input-xlarge" ng-model="user.company" placeholder="Nome da empresa" required="required" />
                 
-                <hr />
+                <label>Empresa</label>
+                <input type="text" class="input-xlarge" ng-model="user.company" placeholder="Nome da empresa" required="required" />
 
                 <label>UF onde vive</label>
                 <select ng-model="user.ufLives" ng-change="getAllCitiesByStateForLives()">
