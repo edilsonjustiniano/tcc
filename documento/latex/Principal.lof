@@ -1,32 +1,32 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {1}{\ignorespaces Uma vis\IeC {\~a}o geral do ICONIX e seus componentes.}}{18}{figure.caption.10}
-\contentsline {figure}{\numberline {2}{\ignorespaces O problema das 7 pontes de \textit {K\IeC {\"o}nigsberg} }}{20}{figure.caption.11}
-\contentsline {figure}{\numberline {3}{\ignorespaces Ilustra\IeC {\c c}\IeC {\~a}o de uma representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de um simples grafo}}{21}{figure.caption.12}
-\contentsline {figure}{\numberline {4}{\ignorespaces Ilustra\IeC {\c c}\IeC {\~a}o de uma representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de um \textit {multigraph}}}{22}{figure.caption.13}
-\contentsline {figure}{\numberline {5}{\ignorespaces Imagem de uma representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de um grafo direcionado}}{22}{figure.caption.14}
-\contentsline {figure}{\numberline {6}{\ignorespaces Imagem de um grafo isom\IeC {\'o}rfico}}{23}{figure.caption.15}
-\contentsline {figure}{\numberline {7}{\ignorespaces Grafo representado por meio de uma matriz adjac\IeC {\^e}ncia}}{23}{figure.caption.16}
-\contentsline {figure}{\numberline {8}{\ignorespaces Exemplo simples de um grafo armazenado no Neo4j}}{28}{figure.caption.17}
-\contentsline {figure}{\numberline {9}{\ignorespaces Uma vis\IeC {\~a}o geral do processo de desenvolvimento de software.}}{31}{figure.caption.18}
-\contentsline {figure}{\numberline {10}{\ignorespaces Modelo de dom\IeC {\'\i }nio inicial}}{44}{figure.caption.19}
-\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de caso de uso}}{45}{figure.caption.20}
+\contentsline {figure}{\numberline {1}{\ignorespaces Uma vis\IeC {\~a}o geral do ICONIX e seus componentes.}}{19}{figure.caption.10}
+\contentsline {figure}{\numberline {2}{\ignorespaces O problema das 7 pontes de \textit {K\IeC {\"o}nigsberg} }}{21}{figure.caption.11}
+\contentsline {figure}{\numberline {3}{\ignorespaces Ilustra\IeC {\c c}\IeC {\~a}o de uma representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de um simples grafo}}{22}{figure.caption.12}
+\contentsline {figure}{\numberline {4}{\ignorespaces Ilustra\IeC {\c c}\IeC {\~a}o de uma representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de um \textit {multigraph}}}{23}{figure.caption.13}
+\contentsline {figure}{\numberline {5}{\ignorespaces Imagem de uma representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de um grafo direcionado}}{23}{figure.caption.14}
+\contentsline {figure}{\numberline {6}{\ignorespaces Imagem de um grafo isom\IeC {\'o}rfico}}{24}{figure.caption.15}
+\contentsline {figure}{\numberline {7}{\ignorespaces Grafo representado por meio de uma matriz adjac\IeC {\^e}ncia}}{24}{figure.caption.16}
+\contentsline {figure}{\numberline {8}{\ignorespaces Exemplo simples de um grafo armazenado no Neo4j}}{29}{figure.caption.17}
+\contentsline {figure}{\numberline {9}{\ignorespaces Uma vis\IeC {\~a}o geral do processo de desenvolvimento de software.}}{32}{figure.caption.18}
+\contentsline {figure}{\numberline {10}{\ignorespaces Modelo de dom\IeC {\'\i }nio inicial}}{45}{figure.caption.19}
+\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de caso de uso}}{46}{figure.caption.20}
 \contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de robustez do caso de uso ''Localizar parceiros''}}{47}{figure.caption.22}
-\contentsline {figure}{\numberline {13}{\ignorespaces Modelo de dom\IeC {\'\i }nio atualizado}}{47}{figure.caption.23}
-\contentsline {figure}{\numberline {14}{\ignorespaces Modelo de dados da aplica\IeC {\c c}\IeC {\~a}o}}{48}{figure.caption.24}
-\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do caso de uso ''Localizar parceiros''}}{49}{figure.caption.25}
-\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de classes}}{50}{figure.caption.26}
-\contentsline {figure}{\numberline {17}{\ignorespaces Tela de servi\IeC {\c c}os do GitHub }}{51}{figure.caption.27}
-\contentsline {figure}{\numberline {18}{\ignorespaces Ferramentas da IDE Eclipse}}{52}{figure.caption.28}
-\contentsline {figure}{\numberline {19}{\ignorespaces Tela de login }}{57}{figure.caption.29}
-\contentsline {figure}{\numberline {20}{\ignorespaces Fluxo de autentica\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios utilizando a forma tradicional}}{58}{figure.caption.30}
-\contentsline {figure}{\numberline {21}{\ignorespaces Fluxo de autentica\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios utilizando \textit {token}}}{60}{figure.caption.31}
-\contentsline {figure}{\numberline {22}{\ignorespaces P\IeC {\'a}gina inicial do usu\IeC {\'a}rio contratante}}{63}{figure.caption.32}
-\contentsline {figure}{\numberline {23}{\ignorespaces Tela para aceitar ou rejeitar solicita\IeC {\c c}\IeC {\~a}o de parceria}}{65}{figure.caption.33}
-\contentsline {figure}{\numberline {24}{\ignorespaces P\IeC {\'a}gina para adicionar servi\IeC {\c c}os.}}{67}{figure.caption.34}
-\contentsline {figure}{\numberline {25}{\ignorespaces Tela contendo a taxa de avalia\IeC {\c c}\IeC {\~a}o do servi\IeC {\c c}o prestado.}}{72}{figure.caption.35}
-\contentsline {figure}{\numberline {26}{\ignorespaces Tela de dicas para provedores de servi\IeC {\c c}os.}}{72}{figure.caption.36}
-\contentsline {figure}{\numberline {27}{\ignorespaces Gr\IeC {\'a}fico de avalia\IeC {\c c}\IeC {\~a}o do servi\IeC {\c c}o na p\IeC {\'a}gina de perfil do provedor.}}{73}{figure.caption.37}
-\contentsline {figure}{\numberline {28}{\ignorespaces Gr\IeC {\'a}fico de avalia\IeC {\c c}\IeC {\~a}o do servi\IeC {\c c}o na p\IeC {\'a}gina inicial do provedor.}}{74}{figure.caption.38}
-\contentsline {figure}{\numberline {29}{\ignorespaces P\IeC {\'a}gina resultante da busca por dom\IeC {\'e}stica.}}{76}{figure.caption.39}
-\contentsline {figure}{\numberline {30}{\ignorespaces Funcionalidade que apresenta a lista com poss\IeC {\'\i }veis parceiros}}{77}{figure.caption.40}
-\contentsline {figure}{\numberline {31}{\ignorespaces Funcionalidade que apresenta a busca por novos parceiros}}{78}{figure.caption.41}
+\contentsline {figure}{\numberline {13}{\ignorespaces Modelo de dom\IeC {\'\i }nio atualizado}}{48}{figure.caption.23}
+\contentsline {figure}{\numberline {14}{\ignorespaces Modelo de dados da aplica\IeC {\c c}\IeC {\~a}o}}{49}{figure.caption.24}
+\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia do caso de uso ''Localizar parceiros''}}{50}{figure.caption.25}
+\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de classes}}{51}{figure.caption.26}
+\contentsline {figure}{\numberline {17}{\ignorespaces Tela de servi\IeC {\c c}os do GitHub }}{52}{figure.caption.27}
+\contentsline {figure}{\numberline {18}{\ignorespaces Ferramentas da IDE Eclipse}}{53}{figure.caption.28}
+\contentsline {figure}{\numberline {19}{\ignorespaces Tela de login }}{58}{figure.caption.29}
+\contentsline {figure}{\numberline {20}{\ignorespaces Fluxo de autentica\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios utilizando a forma tradicional}}{59}{figure.caption.30}
+\contentsline {figure}{\numberline {21}{\ignorespaces Fluxo de autentica\IeC {\c c}\IeC {\~a}o de usu\IeC {\'a}rios utilizando \textit {token}}}{61}{figure.caption.31}
+\contentsline {figure}{\numberline {22}{\ignorespaces P\IeC {\'a}gina inicial do usu\IeC {\'a}rio contratante}}{64}{figure.caption.32}
+\contentsline {figure}{\numberline {23}{\ignorespaces Tela para aceitar ou rejeitar solicita\IeC {\c c}\IeC {\~a}o de parceria}}{66}{figure.caption.33}
+\contentsline {figure}{\numberline {24}{\ignorespaces P\IeC {\'a}gina para adicionar servi\IeC {\c c}os.}}{68}{figure.caption.34}
+\contentsline {figure}{\numberline {25}{\ignorespaces Tela contendo a taxa de avalia\IeC {\c c}\IeC {\~a}o do servi\IeC {\c c}o prestado.}}{73}{figure.caption.35}
+\contentsline {figure}{\numberline {26}{\ignorespaces Tela de dicas para provedores de servi\IeC {\c c}os.}}{73}{figure.caption.36}
+\contentsline {figure}{\numberline {27}{\ignorespaces Gr\IeC {\'a}fico de avalia\IeC {\c c}\IeC {\~a}o do servi\IeC {\c c}o na p\IeC {\'a}gina de perfil do provedor.}}{74}{figure.caption.37}
+\contentsline {figure}{\numberline {28}{\ignorespaces Gr\IeC {\'a}fico de avalia\IeC {\c c}\IeC {\~a}o do servi\IeC {\c c}o na p\IeC {\'a}gina inicial do provedor.}}{75}{figure.caption.38}
+\contentsline {figure}{\numberline {29}{\ignorespaces P\IeC {\'a}gina resultante da busca por dom\IeC {\'e}stica.}}{77}{figure.caption.39}
+\contentsline {figure}{\numberline {30}{\ignorespaces Funcionalidade que apresenta a lista com poss\IeC {\'\i }veis parceiros}}{78}{figure.caption.40}
+\contentsline {figure}{\numberline {31}{\ignorespaces Funcionalidade que apresenta a busca por novos parceiros}}{79}{figure.caption.41}

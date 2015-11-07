@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  2 NOV 2015 23:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  6 NOV 2015 22:18
 entering extended mode
 **Principal.tex
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.tex"
@@ -1223,50 +1223,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--12
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
  []
 
 [4
 
 
-])
+] [5])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/07_Epi
-grafe.tex" [5
+grafe.tex" [6
 
 ])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fixos/0A_ListasA
 utomaticas.tex"
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.lof")
-[6
+[7
 
 ] ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.loq"
-) [7
+) [8
 
 ]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.lol")
-[8
+[9
 
 ])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/0B_Sig
-las.tex" [9
+las.tex" [10
 
 
 ])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/08_Res
-umo.tex" [10
+umo.tex" [11
 
 ])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/09_Abs
-tract.tex" [11
+tract.tex" [12
 
 ])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fixos/0C_Sumario
 .tex"
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.toc")
-[12
+[13
 
-] [13])
+] [14])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/10_Int
 roducao.tex"
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1275,7 +1275,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 26.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 26.
- [14
+ [15
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 47.
@@ -1284,12 +1284,12 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
- [15])
+ [16])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/11_Qua
-droTeorico.tex" [16]
+droTeorico.tex" [17]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _teorico/iconix.tex"
-<./imagens/visao_geral_iconix.png, id=301, 402.7848pt x 240.9pt>
+<./imagens/visao_geral_iconix.png, id=305, 402.7848pt x 240.9pt>
 File: ./imagens/visao_geral_iconix.png Graphic file (type png)
 
 <use ./imagens/visao_geral_iconix.png>
@@ -1302,29 +1302,29 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[17
+[18
 
-] [18 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/vis
+] [19 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/vis
 ao_geral_iconix.png>])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/teoria_grafos.tex" [19]
-<./imagens/Konigsberg_7_bridges.jpg, id=331, 501.875pt x 401.5pt>
+_teorico/teoria_grafos.tex" [20]
+<./imagens/Konigsberg_7_bridges.jpg, id=335, 501.875pt x 401.5pt>
 File: ./imagens/Konigsberg_7_bridges.jpg Graphic file (type jpg)
 
 <use ./imagens/Konigsberg_7_bridges.jpg>
 Package pdftex.def Info: ./imagens/Konigsberg_7_bridges.jpg used on input line 
 9.
 (pdftex.def)             Requested size: 364.2138pt x 182.72566pt.
- [20 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/Koni
+ [21 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/Koni
 gsberg_7_bridges.jpg>]
-<./imagens/simple_graph.png, id=355, 400.49625pt x 194.7275pt>
+<./imagens/simple_graph.png, id=359, 400.49625pt x 194.7275pt>
 File: ./imagens/simple_graph.png Graphic file (type png)
 
 <use ./imagens/simple_graph.png>
 Package pdftex.def Info: ./imagens/simple_graph.png used on input line 34.
 (pdftex.def)             Requested size: 308.38306pt x 149.94061pt.
 
-<./imagens/multigraph_example.png, id=363, 246.9225pt x 178.6675pt>
+<./imagens/multigraph_example.png, id=367, 246.9225pt x 178.6675pt>
 File: ./imagens/multigraph_example.png Graphic file (type png)
 
 <use ./imagens/multigraph_example.png>
@@ -1335,9 +1335,9 @@ Package pdftex.def Info: ./imagens/multigraph_example.png used on input line 47
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/simpl
+[22 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/simpl
 e_graph.png>]
-<./imagens/simple_digraph_graph.png, id=381, 256.96pt x 256.96pt>
+<./imagens/simple_digraph_graph.png, id=385, 256.96pt x 256.96pt>
 File: ./imagens/simple_digraph_graph.png Graphic file (type png)
 
 <use ./imagens/simple_digraph_graph.png>
@@ -1345,7 +1345,7 @@ Package pdftex.def Info: ./imagens/simple_digraph_graph.png used on input line
 60.
 (pdftex.def)             Requested size: 154.17719pt x 154.17719pt.
 
-<./imagens/grafos_isomorficos.png, id=391, 264.99pt x 107.40125pt>
+<./imagens/grafos_isomorficos.png, id=395, 264.99pt x 107.40125pt>
 File: ./imagens/grafos_isomorficos.png Graphic file (type png)
 
 <use ./imagens/grafos_isomorficos.png>
@@ -1356,28 +1356,28 @@ Package pdftex.def Info: ./imagens/grafos_isomorficos.png used on input line 78
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/multi
+[23 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/multi
 graph_example.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/late
 x/imagens/simple_digraph_graph.png>]
-<./imagens/matriz_adjacencia.png, id=405, 230.8625pt x 168.63pt>
+<./imagens/matriz_adjacencia.png, id=409, 230.8625pt x 168.63pt>
 File: ./imagens/matriz_adjacencia.png Graphic file (type png)
 
 <use ./imagens/matriz_adjacencia.png>
 Package pdftex.def Info: ./imagens/matriz_adjacencia.png used on input line 97.
 
 (pdftex.def)             Requested size: 161.60263pt x 118.04018pt.
-) [23 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/gra
+) [24 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/gra
 fos_isomorficos.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/la
 tex/imagens/matriz_adjacencia.png>]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _teorico/banco_dados.tex")
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/banco_dados_relacionais.tex" [24])
+_teorico/banco_dados_relacionais.tex" [25])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/banco_dados_nosql.tex" [25])
+_teorico/banco_dados_nosql.tex" [26])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/neo4j.tex" [26]
-<./imagens/simple_graph_neo4j.png, id=469, 374.39874pt x 187.70125pt>
+_teorico/neo4j.tex" [27]
+<./imagens/simple_graph_neo4j.png, id=473, 374.39874pt x 187.70125pt>
 File: ./imagens/simple_graph_neo4j.png Graphic file (type png)
 
 <use ./imagens/simple_graph_neo4j.png>
@@ -1388,18 +1388,18 @@ Package pdftex.def Info: ./imagens/simple_graph_neo4j.png used on input line 31
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[27])
+[28])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/cypher.tex" [28 <C:/Users/Andressa Faria/Documents/GitHub/tcc/document
+_teorico/cypher.tex" [29 <C:/Users/Andressa Faria/Documents/GitHub/tcc/document
 o/latex/imagens/simple_graph_neo4j.png>])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/java.tex" [29] [30]
+_teorico/java.tex" [30] [31]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 21.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<./imagens/processo_compilacao_java.png, id=527, 297.7524pt x 81.4242pt>
+<./imagens/processo_compilacao_java.png, id=531, 297.7524pt x 81.4242pt>
 File: ./imagens/processo_compilacao_java.png Graphic file (type png)
 
 <use ./imagens/processo_compilacao_java.png>
@@ -1408,10 +1408,10 @@ ine 25.
 (pdftex.def)             Requested size: 297.75166pt x 81.424pt.
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/tomcat.tex" [31 <C:/Users/Andressa Faria/Documents/GitHub/tcc/document
+_teorico/tomcat.tex" [32 <C:/Users/Andressa Faria/Documents/GitHub/tcc/document
 o/latex/imagens/processo_compilacao_java.png>])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/webservice_rest.tex" [32]
+_teorico/webservice_rest.tex" [33]
 Overfull \hbox (5.16287pt too wide) in paragraph at lines 29--30
 []\T1/ptm/m/n/12 trabalha com -\T1/ptm/m/it/12 Extensible Mar-kup Lan-guage \T1
 /ptm/m/n/12 - XML[], \T1/ptm/m/it/12 Ja-vas-cript Ob-ject No-ta-tion \T1/ptm/m/
@@ -1420,9 +1420,9 @@ n/12 - JSON[]
 
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/html5.tex" [33])
+_teorico/html5.tex" [34])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/css3.tex" [34]
+_teorico/css3.tex" [35]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 18.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
@@ -1431,7 +1431,7 @@ nput line 21.
 
 Package xcolor Warning: Incompatible color definition on input line 28.
 
-[35]
+[36]
 
 Package xcolor Warning: Incompatible color definition on input line 51.
 
@@ -1440,48 +1440,48 @@ Package xcolor Warning: Incompatible color definition on input line 55.
 
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/javascript.tex" [36]
+_teorico/javascript.tex" [37]
 
 Package xcolor Warning: Incompatible color definition on input line 21.
 
-[37]
+[38]
 
 Package xcolor Warning: Incompatible color definition on input line 47.
 
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/angularjs.tex" [38]))
+_teorico/angularjs.tex" [39]))
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/12_Qua
-droMetodologico.tex" [39]
+droMetodologico.tex" [40]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/tipo_pesquisa.tex" [40
+_metodologico/tipo_pesquisa.tex" [41
 
 ])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
 _metodologico/contexto_pesquisa.tex")
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/instrumentos.tex" [41])
+_metodologico/instrumentos.tex" [42])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/procedimentos.tex" [42]
+_metodologico/procedimentos.tex" [43]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/procedimentos/iconix.tex" [43]
-<./imagens/modelo-dominio-inicial.png, id=750, 764.8575pt x 540.51938pt>
+_metodologico/procedimentos/iconix.tex" [44]
+<./imagens/modelo-dominio-inicial.png, id=754, 764.8575pt x 540.51938pt>
 File: ./imagens/modelo-dominio-inicial.png Graphic file (type png)
 
 <use ./imagens/modelo-dominio-inicial.png>
 Package pdftex.def Info: ./imagens/modelo-dominio-inicial.png used on input lin
 e 9.
 (pdftex.def)             Requested size: 344.1827pt x 243.23146pt.
- [44 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/mode
+ [45 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/mode
 lo-dominio-inicial.png>]
-<./imagens/caso-de-uso-unificado.png, id=757, 781.2387pt x 756.6669pt>
+<./imagens/caso-de-uso-unificado.png, id=761, 781.2387pt x 756.6669pt>
 File: ./imagens/caso-de-uso-unificado.png Graphic file (type png)
 
 <use ./imagens/caso-de-uso-unificado.png>
 Package pdftex.def Info: ./imagens/caso-de-uso-unificado.png used on input line
  19.
 (pdftex.def)             Requested size: 390.6184pt x 378.33252pt.
- [45 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/caso
+ [46 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/caso
 -de-uso-unificado.png>]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
 nto-localizar-parceiro.tex"
@@ -1499,7 +1499,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--63
 
  []
 
-[46]
+
 <./imagens/apendices/diagrama-robustez-localizar-parceiros.png, id=769, 1154.81
 438pt x 524.71031pt>
 File: ./imagens/apendices/diagrama-robustez-localizar-parceiros.png Graphic fil
@@ -1507,67 +1507,66 @@ e (type png)
 
 <use ./imagens/apendices/diagrama-robustez-localizar-parceiros.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-localizar-parcei
-ros.png used on input line 104.
+ros.png used on input line 103.
 (pdftex.def)             Requested size: 404.19109pt x 183.65135pt.
-
-<./imagens/modelo-dominio-com-atributos.png, id=771, 880.2486pt x 736.4313pt>
+ [47 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+dices/diagrama-robustez-localizar-parceiros.png>]
+<./imagens/modelo-dominio-com-atributos.png, id=776, 880.2486pt x 736.4313pt>
 File: ./imagens/modelo-dominio-com-atributos.png Graphic file (type png)
 
 <use ./imagens/modelo-dominio-com-atributos.png>
 Package pdftex.def Info: ./imagens/modelo-dominio-com-atributos.png used on inp
 ut line 113.
 (pdftex.def)             Requested size: 440.12323pt x 368.21475pt.
-
-<./imagens/structure-all-nodes.png, id=773, 1371.1225pt x 770.88pt>
+ [48 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/mode
+lo-dominio-com-atributos.png>]
+<./imagens/structure-all-nodes.png, id=784, 1371.1225pt x 770.88pt>
 File: ./imagens/structure-all-nodes.png Graphic file (type png)
 
 <use ./imagens/structure-all-nodes.png>
 Package pdftex.def Info: ./imagens/structure-all-nodes.png used on input line 1
-22.
+23.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
- [47 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/diagrama-robustez-localizar-parceiros.png> <C:/Users/Andressa Faria/Docum
-ents/GitHub/tcc/documento/latex/imagens/modelo-dominio-com-atributos.png>]
-Overfull \hbox (1.06189pt too wide) in paragraph at lines 128--129
+
+Overfull \hbox (1.06189pt too wide) in paragraph at lines 129--130
 []\T1/ptm/m/n/12 Na ter-ceira fase, de-fi-nida como pro-jeto de-ta-lhado, fo-ra
 m cri-a-dos os di-a-gra-mas de sequên-
  []
 
-[48 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/struc
+[49 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/struc
 ture-all-nodes.png>]
-<./imagens/apendices/diagrama-sequencia-localizar-parceiros.png, id=787, 1338.5
+<./imagens/apendices/diagrama-sequencia-localizar-parceiros.png, id=791, 1338.5
 0063pt x 754.31813pt>
 File: ./imagens/apendices/diagrama-sequencia-localizar-parceiros.png Graphic fi
 le (type png)
 
 <use ./imagens/apendices/diagrama-sequencia-localizar-parceiros.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-localizar-parce
-iros.png used on input line 132.
+iros.png used on input line 133.
 (pdftex.def)             Requested size: 1338.49738pt x 754.3163pt.
 
-<./imagens/classe.jpg, id=789, 2746.26pt x 1561.835pt>
+<./imagens/classe.jpg, id=793, 2746.26pt x 1561.835pt>
 File: ./imagens/classe.jpg Graphic file (type jpg)
 
 <use ./imagens/classe.jpg>
-Package pdftex.def Info: ./imagens/classe.jpg used on input line 141.
+Package pdftex.def Info: ./imagens/classe.jpg used on input line 142.
 (pdftex.def)             Requested size: 2746.25333pt x 1561.8312pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[49 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
+[50 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
 ices/diagrama-sequencia-localizar-parceiros.png>])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/procedimentos/preparacao_ambiente.tex" [50 <C:/Users/Andressa Far
+_metodologico/procedimentos/preparacao_ambiente.tex" [51 <C:/Users/Andressa Far
 ia/Documents/GitHub/tcc/documento/latex/imagens/classe.jpg>]
-<./imagens/github.jpg, id=800, 1242.6425pt x 661.47125pt>
+<./imagens/github.jpg, id=804, 1035.87pt x 590.205pt>
 File: ./imagens/github.jpg Graphic file (type jpg)
 
 <use ./imagens/github.jpg>
 Package pdftex.def Info: ./imagens/github.jpg used on input line 8.
-(pdftex.def)             Requested size: 372.79562pt x 198.4429pt.
- [51 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/gith
-ub.jpg>]
+(pdftex.def)             Requested size: 310.7634pt x 177.06287pt.
+
 <./imagens/eclipse-editor-texto.png, id=806, 1282.7925pt x 777.90625pt>
 File: ./imagens/eclipse-editor-texto.png Graphic file (type png)
 
@@ -1575,9 +1574,10 @@ File: ./imagens/eclipse-editor-texto.png Graphic file (type png)
 Package pdftex.def Info: ./imagens/eclipse-editor-texto.png used on input line 
 23.
 (pdftex.def)             Requested size: 384.84071pt x 233.37367pt.
-)
+ [52 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/gith
+ub.jpg>])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/procedimentos/desenvolvimento.tex" [52 <C:/Users/Andressa Faria/D
+_metodologico/procedimentos/desenvolvimento.tex" [53 <C:/Users/Andressa Faria/D
 ocuments/GitHub/tcc/documento/latex/imagens/eclipse-editor-texto.png>]
 ("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang
 1.sty"
@@ -1657,7 +1657,7 @@ Package xcolor Warning: Incompatible color definition on input line 28.
 
 Package xcolor Warning: Incompatible color definition on input line 32.
 
-[53]
+[54]
 
 Package xcolor Warning: Incompatible color definition on input line 49.
 
@@ -1835,7 +1835,7 @@ Package xcolor Warning: Incompatible color definition on input line 85.
 
 Package xcolor Warning: Incompatible color definition on input line 87.
 
-[54] [55]
+[55] [56]
 
 Package xcolor Warning: Incompatible color definition on input line 127.
 
@@ -1869,30 +1869,30 @@ Package xcolor Warning: Incompatible color definition on input line 134.
 
 Package xcolor Warning: Incompatible color definition on input line 139.
 
-[56] <./imagens/login.jpg, id=937, 339.2675pt x 307.1475pt>
+[57] <./imagens/login.jpg, id=941, 339.2675pt x 307.1475pt>
 File: ./imagens/login.jpg Graphic file (type jpg)
 
 <use ./imagens/login.jpg>
 Package pdftex.def Info: ./imagens/login.jpg used on input line 154.
 (pdftex.def)             Requested size: 203.56206pt x 184.28992pt.
- [57 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/logi
+ [58 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/logi
 n.jpg>]
-<./imagens/tokens-traditional.png, id=946, 803.0pt x 1058.95625pt>
+<./imagens/tokens-traditional.png, id=950, 803.0pt x 1058.95625pt>
 File: ./imagens/tokens-traditional.png Graphic file (type png)
 
 <use ./imagens/tokens-traditional.png>
 Package pdftex.def Info: ./imagens/tokens-traditional.png used on input line 16
 4.
 (pdftex.def)             Requested size: 441.65137pt x 582.42775pt.
- [58 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/toke
-ns-traditional.png>] [59]
-<./imagens/tokens-new.png, id=964, 803.0pt x 1304.875pt>
+ [59 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/toke
+ns-traditional.png>] [60]
+<./imagens/tokens-new.png, id=969, 803.0pt x 1304.875pt>
 File: ./imagens/tokens-new.png Graphic file (type png)
 
 <use ./imagens/tokens-new.png>
 Package pdftex.def Info: ./imagens/tokens-new.png used on input line 174.
 (pdftex.def)             Requested size: 401.49902pt x 652.43591pt.
- [60 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/toke
+ [61 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/toke
 ns-new.png>]
 
 Package xcolor Warning: Incompatible color definition on input line 183.
@@ -2056,7 +2056,7 @@ Package xcolor Warning: Incompatible color definition on input line 217.
 
 Package xcolor Warning: Incompatible color definition on input line 217.
 
-[61]
+[62]
 
 Package xcolor Warning: Incompatible color definition on input line 219.
 
@@ -2213,7 +2213,7 @@ Package xcolor Warning: Incompatible color definition on input line 234.
 
 Package xcolor Warning: Incompatible color definition on input line 234.
 
-[62] <./imagens/home-contratante.png, id=1034, 1283.79625pt x 672.5125pt>
+[63] <./imagens/home-contratante.png, id=1038, 1283.79625pt x 672.5125pt>
 File: ./imagens/home-contratante.png Graphic file (type png)
 
 <use ./imagens/home-contratante.png>
@@ -2309,7 +2309,7 @@ Package xcolor Warning: Incompatible color definition on input line 276.
 
 Package xcolor Warning: Incompatible color definition on input line 276.
 
-[63 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/home-
+[64 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/home-
 contratante.png>]
 
 Package xcolor Warning: Incompatible color definition on input line 277.
@@ -2333,7 +2333,7 @@ Package xcolor Warning: Incompatible color definition on input line 298.
 Package xcolor Warning: Incompatible color definition on input line 299.
 
 
-<./imagens/aceitar_rejeitar_solicitacao_parceria.png, id=1064, 1027.84pt x 327.
+<./imagens/aceitar_rejeitar_solicitacao_parceria.png, id=1068, 1027.84pt x 327.
 2225pt>
 File: ./imagens/aceitar_rejeitar_solicitacao_parceria.png Graphic file (type pn
 g)
@@ -2345,7 +2345,7 @@ ed on input line 307.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[64]
+[65]
 
 Package xcolor Warning: Incompatible color definition on input line 318.
 
@@ -2358,7 +2358,7 @@ Package xcolor Warning: Incompatible color definition on input line 322.
 
 Package xcolor Warning: Incompatible color definition on input line 323.
 
-[65 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/aceit
+[66 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/aceit
 ar_rejeitar_solicitacao_parceria.png>]
 
 Package xcolor Warning: Incompatible color definition on input line 331.
@@ -2459,7 +2459,7 @@ Package xcolor Warning: Incompatible color definition on input line 354.
 
 Package xcolor Warning: Incompatible color definition on input line 354.
 
-[66] <./imagens/adcionar-servico.png, id=1121, 1330.9725pt x 612.2875pt>
+[67] <./imagens/adcionar-servico.png, id=1125, 1330.9725pt x 612.2875pt>
 File: ./imagens/adcionar-servico.png Graphic file (type png)
 
 <use ./imagens/adcionar-servico.png>
@@ -2494,7 +2494,7 @@ Package xcolor Warning: Incompatible color definition on input line 381.
 
 Package xcolor Warning: Incompatible color definition on input line 381.
 
-[67 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/adcio
+[68 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/adcio
 nar-servico.png>]
 
 Package xcolor Warning: Incompatible color definition on input line 382.
@@ -2679,7 +2679,7 @@ Package xcolor Warning: Incompatible color definition on input line 421.
 
 Package xcolor Warning: Incompatible color definition on input line 422.
 
-[68]
+[69]
 
 Package xcolor Warning: Incompatible color definition on input line 423.
 
@@ -2782,7 +2782,7 @@ Package xcolor Warning: Incompatible color definition on input line 448.
 
 Package xcolor Warning: Incompatible color definition on input line 448.
 
-[69]
+[70]
 
 Package xcolor Warning: Incompatible color definition on input line 454.
 
@@ -2903,7 +2903,7 @@ Package xcolor Warning: Incompatible color definition on input line 485.
 
 Package xcolor Warning: Incompatible color definition on input line 485.
 
-[70]
+[71]
 
 Package xcolor Warning: Incompatible color definition on input line 492.
 
@@ -2952,14 +2952,14 @@ Package xcolor Warning: Incompatible color definition on input line 503.
 
 Package xcolor Warning: Incompatible color definition on input line 503.
 
-[71] <./imagens/taxa-avaliacao.png, id=1256, 705.63625pt x 527.9725pt>
+[72] <./imagens/taxa-avaliacao.png, id=1261, 705.63625pt x 527.9725pt>
 File: ./imagens/taxa-avaliacao.png Graphic file (type png)
 
 <use ./imagens/taxa-avaliacao.png>
 Package pdftex.def Info: ./imagens/taxa-avaliacao.png used on input line 510.
 (pdftex.def)             Requested size: 317.53337pt x 237.58542pt.
 
-<./imagens/dicas-randomicas.png, id=1258, 977.6525pt x 357.335pt>
+<./imagens/dicas-randomicas.png, id=1263, 977.6525pt x 357.335pt>
 File: ./imagens/dicas-randomicas.png Graphic file (type png)
 
 <use ./imagens/dicas-randomicas.png>
@@ -2972,45 +2972,45 @@ Overfull \hbox (16.38818pt too wide) in paragraph at lines 527--528
 ado pelo pro-ve-dor de ser-vi-ços, comparando-
  []
 
-[72 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/taxa-
+[73 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/taxa-
 avaliacao.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/im
 agens/dicas-randomicas.png>]
-<./imagens/grafico-pagina-perfil.png, id=1267, 586.19pt x 533.995pt>
+<./imagens/grafico-pagina-perfil.png, id=1271, 584.1825pt x 488.82625pt>
 File: ./imagens/grafico-pagina-perfil.png Graphic file (type png)
 
 <use ./imagens/grafico-pagina-perfil.png>
 Package pdftex.def Info: ./imagens/grafico-pagina-perfil.png used on input line
  532.
-(pdftex.def)             Requested size: 381.01898pt x 347.09264pt.
- [73 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/graf
-ico-pagina-perfil.png>]
-<./imagens/grafico-pagina-inicial.png, id=1274, 692.5875pt x 499.8675pt>
+(pdftex.def)             Requested size: 379.71411pt x 317.73329pt.
+
+<./imagens/grafico-pagina-inicial.png, id=1273, 692.5875pt x 499.8675pt>
 File: ./imagens/grafico-pagina-inicial.png Graphic file (type png)
 
 <use ./imagens/grafico-pagina-inicial.png>
 Package pdftex.def Info: ./imagens/grafico-pagina-inicial.png used on input lin
 e 541.
 (pdftex.def)             Requested size: 450.17653pt x 324.91002pt.
-)))
+ [74 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/graf
+ico-pagina-perfil.png>])))
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/13_Res
-ultados.tex" [74 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/
-imagens/grafico-pagina-inicial.png>] [75
+ultados.tex" [75 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/
+imagens/grafico-pagina-inicial.png>] [76
 
 ]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
 sao_resultados/localizar_mao_de_obra.tex"
-<./imagens/busca-domestica-edilson.png, id=1294, 1282.7925pt x 666.49pt>
+<./imagens/busca-domestica-edilson.png, id=1298, 1282.7925pt x 666.49pt>
 File: ./imagens/busca-domestica-edilson.png Graphic file (type png)
 
 <use ./imagens/busca-domestica-edilson.png>
 Package pdftex.def Info: ./imagens/busca-domestica-edilson.png used on input li
 ne 10.
 (pdftex.def)             Requested size: 384.84071pt x 199.94853pt.
- [76 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/busc
+ [77 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/busc
 a-domestica-edilson.png>])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
 sao_resultados/apresentar_possiveis_parceiros.tex"
-<./imagens/busca-possiveis-parceiros.png, id=1302, 250.9375pt x 636.3775pt>
+<./imagens/busca-possiveis-parceiros.png, id=1306, 250.9375pt x 636.3775pt>
 File: ./imagens/busca-possiveis-parceiros.png Graphic file (type png)
 
 <use ./imagens/busca-possiveis-parceiros.png>
@@ -3019,9 +3019,9 @@ line 8.
 (pdftex.def)             Requested size: 100.37321pt x 254.5465pt.
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
-sao_resultados/localizar_novos_parceiros.tex" [77 <C:/Users/Andressa Faria/Docu
+sao_resultados/localizar_novos_parceiros.tex" [78 <C:/Users/Andressa Faria/Docu
 ments/GitHub/tcc/documento/latex/imagens/busca-possiveis-parceiros.png>]
-<./imagens/busca-novos-parceiros.png, id=1309, 1283.79625pt x 646.415pt>
+<./imagens/busca-novos-parceiros.png, id=1314, 1283.79625pt x 646.415pt>
 File: ./imagens/busca-novos-parceiros.png Graphic file (type png)
 
 <use ./imagens/busca-novos-parceiros.png>
@@ -3032,22 +3032,22 @@ Package pdftex.def Info: ./imagens/busca-novos-parceiros.png used on input line
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
 sao_resultados/solicitacoes_parcerias.tex")
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
-sao_resultados/taxa_avaliacoes.tex") [78 <C:/Users/Andressa Faria/Documents/Git
+sao_resultados/taxa_avaliacoes.tex") [79 <C:/Users/Andressa Faria/Documents/Git
 Hub/tcc/documento/latex/imagens/busca-novos-parceiros.png>]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
 sao_resultados/graficos.tex"))
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/14_Con
-clusao.tex" [79] [80
+clusao.tex" [80] [81
 
-] [81])
+] [82])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.bbl"
-[82]
+[83]
 bibitemlist
-[83
+[84
 
-] [84])
+] [85])
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/20_Ape
-ndices.tex" [85] [86
+ndices.tex" [86] [87
 
 ]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
@@ -3075,7 +3075,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--24
 
  []
 
-[87
+[88
 
 ]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
@@ -3107,7 +3107,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--44
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[88]
+[89]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
 nto-avaliar-mao-de-obra.tex")
 Underfull \hbox (badness 10000) in paragraph at lines 1--55
@@ -3122,7 +3122,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--55
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[89]
+[90]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
 nto-gerenciar-servicos.tex")
 Underfull \hbox (badness 10000) in paragraph at lines 1--66
@@ -3137,7 +3137,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--66
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[90]
+[91]
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
 nto-criar-conta.tex")
 Underfull \hbox (badness 10000) in paragraph at lines 1--76
@@ -3152,8 +3152,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--76
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[91]
-<./imagens/apendices/diagrama-robustez-aceitar-parceria.png, id=1416, 1120.9378
+[92]
+<./imagens/apendices/diagrama-robustez-aceitar-parceria.png, id=1420, 1120.9378
 pt x 755.82375pt>
 File: ./imagens/apendices/diagrama-robustez-aceitar-parceria.png Graphic file (
 type png)
@@ -3177,7 +3177,7 @@ ros.png used on input line 99.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./imagens/apendices/diagrama-robustez-adicionar-parceiro.png, id=1419, 1205.25
+<./imagens/apendices/diagrama-robustez-adicionar-parceiro.png, id=1423, 1205.25
 28pt x 584.1825pt>
 File: ./imagens/apendices/diagrama-robustez-adicionar-parceiro.png Graphic file
  (type png)
@@ -3191,7 +3191,7 @@ ro.png used on input line 109.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./imagens/apendices/diagrama-robustez-localizar-mao-de-obra.png, id=1421, 1166
+<./imagens/apendices/diagrama-robustez-localizar-mao-de-obra.png, id=1425, 1166
 .85938pt x 633.11531pt>
 File: ./imagens/apendices/diagrama-robustez-localizar-mao-de-obra.png Graphic f
 ile (type png)
@@ -3200,12 +3200,12 @@ ile (type png)
 Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-localizar-mao-de
 -obra.png used on input line 119.
 (pdftex.def)             Requested size: 466.73549pt x 253.24162pt.
- [92]
+ [93]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[93]
-<./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png, id=1435, 976.39
+[94]
+<./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png, id=1439, 976.39
 781pt x 545.03625pt>
 File: ./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png Graphic fil
 e (type png)
@@ -3219,7 +3219,7 @@ bra.png used on input line 130.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./imagens/apendices/diagrama-robustez-adicionar-servicos.png, id=1437, 1141.26
+<./imagens/apendices/diagrama-robustez-adicionar-servicos.png, id=1441, 1141.26
 375pt x 590.95781pt>
 File: ./imagens/apendices/diagrama-robustez-adicionar-servicos.png Graphic file
  (type png)
@@ -3232,9 +3232,9 @@ os.png used on input line 140.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[94 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
+[95 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
 ices/diagrama-robustez-aceitar-parceria.png>]
-<./imagens/apendices/diagrama-robustez-criar-conta.png, id=1446, 1001.24063pt x
+<./imagens/apendices/diagrama-robustez-criar-conta.png, id=1450, 1001.24063pt x
  904.88063pt>
 File: ./imagens/apendices/diagrama-robustez-criar-conta.png Graphic file (type 
 png)
@@ -3246,14 +3246,14 @@ used on input line 151.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[95 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
+[96 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
 ices/diagrama-robustez-adicionar-parceiro.png> <C:/Users/Andressa Faria/Documen
 ts/GitHub/tcc/documento/latex/imagens/apendices/diagrama-robustez-localizar-mao
--de-obra.png>] [96 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/late
+-de-obra.png>] [97 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/late
 x/imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png> <C:/Users/Andres
 sa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendices/diagrama-robust
 ez-adicionar-servicos.png>]
-<./imagens/apendices/diagrama-sequencia-aceitar-parceria.png, id=1462, 1455.939
+<./imagens/apendices/diagrama-sequencia-aceitar-parceria.png, id=1466, 1455.939
 38pt x 522.45187pt>
 File: ./imagens/apendices/diagrama-sequencia-aceitar-parceria.png Graphic file 
 (type png)
@@ -3277,7 +3277,7 @@ iros.png used on input line 177.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png, id=1465, 2325.
+<./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png, id=1469, 2325.
 4378pt x 1178.90437pt>
 File: ./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png Graphic fi
 le (type png)
@@ -3291,7 +3291,7 @@ iros.png used on input line 187.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png, id=1467, 174
+<./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png, id=1471, 174
 5.01938pt x 524.71031pt>
 File: ./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png Graphic 
 file (type png)
@@ -3305,7 +3305,7 @@ e-obra.png used on input line 197.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png, id=1469, 3439.
+<./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png, id=1473, 3439.
 60031pt x 1163.0953pt>
 File: ./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png Graphic fi
 le (type png)
@@ -3318,18 +3318,18 @@ obra.png used on input line 207.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[97 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
+[98 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
 ices/diagrama-robustez-criar-conta.png>]
 
-LaTeX Warning: Text page 98 contains only floats.
+LaTeX Warning: Text page 99 contains only floats.
 
 
 Overfull \vbox (2.38359pt too high) has occurred while \output is active []
 
 
-[98 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
+[99 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
 ices/diagrama-sequencia-aceitar-parceria.png>]
-<./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png, id=1486, 1818.7
+<./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png, id=1490, 1818.7
 95pt x 973.38657pt>
 File: ./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png Graphic fil
 e (type png)
@@ -3343,7 +3343,7 @@ cos.png used on input line 218.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./imagens/apendices/diagrama-sequencia-criar-conta.png, id=1488, 1805.24437pt 
+<./imagens/apendices/diagrama-sequencia-criar-conta.png, id=1492, 1805.24437pt 
 x 1027.58907pt>
 File: ./imagens/apendices/diagrama-sequencia-criar-conta.png Graphic file (type
  png)
@@ -3357,15 +3357,15 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/22_Apendice_02_API_Rest.tex" [99] [100 <C:/Users/Andressa Faria/Documents/G
-itHub/tcc/documento/latex/imagens/apendices/diagrama-sequencia-adicionar-parcei
-ros.png>] [101 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/im
-agens/apendices/diagrama-sequencia-localizar-mao-de-obra.png>] [102 <C:/Users/A
-ndressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendices/diagrama-s
-equencia-avaliar-mao-de-obra.png>] [103 <C:/Users/Andressa Faria/Documents/GitH
-ub/tcc/documento/latex/imagens/apendices/diagrama-sequencia-gerenciar-servicos.
-png>] [104 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagen
-s/apendices/diagrama-sequencia-criar-conta.png>]
+ces/22_Apendice_02_API_Rest.tex" [100] [101 <C:/Users/Andressa Faria/Documents/
+GitHub/tcc/documento/latex/imagens/apendices/diagrama-sequencia-adicionar-parce
+iros.png>] [102 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/i
+magens/apendices/diagrama-sequencia-localizar-mao-de-obra.png>] [103 <C:/Users/
+Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendices/diagrama-
+sequencia-avaliar-mao-de-obra.png>] [104 <C:/Users/Andressa Faria/Documents/Git
+Hub/tcc/documento/latex/imagens/apendices/diagrama-sequencia-gerenciar-servicos
+.png>] [105 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/image
+ns/apendices/diagrama-sequencia-criar-conta.png>]
 
 Package xcolor Warning: Incompatible color definition on input line 9.
 
@@ -3516,7 +3516,7 @@ Package xcolor Warning: Incompatible color definition on input line 38.
 
 Package xcolor Warning: Incompatible color definition on input line 38.
 
-[105
+[106
 
 ]
 
@@ -3702,7 +3702,7 @@ Package xcolor Warning: Incompatible color definition on input line 78.
 
 Package xcolor Warning: Incompatible color definition on input line 79.
 
-[106]
+[107]
 
 Package xcolor Warning: Incompatible color definition on input line 80.
 
@@ -3898,7 +3898,7 @@ Package xcolor Warning: Incompatible color definition on input line 121.
 
 Package xcolor Warning: Incompatible color definition on input line 121.
 
-[107]
+[108]
 
 Package xcolor Warning: Incompatible color definition on input line 122.
 
@@ -4100,7 +4100,7 @@ Package xcolor Warning: Incompatible color definition on input line 161.
 
 Package xcolor Warning: Incompatible color definition on input line 161.
 
-[108]
+[109]
 
 Package xcolor Warning: Incompatible color definition on input line 162.
 
@@ -4290,7 +4290,7 @@ Package xcolor Warning: Incompatible color definition on input line 201.
 
 Package xcolor Warning: Incompatible color definition on input line 202.
 
-[109]
+[110]
 
 Package xcolor Warning: Incompatible color definition on input line 203.
 
@@ -4477,7 +4477,7 @@ Package xcolor Warning: Incompatible color definition on input line 242.
 
 Package xcolor Warning: Incompatible color definition on input line 243.
 
-[110]
+[111]
 
 Package xcolor Warning: Incompatible color definition on input line 244.
 
@@ -4673,7 +4673,7 @@ Package xcolor Warning: Incompatible color definition on input line 285.
 
 Package xcolor Warning: Incompatible color definition on input line 285.
 
-[111]
+[112]
 
 Package xcolor Warning: Incompatible color definition on input line 286.
 
@@ -4872,7 +4872,7 @@ Package xcolor Warning: Incompatible color definition on input line 325.
 
 Package xcolor Warning: Incompatible color definition on input line 326.
 
-[112]
+[113]
 
 Package xcolor Warning: Incompatible color definition on input line 327.
 
@@ -5065,7 +5065,7 @@ Package xcolor Warning: Incompatible color definition on input line 368.
 
 Package xcolor Warning: Incompatible color definition on input line 368.
 
-[113]
+[114]
 
 Package xcolor Warning: Incompatible color definition on input line 369.
 
@@ -5270,7 +5270,7 @@ Package xcolor Warning: Incompatible color definition on input line 409.
 
 Package xcolor Warning: Incompatible color definition on input line 409.
 
-[114]
+[115]
 
 Package xcolor Warning: Incompatible color definition on input line 410.
 
@@ -5339,27 +5339,27 @@ Package xcolor Warning: Incompatible color definition on input line 423.
 
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/23_Apendice_03_Github.tex" [115]
-<./imagens/apendices/pagina-inicial-github.png, id=1944, 773.13844pt x 368.8781
+ces/23_Apendice_03_Github.tex" [116]
+<./imagens/apendices/pagina-inicial-github.png, id=1948, 773.13844pt x 368.8781
 3pt>
 File: ./imagens/apendices/pagina-inicial-github.png Graphic file (type png)
  <use ./imagens/apendices/pagina-inicial-github.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-inicial-github.png used on 
 input line 10.
 (pdftex.def)             Requested size: 386.56828pt x 184.4386pt.
- [116
+ [117
 
  <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
 s/pagina-inicial-github.png>]
-<./imagens/apendices/pagina-home-github.png, id=1954, 794.2172pt x 691.83469pt>
+<./imagens/apendices/pagina-home-github.png, id=1958, 794.2172pt x 691.83469pt>
 File: ./imagens/apendices/pagina-home-github.png Graphic file (type png)
 <use ./imagens/apendices/pagina-home-github.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-home-github.png used on inp
 ut line 21.
 (pdftex.def)             Requested size: 397.10762pt x 345.91649pt.
- [117 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
+ [118 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
 ndices/pagina-home-github.png>]
-<./imagens/apendices/pagina-criacao-repositorio-github.png, id=1962, 778.40813p
+<./imagens/apendices/pagina-criacao-repositorio-github.png, id=1966, 778.40813p
 t x 436.63126pt>
 File: ./imagens/apendices/pagina-criacao-repositorio-github.png Graphic file (t
 ype png)
@@ -5368,9 +5368,9 @@ ype png)
 Package pdftex.def Info: ./imagens/apendices/pagina-criacao-repositorio-github.
 png used on input line 32.
 (pdftex.def)             Requested size: 389.20311pt x 218.3151pt.
- [118 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
+ [119 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
 ndices/pagina-criacao-repositorio-github.png>]
-<./imagens/apendices/pagina-inicial-repositorio-github.png, id=1970, 767.11594p
+<./imagens/apendices/pagina-inicial-repositorio-github.png, id=1974, 767.11594p
 t x 506.6428pt>
 File: ./imagens/apendices/pagina-inicial-repositorio-github.png Graphic file (t
 ype png)
@@ -5380,7 +5380,7 @@ Package pdftex.def Info: ./imagens/apendices/pagina-inicial-repositorio-github.
 png used on input line 45.
 (pdftex.def)             Requested size: 383.55702pt x 253.32079pt.
 
-<./imagens/apendices/pagina-adicionar-colaborador-ao-repositorio.png, id=1972, 
+<./imagens/apendices/pagina-adicionar-colaborador-ao-repositorio.png, id=1976, 
 766.36313pt x 396.7322pt>
 File: ./imagens/apendices/pagina-adicionar-colaborador-ao-repositorio.png Graph
 ic file (type png)
@@ -5390,7 +5390,7 @@ Package pdftex.def Info: ./imagens/apendices/pagina-adicionar-colaborador-ao-re
 positorio.png used on input line 55.
 (pdftex.def)             Requested size: 383.18063pt x 198.3656pt.
 
-<./imagens/apendices/pagina-download-github.png, id=1974, 904.88063pt x 670.755
+<./imagens/apendices/pagina-download-github.png, id=1978, 904.88063pt x 670.755
 94pt>
 File: ./imagens/apendices/pagina-download-github.png Graphic file (type png)
  <use ./imagens/apendices/pagina-download-github.png>
@@ -5401,21 +5401,21 @@ Package pdftex.def Info: ./imagens/apendices/pagina-download-github.png used on
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[119 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+[120 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
 dices/pagina-inicial-repositorio-github.png> <C:/Users/Andressa Faria/Documents
 /GitHub/tcc/documento/latex/imagens/apendices/pagina-adicionar-colaborador-ao-r
 epositorio.png>]
-<./imagens/apendices/instalacao-github-step1.png, id=1984, 402.00188pt x 229.60
+<./imagens/apendices/instalacao-github-step1.png, id=1989, 402.00188pt x 229.60
 782pt>
 File: ./imagens/apendices/instalacao-github-step1.png Graphic file (type png)
  <use ./imagens/apendices/instalacao-github-step1.png>
 Package pdftex.def Info: ./imagens/apendices/instalacao-github-step1.png used o
 n input line 75.
 (pdftex.def)             Requested size: 201.00044pt x 114.80362pt.
- [120 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
+ [121 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
 ndices/pagina-download-github.png> <C:/Users/Andressa Faria/Documents/GitHub/tc
 c/documento/latex/imagens/apendices/instalacao-github-step1.png>]
-<./imagens/apendices/clonar-repositorio-github.png, id=1995, 1005.7575pt x 664.
+<./imagens/apendices/clonar-repositorio-github.png, id=1999, 1005.7575pt x 664.
 4825pt>
 File: ./imagens/apendices/clonar-repositorio-github.png Graphic file (type png)
 
@@ -5425,20 +5425,20 @@ Package pdftex.def Info: ./imagens/apendices/clonar-repositorio-github.png used
 (pdftex.def)             Requested size: 402.29587pt x 265.78828pt.
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/24_Apendice_04_Eclipse_Tomcat.tex" [121 <C:/Users/Andressa Faria/Documents/
+ces/24_Apendice_04_Eclipse_Tomcat.tex" [122 <C:/Users/Andressa Faria/Documents/
 GitHub/tcc/documento/latex/imagens/apendices/clonar-repositorio-github.png>]
-<./imagens/apendices/pagina-download-eclipse.png, id=2002, 874.01532pt x 660.96
+<./imagens/apendices/pagina-download-eclipse.png, id=2006, 874.01532pt x 660.96
 938pt>
 File: ./imagens/apendices/pagina-download-eclipse.png Graphic file (type png)
  <use ./imagens/apendices/pagina-download-eclipse.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-download-eclipse.png used o
 n input line 12.
 (pdftex.def)             Requested size: 349.59993pt x 264.38306pt.
- [122
+ [123
 
  <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
 s/pagina-download-eclipse.png>]
-<./imagens/apendices/eclipse-selecionar-workspace.png, id=2011, 521.69907pt x 4
+<./imagens/apendices/eclipse-selecionar-workspace.png, id=2015, 521.69907pt x 4
 84.81125pt>
 File: ./imagens/apendices/eclipse-selecionar-workspace.png Graphic file (type p
 ng)
@@ -5453,9 +5453,9 @@ Overfull \hbox (59.34492pt too wide) in paragraph at lines 36--37
 n/12 https://tomcat.apache.org,
  []
 
-[123 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+[124 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
 dices/eclipse-selecionar-workspace.png>]
-<./imagens/apendices/pagina-inicial-apache-tomcat.png, id=2020, 1179.40625pt x 
+<./imagens/apendices/pagina-inicial-apache-tomcat.png, id=2024, 1179.40625pt x 
 597.23125pt>
 File: ./imagens/apendices/pagina-inicial-apache-tomcat.png Graphic file (type p
 ng)
@@ -5464,17 +5464,17 @@ Package pdftex.def Info: ./imagens/apendices/pagina-inicial-apache-tomcat.png u
 sed on input line 41.
 (pdftex.def)             Requested size: 412.79837pt x 209.03406pt.
 
-<./imagens/apendices/pagina-download-tomcat-7.png, id=2022, 982.67125pt x 607.2
+<./imagens/apendices/pagina-download-tomcat-7.png, id=2026, 982.67125pt x 607.2
 6875pt>
 File: ./imagens/apendices/pagina-download-tomcat-7.png Graphic file (type png)
  <use ./imagens/apendices/pagina-download-tomcat-7.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-download-tomcat-7.png used 
 on input line 51.
 (pdftex.def)             Requested size: 393.06154pt x 242.9032pt.
- [124 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
+ [125 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
 ndices/pagina-inicial-apache-tomcat.png> <C:/Users/Andressa Faria/Documents/Git
 Hub/tcc/documento/latex/imagens/apendices/pagina-download-tomcat-7.png>]
-<./imagens/apendices/perspectiva-server-sem-servidor.png, id=2031, 765.86125pt 
+<./imagens/apendices/perspectiva-server-sem-servidor.png, id=2035, 765.86125pt 
 x 197.73875pt>
 File: ./imagens/apendices/perspectiva-server-sem-servidor.png Graphic file (typ
 e png)
@@ -5483,7 +5483,7 @@ Package pdftex.def Info: ./imagens/apendices/perspectiva-server-sem-servidor.pn
 g used on input line 67.
 (pdftex.def)             Requested size: 382.92969pt x 98.86913pt.
 
-<./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png, id=2033, 528.976
+<./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png, id=2037, 528.976
 26pt x 538.01pt>
 File: ./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png Graphic file
  (type png)
@@ -5492,11 +5492,11 @@ File: ./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png Graphic file
 Package pdftex.def Info: ./imagens/apendices/criar-configuracao-tomcat-no-eclip
 se.png used on input line 77.
 (pdftex.def)             Requested size: 211.58675pt x 215.20018pt.
- [125 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
+ [126 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
 ndices/perspectiva-server-sem-servidor.png> <C:/Users/Andressa Faria/Documents/
 GitHub/tcc/documento/latex/imagens/apendices/criar-configuracao-tomcat-no-eclip
 se.png>]
-<./imagens/apendices/definir-pasta-home-tomcat.png, id=2044, 526.96875pt x 537.
+<./imagens/apendices/definir-pasta-home-tomcat.png, id=2049, 526.96875pt x 537.
 00626pt>
 File: ./imagens/apendices/definir-pasta-home-tomcat.png Graphic file (type png)
 
@@ -5506,20 +5506,20 @@ Package pdftex.def Info: ./imagens/apendices/definir-pasta-home-tomcat.png used
 (pdftex.def)             Requested size: 210.78375pt x 214.79869pt.
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/25_Apendice_05_Neo4j.tex" [126 <C:/Users/Andressa Faria/Documents/GitHub/tc
+ces/25_Apendice_05_Neo4j.tex" [127 <C:/Users/Andressa Faria/Documents/GitHub/tc
 c/documento/latex/imagens/apendices/definir-pasta-home-tomcat.png>]
-<./imagens/apendices/download-neo4j.png, id=2052, 846.91406pt x 686.565pt>
+<./imagens/apendices/download-neo4j.png, id=2056, 846.91406pt x 686.565pt>
 File: ./imagens/apendices/download-neo4j.png Graphic file (type png)
 
 <use ./imagens/apendices/download-neo4j.png>
 Package pdftex.def Info: ./imagens/apendices/download-neo4j.png used on input l
 ine 10.
 (pdftex.def)             Requested size: 338.75963pt x 274.62112pt.
- [127
+ [128
 
  <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
 s/download-neo4j.png>]
-<./imagens/apendices/neo4j-install-step1.png, id=2062, 388.45125pt x 322.95656p
+<./imagens/apendices/neo4j-install-step1.png, id=2066, 388.45125pt x 322.95656p
 t>
 File: ./imagens/apendices/neo4j-install-step1.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step1.png>
@@ -5527,7 +5527,7 @@ Package pdftex.def Info: ./imagens/apendices/neo4j-install-step1.png used on in
 put line 21.
 (pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
 
-<./imagens/apendices/neo4j-install-step2.png, id=2064, 387.69844pt x 322.95656p
+<./imagens/apendices/neo4j-install-step2.png, id=2068, 387.69844pt x 322.95656p
 t>
 File: ./imagens/apendices/neo4j-install-step2.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step2.png>
@@ -5535,7 +5535,7 @@ Package pdftex.def Info: ./imagens/apendices/neo4j-install-step2.png used on in
 put line 31.
 (pdftex.def)             Requested size: 155.07661pt x 129.18033pt.
 
-<./imagens/apendices/neo4j-install-step3.png, id=2066, 388.45125pt x 322.95656p
+<./imagens/apendices/neo4j-install-step3.png, id=2070, 388.45125pt x 322.95656p
 t>
 File: ./imagens/apendices/neo4j-install-step3.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step3.png>
@@ -5543,7 +5543,7 @@ Package pdftex.def Info: ./imagens/apendices/neo4j-install-step3.png used on in
 put line 41.
 (pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
 
-<./imagens/apendices/neo4j-install-step4.png, id=2068, 388.45125pt x 322.95656p
+<./imagens/apendices/neo4j-install-step4.png, id=2072, 388.45125pt x 322.95656p
 t>
 File: ./imagens/apendices/neo4j-install-step4.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step4.png>
@@ -5554,12 +5554,12 @@ put line 51.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[128 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
+[129 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
 dices/neo4j-install-step1.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/do
 cumento/latex/imagens/apendices/neo4j-install-step2.png> <C:/Users/Andressa Far
 ia/Documents/GitHub/tcc/documento/latex/imagens/apendices/neo4j-install-step3.p
 ng>]
-<./imagens/apendices/neo4j-install-step5.png, id=2080, 389.20406pt x 323.70938p
+<./imagens/apendices/neo4j-install-step5.png, id=2084, 389.20406pt x 323.70938p
 t>
 File: ./imagens/apendices/neo4j-install-step5.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step5.png>
@@ -5567,7 +5567,7 @@ Package pdftex.def Info: ./imagens/apendices/neo4j-install-step5.png used on in
 put line 62.
 (pdftex.def)             Requested size: 155.67886pt x 129.48145pt.
 
-<./imagens/apendices/neo4j.jpg, id=2082, 409.53pt x 268.00125pt>
+<./imagens/apendices/neo4j.jpg, id=2086, 409.53pt x 268.00125pt>
 File: ./imagens/apendices/neo4j.jpg Graphic file (type jpg)
 
 <use ./imagens/apendices/neo4j.jpg>
@@ -5575,17 +5575,17 @@ Package pdftex.def Info: ./imagens/apendices/neo4j.jpg used on input line 73.
 (pdftex.def)             Requested size: 245.7199pt x 160.80197pt.
 )
 ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/26_Apendice_06_Questionario.tex" [129 <C:/Users/Andressa Faria/Documents/Gi
+ces/26_Apendice_06_Questionario.tex" [130 <C:/Users/Andressa Faria/Documents/Gi
 tHub/tcc/documento/latex/imagens/apendices/neo4j-install-step4.png> <C:/Users/A
 ndressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendices/neo4j-inst
 all-step5.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/im
-agens/apendices/neo4j.jpg>] [130
+agens/apendices/neo4j.jpg>] [131
 
 ]))
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[131]
+[132]
 
 Package caption Warning: Unused \captionsetup[Quadro] on input line 302.
 See the caption package documentation for explanation.
@@ -5613,9 +5613,9 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
  17410 strings out of 493921
- 286539 string characters out of 3144849
- 489292 words of memory out of 3000000
- 19097 multiletter control sequences out of 15000+200000
+ 286533 string characters out of 3144849
+ 488292 words of memory out of 3000000
+ 19096 multiletter control sequences out of 15000+200000
  69364 words of font info for 70 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  46i,12n,45p,1564b,2092s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -5631,9 +5631,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on Principal.pdf (132 pages, 5518336 bytes).
+Output written on Principal.pdf (133 pages, 5496946 bytes).
 PDF statistics:
- 2536 PDF objects out of 2984 (max. 8388607)
- 1113 named destinations out of 1200 (max. 500000)
+ 2541 PDF objects out of 2984 (max. 8388607)
+ 1114 named destinations out of 1200 (max. 500000)
  726 words of extra memory for PDF output out of 10000 (max. 10000000)
 
