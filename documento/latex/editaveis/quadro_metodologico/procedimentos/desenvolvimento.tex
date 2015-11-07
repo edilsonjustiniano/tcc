@@ -277,14 +277,14 @@ photo: users.photo, qtde: count(DISTINCT pMutualFriends)}) as person
 ORDER BY person.length, person.qtde DESC
 \end{lstlisting}
 
-\par Essa consulta é dividida em duas sub consultas separadas pela cláusula \texttt{UNION ALL}, a fim de atingir um número maior de possíveis parceiros ao usuário, sendo que a primeira delas está recuperando os dados de pessoas que trabalham na empresa cujo o usuário autenticado no sistema trabalha e não possua o relacionamento de ''parceria'' com ele. A última sub consulta é responsável por obter os dados de pessoas que vivem na cidade cujo o usuário autenticado vive, porém não possuem relacionamento de ''parceria'' e não trabalham na mesma empresa.
+\par Essa consulta é dividida em duas sub consultas separadas pela cláusula \texttt{UNION ALL}, a fim de atingir um número maior de possíveis parceiros ao usuário, sendo que a primeira delas está recuperando os dados de pessoas que trabalham na empresa cujo o usuário autenticado no sistema trabalha e não possua o relacionamento de ''parceria'' com ele. A última sub consulta é responsável por obter os dados de pessoas que vivem na cidade cujo o usuário autenticado vive, porém não possuem relacionamento de ''parceria'' e não trabalham na mesma empresa. Ambas as sub consultas levam em consideração os ''parceiros'' em comum entre o contratante autenticado e o possível parceiro. A Figura~\ref{fig:exemplo_funcionamento_possivel_parceiro} exemplifica o funcionamento dessa consulta.
 
-%\begin{figure}[h!]
-%	\centerline{\includegraphics[scale=0.3]{./imagens/localizar-parceiro.png}}
-%	\caption[Página de localização de parceiros]
-%	{Página de localização de parceiros \textbf{Fonte:} Elaborado pelos autores.}
-%	\label{fig:pagina_localizar_parceiro}
-%\end{figure}
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.4]{./imagens/exemplo-funcionamento-consulta-possiveis-parceiros.png}}
+	\caption[Exemplificação da consulta por possíveis parceiros.]
+	{Exemplificação da consulta por possíveis parceiros. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:exemplo_funcionamento_possivel_parceiro}
+\end{figure}
 
 
 \par Ainda relacionado ao tipo de conta contratante ou ambos, foi implementado o caso de uso adicionar parceiro, que permite ao usuário convidar um possível parceiro para fazer parte da sua rede.
@@ -487,7 +487,6 @@ ORDER BY sp.order, sp.media DESC
 
 Já a quarta e última sub consulta foi inserida a fim de abranger a busca e possibilitar que novos prestadores de serviços sejam avaliados pelos contratantes. Ela irá obter os dados de pessoas que ainda não foram avaliadas por nenhum parceiro, ou por pessoas que vivam na mesma cidade ou trabalhem na mesma empresa do usuário autenticado no sistema, o que permitiu aos usuários que acabaram de criar sua conta e não obtiveram a oportunidade de serem avaliados que fossem apresentados como opções para o serviço. Essa sub consulta é demonstrada no trecho de Código~\ref{list:consulta_busca_parte4}.
 
-
 \begin{lstlisting} [style=custom_SQL,caption={[Quarta \textit{sub query} para localização de mão de obra.]{Quarta \textit{sub query} para localização de mão de obra. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_busca_parte4] 	
 MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}), (sp:Person),
 (service:Service {name: 'Domestica'}), (partners:Person),
@@ -502,6 +501,16 @@ RETURN DISTINCT({serviceProviderName: sp.name,
 serviceProviderEmail: sp.email, service: service.name, total: 0,
 media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
 \end{lstlisting}
+
+\par A Figura~\ref{fig:explificar_consulta_busca_mao_de_obra} exemplifica todo o funcionamento da consulta de forma detalhada, facilitando a compreensão desta, que é, a maior e mais complexa consulta deste trabalho.
+
+\begin{figure}[h!]
+	\centerline{\includegraphics[scale=0.4]{./imagens/exemplo-funcionamento-consulta-buscar-mao-de-obra.png}}
+	\caption[Exemplificação da consulta por mão de obra.]
+	{Exemplificação da consulta por mão de obra. \textbf{Fonte:} Elaborado pelos autores.}
+	\label{fig:explificar_consulta_busca_mao_de_obra}
+\end{figure}
+
 
 \par Para auxiliar na tomada de decisão do usuário contratante, foi implementada uma funcionalidade que realiza o cálculo da média de avaliações de um serviço prestado por um profissional temporário, tendo como base as avaliações já realizadas pela rede de parceiros do usuário autenticado, da empresa onde ele trabalha e da cidade onde vive, oferecendo assim uma forma simples de obter acesso a qualidade do serviço prestado como demonstra a Fígura~\ref{fig:taxa_avaliacao}.
 
@@ -524,16 +533,67 @@ media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
 	\label{fig:dicas_randomicas}
 \end{figure}
 
-\par Para finalizar o desenvolvimento foram desenvolvidos gráficos que apresentem ao usuário informações a respeito da qualidade do serviço prestado pelo provedor de serviços, comparando-os com os demais prestadores. Esses gráficos foram gerados usando a biblioteca chamada \textit{charts}, disponibilizada no \textit{link} https://developers.google.com/chart. Ela foi incluída na página \textit{index} deste trabalho, permitindo assim o seu funcionamento. O trecho de código~\ref{list:codigo_insercao_charts} demonstra essa inserção.
+\par Para finalizar o desenvolvimento foram desenvolvidos gráficos que apresentem ao usuário informações a respeito da qualidade do serviço prestado pelo provedor de serviços, comparando-os com os demais prestadores. Esses gráficos foram gerados usando a biblioteca chamada \textit{Charts}, disponibilizada no \textit{link} https://developers.google.com/chart. Para utilizá-la, é preciso realizar o \textit{download} e, após concluído, incluir o arquivo chamado \texttt{Charts.js} na página, cujo o gráfico será apresentado, conforme demonstra o Código~\ref{list:codigo_insercao_charts}.
 
-\begin{lstlisting} [style=custom_Java,caption={[Inserção da biblioteca \textit{charts} na página inicial.]{Inserção da biblioteca \textit{charts} na página inicial. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:codigo_insercao_charts] 	
+\begin{lstlisting} [style=custom_HTML,caption={[Inserção da biblioteca \textit{charts} na página inicial.]{Inserção da biblioteca \textit{charts} na página inicial. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:codigo_insercao_charts] 	
 <script type="text/javascript" src="js/charts/Chart.js"></script>
+\end{lstlisting}
+
+\par Para gerar um gráfico, segundo a sua própria documentação, e conforme, utilizado neste trabalho, deve-se incluir um elemento \texttt{div} contendo um elemento \texttt{canvas} com um \textit{id} único, afim de facilitar o acesso a ele, por meio do código Javascript, que irá manipular os dados apresentados neste gráfico. Essa inclusão do elemento é apresentado no Código~\ref{list:codigo_incluir_canvas_charts}.
+
+\begin{lstlisting} [style=custom_HTML,caption={[Inclusão do elemento necessário para geração do gráfico.]{Inclusão do elemento necessário para geração do gráfico. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:codigo_incluir_canvas_charts] 	
+<div>
+	<canvas id="canvas" height="450" width="600"></canvas>
+</div>
+\end{lstlisting}
+
+\par Para manipular as informações do gráfico, tais como dados, cores, entre outras, é necessário criar um objeto em Javascript que contém todos os atributos necessários para gerá-lo corretamente. Este objeto é apresentado no Código~\ref{list:codigo_objeto_grafico}.
+
+\begin{lstlisting} [style=custom_HTML,caption={[Objeto contendo os atributos de configuração do gráfico.]{Objeto contendo os atributos de configuração do gráfico. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:codigo_objeto_grafico] 	
+$scope.lineChartData = {
+	labels : ["5 ultimas","10 ultimas","15 ultimas","20 ultimas"],
+	datasets : [{
+		label: "Minhas avaliacoes como " + $scope.selectedService,
+		fillColor : "rgba(166,246,166,0.2)",
+		strokeColor : "rgba(61,213,61,1)",
+		pointColor : "rgba(61,213,61,1)",
+		pointStrokeColor : "#fff",
+		pointHighlightFill : "#fff",
+		pointHighlightStroke : "rgba(41,157,41,1)",
+		data : [
+			//filled by lastEvaluateOfServiceProvider
+		]   
+	}, {
+		label: "As avaliacoes de " + $scope.selectedService + " em minha cidade",
+		fillColor : "rgba(98,168,248,0.2)",
+		strokeColor : "rgba(25,123,235,1)",
+		pointColor : "rgba(25,123,235,1)",
+		pointStrokeColor : "#fff",
+		pointHighlightFill : "#fff",
+		pointHighlightStroke : "rgba(33,97,170,1)",
+		data : [
+			//filled by lastEvaluateOfServiceInNetwork
+		]
+	}]
+};
+\end{lstlisting}
+
+\par Após realizado os passoas anteriormente descritos, para finalizar a geração do gráfico, foi necessário criar uma nova instância da classe \texttt{Chart}, informando o modelo do gráfico a ser utilizado, nesse caso, o modelo de linhas, a fim de facilitar a comparação entre as avaliações, juntamente com o objeto contendo todas as informações do gráfico, conforme apresentado na linha 3 do Código~\ref{list:codigo_criar_grafico_charts} que demonstra a criação dessa nova instância.
+
+\begin{lstlisting} [style=custom_HTML,caption={[Criação de nova instância para gráficos de linha.]{Criação de nova instância para gráficos de linha. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:codigo_criar_grafico_charts] 	
+$scope.loadGraph = function(){
+	var ctx = document.getElementById("canvas").getContext("2d");
+	window.myLine = new Chart(ctx).Line($scope.lineChartData, {
+		responsive: true
+	});
+};
 \end{lstlisting}
 
 \par Essa biblioteca foi selecionada, pois, ela é facilmente integrada com o \textit{framework} Angular JS, facilitando a sua utilização neste trabalho. 
 
 \par O primeiro gráfico foi disponibilizado na página de perfil do prestador de serviços, estando visível ao contratante assim que ele efetua a busca por uma determinada mão de obra. Este gráfico apresenta a média avaliativa dos trabalhos prestados pelo provedor selecionado, em uma determinada função. O sistema toma como base as vinte últimas avaliações recebidas, independente do período em que elas foram feitas. Desta forma, um provedor de serviços que trabalha a muito tempo em um mesmo local não será prejudicado, pois terá registrada as avaliações que recebeu neste tempo, mesmo que elas não sejam atuais. O gráfico que representa esta funcionalidade é apresentado na Figura \ref{fig:grafico_pagina_perfil}.
 
+\newpage
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.65]{./imagens/grafico-pagina-perfil.png}}
 	\caption[Gráfico de avaliação do serviço na página de perfil do provedor.]
@@ -541,15 +601,14 @@ media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
 	\label{fig:grafico_pagina_perfil}
 \end{figure}
 
-\par O segundo gráfico foi disponibilizado visando possibilitar ao prestador de serviços ter um \textit{feedback} dos trabalhos realizados por ele. Este gráfico é apresentado em sua página inicial e trás informações referente a sua média avaliativa. A média é gerada com base nas últimas vinte avaliações recebidas, seguindo o mesmo padrão do gráfico disponibilizado na página de perfil. Para que o provedor tenha uma base da qualidade do serviço prestado, o gráfico apresenta um comparativo da média recebida por ele e a média geral de prestadores de serviço que desempenham o mesmo trabalho em sua cidade. O gráfico que representa esta funcionalidade é apresentado na Figura \ref{fig:grafico_pagina_inicial}.
+\par O segundo gráfico foi disponibilizado visando possibilitar ao prestador de serviços ter um \textit{feedback} dos trabalhos realizados por ele. Este gráfico é apresentado em sua página inicial e trás informações referente a sua média avaliativa. A média é gerada com base nas últimas vinte avaliações recebidas, seguindo o mesmo padrão do gráfico disponibilizado na página de perfil. Para que o provedor tenha uma base da qualidade do serviço prestado, o gráfico apresenta um comparatiParavo da média recebida por ele e a média geral de prestadores de serviço que desempenham o mesmo trabalho em sua cidade. O gráfico que representa esta funcionalidade é apresentado na Figura \ref{fig:grafico_pagina_inicial}.
 
+\newpage
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.65]{./imagens/grafico-pagina-inicial.png}}
 	\caption[Gráfico de avaliação do serviço na página inicial do provedor.]
 	{Gráfico de avaliação do serviço na página inicial do provedor. \textbf{Fonte:} Elaborado pelos autores.}
 	\label{fig:grafico_pagina_inicial}
 \end{figure}
-
-
 
 \par Seguindo todos os procedimentos descritos nessa seção obteve-se como resultado a aplicação proposta por este trabalho.
