@@ -18,3 +18,4 @@
 \contentsline {lstlisting}{\numberline {18}Segunda \textit {sub query} para localiza\IeC {\c c}\IeC {\~a}o de m\IeC {\~a}o de obra.}{71}{lstlisting.3.18}
 \contentsline {lstlisting}{\numberline {19}Terceira \textit {sub query} para localiza\IeC {\c c}\IeC {\~a}o de m\IeC {\~a}o de obra.}{71}{lstlisting.3.19}
 \contentsline {lstlisting}{\numberline {20}Quarta \textit {sub query} para localiza\IeC {\c c}\IeC {\~a}o de m\IeC {\~a}o de obra.}{72}{lstlisting.3.20}
+\contentsline {lstlisting}{\numberline {21}Inser\IeC {\c c}\IeC {\~a}o da biblioteca \textit {charts} na p\IeC {\'a}gina inicial.}{74}{lstlisting.3.21}
