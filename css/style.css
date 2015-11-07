@@ -753,14 +753,14 @@ label.subtitle {
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: rgb(220,220,220);
+    background-color: rgb(61,213,61);
 }
 
 #legend-graphic div.second{
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: rgb(151,187,205);
+    background-color: rgb(25,123,235);
 }
 
 #legend-graphic span {
