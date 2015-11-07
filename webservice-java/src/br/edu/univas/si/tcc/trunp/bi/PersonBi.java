@@ -34,6 +34,10 @@ public class PersonBi {
 	public JSONArray edit(Person person) throws JSONException {
 		return dao.edit(person);
 	}
+
+	public JSONArray changePassword(String email, String newPassword) throws JSONException {
+		return dao.changePassword(email, newPassword);
+	}
 	
 	
 

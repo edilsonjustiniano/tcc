@@ -379,24 +379,24 @@ app.controller('ServiceProviderProfileController',
             datasets : [
                 {
                     label: "Avaliações de " + $scope.serviceProvider.name,
-                    fillColor : "rgba(220,220,220,0.2)",
-                    strokeColor : "rgba(220,220,220,1)",
-                    pointColor : "rgba(220,220,220,1)",
+                    fillColor : "rgba(166,246,166,0.2)",
+                    strokeColor : "rgba(61,213,61,1)",
+                    pointColor : "rgba(61,213,61,1)",
                     pointStrokeColor : "#fff",
                     pointHighlightFill : "#fff",
-                    pointHighlightStroke : "rgba(220,220,220,1)",
+                    pointHighlightStroke : "rgba(41,157,41,1)",
                     data : [
                         //filled by lastEvaluateOfServiceProvider
                     ]   
                 },
                 {
                     label: "B",
-                    fillColor : "rgba(151,187,205,0.2)",
-                    strokeColor : "rgba(151,187,205,1)",
-                    pointColor : "rgba(151,187,205,1)",
+                    fillColor : "rgba(98,168,248,0.2)",
+                    strokeColor : "rgba(25,123,235,1)",
+                    pointColor : "rgba(25,123,235,1)",
                     pointStrokeColor : "#fff",
                     pointHighlightFill : "#fff",
-                    pointHighlightStroke : "rgba(151,187,205,1)",
+                    pointHighlightStroke : "rgba(33,97,170,1)",
                     data : [
                         //filled by lastEvaluateOfServiceInNetwork
                     ]

@@ -524,12 +524,13 @@ media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
 	\label{fig:dicas_randomicas}
 \end{figure}
 
-\par Para finalizar o desenvolvimento foram desenvolvidos gráficos que apresentem ao usuário informações a respeito da qualidade do serviço prestado pelo provedor de serviços, comparando-os com os demais prestadores. Esses gráficos foram gerados usando a biblioteca de \textit{charts}, disponibilizada no \textit{link} https://developers.google.com/chart. Ela foi incluída na página \textit{index} deste trabalho, permitindo assim o seu funcionamento. O trecho de código~\ref{list:codigo_insercao_charts} demonstra essa inserção.
+\par Para finalizar o desenvolvimento foram desenvolvidos gráficos que apresentem ao usuário informações a respeito da qualidade do serviço prestado pelo provedor de serviços, comparando-os com os demais prestadores. Esses gráficos foram gerados usando a biblioteca chamada \textit{charts}, disponibilizada no \textit{link} https://developers.google.com/chart. Ela foi incluída na página \textit{index} deste trabalho, permitindo assim o seu funcionamento. O trecho de código~\ref{list:codigo_insercao_charts} demonstra essa inserção.
 
 \begin{lstlisting} [style=custom_Java,caption={[Inserção da biblioteca \textit{charts} na página inicial.]{Inserção da biblioteca \textit{charts} na página inicial. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:codigo_insercao_charts] 	
 <script type="text/javascript" src="js/charts/Chart.js"></script>
 \end{lstlisting}
 
+\par Essa biblioteca foi selecionada, pois, ela é facilmente integrada com o \textit{framework} Angular JS, facilitando a sua utilização neste trabalho. 
 
 \par O primeiro gráfico foi disponibilizado na página de perfil do prestador de serviços, estando visível ao contratante assim que ele efetua a busca por uma determinada mão de obra. Este gráfico apresenta a média avaliativa dos trabalhos prestados pelo provedor selecionado, em uma determinada função. O sistema toma como base as vinte últimas avaliações recebidas, independente do período em que elas foram feitas. Desta forma, um provedor de serviços que trabalha a muito tempo em um mesmo local não será prejudicado, pois terá registrada as avaliações que recebeu neste tempo, mesmo que elas não sejam atuais. O gráfico que representa esta funcionalidade é apresentado na Figura \ref{fig:grafico_pagina_perfil}.
 

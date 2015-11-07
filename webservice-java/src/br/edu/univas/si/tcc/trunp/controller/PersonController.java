@@ -34,4 +34,8 @@ public class PersonController {
 	public JSONArray edit(Person person) throws JSONException {
 		return personBi.edit(person);
 	}
+
+	public JSONArray changePassword(String email, String newPassword) throws JSONException {
+		return personBi.changePassword(email, newPassword);
+	}
 }

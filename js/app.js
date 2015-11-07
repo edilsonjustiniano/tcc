@@ -42,6 +42,11 @@ app.config(function($routeProvider) {
 		templateUrl : "views/config.html"
 	});
     
+    $routeProvider.when("/change-password", {
+		controller : "PasswordController",
+		templateUrl : "views/change-password.html"
+	});
+    
 	//$routeProvider.otherwise( {redirectTo: "/home"});
 
 });

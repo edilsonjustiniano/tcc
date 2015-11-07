@@ -271,6 +271,39 @@ public class PersonServiceImpl implements PersonService {
 		
 		return json;
 	}
+
+
+	@POST
+	@Path("/chane-password")
+	public JSONObject changePassword(String data) throws JSONException {
+		
+		System.out.println(data);
+		JSONObject jsonData = new JSONObject(data);
+		JSONObject json = null;
+		String token = null;
+		Token tokenDecoded = null;
+		token = jsonData.getString("token");
+		String userData = jsonData.getString("user");
+		JSONObject jsonUserData = new JSONObject(userData);
+		
+		tokenDecoded = Base64Util.decodeToken(token.getBytes());
+		if (!jsonUserData.getString("password").equals(tokenDecoded.getPassword())) {
+			json = new JSONObject();
+			json.put("success", false);
+			json.put("message", "Senha atual inválida");
+			
+			return json;
+		}
+		String newPassword = MD5Util.generateMD5(jsonUserData.getString("newPassword"));
+		
+		JSONArray result = personController.changePassword(tokenDecoded.getEmail(), newPassword);
+		json = JSONUtil.generateJSONSuccessByData(true, result);
+		byte[] tokenByte = Base64Util.encodeToken(tokenDecoded.getEmail(), jsonUserData.getString("newPassword"));
+		json.put("token", new String(tokenByte));
+		
+		return json;
+
+	}
 	
 	
 }

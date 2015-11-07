@@ -233,8 +233,7 @@ public class PersonDAO {
 				+ "(person)-[oldWorksIn:WORKS_IN]->(oldCompany), "
 				+ "(person)-[oldLivesInCity:LIVES_IN]->(oldCityLives), "
 				+ "(newCompany)-[:LOCATED_IN]->(cityWorks), "
-				+ "(cityWorks)-[:BELONGS_TO]->(ufWorks), "
-				+ "(cityLives)-[:BELONGS_TO]->(ufLives) "
+				+ "(cityWorks)-[:BELONGS_TO]->(ufWorks) "
 				+ "WITH DISTINCT(person), cityLives, newCompany, oldWorksIn, oldLivesInCity "
 				+ "DELETE oldWorksIn, oldLivesInCity "
 				+ "CREATE (person)-[:LIVES_IN]->(cityLives), "
@@ -263,4 +262,32 @@ public class PersonDAO {
 
 		return arr;
 	}
+
+	public JSONArray changePassword(String email, String newPassword) throws JSONException {
+		
+		WebResource resource = FactoryDAO.GetInstance();
+
+		String query = "{\"query\":\" MATCH (person:Person {email: '"+ email + "'}) "
+				+ "SET person += {password: '" + newPassword + "'} "
+				+ "RETURN DISTINCT({name: person.name, email: person.email}) as person; \"}";
+		System.out.println(query);
+		ClientResponse responseCreate = resource
+				.accept(MediaType.APPLICATION_JSON)
+				.type(MediaType.APPLICATION_JSON).entity(query)
+				.post(ClientResponse.class);
+		String resp = responseCreate.getEntity(String.class);
+
+		JSONObject json = null;
+		JSONArray objData = null;
+		json = new JSONObject(resp);
+		objData = json.getJSONArray("data");
+		List<JSONObject> parser = JSONUtil.parseJSONArrayToListJSON(objData);
+		System.out.println(parser);
+
+		JSONArray arr = new JSONArray(parser);
+		System.out.println(arr);
+
+		return arr;
+	}
+	
 }
