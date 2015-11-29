@@ -253,14 +253,14 @@
 \usepackage{styles/EventFlowStyle}
 
 \addto\captionsbrazil{
-  \renewcommand{\listfigurename}{Lista de Figuras}
-  \renewcommand{\listadesiglasname}{Lista de Siglas e Abreviaturas}
+  \renewcommand{\listfigurename}{\centerline{Lista de Figuras}}
+  \renewcommand{\listadesiglasname}{\centerline{Lista de Siglas e Abreviaturas}}
 }
 
 % Novo list of (listings) para QUADROS
 
 \newcommand{\quadroname}{Quadro}
-\newcommand{\listofquadrosname}{Lista de quadros}
+\newcommand{\listofquadrosname}{\centerline{Lista de quadros}}
 
 %\usepackage{floatrow} % floatfoot do quadro %comentado pois dá erro de \newfloat already defined
 
@@ -326,7 +326,7 @@
 }
 \makeatother
 
-\renewcommand*{\lstlistlistingname}{Lista de Códigos}
+\renewcommand*{\lstlistlistingname}{\centerline{Lista de Códigos}}
 \renewcommand{\lstlistingname}{Código}
 
 \renewcommand{\anexosname}{ANEXOS}
