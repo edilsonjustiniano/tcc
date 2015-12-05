@@ -119,9 +119,9 @@ Nesse trecho de código entre as linhas 17 e 27 é apresentada uma consulta escr
 
 Portanto, foi necessário desenvolver uma forma de converter os resultados obtidos nas buscas realizadas no banco de dados, a fim de retornar um JSON válido ao usuário, que futuramente viria a utilizar a API REST fornecida por este \textit{software}. É possível visualizar este tratamento no Código~\ref{list:consulta_usando_api_cypher} a partir da linha 34 até a linha 38.
 
-Na linha 34 foi necessário criar um objeto JSON da classe \texttt{JSONObject} passando o retorno da consulta em seu construtor. Já na linha 35 foi obtido os dados retornados da consulta, porém, como demonstrado no Código~\ref{list:exemplo_json_retornado_neo4j} os dados são retornados em uma \textit{collection} (coleção) e não em objetos, portanto, para recuperar os dados foi necessário criar um objeto da classe \texttt{JSONArray} e recuperar os dados por meio do campo \texttt{data} do resultado.
+Na linha 34 foi necessário criar um objeto JSON da classe \texttt{JSONObject} passando o retorno da consulta em seu construtor. Já na linha 35 foi obtido os dados retornados da consulta, porém, como demonstrado no Código~\ref{list:exemplo_json_retornado_neo4j} eles são retornados em uma \textit{collection} (coleção) e não em objetos, portanto, para obtê-los foi necessário criar um objeto da classe \texttt{JSONArray} e recuperá-los por meio do campo \texttt{data} do resultado.
 
-Após recuperar os dados, foi necessário extrair os dados de cada resultado da consulta que até este ponto estavam armazenados em um \texttt{array} e transferí-los para uma lista de objetos da classe \texttt{JSONObject} como apresenta a linha 36 do Código~\ref{list:consulta_usando_api_cypher}, para tanto, foi criada uma classe estática denominada \texttt{JSONUtil} responsável por realizar essa tarefa e retonar os dados no formato padrão. Essae método é apresentado no Código~\ref{list:parser_jsonarray_to_list_json_object}.
+Após recuperar os dados, foi necessário extraí-los dos resultados da consulta que até este ponto estavam armazenados em um \texttt{array} e transferí-los para uma lista de objetos da classe \texttt{JSONObject} como apresenta a linha 36 do Código~\ref{list:consulta_usando_api_cypher}, para tanto, foi criada uma classe estática denominada \texttt{JSONUtil} responsável por realizar essa tarefa e retonar os dados no formato padrão. Esse método é apresentado no Código~\ref{list:parser_jsonarray_to_list_json_object}.
 
 \begin{lstlisting} [style=custom_JAVA,caption={[Gerarador de JSON padrão com os resultados das consultas \textit{Cypher}]{Gerarador de JSON padrão com os resultados das consultas \textit{Cypher}. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:parser_jsonarray_to_list_json_object] 	
 public class JSONUtil {
@@ -146,7 +146,7 @@ Após essa extração de dados foi necessário criar um objeto da classe \texttt
  
 \par A partir deste ponto, a aplicação estava totalmente desacoplada, sendo necessário realizar uma configuração, a fim de permitir que as requisições enviadas pelo \textit{front end} fossem aceitas pelo \textit{back end}, localizado em outro domínio.
 
-\par Devido à mudança de tecnologias já comentadas, houve a necessidade de atualizar os diagramas de sequência e de classe, inserindo os contratos de serviços do \textit{web service} REST. Com a definição deste contrato que é apresentado no Apêndice II deste trabalho, deu-se início ao desenvolvimento dos casos de uso, identificados na primeira fase do ICONIX. 
+\par Devido à mudança de tecnologias já comentada, houve a necessidade de atualizar os diagramas de sequência e de classe, inserindo os contratos de serviços do \textit{web service} REST. Com a definição deste contrato que é apresentado no Apêndice II deste trabalho, deu-se início ao desenvolvimento dos casos de uso, identificados na primeira fase do ICONIX. 
 
 \par Posterior à realização dos testes e da escolha definitiva da arquitetura que seria utilizada, iniciou-se a implementação dos casos de uso. O primeiro a ser implementado foi o caso de uso de criação de conta. Para este caso de uso, teve-se o cuidado de criar um mecanismo de criptografia de dados sigilosos, como usuário e senha, visando garantir a segurança da aplicação. Estas informações criptografadas são enviadas a cada requisição e validadas pelo \textit{web service}, sendo atualizadas caso sejam válidas, tornado mais complexo a quebra desta criptografia. Este mecanismo foi desenvolvido com base no sistema de \textit{login} via \textit{token}. Segundo o embasamento usado na criação de contas, deu-se início ao desenvolvimento do sistema de \textit{login} e \textit{logoff}, que também utilizam o conceito de criptografia via \textit{token}. A Figura~\ref{fig:pagina_login} apresenta a página de \textit{login}.
 
@@ -157,7 +157,7 @@ Após essa extração de dados foi necessário criar um objeto da classe \texttt
 	\label{fig:pagina_login}
 \end{figure}
 
-Segundo \citeonline{token_traditional_babal}, os sistemas de autenticações tradicionais utilizam recursos como sessão e \textit{cookies}. A autenticação do usuário é realizada por meio de alguns dados, geralmente nome de usuário (ou email) e senha, com esses dados a aplicação no \textit{back-end}, os validam junto a base de dados e caso obtenha sucesso nesse processo de validação é criada uma sessão e armazenada no servidor, após realizada toda a validação a aplicação retorna a informação dessa sessão para quem a requisitou de modo que ela seja armazenada no navegador de internet por meio de sessão e/ou \textit{cookies}. A partir desse momento, a cada nova solicitação a aplicação \textit{back-end} irá comparar a sessão armazenada no servidor com a fornecida pelo \textit{front-end}. A Fígura~\ref{fig:autenticacao_via_sessao} demonstra o fluxo utilizado pelos sistemas cuja autenticação de sessão é a tradicional.
+Segundo \citeonline{token_traditional_babal}, os sistemas de autenticações tradicionais utilizam recursos como sessão e \textit{cookies}. A autenticação do usuário é realizada por meio de alguns dados, geralmente nome de usuário (ou email) e senha, com esses dados a aplicação no \textit{back-end}, os validam junto a base de dados e caso obtenha sucesso nesse processo de validação é criada uma sessão e armazenada no servidor, após realizada toda a validação a aplicação retorna a informação dessa sessão para quem a requisitou de modo que ela seja armazenada no navegador de internet por meio de sessão e/ou \textit{cookies}. A partir desse momento, a cada nova solicitação a aplicação \textit{back-end} irá comparar a sessão armazenada no servidor com a fornecida pelo \textit{front-end}. A Figura~\ref{fig:autenticacao_via_sessao} demonstra o fluxo utilizado pelos sistemas cuja autenticação de sessão é a tradicional.
 
 \newpage
 \begin{figure}[h!]
@@ -167,7 +167,7 @@ Segundo \citeonline{token_traditional_babal}, os sistemas de autenticações tra
 	\label{fig:autenticacao_via_sessao}
 \end{figure}
 
-Para \citeonline{authentication_via_token_chris_sevilleja}, a autenticação via \textit{token}, diferente da forma convencional não utiliza os recursos de sessão e \textit{cookies}. Contudo o processo inicial é o mesmo, a autenticação se inicia por meio dos mesmos dados da autenticação tradicional, realiza o mesmo o processo de validação dos dados informados junto a base de dados, porém caso obtenha sucesso não cria uma sessão, e sim um \textit{token} com os dados necessários para a sua validação \textit{criptografados}. Após criado o \textit{token} ele é enviado de volta ao usuário solicitante de modo que ele seja armazenado pela aplicação cliente, sendo ela um aplicativo \textit{web} ou \textit{mobile}, entre outras. A partir desse momento, a cada nova solicitação, a aplicação cliente deverá enviar o \textit{token} anteriormente recebido do servidor e armazenado por ela, para que ele seja validado pelo servidor. A Fígura~\ref{fig:autenticacao_via_token} demonstra o fluxo utilizado pelos sistemas cuja autenticação é realizada via \textit{token}.
+Para \citeonline{authentication_via_token_chris_sevilleja}, a autenticação via \textit{token}, diferente da forma convencional não utiliza os recursos de sessão e \textit{cookies}. Contudo o processo inicial é o mesmo, a autenticação se inicia por meio dos mesmos dados da forma tradicional, realizando o mesmo o processo de validação, junto à base de dados, porém caso obtenha sucesso não cria uma sessão, e sim um \textit{token} com os dados necessários para a sua validação \textit{criptografados}. Após criado o \textit{token} ele é enviado de volta ao usuário solicitante de modo que ele seja armazenado pela aplicação cliente, sendo ela um aplicativo \textit{web} ou \textit{mobile}, entre outras. A partir desse momento, a cada nova solicitação, a aplicação cliente deverá enviar o \textit{token} anteriormente recebido do servidor e armazenado por ela, para que ele seja validado. A Figura~\ref{fig:autenticacao_via_token} demonstra o fluxo utilizado pelos sistemas cuja autenticação é realizada via \textit{token}.
 
 \newpage
 \begin{figure}[h!]
@@ -237,9 +237,9 @@ public class TokenBi {
 }
 \end{lstlisting}
 
-Para realizar a validação do \textit{token} expirado, foi criado o método \texttt{isExpiredSession} que  recebe como parâmetro um objeto da classe \texttt{Token} contendo além dos dados do usuário, também a informação relacionada a data e hora da última requisição, com base nessa última informação na linha 12 é realizado um cálculo para obter um objeto do tipo \texttt{Date} contendo a data da última requisição do usuário somado a mais 15 minutos. A partir dessa informação é realizado uma comparação entre ela e a data atual do sistema, como é possível visualizar na linha 15, caso essa informação seja anterior a data atual do sistema o \textit{token} está expirado e o método \texttt{isExpiredSession} retorna \textit{true}. Caso contrário ele irá retornar \textit{false}.
+Para realizar a validação do \textit{token} expirado, foi criado o método \texttt{isExpiredSession} que  recebe como parâmetro um objeto da classe \texttt{Token} contendo além dos dados do usuário, também a informação relacionada à data e hora da última requisição, com base nessa última informação na linha 12 é realizado um cálculo para obter um objeto do tipo \texttt{Date} contendo a data da última requisição do usuário somada a mais 15 minutos. A partir dessa informação é realizada uma comparação entre ela e a data atual do sistema, como é possível visualizar na linha 15, caso essa informação seja anterior a data atual do sistema o \textit{token} está expirado e o método \texttt{isExpiredSession} retorna \textit{true}. Caso contrário ele irá retornar \textit{false}.
 
-\par Com o funcionamento do sistema de \textit{login}, passou-se a desenvolver a página inicial da aplicação, contendo as informações que são restritas ao usuário cadastrado. O sistema apresenta uma página inicial diferente para cada tipo de conta, sendo elas: contratantes, provedores de serviço ou ambos, contendo apenas as informações que são liberadas de acordo com o acesso do usuário, sendo essas informações relatórios, últimas atualizações na rede de parceiros, avaliações de serviços e prováveis parceiros. A página inicial do tipo contratante é apresentada na Figura~\ref{fig:pagina_inicial_contratante}.
+\par Com o funcionamento do sistema de \textit{login}, passou-se a desenvolver a página inicial da aplicação, contendo as informações que são restritas ao usuário cadastrado. O sistema apresenta uma página inicial diferente para cada tipo de conta, sendo elas: contratantes, provedores de serviço ou ambos, contendo apenas as informações que são liberadas de acordo com o acesso do usuário, sendo essas relatórios, últimas atualizações na rede de parceiros, avaliações de serviços e prováveis parceiros. A página inicial do tipo contratante é apresentada na Figura~\ref{fig:pagina_inicial_contratante}.
 
 \newpage
 \begin{figure}[h!]
@@ -301,7 +301,7 @@ partnerEmail: partner.email} as added
 
 \par Essa consulta é separada em três partes, sendo elas dividas pelas cláusulas \texttt{MATCH}, \texttt{CREATE} e \texttt{RETURN}. A primeira parte dessa consulta irá localizar os vértices cujos \textit{e-mails} sejam semelhantes ao do usuário autenticado no sistema e do parceiro convidado, respectivamente. A segunda parte é responsável por criar a aresta entre os vértices obtidos pela primeira parte da consulta. A terceira e última parte, irá retornar os dados de ambos os usuários, sendo eles, o usuário autenticado no sistema e parceiro recém convidado a fazer parte da rede de parceiros do usuário autenticado.
 
-\par Após a implementação da lógica para adicionar um novo parceiro, houve a necessidade de implementar o serviço de requisições de parcerias, uma vez que não bastava apenas um contratante convidar outro para se tornarem parceiros, mas sim que o contratante convidado aceitasse sua solicitação de parceria, para assim se tornarem parceiros. Visando disponibilizar estas solicitações de forma agradável ao usuário, foi desenvolvida uma funcionalidade para que o usuário pudesse aceitar ou rejeitar a solicitação enviada à ele, essa funcionalidade apresentada em destaque na Figura~\ref{fig:aceitar_rejeitar_solicitacao_parceria}.
+\par Após a implementação da lógica para adicionar um novo parceiro, houve a necessidade de implementar o serviço de requisições de parcerias, uma vez que não bastava apenas um contratante convidar outro para se tornarem parceiros, mas sim que o contratante convidado aceitasse sua solicitação de parceria, para assim se tornarem parceiros. Visando disponibilizar estas solicitações de forma agradável ao usuário, foi desenvolvida uma funcionalidade para que o usuário pudesse aceitar ou rejeitar a solicitação enviada a ele, essa funcionalidade apresentada em destaque na Figura~\ref{fig:aceitar_rejeitar_solicitacao_parceria}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.45]{./imagens/aceitar_rejeitar_solicitacao_parceria.png}}
@@ -357,7 +357,7 @@ as partner ORDER BY partner.length, partner.mutualFriends DESC
 \par Essa consulta é muito parecida com a apresentada no Código~\ref{list:consulta_possiveis_parceiros}, porém há uma diferença, neste caso é levado em consideração o nome informado pelo usuário como critério de busca.
  
 
-\par O caso de uso gerenciar serviços foi implementado em sequência, abrangendo as principais funcionalidades de gerenciamento: cadastrar e adicionar um novo serviço ao usuário, cujo tipo de conta é provedor de serviços, listar os serviços atribuídos a ele, e remover serviços quando necessário. Visando melhorar a usabilidade, foi implementado um mecanismo de busca, que permitiu filtrar os resultados por meio de um campo que possui a função  auto completar, evitando assim, possíveis erros e diminuindo o tempo gasto pelo usuário para adicionar o serviço. A função realiza a busca em uma lista de serviços anteriormente cadastrados, no entanto, caso não haja o serviço solicitado, o usuário tem a liberdade de cadastrá-lo e atribuí-lo a si mesmo. A Fígura~\ref{fig:adicionar_servicos} apresenta essa funcionalidade.
+\par O caso de uso ''Gerenciar serviços'' foi implementado em sequência, abrangendo as principais funcionalidades de gerenciamento: cadastrar e adicionar um novo serviço ao usuário, cujo tipo de conta é provedor de serviços, listar os serviços atribuídos a ele, e remover serviços quando necessário. Visando melhorar a usabilidade, foi implementado um mecanismo de busca, que permitiu filtrar os resultados por meio de um campo que possui a função  auto completar, evitando assim, possíveis erros e diminuindo o tempo gasto pelo usuário para adicionar o serviço. A função realiza a busca em uma lista de serviços anteriormente cadastrados, no entanto, caso não haja o serviço solicitado, o usuário tem a liberdade de cadastrá-lo e atribuí-lo a si mesmo. A Figura~\ref{fig:adicionar_servicos} apresenta essa funcionalidade.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.3]{./imagens/adcionar-servico.png}}
@@ -430,7 +430,7 @@ media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC;
 
 Essa consulta é dividida em quatro sub consultas, separadas pela cláusula \texttt{UNION ALL}, a fim de atingir um número maior de possibilidades de prestadores de serviços. Visando facilitar o entendimento, suas partes são apresentadas isoladamente a seguir.
 
-A primeira delas está recuperando os dados de pessoas que proveram o serviço de doméstica para usuários que possuem o relacionamento de parceria com o usuário autenticado no sistema, nesse caso o \textit{e-mail} dele é edilsonjustiniano@gmail.com. Portanto, nessa primeira parte da consulta serão retornadas as avaliações realizadas pelos parceiros do usuário autenticado no sistema voltadas as pessoas que proveem o serviço de doméstica. Essa sub consulta é demonstrada no trecho de Código~\ref{list:consulta_busca_parte1}.
+A primeira delas está recuperando os dados de pessoas que proveram o serviço de doméstica para usuários que possuem o relacionamento de parceria com o usuário autenticado no sistema, nesse caso o \textit{e-mail} dele é \texttt{edilsonjustiniano@gmail.com}. Portanto, nessa primeira parte da consulta serão retornadas as avaliações realizadas pelos parceiros do usuário autenticado no sistema voltadas às pessoas que proveem o serviço de doméstica. Essa sub consulta é demonstrada no trecho de Código~\ref{list:consulta_busca_parte1}.
 
 \begin{lstlisting} [style=custom_SQL,caption={[Primeira \textit{sub query} para localização de mão de obra.]{Primeira \textit{sub query} para localização de mão de obra. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_busca_parte1] 	
 MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}), (sp:Person), 
@@ -448,7 +448,7 @@ total: count(executed), media: avg(executed.note), order: 1}) as sp
 ORDER BY sp.order, sp.media DESC
 \end{lstlisting}
 
-A segunda sub consulta irá obter os dados de pessoas que proveram o mesmo serviço da sub consulta anterior para usuários que trabalhem na mesma empresa mas que não possuem o relacionamento de parceria com o usuário autenticado no sistema. Portanto, nessa segunda parte da consulta serão retornados as avaliações realizadas por pessoas que não são parceiras do usuário autenticado no sistema, mas que trabalham na mesma empresa. Essa sub consulta é demonstrada no trecho de Código~\ref{list:consulta_busca_parte2}.
+A segunda sub consulta irá obter os dados de pessoas que proveram o mesmo serviço da sub consulta anterior para usuários que trabalhem na mesma empresa, mas que não possuem o relacionamento de parceria com o usuário autenticado no sistema. Portanto, nessa segunda parte da consulta serão retornados as avaliações realizadas por pessoas que não são parceiras do usuário autenticado no sistema, mas que trabalham na mesma empresa. Essa sub consulta é demonstrada no trecho de Código~\ref{list:consulta_busca_parte2}.
 
 \begin{lstlisting} [style=custom_SQL,caption={[Segunda \textit{sub query} para localização de mão de obra.]{Segunda \textit{sub query} para localização de mão de obra. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_busca_parte2] 	
 MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}), (sp:Person),
@@ -466,7 +466,7 @@ total: count(executed), media: avg(executed.note), order: 2}) as sp
 ORDER BY sp.order, sp.media DESC
 \end{lstlisting}
 
-Já a terceira sub consulta irá obter os dados de pessoas que proveram o mesmo serviço das sub consultas anteriores para usuários que vivem na mesma cidade que o usuário autenticado no sistema, mas que não trabalham na mesma empresa que ele e não possuem o relacionamento de parceria com ele. Portanto, nessa terceira parte da consulta serão retornados as avaliações realizadas por pessoas que não são parceiras do usuário autenticado no sistema, que não trabalham na mesma empresa dele, mas que vivem na mesma cidade. Essa sub consulta é demonstrada no trecho de Código~\ref{list:consulta_busca_parte3}.
+Já a terceira sub consulta irá obter os dados de pessoas que proveram o mesmo serviço das sub consultas anteriores para usuários que vivem na mesma cidade que o usuário autenticado no sistema, mas que não trabalhem na mesma empresa que ele e não possuam o relacionamento de parceria com ele. Portanto, nessa terceira parte da consulta serão retornadas as avaliações realizadas por pessoas que não são parceiras do usuário autenticado no sistema, que não trabalhem na mesma empresa dele, mas que vivam na mesma cidade. Essa sub consulta é demonstrada no trecho de Código~\ref{list:consulta_busca_parte3}.
 
 \begin{lstlisting} [style=custom_SQL,caption={[Terceira \textit{sub query} para localização de mão de obra.]{Terceira \textit{sub query} para localização de mão de obra. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:consulta_busca_parte3] 	
 MATCH (me:Person {email: 'edilsonjustiniano@gmail.com'}), (sp:Person),
@@ -512,7 +512,7 @@ media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
 \end{figure}
 
 
-\par Para auxiliar na tomada de decisão do usuário contratante, foi implementada uma funcionalidade que realiza o cálculo da média de avaliações de um serviço prestado por um profissional temporário, tendo como base as avaliações já realizadas pela rede de parceiros do usuário autenticado, da empresa onde ele trabalha e da cidade onde vive, oferecendo assim uma forma simples de obter acesso a qualidade do serviço prestado como demonstra a Fígura~\ref{fig:taxa_avaliacao}.
+\par Para auxiliar na tomada de decisão do usuário contratante, foi implementada uma funcionalidade que realiza o cálculo da média de avaliação de um serviço prestado por um profissional temporário, tendo como base as avaliações já realizadas pela rede de parceiros do usuário autenticado, da empresa onde ele trabalha e da cidade onde vive, oferecendo assim uma forma simples de obter acesso a qualidade do serviço prestado como demonstra a Figura~\ref{fig:taxa_avaliacao}.
 
 \newpage
 \begin{figure}[h!]
@@ -524,7 +524,7 @@ media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
 
 \par Após realizada todas as implementações já descritas, houve a preocupação de desenvolver uma interface, que além de amigável fosse prática ao usuário, desta forma, foi disponibilizada algumas informações relevantes, que auxiliam o usuário a compreender o que está ocorrendo em sua rede de parceria. Como exemplo é possível citar a lista de parceiros em comum entre o usuário autenticado no sistema e um determinado contratante por meio da página de perfil dele.
 
-\par A fim de agregar mais funcionalidades para o usuário provedor de serviços, foi criado na página inicial do \textit{software} uma funcionalidade que visa apresentar algumas dicas interessantes que contribui com a sua imagem perante ao \textit{software}, levando-o assim a obter uma quantidade maior de oportunidades de trabalho como mostra a Fígura~\ref{fig:dicas_randomicas}.
+\par A fim de agregar mais funcionalidades para o usuário provedor de serviços, foi criado na página inicial do \textit{software} uma funcionalidade que visa apresentar algumas dicas interessantes que contribuem com a sua imagem perante ao \textit{software}, levando-o assim a obter uma quantidade maior de oportunidades de trabalho como mostra a Figura~\ref{fig:dicas_randomicas}.
 
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.4]{./imagens/dicas-randomicas.png}}
@@ -539,7 +539,7 @@ media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
 <script type="text/javascript" src="js/charts/Chart.js"></script>
 \end{lstlisting}
 
-\par Para gerar um gráfico, segundo a sua própria documentação, e conforme, utilizado neste trabalho, deve-se incluir um elemento \texttt{div} contendo um elemento \texttt{canvas} com um \textit{id} único, afim de facilitar o acesso a ele, por meio do código Javascript, que irá manipular os dados apresentados neste gráfico. Essa inclusão do elemento é apresentado no Código~\ref{list:codigo_incluir_canvas_charts}.
+\par Para gerar um gráfico, segundo a sua própria documentação, e conforme utilizado neste trabalho, deve-se incluir um elemento \texttt{div} contendo um \texttt{canvas} com um \texttt{id} único, a fim de facilitar o acesso a ele, por meio do código Javascript, que irá manipular os dados apresentados neste gráfico. Essa inclusão do elemento é apresentado no Código~\ref{list:codigo_incluir_canvas_charts}.
 
 \begin{lstlisting} [style=custom_HTML,caption={[Inclusão do elemento necessário para geração do gráfico.]{Inclusão do elemento necessário para geração do gráfico. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:codigo_incluir_canvas_charts] 	
 <div>
@@ -547,7 +547,7 @@ media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
 </div>
 \end{lstlisting}
 
-\par Para manipular as informações do gráfico, tais como dados, cores, entre outras, é necessário criar um objeto em Javascript que contém todos os atributos necessários para gerá-lo corretamente. Este objeto é apresentado no Código~\ref{list:codigo_objeto_grafico}.
+\par Para manipular as informações do gráfico, tais como dados, cores, entre outras, é necessário criar um objeto em Javascript que contenha todos os atributos necessários para gerá-lo corretamente. Este objeto é apresentado no Código~\ref{list:codigo_objeto_grafico}.
 
 \begin{lstlisting} [style=custom_HTML,caption={[Objeto contendo os atributos de configuração do gráfico.]{Objeto contendo os atributos de configuração do gráfico. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:codigo_objeto_grafico] 	
 $scope.lineChartData = {
@@ -578,7 +578,7 @@ $scope.lineChartData = {
 };
 \end{lstlisting}
 
-\par Após realizado os passos anteriormente descritos, para finalizar a geração do gráfico, foi necessário criar uma nova instância da classe \texttt{Chart}, informando o modelo do gráfico a ser utilizado, nesse caso, o modelo de linhas, a fim de facilitar a comparação entre as avaliações, juntamente com o objeto contendo todas as informações do gráfico, conforme apresentado na linha 3 do Código~\ref{list:codigo_criar_grafico_charts} que demonstra a criação dessa nova instância.
+\par Após realizados os passos anteriormente descritos, para finalizar a geração do gráfico, foi necessário criar uma nova instância da classe \texttt{Chart}, informando o modelo do gráfico a ser utilizado, nesse caso, o modelo de linhas, a fim de facilitar a comparação entre as avaliações, juntamente com o objeto contendo todas as informações do gráfico, conforme apresentado na linha 3 do Código~\ref{list:codigo_criar_grafico_charts} que demonstra a criação dessa nova instância.
 
 \begin{lstlisting} [style=custom_HTML,caption={[Criação de nova instância para gráficos de linha.]{Criação de nova instância para gráficos de linha. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:codigo_criar_grafico_charts] 	
 $scope.loadGraph = function(){
@@ -591,7 +591,7 @@ $scope.loadGraph = function(){
 
 \par Essa biblioteca foi selecionada, pois, ela é facilmente integrada com o \textit{framework} Angular JS, facilitando a sua utilização neste trabalho. 
 
-\par O primeiro gráfico foi disponibilizado na página de perfil do prestador de serviços, estando visível ao contratante assim que ele efetua a busca por uma determinada mão de obra. Este gráfico apresenta a média avaliativa dos trabalhos prestados pelo provedor selecionado, em uma determinada função. O sistema toma como base as vinte últimas avaliações recebidas, independente do período em que elas foram feitas. Desta forma, um provedor de serviços que trabalha a muito tempo em um mesmo local não será prejudicado, pois terá registrada as avaliações que recebeu neste tempo, mesmo que elas não sejam atuais. O gráfico que representa esta funcionalidade é apresentado na Figura \ref{fig:grafico_pagina_perfil}.
+\par O primeiro gráfico foi disponibilizado na página de perfil do prestador de serviços, estando visível ao contratante assim que ele efetue a busca por uma mão de obra. Este gráfico apresenta a média avaliativa dos trabalhos prestados pelo provedor selecionado em uma determinada função. O sistema toma como base as vinte últimas avaliações recebidas, independente do período em que elas foram feitas. Desta forma, um provedor de serviços que trabalha a muito tempo em um mesmo local não será prejudicado, pois terá registrada as avaliações que recebeu neste tempo, mesmo que elas não sejam atuais. O gráfico que representa esta funcionalidade é apresentado na Figura \ref{fig:grafico_pagina_perfil}.
 
 \newpage
 \begin{figure}[h!]
