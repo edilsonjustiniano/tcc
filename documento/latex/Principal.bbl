@@ -3,7 +3,7 @@
 \setlength{\labelsep}{0pt}\begin{thebibliography}{}
 \providecommand{\abntrefinfo}[3]{}
 \providecommand{\abntbstabout}[1]{}
-\abntbstabout{v-1.9.5 }
+\abntbstabout{v-1.9.2 }
 
 \bibitem[Apache 2015]{apache_about_tomcat}
 \abntrefinfo{Apache}{APACHE}{2015}
@@ -179,15 +179,15 @@ Acesso em: 23 de julho de 2015.}
   \url{http://www.maa.org/publications/periodicals/convergence/leonard-eulers-solution-to-the-konigsberg-bridge-problem}.
 Acesso em: 26 de fevereiro de 2015.}
 
-\bibitem[Pádua 2007]{padua_metodologia_pesquisa}
-\abntrefinfo{Pádua}{PáDUA}{2007}
-\justify{PáDUA, E. M.~M. de. \textbf{Metodologia da Pesquisa: Abordagem
-  Teorico-Pratica}. 16. ed. [S.l.]: Papirus, 2007.}
-
 \bibitem[Penha e Carvalho 2013]{tcc_univas_penha_carvalho_recomendacao_filmes}
 \abntrefinfo{Penha e Carvalho}{PENHA; CARVALHO}{2013}
 \justify{PENHA, A.~L. da S.; CARVALHO, W. \textbf{Sistema de recomendação de filmes
   utilizando graph database}. [S.l.: s.n.], 2013.}
+
+\bibitem[Pádua 2007]{padua_metodologia_pesquisa}
+\abntrefinfo{Pádua}{PáDUA}{2007}
+\justify{PÁDUA, E. M.~M. de. \textbf{Metodologia da Pesquisa: Abordagem
+  Teorico-Pratica}. 16. ed. [S.l.]: Papirus: Campinas, 2007.}
 
 \bibitem[Robinson, Webber e Eifrem
   2013]{robinson_webber_eifrem_graph_databases}

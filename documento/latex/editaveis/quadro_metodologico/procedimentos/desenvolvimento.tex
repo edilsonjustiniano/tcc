@@ -100,7 +100,7 @@ public class PersonDAO {
 
 Nesse trecho de código entre as linhas 17 e 27 é apresentada uma consulta escrita usando a API \textit{Cypher}, ela tem por finalidade recuperar os dados de um determinado usuário. Como já mencionado no quadro teórico deste trabalho, o \textit{Cypher} utiliza algumas cláusulas, dentre elas é possível mencionar a \texttt{MATCH} e \texttt{RETURN} cuja utilização delas é apresentada nessa consulta. Na cláusula \texttt{MATCH} são definidos os padrões para realizar a busca, nesse caso, uma pessoa que viva em qualquer cidade, trabalhe em uma empresa qualquer e que possua o \textit{e-mail} igual ao recebido como parâmetro pelo método \texttt{getPersonData}. Já a clásula \texttt{RETURN}, são definidos os dados desejados pela consulta, nesse caso, são eles: o nome do usuário, o \textit{e-mail}, a foto, a cidade onde vive, a empresa onde trabalha, o CPF (em caso de pessoas físicas), o CNPJ (para pessoas jurídicas), o tipo da conta (pessoa jurídica ou física), e o sexo do usuário (usado para pessoas físicas). Mas como é possível notar, foi necessário gerar um objeto JSON manualmente contendo os dados desejados como pode ser visualizado a partir da linha 22 até a linha 27, pois, por padrão o Neo4j não retorna os resultados no formato JSON comum, como demonstra o Código~\ref{list:exemplo_json_retornado_neo4j}. 
 
-\begin{lstlisting} [style=custom_HTML,caption={[Exemplo de um objeto JSON retornado de uma consulta via \textit{Cypher}]{Exemplo de um objeto JSON retornado de uma consulta via \textit{Cypher}. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:exemplo_json_retornado_neo4j] 	
+\begin{lstlisting} [style=custom_HTML,caption={[JSON retornado de uma consulta via \textit{Cypher}]{JSON retornado de uma consulta via \textit{Cypher}. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:exemplo_json_retornado_neo4j] 	
 {
 	...
 	column: [
@@ -123,7 +123,7 @@ Na linha 34 foi necessário criar um objeto JSON da classe \texttt{JSONObject} p
 
 Após recuperar os dados, foi necessário extraí-los dos resultados da consulta que até este ponto estavam armazenados em um \texttt{array} e transferí-los para uma lista de objetos da classe \texttt{JSONObject} como apresenta a linha 36 do Código~\ref{list:consulta_usando_api_cypher}, para tanto, foi criada uma classe estática denominada \texttt{JSONUtil} responsável por realizar essa tarefa e retonar os dados no formato padrão. Esse método é apresentado no Código~\ref{list:parser_jsonarray_to_list_json_object}.
 
-\begin{lstlisting} [style=custom_JAVA,caption={[Gerarador de JSON padrão com os resultados das consultas \textit{Cypher}]{Gerarador de JSON padrão com os resultados das consultas \textit{Cypher}. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:parser_jsonarray_to_list_json_object] 	
+\begin{lstlisting} [style=custom_JAVA,caption={[JSON padrão com os resultados das consultas \textit{Cypher}]{JSON padrão com os resultados das consultas \textit{Cypher}. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:parser_jsonarray_to_list_json_object] 	
 public class JSONUtil {
 	...
 	public static List<JSONObject>
@@ -159,9 +159,8 @@ Após essa extração de dados foi necessário criar um objeto da classe \texttt
 
 Segundo \citeonline{token_traditional_babal}, os sistemas de autenticações tradicionais utilizam recursos como sessão e \textit{cookies}. A autenticação do usuário é realizada por meio de alguns dados, geralmente nome de usuário (ou email) e senha, com esses dados a aplicação no \textit{back-end}, os validam junto a base de dados e caso obtenha sucesso nesse processo de validação é criada uma sessão e armazenada no servidor, após realizada toda a validação a aplicação retorna a informação dessa sessão para quem a requisitou de modo que ela seja armazenada no navegador de internet por meio de sessão e/ou \textit{cookies}. A partir desse momento, a cada nova solicitação a aplicação \textit{back-end} irá comparar a sessão armazenada no servidor com a fornecida pelo \textit{front-end}. A Figura~\ref{fig:autenticacao_via_sessao} demonstra o fluxo utilizado pelos sistemas cuja autenticação de sessão é a tradicional.
 
-\newpage
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.55]{./imagens/tokens-traditional.png}}
+	\centerline{\includegraphics[scale=0.5]{./imagens/tokens-traditional.png}}
 	\caption[Fluxo de autenticação de usuários utilizando a forma tradicional]
 	{Fluxo de autenticação de usuários utilizando a forma tradicional. \textbf{Fonte:} \cite{authentication_via_token_chris_sevilleja}.}
 	\label{fig:autenticacao_via_sessao}
@@ -304,7 +303,7 @@ partnerEmail: partner.email} as added
 \par Após a implementação da lógica para adicionar um novo parceiro, houve a necessidade de implementar o serviço de requisições de parcerias, uma vez que não bastava apenas um contratante convidar outro para se tornarem parceiros, mas sim que o contratante convidado aceitasse sua solicitação de parceria, para assim se tornarem parceiros. Visando disponibilizar estas solicitações de forma agradável ao usuário, foi desenvolvida uma funcionalidade para que o usuário pudesse aceitar ou rejeitar a solicitação enviada a ele, essa funcionalidade apresentada em destaque na Figura~\ref{fig:aceitar_rejeitar_solicitacao_parceria}.
 
 \begin{figure}[h!]
-	\centerline{\includegraphics[scale=0.45]{./imagens/aceitar_rejeitar_solicitacao_parceria.png}}
+	\centerline{\includegraphics[scale=0.4]{./imagens/aceitar_rejeitar_solicitacao_parceria.png}}
 	\caption[Tela para aceitar ou rejeitar solicitação de parceria.]
 	{Tela para aceitar ou rejeitar solicitação de parceria. \textbf{Fonte:} Elaborado pelos autores.}
 	\label{fig:aceitar_rejeitar_solicitacao_parceria}
@@ -359,6 +358,7 @@ as partner ORDER BY partner.length, partner.mutualFriends DESC
 
 \par O caso de uso ''Gerenciar serviços'' foi implementado em sequência, abrangendo as principais funcionalidades de gerenciamento: cadastrar e adicionar um novo serviço ao usuário, cujo tipo de conta é provedor de serviços, listar os serviços atribuídos a ele, e remover serviços quando necessário. Visando melhorar a usabilidade, foi implementado um mecanismo de busca, que permitiu filtrar os resultados por meio de um campo que possui a função  auto completar, evitando assim, possíveis erros e diminuindo o tempo gasto pelo usuário para adicionar o serviço. A função realiza a busca em uma lista de serviços anteriormente cadastrados, no entanto, caso não haja o serviço solicitado, o usuário tem a liberdade de cadastrá-lo e atribuí-lo a si mesmo. A Figura~\ref{fig:adicionar_servicos} apresenta essa funcionalidade.
 
+\newpage
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.3]{./imagens/adcionar-servico.png}}
 	\caption[Página para adicionar serviços.]
@@ -514,7 +514,6 @@ media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
 
 \par Para auxiliar na tomada de decisão do usuário contratante, foi implementada uma funcionalidade que realiza o cálculo da média de avaliação de um serviço prestado por um profissional temporário, tendo como base as avaliações já realizadas pela rede de parceiros do usuário autenticado, da empresa onde ele trabalha e da cidade onde vive, oferecendo assim uma forma simples de obter acesso a qualidade do serviço prestado como demonstra a Figura~\ref{fig:taxa_avaliacao}.
 
-\newpage
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.45]{./imagens/taxa-avaliacao.png}}
 	\caption[Tela contendo a taxa de avaliação do serviço prestado.]
@@ -526,6 +525,7 @@ media: 0, order: 4}) as sp ORDER BY sp.order, sp.media DESC
 
 \par A fim de agregar mais funcionalidades para o usuário provedor de serviços, foi criado na página inicial do \textit{software} uma funcionalidade que visa apresentar algumas dicas interessantes que contribuem com a sua imagem perante ao \textit{software}, levando-o assim a obter uma quantidade maior de oportunidades de trabalho como mostra a Figura~\ref{fig:dicas_randomicas}.
 
+\newpage
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.4]{./imagens/dicas-randomicas.png}}
 	\caption[Tela de dicas para provedores de serviços.]
@@ -593,7 +593,6 @@ $scope.loadGraph = function(){
 
 \par O primeiro gráfico foi disponibilizado na página de perfil do prestador de serviços, estando visível ao contratante assim que ele efetue a busca por uma mão de obra. Este gráfico apresenta a média avaliativa dos trabalhos prestados pelo provedor selecionado em uma determinada função. O sistema toma como base as vinte últimas avaliações recebidas, independente do período em que elas foram feitas. Desta forma, um provedor de serviços que trabalha a muito tempo em um mesmo local não será prejudicado, pois terá registrada as avaliações que recebeu neste tempo, mesmo que elas não sejam atuais. O gráfico que representa esta funcionalidade é apresentado na Figura \ref{fig:grafico_pagina_perfil}.
 
-\newpage
 \begin{figure}[h!]
 	\centerline{\includegraphics[scale=0.65]{./imagens/grafico-pagina-perfil.png}}
 	\caption[Gráfico de avaliação do serviço na página de perfil do provedor.]
