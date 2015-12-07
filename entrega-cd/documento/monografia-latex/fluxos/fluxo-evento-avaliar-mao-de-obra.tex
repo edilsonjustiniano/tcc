@@ -1,0 +1,17 @@
+\begin{fluxoDeEventos}
+  \addTitle{Avaliar Mão de obra}
+  \addrow{Ator principal}{Contratante ou Ambos}
+  \addrow{Ator secundário}{-}
+  \addrow{Pré-condições}{O ator estar autenticado no sistema}
+  \addrow{Pós-condições}{Mão de obra avaliada pelo ator}
+  
+  \startBasicFlow{Ator} {Sistema}
+  \addItemByColumnOne{Após o item 6 do fluxo principal do fluxo de eventos “Localizar Mão de obra”. O ator clica no botão “Avaliar Serviço”.}
+  \addItemByColumnTwo{O sistema apresenta o formulário de avaliação na mesma página para o ator.}
+  
+  \addItemByColumnOne{O ator preenche o formulário de avaliação da mão de obra e clica no botão “Salvar”.}
+  \addItemByColumnTwo{O sistema registra a avaliação do cliente e apresenta uma mensagem de sucesso a ele.}
+   
+  \startAlternativeFlow{Fluxo alternativo 1}
+  \noAlternativeFlow{Não há fluxos alternativos}
+\end{fluxoDeEventos}

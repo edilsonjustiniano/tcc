@@ -1,0 +1,20 @@
+\begin{fluxoDeEventos}
+  \addTitle{Localizar Parceiros}
+  \addrow{Ator principal}{Contratante ou Ambos}
+  \addrow{Ator secundário}{-}
+  \addrow{Pré-condições}{O ator estar autenticado no sistema}
+  \addrow{Pós-condições}{Possíveis parceiro(s) apresentado(s) ao ator}
+  
+  
+
+  \startBasicFlow{Ator} {Sistema}
+  \addItemByColumnOne{O ator clica no menu “Rede de Parceiros” no menu principal localizado no menu principal do sistema.}
+  \addItemByColumnTwo{O sistema apresenta a página contendo todos os parceiros ator e um campo para busca de novos parceiros.}
+  
+  \addItemByColumnOne{O ator informa o nome do parceiro que ele deseja encontrar no campo “Adicionar parceiros”.}
+  \addItemByColumnTwo{O sistema pesquisa na sua base de dados os usuários que possuem aquele nome, e que por ventura, possuem algum tipo de ligação com os parceiros do ator, a fim de, tentar localizar os parceiros que possuem maior probabilidade de se juntar a sua rede de parceiros.}
+  
+  
+  \startAlternativeFlow{Fluxo alternativo 1}
+  \noAlternativeFlow{Não há fluxos alternativos}
+\end{fluxoDeEventos}

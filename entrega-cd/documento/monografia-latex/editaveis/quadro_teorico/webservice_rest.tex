@@ -1,0 +1,36 @@
+\subsection{\textit{Web Service} REST}
+
+A definição computacional de serviço é um \textit{software} que disponibiliza sua funcionalidade por meio de uma interface denominada contrato de serviço \cite{erl_soa_with_rest}.
+
+\textit{Web Service} de acordo com \citeonline{marzulo_soa_na_pratica}, é uma materialização da ideia de um serviço que é disponibilizado na internet, e que, devido a isso, pode ser acessado em qualquer lugar do planeta e por diferentes tipos de dispositivos. Para ter acesso aos serviços que o \textit{Web Service} disponibiliza, o solicitante envia requisições de um tipo anteriormente definido e recebe respostas síncronas ou assíncronas.
+
+\citeonline{marzulo_soa_na_pratica} afirma que, a implementação de um \textit{Web Service} é relativamente simples, uma vez que, há inúmeras ferramentas que facilitam a implementação do mesmo. Outro fator que permite a um \textit{Web Service} ser mais dinâmico é possuir uma estrutura interna fracamente acoplada, permitindo, assim, mudanças em suas estruturas sem afetar a utilização pelo cliente.
+
+\citeonline{erl_soa_with_rest} afirmam que o REST\footnotemark[20], é uma das várias implementações utilizadas para criar serviços. Outra implementação também muito conhecida é: a SOAP\footnotemark[21] em conjunto com o WSDL\footnotemark[22], cujo responsabilidade é definir o contrato dos serviços.
+
+\footnotetext[20]{REST: \textit{Representational State Transfer} - Tecnologia utilizada por \textit{web services}}
+
+\footnotetext[21]{SOAP: \textit{Simple Object Access Protocol} - Tecnologia utilizada por \textit{web services} anteriores aos \textit{Web services} REST.}
+
+\footnotetext[22]{WSDL: \textit{Web Service Description Language} - Padrão de mercado utilizado para descrever \textit{Web Services}.}
+
+O primeiro\textit{Web Service} REST foi criado por \textit{Roy Fielding} no ano 2000 na universidade da California. Ele foi criado para suceder a tecnologia SOAP. A fim de facilitar a utilização e a aceitação desta nova tecnologia, \textit{Roy Fielding} lançou mão do protocolo HTTP e o definiu como o protocolo de comunicação para \textit{Web Services} REST, sua decisão se baseou no fato de que, este protocolo já possui mecanismos de segurança implementados, além de ser o protocolo padrão utilizado na internet para transferência de dados e acesso a recursos como páginas \textit{web}, o que tornaria-o mais bem aceito \cite{ibm_web_service}.
+
+Segundo \citeonline{oracle_web_service}, na arquitetura do REST os dados e as funcionalidades são considerados recursos e ambos são acessados por meio de  URIs\footnotemark[23]. A arquitetura REST se assemelha a arquitetura \textit{client/server} e foi desenvolvido para funcionar com protocolos de comunicação baseados em estado, como o HTTP. Como nos \textit{Web Services} SOAP o acesso aos recursos do REST também é realizado por meio de contratos anteriormente definidos.
+
+\footnotetext[23]{URI: \textit{Uniform Resource Identifier} - \textit{Link} completo para acessar um determinado recurso.}
+
+Para \citeonline{ibm_web_service}, o \textit{Web service} REST segue quatro princípios básicos. São eles: 
+
+\begin{itemize}
+	\item utiliza os métodos HTTP explicitamente;
+	\item é orientado à conexão;
+	\item expõe a estrutura de diretório por meio das URIs;
+	\item trabalha com -\textit{Extensible Markup Language} - XML\footnotemark[24], \textit{Javascript Object Notation} - JSON\footnotemark[25] - ou ambos.
+\end{itemize}
+
+\footnotetext[24]{XML: \textit{Extensible Markup Language} - Tecnologia utilizada para transferência de dados, configuração, entre outras atividades.}
+
+\footnotetext[25]{JSON: \textit{Javascript Object Notation} - Notação de objetos via Javascript, porém seu uso não é restrito apenas ao Javascript.}
+
+Essa tecnologia foi selecionada para ser utilizada neste trabalho, pois a forma de acesso ao banco de dados Neo4j utiliza uma API REST fornecida pelo próprio Neo4j,

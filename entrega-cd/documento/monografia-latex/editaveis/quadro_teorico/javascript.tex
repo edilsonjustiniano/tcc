@@ -1,0 +1,62 @@
+\subsection{Javascript}
+
+\citeonline{javascript_diego_leonard} afirmam que o Javascript foi criado e lançado pela Netscape em 1995, em conjunto com o navegador de internet Netscape Navigator 2.0. A partir deste lançamento, as páginas \textit{web} passaram a ganhar vida com a possibilidade de implementar um mínimo de dinamicidade. Isto se deve ao modo como a linguagem acessa e manipula os componentes do navegador. Contudo, ela pode ser utilizada em diferentes dispositivos como \textit{smartphones, smart tv}, entre outros, não limitando-se apenas a navegadores de internet.
+
+O Javascript é uma linguagem de programação para \textit{web}. A maioria dos sites usa essa linguagem, inclusive todos os navegadores mais modernos, vídeo games, \textit{tablets}, \textit{smart phones}, \textit{smart tvs} possuem interpretadores de \textit{Javascript}, o que a tornou, a linguagem de programação mais ambígua da história \cite{flanagan_javascript_definitive_guide}.
+
+Segundo \citeonline{javascript_diego_leonard}, as semelhanças entre o Javascript e o Java se limitam apenas ao nome. A primeira linguagem não deriva da segunda, apesar de ambas compartilharem alguns conceitos e detalhes. O Javascript, por ser uma linguagem interpretada, é mais flexível que o Java, que, por sua vez, é uma linguagem compilada.
+
+De acordo com \citeonline{flanagan_javascript_definitive_guide}, o Javascript possui 6 versões, sendo elas: 1.0, 1.1, 1.2, 1.3, 1.4 e a atual versão 1.5.
+
+Para \citeonline{javascript_diego_leonard}, há duas maneiras de incluir e executar o código escrito em Javascript nos documentos HTML. A primeira é incluir o código Javascript entre as \textit{tags} \texttt{script} como mostra o Código~\ref{list:javascript_incorporado}. 
+
+% Inserindo o código Javascript via listagem
+\begin{lstlisting} [style=custom_HTML,caption={[Inclusão do código em Javascript incorporado ao HTML.]{Inclusão do código em Javascript incorporado ao HTML. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:javascript_incorporado] 	
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Titulo da pagina</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			document.writeLine("Exemplo de codigo Javascript incorporado " +
+								 "ao documento HTML por meio da TAG SCRIPT");
+		</script>
+	</body>
+</html>
+\end{lstlisting}
+
+% Trocado de imagem para listagem
+%\begin{figure}[h!]
+%	\centerline{\includegraphics[scale=0.8]{./imagens/javascript_code.png}}
+%	\caption[Exemplo de inclusão do código em Javascript incorporado ao HTML]
+%	{Exemplo de inclusão do código em Javascript incorporado ao HTML. \textbf{Fonte:} Elaborado pelos autores.}
+%	\label{fig:javascript_incorporado}
+%\end{figure}
+
+A segunda forma é incluir um arquivo externo com extensão \texttt{.js} através da mesma \textit{tag} \texttt{script}. Veja um exemplo de inclusão de um arquivo contendo códigos em Javascript no documento HTML no Código~\ref{list:javascript_externo}.
+
+% Inserindo o código Javascript via listagem
+\begin{lstlisting} [style=custom_HTML,caption={[Inclusão do código Javascript de um arquivo externo.]{Inclusão do código Javascript de um arquivo externo. \textbf{Fonte:} Elaborado pelos autores.}}, label=list:javascript_externo] 	
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Titulo da pagina</title>
+	</head>
+	<body>
+		<script type="text/javascript" src="Exemplo.js"></script>
+	</body>
+</html>
+\end{lstlisting}
+
+% Trocado de imagem para listagem
+%\begin{figure}[h!]
+%	\centerline{\includegraphics[scale=0.8]{./imagens/javascript_include.png}}
+%	\caption[Exemplo de inclusão do código Javascript de um arquivo externo]
+%	{Exemplo de inclusão do código Javascript de um arquivo externo. \textbf{Fonte:} Elaborado pelos autores.}
+%	\label{fig:javascript_externo}
+%\end{figure}
+
+Para \citeonline{flanagan_javascript_definitive_guide}, as três tecnologias (HTML, CSS e Javascript) devem ser usadas em conjunto, uma vez que, cada uma delas possui seu papel específico, sendo eles: o HTML usado para especificar o conteúdo da página \textit{web}, o CSS para especificar como os componentes serão apresentados e o Javascript para especificar o comportamento da página.
+
+Pelos motivos acima mencionados, somado ao fato de que o Javascript permite ao desenvolvedor criar páginas \textit{web} mais dinâmicas e flexíveis, atendendo perfeitamente os requisitos deste trabalho, essa tecnologia será utilizada para auxiliar na criação das páginas \textit{web} deste trabalho.

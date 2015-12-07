@@ -1,0 +1,38 @@
+\begin{fluxoDeEventos}
+  \addTitle{Gerenciar Serviços}
+  \addrow{Ator principal}{Provedor de serviço}
+  \addrow{Ator secundário}{-}
+  \addrow{Pré-condições}{O ator estar autenticado no sistema}
+  \addrow{Pós-condições}{Serviço atribuído ao ator.}
+  
+  \startBasicFlow{Ator} {Sistema}
+  \addItemByColumnOne{O ator clica no menu “Serviço” apresentado na barra de menu principal do sistema.}
+  \addItemByColumnTwo{O sistema apresenta a página contendo a lista de serviços prestados por ele, além do formulário para atrelar um novo serviço a ele.}
+  
+  \addItemByColumnOne{O ator começa a inserir o nome do serviço que deseja localizar.}
+  \addItemByColumnTwo{O sistema realiza uma busca a fim de apresentar todas as opções possíveis de serviços anteriormente cadastradas no banco de dados , segundo o nome informado pelo ator.}
+  
+  \addItemByColumnOne{O ator seleciona o serviço que deseja atrelar a si mesmo por meio da lista de serviços apresentados e clica no botão “Adicionar”.}
+  
+  \addItemByColumnTwo{O sistema atrela o serviço ao ator com sucesso e apresenta uma mensagem de sucesso a ele.}
+  
+  \addItemByColumnOne{O ator lê a mensagem de sucesso.}
+  \addEmptyColumn
+  
+  \startAlternativeFlow{Fluxo alternativo 1}
+  \addItemByColumnTwo{No item 4 do fluxo principal, o sistema não localiza nenhum serviço em sua base de dados com o nome informado pelo ator e, portanto não apresenta nenhuma opção para seleção.}
+  
+  \addItemByColumnOne{O ator conclui o nome do serviço, caso seja necessário e clica no botão “Adicionar”.}
+  \addItemByColumnTwo{O sistema verifica que o serviço não está registrado em sua base de dados, portanto, o cria e atrela ele ao ator. Após isto, apresenta uma mensagem de sucesso ao ator.}
+  
+  \addItemByColumnOne{O ator lê a mensagem de sucesso.}
+  \addEmptyColumn
+  
+  
+  \startAlternativeFlow{Fluxo alternativo 2}
+  \addItemByColumnTwo{No item 6 do fluxo principal, o sistema realiza uma validação, a fim de evitar que o usuário atribua o mesmo serviço a si mesmo mais de uma vez.  Após isto, uma mensagem informando ao usuário sobre a falha é apresentada.}
+  
+  \addItemByColumnOne{O ator lê a mensagem de erro.}
+  \addEmptyColumn
+  
+\end{fluxoDeEventos}

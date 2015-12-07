@@ -1,0 +1,105 @@
+<!-- Content-->
+<div id="container">
+    <div id="user-profile-data">
+        <img class="img-circle" src="{{user.photo}}" alt="Profile Photo" />
+        <form ng-submit="save()">
+                <legend>Configuração da conta</legend>
+                
+                <!-- Msg error -->
+                <div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
+
+                <!-- Msg success -->
+                <div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
+
+                <!-- diretiva ng-model -->
+                <label>Nome</label>
+                <input type="text" class="input-xlarge" ng-model="user.name" placeholder="Nome completo" required="required" />
+
+                <label>E-mail</label>
+                <input type="text" class="input-xlarge" ng-model="user.email" placeholder="E-mail" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+
+                <label>Endereço</label>   
+                <input type="text" class="input-xlarge" ng-model="user.address" placeholder="Endereço" required="required" />
+
+                <label>Bairro</label>
+                <input type="text" class="input-xlarge" ng-model="user.district" placeholder="Bairro" required="required" />
+
+                </label>
+
+                <label class="subtitle">Tipo de conta</label>
+                
+                <label class="radio" ng-hide="typeOfAccountTemp == 'CONTRACTOR'">    
+                <input type="radio" name="typeOfAccount" ng-model="user.typeOfAccount" id="typeOfAccountServiceProvider" value="SERVICE_PROVIDER" checked>
+                    Provedor de Serviço
+                </label>
+
+                <label class="radio" ng-hide="typeOfAccountTemp == 'SERVICE_PROVIDER'">
+                  <input type="radio" name="typeOfAccount" ng-model="user.typeOfAccount" id="typeOfAccountContractor" value="CONTRACTOR">
+                  Contratante
+                </label>
+                
+                <label class="radio">
+                  <input type="radio" name="typeOfAccount" ng-model="user.typeOfAccount" id="typeOfAccountBoth" value="BOTH">
+                  Ambos
+                </label>
+                
+
+               <!-- <label class="radio">
+                    <label class="subtitle">Tipo de pessoa</label>
+                    <input type="radio" name="typeOfPerson" ng-model="typeOfPerson" value="PHISIC" checked>
+                    Pessoa Física
+                </label>
+                <label class="radio">
+                    <input type="radio" name="typeOfPerson" ng-model="typeOfPerson" value="JURIDIC">
+                     Pessoa Jurídica
+                </label>
+                -->
+                <label>CPF/CNPJ</label>
+                <input type="text" class="input-xlarge" ng-show="user.typeOfPerson == 'JURIDIC'" ng-model="user.cnpj" placeholder="CNPJ" />
+
+
+                <input type="text" class="input-xlarge" ng-show="user.typeOfPerson == 'PHISIC'" ng-model="user.cpf" placeholder="CPF" />
+
+                <label>UF da empresa</label>
+                <select ng-model="user.ufWork" ng-change="getAllCitiesByStateForCompany()" >
+                    <option ng-repeat="uf in states | orderBy: 'name' " ng-hide="user.ufWork == uf">
+                        {{uf.name}}
+                    </option>
+                    <option>{{user.ufWork}}</option>
+                </select>
+                    
+                <label>Cidade da empresa</label>
+                <select ng-model="user.cityWork">
+                    <option ng-repeat="city in citiesCompany | orderBy: 'name' ">
+                        {{city.name}}
+                    </option>
+                    <option>{{user.cityWork}}</option>
+                </select>
+                
+                <label>Empresa</label>
+                <input type="text" class="input-xlarge" ng-model="user.company" placeholder="Nome da empresa" required="required" />
+
+                <label>UF onde vive</label>
+                <select ng-model="user.ufLives" ng-change="getAllCitiesByStateForLives()">
+                    <option ng-repeat="uf in states | orderBy: 'name' ">
+                        {{uf.name}}
+                    </option>
+                    <option>{{user.ufLives}}</option>
+                </select>
+                    
+                <label>Cidade onde vive</label>
+                <select ng-model="user.cityLives">
+                    <option ng-repeat="city in citiesLives | orderBy: 'name' ">
+                        {{city.name}}
+                    </option>
+                    <option>{{user.cityLives}}</option>
+                </select>
+                
+                <p>
+                <input type="submit" class="btn btn-large btn-primary" value="Salvar" />
+                <input type="reset" class="btn btn-large" value="Cancelar" />
+                </p>
+
+            </form>
+
+</div>

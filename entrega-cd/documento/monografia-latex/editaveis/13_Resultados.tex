@@ -1,0 +1,31 @@
+\chapter{DISCUSSÃO DOS RESULTADOS} 
+
+\par Neste capítulo são apresentados e discutidos os resultados obtidos por esta pesquisa e desenvolvimento do \textit{software}, apresentando os seus pontos positivos e negativos.
+
+\par Inicialmente foram utilizadas as tecnologias Java, Primefaces e JSF, no entanto, viu-se a necessidade de alterar algumas destas tecnologias, visando à agilidade no processo de desenvolvimento. Desta forma, passou-se a utilizar HTML, CSS, Javascript em conjunto com o \textit{framework} Angular JS.
+
+\par A mudança de tecnologias trouxe como benefício o desacoplamento das partes cliente (\textit{front-end}) e servidor (\textit{back end}), não sendo mais necessário recompilar, construir e publicar a aplicação no servidor \textit{web}, como era feito até então a cada alteração.
+
+\par Após esta mudança, notou-se que a forma como o banco de dados era acessado deveria ser ajustada, a fim de seguir a mesma ideia proposta pela troca de tecnologias já mencionadas, uma vez que o banco de dados Neo4j permite duas maneiras de conexão, sendo elas: \textit{embedded} e por meio da API REST \cite{robinson_webber_eifrem_graph_databases}. Desta forma, passou-se a utilizar a API REST ao invés da forma \textit{embedded}, utilizada até então.
+
+\par Com a mudança das tecnologias utilizadas no \textit{front end}, foi possível desenvolver uma aplicação com a interface \textit{clean} e moderna, permitindo ao usuário uma boa experiência de navegação. Também é possível citar, o uso do \textit{framework} Angular JS, que possibilitou não só o desenvolvimento ágil, como também a comunicação entre a aplicação e o \textit{web service}.
+
+\par A linguagem Java, que foi utilizada para escrever todo o \textit{back end} deste trabalho, se mostrou uma ótima escolha, pois possui uma ampla biblioteca de materiais para apoio, disponibilizada pela Oracle, além de se integrar perfeitamente com o banco de dados Neo4j, que trás como exemplos, em sua documentação, aplicações que utilizam essas tecnologias em conjunto. Com a sua utilização obteve-se como resultado uma aplicação enquadrada nos padrões de desenvolvimento recomendados, além de ter um código legível e com qualidade, permitindo a utilização dos conceitos de orientação a objetos, o que facilitou o desenvolvimento da aplicação, pois permitiu o reaproveitamento de comportamentos por meio do conceito de herança e polimorfismo \cite{schildt_java_complete_reference}.
+
+\par A fim de aplicar no desenvolvimento o mesmo conceito de relacionamentos, utilizado pela maioria das redes sociais, fez-se uso do banco de dados Neo4j em conjunto com a API \textit{Cypher}. Com o uso deste banco obteve-se como resultado uma aplicação cuja base de dados é toda orientada a grafos, deste modo, foi possível realizar consultas mais complexas de maneira simplificada, o que não seria possível com o uso de um banco de dados relacional, uma vez que para escrever este mesmo tipo de consulta seria necessário acessar várias tabelas por meio de \textit{joins}, deixando a consulta extensa e com baixa \textit{performance} \cite{sadalage_fowler_nosql_distilled_brief_guide}.
+
+\par Neste escopo, concluiu-se o desenvolvimento desta aplicação, apresentando a seguir seus resultados mais relevantes.
+
+\input{editaveis/discussao_resultados/localizar_mao_de_obra}
+
+\input{editaveis/discussao_resultados/apresentar_possiveis_parceiros}
+
+\input{editaveis/discussao_resultados/localizar_novos_parceiros}
+
+\input{editaveis/discussao_resultados/solicitacoes_parcerias}
+
+\input{editaveis/discussao_resultados/taxa_avaliacoes}
+
+\input{editaveis/discussao_resultados/graficos}
+
+\par Neste capítulo foram apresentados os resultados mais relevantes obtidos por esta pesquisa, sendo eles satisfatórios, pois atenderam aos objetivos propostos por este trabalho.

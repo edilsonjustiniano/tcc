@@ -1,0 +1,21 @@
+<div id="container">
+    <div id="search-partner">
+
+        <h1>Buscar serviços</h1>
+        <form class="navbar-search">
+            <input type="text" class="search-query" placeholder="Buscar serviços" ng-model="service" ng-change="getServicesByService()">
+            <div class="options-services" ng-repeat="iter in services | orderBy: name" ng-show="service != ''" ng-click="selectService(iter)">{{iter.name}}</div>
+        </form>
+    </div>
+
+    <div id="list-service-providers">
+        <loading></loading>
+        <div class="options-service-providers" ng-repeat="provider in serviceProviders | orderBy: name" ng-show="serviceProviders.length > 0" ng-click="selectServiceProvider(provider)">
+            <img class="img-circle" src="upload/user-profile.png" title="{{provider.name}}">
+            <span>{{provider.name}}</span>
+            <!--        <span>E-mail: {{provider.email}} |</span>-->
+            <span>Média: {{provider.average}}</span>
+            <span>Avaliado(a) por: {{provider.howManyPersonsEvaluate}} pessoa(s)</span>
+        </div>
+    </div>
+</div>

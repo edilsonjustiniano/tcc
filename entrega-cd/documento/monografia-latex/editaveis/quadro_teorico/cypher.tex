@@ -1,0 +1,26 @@
+\subsection{\textit{Cypher Query Language}}
+
+\par O \textit{Cypher Query Language} é uma linguagem para consultas em banco de dados orientado a grafo específica para o banco Neo4j. Ela foi criada devido à necessidade de manipular os dados e realizar buscas em grafos de uma forma mais simples, uma vez que, não é necessário escrever \textit{traversals} (\textit{travessias}) para navegar pelo grafo \cite{neo4j_team_manual}.
+
+
+\par \citeonline{robinson_webber_eifrem_graph_databases}, afirmam que o \textit{Cypher} foi desenvolvido para ser uma \textit{query language} que utiliza uma linguagem formal, permitindo a um ser humano entendê-la. Desta forma, qualquer pessoa envolvida no projeto é capaz de compreender as consultas realizadas no banco de dados. 
+
+%BANCA_QUALIFICACAO. Comentado este parágrafo, porém o mesmo retornará para a banca de qualificação
+\par Segundo \citeonline{neo4j_team_manual}, o \textit{Cypher} foi inspirado em uma série de abordagens e construído sob algumas práticas já estabelecidas, inclusive a SQL. Por este motivo, é possível notar que ele utiliza algumas palavras reservadas que são comuns na SQL como \textit{WHERE} e \textit{ORDER BY}.
+
+%BANCA_QUALIFICACAO. Comentado este parágrafo, porém o mesmo retornará para a banca de qualificação
+\par De acordo com \citeonline{neo4j_team_manual}, o \textit{Cypher} é composto por algumas cláusulas, dentre elas, se destacam:
+
+%%BANCA_QUALIFICACAO. Comentado estes itens, porém os mesmos retornarão para a banca de qualificação
+\begin{itemize}
+	\item \textit{START}: define um ponto inicial para a busca, esse ponto pode ser um relacionamento ou um nó.
+	\item \textit{MATCH}: define o padrão de correspondência entre os nós. Para identificar um nó é necessário incluí-lo entre um par de parenteses, e os relacionamentos são identificados um hífen e um sinal de maior ou menor.
+	\item \textit{CREATE}: utilizado para criar nós e relacionamentos no grafo.
+	\item \textit{WHERE}: define um critério de busca.
+	\item \textit{RETURN}: define quais nós, relacionamentos e propriedades de ambos devem ser retornados da \textit{query} realizada. 
+	\item \textit{SET}: utilizado para editar as propriedades de um nó ou de um relacionamento.
+	\item \textit{UNION}: possibilita juntar o resultado de duas ou mais consultas.
+	\item \textit{FOREACH}: realiza uma ação de atualização para cada elemento na lista.
+\end{itemize} 
+
+\par Outras \textit{Query Languages} existem, inclusive com suporte ao Neo4j, porém devido às vantagens apresentadas acima, somada ao fato de que ele possui uma curva de aprendizagem menor e é excelente para lhe oferecer uma base a respeito de grafos,  este \textit{framework} será utilizado para realizar as tarefas de manipulação dos dados no banco de dados.

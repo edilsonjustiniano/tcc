@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="TCCApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Login</title>
+	
+	<!-- Bootstrap -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+	
+	<!-- TCC Style -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<a class="brand" href="index.html">App Mão de Obra</a>
+				<ul class="nav pull-right">
+			      <li><a href="create-account-personal-data.html">Criar conta</a></li>
+			    </ul>
+	   		</div>
+		</div>
+
+	<div id="general">
+	
+		<!-- diretiva ng-submit -->
+	    <section id="form-login">
+		    <form ng-submit="login()" ng-controller="LoginController">
+				
+				<legend>Log in</legend>
+
+				<!-- Msg error -->
+				<div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
+
+				<!-- Msg success -->
+				<div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
+
+		        <!-- diretiva ng-model -->
+		        <input type="text" class="input-xlarge" ng-model="email" placeholder="E-mail" required="required" />
+		        <input type="password" class="input-xlarge" ng-model="password" placeholder="Senha" required="required" />
+		        <input type="submit" class="btn btn-large btn-primary" value="Log in" />
+		        <input type="reset" class="btn btn-large" value="Cancelar" />
+				
+				<div class="loading-image">
+		        	<img src="image/icon/ajax-loader.gif" ng-show="loading">
+		        </div>
+		    </form>
+	    </section>
+
+	</div>
+
+    <!-- Angular JS Lib -->
+	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+	
+	<script type="text/javascript" src="js/models/Person.js"></script>
+	
+	<!-- Controller -->
+	<script type="text/javascript" src="js/controllers/LoginController.js"></script>
+</body>
+</html>

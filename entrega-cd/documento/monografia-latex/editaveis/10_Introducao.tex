@@ -1,0 +1,54 @@
+%\chapter*{Introdução}
+\begin{flushleft}
+	\vspace{1.2em}
+	\textbf{\large INTRODUÇÃO}
+	\vspace{2.9em}
+\end{flushleft}
+\thispagestyle{empty}
+
+\addcontentsline{toc}{chapter}{INTRODUÇÃO}
+\stepcounter{chapter} %incrementa o número do capítulo
+
+\par Com a constante evolução tecnológica é possível notar que, a cada dia, mais pessoas estão se inserindo no mundo globalizado. Pertencer a este meio tem mudado completamente a maneira de se realizar tarefas, uma vez que a revolução tecnológica busca facilitar o que até então era trabalhoso. Atualmente, nos deparamos com situações nas quais as pessoas desempenham mais de um papel, dividindo o seu tempo entre tarefas profissionais, pessoais e aquelas que chamamos de rotineiras as quais muitas vezes, não são realizadas por elas e sim por terceiros.
+
+\par Um profissional terceirizado é capaz de cuidar de todas as tarefas extras que não cabem na rotina, no entanto, encontrá-los tem se tornado cada vez mais difícil, uma vez que confiar a sua residência ou ainda, a sua intimidade a uma pessoa não conhecida gera muita insegurança. Ainda, vale ressaltar que este tipo de trabalho está cada vez mais escasso e raro no cenário atual.
+
+\par Com o advento da internet, e mais tarde sua popularização, uma série de aplicações para diferentes fins vem sendo desenvolvidas. Estes aplicativos tem como finalidade apresentar soluções para os mais diversos tipos de problemas. É possível notar que as redes sociais geram um grande impacto no modelo de vida que as pessoas seguem, isto se deve ao fato de que tudo e todos estão conectados, direta ou indiretamente, e que as informações são trocadas a uma velocidade surpreendente, sendo necessário obtê-las de forma clara e rápida \cite{barbosa_why_people_use_social_network}.
+
+\par% Com intuito de obter acesso à informação de maneira instantânea, a migração dos antigos computadores pessoais (\textit{desktops}) para dispositivos cada vez mais portáteis tornou-se comum. Podemos citar, como exemplo, a criação dos \textit{tablets} que proporcionaram uma grande revolução tecnológica, pois, a partir desta invenção as pessoas passaram a ter liberdade de acesso, uma vez que as informações se encontram na palma de suas mãos. Seguindo esta tendência de mobilidade, os \textit{smartphones} foram desenvolvidos.
+
+\par %O sucesso obtido por estes dispositivos móveis, somado a evolução das redes de dados 3G e 4G, permitiu a conexão entre as pessoas de qualquer lugar e a qualquer momento bastando alguns toques, tornando assim ainda mais fácil localizá-las e comunicar-se com elas.
+
+\par %A pesquisa realizada pelo Instituto Nielsen reafirma o contexto anteriormente mencionado. Ela comprova que o tempo gasto pelos usuários em seus \textit{smartphones} é maior do que em seus computadores pessoais, sendo que boa parte deste tempo é utilizado para acesso às redes sociais. Isto ocorre pois os dispositivos móveis atuais são capazes de substituir os computadores pessoais em uma série de atividades, tornando-os um computador de mão disponível a qualquer instante. A pesquisa, ainda demonstra o sucesso das redes sociais que, segundo a mesma, se deve a disseminação dos dispositivos móveis e ao modelo de vida que grande parte das pessoas segue atualmente.
+
+\par Com a ampliação desta comunicação, somada à evolução das tecnologias, houve a necessidade de se realizar algumas melhorias voltadas aos bancos de dados, a fim de otimizar as tarefas realizadas por ele, levando assim, a criação de uma nova geração de bancos de dados, denominada NoSQL\footnotemark[1].
+
+\footnotetext[1]{NOSQL: \textit{Not Only SQL} - Bancos de dados que utilizam não somente os recursos de Structure Query Language - SQL, a fim de obter melhor \textit{performance}.}
+
+\par Dentre esta nova geração, o banco de dados orientado a grafos vem se destacando por apresentar grande potencial para manipulação de dados em diferentes áreas como: relacionamento interpessoal, biológicas, rotas geográficas, entre outras.
+
+\par \citeonline{tcc_univas_penha_carvalho_recomendacao_filmes} utilizaram esta tecnologia para desenvolver uma aplicação, cujo principal objetivo é recomendar filmes aos seus usuários de acordo com seus gostos pessoais, utilizando o conceito de \textit{traversals} (travessias), disponibilizada pelo banco Neo4j, possibilitando a navegação pelo grafo.
+
+\par \citeonline{tcc_univas_silva_pires_comparacao_banco_dados} realizaram uma comparação entre banco de dados orientado a grafos e os relacionais aplicados à redes sociais, a fim de apresentar as vantagens que estes possuem sob os bancos de dados relacionais. Para realizar tal comparação foi utilizada algumas consultas que possuem o mesmo fim para ambos e um simples software desenvolvido utilizando a linguagem Java para calcular o tempo gasto no processamento dessas consultas.
+
+\par \citeonline{junid_tahir_majid_idros_potential_graph_thory_for_dna_sequence_alignment} utilizaram a teoria dos grafos para tentar otimizar o processo de alinhamento da sequência de DNA a fim de determinar a região comum entre duas ou mais sequências deste. Para determinar esta região, foi necessário além da teoria dos grafos, modificar alguns algoritmos assim como algumas fórmulas matemáticas, para se obter o resultado proposto.
+
+\par A fim de justificar a escolha do tema, foi realizada uma pesquisa informal com o auxílio de um formulário, disponibilizado na internet, na região de Pouso Alegre. Por meio dessa pesquisa constatou-se que não há um sistema que possua como principal objetivo localizar determinados tipos de mão de obra nos quais não existam vínculos empregatícios. Esse formulário está disponível no Apêndice VI deste trabalho.
+
+\par Este projeto propõe atuar sobre esta limitação, desenvolvendo um software cujo principal objetivo é localizar e apresentar aos usuários, profissionais temporários que possuam credibilidade e boas referências.
+
+\par A fim de tornar possível a realização do mesmo serão utilizadas tecnologias gratuitas e de boa aceitação pelo mercado. Desta forma, será possível reduzir o custo de desenvolvimento, possibilitando a sua distribuição aos usuários. Com esta distribuição, seus benefícios alcançarão uma quantidade maior de pessoas, aumentando consideravelmente a facilidade na busca por este tipo de profissional.
+
+\par Como o objetivo geral deste trabalho é buscar a solução de um problema relacionado à busca por mão de obra temporária, desenvolvendo uma aplicação \textit{web} utilizando uma base de dados orientada a grafos, capaz de realizar buscas por profissionais que desempenhem trabalho temporário sem vínculo empregatício formalizado. Esta aplicação seguirá como base o modelo de negócio das redes sociais, a fim de gerar a familiarização desta ferramenta, uma vez que este tipo de serviço já está intrínseco na atualidade.
+
+\par Os objetivos específicos deste trabalho são:
+
+\begin{itemize}
+	\item Demostrar o uso do banco de dados Neo4j, por meio da \textit{Application Program Interface} API Cypher;
+	\item Representar o problema utilizando grafos;
+	\item Projetar e implementar uma aplicação \textit{web} para cadastro e busca de mão de obra.
+\end{itemize}
+
+\par Este projeto também visa a proporcionar uma base de conhecimentos e explanação de tecnologias atuais e valorizadas, sendo que algumas não fazem parte do escopo do curso. Agregando todos estes benefícios à possibilidade de melhoria contínua e acréscimos de novas funcionalidades, este projeto servirá como apoio para novos trabalhos acadêmicos.
+
+\par Este trabalho é composto por quatro capítulos, e uma breve descrição de cada um deles é apresentada a seguir. O primeiro capítulo, denominado Quadro Teórico, discute todas as teorias utilizadas durante o seu desenvolvimento. No segundo capítulo, Quadro Metodológico, são demonstrados detalhes a respeito da pesquisa, como ela foi realizada, as ferramentas utilizadas, além dos procedimentos realizados até a sua finalização. No terceiro capítulo, Discussão dos resultados, são apresentados os mais relevantes resultados obtidos após a conclusão do trabalho. No quarto capítulo, denominado Conclusão, são descritas as considerações finais e impressões desta pesquisa.

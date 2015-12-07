@@ -1,0 +1,60 @@
+<!-- Content-->
+<div id="container">
+    
+    <div id="feed-content" ng-hide="typeOfAccount == 'SERVICE_PROVIDER'">
+
+        <h1>Últimas atualizações</h1>
+        <loading></loading>
+
+        <div class="feeds" ng-repeat="iter in feeds">
+            <!-- Últimas parcerias criadas -->
+            <div class="feed" ng-hide="iter.isRating">
+                <span class="name" ng-click="openPartnerProfile(iter.partnerEmail, iter.partner)">{{iter.partner}}</span>
+                 e <span class="name" ng-click="openPartnerProfile(iter.userEmail, iter.user)">{{iter.user}}</span> 
+                 se tornaram parceiro(a)s.
+            </div>
+
+            <!-- Últimas avaliações realizadas -->
+
+            <div class="feed" ng-show="iter.isRating">
+                <span class="name" ng-click="openPartnerProfile(iter.userEmail, iter.user)">{{iter.user}}</span> 
+                avaliou o(a) <span class="name" ng-click="openServiceProviderProfile(iter.serviceProviderEmail, iter.service)">{{iter.serviceProvider}}</span> 
+                pelo trabalho prestado como <span class="service">{{iter.service}}</span>.
+            </div>
+
+        </div>
+
+    </div>
+    
+    
+    <div id="feed-content" ng-hide="typeOfAccount == 'CONTRACTOR' || typeOfAccount == undefined">
+        
+        <loading></loading>
+        
+        <div ng-if="myServices.length > 0">
+            Notamos que você realiza o(s) seguinte(s) serviço(s):
+            <div class="services" ng-repeat="iter in myServices" ng-click="reloadGraph(iter)" title="Compare as avaliações">
+                <span class="name">{{iter.name}}</span>
+            </div>
+            
+            <!-- Grafico -->
+            <div id="report-line" ng-show="showGraphics">
+                <div>
+                    <canvas id="canvas" height="450" width="600"></canvas>
+                </div>
+                <div id="legend-graphic">
+                    <span>Média das avaliações das minhas avaliações como {{selectedService}}<div class="first"></div></span>
+                    <span>Média das avaliações de {{selectedService}} em minha cidade<div class="second"></div></span>
+                </div>
+            </div>
+        </div>
+        
+        <h1>Dicas</h1>
+        <div class="feeds" ng-repeat="iter in dicas">
+            <div class="feed">
+                {{iter.dica}}
+            </div>
+        </div>
+        
+    </div>
+</div>

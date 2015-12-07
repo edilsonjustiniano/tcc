@@ -1,0 +1,104 @@
+<!-- Content-->
+<div id="container">
+
+   <div id="user-profile-data">
+        <loading></loading>
+        <img class="img-circle" src="{{serviceProvider.photo}}" alt="Profile Photo" />
+        <span class="name">{{serviceProvider.name}}</span>
+        <span class="other-infos">Idade</span>
+        <span class="other-infos" ng-if="serviceProvider.gender == 'Masculino' || serviceProvider.gender == 'Feminino'">Sexo: {{serviceProvider.gender}}</span>
+        <span class="other-infos">Cidade: {{serviceProvider.livesIn}}</span>
+        <span class="other-infos">Trabalha no(a): {{serviceProvider.worksIn}}</span>
+    </div>
+
+    
+    <div id="service-provider-options">
+
+        <button class="btn" ng-click="evaluateButtonClick()">Avaliar Serviço</button>
+       
+        <form ng-submit="saveRating()" id="evaluate-form" ng-show="showAddRating">
+            <legend>Avaliar serviço</legend>
+
+            <!-- Msg error -->
+            <div class="alert alert-error" ng-show="msg.type == 'ERROR'">{{msg.msg}}</div>
+
+            <!-- Msg success -->
+            <div class="alert alert-success" ng-show="msg.type == 'SUCCESS'">{{msg.msg}}</div>
+
+            <label>Nota</label>
+            <select ng-model="evaluateNote" name="note" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            
+            <label>Mensagem</label>
+            <textarea rows="5" ng-model="comments" placeholder="Insira seu comentário..." required></textarea>
+
+            <p>
+                <input type="submit" class="btn btn-large btn-primary" value="Salvar" />
+                <input type="reset" class="btn btn-large" value="Cancelar" />
+            </p>
+        </form>
+
+    </div>
+
+     <!-- Grafico -->
+    <div id="report-line">
+        <div>
+            <canvas id="canvas" height="450" width="600"></canvas>
+        </div>
+        <div id="legend-graphic">
+            <span>Média das avaliações de {{serviceProvider.name}} como {{serviceProvider.service}} em minha rede de parceiros<div class="first"></div></span>
+            <span>Média das avaliações de {{serviceProvider.service}} em minha rede de parceiros<div class="second"></div></span>
+        </div>
+    </div>
+
+
+    <div class="service-provider-evaluates">
+        <h3>Em minha rede de parceiros</h3>
+        <loading></loading>
+        <span class="note-rating">Avaliado por: {{ratingInMyNetwork.length}} parceiro(s) Média: {{averageInMyNetwork}}</span>
+        <div class="progress progress-info progress-striped">
+            <div class="bar" style="width: {{percentInMyNetwork}}%" title="Avaliado por: {{personsWhoseRateitInMyNetwork}}"></div>
+        </div>
+        <button class="btn" ng-click="enableCommentsFromMyNetwork()" ng-show="ratingInMyNetwork.length > 0">Comentários</button>
+        <div class="comments" ng-repeat="iter in ratingInMyNetwork" ng-show="showCommentsFromMyNetwork">
+            <span class="name">{{iter.partner}}</span>
+            <span class="date">{{iter.date}}</span>
+            <span class="comment">{{iter.comments}}</span>
+        </div>
+        
+        
+        <h3>Na empresa onde trabalho</h3>
+        <loading></loading>
+        <span class="note-rating">Avaliado por: {{ratingInMyCompany.length}} pessoa(s) Média: {{averageInMyCompany}}</span>
+        <div class="progress progress-success progress-striped">
+            <div class="bar" style="width: {{percentInMyCompany}}%" title="Avaliado por: {{personsWhoseRateitInMyCompany}}"></div>
+        </div>
+        <button class="btn" ng-click="enableCommentsFromMyCompany()" ng-show="ratingInMyCompany.length > 0">Comentários</button>
+        <div class="comments" ng-repeat="iter in ratingInMyCompany" ng-show="showCommentsFromMyCompany">
+            <span class="name">{{iter.partner}}</span>
+            <span class="date">{{iter.date}}</span>
+            <span class="comment">{{iter.comments}}</span>
+        </div>
+        
+        
+        <h3>Em minha cidade</h3>
+        <loading></loading>
+        <span class="note-rating">Avaliado por: {{ratingInMyCity.length}} pessoa(s) Média: {{averageInMyCity}}</span>
+        <div class="progress progress-warning progress-striped">
+            <div class="bar" style="width: {{percentInMyCity}}%" title="Avaliado por: {{personsWhoseRateitInMyCity}}"></div>
+        </div>
+        <button class="btn" ng-click="enableCommentsFromMyCity()" ng-show="ratingInMyCity.length > 0">Comentários</button>
+        <div class="comments" ng-repeat="iter in ratingInMyCity" ng-show="showCommentsFromMyCity">
+            <span class="name">{{iter.partner}}</span>
+            <span class="date">{{iter.date}}</span>
+            <span class="comment">{{iter.comments}}</span>
+        </div>
+        
+    </div>
+
+</div>

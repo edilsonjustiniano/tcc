@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html ng-app="TCCApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Início</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <!-- TCC Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="main-menu-bar" class="navbar navbar-fixed-top" ng-controller="MenuBarController">
+        <div class="navbar-inner">
+
+            <a class="brand" href="#/home">Início</a>
+
+            <ul class="nav pull-right">
+
+               <li>
+                   <loading></loading>
+               </li>
+                <!-- Search service providers -->
+                <li ng-hide="user.typeOfAccount == 'SERVICE_PROVIDER'">
+                    <a href="#/search-service-providers">Busca</a>
+                </li>
+
+                <!-- Services -->
+                <li ng-hide="user.typeOfAccount == 'CONTRACTOR'">
+                    <a href="#/service">Serviços</a>
+                </li>
+
+                <!-- Partner network -->
+                <li ng-hide="user.typeOfAccount == 'SERVICE_PROVIDER'">
+                    <a href="#/partner-network">Rede de Parceiros</a>
+                </li>
+
+                <!-- Partners -->
+                <li class="dropdown" ng-hide="user.typeOfAccount == 'SERVICE_PROVIDER'">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="">
+						Novas Parcerias
+				        <b class="caret"></b>
+				        <b class="requests-waiting" ng-show="partnerRequests.length > 0">{{partnerRequests.length}}</b>
+				    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="partner in partnerRequests | orderBy: 'date' ">
+                            <div class="partner-request-received">
+                                <a href="">{{partner.requestFromName}}</a>
+                                <span class="options-accept-or-not">
+									<a href="" ng-click="acceptPartnerRequest(partner)">
+										<img src="image/icon/ok-icon.png" class="img-circle icon-accept" alt="Ok" />
+									</a>
+
+									<a href="" ng-click="rejectPartnerRequest(partner)">
+										<img src="image/icon/error-icon.png" class="img-circle icon-accept" alt="Cancelar" />
+									</a>
+								</span>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Mesages -->
+                <!--<li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="">
+						Mensagens
+				        <b class="caret"></b>
+				    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="msg in mesages | orderBy: 'date' ">
+                            <a href="">{{msg.title}}</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Mensagem 1</a>
+                            <a href="#">Mensagem 2</a>
+                            <a href="#">Mensagem 3</a>
+                        </li>
+                    </ul>
+                </li>
+                -->
+
+                <!-- User Options -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                        <img class="img-circle user-profile-photo" src="{{user.photo}}" alt="Profile Photo" /> {{user.name}}
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#/config">Configurações</a>
+                            <a href="#/change-password">Alterar Senha</a>
+                            <a href="#" ng-click="logout()">Sair</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Left Bar -->
+    <div id="left-bar" ng-controller="LeftBarController">
+        <div id="personal-data">
+            <img class="img-circle" src="{{user.photo}}" title="Foto de perfil" />
+            <span class="personal-data-name">{{user.name}}</span>   
+        </div>
+        
+        <div id="last-ratings" ng-hide="user.typeOfAccount == 'SERVICE_PROVIDER'">
+            <h1>Suas últimas avaliações</h1>
+            <loading></loading>
+            <div class="ratings" ng-repeat="iter in lastestRatings" >
+                <img class="img-circle" src="{{iter.photo}}" title="{{iter.name}}" ng-click="openServiceProviderProfile(iter)" />
+                <span class="name" ng-click="openServiceProviderProfile(iter)">{{iter.name}}</span>
+                <span class="service">{{iter.service}}</span>
+                <span class="caret-ratings" ng-click="showComments(iter)"></span>
+                <div class="comments-span" ng-show="iter.showComments">
+                    <span class="note">Nota: {{iter.note}}</span>
+                    <span class="date">Data: {{iter.date}}</span>
+                    <span class="comment">{{iter.comments}}</span>
+                </div>
+                
+            </div>
+
+	    </div>
+	    
+	    
+	    <!-- Possible partners -->
+	    <div id="possible-partners" ng-hide="user.typeOfAccount == 'SERVICE_PROVIDER'">
+	        <h1>Possíveis parceiros</h1>
+	        <loading></loading>
+	        <div class="partners" ng-repeat="iter in possiblePartners">
+                <img class="img-circle" src="{{iter.photo}}" title="{{iter.name}}" ng-click="openPartnerProfile(iter)" />
+                <span class="name" ng-click="openPartnerProfile(iter)">{{iter.name}}</span>
+                <span class="email">{{iter.email}}</span>
+            </div>
+	            
+        </div>
+
+    </div><!-- /Left bar -->
+    
+    <!-- Content-->
+    <div id="content" ng-view=""></div>
+
+   
+    <!-- Libs JQuery and bootstrap for dorp down menu -->
+    <script type="text/javascript" src="js/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+
+    <!-- Angular libs -->
+    <script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+    <script type="text/javascript" src="js/angularjs/angular-route.min.js"></script>
+    
+    <!-- Charts -->
+    <script type="text/javascript" src="js/charts/Chart.js"></script>
+
+    <!-- App -->
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <!-- Services -->
+    <script type="text/javascript" src="js/services/SessionService.js"></script>
+    <script type="text/javascript" src="js/services/PartnerService.js"></script>
+    <script type="text/javascript" src="js/services/ServiceService.js"></script>
+    <script type="text/javascript" src="js/services/ServiceProviderService.js"></script>
+    <script type="text/javascript" src="js/services/UploadService.js"></script>
+    <script type="text/javascript" src="js/services/RatingService.js"></script>
+    <script type="text/javascript" src="js/services/FeedsService.js"></script>
+    <script type="text/javascript" src="js/services/CityService.js"></script>
+    <script type="text/javascript" src="js/services/AccountService.js"></script>
+    <script type="text/javascript" src="js/services/ReportService.js"></script>
+
+    <!-- Controllers -->
+    <script type="text/javascript" src="js/controllers/UploadController.js"></script>
+    <script type="text/javascript" src="js/controllers/MenuBarController.js"></script>
+    <script type="text/javascript" src="js/controllers/LeftBarController.js"></script>
+    <script type="text/javascript" src="js/controllers/HomeController.js"></script>
+    <script type="text/javascript" src="js/controllers/PartnerNetworkController.js"></script>
+    <script type="text/javascript" src="js/controllers/PartnerProfileController.js"></script>
+    <script type="text/javascript" src="js/controllers/ServiceProviderProfileController.js"></script>
+    <script type="text/javascript" src="js/controllers/SearchServiceProviderController.js"></script>
+    <script type="text/javascript" src="js/controllers/ServiceController.js"></script>
+    <script type="text/javascript" src="js/controllers/ConfigController.js"></script>
+    <script type="text/javascript" src="js/controllers/PasswordController.js"></script>
+    
+    <!-- Directive -->
+    <script type="text/javascript" src="js/directives/Loading.js"></script>
+</body>
+</html>

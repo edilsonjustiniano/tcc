@@ -1,48 +1,36 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.27)  8 NOV 2015 13:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  7 DEC 2015 21:32
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **Principal.tex
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.tex"
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\abntex2\abntex2.
-cls"
-Document Class: abntex2 2015/04/28 v1.9.5 abnTeX2
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+(./Principal.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/abntex2/abntex2.cls
+Document Class: abntex2 2014/01/26 v1.9.2 abnTeX2
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\memoir\memoir.cl
-s"
-Document Class: memoir 2015/04/23 v3.7d configurable book, report, article docu
+(/usr/local/texlive/2014/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2013/05/30 v3.7b configurable book, report, article docu
 ment class
 \onelineskip=\skip41
 \lxvchars=\skip42
 \xlvchars=\skip43
 \@memcnta=\count79
 \c@@memmarkcntra=\count80
-\l@nohyphenation=\language69
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\ifetex\ifetex.st
-y"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ifetex/ifetex.sty
 Package: ifetex 2011/12/15 v1.2 ifetex
 
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\plain\ifetex\ifetex.te
-x")) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/plain/ifetex/ifetex.tex))
+(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -51,12 +39,11 @@ Package ifluatex Info: LuaTeX not detected.
 \trimtop=\skip46
 \trimedge=\skip47
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\misc\etex.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 \et@xins=\count81
 )
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\memoir\mem12.clo
-"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/memoir/mem12.clo
 File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 )
 \binding=\skip48
@@ -209,8 +196,8 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \afterepigraphskip=\skip125
 \epigraphwidth=\skip126
 \epigraphrule=\skip127
-LaTeX Info: Redefining \em on input line 7533.
-LaTeX Info: Redefining \emph on input line 7541.
+LaTeX Info: Redefining \em on input line 7492.
+LaTeX Info: Redefining \emph on input line 7500.
 \tocentryskip=\skip128
 \tocbaseline=\skip129
 \cftparskip=\skip130
@@ -293,8 +280,8 @@ LaTeX Info: Redefining \emph on input line 7541.
 \FrameRule=\dimen145
 \FrameSep=\dimen146
 \c@cp@cntr=\count119
-LaTeX Info: Redefining \: on input line 12050.
-LaTeX Info: Redefining \! on input line 12052.
+LaTeX Info: Redefining \: on input line 11958.
+LaTeX Info: Redefining \! on input line 11960.
 \c@ism@mctr=\count120
 \c@xsm@mctr=\count121
 \c@csm@mctr=\count122
@@ -355,25 +342,24 @@ Package tocvsec2 [2008/07/23] emulated by memoir.
 Package verbatim [2008/07/23] emulated by memoir.
 Package verse [2008/07/23] emulated by memoir.
 
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\memoir\mempatch.
-sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/memoir/mempatch.sty
 Package: mempatch 2009/07/24 v6.0f Patches for memoir class v1.6180339
 ))
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\textcase\textcas
-e.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
 LaTeX Info: Redefining \MakeTextUppercase on input line 47.
 LaTeX Info: Redefining \MakeTextLowercase on input line 50.
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 Package hobsub Info: Skipping package `ifluatex' (already loaded).
@@ -402,7 +388,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
@@ -410,26 +396,26 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen147
 \Hy@linkcounter=\count138
 \Hy@pagecounter=\count139
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count140
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -441,7 +427,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count141
 
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -463,8 +449,7 @@ LaTeX Info: Redefining \pageref on input line 6369.
 \c@Item=\count144
 \c@Hfootnote=\count145
 )
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\memoir\memhfixc.
-sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/memoir/memhfixc.sty
 Package: memhfixc 2013/05/30 v1.17 nameref/hyperref package fixes for memoir cl
 ass
 \c@memhycontfloat=\count146
@@ -473,39 +458,33 @@ ass
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count148
 \c@bookmark@seq@number=\count149
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip185
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/bookmark.sty
 Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdftex.def"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def
 File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
 \BKM@id=\count150
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2008/07/08 v3.8m The Babel package
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/03/24 3.9k The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
-Language: english 2005/03/30 v3.3o English support from the babel system
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2008/07/08 v3.8m Babel common definitions
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/03/24 3.9k Babel common definitions
 \babel@savecnt=\count151
 \U@D=\dimen151
 )
@@ -513,20 +492,20 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\portuges.ldf"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel-portuges/portuges.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 \l@brazil = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
 ))
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\enumite
-m.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip186
 \enit@outerparindent=\dimen152
 \enit@toks=\toks23
 \enit@inbox=\box29
 \enitdp@description=\count152
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count153
 \calc@Bcount=\count154
@@ -534,8 +513,8 @@ Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bdimen=\dimen154
 \calc@Askip=\skip187
 \calc@Bskip=\skip188
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
 \calc@Ccount=\count155
 \calc@Cskip=\skip189
 )
@@ -573,22 +552,20 @@ Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 \ABNTEXsignwidth=\skip193
 \ABNTEXsignthickness=\skip194
 \ABNTEXsignskip=\skip195
-)
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\styles/CodeStyle
-.sty" ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+) (./styles/CodeStyle.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
+Package color Info: Driver file: pdftex.def on input line 137.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \Gread@gobject=\count164
 ))
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listing
-s.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count165
 \lst@gtempboxa=\box30
 \lst@token=\toks24
@@ -602,39 +579,35 @@ s.sty"
 \lst@lineno=\count170
 \lst@maxwidth=\dimen158
 
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc
-.sty"
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 \c@lstnumber=\count171
 \lst@skipnumbers=\count172
 \lst@framebox=\box31
 )
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listing
-s.cfg"
-File: listings.cfg 2014/09/06 1.5e listings configuration
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
 ))
-Package: listings 2014/09/06 1.5e (Carsten Heinz)
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
 Package color Info: Redefining color blue on input line 5.
 Package color Info: Redefining color cyan on input line 9.
 )
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\styles/EventFlow
-Style.sty"
+(./styles/EventFlowStyle.sty
 \c@tablecell=\count173
-)
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\styles/NuapaStyl
-e.sty" ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2008/03/30 v1.1d Input encoding file
+) (./styles/NuapaStyle.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2014/04/30 v1.2b Input encoding file
 \inpenc@prehook=\toks25
 \inpenc@posthook=\toks26
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -784,7 +757,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -815,7 +788,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -841,48 +814,48 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\abntex2\abntex2c
-ite.sty"
-Package: abntex2cite 2015/04/28 v1.9.5 abnTeX2
+(/usr/local/texlive/2014/texmf-dist/tex/latex/abntex2/abntex2cite.sty
+Package: abntex2cite 2014/01/26 v1.9.2 abnTeX2
 
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\abntex2\abntex2a
-brev.sty")
+(/usr/local/texlive/2014/texmf-dist/tex/latex/abntex2/abntex2abrev.sty)
 \minimumbiblabelwidth=\skip196
 \ABCIauxlen=\skip197
 \c@ABCIaux=\count174
 \c@ABCImax=\count175
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
-Package: relsize 2003/07/04 ver 3.1
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
 )
 \biblabelsep=\skip198
-LaTeX Info: Redefining \newblock on input line 591.
-LaTeX Info: Redefining \cite on input line 618.
+LaTeX Info: Redefining \newblock on input line 675.
+LaTeX Info: Redefining \cite on input line 702.
 \ABCItoken=\toks27
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
 \Gin@req@height=\dimen159
 \Gin@req@width=\dimen160
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count176
 \Gm@cntv=\count177
@@ -896,9 +869,8 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layouthoffset=\dimen167
 \Gm@layoutvoffset=\dimen168
 \Gm@dimlist=\toks28
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -933,16 +905,11 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen169
 )
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\lastpage\lastpag
-e.sty"
-
-LaTeX Warning: You have requested release `2014/05/01' of LaTeX,
-               but only release `2011/06/27' is available.
-
-Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
 )
 
 Class memoir Warning: You are using the caption package with the memoir class. 
@@ -950,13 +917,10 @@ To prepare we will now reset all captioning macros and configurations to kernel
  defaults, and then let the caption package take over. Please remember to use t
 he caption package interfaces in order to configure your captions. .
 
-
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.
-sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3
-.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen170
@@ -970,11 +934,11 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \c@ContinuedFloat=\count179
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\titlesec\titlese
-c.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box32
 \beforetitleunit=\skip199
@@ -992,13 +956,13 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \cftquadroindent=\skip202
 \cftquadronumwidth=\skip203
 
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/00_Dad
-os.tex")
+(./editaveis/00_Dados.tex)
 Package hyperref Info: Option `colorlinks' set `true' on input line 326.
 
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\ragged2e.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everysel.sty"
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
 \CenteringLeftskip=\skip204
@@ -1016,16 +980,15 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \RaggedRightParindent=\skip216
 \JustifyingParindent=\skip217
 ))
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.st
-y"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\colortbl\colortb
-l.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks30
 \minrowclearance=\skip218
@@ -1042,49 +1005,56 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.aux"
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fixos/01_Capa.au
-x"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 18.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+)
+(./Principal.aux (./fixos/01_Capa.aux))
+\openout1 = `Principal.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 19.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring ON on input line 18.
+Package hyperref Info: Link coloring ON on input line 19.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count183
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 18.
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \nameref on input line 19.
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \nameref on input line 19.
 \myptabbox=\box34
 \myptabboxwidth=\skip219
-
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.
-mkii"
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count184
 \scratchdimen=\dimen182
@@ -1099,7 +1069,21 @@ mkii"
 \everyMPtoPDFconversion=\toks32
 )
 \c@lstlisting=\count190
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
@@ -1107,14 +1091,14 @@ mkii"
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(85.35826pt, 455.24411pt, 56.9055pt)
+* h-part:(L,W,R)=(113.81102pt, 426.79135pt, 56.9055pt)
 * v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=455.24411pt
+* \textwidth=426.79135pt
 * \textheight=702.78308pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
+* \oddsidemargin=41.54103pt
+* \evensidemargin=41.54103pt
 * \topmargin=-21.28552pt
 * \headheight=14.5pt
 * \headsep=19.8738pt
@@ -1134,38 +1118,43 @@ mkii"
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package lastpage Info: Please have a look at the pageslts package at
-(lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 18.
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             macros/latex/contrib/pageslts/ 
+(lastpage)             or
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             install/macros/latex/contrib/pageslts.tds.zip
+(lastpage)             ! on input line 19.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 18.
+LaTeX Info: Redefining \selectfont on input line 19.
+\openout2 = `fixos/01_Capa.aux'.
 
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fixos/01_Capa.te
-x"
+ (./fixos/01_Capa.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 36.
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 36.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 36.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 36.
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OMX+lmex on input line 36.
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1179,10 +1168,9 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
  [1
 
 
-{C:/Users/Andressa Faria/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fixos/02_FolhaRo
-sto.tex"pdfTeX warning (ext4): destination with the same identifier (name{page.
-1}) has been already used, duplicate ignored
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+(./fixos/02_FolhaRosto.texpdfTeX warning (ext4): destination with the same iden
+tifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.35 \imprimirfolhaderosto*{}
@@ -1191,9 +1179,7 @@ l.35 \imprimirfolhaderosto*{}
 
 
 
-])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fixos/03_FichaCa
-talografica.tex"
+]) (./fixos/03_FichaCatalografica.tex
 Underfull \hbox (badness 10000) in paragraph at lines 24--24
 
  []
@@ -1213,83 +1199,105 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--24
 
  []
 
-[2])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/05_Ded
-icatoria.tex" [3])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/06_Agr
-adecimentos.tex"
-Underfull \hbox (badness 10000) in paragraph at lines 3--6
+[2]) (./fixos/04_FolhaAprovacao.tex
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
+[3
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--34
-
- []
-
-[4
-
+]) (./editaveis/05_Dedicatoria.tex [4
 
 ] [5])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/07_Epi
-grafe.tex" [6
+(./editaveis/06_Agradecimentos.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
+
+ []
+
+[6
+
+
+] [7]) (./editaveis/07_Epigrafe.tex [8
+
+]) (./fixos/0A_ListasAutomaticas.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hbox' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hsize' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hss' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hss' on input line 2.
+
+(./Principal.lof [9
+
+]) [10] (./Principal.lol) [11
+
+]) (./editaveis/0B_Siglas.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hbox' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hsize' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hss' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hss' on input line 6.
+
+[12
+
+
+]) (./editaveis/08_Resumo.tex [13
+
+]) (./editaveis/09_Abstract.tex [14
 
 ])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fixos/0A_ListasA
-utomaticas.tex"
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.lof"
-[7
+(./fixos/0C_Sumario.tex (./Principal.toc [15
 
-]) [8]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.loq")
-[9
-
-] ("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.lol"
-) [10
-
-])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/0B_Sig
-las.tex" [11
-
-
-])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/08_Res
-umo.tex" [12
-
-])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/09_Abs
-tract.tex" [13
-
-])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fixos/0C_Sumario
-.tex"
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.toc")
-[14
-
-] [15])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/10_Int
-roducao.tex"
+]) [16])
+(./editaveis/10_Introducao.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 26.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 26.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 26.
- [16
+ [17
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 47.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
- [17])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/11_Qua
-droTeorico.tex" [18]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/iconix.tex"
-<./imagens/visao_geral_iconix.png, id=322, 402.7848pt x 240.9pt>
+ [18])
+(./editaveis/11_QuadroTeorico.tex [19] (./editaveis/quadro_teorico/iconix.tex
+<./imagens/visao_geral_iconix.png, id=329, 402.7848pt x 240.9pt>
 File: ./imagens/visao_geral_iconix.png Graphic file (type png)
 
 <use ./imagens/visao_geral_iconix.png>
@@ -1302,29 +1310,26 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19
+[20
 
-] [20 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/vis
-ao_geral_iconix.png>])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/teoria_grafos.tex" [21]
-<./imagens/Konigsberg_7_bridges.jpg, id=351, 501.875pt x 401.5pt>
+] [21 <./imagens/visao_geral_iconix.png>])
+(./editaveis/quadro_teorico/teoria_grafos.tex [22]
+<./imagens/Konigsberg_7_bridges.jpg, id=359, 501.875pt x 401.5pt>
 File: ./imagens/Konigsberg_7_bridges.jpg Graphic file (type jpg)
 
 <use ./imagens/Konigsberg_7_bridges.jpg>
 Package pdftex.def Info: ./imagens/Konigsberg_7_bridges.jpg used on input line 
 9.
-(pdftex.def)             Requested size: 364.2138pt x 182.72566pt.
- [22 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/Koni
-gsberg_7_bridges.jpg>]
-<./imagens/simple_graph.png, id=375, 400.49625pt x 194.7275pt>
+(pdftex.def)             Requested size: 341.45427pt x 182.72566pt.
+ [23 <./imagens/Konigsberg_7_bridges.jpg>] <./imagens/simple_graph.png, id=382,
+ 400.49625pt x 194.7275pt>
 File: ./imagens/simple_graph.png Graphic file (type png)
 
 <use ./imagens/simple_graph.png>
 Package pdftex.def Info: ./imagens/simple_graph.png used on input line 34.
 (pdftex.def)             Requested size: 308.38306pt x 149.94061pt.
 
-<./imagens/multigraph_example.png, id=383, 246.9225pt x 178.6675pt>
+<./imagens/multigraph_example.png, id=390, 246.9225pt x 178.6675pt>
 File: ./imagens/multigraph_example.png Graphic file (type png)
 
 <use ./imagens/multigraph_example.png>
@@ -1335,9 +1340,8 @@ Package pdftex.def Info: ./imagens/multigraph_example.png used on input line 47
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/simpl
-e_graph.png>]
-<./imagens/simple_digraph_graph.png, id=401, 256.96pt x 256.96pt>
+[24 <./imagens/simple_graph.png>]
+<./imagens/simple_digraph_graph.png, id=411, 256.96pt x 256.96pt>
 File: ./imagens/simple_digraph_graph.png Graphic file (type png)
 
 <use ./imagens/simple_digraph_graph.png>
@@ -1345,61 +1349,42 @@ Package pdftex.def Info: ./imagens/simple_digraph_graph.png used on input line
 60.
 (pdftex.def)             Requested size: 154.17719pt x 154.17719pt.
 
-<./imagens/grafos_isomorficos.png, id=411, 264.99pt x 107.40125pt>
+<./imagens/grafos_isomorficos.png, id=421, 264.99pt x 107.40125pt>
 File: ./imagens/grafos_isomorficos.png Graphic file (type png)
 
 <use ./imagens/grafos_isomorficos.png>
 Package pdftex.def Info: ./imagens/grafos_isomorficos.png used on input line 78
 .
 (pdftex.def)             Requested size: 264.98935pt x 107.40097pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[24 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/multi
-graph_example.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/late
-x/imagens/simple_digraph_graph.png>]
-<./imagens/matriz_adjacencia.png, id=426, 230.8625pt x 168.63pt>
+ [25 <./imagens/multigraph_example.png> <./imagens/simple_digraph_graph.png>]
+<./imagens/matriz_adjacencia.png, id=435, 230.8625pt x 168.63pt>
 File: ./imagens/matriz_adjacencia.png Graphic file (type png)
 
 <use ./imagens/matriz_adjacencia.png>
 Package pdftex.def Info: ./imagens/matriz_adjacencia.png used on input line 97.
 
 (pdftex.def)             Requested size: 161.60263pt x 118.04018pt.
-) [25 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/gra
-fos_isomorficos.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/la
-tex/imagens/matriz_adjacencia.png>]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/banco_dados.tex")
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/banco_dados_relacionais.tex" [26])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/banco_dados_nosql.tex" [27])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/neo4j.tex" [28]
-<./imagens/simple_graph_neo4j.png, id=489, 374.39874pt x 187.70125pt>
+) [26 <./imagens/grafos_isomorficos.png> <./imagens/matriz_adjacencia.png>] (./
+editaveis/quadro_teorico/banco_dados.tex)
+[27] (./editaveis/quadro_teorico/banco_dados_relacionais.tex)
+(./editaveis/quadro_teorico/banco_dados_nosql.tex [28])
+(./editaveis/quadro_teorico/neo4j.tex [29] [30]
+<./imagens/simple_graph_neo4j.png, id=506, 374.39874pt x 187.70125pt>
 File: ./imagens/simple_graph_neo4j.png Graphic file (type png)
 
 <use ./imagens/simple_graph_neo4j.png>
-Package pdftex.def Info: ./imagens/simple_graph_neo4j.png used on input line 31
+Package pdftex.def Info: ./imagens/simple_graph_neo4j.png used on input line 30
 .
 (pdftex.def)             Requested size: 299.5194pt x 150.1612pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[29])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/cypher.tex" [30 <C:/Users/Andressa Faria/Documents/GitHub/tcc/document
-o/latex/imagens/simple_graph_neo4j.png>])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/java.tex" [31] [32]
+) [31 <./imagens/simple_graph_neo4j.png>] (./editaveis/quadro_teorico/cypher.te
+x [32])
+(./editaveis/quadro_teorico/java.tex [33]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 21.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<./imagens/processo_compilacao_java.png, id=547, 297.7524pt x 81.4242pt>
+<./imagens/processo_compilacao_java.png, id=556, 297.7524pt x 81.4242pt>
 File: ./imagens/processo_compilacao_java.png Graphic file (type png)
 
 <use ./imagens/processo_compilacao_java.png>
@@ -1407,22 +1392,10 @@ Package pdftex.def Info: ./imagens/processo_compilacao_java.png used on input l
 ine 25.
 (pdftex.def)             Requested size: 297.75166pt x 81.424pt.
 )
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/tomcat.tex" [33 <C:/Users/Andressa Faria/Documents/GitHub/tcc/document
-o/latex/imagens/processo_compilacao_java.png>])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/webservice_rest.tex" [34]
-Overfull \hbox (5.16287pt too wide) in paragraph at lines 29--30
-[]\T1/ptm/m/n/12 trabalha com -\T1/ptm/m/it/12 Extensible Mar-kup Lan-guage \T1
-/ptm/m/n/12 - XML[], \T1/ptm/m/it/12 Ja-vas-cript Ob-ject No-ta-tion \T1/ptm/m/
-n/12 - JSON[]
- []
-
-)
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/html5.tex" [35])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/css3.tex" [36]
+(./editaveis/quadro_teorico/tomcat.tex [34 <./imagens/processo_compilacao_java.
+png>]) (./editaveis/quadro_teorico/webservice_rest.tex [35] [36])
+(./editaveis/quadro_teorico/html5.tex [37])
+(./editaveis/quadro_teorico/css3.tex [38]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 18.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
@@ -1431,73 +1404,65 @@ nput line 21.
 
 Package xcolor Warning: Incompatible color definition on input line 28.
 
-[37]
 
 Package xcolor Warning: Incompatible color definition on input line 51.
 
 
 Package xcolor Warning: Incompatible color definition on input line 55.
 
+[39]
 
 Package xcolor Warning: Incompatible color definition on input line 81.
 
 
 Package xcolor Warning: Incompatible color definition on input line 81.
 
-)
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/javascript.tex" [38]
+) (./editaveis/quadro_teorico/javascript.tex [40]
 
 Package xcolor Warning: Incompatible color definition on input line 21.
 
-[39]
+[41]
 
 Package xcolor Warning: Incompatible color definition on input line 47.
 
 
 Package xcolor Warning: Incompatible color definition on input line 47.
 
-)
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_teorico/angularjs.tex" [40]))
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/12_Qua
-droMetodologico.tex" [41]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/tipo_pesquisa.tex" [42
+) (./editaveis/quadro_teorico/angularjs.tex))
+(./editaveis/12_QuadroMetodologico.tex [42]
+(./editaveis/quadro_metodologico/tipo_pesquisa.tex [43
 
 ])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/contexto_pesquisa.tex")
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/instrumentos.tex" [43])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/procedimentos.tex" [44]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/procedimentos/iconix.tex" [45]
-<./imagens/modelo-dominio-inicial.png, id=770, 764.8575pt x 540.51938pt>
+(./editaveis/quadro_metodologico/contexto_pesquisa.tex [44])
+(./editaveis/quadro_metodologico/instrumentos.tex)
+(./editaveis/quadro_metodologico/procedimentos.tex [45]
+(./editaveis/quadro_metodologico/procedimentos/iconix.tex [46]
+<./imagens/modelo-dominio-inicial.png, id=783, 764.8575pt x 540.51938pt>
 File: ./imagens/modelo-dominio-inicial.png Graphic file (type png)
 
 <use ./imagens/modelo-dominio-inicial.png>
 Package pdftex.def Info: ./imagens/modelo-dominio-inicial.png used on input lin
 e 9.
 (pdftex.def)             Requested size: 344.1827pt x 243.23146pt.
- [46 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/mode
-lo-dominio-inicial.png>]
-<./imagens/caso-de-uso-unificado.png, id=777, 781.2387pt x 756.6669pt>
+ [47 <./imagens/modelo-dominio-inicial.png>] <./imagens/caso-de-uso-unificado.p
+ng, id=790, 781.2387pt x 756.6669pt>
 File: ./imagens/caso-de-uso-unificado.png Graphic file (type png)
 
 <use ./imagens/caso-de-uso-unificado.png>
 Package pdftex.def Info: ./imagens/caso-de-uso-unificado.png used on input line
  19.
 (pdftex.def)             Requested size: 390.6184pt x 378.33252pt.
- [47 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/caso
--de-uso-unificado.png>]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-localizar-parceiro.tex"
+ [48 <./imagens/caso-de-uso-unificado.png>] (./fluxos/fluxo-evento-localizar-pa
+rceiro.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+
+Underfull \hbox (badness 2556) in paragraph at lines 6--6
+[]\T1/ptm/m/n/10.95 Possíveis par-ceiro(s) apre-sen-tado(s) ao
+ []
+
 )
 Underfull \hbox (badness 10000) in paragraph at lines 1--63
 [][]
@@ -1509,7 +1474,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--63
  []
 
 
-<./imagens/apendices/diagrama-robustez-localizar-parceiros.png, id=785, 1154.81
+<./imagens/apendices/diagrama-robustez-localizar-parceiros.png, id=800, 1154.81
 438pt x 524.71031pt>
 File: ./imagens/apendices/diagrama-robustez-localizar-parceiros.png Graphic fil
 e (type png)
@@ -1518,33 +1483,24 @@ e (type png)
 Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-localizar-parcei
 ros.png used on input line 103.
 (pdftex.def)             Requested size: 404.19109pt x 183.65135pt.
- [48 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/diagrama-robustez-localizar-parceiros.png>]
-<./imagens/modelo-dominio-com-atributos.png, id=793, 880.2486pt x 736.4313pt>
+ [49 <./imagens/apendices/diagrama-robustez-localizar-parceiros.png>]
+<./imagens/modelo-dominio-com-atributos.png, id=807, 880.2486pt x 736.4313pt>
 File: ./imagens/modelo-dominio-com-atributos.png Graphic file (type png)
 
 <use ./imagens/modelo-dominio-com-atributos.png>
 Package pdftex.def Info: ./imagens/modelo-dominio-com-atributos.png used on inp
 ut line 113.
 (pdftex.def)             Requested size: 440.12323pt x 368.21475pt.
- [49 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/mode
-lo-dominio-com-atributos.png>]
-<./imagens/structure-all-nodes.png, id=800, 1371.1225pt x 770.88pt>
+ [50 <./imagens/modelo-dominio-com-atributos.png>]
+<./imagens/structure-all-nodes.png, id=814, 1371.1225pt x 770.88pt>
 File: ./imagens/structure-all-nodes.png Graphic file (type png)
 
 <use ./imagens/structure-all-nodes.png>
 Package pdftex.def Info: ./imagens/structure-all-nodes.png used on input line 1
 23.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
-
-Overfull \hbox (1.06189pt too wide) in paragraph at lines 129--130
-[]\T1/ptm/m/n/12 Na ter-ceira fase, de-fi-nida como pro-jeto de-ta-lhado, fo-ra
-m cri-a-dos os di-a-gra-mas de sequên-
- []
-
-[50 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/struc
-ture-all-nodes.png>]
-<./imagens/apendices/diagrama-sequencia-localizar-parceiros.png, id=807, 1338.5
+ [51 <./imagens/structure-all-nodes.png>]
+<./imagens/apendices/diagrama-sequencia-localizar-parceiros.png, id=822, 1338.5
 0063pt x 754.31813pt>
 File: ./imagens/apendices/diagrama-sequencia-localizar-parceiros.png Graphic fi
 le (type png)
@@ -1553,44 +1509,33 @@ le (type png)
 Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-localizar-parce
 iros.png used on input line 133.
 (pdftex.def)             Requested size: 1338.49738pt x 754.3163pt.
+ [52 <./imagens/apendices/diagrama-sequencia-localizar-parceiros.png>]
+<./imagens/classe-full.png, id=829, 2779.38374pt x 2526.43875pt>
+File: ./imagens/classe-full.png Graphic file (type png)
 
-<./imagens/classe.jpg, id=809, 2746.26pt x 1561.835pt>
-File: ./imagens/classe.jpg Graphic file (type jpg)
-
-<use ./imagens/classe.jpg>
-Package pdftex.def Info: ./imagens/classe.jpg used on input line 142.
-(pdftex.def)             Requested size: 2746.25333pt x 1561.8312pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[51 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apend
-ices/diagrama-sequencia-localizar-parceiros.png>])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/procedimentos/preparacao_ambiente.tex" [52 <C:/Users/Andressa Far
-ia/Documents/GitHub/tcc/documento/latex/imagens/classe.jpg>]
-<./imagens/github.jpg, id=820, 1035.87pt x 590.205pt>
+<use ./imagens/classe-full.png>
+Package pdftex.def Info: ./imagens/classe-full.png used on input line 143.
+(pdftex.def)             Requested size: 472.48898pt x 429.4889pt.
+ [53 <./imagens/classe-full.png>])
+(./editaveis/quadro_metodologico/procedimentos/preparacao_ambiente.tex
+<./imagens/github.jpg, id=836, 1035.87pt x 590.205pt>
 File: ./imagens/github.jpg Graphic file (type jpg)
 
 <use ./imagens/github.jpg>
 Package pdftex.def Info: ./imagens/github.jpg used on input line 8.
 (pdftex.def)             Requested size: 414.34065pt x 236.0778pt.
- [53 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/gith
-ub.jpg>]
-<./imagens/eclipse-editor-texto.png, id=826, 1282.7925pt x 777.90625pt>
+ [54 <./imagens/github.jpg>]
+<./imagens/eclipse-editor-texto.png, id=843, 1282.7925pt x 777.90625pt>
 File: ./imagens/eclipse-editor-texto.png Graphic file (type png)
 
 <use ./imagens/eclipse-editor-texto.png>
 Package pdftex.def Info: ./imagens/eclipse-editor-texto.png used on input line 
 23.
 (pdftex.def)             Requested size: 384.84071pt x 233.37367pt.
-)
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/quadro
-_metodologico/procedimentos/desenvolvimento.tex" [54 <C:/Users/Andressa Faria/D
-ocuments/GitHub/tcc/documento/latex/imagens/eclipse-editor-texto.png>]
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang
-1.sty"
-File: lstlang1.sty 2014/09/06 1.5e listings language file
+ [55 <./imagens/eclipse-editor-texto.png>]) (./editaveis/quadro_metodologico/pr
+ocedimentos/desenvolvimento.tex
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
 
 Package xcolor Warning: Incompatible color definition on input line 10.
@@ -1663,10 +1608,10 @@ Package xcolor Warning: Incompatible color definition on input line 26.
 
 Package xcolor Warning: Incompatible color definition on input line 28.
 
+[56]
 
 Package xcolor Warning: Incompatible color definition on input line 32.
 
-[55]
 
 Package xcolor Warning: Incompatible color definition on input line 49.
 
@@ -1841,10 +1786,11 @@ Package xcolor Warning: Incompatible color definition on input line 81.
 
 Package xcolor Warning: Incompatible color definition on input line 85.
 
+[57]
 
 Package xcolor Warning: Incompatible color definition on input line 87.
 
-[56] [57]
+[58]
 
 Package xcolor Warning: Incompatible color definition on input line 127.
 
@@ -1878,45 +1824,51 @@ Package xcolor Warning: Incompatible color definition on input line 134.
 
 Package xcolor Warning: Incompatible color definition on input line 139.
 
-[58] <./imagens/login.jpg, id=957, 339.2675pt x 307.1475pt>
+[59] <./imagens/login.jpg, id=974, 339.2675pt x 307.1475pt>
 File: ./imagens/login.jpg Graphic file (type jpg)
 
 <use ./imagens/login.jpg>
 Package pdftex.def Info: ./imagens/login.jpg used on input line 154.
 (pdftex.def)             Requested size: 203.56206pt x 184.28992pt.
- [59 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/logi
-n.jpg>]
-<./imagens/tokens-traditional.png, id=966, 803.0pt x 1058.95625pt>
+
+<./imagens/tokens-traditional.png, id=978, 803.0pt x 1058.95625pt>
 File: ./imagens/tokens-traditional.png Graphic file (type png)
 
 <use ./imagens/tokens-traditional.png>
 Package pdftex.def Info: ./imagens/tokens-traditional.png used on input line 16
-4.
-(pdftex.def)             Requested size: 441.65137pt x 582.42775pt.
- [60 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/toke
-ns-traditional.png>] [61]
-<./imagens/tokens-new.png, id=985, 803.0pt x 1304.875pt>
+3.
+(pdftex.def)             Requested size: 401.49902pt x 529.47684pt.
+ [60 <./imagens/login.jpg>] [61 <./imagens/tokens-traditional.png>] [62]
+<./imagens/tokens-new.png, id=1002, 803.0pt x 1304.875pt>
 File: ./imagens/tokens-new.png Graphic file (type png)
 
 <use ./imagens/tokens-new.png>
-Package pdftex.def Info: ./imagens/tokens-new.png used on input line 174.
+Package pdftex.def Info: ./imagens/tokens-new.png used on input line 173.
 (pdftex.def)             Requested size: 401.49902pt x 652.43591pt.
- [62 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/toke
-ns-new.png>]
+ [63 <./imagens/tokens-new.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 183.
-
-
-Package xcolor Warning: Incompatible color definition on input line 183.
+Package xcolor Warning: Incompatible color definition on input line 182.
 
 
-Package xcolor Warning: Incompatible color definition on input line 185.
+Package xcolor Warning: Incompatible color definition on input line 182.
 
 
-Package xcolor Warning: Incompatible color definition on input line 185.
+Package xcolor Warning: Incompatible color definition on input line 184.
 
 
-Package xcolor Warning: Incompatible color definition on input line 185.
+Package xcolor Warning: Incompatible color definition on input line 184.
+
+
+Package xcolor Warning: Incompatible color definition on input line 184.
+
+
+Package xcolor Warning: Incompatible color definition on input line 186.
+
+
+Package xcolor Warning: Incompatible color definition on input line 186.
+
+
+Package xcolor Warning: Incompatible color definition on input line 186.
 
 
 Package xcolor Warning: Incompatible color definition on input line 187.
@@ -1928,7 +1880,61 @@ Package xcolor Warning: Incompatible color definition on input line 187.
 Package xcolor Warning: Incompatible color definition on input line 187.
 
 
-Package xcolor Warning: Incompatible color definition on input line 188.
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
 
 
 Package xcolor Warning: Incompatible color definition on input line 188.
@@ -1956,63 +1962,6 @@ Package xcolor Warning: Incompatible color definition on input line 188.
 
 
 Package xcolor Warning: Incompatible color definition on input line 188.
-
-
-Package xcolor Warning: Incompatible color definition on input line 188.
-
-
-Package xcolor Warning: Incompatible color definition on input line 188.
-
-
-Package xcolor Warning: Incompatible color definition on input line 188.
-
-
-Package xcolor Warning: Incompatible color definition on input line 188.
-
-
-Package xcolor Warning: Incompatible color definition on input line 188.
-
-
-Package xcolor Warning: Incompatible color definition on input line 188.
-
-
-Package xcolor Warning: Incompatible color definition on input line 188.
-
-
-Package xcolor Warning: Incompatible color definition on input line 188.
-
-
-Package xcolor Warning: Incompatible color definition on input line 188.
-
-
-Package xcolor Warning: Incompatible color definition on input line 188.
-
-
-Package xcolor Warning: Incompatible color definition on input line 188.
-
-
-Package xcolor Warning: Incompatible color definition on input line 188.
-
-
-Package xcolor Warning: Incompatible color definition on input line 189.
-
-
-Package xcolor Warning: Incompatible color definition on input line 189.
-
-
-Package xcolor Warning: Incompatible color definition on input line 189.
-
-
-Package xcolor Warning: Incompatible color definition on input line 189.
-
-
-Package xcolor Warning: Incompatible color definition on input line 189.
-
-
-Package xcolor Warning: Incompatible color definition on input line 189.
-
-
-Package xcolor Warning: Incompatible color definition on input line 189.
 
 
 Package xcolor Warning: Incompatible color definition on input line 189.
@@ -2025,9 +1974,6 @@ Package xcolor Warning: Incompatible color definition on input line 190.
 
 
 Package xcolor Warning: Incompatible color definition on input line 190.
-
-
-Package xcolor Warning: Incompatible color definition on input line 191.
 
 
 Package xcolor Warning: Incompatible color definition on input line 191.
@@ -2036,56 +1982,113 @@ Package xcolor Warning: Incompatible color definition on input line 191.
 Package xcolor Warning: Incompatible color definition on input line 192.
 
 
-Package xcolor Warning: Incompatible color definition on input line 193.
+Package xcolor Warning: Incompatible color definition on input line 195.
+
+
+Package xcolor Warning: Incompatible color definition on input line 195.
+
+
+Package xcolor Warning: Incompatible color definition on input line 195.
 
 
 Package xcolor Warning: Incompatible color definition on input line 196.
 
 
-Package xcolor Warning: Incompatible color definition on input line 196.
-
-
-Package xcolor Warning: Incompatible color definition on input line 196.
-
-
-Package xcolor Warning: Incompatible color definition on input line 197.
+Package xcolor Warning: Incompatible color definition on input line 198.
 
 
 Package xcolor Warning: Incompatible color definition on input line 199.
 
 
-Package xcolor Warning: Incompatible color definition on input line 200.
+Package xcolor Warning: Incompatible color definition on input line 206.
+
+[64]
+
+Package xcolor Warning: Incompatible color definition on input line 216.
 
 
-Package xcolor Warning: Incompatible color definition on input line 207.
+Package xcolor Warning: Incompatible color definition on input line 216.
 
 
-Package xcolor Warning: Incompatible color definition on input line 217.
+Package xcolor Warning: Incompatible color definition on input line 218.
 
 
-Package xcolor Warning: Incompatible color definition on input line 217.
-
-[63]
-
-Package xcolor Warning: Incompatible color definition on input line 219.
+Package xcolor Warning: Incompatible color definition on input line 218.
 
 
-Package xcolor Warning: Incompatible color definition on input line 219.
+Package xcolor Warning: Incompatible color definition on input line 218.
 
 
-Package xcolor Warning: Incompatible color definition on input line 219.
+Package xcolor Warning: Incompatible color definition on input line 218.
 
 
-Package xcolor Warning: Incompatible color definition on input line 219.
+Package xcolor Warning: Incompatible color definition on input line 218.
 
 
-Package xcolor Warning: Incompatible color definition on input line 219.
+Package xcolor Warning: Incompatible color definition on input line 218.
 
 
-Package xcolor Warning: Incompatible color definition on input line 219.
+Package xcolor Warning: Incompatible color definition on input line 218.
 
 
-Package xcolor Warning: Incompatible color definition on input line 219.
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
 
 
 Package xcolor Warning: Incompatible color definition on input line 222.
@@ -2094,148 +2097,104 @@ Package xcolor Warning: Incompatible color definition on input line 222.
 Package xcolor Warning: Incompatible color definition on input line 222.
 
 
-Package xcolor Warning: Incompatible color definition on input line 222.
+Package xcolor Warning: Incompatible color definition on input line 224.
 
 
-Package xcolor Warning: Incompatible color definition on input line 222.
+Package xcolor Warning: Incompatible color definition on input line 224.
 
 
-Package xcolor Warning: Incompatible color definition on input line 222.
+Package xcolor Warning: Incompatible color definition on input line 224.
 
 
-Package xcolor Warning: Incompatible color definition on input line 222.
+Package xcolor Warning: Incompatible color definition on input line 224.
 
 
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 223.
-
-
-Package xcolor Warning: Incompatible color definition on input line 223.
-
-
-Package xcolor Warning: Incompatible color definition on input line 225.
-
-
-Package xcolor Warning: Incompatible color definition on input line 225.
-
-
-Package xcolor Warning: Incompatible color definition on input line 225.
-
-
-Package xcolor Warning: Incompatible color definition on input line 225.
+Package xcolor Warning: Incompatible color definition on input line 226.
 
 
 Package xcolor Warning: Incompatible color definition on input line 227.
 
 
-Package xcolor Warning: Incompatible color definition on input line 228.
+Package xcolor Warning: Incompatible color definition on input line 230.
 
 
 Package xcolor Warning: Incompatible color definition on input line 231.
 
 
-Package xcolor Warning: Incompatible color definition on input line 232.
+Package xcolor Warning: Incompatible color definition on input line 231.
 
 
-Package xcolor Warning: Incompatible color definition on input line 232.
+Package xcolor Warning: Incompatible color definition on input line 231.
 
 
-Package xcolor Warning: Incompatible color definition on input line 232.
+Package xcolor Warning: Incompatible color definition on input line 231.
 
 
-Package xcolor Warning: Incompatible color definition on input line 232.
+Package xcolor Warning: Incompatible color definition on input line 231.
 
 
-Package xcolor Warning: Incompatible color definition on input line 232.
+Package xcolor Warning: Incompatible color definition on input line 231.
 
 
-Package xcolor Warning: Incompatible color definition on input line 232.
+Package xcolor Warning: Incompatible color definition on input line 231.
 
 
-Package xcolor Warning: Incompatible color definition on input line 232.
+Package xcolor Warning: Incompatible color definition on input line 231.
 
 
-Package xcolor Warning: Incompatible color definition on input line 232.
+Package xcolor Warning: Incompatible color definition on input line 233.
 
 
-Package xcolor Warning: Incompatible color definition on input line 234.
+Package xcolor Warning: Incompatible color definition on input line 233.
 
 
-Package xcolor Warning: Incompatible color definition on input line 234.
+Package xcolor Warning: Incompatible color definition on input line 233.
 
 
-Package xcolor Warning: Incompatible color definition on input line 234.
+Package xcolor Warning: Incompatible color definition on input line 233.
 
 
-Package xcolor Warning: Incompatible color definition on input line 234.
+Package xcolor Warning: Incompatible color definition on input line 233.
 
 
-Package xcolor Warning: Incompatible color definition on input line 234.
+Package xcolor Warning: Incompatible color definition on input line 233.
 
 
-Package xcolor Warning: Incompatible color definition on input line 234.
+Package xcolor Warning: Incompatible color definition on input line 233.
 
 
-Package xcolor Warning: Incompatible color definition on input line 234.
+Package xcolor Warning: Incompatible color definition on input line 233.
 
 
-Package xcolor Warning: Incompatible color definition on input line 234.
+Overfull \hbox (10.92805pt too wide) in paragraph at lines 239--240
+[]\T1/ptm/m/n/12 Para re-a-li-zar a va-li-da-ção do \T1/ptm/m/it/12 to-ken \T1/
+ptm/m/n/12 ex-pi-rado, foi cri-ado o mé-todo \T1/lmtt/m/n/12 isExpiredSession
+ []
 
-[64] <./imagens/home-contratante.png, id=1054, 1283.79625pt x 672.5125pt>
+[65] <./imagens/home-contratante.png, id=1072, 1283.79625pt x 672.5125pt>
 File: ./imagens/home-contratante.png Graphic file (type png)
 
 <use ./imagens/home-contratante.png>
-Package pdftex.def Info: ./imagens/home-contratante.png used on input line 246.
+Package pdftex.def Info: ./imagens/home-contratante.png used on input line 245.
 
 (pdftex.def)             Requested size: 385.14185pt x 201.7553pt.
 
-("C:\Users\Andressa Faria\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang
-1.sty"
-File: lstlang1.sty 2014/09/06 1.5e listings language file
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
 
-Package xcolor Warning: Incompatible color definition on input line 256.
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Overfull \hbox (11.2131pt too wide) in paragraph at lines 255--256
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 257.
+
+
+Package xcolor Warning: Incompatible color definition on input line 257.
 
 
 Package xcolor Warning: Incompatible color definition on input line 258.
@@ -2247,10 +2206,15 @@ Package xcolor Warning: Incompatible color definition on input line 258.
 Package xcolor Warning: Incompatible color definition on input line 259.
 
 
-Package xcolor Warning: Incompatible color definition on input line 259.
+Overfull \hbox (11.2131pt too wide) in paragraph at lines 260--261
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
 
-Package xcolor Warning: Incompatible color definition on input line 260.
+Package xcolor Warning: Incompatible color definition on input line 262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 262.
 
 
 Package xcolor Warning: Incompatible color definition on input line 263.
@@ -2259,7 +2223,7 @@ Package xcolor Warning: Incompatible color definition on input line 263.
 Package xcolor Warning: Incompatible color definition on input line 263.
 
 
-Package xcolor Warning: Incompatible color definition on input line 264.
+Package xcolor Warning: Incompatible color definition on input line 263.
 
 
 Package xcolor Warning: Incompatible color definition on input line 264.
@@ -2268,7 +2232,7 @@ Package xcolor Warning: Incompatible color definition on input line 264.
 Package xcolor Warning: Incompatible color definition on input line 264.
 
 
-Package xcolor Warning: Incompatible color definition on input line 265.
+Package xcolor Warning: Incompatible color definition on input line 264.
 
 
 Package xcolor Warning: Incompatible color definition on input line 265.
@@ -2280,13 +2244,15 @@ Package xcolor Warning: Incompatible color definition on input line 265.
 Package xcolor Warning: Incompatible color definition on input line 266.
 
 
-Package xcolor Warning: Incompatible color definition on input line 266.
+Overfull \hbox (11.2131pt too wide) in paragraph at lines 266--267
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
 
-Package xcolor Warning: Incompatible color definition on input line 267.
+Package xcolor Warning: Incompatible color definition on input line 268.
 
 
-Package xcolor Warning: Incompatible color definition on input line 269.
+Package xcolor Warning: Incompatible color definition on input line 268.
 
 
 Package xcolor Warning: Incompatible color definition on input line 269.
@@ -2295,13 +2261,21 @@ Package xcolor Warning: Incompatible color definition on input line 269.
 Package xcolor Warning: Incompatible color definition on input line 270.
 
 
-Package xcolor Warning: Incompatible color definition on input line 271.
+Package xcolor Warning: Incompatible color definition on input line 270.
 
 
 Package xcolor Warning: Incompatible color definition on input line 271.
 
 
-Package xcolor Warning: Incompatible color definition on input line 272.
+Overfull \hbox (11.2131pt too wide) in paragraph at lines 272--273
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 274.
+
+
+Package xcolor Warning: Incompatible color definition on input line 274.
 
 
 Package xcolor Warning: Incompatible color definition on input line 275.
@@ -2310,7 +2284,7 @@ Package xcolor Warning: Incompatible color definition on input line 275.
 Package xcolor Warning: Incompatible color definition on input line 275.
 
 
-Package xcolor Warning: Incompatible color definition on input line 276.
+Package xcolor Warning: Incompatible color definition on input line 275.
 
 
 Package xcolor Warning: Incompatible color definition on input line 276.
@@ -2318,30 +2292,25 @@ Package xcolor Warning: Incompatible color definition on input line 276.
 
 Package xcolor Warning: Incompatible color definition on input line 276.
 
-[65 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/home-
-contratante.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 277.
+Package xcolor Warning: Incompatible color definition on input line 276.
 
-
-Package xcolor Warning: Incompatible color definition on input line 277.
-
-
-Package xcolor Warning: Incompatible color definition on input line 277.
-
-
-<./imagens/exemplo-funcionamento-consulta-possiveis-parceiros.png, id=1083, 920
+[66 <./imagens/home-contratante.png>]
+<./imagens/exemplo-funcionamento-consulta-possiveis-parceiros.png, id=1104, 920
 .43875pt x 581.17125pt>
 File: ./imagens/exemplo-funcionamento-consulta-possiveis-parceiros.png Graphic 
 file (type png)
 
 <use ./imagens/exemplo-funcionamento-consulta-possiveis-parceiros.png>
 Package pdftex.def Info: ./imagens/exemplo-funcionamento-consulta-possiveis-par
-ceiros.png used on input line 283.
+ceiros.png used on input line 282.
 (pdftex.def)             Requested size: 368.16898pt x 232.46437pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 295.
+Package xcolor Warning: Incompatible color definition on input line 294.
+
+
+Package xcolor Warning: Incompatible color definition on input line 296.
 
 
 Package xcolor Warning: Incompatible color definition on input line 297.
@@ -2349,23 +2318,21 @@ Package xcolor Warning: Incompatible color definition on input line 297.
 
 Package xcolor Warning: Incompatible color definition on input line 298.
 
-
-Package xcolor Warning: Incompatible color definition on input line 299.
-
-[66 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/exemp
-lo-funcionamento-consulta-possiveis-parceiros.png>]
-<./imagens/aceitar_rejeitar_solicitacao_parceria.png, id=1097, 1027.84pt x 327.
+[67 <./imagens/exemplo-funcionamento-consulta-possiveis-parceiros.png>]
+<./imagens/aceitar_rejeitar_solicitacao_parceria.png, id=1115, 1027.84pt x 327.
 2225pt>
 File: ./imagens/aceitar_rejeitar_solicitacao_parceria.png Graphic file (type pn
 g)
  <use ./imagens/aceitar_rejeitar_solicitacao_parceria.png>
 Package pdftex.def Info: ./imagens/aceitar_rejeitar_solicitacao_parceria.png us
-ed on input line 307.
-(pdftex.def)             Requested size: 462.52373pt x 147.24876pt.
- [67 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/acei
-tar_rejeitar_solicitacao_parceria.png>]
+ed on input line 306.
+(pdftex.def)             Requested size: 411.12872pt x 130.88667pt.
+ [68 <./imagens/aceitar_rejeitar_solicitacao_parceria.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 318.
+Package xcolor Warning: Incompatible color definition on input line 317.
+
+
+Package xcolor Warning: Incompatible color definition on input line 320.
 
 
 Package xcolor Warning: Incompatible color definition on input line 321.
@@ -2374,10 +2341,15 @@ Package xcolor Warning: Incompatible color definition on input line 321.
 Package xcolor Warning: Incompatible color definition on input line 322.
 
 
-Package xcolor Warning: Incompatible color definition on input line 323.
+Package xcolor Warning: Incompatible color definition on input line 330.
 
 
-Package xcolor Warning: Incompatible color definition on input line 331.
+Overfull \hbox (17.21317pt too wide) in paragraph at lines 330--331
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 332.
 
 
 Package xcolor Warning: Incompatible color definition on input line 333.
@@ -2386,16 +2358,30 @@ Package xcolor Warning: Incompatible color definition on input line 333.
 Package xcolor Warning: Incompatible color definition on input line 334.
 
 
-Package xcolor Warning: Incompatible color definition on input line 335.
+Package xcolor Warning: Incompatible color definition on input line 334.
+
+
+Package xcolor Warning: Incompatible color definition on input line 334.
+
+
+Overfull \hbox (23.21323pt too wide) in paragraph at lines 334--335
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][] 
+ []
 
 
 Package xcolor Warning: Incompatible color definition on input line 335.
 
 
-Package xcolor Warning: Incompatible color definition on input line 335.
+Overfull \hbox (11.2131pt too wide) in paragraph at lines 336--337
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
 
-Package xcolor Warning: Incompatible color definition on input line 336.
+Package xcolor Warning: Incompatible color definition on input line 338.
+
+
+Package xcolor Warning: Incompatible color definition on input line 338.
 
 
 Package xcolor Warning: Incompatible color definition on input line 339.
@@ -2410,7 +2396,10 @@ Package xcolor Warning: Incompatible color definition on input line 340.
 Package xcolor Warning: Incompatible color definition on input line 340.
 
 
-Package xcolor Warning: Incompatible color definition on input line 341.
+Package xcolor Warning: Incompatible color definition on input line 340.
+
+
+Package xcolor Warning: Incompatible color definition on input line 340.
 
 
 Package xcolor Warning: Incompatible color definition on input line 341.
@@ -2418,21 +2407,23 @@ Package xcolor Warning: Incompatible color definition on input line 341.
 
 Package xcolor Warning: Incompatible color definition on input line 341.
 
-
-Package xcolor Warning: Incompatible color definition on input line 341.
-
+[69]
 
 Package xcolor Warning: Incompatible color definition on input line 342.
 
 
-Package xcolor Warning: Incompatible color definition on input line 342.
+Overfull \hbox (17.21317pt too wide) in paragraph at lines 342--343
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
 
-Package xcolor Warning: Incompatible color definition on input line 343.
+Package xcolor Warning: Incompatible color definition on input line 344.
 
-[68]
 
 Package xcolor Warning: Incompatible color definition on input line 345.
+
+
+Package xcolor Warning: Incompatible color definition on input line 346.
 
 
 Package xcolor Warning: Incompatible color definition on input line 346.
@@ -2447,10 +2438,15 @@ Package xcolor Warning: Incompatible color definition on input line 347.
 Package xcolor Warning: Incompatible color definition on input line 348.
 
 
-Package xcolor Warning: Incompatible color definition on input line 348.
+Overfull \hbox (11.2131pt too wide) in paragraph at lines 349--350
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
 
-Package xcolor Warning: Incompatible color definition on input line 349.
+Package xcolor Warning: Incompatible color definition on input line 351.
+
+
+Package xcolor Warning: Incompatible color definition on input line 351.
 
 
 Package xcolor Warning: Incompatible color definition on input line 352.
@@ -2465,26 +2461,19 @@ Package xcolor Warning: Incompatible color definition on input line 353.
 Package xcolor Warning: Incompatible color definition on input line 353.
 
 
-Package xcolor Warning: Incompatible color definition on input line 354.
+Package xcolor Warning: Incompatible color definition on input line 353.
 
 
-Package xcolor Warning: Incompatible color definition on input line 354.
+Package xcolor Warning: Incompatible color definition on input line 353.
 
-
-Package xcolor Warning: Incompatible color definition on input line 354.
-
-
-Package xcolor Warning: Incompatible color definition on input line 354.
-
-<./imagens/adcionar-servico.png, id=1132, 1330.9725pt x 612.2875pt>
+[70] <./imagens/adcionar-servico.png, id=1167, 1330.9725pt x 612.2875pt>
 File: ./imagens/adcionar-servico.png Graphic file (type png)
 
 <use ./imagens/adcionar-servico.png>
 Package pdftex.def Info: ./imagens/adcionar-servico.png used on input line 363.
 
 (pdftex.def)             Requested size: 399.29483pt x 183.68767pt.
- [69 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/adci
-onar-servico.png>]
+
 
 Package xcolor Warning: Incompatible color definition on input line 374.
 
@@ -2557,6 +2546,7 @@ Package xcolor Warning: Incompatible color definition on input line 387.
 
 Package xcolor Warning: Incompatible color definition on input line 388.
 
+[71 <./imagens/adcionar-servico.png>]
 
 Package xcolor Warning: Incompatible color definition on input line 389.
 
@@ -2617,7 +2607,6 @@ Package xcolor Warning: Incompatible color definition on input line 401.
 
 Package xcolor Warning: Incompatible color definition on input line 401.
 
-[70]
 
 Package xcolor Warning: Incompatible color definition on input line 402.
 
@@ -2735,7 +2724,7 @@ Package xcolor Warning: Incompatible color definition on input line 428.
 
 Package xcolor Warning: Incompatible color definition on input line 428.
 
-[71]
+[72]
 
 Package xcolor Warning: Incompatible color definition on input line 436.
 
@@ -2811,6 +2800,7 @@ Package xcolor Warning: Incompatible color definition on input line 457.
 
 Package xcolor Warning: Incompatible color definition on input line 458.
 
+[73]
 
 Package xcolor Warning: Incompatible color definition on input line 459.
 
@@ -2856,7 +2846,6 @@ Package xcolor Warning: Incompatible color definition on input line 466.
 
 Package xcolor Warning: Incompatible color definition on input line 466.
 
-[72]
 
 Package xcolor Warning: Incompatible color definition on input line 472.
 
@@ -2920,6 +2909,7 @@ Package xcolor Warning: Incompatible color definition on input line 485.
 
 Package xcolor Warning: Incompatible color definition on input line 485.
 
+[74]
 
 Package xcolor Warning: Incompatible color definition on input line 491.
 
@@ -2950,7 +2940,6 @@ Package xcolor Warning: Incompatible color definition on input line 500.
 
 Package xcolor Warning: Incompatible color definition on input line 500.
 
-[73]
 
 Package xcolor Warning: Incompatible color definition on input line 502.
 
@@ -2970,7 +2959,7 @@ Package xcolor Warning: Incompatible color definition on input line 502.
 Package xcolor Warning: Incompatible color definition on input line 502.
 
 
-<./imagens/exemplo-funcionamento-consulta-buscar-mao-de-obra.png, id=1278, 890.
+<./imagens/exemplo-funcionamento-consulta-buscar-mao-de-obra.png, id=1288, 890.
 32625pt x 588.1975pt>
 File: ./imagens/exemplo-funcionamento-consulta-buscar-mao-de-obra.png Graphic f
 ile (type png)
@@ -2979,16 +2968,15 @@ ile (type png)
 Package pdftex.def Info: ./imagens/exemplo-funcionamento-consulta-buscar-mao-de
 -obra.png used on input line 508.
 (pdftex.def)             Requested size: 356.12419pt x 235.27483pt.
- [74 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/exem
-plo-funcionamento-consulta-buscar-mao-de-obra.png>]
-<./imagens/taxa-avaliacao.png, id=1287, 705.63625pt x 527.9725pt>
+ [75 <./imagens/exemplo-funcionamento-consulta-buscar-mao-de-obra.png>]
+<./imagens/taxa-avaliacao.png, id=1307, 705.63625pt x 527.9725pt>
 File: ./imagens/taxa-avaliacao.png Graphic file (type png)
 
 <use ./imagens/taxa-avaliacao.png>
-Package pdftex.def Info: ./imagens/taxa-avaliacao.png used on input line 519.
+Package pdftex.def Info: ./imagens/taxa-avaliacao.png used on input line 518.
 (pdftex.def)             Requested size: 317.53337pt x 237.58542pt.
-
-<./imagens/dicas-randomicas.png, id=1289, 977.6525pt x 357.335pt>
+ [76 <./imagens/taxa-avaliacao.png>]
+<./imagens/dicas-randomicas.png, id=1314, 977.6525pt x 357.335pt>
 File: ./imagens/dicas-randomicas.png Graphic file (type png)
 
 <use ./imagens/dicas-randomicas.png>
@@ -2996,14 +2984,6 @@ Package pdftex.def Info: ./imagens/dicas-randomicas.png used on input line 530.
 
 (pdftex.def)             Requested size: 391.05408pt x 142.93146pt.
 
-Overfull \hbox (16.38818pt too wide) in paragraph at lines 536--537
-\T1/ptm/m/n/12 rio in-for-ma-ções a res-peito da qua-li-dade do ser-viço pres-t
-ado pelo pro-ve-dor de ser-vi-ços, comparando-
- []
-
-[75 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/taxa-
-avaliacao.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/im
-agens/dicas-randomicas.png>]
 
 Package xcolor Warning: Incompatible color definition on input line 539.
 
@@ -3025,95 +3005,139 @@ Package xcolor Warning: Incompatible color definition on input line 553.
 
 Package xcolor Warning: Incompatible color definition on input line 556.
 
+[77 <./imagens/dicas-randomicas.png>]
 
 Package xcolor Warning: Incompatible color definition on input line 567.
 
-[76]
 
 Package xcolor Warning: Incompatible color definition on input line 584.
 
 
 Package xcolor Warning: Incompatible color definition on input line 586.
 
-[77] <./imagens/grafico-pagina-perfil.png, id=1345, 584.1825pt x 488.82625pt>
+[78] <./imagens/grafico-pagina-perfil.png, id=1367, 540.0175pt x 480.79625pt>
 File: ./imagens/grafico-pagina-perfil.png Graphic file (type png)
 
 <use ./imagens/grafico-pagina-perfil.png>
 Package pdftex.def Info: ./imagens/grafico-pagina-perfil.png used on input line
- 598.
-(pdftex.def)             Requested size: 379.71411pt x 317.73329pt.
- [78 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/graf
-ico-pagina-perfil.png>]
-<./imagens/grafico-pagina-inicial.png, id=1353, 692.5875pt x 499.8675pt>
+ 597.
+(pdftex.def)             Requested size: 351.0072pt x 312.51384pt.
+ [79 <./imagens/grafico-pagina-perfil.png>]
+<./imagens/grafico-pagina-inicial.png, id=1374, 526.96875pt x 474.77374pt>
 File: ./imagens/grafico-pagina-inicial.png Graphic file (type png)
 
 <use ./imagens/grafico-pagina-inicial.png>
 Package pdftex.def Info: ./imagens/grafico-pagina-inicial.png used on input lin
-e 608.
-(pdftex.def)             Requested size: 450.17653pt x 324.91002pt.
-)))
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/13_Res
-ultados.tex" [79 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/
-imagens/grafico-pagina-inicial.png>] [80
+e 607.
+(pdftex.def)             Requested size: 342.52562pt x 308.59927pt.
+))) (./editaveis/13_Resultados.tex
+[80 <./imagens/grafico-pagina-inicial.png>] [81
 
 ]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
-sao_resultados/localizar_mao_de_obra.tex"
-<./imagens/busca-domestica-edilson.png, id=1373, 1282.7925pt x 666.49pt>
+(./editaveis/discussao_resultados/localizar_mao_de_obra.tex [82]
+<./imagens/busca-domestica-edilson.png, id=1398, 1282.7925pt x 666.49pt>
 File: ./imagens/busca-domestica-edilson.png Graphic file (type png)
 
 <use ./imagens/busca-domestica-edilson.png>
 Package pdftex.def Info: ./imagens/busca-domestica-edilson.png used on input li
-ne 10.
+ne 11.
 (pdftex.def)             Requested size: 384.84071pt x 199.94853pt.
- [81 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/busc
-a-domestica-edilson.png>])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
-sao_resultados/apresentar_possiveis_parceiros.tex"
-<./imagens/busca-possiveis-parceiros.png, id=1381, 250.9375pt x 636.3775pt>
+)
+(./editaveis/discussao_resultados/apresentar_possiveis_parceiros.tex [83 <./ima
+gens/busca-domestica-edilson.png>]
+<./imagens/busca-possiveis-parceiros.png, id=1406, 250.9375pt x 636.3775pt>
 File: ./imagens/busca-possiveis-parceiros.png Graphic file (type png)
 
 <use ./imagens/busca-possiveis-parceiros.png>
 Package pdftex.def Info: ./imagens/busca-possiveis-parceiros.png used on input 
-line 8.
+line 9.
 (pdftex.def)             Requested size: 100.37321pt x 254.5465pt.
 )
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
-sao_resultados/localizar_novos_parceiros.tex" [82 <C:/Users/Andressa Faria/Docu
-ments/GitHub/tcc/documento/latex/imagens/busca-possiveis-parceiros.png>]
-<./imagens/busca-novos-parceiros.png, id=1388, 1283.79625pt x 646.415pt>
+(./editaveis/discussao_resultados/localizar_novos_parceiros.tex [84 <./imagens/
+busca-possiveis-parceiros.png>]
+<./imagens/busca-novos-parceiros.png, id=1414, 1283.79625pt x 646.415pt>
 File: ./imagens/busca-novos-parceiros.png Graphic file (type png)
 
 <use ./imagens/busca-novos-parceiros.png>
 Package pdftex.def Info: ./imagens/busca-novos-parceiros.png used on input line
- 10.
+ 11.
 (pdftex.def)             Requested size: 385.14185pt x 193.926pt.
 )
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
-sao_resultados/solicitacoes_parcerias.tex")
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
-sao_resultados/taxa_avaliacoes.tex") [83 <C:/Users/Andressa Faria/Documents/Git
-Hub/tcc/documento/latex/imagens/busca-novos-parceiros.png>]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/discus
-sao_resultados/graficos.tex"))
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/14_Con
-clusao.tex" [84] [85
+(./editaveis/discussao_resultados/solicitacoes_parcerias.tex)
+(./editaveis/discussao_resultados/taxa_avaliacoes.tex)
+(./editaveis/discussao_resultados/graficos.tex [85 <./imagens/busca-novos-parce
+iros.png>])) (./editaveis/14_Conclusao.tex [86] [87
 
-] [86])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.bbl"
-[87]
+] [88]) (./Principal.bbl
+[89]
 bibitemlist
-[88
 
-] [89])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/20_Ape
-ndices.tex" [90] [91
+Underfull \hbox (badness 3612) in paragraph at lines 16--19
+[]\T1/ptm/m/n/12 AZEVEDO, M. E. C. V. de. \T1/ptm/b/n/12 Quan-tas fa-ses tem o 
+ICO-NIX? \T1/ptm/m/n/12 2010. [][]$<[]http :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--19
+\T1/ptm/m/n/12 / / oengenheirodesoftware . blogspot . com . br / 2010 / 11 / qu
+antas-[]fases-[]tem-[]o-[]iconix . html>[]$[][].
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--26
+[]\T1/ptm/m/n/12 BABAL seyin. \T1/ptm/b/n/12 Au-ten-ti-ca-ção com To-kens Usand
+o An-gu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--26
+\T1/ptm/b/n/12 larJS & No-deJS\T1/ptm/m/n/12 . 2014. [][]$<[]http : / / code . 
+tutsplus . com / pt / tutorials /
+ []
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 22--26
+\T1/ptm/m/n/12 token-[]based-[]authentication-[]with-[]angularjs-[]nodejs-[]-[]
+cms-[]22543>[]$[][]. Acesso em: 23 de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--33
+\T1/ptm/m/n/12 / / super . abril . com . br / blogs / tendencias / por-[]que-[]
+as-[]pessoas-[]usam-[]as-[]redes-[]sociais / >[]$[][].
+ []
+
+[90
 
 ]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/21_Apendice_01_Iconix.tex"
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-aceitar-parceria.tex")
+Underfull \hbox (badness 3780) in paragraph at lines 165--168
+[]\T1/ptm/m/n/12 ORACLE. \T1/ptm/b/n/12 Poly-morphism\T1/ptm/m/n/12 . 2015. [][
+]$<[]https : / / docs . oracle . com / javase / tutorial / java / IandI /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--181
+[]\T1/ptm/m/n/12 PAOLETTI, T. \T1/ptm/b/n/12 Le-o-nard Eu-ler's So-lu-tion to t
+he Ko-nigs-berg Bridge
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--181
+\T1/ptm/b/n/12 Pro-blem\T1/ptm/m/n/12 . 2006. [][]$<[]http : / / www . maa . or
+g / publications / periodicals / convergence /
+ []
+
+
+Underfull \hbox (badness 1946) in paragraph at lines 177--181
+\T1/ptm/m/n/12 leonard-[]eulers-[]solution-[]to-[]the-[]konigsberg-[]bridge-[]p
+roblem>[]$[][]. Acesso em: 26 de fe-
+ []
+
+[91]) (./editaveis/20_Apendices.tex [92] [93
+
+]
+(./editaveis/apendices/21_Apendice_01_Iconix.tex
+(./fluxos/fluxo-evento-aceitar-parceria.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 1--14
 [][]
  []
@@ -3123,9 +3147,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--14
 
  []
 
+(./fluxos/fluxo-evento-localizar-parceiro.tex
+Underfull \hbox (badness 2556) in paragraph at lines 6--6
+[]\T1/ptm/m/n/10.95 Possíveis par-ceiro(s) apre-sen-tado(s) ao
+ []
 
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-localizar-parceiro.tex")
+)
 Underfull \hbox (badness 10000) in paragraph at lines 1--24
 [][]
  []
@@ -3135,11 +3162,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--24
 
  []
 
-[92
+[94
 
-] [93]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-adicionar-parceiro.tex")
+] [95] (./fluxos/fluxo-evento-adicionar-parceiro.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 1--35
 [][]
  []
@@ -3149,9 +3174,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--35
 
  []
 
-[94]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-localizar-mao-de-obra.tex")
+[96] (./fluxos/fluxo-evento-localizar-mao-de-obra.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 1--46
 [][]
  []
@@ -3161,9 +3184,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--46
 
  []
 
-[95]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-avaliar-mao-de-obra.tex")
+[97] (./fluxos/fluxo-evento-avaliar-mao-de-obra.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 1--57
 [][]
  []
@@ -3173,9 +3194,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--57
 
  []
 
-[96]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-gerenciar-servicos.tex")
+[98] (./fluxos/fluxo-evento-gerenciar-servicos.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 1--68
 [][]
  []
@@ -3185,9 +3204,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--68
 
  []
 
-[97]
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fluxos\fluxo-eve
-nto-criar-conta.tex")
+[99] (./fluxos/fluxo-evento-criar-conta.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 1--78
 [][]
  []
@@ -3197,8 +3214,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--78
 
  []
 
-[98]
-<./imagens/apendices/diagrama-robustez-aceitar-parceria.png, id=1503, 1120.9378
+[100]
+<./imagens/apendices/diagrama-robustez-aceitar-parceria.png, id=1532, 1120.9378
 pt x 755.82375pt>
 File: ./imagens/apendices/diagrama-robustez-aceitar-parceria.png Graphic file (
 type png)
@@ -3206,163 +3223,141 @@ type png)
 <use ./imagens/apendices/diagrama-robustez-aceitar-parceria.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-aceitar-parceria
 .png used on input line 91.
-(pdftex.def)             Requested size: 448.36719pt x 302.32414pt.
+(pdftex.def)             Requested size: 425.9608pt x 287.216pt.
 File: ./imagens/apendices/diagrama-robustez-localizar-parceiros.png Graphic fil
 e (type png)
 
 <use ./imagens/apendices/diagrama-robustez-localizar-parceiros.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-localizar-parcei
 ros.png used on input line 101.
-(pdftex.def)             Requested size: 461.91757pt x 209.8804pt.
-
-<./imagens/apendices/diagrama-robustez-adicionar-parceiro.png, id=1506, 1205.25
+(pdftex.def)             Requested size: 427.27463pt x 194.13977pt.
+ [101 <./imagens/apendices/diagrama-robustez-aceitar-parceria.png>]
+<./imagens/apendices/diagrama-robustez-adicionar-parceiro.png, id=1542, 1205.25
 28pt x 584.1825pt>
 File: ./imagens/apendices/diagrama-robustez-adicionar-parceiro.png Graphic file
  (type png)
 
 <use ./imagens/apendices/diagrama-robustez-adicionar-parceiro.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-adicionar-parcei
-ro.png used on input line 111.
-(pdftex.def)             Requested size: 482.09259pt x 233.66885pt.
+ro.png used on input line 112.
+(pdftex.def)             Requested size: 421.8448pt x 204.46693pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<./imagens/apendices/diagrama-robustez-localizar-mao-de-obra.png, id=1508, 1166
+<./imagens/apendices/diagrama-robustez-localizar-mao-de-obra.png, id=1544, 1166
 .85938pt x 633.11531pt>
 File: ./imagens/apendices/diagrama-robustez-localizar-mao-de-obra.png Graphic f
 ile (type png)
 
 <use ./imagens/apendices/diagrama-robustez-localizar-mao-de-obra.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-localizar-mao-de
--obra.png used on input line 121.
-(pdftex.def)             Requested size: 466.73549pt x 253.24162pt.
- [99 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/diagrama-robustez-aceitar-parceria.png>] [100 <C:/Users/Andressa Faria/Do
-cuments/GitHub/tcc/documento/latex/imagens/apendices/diagrama-robustez-adiciona
-r-parceiro.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/i
-magens/apendices/diagrama-robustez-localizar-mao-de-obra.png>]
-<./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png, id=1525, 976.39
+-obra.png used on input line 122.
+(pdftex.def)             Requested size: 408.4069pt x 221.59367pt.
+ [102 <./imagens/apendices/diagrama-robustez-adicionar-parceiro.png> <./imagens
+/apendices/diagrama-robustez-localizar-mao-de-obra.png>]
+<./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png, id=1555, 976.39
 781pt x 545.03625pt>
 File: ./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png Graphic fil
 e (type png)
 
 <use ./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-avaliar-mao-de-o
-bra.png used on input line 132.
+bra.png used on input line 133.
 (pdftex.def)             Requested size: 419.84288pt x 234.36102pt.
 
-<./imagens/apendices/diagrama-robustez-adicionar-servicos.png, id=1527, 1141.26
+<./imagens/apendices/diagrama-robustez-adicionar-servicos.png, id=1557, 1141.26
 375pt x 590.95781pt>
 File: ./imagens/apendices/diagrama-robustez-adicionar-servicos.png Graphic file
  (type png)
 
 <use ./imagens/apendices/diagrama-robustez-adicionar-servicos.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-adicionar-servic
-os.png used on input line 142.
-(pdftex.def)             Requested size: 456.49742pt x 236.37894pt.
- [101 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
-ndices/diagrama-robustez-avaliar-mao-de-obra.png> <C:/Users/Andressa Faria/Docu
-ments/GitHub/tcc/documento/latex/imagens/apendices/diagrama-robustez-adicionar-
-servicos.png>]
-<./imagens/apendices/diagrama-robustez-criar-conta.png, id=1537, 1001.24063pt x
+os.png used on input line 143.
+(pdftex.def)             Requested size: 433.68474pt x 224.5663pt.
+ [103 <./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png> <./imagen
+s/apendices/diagrama-robustez-adicionar-servicos.png>]
+<./imagens/apendices/diagrama-robustez-criar-conta.png, id=1567, 1001.24063pt x
  904.88063pt>
 File: ./imagens/apendices/diagrama-robustez-criar-conta.png Graphic file (type 
 png)
  <use ./imagens/apendices/diagrama-robustez-criar-conta.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-criar-conta.png 
-used on input line 153.
+used on input line 154.
 (pdftex.def)             Requested size: 400.48917pt x 361.94585pt.
 
-[102 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/diagrama-robustez-criar-conta.png>]
-<./imagens/apendices/diagrama-sequencia-aceitar-parceria.png, id=1546, 1455.939
+[104 <./imagens/apendices/diagrama-robustez-criar-conta.png>]
+<./imagens/apendices/diagrama-sequencia-aceitar-parceria.png, id=1575, 1455.939
 38pt x 522.45187pt>
 File: ./imagens/apendices/diagrama-sequencia-aceitar-parceria.png Graphic file 
 (type png)
 
 <use ./imagens/apendices/diagrama-sequencia-aceitar-parceria.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-aceitar-parceri
-a.png used on input line 168.
+a.png used on input line 169.
 (pdftex.def)             Requested size: 1455.93584pt x 522.45059pt.
- [103 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
-ndices/diagrama-sequencia-aceitar-parceria.png>]
+ [105 <./imagens/apendices/diagrama-sequencia-aceitar-parceria.png>]
 File: ./imagens/apendices/diagrama-sequencia-localizar-parceiros.png Graphic fi
 le (type png)
 
 <use ./imagens/apendices/diagrama-sequencia-localizar-parceiros.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-localizar-parce
-iros.png used on input line 179.
+iros.png used on input line 180.
 (pdftex.def)             Requested size: 1338.49738pt x 754.3163pt.
-
-<./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png, id=1554, 2325.
+ [106]
+<./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png, id=1589, 2325.
 4378pt x 1178.90437pt>
 File: ./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png Graphic fi
 le (type png)
 
 <use ./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-adicionar-parce
-iros.png used on input line 189.
-(pdftex.def)             Requested size: 2325.43216pt x 1178.9015pt.
- [104]
-<./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png, id=1562, 174
+iros.png used on input line 192.
+(pdftex.def)             Requested size: 697.63673pt x 353.67404pt.
+ [107
+
+ <./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png>]
+<./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png, id=1597, 174
 5.01938pt x 524.71031pt>
 File: ./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png Graphic 
 file (type png)
 
 <use ./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-localizar-mao-d
-e-obra.png used on input line 199.
-(pdftex.def)             Requested size: 1745.01514pt x 524.70901pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[105 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/diagrama-sequencia-adicionar-parceiros.png>]
-<./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png, id=1570, 3439.
-60031pt x 1163.0953pt>
+e-obra.png used on input line 203.
+(pdftex.def)             Requested size: 697.99539pt x 209.8804pt.
+ [108 <./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png>]
+<./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png, id=1606, 2910.
+37312pt x 1163.0953pt>
 File: ./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png Graphic fi
 le (type png)
 
 <use ./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-avaliar-mao-de-
-obra.png used on input line 209.
-(pdftex.def)             Requested size: 3439.59196pt x 1163.09247pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[106 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/diagrama-sequencia-localizar-mao-de-obra.png>] [107 <C:/Users/Andressa Fa
-ria/Documents/GitHub/tcc/documento/latex/imagens/apendices/diagrama-sequencia-a
-valiar-mao-de-obra.png>]
-<./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png, id=1584, 1818.7
+obra.png used on input line 214.
+(pdftex.def)             Requested size: 582.06432pt x 232.61493pt.
+ [109 <./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png>]
+<./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png, id=1614, 1818.7
 95pt x 973.38657pt>
 File: ./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png Graphic fil
 e (type png)
 
 <use ./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-gerenciar-servi
-cos.png used on input line 220.
-(pdftex.def)             Requested size: 1818.79059pt x 973.3842pt.
+cos.png used on input line 225.
+(pdftex.def)             Requested size: 727.50513pt x 389.34773pt.
 
-<./imagens/apendices/diagrama-sequencia-criar-conta.png, id=1586, 1805.24437pt 
+<./imagens/apendices/diagrama-sequencia-criar-conta.png, id=1616, 1805.24437pt 
 x 1027.58907pt>
 File: ./imagens/apendices/diagrama-sequencia-criar-conta.png Graphic file (type
  png)
  <use ./imagens/apendices/diagrama-sequencia-criar-conta.png>
 Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-criar-conta.png
- used on input line 230.
-(pdftex.def)             Requested size: 1805.23999pt x 1027.58656pt.
+ used on input line 235.
+(pdftex.def)             Requested size: 631.845pt x 359.66156pt.
 
-[108 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/diagrama-sequencia-gerenciar-servicos.png>])
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/22_Apendice_02_API_Rest.tex" [109 <C:/Users/Andressa Faria/Documents/GitHub
-/tcc/documento/latex/imagens/apendices/diagrama-sequencia-criar-conta.png>]
-[110]
+[110 <./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png>] [111 <./i
+magens/apendices/diagrama-sequencia-criar-conta.png>])
+(./editaveis/apendices/22_Apendice_02_API_Rest.tex [112
+
+]
 
 Package xcolor Warning: Incompatible color definition on input line 9.
 
@@ -3513,21 +3508,21 @@ Package xcolor Warning: Incompatible color definition on input line 38.
 
 Package xcolor Warning: Incompatible color definition on input line 38.
 
-[111
+
+Package xcolor Warning: Incompatible color definition on input line 39.
+
+
+Package xcolor Warning: Incompatible color definition on input line 39.
+
+
+Package xcolor Warning: Incompatible color definition on input line 39.
+
+
+Package xcolor Warning: Incompatible color definition on input line 39.
+
+[113
 
 ]
-
-Package xcolor Warning: Incompatible color definition on input line 39.
-
-
-Package xcolor Warning: Incompatible color definition on input line 39.
-
-
-Package xcolor Warning: Incompatible color definition on input line 39.
-
-
-Package xcolor Warning: Incompatible color definition on input line 39.
-
 
 Package xcolor Warning: Incompatible color definition on input line 40.
 
@@ -3699,10 +3694,10 @@ Package xcolor Warning: Incompatible color definition on input line 78.
 
 Package xcolor Warning: Incompatible color definition on input line 79.
 
-[112]
 
 Package xcolor Warning: Incompatible color definition on input line 80.
 
+[114]
 
 Package xcolor Warning: Incompatible color definition on input line 86.
 
@@ -3895,10 +3890,10 @@ Package xcolor Warning: Incompatible color definition on input line 121.
 
 Package xcolor Warning: Incompatible color definition on input line 121.
 
-[113]
 
 Package xcolor Warning: Incompatible color definition on input line 122.
 
+[115]
 
 Package xcolor Warning: Incompatible color definition on input line 123.
 
@@ -4097,10 +4092,10 @@ Package xcolor Warning: Incompatible color definition on input line 161.
 
 Package xcolor Warning: Incompatible color definition on input line 161.
 
-[114]
 
 Package xcolor Warning: Incompatible color definition on input line 162.
 
+[116]
 
 Package xcolor Warning: Incompatible color definition on input line 163.
 
@@ -4287,10 +4282,10 @@ Package xcolor Warning: Incompatible color definition on input line 201.
 
 Package xcolor Warning: Incompatible color definition on input line 202.
 
-[115]
 
 Package xcolor Warning: Incompatible color definition on input line 203.
 
+[117]
 
 Package xcolor Warning: Incompatible color definition on input line 204.
 
@@ -4474,10 +4469,10 @@ Package xcolor Warning: Incompatible color definition on input line 242.
 
 Package xcolor Warning: Incompatible color definition on input line 243.
 
-[116]
 
 Package xcolor Warning: Incompatible color definition on input line 244.
 
+[118]
 
 Package xcolor Warning: Incompatible color definition on input line 245.
 
@@ -4670,10 +4665,10 @@ Package xcolor Warning: Incompatible color definition on input line 285.
 
 Package xcolor Warning: Incompatible color definition on input line 285.
 
-[117]
 
 Package xcolor Warning: Incompatible color definition on input line 286.
 
+[119]
 
 Package xcolor Warning: Incompatible color definition on input line 287.
 
@@ -4869,13 +4864,13 @@ Package xcolor Warning: Incompatible color definition on input line 325.
 
 Package xcolor Warning: Incompatible color definition on input line 326.
 
-[118]
 
 Package xcolor Warning: Incompatible color definition on input line 327.
 
 
 Package xcolor Warning: Incompatible color definition on input line 327.
 
+[120]
 
 Package xcolor Warning: Incompatible color definition on input line 328.
 
@@ -5062,10 +5057,10 @@ Package xcolor Warning: Incompatible color definition on input line 368.
 
 Package xcolor Warning: Incompatible color definition on input line 368.
 
-[119]
 
 Package xcolor Warning: Incompatible color definition on input line 369.
 
+[121]
 
 Package xcolor Warning: Incompatible color definition on input line 370.
 
@@ -5267,10 +5262,10 @@ Package xcolor Warning: Incompatible color definition on input line 409.
 
 Package xcolor Warning: Incompatible color definition on input line 409.
 
-[120]
 
 Package xcolor Warning: Incompatible color definition on input line 410.
 
+[122]
 
 Package xcolor Warning: Incompatible color definition on input line 411.
 
@@ -5334,29 +5329,25 @@ Package xcolor Warning: Incompatible color definition on input line 422.
 
 Package xcolor Warning: Incompatible color definition on input line 423.
 
-)
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/23_Apendice_03_Github.tex" [121]
-<./imagens/apendices/pagina-inicial-github.png, id=2027, 773.13844pt x 368.8781
+) (./editaveis/apendices/23_Apendice_03_Github.tex [123]
+<./imagens/apendices/pagina-inicial-github.png, id=2060, 773.13844pt x 368.8781
 3pt>
 File: ./imagens/apendices/pagina-inicial-github.png Graphic file (type png)
  <use ./imagens/apendices/pagina-inicial-github.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-inicial-github.png used on 
 input line 10.
 (pdftex.def)             Requested size: 386.56828pt x 184.4386pt.
- [122
+ [124
 
- <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
-s/pagina-inicial-github.png>]
-<./imagens/apendices/pagina-home-github.png, id=2037, 794.2172pt x 691.83469pt>
+ <./imagens/apendices/pagina-inicial-github.png>]
+<./imagens/apendices/pagina-home-github.png, id=2070, 794.2172pt x 691.83469pt>
 File: ./imagens/apendices/pagina-home-github.png Graphic file (type png)
 <use ./imagens/apendices/pagina-home-github.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-home-github.png used on inp
 ut line 21.
 (pdftex.def)             Requested size: 397.10762pt x 345.91649pt.
- [123 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
-ndices/pagina-home-github.png>]
-<./imagens/apendices/pagina-criacao-repositorio-github.png, id=2045, 778.40813p
+ [125 <./imagens/apendices/pagina-home-github.png>]
+<./imagens/apendices/pagina-criacao-repositorio-github.png, id=2078, 778.40813p
 t x 436.63126pt>
 File: ./imagens/apendices/pagina-criacao-repositorio-github.png Graphic file (t
 ype png)
@@ -5365,9 +5356,8 @@ ype png)
 Package pdftex.def Info: ./imagens/apendices/pagina-criacao-repositorio-github.
 png used on input line 32.
 (pdftex.def)             Requested size: 389.20311pt x 218.3151pt.
- [124 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
-ndices/pagina-criacao-repositorio-github.png>]
-<./imagens/apendices/pagina-inicial-repositorio-github.png, id=2053, 767.11594p
+ [126 <./imagens/apendices/pagina-criacao-repositorio-github.png>]
+<./imagens/apendices/pagina-inicial-repositorio-github.png, id=2087, 767.11594p
 t x 506.6428pt>
 File: ./imagens/apendices/pagina-inicial-repositorio-github.png Graphic file (t
 ype png)
@@ -5377,7 +5367,7 @@ Package pdftex.def Info: ./imagens/apendices/pagina-inicial-repositorio-github.
 png used on input line 45.
 (pdftex.def)             Requested size: 383.55702pt x 253.32079pt.
 
-<./imagens/apendices/pagina-adicionar-colaborador-ao-repositorio.png, id=2055, 
+<./imagens/apendices/pagina-adicionar-colaborador-ao-repositorio.png, id=2089, 
 766.36313pt x 396.7322pt>
 File: ./imagens/apendices/pagina-adicionar-colaborador-ao-repositorio.png Graph
 ic file (type png)
@@ -5387,7 +5377,7 @@ Package pdftex.def Info: ./imagens/apendices/pagina-adicionar-colaborador-ao-re
 positorio.png used on input line 55.
 (pdftex.def)             Requested size: 383.18063pt x 198.3656pt.
 
-<./imagens/apendices/pagina-download-github.png, id=2057, 904.88063pt x 670.755
+<./imagens/apendices/pagina-download-github.png, id=2091, 904.88063pt x 670.755
 94pt>
 File: ./imagens/apendices/pagina-download-github.png Graphic file (type png)
  <use ./imagens/apendices/pagina-download-github.png>
@@ -5398,21 +5388,18 @@ Package pdftex.def Info: ./imagens/apendices/pagina-download-github.png used on
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[125 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/pagina-inicial-repositorio-github.png> <C:/Users/Andressa Faria/Documents
-/GitHub/tcc/documento/latex/imagens/apendices/pagina-adicionar-colaborador-ao-r
-epositorio.png>]
-<./imagens/apendices/instalacao-github-step1.png, id=2067, 402.00188pt x 229.60
+[127 <./imagens/apendices/pagina-inicial-repositorio-github.png> <./imagens/ape
+ndices/pagina-adicionar-colaborador-ao-repositorio.png>]
+<./imagens/apendices/instalacao-github-step1.png, id=2101, 402.00188pt x 229.60
 782pt>
 File: ./imagens/apendices/instalacao-github-step1.png Graphic file (type png)
  <use ./imagens/apendices/instalacao-github-step1.png>
 Package pdftex.def Info: ./imagens/apendices/instalacao-github-step1.png used o
 n input line 75.
 (pdftex.def)             Requested size: 201.00044pt x 114.80362pt.
- [126 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
-ndices/pagina-download-github.png> <C:/Users/Andressa Faria/Documents/GitHub/tc
-c/documento/latex/imagens/apendices/instalacao-github-step1.png>]
-<./imagens/apendices/clonar-repositorio-github.png, id=2078, 1005.7575pt x 664.
+ [128 <./imagens/apendices/pagina-download-github.png> <./imagens/apendices/ins
+talacao-github-step1.png>]
+<./imagens/apendices/clonar-repositorio-github.png, id=2112, 1005.7575pt x 664.
 4825pt>
 File: ./imagens/apendices/clonar-repositorio-github.png Graphic file (type png)
 
@@ -5421,21 +5408,19 @@ Package pdftex.def Info: ./imagens/apendices/clonar-repositorio-github.png used
  on input line 86.
 (pdftex.def)             Requested size: 402.29587pt x 265.78828pt.
 )
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/24_Apendice_04_Eclipse_Tomcat.tex" [127 <C:/Users/Andressa Faria/Documents/
-GitHub/tcc/documento/latex/imagens/apendices/clonar-repositorio-github.png>]
-<./imagens/apendices/pagina-download-eclipse.png, id=2085, 874.01532pt x 660.96
+(./editaveis/apendices/24_Apendice_04_Eclipse_Tomcat.tex [129 <./imagens/apendi
+ces/clonar-repositorio-github.png>]
+<./imagens/apendices/pagina-download-eclipse.png, id=2119, 874.01532pt x 660.96
 938pt>
 File: ./imagens/apendices/pagina-download-eclipse.png Graphic file (type png)
  <use ./imagens/apendices/pagina-download-eclipse.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-download-eclipse.png used o
 n input line 12.
 (pdftex.def)             Requested size: 349.59993pt x 264.38306pt.
- [128
+ [130
 
- <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
-s/pagina-download-eclipse.png>]
-<./imagens/apendices/eclipse-selecionar-workspace.png, id=2094, 521.69907pt x 4
+ <./imagens/apendices/pagina-download-eclipse.png>]
+<./imagens/apendices/eclipse-selecionar-workspace.png, id=2128, 521.69907pt x 4
 84.81125pt>
 File: ./imagens/apendices/eclipse-selecionar-workspace.png Graphic file (type p
 ng)
@@ -5443,16 +5428,8 @@ ng)
 Package pdftex.def Info: ./imagens/apendices/eclipse-selecionar-workspace.png u
 sed on input line 26.
 (pdftex.def)             Requested size: 260.84889pt x 242.40503pt.
-
-Overfull \hbox (59.34492pt too wide) in paragraph at lines 36--37
-[]\T1/ptm/m/n/12 Para uti-li-zar o Tom-cat foi ne-ces-sa-rio fa-zer o \T1/ptm/m
-/it/12 down-load \T1/ptm/m/n/12 dele por meio da \T1/ptm/m/it/12 url \T1/ptm/m/
-n/12 https://tomcat.apache.org,
- []
-
-[129 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/eclipse-selecionar-workspace.png>]
-<./imagens/apendices/pagina-inicial-apache-tomcat.png, id=2103, 1179.40625pt x 
+ [131 <./imagens/apendices/eclipse-selecionar-workspace.png>]
+<./imagens/apendices/pagina-inicial-apache-tomcat.png, id=2137, 1179.40625pt x 
 597.23125pt>
 File: ./imagens/apendices/pagina-inicial-apache-tomcat.png Graphic file (type p
 ng)
@@ -5461,17 +5438,16 @@ Package pdftex.def Info: ./imagens/apendices/pagina-inicial-apache-tomcat.png u
 sed on input line 41.
 (pdftex.def)             Requested size: 412.79837pt x 209.03406pt.
 
-<./imagens/apendices/pagina-download-tomcat-7.png, id=2105, 982.67125pt x 607.2
+<./imagens/apendices/pagina-download-tomcat-7.png, id=2139, 982.67125pt x 607.2
 6875pt>
 File: ./imagens/apendices/pagina-download-tomcat-7.png Graphic file (type png)
  <use ./imagens/apendices/pagina-download-tomcat-7.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-download-tomcat-7.png used 
 on input line 51.
 (pdftex.def)             Requested size: 393.06154pt x 242.9032pt.
- [130 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
-ndices/pagina-inicial-apache-tomcat.png> <C:/Users/Andressa Faria/Documents/Git
-Hub/tcc/documento/latex/imagens/apendices/pagina-download-tomcat-7.png>]
-<./imagens/apendices/perspectiva-server-sem-servidor.png, id=2114, 765.86125pt 
+ [132 <./imagens/apendices/pagina-inicial-apache-tomcat.png> <./imagens/apendic
+es/pagina-download-tomcat-7.png>]
+<./imagens/apendices/perspectiva-server-sem-servidor.png, id=2149, 765.86125pt 
 x 197.73875pt>
 File: ./imagens/apendices/perspectiva-server-sem-servidor.png Graphic file (typ
 e png)
@@ -5480,7 +5456,7 @@ Package pdftex.def Info: ./imagens/apendices/perspectiva-server-sem-servidor.pn
 g used on input line 67.
 (pdftex.def)             Requested size: 382.92969pt x 98.86913pt.
 
-<./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png, id=2116, 528.976
+<./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png, id=2151, 528.976
 26pt x 538.01pt>
 File: ./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png Graphic file
  (type png)
@@ -5489,11 +5465,9 @@ File: ./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png Graphic file
 Package pdftex.def Info: ./imagens/apendices/criar-configuracao-tomcat-no-eclip
 se.png used on input line 77.
 (pdftex.def)             Requested size: 211.58675pt x 215.20018pt.
- [131 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/ape
-ndices/perspectiva-server-sem-servidor.png> <C:/Users/Andressa Faria/Documents/
-GitHub/tcc/documento/latex/imagens/apendices/criar-configuracao-tomcat-no-eclip
-se.png>]
-<./imagens/apendices/definir-pasta-home-tomcat.png, id=2127, 526.96875pt x 537.
+ [133 <./imagens/apendices/perspectiva-server-sem-servidor.png> <./imagens/apen
+dices/criar-configuracao-tomcat-no-eclipse.png>]
+<./imagens/apendices/definir-pasta-home-tomcat.png, id=2162, 526.96875pt x 537.
 00626pt>
 File: ./imagens/apendices/definir-pasta-home-tomcat.png Graphic file (type png)
 
@@ -5502,21 +5476,19 @@ Package pdftex.def Info: ./imagens/apendices/definir-pasta-home-tomcat.png used
  on input line 88.
 (pdftex.def)             Requested size: 210.78375pt x 214.79869pt.
 )
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/25_Apendice_05_Neo4j.tex" [132 <C:/Users/Andressa Faria/Documents/GitHub/tc
-c/documento/latex/imagens/apendices/definir-pasta-home-tomcat.png>]
-<./imagens/apendices/download-neo4j.png, id=2135, 846.91406pt x 686.565pt>
+(./editaveis/apendices/25_Apendice_05_Neo4j.tex [134 <./imagens/apendices/defin
+ir-pasta-home-tomcat.png>]
+<./imagens/apendices/download-neo4j.png, id=2169, 846.91406pt x 686.565pt>
 File: ./imagens/apendices/download-neo4j.png Graphic file (type png)
 
 <use ./imagens/apendices/download-neo4j.png>
 Package pdftex.def Info: ./imagens/apendices/download-neo4j.png used on input l
 ine 10.
 (pdftex.def)             Requested size: 338.75963pt x 274.62112pt.
- [133
+ [135
 
- <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendice
-s/download-neo4j.png>]
-<./imagens/apendices/neo4j-install-step1.png, id=2145, 388.45125pt x 322.95656p
+ <./imagens/apendices/download-neo4j.png>]
+<./imagens/apendices/neo4j-install-step1.png, id=2179, 388.45125pt x 322.95656p
 t>
 File: ./imagens/apendices/neo4j-install-step1.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step1.png>
@@ -5524,7 +5496,7 @@ Package pdftex.def Info: ./imagens/apendices/neo4j-install-step1.png used on in
 put line 21.
 (pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
 
-<./imagens/apendices/neo4j-install-step2.png, id=2147, 387.69844pt x 322.95656p
+<./imagens/apendices/neo4j-install-step2.png, id=2181, 387.69844pt x 322.95656p
 t>
 File: ./imagens/apendices/neo4j-install-step2.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step2.png>
@@ -5532,7 +5504,7 @@ Package pdftex.def Info: ./imagens/apendices/neo4j-install-step2.png used on in
 put line 31.
 (pdftex.def)             Requested size: 155.07661pt x 129.18033pt.
 
-<./imagens/apendices/neo4j-install-step3.png, id=2149, 388.45125pt x 322.95656p
+<./imagens/apendices/neo4j-install-step3.png, id=2183, 388.45125pt x 322.95656p
 t>
 File: ./imagens/apendices/neo4j-install-step3.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step3.png>
@@ -5540,23 +5512,16 @@ Package pdftex.def Info: ./imagens/apendices/neo4j-install-step3.png used on in
 put line 41.
 (pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
 
-<./imagens/apendices/neo4j-install-step4.png, id=2151, 388.45125pt x 322.95656p
+<./imagens/apendices/neo4j-install-step4.png, id=2185, 388.45125pt x 322.95656p
 t>
 File: ./imagens/apendices/neo4j-install-step4.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step4.png>
 Package pdftex.def Info: ./imagens/apendices/neo4j-install-step4.png used on in
 put line 51.
 (pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[134 <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apen
-dices/neo4j-install-step1.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/do
-cumento/latex/imagens/apendices/neo4j-install-step2.png> <C:/Users/Andressa Far
-ia/Documents/GitHub/tcc/documento/latex/imagens/apendices/neo4j-install-step3.p
-ng>]
-<./imagens/apendices/neo4j-install-step5.png, id=2163, 389.20406pt x 323.70938p
+ [136 <./imagens/apendices/neo4j-install-step1.png> <./imagens/apendices/neo4j-
+install-step2.png> <./imagens/apendices/neo4j-install-step3.png>]
+<./imagens/apendices/neo4j-install-step5.png, id=2197, 389.20406pt x 323.70938p
 t>
 File: ./imagens/apendices/neo4j-install-step5.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step5.png>
@@ -5564,25 +5529,27 @@ Package pdftex.def Info: ./imagens/apendices/neo4j-install-step5.png used on in
 put line 62.
 (pdftex.def)             Requested size: 155.67886pt x 129.48145pt.
 
-<./imagens/apendices/neo4j.jpg, id=2165, 409.53pt x 268.00125pt>
+<./imagens/apendices/neo4j.jpg, id=2199, 409.53pt x 268.00125pt>
 File: ./imagens/apendices/neo4j.jpg Graphic file (type jpg)
 
 <use ./imagens/apendices/neo4j.jpg>
 Package pdftex.def Info: ./imagens/apendices/neo4j.jpg used on input line 73.
 (pdftex.def)             Requested size: 245.7199pt x 160.80197pt.
 )
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\editaveis/apendi
-ces/26_Apendice_06_Questionario.tex" [135 <C:/Users/Andressa Faria/Documents/Gi
-tHub/tcc/documento/latex/imagens/apendices/neo4j-install-step4.png> <C:/Users/A
-ndressa Faria/Documents/GitHub/tcc/documento/latex/imagens/apendices/neo4j-inst
-all-step5.png> <C:/Users/Andressa Faria/Documents/GitHub/tcc/documento/latex/im
-agens/apendices/neo4j.jpg>] [136
+(./editaveis/apendices/26_Apendice_06_Questionario.tex [137 <./imagens/apendice
+s/neo4j-install-step4.png> <./imagens/apendices/neo4j-install-step5.png> <./ima
+gens/apendices/neo4j.jpg>] [138] [139
 
-]))
+])) (./editaveis/30_Anexos.tex [140]
+[141
+
+] (./editaveis/31_Anexo_01.tex))
 No file Principal.ind.
 
 AED: lastpage setting LastPage
-[137]
+[142
+
+]
 
 Package caption Warning: Unused \captionsetup[Quadro] on input line 302.
 See the caption package documentation for explanation.
@@ -5592,45 +5559,49 @@ Package caption Warning: Unused \captionsetup[floatfoot] on input line 304.
 See the caption package documentation for explanation.
 
 \tf@lof=\write4
-\tf@loq=\write5
-\tf@lol=\write6
-\tf@toc=\write7
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\Principal.aux"
-("C:\Users\Andressa Faria\Documents\GitHub\tcc\documento\latex\fixos/01_Capa.au
-x"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 61.
+\openout4 = `Principal.lof'.
+
+\tf@lol=\write5
+\openout5 = `Principal.lol'.
+
+\tf@toc=\write6
+\openout6 = `Principal.toc'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
+(./Principal.aux (./fixos/01_Capa.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 62.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 62.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 62.
  ) 
 Here is how much of TeX's memory you used:
- 17504 strings out of 493921
- 288515 string characters out of 3144849
- 490140 words of memory out of 3000000
- 19141 multiletter control sequences out of 15000+200000
- 69364 words of font info for 70 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 46i,12n,45p,1688b,2092s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files (x86)/
-MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/
-fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtl10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on Principal.pdf (138 pages, 5893365 bytes).
+ 17763 strings out of 493117
+ 282869 string characters out of 6135433
+ 504142 words of memory out of 5000000
+ 19547 multiletter control sequences out of 15000+600000
+ 69364 words of font info for 70 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 46i,12n,45p,1672b,2060s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
+cal/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/20
+14/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2014/texmf-d
+ist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
+public/lm/lmmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/l
+msy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmtk10.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmtl10.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fon
+ts/type1/urw/times/utmri8a.pfb>
+Output written on Principal.pdf (143 pages, 6402600 bytes).
 PDF statistics:
- 2629 PDF objects out of 2984 (max. 8388607)
- 1161 named destinations out of 1200 (max. 500000)
- 736 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2686 PDF objects out of 2984 (max. 8388607)
+ 2357 compressed objects within 24 object streams
+ 1168 named destinations out of 1200 (max. 500000)
+ 744 words of extra memory for PDF output out of 10000 (max. 10000000)
 
