@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  7 DEC 2015 21:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  9 DEC 2015 19:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1180,22 +1180,22 @@ l.35 \imprimirfolhaderosto*{}
 
 
 ]) (./fixos/03_FichaCatalografica.tex
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
  []
 
@@ -1206,10 +1206,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
 [3
 
-]) (./editaveis/05_Dedicatoria.tex [4
+]) (./editaveis/05_Dedicatoria.tex) (./editaveis/06_Agradecimentos.tex
+[4
 
-] [5])
-(./editaveis/06_Agradecimentos.tex
+
+] [5]
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -1226,10 +1227,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--39
 
 [6
 
-
-] [7]) (./editaveis/07_Epigrafe.tex [8
-
-]) (./fixos/0A_ListasAutomaticas.tex
+]) [7] (./editaveis/07_Epigrafe.tex [8]) (./fixos/0A_ListasAutomaticas.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\hbox' on input line 2.
@@ -1275,10 +1273,26 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 ]) (./editaveis/09_Abstract.tex [14
 
 ])
-(./fixos/0C_Sumario.tex (./Principal.toc [15
+(./fixos/0C_Sumario.tex
 
-]) [16])
-(./editaveis/10_Introducao.tex
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hbox' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hsize' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hss' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hss' on input line 4.
+
+(./Principal.toc [15
+
+]) [16]) (./editaveis/10_Introducao.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 26.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1297,7 +1311,7 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
  [18])
 (./editaveis/11_QuadroTeorico.tex [19] (./editaveis/quadro_teorico/iconix.tex
-<./imagens/visao_geral_iconix.png, id=329, 402.7848pt x 240.9pt>
+<./imagens/visao_geral_iconix.png, id=324, 402.7848pt x 240.9pt>
 File: ./imagens/visao_geral_iconix.png Graphic file (type png)
 
 <use ./imagens/visao_geral_iconix.png>
@@ -1314,14 +1328,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [21 <./imagens/visao_geral_iconix.png>])
 (./editaveis/quadro_teorico/teoria_grafos.tex [22]
-<./imagens/Konigsberg_7_bridges.jpg, id=359, 501.875pt x 401.5pt>
+<./imagens/Konigsberg_7_bridges.jpg, id=354, 501.875pt x 401.5pt>
 File: ./imagens/Konigsberg_7_bridges.jpg Graphic file (type jpg)
 
 <use ./imagens/Konigsberg_7_bridges.jpg>
 Package pdftex.def Info: ./imagens/Konigsberg_7_bridges.jpg used on input line 
 9.
 (pdftex.def)             Requested size: 341.45427pt x 182.72566pt.
- [23 <./imagens/Konigsberg_7_bridges.jpg>] <./imagens/simple_graph.png, id=382,
+ [23 <./imagens/Konigsberg_7_bridges.jpg>] <./imagens/simple_graph.png, id=377,
  400.49625pt x 194.7275pt>
 File: ./imagens/simple_graph.png Graphic file (type png)
 
@@ -1329,7 +1343,7 @@ File: ./imagens/simple_graph.png Graphic file (type png)
 Package pdftex.def Info: ./imagens/simple_graph.png used on input line 34.
 (pdftex.def)             Requested size: 308.38306pt x 149.94061pt.
 
-<./imagens/multigraph_example.png, id=390, 246.9225pt x 178.6675pt>
+<./imagens/multigraph_example.png, id=385, 246.9225pt x 178.6675pt>
 File: ./imagens/multigraph_example.png Graphic file (type png)
 
 <use ./imagens/multigraph_example.png>
@@ -1341,7 +1355,7 @@ Package pdftex.def Info: ./imagens/multigraph_example.png used on input line 47
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [24 <./imagens/simple_graph.png>]
-<./imagens/simple_digraph_graph.png, id=411, 256.96pt x 256.96pt>
+<./imagens/simple_digraph_graph.png, id=406, 256.96pt x 256.96pt>
 File: ./imagens/simple_digraph_graph.png Graphic file (type png)
 
 <use ./imagens/simple_digraph_graph.png>
@@ -1349,7 +1363,7 @@ Package pdftex.def Info: ./imagens/simple_digraph_graph.png used on input line
 60.
 (pdftex.def)             Requested size: 154.17719pt x 154.17719pt.
 
-<./imagens/grafos_isomorficos.png, id=421, 264.99pt x 107.40125pt>
+<./imagens/grafos_isomorficos.png, id=416, 264.99pt x 107.40125pt>
 File: ./imagens/grafos_isomorficos.png Graphic file (type png)
 
 <use ./imagens/grafos_isomorficos.png>
@@ -1357,7 +1371,7 @@ Package pdftex.def Info: ./imagens/grafos_isomorficos.png used on input line 78
 .
 (pdftex.def)             Requested size: 264.98935pt x 107.40097pt.
  [25 <./imagens/multigraph_example.png> <./imagens/simple_digraph_graph.png>]
-<./imagens/matriz_adjacencia.png, id=435, 230.8625pt x 168.63pt>
+<./imagens/matriz_adjacencia.png, id=430, 230.8625pt x 168.63pt>
 File: ./imagens/matriz_adjacencia.png Graphic file (type png)
 
 <use ./imagens/matriz_adjacencia.png>
@@ -1369,7 +1383,7 @@ editaveis/quadro_teorico/banco_dados.tex)
 [27] (./editaveis/quadro_teorico/banco_dados_relacionais.tex)
 (./editaveis/quadro_teorico/banco_dados_nosql.tex [28])
 (./editaveis/quadro_teorico/neo4j.tex [29] [30]
-<./imagens/simple_graph_neo4j.png, id=506, 374.39874pt x 187.70125pt>
+<./imagens/simple_graph_neo4j.png, id=501, 374.39874pt x 187.70125pt>
 File: ./imagens/simple_graph_neo4j.png Graphic file (type png)
 
 <use ./imagens/simple_graph_neo4j.png>
@@ -1384,7 +1398,7 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 21.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<./imagens/processo_compilacao_java.png, id=556, 297.7524pt x 81.4242pt>
+<./imagens/processo_compilacao_java.png, id=551, 297.7524pt x 81.4242pt>
 File: ./imagens/processo_compilacao_java.png Graphic file (type png)
 
 <use ./imagens/processo_compilacao_java.png>
@@ -1437,7 +1451,7 @@ Package xcolor Warning: Incompatible color definition on input line 47.
 (./editaveis/quadro_metodologico/instrumentos.tex)
 (./editaveis/quadro_metodologico/procedimentos.tex [45]
 (./editaveis/quadro_metodologico/procedimentos/iconix.tex [46]
-<./imagens/modelo-dominio-inicial.png, id=783, 764.8575pt x 540.51938pt>
+<./imagens/modelo-dominio-inicial.png, id=778, 764.8575pt x 540.51938pt>
 File: ./imagens/modelo-dominio-inicial.png Graphic file (type png)
 
 <use ./imagens/modelo-dominio-inicial.png>
@@ -1445,7 +1459,7 @@ Package pdftex.def Info: ./imagens/modelo-dominio-inicial.png used on input lin
 e 9.
 (pdftex.def)             Requested size: 344.1827pt x 243.23146pt.
  [47 <./imagens/modelo-dominio-inicial.png>] <./imagens/caso-de-uso-unificado.p
-ng, id=790, 781.2387pt x 756.6669pt>
+ng, id=785, 781.2387pt x 756.6669pt>
 File: ./imagens/caso-de-uso-unificado.png Graphic file (type png)
 
 <use ./imagens/caso-de-uso-unificado.png>
@@ -1474,7 +1488,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--63
  []
 
 
-<./imagens/apendices/diagrama-robustez-localizar-parceiros.png, id=800, 1154.81
+<./imagens/apendices/diagrama-robustez-localizar-parceiros.png, id=795, 1154.81
 438pt x 524.71031pt>
 File: ./imagens/apendices/diagrama-robustez-localizar-parceiros.png Graphic fil
 e (type png)
@@ -1484,7 +1498,7 @@ Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-localizar-parcei
 ros.png used on input line 103.
 (pdftex.def)             Requested size: 404.19109pt x 183.65135pt.
  [49 <./imagens/apendices/diagrama-robustez-localizar-parceiros.png>]
-<./imagens/modelo-dominio-com-atributos.png, id=807, 880.2486pt x 736.4313pt>
+<./imagens/modelo-dominio-com-atributos.png, id=802, 880.2486pt x 736.4313pt>
 File: ./imagens/modelo-dominio-com-atributos.png Graphic file (type png)
 
 <use ./imagens/modelo-dominio-com-atributos.png>
@@ -1492,7 +1506,7 @@ Package pdftex.def Info: ./imagens/modelo-dominio-com-atributos.png used on inp
 ut line 113.
 (pdftex.def)             Requested size: 440.12323pt x 368.21475pt.
  [50 <./imagens/modelo-dominio-com-atributos.png>]
-<./imagens/structure-all-nodes.png, id=814, 1371.1225pt x 770.88pt>
+<./imagens/structure-all-nodes.png, id=809, 1371.1225pt x 770.88pt>
 File: ./imagens/structure-all-nodes.png Graphic file (type png)
 
 <use ./imagens/structure-all-nodes.png>
@@ -1500,7 +1514,7 @@ Package pdftex.def Info: ./imagens/structure-all-nodes.png used on input line 1
 23.
 (pdftex.def)             Requested size: 411.33992pt x 231.26578pt.
  [51 <./imagens/structure-all-nodes.png>]
-<./imagens/apendices/diagrama-sequencia-localizar-parceiros.png, id=822, 1338.5
+<./imagens/apendices/diagrama-sequencia-localizar-parceiros.png, id=816, 1338.5
 0063pt x 754.31813pt>
 File: ./imagens/apendices/diagrama-sequencia-localizar-parceiros.png Graphic fi
 le (type png)
@@ -1510,7 +1524,7 @@ Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-localizar-parce
 iros.png used on input line 133.
 (pdftex.def)             Requested size: 1338.49738pt x 754.3163pt.
  [52 <./imagens/apendices/diagrama-sequencia-localizar-parceiros.png>]
-<./imagens/classe-full.png, id=829, 2779.38374pt x 2526.43875pt>
+<./imagens/classe-full.png, id=824, 2779.38374pt x 2526.43875pt>
 File: ./imagens/classe-full.png Graphic file (type png)
 
 <use ./imagens/classe-full.png>
@@ -1518,14 +1532,14 @@ Package pdftex.def Info: ./imagens/classe-full.png used on input line 143.
 (pdftex.def)             Requested size: 472.48898pt x 429.4889pt.
  [53 <./imagens/classe-full.png>])
 (./editaveis/quadro_metodologico/procedimentos/preparacao_ambiente.tex
-<./imagens/github.jpg, id=836, 1035.87pt x 590.205pt>
+<./imagens/github.jpg, id=831, 1035.87pt x 590.205pt>
 File: ./imagens/github.jpg Graphic file (type jpg)
 
 <use ./imagens/github.jpg>
 Package pdftex.def Info: ./imagens/github.jpg used on input line 8.
 (pdftex.def)             Requested size: 414.34065pt x 236.0778pt.
  [54 <./imagens/github.jpg>]
-<./imagens/eclipse-editor-texto.png, id=843, 1282.7925pt x 777.90625pt>
+<./imagens/eclipse-editor-texto.png, id=838, 1282.7925pt x 777.90625pt>
 File: ./imagens/eclipse-editor-texto.png Graphic file (type png)
 
 <use ./imagens/eclipse-editor-texto.png>
@@ -1824,14 +1838,14 @@ Package xcolor Warning: Incompatible color definition on input line 134.
 
 Package xcolor Warning: Incompatible color definition on input line 139.
 
-[59] <./imagens/login.jpg, id=974, 339.2675pt x 307.1475pt>
+[59] <./imagens/login.jpg, id=969, 339.2675pt x 307.1475pt>
 File: ./imagens/login.jpg Graphic file (type jpg)
 
 <use ./imagens/login.jpg>
 Package pdftex.def Info: ./imagens/login.jpg used on input line 154.
 (pdftex.def)             Requested size: 203.56206pt x 184.28992pt.
 
-<./imagens/tokens-traditional.png, id=978, 803.0pt x 1058.95625pt>
+<./imagens/tokens-traditional.png, id=973, 803.0pt x 1058.95625pt>
 File: ./imagens/tokens-traditional.png Graphic file (type png)
 
 <use ./imagens/tokens-traditional.png>
@@ -1839,7 +1853,7 @@ Package pdftex.def Info: ./imagens/tokens-traditional.png used on input line 16
 3.
 (pdftex.def)             Requested size: 401.49902pt x 529.47684pt.
  [60 <./imagens/login.jpg>] [61 <./imagens/tokens-traditional.png>] [62]
-<./imagens/tokens-new.png, id=1002, 803.0pt x 1304.875pt>
+<./imagens/tokens-new.png, id=997, 803.0pt x 1304.875pt>
 File: ./imagens/tokens-new.png Graphic file (type png)
 
 <use ./imagens/tokens-new.png>
@@ -2171,7 +2185,7 @@ Overfull \hbox (10.92805pt too wide) in paragraph at lines 239--240
 ptm/m/n/12 ex-pi-rado, foi cri-ado o mé-todo \T1/lmtt/m/n/12 isExpiredSession
  []
 
-[65] <./imagens/home-contratante.png, id=1072, 1283.79625pt x 672.5125pt>
+[65] <./imagens/home-contratante.png, id=1067, 1283.79625pt x 672.5125pt>
 File: ./imagens/home-contratante.png Graphic file (type png)
 
 <use ./imagens/home-contratante.png>
@@ -2296,7 +2310,7 @@ Package xcolor Warning: Incompatible color definition on input line 276.
 Package xcolor Warning: Incompatible color definition on input line 276.
 
 [66 <./imagens/home-contratante.png>]
-<./imagens/exemplo-funcionamento-consulta-possiveis-parceiros.png, id=1104, 920
+<./imagens/exemplo-funcionamento-consulta-possiveis-parceiros.png, id=1099, 920
 .43875pt x 581.17125pt>
 File: ./imagens/exemplo-funcionamento-consulta-possiveis-parceiros.png Graphic 
 file (type png)
@@ -2319,7 +2333,7 @@ Package xcolor Warning: Incompatible color definition on input line 297.
 Package xcolor Warning: Incompatible color definition on input line 298.
 
 [67 <./imagens/exemplo-funcionamento-consulta-possiveis-parceiros.png>]
-<./imagens/aceitar_rejeitar_solicitacao_parceria.png, id=1115, 1027.84pt x 327.
+<./imagens/aceitar_rejeitar_solicitacao_parceria.png, id=1110, 1027.84pt x 327.
 2225pt>
 File: ./imagens/aceitar_rejeitar_solicitacao_parceria.png Graphic file (type pn
 g)
@@ -2466,7 +2480,7 @@ Package xcolor Warning: Incompatible color definition on input line 353.
 
 Package xcolor Warning: Incompatible color definition on input line 353.
 
-[70] <./imagens/adcionar-servico.png, id=1167, 1330.9725pt x 612.2875pt>
+[70] <./imagens/adcionar-servico.png, id=1162, 1330.9725pt x 612.2875pt>
 File: ./imagens/adcionar-servico.png Graphic file (type png)
 
 <use ./imagens/adcionar-servico.png>
@@ -2959,7 +2973,7 @@ Package xcolor Warning: Incompatible color definition on input line 502.
 Package xcolor Warning: Incompatible color definition on input line 502.
 
 
-<./imagens/exemplo-funcionamento-consulta-buscar-mao-de-obra.png, id=1288, 890.
+<./imagens/exemplo-funcionamento-consulta-buscar-mao-de-obra.png, id=1283, 890.
 32625pt x 588.1975pt>
 File: ./imagens/exemplo-funcionamento-consulta-buscar-mao-de-obra.png Graphic f
 ile (type png)
@@ -2969,14 +2983,14 @@ Package pdftex.def Info: ./imagens/exemplo-funcionamento-consulta-buscar-mao-de
 -obra.png used on input line 508.
 (pdftex.def)             Requested size: 356.12419pt x 235.27483pt.
  [75 <./imagens/exemplo-funcionamento-consulta-buscar-mao-de-obra.png>]
-<./imagens/taxa-avaliacao.png, id=1307, 705.63625pt x 527.9725pt>
+<./imagens/taxa-avaliacao.png, id=1302, 705.63625pt x 527.9725pt>
 File: ./imagens/taxa-avaliacao.png Graphic file (type png)
 
 <use ./imagens/taxa-avaliacao.png>
 Package pdftex.def Info: ./imagens/taxa-avaliacao.png used on input line 518.
 (pdftex.def)             Requested size: 317.53337pt x 237.58542pt.
  [76 <./imagens/taxa-avaliacao.png>]
-<./imagens/dicas-randomicas.png, id=1314, 977.6525pt x 357.335pt>
+<./imagens/dicas-randomicas.png, id=1309, 977.6525pt x 357.335pt>
 File: ./imagens/dicas-randomicas.png Graphic file (type png)
 
 <use ./imagens/dicas-randomicas.png>
@@ -3015,7 +3029,7 @@ Package xcolor Warning: Incompatible color definition on input line 584.
 
 Package xcolor Warning: Incompatible color definition on input line 586.
 
-[78] <./imagens/grafico-pagina-perfil.png, id=1367, 540.0175pt x 480.79625pt>
+[78] <./imagens/grafico-pagina-perfil.png, id=1362, 540.0175pt x 480.79625pt>
 File: ./imagens/grafico-pagina-perfil.png Graphic file (type png)
 
 <use ./imagens/grafico-pagina-perfil.png>
@@ -3023,7 +3037,7 @@ Package pdftex.def Info: ./imagens/grafico-pagina-perfil.png used on input line
  597.
 (pdftex.def)             Requested size: 351.0072pt x 312.51384pt.
  [79 <./imagens/grafico-pagina-perfil.png>]
-<./imagens/grafico-pagina-inicial.png, id=1374, 526.96875pt x 474.77374pt>
+<./imagens/grafico-pagina-inicial.png, id=1369, 526.96875pt x 474.77374pt>
 File: ./imagens/grafico-pagina-inicial.png Graphic file (type png)
 
 <use ./imagens/grafico-pagina-inicial.png>
@@ -3035,7 +3049,7 @@ e 607.
 
 ]
 (./editaveis/discussao_resultados/localizar_mao_de_obra.tex [82]
-<./imagens/busca-domestica-edilson.png, id=1398, 1282.7925pt x 666.49pt>
+<./imagens/busca-domestica-edilson.png, id=1393, 1282.7925pt x 666.49pt>
 File: ./imagens/busca-domestica-edilson.png Graphic file (type png)
 
 <use ./imagens/busca-domestica-edilson.png>
@@ -3045,7 +3059,7 @@ ne 11.
 )
 (./editaveis/discussao_resultados/apresentar_possiveis_parceiros.tex [83 <./ima
 gens/busca-domestica-edilson.png>]
-<./imagens/busca-possiveis-parceiros.png, id=1406, 250.9375pt x 636.3775pt>
+<./imagens/busca-possiveis-parceiros.png, id=1401, 250.9375pt x 636.3775pt>
 File: ./imagens/busca-possiveis-parceiros.png Graphic file (type png)
 
 <use ./imagens/busca-possiveis-parceiros.png>
@@ -3055,7 +3069,7 @@ line 9.
 )
 (./editaveis/discussao_resultados/localizar_novos_parceiros.tex [84 <./imagens/
 busca-possiveis-parceiros.png>]
-<./imagens/busca-novos-parceiros.png, id=1414, 1283.79625pt x 646.415pt>
+<./imagens/busca-novos-parceiros.png, id=1409, 1283.79625pt x 646.415pt>
 File: ./imagens/busca-novos-parceiros.png Graphic file (type png)
 
 <use ./imagens/busca-novos-parceiros.png>
@@ -3215,7 +3229,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--78
  []
 
 [100]
-<./imagens/apendices/diagrama-robustez-aceitar-parceria.png, id=1532, 1120.9378
+<./imagens/apendices/diagrama-robustez-aceitar-parceria.png, id=1526, 1120.9378
 pt x 755.82375pt>
 File: ./imagens/apendices/diagrama-robustez-aceitar-parceria.png Graphic file (
 type png)
@@ -3232,7 +3246,7 @@ Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-localizar-parcei
 ros.png used on input line 101.
 (pdftex.def)             Requested size: 427.27463pt x 194.13977pt.
  [101 <./imagens/apendices/diagrama-robustez-aceitar-parceria.png>]
-<./imagens/apendices/diagrama-robustez-adicionar-parceiro.png, id=1542, 1205.25
+<./imagens/apendices/diagrama-robustez-adicionar-parceiro.png, id=1537, 1205.25
 28pt x 584.1825pt>
 File: ./imagens/apendices/diagrama-robustez-adicionar-parceiro.png Graphic file
  (type png)
@@ -3242,7 +3256,7 @@ Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-adicionar-parcei
 ro.png used on input line 112.
 (pdftex.def)             Requested size: 421.8448pt x 204.46693pt.
 
-<./imagens/apendices/diagrama-robustez-localizar-mao-de-obra.png, id=1544, 1166
+<./imagens/apendices/diagrama-robustez-localizar-mao-de-obra.png, id=1539, 1166
 .85938pt x 633.11531pt>
 File: ./imagens/apendices/diagrama-robustez-localizar-mao-de-obra.png Graphic f
 ile (type png)
@@ -3253,7 +3267,7 @@ Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-localizar-mao-de
 (pdftex.def)             Requested size: 408.4069pt x 221.59367pt.
  [102 <./imagens/apendices/diagrama-robustez-adicionar-parceiro.png> <./imagens
 /apendices/diagrama-robustez-localizar-mao-de-obra.png>]
-<./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png, id=1555, 976.39
+<./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png, id=1550, 976.39
 781pt x 545.03625pt>
 File: ./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png Graphic fil
 e (type png)
@@ -3263,7 +3277,7 @@ Package pdftex.def Info: ./imagens/apendices/diagrama-robustez-avaliar-mao-de-o
 bra.png used on input line 133.
 (pdftex.def)             Requested size: 419.84288pt x 234.36102pt.
 
-<./imagens/apendices/diagrama-robustez-adicionar-servicos.png, id=1557, 1141.26
+<./imagens/apendices/diagrama-robustez-adicionar-servicos.png, id=1552, 1141.26
 375pt x 590.95781pt>
 File: ./imagens/apendices/diagrama-robustez-adicionar-servicos.png Graphic file
  (type png)
@@ -3274,7 +3288,7 @@ os.png used on input line 143.
 (pdftex.def)             Requested size: 433.68474pt x 224.5663pt.
  [103 <./imagens/apendices/diagrama-robustez-avaliar-mao-de-obra.png> <./imagen
 s/apendices/diagrama-robustez-adicionar-servicos.png>]
-<./imagens/apendices/diagrama-robustez-criar-conta.png, id=1567, 1001.24063pt x
+<./imagens/apendices/diagrama-robustez-criar-conta.png, id=1562, 1001.24063pt x
  904.88063pt>
 File: ./imagens/apendices/diagrama-robustez-criar-conta.png Graphic file (type 
 png)
@@ -3284,7 +3298,7 @@ used on input line 154.
 (pdftex.def)             Requested size: 400.48917pt x 361.94585pt.
 
 [104 <./imagens/apendices/diagrama-robustez-criar-conta.png>]
-<./imagens/apendices/diagrama-sequencia-aceitar-parceria.png, id=1575, 1455.939
+<./imagens/apendices/diagrama-sequencia-aceitar-parceria.png, id=1570, 1455.939
 38pt x 522.45187pt>
 File: ./imagens/apendices/diagrama-sequencia-aceitar-parceria.png Graphic file 
 (type png)
@@ -3302,7 +3316,7 @@ Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-localizar-parce
 iros.png used on input line 180.
 (pdftex.def)             Requested size: 1338.49738pt x 754.3163pt.
  [106]
-<./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png, id=1589, 2325.
+<./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png, id=1584, 2325.
 4378pt x 1178.90437pt>
 File: ./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png Graphic fi
 le (type png)
@@ -3314,7 +3328,7 @@ iros.png used on input line 192.
  [107
 
  <./imagens/apendices/diagrama-sequencia-adicionar-parceiros.png>]
-<./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png, id=1597, 174
+<./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png, id=1592, 174
 5.01938pt x 524.71031pt>
 File: ./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png Graphic 
 file (type png)
@@ -3324,7 +3338,7 @@ Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-localizar-mao-d
 e-obra.png used on input line 203.
 (pdftex.def)             Requested size: 697.99539pt x 209.8804pt.
  [108 <./imagens/apendices/diagrama-sequencia-localizar-mao-de-obra.png>]
-<./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png, id=1606, 2910.
+<./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png, id=1601, 2910.
 37312pt x 1163.0953pt>
 File: ./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png Graphic fi
 le (type png)
@@ -3334,7 +3348,7 @@ Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-avaliar-mao-de-
 obra.png used on input line 214.
 (pdftex.def)             Requested size: 582.06432pt x 232.61493pt.
  [109 <./imagens/apendices/diagrama-sequencia-avaliar-mao-de-obra.png>]
-<./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png, id=1614, 1818.7
+<./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png, id=1609, 1818.7
 95pt x 973.38657pt>
 File: ./imagens/apendices/diagrama-sequencia-gerenciar-servicos.png Graphic fil
 e (type png)
@@ -3344,7 +3358,7 @@ Package pdftex.def Info: ./imagens/apendices/diagrama-sequencia-gerenciar-servi
 cos.png used on input line 225.
 (pdftex.def)             Requested size: 727.50513pt x 389.34773pt.
 
-<./imagens/apendices/diagrama-sequencia-criar-conta.png, id=1616, 1805.24437pt 
+<./imagens/apendices/diagrama-sequencia-criar-conta.png, id=1611, 1805.24437pt 
 x 1027.58907pt>
 File: ./imagens/apendices/diagrama-sequencia-criar-conta.png Graphic file (type
  png)
@@ -5330,7 +5344,7 @@ Package xcolor Warning: Incompatible color definition on input line 422.
 Package xcolor Warning: Incompatible color definition on input line 423.
 
 ) (./editaveis/apendices/23_Apendice_03_Github.tex [123]
-<./imagens/apendices/pagina-inicial-github.png, id=2060, 773.13844pt x 368.8781
+<./imagens/apendices/pagina-inicial-github.png, id=2055, 773.13844pt x 368.8781
 3pt>
 File: ./imagens/apendices/pagina-inicial-github.png Graphic file (type png)
  <use ./imagens/apendices/pagina-inicial-github.png>
@@ -5340,14 +5354,14 @@ input line 10.
  [124
 
  <./imagens/apendices/pagina-inicial-github.png>]
-<./imagens/apendices/pagina-home-github.png, id=2070, 794.2172pt x 691.83469pt>
+<./imagens/apendices/pagina-home-github.png, id=2065, 794.2172pt x 691.83469pt>
 File: ./imagens/apendices/pagina-home-github.png Graphic file (type png)
 <use ./imagens/apendices/pagina-home-github.png>
 Package pdftex.def Info: ./imagens/apendices/pagina-home-github.png used on inp
 ut line 21.
 (pdftex.def)             Requested size: 397.10762pt x 345.91649pt.
  [125 <./imagens/apendices/pagina-home-github.png>]
-<./imagens/apendices/pagina-criacao-repositorio-github.png, id=2078, 778.40813p
+<./imagens/apendices/pagina-criacao-repositorio-github.png, id=2073, 778.40813p
 t x 436.63126pt>
 File: ./imagens/apendices/pagina-criacao-repositorio-github.png Graphic file (t
 ype png)
@@ -5357,7 +5371,7 @@ Package pdftex.def Info: ./imagens/apendices/pagina-criacao-repositorio-github.
 png used on input line 32.
 (pdftex.def)             Requested size: 389.20311pt x 218.3151pt.
  [126 <./imagens/apendices/pagina-criacao-repositorio-github.png>]
-<./imagens/apendices/pagina-inicial-repositorio-github.png, id=2087, 767.11594p
+<./imagens/apendices/pagina-inicial-repositorio-github.png, id=2082, 767.11594p
 t x 506.6428pt>
 File: ./imagens/apendices/pagina-inicial-repositorio-github.png Graphic file (t
 ype png)
@@ -5367,7 +5381,7 @@ Package pdftex.def Info: ./imagens/apendices/pagina-inicial-repositorio-github.
 png used on input line 45.
 (pdftex.def)             Requested size: 383.55702pt x 253.32079pt.
 
-<./imagens/apendices/pagina-adicionar-colaborador-ao-repositorio.png, id=2089, 
+<./imagens/apendices/pagina-adicionar-colaborador-ao-repositorio.png, id=2084, 
 766.36313pt x 396.7322pt>
 File: ./imagens/apendices/pagina-adicionar-colaborador-ao-repositorio.png Graph
 ic file (type png)
@@ -5377,7 +5391,7 @@ Package pdftex.def Info: ./imagens/apendices/pagina-adicionar-colaborador-ao-re
 positorio.png used on input line 55.
 (pdftex.def)             Requested size: 383.18063pt x 198.3656pt.
 
-<./imagens/apendices/pagina-download-github.png, id=2091, 904.88063pt x 670.755
+<./imagens/apendices/pagina-download-github.png, id=2086, 904.88063pt x 670.755
 94pt>
 File: ./imagens/apendices/pagina-download-github.png Graphic file (type png)
  <use ./imagens/apendices/pagina-download-github.png>
@@ -5390,7 +5404,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [127 <./imagens/apendices/pagina-inicial-repositorio-github.png> <./imagens/ape
 ndices/pagina-adicionar-colaborador-ao-repositorio.png>]
-<./imagens/apendices/instalacao-github-step1.png, id=2101, 402.00188pt x 229.60
+<./imagens/apendices/instalacao-github-step1.png, id=2096, 402.00188pt x 229.60
 782pt>
 File: ./imagens/apendices/instalacao-github-step1.png Graphic file (type png)
  <use ./imagens/apendices/instalacao-github-step1.png>
@@ -5399,7 +5413,7 @@ n input line 75.
 (pdftex.def)             Requested size: 201.00044pt x 114.80362pt.
  [128 <./imagens/apendices/pagina-download-github.png> <./imagens/apendices/ins
 talacao-github-step1.png>]
-<./imagens/apendices/clonar-repositorio-github.png, id=2112, 1005.7575pt x 664.
+<./imagens/apendices/clonar-repositorio-github.png, id=2107, 1005.7575pt x 664.
 4825pt>
 File: ./imagens/apendices/clonar-repositorio-github.png Graphic file (type png)
 
@@ -5410,7 +5424,7 @@ Package pdftex.def Info: ./imagens/apendices/clonar-repositorio-github.png used
 )
 (./editaveis/apendices/24_Apendice_04_Eclipse_Tomcat.tex [129 <./imagens/apendi
 ces/clonar-repositorio-github.png>]
-<./imagens/apendices/pagina-download-eclipse.png, id=2119, 874.01532pt x 660.96
+<./imagens/apendices/pagina-download-eclipse.png, id=2114, 874.01532pt x 660.96
 938pt>
 File: ./imagens/apendices/pagina-download-eclipse.png Graphic file (type png)
  <use ./imagens/apendices/pagina-download-eclipse.png>
@@ -5420,7 +5434,7 @@ n input line 12.
  [130
 
  <./imagens/apendices/pagina-download-eclipse.png>]
-<./imagens/apendices/eclipse-selecionar-workspace.png, id=2128, 521.69907pt x 4
+<./imagens/apendices/eclipse-selecionar-workspace.png, id=2123, 521.69907pt x 4
 84.81125pt>
 File: ./imagens/apendices/eclipse-selecionar-workspace.png Graphic file (type p
 ng)
@@ -5429,7 +5443,7 @@ Package pdftex.def Info: ./imagens/apendices/eclipse-selecionar-workspace.png u
 sed on input line 26.
 (pdftex.def)             Requested size: 260.84889pt x 242.40503pt.
  [131 <./imagens/apendices/eclipse-selecionar-workspace.png>]
-<./imagens/apendices/pagina-inicial-apache-tomcat.png, id=2137, 1179.40625pt x 
+<./imagens/apendices/pagina-inicial-apache-tomcat.png, id=2132, 1179.40625pt x 
 597.23125pt>
 File: ./imagens/apendices/pagina-inicial-apache-tomcat.png Graphic file (type p
 ng)
@@ -5438,7 +5452,7 @@ Package pdftex.def Info: ./imagens/apendices/pagina-inicial-apache-tomcat.png u
 sed on input line 41.
 (pdftex.def)             Requested size: 412.79837pt x 209.03406pt.
 
-<./imagens/apendices/pagina-download-tomcat-7.png, id=2139, 982.67125pt x 607.2
+<./imagens/apendices/pagina-download-tomcat-7.png, id=2134, 982.67125pt x 607.2
 6875pt>
 File: ./imagens/apendices/pagina-download-tomcat-7.png Graphic file (type png)
  <use ./imagens/apendices/pagina-download-tomcat-7.png>
@@ -5447,7 +5461,7 @@ on input line 51.
 (pdftex.def)             Requested size: 393.06154pt x 242.9032pt.
  [132 <./imagens/apendices/pagina-inicial-apache-tomcat.png> <./imagens/apendic
 es/pagina-download-tomcat-7.png>]
-<./imagens/apendices/perspectiva-server-sem-servidor.png, id=2149, 765.86125pt 
+<./imagens/apendices/perspectiva-server-sem-servidor.png, id=2144, 765.86125pt 
 x 197.73875pt>
 File: ./imagens/apendices/perspectiva-server-sem-servidor.png Graphic file (typ
 e png)
@@ -5456,7 +5470,7 @@ Package pdftex.def Info: ./imagens/apendices/perspectiva-server-sem-servidor.pn
 g used on input line 67.
 (pdftex.def)             Requested size: 382.92969pt x 98.86913pt.
 
-<./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png, id=2151, 528.976
+<./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png, id=2146, 528.976
 26pt x 538.01pt>
 File: ./imagens/apendices/criar-configuracao-tomcat-no-eclipse.png Graphic file
  (type png)
@@ -5467,7 +5481,7 @@ se.png used on input line 77.
 (pdftex.def)             Requested size: 211.58675pt x 215.20018pt.
  [133 <./imagens/apendices/perspectiva-server-sem-servidor.png> <./imagens/apen
 dices/criar-configuracao-tomcat-no-eclipse.png>]
-<./imagens/apendices/definir-pasta-home-tomcat.png, id=2162, 526.96875pt x 537.
+<./imagens/apendices/definir-pasta-home-tomcat.png, id=2157, 526.96875pt x 537.
 00626pt>
 File: ./imagens/apendices/definir-pasta-home-tomcat.png Graphic file (type png)
 
@@ -5478,7 +5492,7 @@ Package pdftex.def Info: ./imagens/apendices/definir-pasta-home-tomcat.png used
 )
 (./editaveis/apendices/25_Apendice_05_Neo4j.tex [134 <./imagens/apendices/defin
 ir-pasta-home-tomcat.png>]
-<./imagens/apendices/download-neo4j.png, id=2169, 846.91406pt x 686.565pt>
+<./imagens/apendices/download-neo4j.png, id=2164, 846.91406pt x 686.565pt>
 File: ./imagens/apendices/download-neo4j.png Graphic file (type png)
 
 <use ./imagens/apendices/download-neo4j.png>
@@ -5488,7 +5502,7 @@ ine 10.
  [135
 
  <./imagens/apendices/download-neo4j.png>]
-<./imagens/apendices/neo4j-install-step1.png, id=2179, 388.45125pt x 322.95656p
+<./imagens/apendices/neo4j-install-step1.png, id=2174, 388.45125pt x 322.95656p
 t>
 File: ./imagens/apendices/neo4j-install-step1.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step1.png>
@@ -5496,7 +5510,7 @@ Package pdftex.def Info: ./imagens/apendices/neo4j-install-step1.png used on in
 put line 21.
 (pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
 
-<./imagens/apendices/neo4j-install-step2.png, id=2181, 387.69844pt x 322.95656p
+<./imagens/apendices/neo4j-install-step2.png, id=2176, 387.69844pt x 322.95656p
 t>
 File: ./imagens/apendices/neo4j-install-step2.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step2.png>
@@ -5504,7 +5518,7 @@ Package pdftex.def Info: ./imagens/apendices/neo4j-install-step2.png used on in
 put line 31.
 (pdftex.def)             Requested size: 155.07661pt x 129.18033pt.
 
-<./imagens/apendices/neo4j-install-step3.png, id=2183, 388.45125pt x 322.95656p
+<./imagens/apendices/neo4j-install-step3.png, id=2178, 388.45125pt x 322.95656p
 t>
 File: ./imagens/apendices/neo4j-install-step3.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step3.png>
@@ -5512,7 +5526,7 @@ Package pdftex.def Info: ./imagens/apendices/neo4j-install-step3.png used on in
 put line 41.
 (pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
 
-<./imagens/apendices/neo4j-install-step4.png, id=2185, 388.45125pt x 322.95656p
+<./imagens/apendices/neo4j-install-step4.png, id=2180, 388.45125pt x 322.95656p
 t>
 File: ./imagens/apendices/neo4j-install-step4.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step4.png>
@@ -5521,7 +5535,7 @@ put line 51.
 (pdftex.def)             Requested size: 155.37773pt x 129.18033pt.
  [136 <./imagens/apendices/neo4j-install-step1.png> <./imagens/apendices/neo4j-
 install-step2.png> <./imagens/apendices/neo4j-install-step3.png>]
-<./imagens/apendices/neo4j-install-step5.png, id=2197, 389.20406pt x 323.70938p
+<./imagens/apendices/neo4j-install-step5.png, id=2192, 389.20406pt x 323.70938p
 t>
 File: ./imagens/apendices/neo4j-install-step5.png Graphic file (type png)
  <use ./imagens/apendices/neo4j-install-step5.png>
@@ -5529,7 +5543,7 @@ Package pdftex.def Info: ./imagens/apendices/neo4j-install-step5.png used on in
 put line 62.
 (pdftex.def)             Requested size: 155.67886pt x 129.48145pt.
 
-<./imagens/apendices/neo4j.jpg, id=2199, 409.53pt x 268.00125pt>
+<./imagens/apendices/neo4j.jpg, id=2194, 409.53pt x 268.00125pt>
 File: ./imagens/apendices/neo4j.jpg Graphic file (type jpg)
 
 <use ./imagens/apendices/neo4j.jpg>
@@ -5567,22 +5581,22 @@ See the caption package documentation for explanation.
 \tf@toc=\write6
 \openout6 = `Principal.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
 (./Principal.aux (./fixos/01_Capa.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 62.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 62.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 63.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 62.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
  ) 
 Here is how much of TeX's memory you used:
- 17763 strings out of 493117
- 282869 string characters out of 6135433
- 504142 words of memory out of 5000000
- 19547 multiletter control sequences out of 15000+600000
+ 17758 strings out of 493117
+ 282823 string characters out of 6135433
+ 504136 words of memory out of 5000000
+ 19545 multiletter control sequences out of 15000+600000
  69364 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,12n,45p,1672b,2060s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -5598,10 +5612,10 @@ l/texlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on Principal.pdf (143 pages, 6402600 bytes).
+Output written on Principal.pdf (143 pages, 6403224 bytes).
 PDF statistics:
- 2686 PDF objects out of 2984 (max. 8388607)
- 2357 compressed objects within 24 object streams
- 1168 named destinations out of 1200 (max. 500000)
- 744 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2676 PDF objects out of 2984 (max. 8388607)
+ 2347 compressed objects within 24 object streams
+ 1165 named destinations out of 1200 (max. 500000)
+ 728 words of extra memory for PDF output out of 10000 (max. 10000000)
 
